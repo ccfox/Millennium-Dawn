@@ -22,6 +22,7 @@ focus_tree = {
 	continuous_focus_position = { x = 10300 y = 1800 }
 
 
+
 	inlay_window = {
 		id = eng_inner_circle_inlay_window
 		position = { x = 9300 y = 1000 }
@@ -86,8 +87,8 @@ focus_tree = {
 			y = 0
 			trigger = {
 				has_game_rule = {
-				rule = obsolete_focus_branches_visibility
-				option = HIDE
+					rule = obsolete_focus_branches_visibility
+					option = HIDE
 				}
 				has_completed_focus = ENG_watchkeeper_wk450
 			}
@@ -97,8 +98,8 @@ focus_tree = {
 			y = 0
 			trigger = {
 				has_game_rule = {
-				rule = obsolete_focus_branches_visibility
-				option = HIDE
+					rule = obsolete_focus_branches_visibility
+					option = HIDE
 				}
 				has_completed_focus = ENG_reaper_purchase
 			}
@@ -108,8 +109,8 @@ focus_tree = {
 			y = 0
 			trigger = {
 				has_game_rule = {
-				rule = obsolete_focus_branches_visibility
-				option = HIDE
+					rule = obsolete_focus_branches_visibility
+					option = HIDE
 				}
 				has_completed_focus = ENG_operation_excellence
 			}
@@ -549,7 +550,7 @@ focus_tree = {
 		search_filters = { FOCUS_FILTER_MILITARY_LAWS }
 
 		available = {
-			has_tech = machine_learning
+			has_tech = artificial_intelligence_3
 			NOT = { has_idea = ENG_royal_airforce1 }
 		}
 
@@ -663,7 +664,7 @@ focus_tree = {
 
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus ENG_continent_operational_considerations"
-			country_event = { id = ENG_military.039 }
+			country_event = ENG_military.039
 			set_temp_variable = { treasury_change = -5 }
 			modify_treasury_effect = yes
 		}
@@ -976,8 +977,8 @@ focus_tree = {
 			y = 0
 			trigger = {
 				has_game_rule = {
-				rule = obsolete_focus_branches_visibility
-				option = HIDE
+					rule = obsolete_focus_branches_visibility
+					option = HIDE
 				}
 				has_completed_focus = ENG_watchkeeper_wk450
 			}
@@ -987,8 +988,8 @@ focus_tree = {
 			y = 0
 			trigger = {
 				has_game_rule = {
-				rule = obsolete_focus_branches_visibility
-				option = HIDE
+					rule = obsolete_focus_branches_visibility
+					option = HIDE
 				}
 				has_completed_focus = ENG_reaper_purchase
 			}
@@ -1037,9 +1038,7 @@ focus_tree = {
 
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus ENG_dartmouth_naval_college_expansion"
-			country_event = {
-				id = ENG_military.038
-			}
+			country_event = ENG_military.038
 			set_temp_variable = { treasury_change = -10 }
 			modify_treasury_effect = yes
 			hidden_effect = {
@@ -1886,8 +1885,8 @@ focus_tree = {
 			y = 0
 			trigger = {
 				has_game_rule = {
-				rule = obsolete_focus_branches_visibility
-				option = HIDE
+					rule = obsolete_focus_branches_visibility
+					option = HIDE
 				}
 				has_completed_focus = ENG_watchkeeper_wk450
 			}
@@ -1897,8 +1896,8 @@ focus_tree = {
 			y = 0
 			trigger = {
 				has_game_rule = {
-				rule = obsolete_focus_branches_visibility
-				option = HIDE
+					rule = obsolete_focus_branches_visibility
+					option = HIDE
 				}
 				has_completed_focus = ENG_reaper_purchase
 			}
@@ -2002,8 +2001,8 @@ focus_tree = {
 			y = 0
 			trigger = {
 				has_game_rule = {
-				rule = obsolete_focus_branches_visibility
-				option = HIDE
+					rule = obsolete_focus_branches_visibility
+					option = HIDE
 				}
 				has_completed_focus = ENG_operation_excellence
 			}
@@ -2044,8 +2043,8 @@ focus_tree = {
 			y = -1
 			trigger = {
 				has_game_rule = {
-				rule = obsolete_focus_branches_visibility
-				option = HIDE
+					rule = obsolete_focus_branches_visibility
+					option = HIDE
 				}
 				has_completed_focus = ENG_AS90
 			}
@@ -2145,8 +2144,8 @@ focus_tree = {
 			y = -1
 			trigger = {
 				has_game_rule = {
-				rule = obsolete_focus_branches_visibility
-				option = HIDE
+					rule = obsolete_focus_branches_visibility
+					option = HIDE
 				}
 				has_completed_focus = ENG_M270
 			}
@@ -2244,8 +2243,8 @@ focus_tree = {
 			y = 0
 			trigger = {
 				has_game_rule = {
-				rule = obsolete_focus_branches_visibility
-				option = HIDE
+					rule = obsolete_focus_branches_visibility
+					option = HIDE
 				}
 				has_completed_focus = ENG_M270
 			}
@@ -2255,8 +2254,8 @@ focus_tree = {
 			y = -1
 			trigger = {
 				has_game_rule = {
-				rule = obsolete_focus_branches_visibility
-				option = HIDE
+					rule = obsolete_focus_branches_visibility
+					option = HIDE
 				}
 				has_completed_focus = ENG_AS90
 			}
@@ -2331,8 +2330,8 @@ focus_tree = {
 			y = 1
 			trigger = {
 				has_game_rule = {
-				rule = obsolete_focus_branches_visibility
-				option = HIDE
+					rule = obsolete_focus_branches_visibility
+					option = HIDE
 				}
 				has_completed_focus = ENG_M270
 			}
@@ -2342,8 +2341,8 @@ focus_tree = {
 			y = 1
 			trigger = {
 				has_game_rule = {
-				rule = obsolete_focus_branches_visibility
-				option = HIDE
+					rule = obsolete_focus_branches_visibility
+					option = HIDE
 				}
 				has_completed_focus = ENG_AS90
 			}
@@ -2612,8 +2611,8 @@ focus_tree = {
 			y = 0
 			trigger = {
 				has_game_rule = {
-				rule = obsolete_focus_branches_visibility
-				option = HIDE
+					rule = obsolete_focus_branches_visibility
+					option = HIDE
 				}
 				has_completed_focus = ENG_bae_cv90_MkIV
 			}
@@ -2710,8 +2709,8 @@ focus_tree = {
 			y = -1
 			trigger = {
 				has_game_rule = {
-				rule = obsolete_focus_branches_visibility
-				option = HIDE
+					rule = obsolete_focus_branches_visibility
+					option = HIDE
 				}
 				has_completed_focus = ENG_general_dynamics_ajax
 			}
@@ -2721,8 +2720,8 @@ focus_tree = {
 			y = -1
 			trigger = {
 				has_game_rule = {
-				rule = obsolete_focus_branches_visibility
-				option = HIDE
+					rule = obsolete_focus_branches_visibility
+					option = HIDE
 				}
 				has_completed_focus = ENG_bae_cv90_MkIV
 			}
@@ -2797,8 +2796,8 @@ focus_tree = {
 			y = -1
 			trigger = {
 				has_game_rule = {
-				rule = obsolete_focus_branches_visibility
-				option = HIDE
+					rule = obsolete_focus_branches_visibility
+					option = HIDE
 				}
 				has_completed_focus = ENG_general_dynamics_ajax
 			}
@@ -2808,8 +2807,8 @@ focus_tree = {
 			y = -1
 			trigger = {
 				has_game_rule = {
-				rule = obsolete_focus_branches_visibility
-				option = HIDE
+					rule = obsolete_focus_branches_visibility
+					option = HIDE
 				}
 				has_completed_focus = ENG_bae_cv90_MkIV
 			}
@@ -2976,8 +2975,8 @@ focus_tree = {
 			y = -1
 			trigger = {
 				has_game_rule = {
-				rule = obsolete_focus_branches_visibility
-				option = HIDE
+					rule = obsolete_focus_branches_visibility
+					option = HIDE
 				}
 				has_completed_focus = ENG_bae_cv90_MkIV
 			}
@@ -2987,8 +2986,8 @@ focus_tree = {
 			y = 0
 			trigger = {
 				has_game_rule = {
-				rule = obsolete_focus_branches_visibility
-				option = HIDE
+					rule = obsolete_focus_branches_visibility
+					option = HIDE
 				}
 				has_completed_focus = ENG_bae_cv90_MkIV
 				has_completed_focus = ENG_mgcs_program
@@ -2999,8 +2998,8 @@ focus_tree = {
 			y = 0
 			trigger = {
 				has_game_rule = {
-				rule = obsolete_focus_branches_visibility
-				option = HIDE
+					rule = obsolete_focus_branches_visibility
+					option = HIDE
 				}
 				has_completed_focus = ENG_general_dynamics_ajax
 				has_completed_focus = ENG_mgcs_program
@@ -3182,8 +3181,8 @@ focus_tree = {
 					modules = {
 						fixed_main_weapon_slot = avionics_drone_1
 						secondary_armament_slot = weap_mp_med_hardpoint_1
-						engine_type_slot = engine_light_single_1
-						avionics_type_slot = avionics_manned_3
+						engine_type_slot = engine_prop_single_1
+						avionics_type_slot = avionics_manned_1
 						wingform_type_slot = wing_straight
 						special_slot_type_2 = spec_recon_2
 					}
@@ -3230,8 +3229,8 @@ focus_tree = {
 			y = 0
 			trigger = {
 				has_game_rule = {
-				rule = obsolete_focus_branches_visibility
-				option = HIDE
+					rule = obsolete_focus_branches_visibility
+					option = HIDE
 				}
 				has_completed_focus = ENG_reaper_purchase
 			}
@@ -3313,8 +3312,8 @@ focus_tree = {
 			y = 0
 			trigger = {
 				has_game_rule = {
-				rule = obsolete_focus_branches_visibility
-				option = HIDE
+					rule = obsolete_focus_branches_visibility
+					option = HIDE
 				}
 				has_completed_focus = ENG_reaper_purchase
 			}
@@ -3324,8 +3323,8 @@ focus_tree = {
 			y = 0
 			trigger = {
 				has_game_rule = {
-				rule = obsolete_focus_branches_visibility
-				option = HIDE
+					rule = obsolete_focus_branches_visibility
+					option = HIDE
 				}
 				has_completed_focus = ENG_watchkeeper_wk450
 			}
@@ -3463,7 +3462,7 @@ focus_tree = {
 
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus ENG_typhoon_tranche_debate"
-			country_event = { id = ENG_military.040 }
+			country_event = ENG_military.040
 		}
 
 		ai_will_do = {
@@ -3607,8 +3606,8 @@ focus_tree = {
 			y = -1
 			trigger = {
 				has_game_rule = {
-				rule = obsolete_focus_branches_visibility
-				option = HIDE
+					rule = obsolete_focus_branches_visibility
+					option = HIDE
 				}
 				has_completed_focus = ENG_c19_globemasters
 			}
@@ -3618,8 +3617,8 @@ focus_tree = {
 			y = -1
 			trigger = {
 				has_game_rule = {
-				rule = obsolete_focus_branches_visibility
-				option = HIDE
+					rule = obsolete_focus_branches_visibility
+					option = HIDE
 				}
 				has_completed_focus = ENG_airbus_a400m
 			}
@@ -3760,8 +3759,8 @@ focus_tree = {
 			y = 0
 			trigger = {
 				has_game_rule = {
-				rule = obsolete_focus_branches_visibility
-				option = HIDE
+					rule = obsolete_focus_branches_visibility
+					option = HIDE
 				}
 				has_completed_focus = ENG_revive_p125_project
 			}
@@ -3824,8 +3823,8 @@ focus_tree = {
 			y = 0
 			trigger = {
 				has_game_rule = {
-				rule = obsolete_focus_branches_visibility
-				option = HIDE
+					rule = obsolete_focus_branches_visibility
+					option = HIDE
 				}
 				has_completed_focus = ENG_joint_strike_fighter_project
 			}
@@ -3888,8 +3887,8 @@ focus_tree = {
 			y = 0
 			trigger = {
 				has_game_rule = {
-				rule = obsolete_focus_branches_visibility
-				option = HIDE
+					rule = obsolete_focus_branches_visibility
+					option = HIDE
 				}
 				has_completed_focus = ENG_revive_p125_project
 			}
@@ -3925,8 +3924,8 @@ focus_tree = {
 			y = 0
 			trigger = {
 				has_game_rule = {
-				rule = obsolete_focus_branches_visibility
-				option = HIDE
+					rule = obsolete_focus_branches_visibility
+					option = HIDE
 				}
 				has_completed_focus = ENG_revive_p125_project
 			}
@@ -3936,8 +3935,8 @@ focus_tree = {
 			y = 0
 			trigger = {
 				has_game_rule = {
-				rule = obsolete_focus_branches_visibility
-				option = HIDE
+					rule = obsolete_focus_branches_visibility
+					option = HIDE
 				}
 				has_completed_focus = ENG_joint_strike_fighter_project
 			}
@@ -3982,8 +3981,8 @@ focus_tree = {
 			y = 0
 			trigger = {
 				has_game_rule = {
-				rule = obsolete_focus_branches_visibility
-				option = HIDE
+					rule = obsolete_focus_branches_visibility
+					option = HIDE
 				}
 				has_completed_focus = ENG_joint_strike_fighter_project
 			}
@@ -4024,8 +4023,8 @@ focus_tree = {
 			y = 0
 			trigger = {
 				has_game_rule = {
-				rule = obsolete_focus_branches_visibility
-				option = HIDE
+					rule = obsolete_focus_branches_visibility
+					option = HIDE
 				}
 				has_completed_focus = ENG_revive_p125_project
 			}
@@ -4240,8 +4239,8 @@ focus_tree = {
 			y = -1
 			trigger = {
 				has_game_rule = {
-				rule = obsolete_focus_branches_visibility
-				option = HIDE
+					rule = obsolete_focus_branches_visibility
+					option = HIDE
 				}
 				has_completed_focus = ENG_rebirthing_black_arrow
 			}
@@ -4345,8 +4344,8 @@ focus_tree = {
 			y = -1
 			trigger = {
 				has_game_rule = {
-				rule = obsolete_focus_branches_visibility
-				option = HIDE
+					rule = obsolete_focus_branches_visibility
+					option = HIDE
 				}
 				has_completed_focus = ENG_virgin_galactic
 			}
@@ -4448,8 +4447,8 @@ focus_tree = {
 			y = -1
 			trigger = {
 				has_game_rule = {
-				rule = obsolete_focus_branches_visibility
-				option = HIDE
+					rule = obsolete_focus_branches_visibility
+					option = HIDE
 				}
 				has_completed_focus = ENG_virgin_galactic
 			}
@@ -4459,8 +4458,8 @@ focus_tree = {
 			y = -1
 			trigger = {
 				has_game_rule = {
-				rule = obsolete_focus_branches_visibility
-				option = HIDE
+					rule = obsolete_focus_branches_visibility
+					option = HIDE
 				}
 				has_completed_focus = ENG_rebirthing_black_arrow
 			}
@@ -4780,8 +4779,8 @@ focus_tree = {
 			y = -1
 			trigger = {
 				has_game_rule = {
-				rule = obsolete_focus_branches_visibility
-				option = HIDE
+					rule = obsolete_focus_branches_visibility
+					option = HIDE
 				}
 				has_completed_focus = ENG_virgin_galactic
 			}
@@ -4791,8 +4790,8 @@ focus_tree = {
 			y = -1
 			trigger = {
 				has_game_rule = {
-				rule = obsolete_focus_branches_visibility
-				option = HIDE
+					rule = obsolete_focus_branches_visibility
+					option = HIDE
 				}
 				has_completed_focus = ENG_rebirthing_black_arrow
 			}
@@ -4844,8 +4843,8 @@ focus_tree = {
 			y = 0
 			trigger = {
 				has_game_rule = {
-				rule = obsolete_focus_branches_visibility
-				option = HIDE
+					rule = obsolete_focus_branches_visibility
+					option = HIDE
 				}
 				has_completed_focus = ENG_return_our_national_champions
 			}
@@ -4855,8 +4854,8 @@ focus_tree = {
 			y = 0
 			trigger = {
 				has_game_rule = {
-				rule = obsolete_focus_branches_visibility
-				option = HIDE
+					rule = obsolete_focus_branches_visibility
+					option = HIDE
 				}
 				has_completed_focus = ENG_mod_industry_code_of_practice
 			}
@@ -4866,8 +4865,8 @@ focus_tree = {
 			y = 0
 			trigger = {
 				has_game_rule = {
-				rule = obsolete_focus_branches_visibility
-				option = HIDE
+					rule = obsolete_focus_branches_visibility
+					option = HIDE
 				}
 				has_completed_focus = ENG_mod_continuing_the_competitive_marketplace
 			}
@@ -4904,8 +4903,8 @@ focus_tree = {
 			y = 0
 			trigger = {
 				has_game_rule = {
-				rule = obsolete_focus_branches_visibility
-				option = HIDE
+					rule = obsolete_focus_branches_visibility
+					option = HIDE
 				}
 				has_completed_focus = ENG_return_our_national_champions
 			}
@@ -5029,8 +5028,8 @@ focus_tree = {
 			y = 0
 			trigger = {
 				has_game_rule = {
-				rule = obsolete_focus_branches_visibility
-				option = HIDE
+					rule = obsolete_focus_branches_visibility
+					option = HIDE
 				}
 				has_completed_focus = ENG_mod_continuing_the_competitive_marketplace
 			}
@@ -5245,8 +5244,8 @@ focus_tree = {
 			y = -1
 			trigger = {
 				has_game_rule = {
-				rule = obsolete_focus_branches_visibility
-				option = HIDE
+					rule = obsolete_focus_branches_visibility
+					option = HIDE
 				}
 				has_completed_focus = ENG_mod_industry_code_of_practice
 			}
@@ -5291,8 +5290,8 @@ focus_tree = {
 			y = -1
 			trigger = {
 				has_game_rule = {
-				rule = obsolete_focus_branches_visibility
-				option = HIDE
+					rule = obsolete_focus_branches_visibility
+					option = HIDE
 				}
 				has_completed_focus = ENG_mod_industry_code_of_practice
 			}
@@ -5337,8 +5336,8 @@ focus_tree = {
 			y = -1
 			trigger = {
 				has_game_rule = {
-				rule = obsolete_focus_branches_visibility
-				option = HIDE
+					rule = obsolete_focus_branches_visibility
+					option = HIDE
 				}
 				has_completed_focus = ENG_mod_industry_code_of_practice
 			}
@@ -5512,8 +5511,8 @@ focus_tree = {
 			y = 0
 			trigger = {
 				has_game_rule = {
-				rule = obsolete_focus_branches_visibility
-				option = HIDE
+					rule = obsolete_focus_branches_visibility
+					option = HIDE
 				}
 				has_completed_focus = ENG_codify_service_economy
 			}
@@ -5613,7 +5612,7 @@ focus_tree = {
 		search_filters = { FOCUS_FILTER_ECONOMY }
 
 		available = {
-			has_tech = sociable_machines
+			has_tech = artificial_intelligence_4
 			9 = { internet_station > 2 }
 			17 = { internet_station > 2 }
 			13 = { internet_station > 2 }
@@ -5649,8 +5648,8 @@ focus_tree = {
 			y = 0
 			trigger = {
 				has_game_rule = {
-				rule = obsolete_focus_branches_visibility
-				option = HIDE
+					rule = obsolete_focus_branches_visibility
+					option = HIDE
 				}
 				has_completed_focus = ENG_empower_city_london
 			}
@@ -5721,14 +5720,15 @@ focus_tree = {
 			y = 0
 			trigger = {
 				has_game_rule = {
-				rule = obsolete_focus_branches_visibility
-				option = HIDE
+					rule = obsolete_focus_branches_visibility
+					option = HIDE
 				}
 				has_completed_focus = ENG_empower_edinburgh
 			}
 		}
 
 		cost = 10
+		overlay = GFX_focus_overlay_scotland
 
 		allow_branch = {
 			if = {
@@ -5747,9 +5747,6 @@ focus_tree = {
 		mutually_exclusive = { focus = ENG_empower_city_london }
 
 		search_filters = { FOCUS_FILTER_ECONOMY }
-
-		overlay = GFX_focus_overlay_scotland
-
 
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus ENG_empower_edinburgh"
@@ -5806,6 +5803,7 @@ focus_tree = {
 		relative_position_id = ENG_codify_service_economy
 
 		cost = 5
+		overlay = GFX_focus_overlay_northern_ireland
 
 		prerequisite = { focus = ENG_gate_burton_energy }
 
@@ -5814,9 +5812,6 @@ focus_tree = {
 		available = {
 			owns_state = 17
 		}
-
-		overlay = GFX_focus_overlay_northern_ireland
-
 
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus ENG_found_invest_northern_ireland"
@@ -5890,6 +5885,7 @@ focus_tree = {
 		relative_position_id = ENG_codify_service_economy
 
 		cost = 7.8
+		overlay = GFX_focus_overlay_scotland
 
 		prerequisite = {
 			focus = ENG_empower_city_london
@@ -5897,9 +5893,6 @@ focus_tree = {
 		}
 
 		search_filters = { FOCUS_FILTER_ECONOMY }
-
-		overlay = GFX_focus_overlay_scotland
-
 
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus ENG_invest_silicon_glenn"
@@ -6181,7 +6174,7 @@ focus_tree = {
 		search_filters = { FOCUS_FILTER_ECONOMY }
 
 		available = {
-			has_tech = advanced_industrial_robotics
+			has_tech = robotics_2
 		}
 
 		completion_reward = {
@@ -6249,7 +6242,7 @@ focus_tree = {
 		search_filters = { FOCUS_FILTER_ECONOMY }
 
 		available = {
-			has_tech = modern_deep_learning
+			has_tech = artificial_intelligence_7
 		}
 
 		completion_reward = {
@@ -6320,8 +6313,8 @@ focus_tree = {
 			y = 0
 			trigger = {
 				has_game_rule = {
-				rule = obsolete_focus_branches_visibility
-				option = HIDE
+					rule = obsolete_focus_branches_visibility
+					option = HIDE
 				}
 				has_completed_focus = ENG_codify_service_economy
 			}
@@ -6331,8 +6324,8 @@ focus_tree = {
 			y = -1
 			trigger = {
 				has_game_rule = {
-				rule = obsolete_focus_branches_visibility
-				option = HIDE
+					rule = obsolete_focus_branches_visibility
+					option = HIDE
 				}
 				has_completed_focus = ENG_acknowledge_industrial_collapse
 			}
@@ -6752,13 +6745,11 @@ focus_tree = {
 		relative_position_id = ENG_acknowledge_industrial_collapse
 
 		cost = 7.8
+		overlay = GFX_focus_overlay_wales
 
 		prerequisite = { focus = ENG_steel_guarantee }
 
 		search_filters = { FOCUS_FILTER_ECONOMY }
-
-		overlay = GFX_focus_overlay_wales
-
 
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus ENG_celsa_steel"
@@ -6800,21 +6791,19 @@ focus_tree = {
 			y = -1
 			trigger = {
 				has_game_rule = {
-				rule = obsolete_focus_branches_visibility
-				option = HIDE
+					rule = obsolete_focus_branches_visibility
+					option = HIDE
 				}
 				has_completed_focus = ENG_acknowledge_industrial_collapse
 			}
 		}
 
 		cost = 7.8
+		overlay = GFX_focus_overlay_scotland
 
 		prerequisite = { focus = ENG_steel_guarantee }
 
 		search_filters = { FOCUS_FILTER_ECONOMY }
-
-		overlay = GFX_focus_overlay_scotland
-
 
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus ENG_expand_scottish_steel"
@@ -6850,6 +6839,7 @@ focus_tree = {
 		relative_position_id = ENG_critical_minerals_strategy
 
 		cost = 5
+		overlay = GFX_focus_overlay_scotland
 
 		prerequisite = { focus = ENG_hinkley_point_c }
 		prerequisite = {
@@ -6858,9 +6848,6 @@ focus_tree = {
 		}
 
 		search_filters = { FOCUS_FILTER_ECONOMY }
-
-		overlay = GFX_focus_overlay_scotland
-
 
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus ENG_expand_scottish_steel"
@@ -6901,14 +6888,15 @@ focus_tree = {
 			y = 0
 			trigger = {
 				has_game_rule = {
-				rule = obsolete_focus_branches_visibility
-				option = HIDE
+					rule = obsolete_focus_branches_visibility
+					option = HIDE
 				}
 				has_completed_focus = ENG_deep_mining_coal
 			}
 		}
 
 		cost = 5
+		overlay = GFX_focus_overlay_scotland
 
 		allow_branch = {
 			if = {
@@ -6926,9 +6914,6 @@ focus_tree = {
 		mutually_exclusive = { focus = ENG_opencast_mining }
 
 		search_filters = { FOCUS_FILTER_ECONOMY }
-
-		overlay = GFX_focus_overlay_scotland
-
 
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus ENG_deep_mining_coal"
@@ -6978,14 +6963,15 @@ focus_tree = {
 			y = 0
 			trigger = {
 				has_game_rule = {
-				rule = obsolete_focus_branches_visibility
-				option = HIDE
+					rule = obsolete_focus_branches_visibility
+					option = HIDE
 				}
 				has_completed_focus = ENG_opencast_mining
 			}
 		}
 
 		cost = 5
+		overlay = GFX_focus_overlay_scotland
 
 		allow_branch = {
 			if = {
@@ -7003,9 +6989,6 @@ focus_tree = {
 		mutually_exclusive = { focus = ENG_deep_mining_coal }
 
 		search_filters = { FOCUS_FILTER_ECONOMY }
-
-		overlay = GFX_focus_overlay_scotland
-
 
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus ENG_opencast_mining"
@@ -7056,6 +7039,7 @@ focus_tree = {
 		relative_position_id = ENG_critical_minerals_strategy
 
 		cost = 5
+		overlay = GFX_focus_overlay_scotland
 
 		prerequisite = {
 			focus = ENG_opencast_mining
@@ -7067,9 +7051,6 @@ focus_tree = {
 		available = {
 			has_tech = excavation3
 		}
-
-		overlay = GFX_focus_overlay_scotland
-
 
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus ENG_cononish_gold_silver"
@@ -7105,6 +7086,7 @@ focus_tree = {
 		relative_position_id = ENG_acknowledge_industrial_collapse
 
 		cost = 7.8
+		overlay = GFX_focus_overlay_wales
 
 		prerequisite = { focus = ENG_northern_powerhouse }
 
@@ -7116,9 +7098,6 @@ focus_tree = {
 				16 = { arms_factory > 3 }
 			}
 		}
-
-		overlay = GFX_focus_overlay_wales
-
 
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus ENG_aerospace_wales"
@@ -7161,6 +7140,7 @@ focus_tree = {
 		relative_position_id = ENG_acknowledge_industrial_collapse
 
 		cost = 7.8
+		overlay = GFX_focus_overlay_wales
 
 		prerequisite = { focus = ENG_northern_powerhouse }
 
@@ -7172,9 +7152,6 @@ focus_tree = {
 				16 = { dockyard > 2 }
 			}
 		}
-
-		overlay = GFX_focus_overlay_wales
-
 
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus ENG_marine_power_systems"
@@ -7226,13 +7203,11 @@ focus_tree = {
 		relative_position_id = ENG_acknowledge_industrial_collapse
 
 		cost = 5
+		overlay = GFX_focus_overlay_scotland
 
 		prerequisite = { focus = ENG_northern_powerhouse }
 
 		search_filters = { FOCUS_FILTER_ECONOMY }
-
-		overlay = GFX_focus_overlay_scotland
-
 
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus ENG_marine_power_systems"
@@ -7417,6 +7392,7 @@ focus_tree = {
 		relative_position_id = ENG_acknowledge_industrial_collapse
 
 		cost = 7.8
+		overlay = GFX_focus_overlay_scotland
 
 		prerequisite = { focus = ENG_aerospace_wales }
 
@@ -7425,9 +7401,6 @@ focus_tree = {
 		available = {
 			arms_factory > 19
 		}
-
-		overlay = GFX_focus_overlay_scotland
-
 
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus ENG_develop_bae_aerospace"
@@ -7471,6 +7444,7 @@ focus_tree = {
 		relative_position_id = ENG_acknowledge_industrial_collapse
 
 		cost = 10
+		overlay = GFX_focus_overlay_scotland
 
 		prerequisite = { focus = ENG_develop_edinburgh_west_end }
 		prerequisite = { focus = ENG_marine_power_systems }
@@ -7480,9 +7454,6 @@ focus_tree = {
 		available = {
 			dockyard > 9
 		}
-
-		overlay = GFX_focus_overlay_scotland
-
 
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus ENG_glasgow_shipbuilidng"
@@ -7690,8 +7661,8 @@ focus_tree = {
 			y = 0
 			trigger = {
 				has_game_rule = {
-				rule = obsolete_focus_branches_visibility
-				option = HIDE
+					rule = obsolete_focus_branches_visibility
+					option = HIDE
 				}
 				has_completed_focus = ENG_hs2
 			}
@@ -7783,8 +7754,8 @@ focus_tree = {
 			y = 0
 			trigger = {
 				has_game_rule = {
-				rule = obsolete_focus_branches_visibility
-				option = HIDE
+					rule = obsolete_focus_branches_visibility
+					option = HIDE
 				}
 				has_completed_focus = ENG_northern_powerhouse_rail
 			}
@@ -7876,8 +7847,8 @@ focus_tree = {
 			y = 0
 			trigger = {
 				has_game_rule = {
-				rule = obsolete_focus_branches_visibility
-				option = HIDE
+					rule = obsolete_focus_branches_visibility
+					option = HIDE
 				}
 				has_completed_focus = ENG_hs2
 			}
@@ -7921,8 +7892,8 @@ focus_tree = {
 			y = 0
 			trigger = {
 				has_game_rule = {
-				rule = obsolete_focus_branches_visibility
-				option = HIDE
+					rule = obsolete_focus_branches_visibility
+					option = HIDE
 				}
 				has_completed_focus = ENG_northern_powerhouse_rail
 			}
@@ -7964,8 +7935,8 @@ focus_tree = {
 			y = 0
 			trigger = {
 				has_game_rule = {
-				rule = obsolete_focus_branches_visibility
-				option = HIDE
+					rule = obsolete_focus_branches_visibility
+					option = HIDE
 				}
 				has_completed_focus = ENG_northern_powerhouse_rail
 			}
@@ -8022,8 +7993,8 @@ focus_tree = {
 			y = 0
 			trigger = {
 				has_game_rule = {
-				rule = obsolete_focus_branches_visibility
-				option = HIDE
+					rule = obsolete_focus_branches_visibility
+					option = HIDE
 				}
 				has_completed_focus = ENG_hs2
 			}
@@ -8062,8 +8033,8 @@ focus_tree = {
 			y = 0
 			trigger = {
 				has_game_rule = {
-				rule = obsolete_focus_branches_visibility
-				option = HIDE
+					rule = obsolete_focus_branches_visibility
+					option = HIDE
 				}
 				has_completed_focus = ENG_hs2
 			}
@@ -8102,8 +8073,8 @@ focus_tree = {
 			y = 0
 			trigger = {
 				has_game_rule = {
-				rule = obsolete_focus_branches_visibility
-				option = HIDE
+					rule = obsolete_focus_branches_visibility
+					option = HIDE
 				}
 				has_completed_focus = ENG_northern_powerhouse_rail
 			}
@@ -8804,8 +8775,8 @@ focus_tree = {
 			y = 0
 			trigger = {
 				has_game_rule = {
-				rule = obsolete_focus_branches_visibility
-				option = HIDE
+					rule = obsolete_focus_branches_visibility
+					option = HIDE
 				}
 				has_completed_focus = ENG_foster_the_tech_revolution
 			}
@@ -8886,8 +8857,8 @@ focus_tree = {
 			y = 0
 			trigger = {
 				has_game_rule = {
-				rule = obsolete_focus_branches_visibility
-				option = HIDE
+					rule = obsolete_focus_branches_visibility
+					option = HIDE
 				}
 				has_completed_focus = ENG_uplift_traditional_industry
 			}
@@ -9067,7 +9038,7 @@ focus_tree = {
 				localization_key = modifies_dynamic_modifier_tt
 				MODIFIER = ENG_political_modifier
 			}
-			add_to_variable = { ENG_monthly_population = -0.25 tooltip = monthly_population_tt }
+			add_to_variable = { ENG_monthly_population = -0.025 tooltip = monthly_population_tt }
 		}
 
 		ai_will_do = {
@@ -9087,8 +9058,8 @@ focus_tree = {
 			y = 0
 			trigger = {
 				has_game_rule = {
-				rule = obsolete_focus_branches_visibility
-				option = HIDE
+					rule = obsolete_focus_branches_visibility
+					option = HIDE
 				}
 				has_completed_focus = ENG_prioritize_the_doctors
 			}
@@ -9217,8 +9188,8 @@ focus_tree = {
 			y = 0
 			trigger = {
 				has_game_rule = {
-				rule = obsolete_focus_branches_visibility
-				option = HIDE
+					rule = obsolete_focus_branches_visibility
+					option = HIDE
 				}
 				has_completed_focus = ENG_prioritize_the_teachers
 			}
@@ -9552,8 +9523,8 @@ focus_tree = {
 			y = 0
 			trigger = {
 				has_game_rule = {
-				rule = obsolete_focus_branches_visibility
-				option = HIDE
+					rule = obsolete_focus_branches_visibility
+					option = HIDE
 				}
 				has_completed_focus = ENG_modern_transport_infrastructure
 			}
@@ -9780,8 +9751,8 @@ focus_tree = {
 			y = 0
 			trigger = {
 				has_game_rule = {
-				rule = obsolete_focus_branches_visibility
-				option = HIDE
+					rule = obsolete_focus_branches_visibility
+					option = HIDE
 				}
 				has_completed_focus = ENG_modern_transport_infrastructure
 			}
@@ -9861,8 +9832,8 @@ focus_tree = {
 			y = 0
 			trigger = {
 				has_game_rule = {
-				rule = obsolete_focus_branches_visibility
-				option = HIDE
+					rule = obsolete_focus_branches_visibility
+					option = HIDE
 				}
 				has_completed_focus = ENG_modern_transport_infrastructure
 			}
@@ -9900,8 +9871,8 @@ focus_tree = {
 			y = 0
 			trigger = {
 				has_game_rule = {
-				rule = obsolete_focus_branches_visibility
-				option = HIDE
+					rule = obsolete_focus_branches_visibility
+					option = HIDE
 				}
 				has_completed_focus = ENG_modern_transport_infrastructure
 			}
@@ -9911,8 +9882,8 @@ focus_tree = {
 			y = 0
 			trigger = {
 				has_game_rule = {
-				rule = obsolete_focus_branches_visibility
-				option = HIDE
+					rule = obsolete_focus_branches_visibility
+					option = HIDE
 				}
 				has_completed_focus = ENG_social_housing
 			}
@@ -9986,8 +9957,8 @@ focus_tree = {
 			y = 0
 			trigger = {
 				has_game_rule = {
-				rule = obsolete_focus_branches_visibility
-				option = HIDE
+					rule = obsolete_focus_branches_visibility
+					option = HIDE
 				}
 				has_completed_focus = ENG_modern_transport_infrastructure
 			}
@@ -9997,8 +9968,8 @@ focus_tree = {
 			y = 0
 			trigger = {
 				has_game_rule = {
-				rule = obsolete_focus_branches_visibility
-				option = HIDE
+					rule = obsolete_focus_branches_visibility
+					option = HIDE
 				}
 				has_completed_focus = ENG_fostering_home_ownership
 			}
@@ -10072,8 +10043,8 @@ focus_tree = {
 			y = 0
 			trigger = {
 				has_game_rule = {
-				rule = obsolete_focus_branches_visibility
-				option = HIDE
+					rule = obsolete_focus_branches_visibility
+					option = HIDE
 				}
 				has_completed_focus = ENG_modern_transport_infrastructure
 			}
@@ -10229,8 +10200,8 @@ focus_tree = {
 			y = 0
 			trigger = {
 				has_game_rule = {
-				rule = obsolete_focus_branches_visibility
-				option = HIDE
+					rule = obsolete_focus_branches_visibility
+					option = HIDE
 				}
 				has_completed_focus = ENG_thriving_rural_scene
 			}
@@ -10306,8 +10277,8 @@ focus_tree = {
 			y = 0
 			trigger = {
 				has_game_rule = {
-				rule = obsolete_focus_branches_visibility
-				option = HIDE
+					rule = obsolete_focus_branches_visibility
+					option = HIDE
 				}
 				has_completed_focus = ENG_thriving_rural_scene
 			}
@@ -10363,8 +10334,8 @@ focus_tree = {
 			y = 0
 			trigger = {
 				has_game_rule = {
-				rule = obsolete_focus_branches_visibility
-				option = HIDE
+					rule = obsolete_focus_branches_visibility
+					option = HIDE
 				}
 				has_completed_focus = ENG_thriving_rural_scene
 			}
@@ -10408,8 +10379,8 @@ focus_tree = {
 			y = 0
 			trigger = {
 				has_game_rule = {
-				rule = obsolete_focus_branches_visibility
-				option = HIDE
+					rule = obsolete_focus_branches_visibility
+					option = HIDE
 				}
 				has_completed_focus = ENG_thriving_rural_scene
 			}
@@ -10452,8 +10423,8 @@ focus_tree = {
 			y = 0
 			trigger = {
 				has_game_rule = {
-				rule = obsolete_focus_branches_visibility
-				option = HIDE
+					rule = obsolete_focus_branches_visibility
+					option = HIDE
 				}
 				has_completed_focus = ENG_modern_transport_infrastructure
 			}
@@ -10463,8 +10434,8 @@ focus_tree = {
 			y = 0
 			trigger = {
 				has_game_rule = {
-				rule = obsolete_focus_branches_visibility
-				option = HIDE
+					rule = obsolete_focus_branches_visibility
+					option = HIDE
 				}
 				has_completed_focus = ENG_thriving_rural_scene
 			}
@@ -10511,8 +10482,8 @@ focus_tree = {
 			y = 0
 			trigger = {
 				has_game_rule = {
-				rule = obsolete_focus_branches_visibility
-				option = HIDE
+					rule = obsolete_focus_branches_visibility
+					option = HIDE
 				}
 				has_completed_focus = ENG_modern_transport_infrastructure
 			}
@@ -10522,8 +10493,8 @@ focus_tree = {
 			y = 0
 			trigger = {
 				has_game_rule = {
-				rule = obsolete_focus_branches_visibility
-				option = HIDE
+					rule = obsolete_focus_branches_visibility
+					option = HIDE
 				}
 				has_completed_focus = ENG_thriving_rural_scene
 			}
@@ -11588,8 +11559,8 @@ focus_tree = {
 			y = 0
 			trigger = {
 				has_game_rule = {
-				rule = obsolete_focus_branches_visibility
-				option = HIDE
+					rule = obsolete_focus_branches_visibility
+					option = HIDE
 				}
 				has_completed_focus = ENG_coming_to_the_aid_of_others
 			}
@@ -11663,8 +11634,8 @@ focus_tree = {
 			y = 0
 			trigger = {
 				has_game_rule = {
-				rule = obsolete_focus_branches_visibility
-				option = HIDE
+					rule = obsolete_focus_branches_visibility
+					option = HIDE
 				}
 				has_completed_focus = ENG_global_matters_global_problems
 			}
@@ -11811,8 +11782,8 @@ focus_tree = {
 			y = 0
 			trigger = {
 				has_game_rule = {
-				rule = obsolete_focus_branches_visibility
-				option = HIDE
+					rule = obsolete_focus_branches_visibility
+					option = HIDE
 				}
 				has_completed_focus = ENG_rural_friendly_transport_services
 			}
@@ -11891,8 +11862,8 @@ focus_tree = {
 			y = 0
 			trigger = {
 				has_game_rule = {
-				rule = obsolete_focus_branches_visibility
-				option = HIDE
+					rule = obsolete_focus_branches_visibility
+					option = HIDE
 				}
 				has_completed_focus = ENG_industrial_friendly_transport_services
 			}
@@ -11967,8 +11938,8 @@ focus_tree = {
 			y = 0
 			trigger = {
 				has_game_rule = {
-				rule = obsolete_focus_branches_visibility
-				option = HIDE
+					rule = obsolete_focus_branches_visibility
+					option = HIDE
 				}
 				has_completed_focus = ENG_industrial_friendly_transport_services
 			}
@@ -12291,8 +12262,8 @@ focus_tree = {
 			y = 0
 			trigger = {
 				has_game_rule = {
-				rule = obsolete_focus_branches_visibility
-				option = HIDE
+					rule = obsolete_focus_branches_visibility
+					option = HIDE
 				}
 				has_completed_focus = ENG_across_the_board_tax_slashes
 			}
@@ -12364,8 +12335,8 @@ focus_tree = {
 			y = 0
 			trigger = {
 				has_game_rule = {
-				rule = obsolete_focus_branches_visibility
-				option = HIDE
+					rule = obsolete_focus_branches_visibility
+					option = HIDE
 				}
 				has_completed_focus = ENG_tax_slashes_only_for_some
 			}
@@ -12563,8 +12534,8 @@ focus_tree = {
 			y = 0
 			trigger = {
 				has_game_rule = {
-				rule = obsolete_focus_branches_visibility
-				option = HIDE
+					rule = obsolete_focus_branches_visibility
+					option = HIDE
 				}
 				has_completed_focus = ENG_structural_overhaul_of_nhs
 			}
@@ -12635,8 +12606,8 @@ focus_tree = {
 			y = 0
 			trigger = {
 				has_game_rule = {
-				rule = obsolete_focus_branches_visibility
-				option = HIDE
+					rule = obsolete_focus_branches_visibility
+					option = HIDE
 				}
 				has_completed_focus = ENG_trusting_local_professionals
 			}
@@ -13224,8 +13195,8 @@ focus_tree = {
 			y = 0
 			trigger = {
 				has_game_rule = {
-				rule = obsolete_focus_branches_visibility
-				option = HIDE
+					rule = obsolete_focus_branches_visibility
+					option = HIDE
 				}
 				has_completed_focus = ENG_bye_bye_bureaucracy
 			}
@@ -13301,8 +13272,8 @@ focus_tree = {
 			y = 0
 			trigger = {
 				has_game_rule = {
-				rule = obsolete_focus_branches_visibility
-				option = HIDE
+					rule = obsolete_focus_branches_visibility
+					option = HIDE
 				}
 				has_completed_focus = ENG_case_by_case_intervention
 			}
@@ -13510,8 +13481,8 @@ focus_tree = {
 			y = 0
 			trigger = {
 				has_game_rule = {
-				rule = obsolete_focus_branches_visibility
-				option = HIDE
+					rule = obsolete_focus_branches_visibility
+					option = HIDE
 				}
 				has_completed_focus = ENG_for_the_common_man
 			}
@@ -13592,8 +13563,8 @@ focus_tree = {
 			y = 0
 			trigger = {
 				has_game_rule = {
-				rule = obsolete_focus_branches_visibility
-				option = HIDE
+					rule = obsolete_focus_branches_visibility
+					option = HIDE
 				}
 				has_completed_focus = ENG_for_the_wealthy_man
 			}
@@ -13695,8 +13666,8 @@ focus_tree = {
 			y = 0
 			trigger = {
 				has_game_rule = {
-				rule = obsolete_focus_branches_visibility
-				option = HIDE
+					rule = obsolete_focus_branches_visibility
+					option = HIDE
 				}
 				has_completed_focus = ENG_the_queens_speech
 			}
@@ -13833,8 +13804,8 @@ focus_tree = {
 			y = -1
 			trigger = {
 				has_game_rule = {
-				rule = obsolete_focus_branches_visibility
-				option = HIDE
+					rule = obsolete_focus_branches_visibility
+					option = HIDE
 				}
 				has_completed_focus = ENG_the_queens_speech
 			}
@@ -13844,8 +13815,8 @@ focus_tree = {
 			y = -1
 			trigger = {
 				has_game_rule = {
-				rule = obsolete_focus_branches_visibility
-				option = HIDE
+					rule = obsolete_focus_branches_visibility
+					option = HIDE
 				}
 				has_completed_focus = ENG_new_constitutional_charter
 			}
@@ -13888,8 +13859,8 @@ focus_tree = {
 			y = 0
 			trigger = {
 				has_game_rule = {
-				rule = obsolete_focus_branches_visibility
-				option = HIDE
+					rule = obsolete_focus_branches_visibility
+					option = HIDE
 				}
 				has_completed_focus = ENG_the_queens_speech
 			}
@@ -13934,8 +13905,8 @@ focus_tree = {
 			y = 0
 			trigger = {
 				has_game_rule = {
-				rule = obsolete_focus_branches_visibility
-				option = HIDE
+					rule = obsolete_focus_branches_visibility
+					option = HIDE
 				}
 				has_completed_focus = ENG_the_queens_speech
 			}
@@ -13979,8 +13950,8 @@ focus_tree = {
 			y = 0
 			trigger = {
 				has_game_rule = {
-				rule = obsolete_focus_branches_visibility
-				option = HIDE
+					rule = obsolete_focus_branches_visibility
+					option = HIDE
 				}
 				has_completed_focus = ENG_the_queens_speech
 			}
@@ -13990,8 +13961,8 @@ focus_tree = {
 			y = 0
 			trigger = {
 				has_game_rule = {
-				rule = obsolete_focus_branches_visibility
-				option = HIDE
+					rule = obsolete_focus_branches_visibility
+					option = HIDE
 				}
 				has_completed_focus = ENG_new_constitutional_charter
 			}
@@ -14029,8 +14000,8 @@ focus_tree = {
 			y = 0
 			trigger = {
 				has_game_rule = {
-				rule = obsolete_focus_branches_visibility
-				option = HIDE
+					rule = obsolete_focus_branches_visibility
+					option = HIDE
 				}
 				has_completed_focus = ENG_modernize_royal_navy
 			}
@@ -14106,8 +14077,8 @@ focus_tree = {
 			y = 0
 			trigger = {
 				has_game_rule = {
-				rule = obsolete_focus_branches_visibility
-				option = HIDE
+					rule = obsolete_focus_branches_visibility
+					option = HIDE
 				}
 				has_completed_focus = ENG_raf_army_overhaul
 			}
@@ -14183,8 +14154,8 @@ focus_tree = {
 			y = 0
 			trigger = {
 				has_game_rule = {
-				rule = obsolete_focus_branches_visibility
-				option = HIDE
+					rule = obsolete_focus_branches_visibility
+					option = HIDE
 				}
 				has_completed_focus = ENG_raf_army_overhaul
 			}
@@ -14246,8 +14217,8 @@ focus_tree = {
 			y = -1
 			trigger = {
 				has_game_rule = {
-				rule = obsolete_focus_branches_visibility
-				option = HIDE
+					rule = obsolete_focus_branches_visibility
+					option = HIDE
 				}
 				has_completed_focus = ENG_raf_army_overhaul
 			}
@@ -14290,8 +14261,8 @@ focus_tree = {
 			y = 0
 			trigger = {
 				has_game_rule = {
-				rule = obsolete_focus_branches_visibility
-				option = HIDE
+					rule = obsolete_focus_branches_visibility
+					option = HIDE
 				}
 				has_completed_focus = ENG_new_constitutional_charter
 			}
@@ -14429,8 +14400,8 @@ focus_tree = {
 			y = 0
 			trigger = {
 				has_game_rule = {
-				rule = obsolete_focus_branches_visibility
-				option = HIDE
+					rule = obsolete_focus_branches_visibility
+					option = HIDE
 				}
 				has_completed_focus = ENG_new_constitutional_charter
 			}
@@ -14708,8 +14679,8 @@ focus_tree = {
 			y = 0
 			trigger = {
 				has_game_rule = {
-				rule = obsolete_focus_branches_visibility
-				option = HIDE
+					rule = obsolete_focus_branches_visibility
+					option = HIDE
 				}
 				has_completed_focus = ENG_the_queens_speech
 			}
@@ -14719,8 +14690,8 @@ focus_tree = {
 			y = 0
 			trigger = {
 				has_game_rule = {
-				rule = obsolete_focus_branches_visibility
-				option = HIDE
+					rule = obsolete_focus_branches_visibility
+					option = HIDE
 				}
 				has_completed_focus = ENG_new_constitutional_charter
 			}
@@ -14799,10 +14770,13 @@ focus_tree = {
 		relative_position_id = ENG_the_queens_family
 
 		cost = 2
+		text_icon = GER_inner_circle_focus_style
 
 		prerequisite = {
 			focus = ENG_the_queens_family
 		}
+
+		search_filters = { FOCUS_FILTER_INNER_CIRCLE FOCUS_FILTER_POLITICAL }
 
 		available = {
 			if = {
@@ -14813,70 +14787,35 @@ focus_tree = {
 					NOT = { has_country_flag = ENG_charles_ascension_flag } #Flag to prevent AI from taking the focus again after advisor has been replaced}
 				}
 			}
-
-		text_icon = GER_inner_circle_focus_style
-
 			has_country_flag = ENG_elizabeth_ruling_monarch
-
 			if = {
-
 				limit = {
-
 					has_country_flag = ENG_inner_circle_event_pending_flag
-
 				}
-
 				NOT = { has_country_flag = ENG_inner_circle_event_pending_flag }
-
 			}
-
 			if = {
-
 				limit = {
-
 					has_country_flag = ENG_inner_circle_event_pending_flag
-
 				}
-
 				NOT = { has_country_flag = ENG_inner_circle_event_pending_flag }
-
 			}
-
 			ENG_inner_circle_is_ascension_cd_over = yes
-
 			if = {
-
 				limit = {
-
 					has_country_flag = ENG_inner_circle_cd_flag
-
 				}
-
 				custom_trigger_tooltip = {
-
 					tooltip = ENG_inner_circle_cd_days_tt
-
 					NOT = {	has_country_flag = ENG_inner_circle_cd_flag }
-
 				}
-
 			}
-
-
-		ai_will_do = {
-			factor = 1
 		}
-	}
 
 		#Focus will need to pause while events are pending
+
 		cancel_if_invalid = no
-		continue_if_invalid = no
 
-		search_filters = { FOCUS_FILTER_INNER_CIRCLE  FOCUS_FILTER_POLITICAL }
-
-		select_effect = { #Necessary to prevent AI from getting stuck if the focus is paused due to available trigger returning false
-			set_country_flag = ENG_charles_ascension_flag
-		}
 
 		completion_reward = {
 			custom_effect_tooltip = {
@@ -14885,21 +14824,17 @@ focus_tree = {
 			}
 			show_ideas_tooltip = ENG_charles_1_idea
 			newline = yes
-
 			unlock_decision_tooltip = {
 				decision = ENG_charles_charities_network_decision
 				show_effect_tooltip = yes
 				show_modifiers = yes
 			}
 			set_country_flag = ENG_charles_charities_network_decision_activated
-
 			newline = yes
-
 			custom_effect_tooltip = {
 				localization_key = ENG_ascension_of_character_focus_tt
 				CHARACTER = ENG_prince_charles
 			}
-
 			if = { #Just to make it easy to debug stuff for development
 				limit = {
 					OR = {
@@ -14925,7 +14860,6 @@ focus_tree = {
 						random_days = 25
 					}
 				}
-
 				newline = yes
 				custom_effect_tooltip = {
 					localization_key = ENG_event_to_replace_ascended_advisor_tt
@@ -14956,21 +14890,26 @@ focus_tree = {
 					set_variable = { ENG_ascended_advisor_3 = 1 }
 				}
 			}
-
 			hidden_effect = {
 				country_event = { id = ENG_inner_circle_charles.01 days = 180 random_days = 50 }
 				country_event = { id = ENG_inner_circle_charles.07 days = 120 random_days = 40 }
-
 				clr_country_flag = ENG_charles_ascension_flag
-
 				ENG_inner_circle_set_ascension_cd = yes
-
 				set_country_flag = { #Flag to prevent AI from taking the focus again after advisor has been replaced
 					flag = ENG_charles_was_ascended_flag
 					days = 1500 # Clear after ~4 years
 					value = 1
 				}
 			}
+		}
+
+		select_effect = { #Necessary to prevent AI from getting stuck if the focus is paused due to available trigger returning false
+			log = "[GetDateText]: [Root.GetName]: Focus ENG_the_prince_trust"
+			set_country_flag = ENG_charles_ascension_flag
+		}
+
+		ai_will_do = {
+			factor = 1
 		}
 	}
 
@@ -14983,6 +14922,7 @@ focus_tree = {
 		relative_position_id = ENG_the_prince_trust
 
 		cost = @inner_circle_time_tier_1
+		text_icon = GER_inner_circle_focus_style
 
 		prerequisite = { focus = ENG_the_prince_trust }
 
@@ -15015,9 +14955,6 @@ focus_tree = {
 				}
 			}
 		}
-
-		text_icon = GER_inner_circle_focus_style
-
 
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus ENG_harmony_doctrine"
@@ -15062,6 +14999,7 @@ focus_tree = {
 		relative_position_id = ENG_the_prince_trust
 
 		cost = @inner_circle_time_tier_2
+		text_icon = GER_inner_circle_focus_style
 
 		prerequisite = { focus = ENG_harmony_doctrine }
 
@@ -15094,9 +15032,6 @@ focus_tree = {
 				}
 			}
 		}
-
-		text_icon = GER_inner_circle_focus_style
-
 
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus ENG_climate_alarm_bell"
@@ -15145,6 +15080,7 @@ focus_tree = {
 		relative_position_id = ENG_the_prince_trust
 
 		cost = @inner_circle_time_tier_3
+		text_icon = GER_inner_circle_focus_style
 
 		prerequisite = { focus = ENG_climate_alarm_bell }
 
@@ -15177,9 +15113,6 @@ focus_tree = {
 				}
 			}
 		}
-
-		text_icon = GER_inner_circle_focus_style
-
 
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus ENG_duchy_originals"
@@ -15234,6 +15167,7 @@ focus_tree = {
 		relative_position_id = ENG_the_prince_trust
 
 		cost = @inner_circle_time_tier_4
+		text_icon = GER_inner_circle_focus_style
 
 		prerequisite = { focus = ENG_duchy_originals }
 
@@ -15267,9 +15201,6 @@ focus_tree = {
 			}
 		}
 
-		text_icon = GER_inner_circle_focus_style
-
-
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus ENG_heir_of_the_realm"
 			swap_ideas = {
@@ -15292,10 +15223,13 @@ focus_tree = {
 		relative_position_id = ENG_the_queens_family
 
 		cost = 2
+		text_icon = GER_inner_circle_focus_style
 
 		prerequisite = {
 			focus = ENG_the_queens_family
 		}
+
+		search_filters = { FOCUS_FILTER_INNER_CIRCLE FOCUS_FILTER_POLITICAL }
 
 		available = {
 			if = {
@@ -15306,59 +15240,30 @@ focus_tree = {
 					NOT = { has_country_flag = ENG_andrew_ascension_flag } #Flag to prevent AI from taking the focus again after advisor has been replaced}
 				}
 			}
-
-		text_icon = GER_inner_circle_focus_style
-
 			NOT = { has_country_flag = ENG_andrew_epstein_punishment }
-
 			has_country_flag = ENG_elizabeth_ruling_monarch
-
 			if = {
-
 				limit = {
-
 					has_country_flag = ENG_inner_circle_event_pending_flag
-
 				}
-
 				NOT = { has_country_flag = ENG_inner_circle_event_pending_flag }
-
 			}
-
 			ENG_inner_circle_is_ascension_cd_over = yes
-
 			if = {
-
 				limit = {
-
 					has_country_flag = ENG_inner_circle_cd_flag
-
 				}
-
 				custom_trigger_tooltip = {
-
 					tooltip = ENG_inner_circle_cd_days_tt
-
 					NOT = {	has_country_flag = ENG_inner_circle_cd_flag }
-
 				}
-
 			}
-
-
-		ai_will_do = {
-			factor = 1
 		}
-	}
 
 		#Focus will need to pause while events are pending
+
 		cancel_if_invalid = no
 
-		search_filters = { FOCUS_FILTER_INNER_CIRCLE FOCUS_FILTER_POLITICAL }
-
-		select_effect = { #Necessary to prevent AI from getting stuck if the focus is paused due to available trigger returning false
-			set_country_flag = ENG_andrew_ascension_flag
-		}
 
 		completion_reward = {
 			custom_effect_tooltip = {
@@ -15366,7 +15271,6 @@ focus_tree = {
 				CHARACTER = ENG_prince_andrew
 			}
 			show_ideas_tooltip = ENG_andrew_1_idea
-
 			newline = yes
 			unlock_decision_tooltip = {
 				decision = ENG_andrew_naval_haritage_decision
@@ -15380,7 +15284,6 @@ focus_tree = {
 				localization_key = ENG_ascension_of_character_focus_tt
 				CHARACTER = ENG_prince_andrew
 			}
-
 			if = { #Just to make it easy to debug stuff for development
 				limit = {
 					OR = {
@@ -15401,7 +15304,6 @@ focus_tree = {
 					set_variable = { ENG_ascending_advisor = 2 }
 					country_event = ENG_inner_circle.01
 				}
-
 				newline = yes
 				custom_effect_tooltip = {
 					localization_key = ENG_event_to_replace_ascended_advisor_tt
@@ -15432,21 +15334,26 @@ focus_tree = {
 					set_variable = { ENG_ascended_advisor_3 = 2 }
 				}
 			}
-
 			hidden_effect = {
 				country_event = { id = ENG_inner_circle_andrew.01 days = 180 random_days = 50 }
 				country_event = { id = ENG_inner_circle_andrew.03 days = 5 random_days = 2 }
-
 				clr_country_flag = ENG_andrew_ascension_flag
-
 				ENG_inner_circle_set_ascension_cd = yes
-
 				set_country_flag = { #Flag to prevent AI from taking the focus again after advisor has been replaced
 						flag = ENG_andrew_was_ascended_flag
 						days = 1500 # Clear after ~4 years
 						value = 1
 					}
 			}
+		}
+
+		select_effect = { #Necessary to prevent AI from getting stuck if the focus is paused due to available trigger returning false
+			log = "[GetDateText]: [Root.GetName]: Focus ENG_naval_prince"
+			set_country_flag = ENG_andrew_ascension_flag
+		}
+
+		ai_will_do = {
+			factor = 1
 		}
 	}
 
@@ -15459,6 +15366,7 @@ focus_tree = {
 		relative_position_id = ENG_naval_prince
 
 		cost = @inner_circle_time_tier_1
+		text_icon = GER_inner_circle_focus_style
 
 		prerequisite = { focus = ENG_naval_prince }
 
@@ -15491,9 +15399,6 @@ focus_tree = {
 				}
 			}
 		}
-
-		text_icon = GER_inner_circle_focus_style
-
 
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus ENG_appoint_trade_representative"
@@ -15539,6 +15444,7 @@ focus_tree = {
 		relative_position_id = ENG_naval_prince
 
 		cost = @inner_circle_time_tier_2
+		text_icon = GER_inner_circle_focus_style
 
 		prerequisite = { focus = ENG_appoint_trade_representative }
 
@@ -15571,9 +15477,6 @@ focus_tree = {
 				}
 			}
 		}
-
-		text_icon = GER_inner_circle_focus_style
-
 
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus ENG_emerging_markets_circuit"
@@ -15616,6 +15519,7 @@ focus_tree = {
 		relative_position_id = ENG_naval_prince
 
 		cost = @inner_circle_time_tier_3
+		text_icon = GER_inner_circle_focus_style
 
 		prerequisite = { focus = ENG_emerging_markets_circuit }
 
@@ -15648,9 +15552,6 @@ focus_tree = {
 				}
 			}
 		}
-
-		text_icon = GER_inner_circle_focus_style
-
 
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus ENG_digital_enterprise_patronage"
@@ -15693,6 +15594,7 @@ focus_tree = {
 		relative_position_id = ENG_naval_prince
 
 		cost = @inner_circle_time_tier_4
+		text_icon = GER_inner_circle_focus_style
 
 		prerequisite = { focus = ENG_digital_enterprise_patronage }
 
@@ -15725,9 +15627,6 @@ focus_tree = {
 				}
 			}
 		}
-
-		text_icon = GER_inner_circle_focus_style
-
 
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus ENG_duty_of_the_crown"
@@ -15764,6 +15663,7 @@ focus_tree = {
 		relative_position_id = ENG_the_prince_trust
 
 		cost = 5
+		text_icon = GER_inner_circle_focus_style
 
 		allow_branch = {
 			if = {
@@ -15788,9 +15688,6 @@ focus_tree = {
 		}
 
 		search_filters = { FOCUS_FILTER_INNER_CIRCLE FOCUS_FILTER_POLITICAL }
-
-		text_icon = GER_inner_circle_focus_style
-
 
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus ENG_queen_eldest"
@@ -15822,10 +15719,13 @@ focus_tree = {
 		relative_position_id = ENG_the_queens_family
 
 		cost = 2
+		text_icon = GER_inner_circle_focus_style
 
 		prerequisite = {
 			focus = ENG_the_queens_family
 		}
+
+		search_filters = { FOCUS_FILTER_INNER_CIRCLE FOCUS_FILTER_POLITICAL }
 
 		available = {
 			if = {
@@ -15836,57 +15736,29 @@ focus_tree = {
 					NOT = { has_country_flag = ENG_anne_ascension_flag } #Flag to prevent AI from taking the focus again after advisor has been replaced}
 				}
 			}
-
-		text_icon = GER_inner_circle_focus_style
-
 			has_country_flag = ENG_elizabeth_ruling_monarch
-
 			if = {
-
 				limit = {
-
 					has_country_flag = ENG_inner_circle_event_pending_flag
-
 				}
-
 				NOT = { has_country_flag = ENG_inner_circle_event_pending_flag }
-
 			}
-
 			ENG_inner_circle_is_ascension_cd_over = yes
-
 			if = {
-
 				limit = {
-
 					has_country_flag = ENG_inner_circle_cd_flag
-
 				}
-
 				custom_trigger_tooltip = {
-
 					tooltip = ENG_inner_circle_cd_days_tt
-
 					NOT = {	has_country_flag = ENG_inner_circle_cd_flag }
-
 				}
-
 			}
-
-
-		ai_will_do = {
-			factor = 1
 		}
-	}
 
 		#Focus will need to pause while events are pending
+
 		cancel_if_invalid = no
 
-		search_filters = { FOCUS_FILTER_INNER_CIRCLE FOCUS_FILTER_POLITICAL }
-
-		select_effect = { #Necessary to prevent AI from getting stuck if the focus is paused due to available trigger returning false
-			set_country_flag = ENG_anne_ascension_flag
-		}
 
 		completion_reward = {
 			custom_effect_tooltip = {
@@ -15905,7 +15777,6 @@ focus_tree = {
 				localization_key = ENG_ascension_of_character_focus_tt
 				CHARACTER = ENG_princess_anne
 			}
-
 			if = { #Just to make it easy to debug stuff for development
 				limit = {
 					OR = {
@@ -15926,7 +15797,6 @@ focus_tree = {
 					set_variable = { ENG_ascending_advisor = 3 }
 					country_event = ENG_inner_circle.01
 				}
-
 				newline = yes
 				custom_effect_tooltip = {
 					localization_key = ENG_event_to_replace_ascended_advisor_tt
@@ -15957,21 +15827,26 @@ focus_tree = {
 					set_variable = { ENG_ascended_advisor_3 = 3 }
 				}
 			}
-
 			hidden_effect = {
 				country_event = { id = ENG_inner_circle_anne.01 days = 180 random_days = 50 }
 				country_event = { id = ENG_inner_circle_anne.03 days = 120 random_days = 40 }
-
 				clr_country_flag = ENG_anne_ascension_flag
-
 				ENG_inner_circle_set_ascension_cd = yes
-
 				set_country_flag = { #Flag to prevent AI from taking the focus again after advisor has been replaced
 					flag = ENG_anne_was_ascended_flag
 					days = 1500 # Clear after ~4 years
 					value = 1
 				}
 			}
+		}
+
+		select_effect = { #Necessary to prevent AI from getting stuck if the focus is paused due to available trigger returning false
+			log = "[GetDateText]: [Root.GetName]: Focus ENG_workhorse_of_the_crown"
+			set_country_flag = ENG_anne_ascension_flag
+		}
+
+		ai_will_do = {
+			factor = 1
 		}
 	}
 
@@ -15984,6 +15859,7 @@ focus_tree = {
 		relative_position_id = ENG_workhorse_of_the_crown
 
 		cost = @inner_circle_time_tier_1
+		text_icon = GER_inner_circle_focus_style
 
 		prerequisite = { focus = ENG_workhorse_of_the_crown }
 
@@ -16017,9 +15893,6 @@ focus_tree = {
 			}
 		}
 
-		text_icon = GER_inner_circle_focus_style
-
-
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus ENG_carers_recognition_campaign"
 			add_timed_idea = {
@@ -16047,6 +15920,7 @@ focus_tree = {
 		relative_position_id = ENG_workhorse_of_the_crown
 
 		cost = @inner_circle_time_tier_2
+		text_icon = GER_inner_circle_focus_style
 
 		prerequisite = { focus = ENG_carers_recognition_campaign }
 
@@ -16079,9 +15953,6 @@ focus_tree = {
 				}
 			}
 		}
-
-		text_icon = GER_inner_circle_focus_style
-
 
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus ENG_discipline_service"
@@ -16131,14 +16002,15 @@ focus_tree = {
 			y = 0
 			trigger = {
 				has_game_rule = {
-				rule = obsolete_focus_branches_visibility
-				option = HIDE
+					rule = obsolete_focus_branches_visibility
+					option = HIDE
 				}
 				has_completed_focus = ENG_princess_admiral_royal_navy
 			}
 		}
 
 		cost = @inner_circle_time_tier_3
+		text_icon = GER_inner_circle_focus_style
 
 		allow_branch = {
 			if = {
@@ -16185,9 +16057,6 @@ focus_tree = {
 			}
 		}
 
-		text_icon = GER_inner_circle_focus_style
-
-
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus ENG_princess_admiral_royal_navy"
 			custom_effect_tooltip = ENG_princess_admiral_royal_navy_tt
@@ -16221,14 +16090,15 @@ focus_tree = {
 			y = 0
 			trigger = {
 				has_game_rule = {
-				rule = obsolete_focus_branches_visibility
-				option = HIDE
+					rule = obsolete_focus_branches_visibility
+					option = HIDE
 				}
 				has_completed_focus = ENG_colonel_of_horse_logistics
 			}
 		}
 
 		cost = @inner_circle_time_tier_3
+		text_icon = GER_inner_circle_focus_style
 
 		allow_branch = {
 			if = {
@@ -16275,9 +16145,6 @@ focus_tree = {
 			}
 		}
 
-		text_icon = GER_inner_circle_focus_style
-
-
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus ENG_colonel_of_horse_logistics"
 			custom_effect_tooltip = ENG_princess_admiral_royal_navy_tt
@@ -16307,6 +16174,7 @@ focus_tree = {
 		relative_position_id = ENG_workhorse_of_the_crown
 
 		cost = @inner_circle_time_tier_4
+		text_icon = GER_inner_circle_focus_style
 
 		prerequisite = {
 			focus = ENG_princess_admiral_royal_navy
@@ -16342,9 +16210,6 @@ focus_tree = {
 				}
 			}
 		}
-
-		text_icon = GER_inner_circle_focus_style
-
 
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus ENG_quiet_professionalism"
@@ -16404,10 +16269,13 @@ focus_tree = {
 		relative_position_id = ENG_the_queens_family
 
 		cost = 2
+		text_icon = GER_inner_circle_focus_style
 
 		prerequisite = {
 			focus = ENG_the_queens_family
 		}
+
+		search_filters = { FOCUS_FILTER_INNER_CIRCLE FOCUS_FILTER_POLITICAL }
 
 		available = {
 			if = {
@@ -16418,57 +16286,29 @@ focus_tree = {
 					NOT = { has_country_flag = ENG_edward_ascension_flag } #Flag to prevent AI from taking the focus again after advisor has been replaced}
 				}
 			}
-
-		text_icon = GER_inner_circle_focus_style
-
 			has_country_flag = ENG_elizabeth_ruling_monarch
-
 			if = {
-
 				limit = {
-
 					has_country_flag = ENG_inner_circle_event_pending_flag
-
 				}
-
 				NOT = { has_country_flag = ENG_inner_circle_event_pending_flag }
-
 			}
-
 			ENG_inner_circle_is_ascension_cd_over = yes
-
 			if = {
-
 				limit = {
-
 					has_country_flag = ENG_inner_circle_cd_flag
-
 				}
-
 				custom_trigger_tooltip = {
-
 					tooltip = ENG_inner_circle_cd_days_tt
-
 					NOT = {	has_country_flag = ENG_inner_circle_cd_flag }
-
 				}
-
 			}
-
-
-		ai_will_do = {
-			factor = 1
 		}
-	}
 
 		#Focus will need to pause while events are pending
+
 		cancel_if_invalid = no
 
-		search_filters = { FOCUS_FILTER_INNER_CIRCLE FOCUS_FILTER_POLITICAL }
-
-		select_effect = { #Necessary to prevent AI from getting stuck if the focus is paused due to available trigger returning false
-			set_country_flag = ENG_edward_ascension_flag
-		}
 
 		completion_reward = {
 			custom_effect_tooltip = {
@@ -16476,18 +16316,15 @@ focus_tree = {
 				CHARACTER = ENG_prince_edward
 			}
 			show_ideas_tooltip = ENG_edward_1_idea
-
 			unlock_decision_tooltip = {
 				decision = ENG_edward_beach_youth_decision
 				show_effect_tooltip = yes
 				show_modifiers = yes
 			}
-
 			custom_effect_tooltip = {
 				localization_key = ENG_ascension_of_character_focus_tt
 				CHARACTER = ENG_prince_edward
 			}
-
 			if = { #Just to make it easy to debug stuff for development
 				limit = {
 					OR = {
@@ -16508,7 +16345,6 @@ focus_tree = {
 					set_variable = { ENG_ascending_advisor = 4 }
 					country_event = ENG_inner_circle.01
 				}
-
 				newline = yes
 				custom_effect_tooltip = {
 					localization_key = ENG_event_to_replace_ascended_advisor_tt
@@ -16539,21 +16375,26 @@ focus_tree = {
 					set_variable = { ENG_ascended_advisor_3 = 4 }
 				}
 			}
-
 			hidden_effect = {
 				country_event = { id = ENG_inner_circle_edward.01 days = 180 random_days = 50 }
 				country_event = { id = ENG_inner_circle_edward.03 days = 120 random_days = 40 }
-
 				clr_country_flag = ENG_edward_ascension_flag
-
 				ENG_inner_circle_set_ascension_cd = yes
-
 				set_country_flag = { #Flag to prevent AI from taking the focus again after advisor has been replaced
 					flag = ENG_edward_was_ascended_flag
 					days = 1500 # Clear after ~4 years
 					value = 1
 				}
 			}
+		}
+
+		select_effect = { #Necessary to prevent AI from getting stuck if the focus is paused due to available trigger returning false
+			log = "[GetDateText]: [Root.GetName]: Focus ENG_chairman_international_award"
+			set_country_flag = ENG_edward_ascension_flag
+		}
+
+		ai_will_do = {
+			factor = 1
 		}
 	}
 
@@ -16566,6 +16407,7 @@ focus_tree = {
 		relative_position_id = ENG_chairman_international_award
 
 		cost = @inner_circle_time_tier_1
+		text_icon = GER_inner_circle_focus_style
 
 		prerequisite = { focus = ENG_chairman_international_award }
 
@@ -16598,9 +16440,6 @@ focus_tree = {
 				}
 			}
 		}
-
-		text_icon = GER_inner_circle_focus_style
-
 
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus ENG_trustee_network"
@@ -16642,6 +16481,7 @@ focus_tree = {
 		relative_position_id = ENG_chairman_international_award
 
 		cost = @inner_circle_time_tier_2
+		text_icon = GER_inner_circle_focus_style
 
 		prerequisite = { focus = ENG_trustee_network }
 
@@ -16674,9 +16514,6 @@ focus_tree = {
 				}
 			}
 		}
-
-		text_icon = GER_inner_circle_focus_style
-
 
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus ENG_commonwealth_youth_outreach"
@@ -16716,6 +16553,7 @@ focus_tree = {
 		relative_position_id = ENG_chairman_international_award
 
 		cost = @inner_circle_time_tier_3
+		text_icon = GER_inner_circle_focus_style
 
 		prerequisite = { focus = ENG_commonwealth_youth_outreach }
 
@@ -16748,9 +16586,6 @@ focus_tree = {
 				}
 			}
 		}
-
-		text_icon = GER_inner_circle_focus_style
-
 
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus ENG_production_guild_patronage"
@@ -16809,6 +16644,7 @@ focus_tree = {
 		relative_position_id = ENG_chairman_international_award
 
 		cost = @inner_circle_time_tier_4
+		text_icon = GER_inner_circle_focus_style
 
 		prerequisite = { focus = ENG_production_guild_patronage }
 
@@ -16841,9 +16677,6 @@ focus_tree = {
 				}
 			}
 		}
-
-		text_icon = GER_inner_circle_focus_style
-
 
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus ENG_steady_hand"
@@ -16885,6 +16718,7 @@ focus_tree = {
 		relative_position_id = ENG_workhorse_of_the_crown
 
 		cost = 5
+		text_icon = GER_inner_circle_focus_style
 
 		allow_branch = {
 			if = {
@@ -16909,9 +16743,6 @@ focus_tree = {
 		}
 
 		search_filters = { FOCUS_FILTER_INNER_CIRCLE FOCUS_FILTER_POLITICAL }
-
-		text_icon = GER_inner_circle_focus_style
-
 
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus ENG_queen_middle"
@@ -16943,10 +16774,13 @@ focus_tree = {
 		relative_position_id = ENG_the_queens_family
 
 		cost = 2
+		text_icon = GER_inner_circle_focus_style
 
 		prerequisite = {
 			focus = ENG_the_queens_family
 		}
+
+		search_filters = { FOCUS_FILTER_INNER_CIRCLE FOCUS_FILTER_POLITICAL }
 
 		available = {
 			if = {
@@ -16957,57 +16791,29 @@ focus_tree = {
 					NOT = { has_country_flag = ENG_philip_ascension_flag } #Flag to prevent AI from taking the focus again after advisor has been replaced}
 				}
 			}
-
-		text_icon = GER_inner_circle_focus_style
-
 			has_country_flag = ENG_elizabeth_ruling_monarch
-
 			if = {
-
 				limit = {
-
 					has_country_flag = ENG_inner_circle_event_pending_flag
-
 				}
-
 				NOT = { has_country_flag = ENG_inner_circle_event_pending_flag }
-
 			}
-
 			ENG_inner_circle_is_ascension_cd_over = yes
-
 			if = {
-
 				limit = {
-
 					has_country_flag = ENG_inner_circle_cd_flag
-
 				}
-
 				custom_trigger_tooltip = {
-
 					tooltip = ENG_inner_circle_cd_days_tt
-
 					NOT = {	has_country_flag = ENG_inner_circle_cd_flag }
-
 				}
-
 			}
-
-
-		ai_will_do = {
-			factor = 1
 		}
-	}
 
 		#Focus will need to pause while events are pending
+
 		cancel_if_invalid = no
 
-		search_filters = { FOCUS_FILTER_INNER_CIRCLE FOCUS_FILTER_POLITICAL }
-
-		select_effect = { #Necessary to prevent AI from getting stuck if the focus is paused due to available trigger returning false
-			set_country_flag = ENG_philip_ascension_flag
-		}
 
 		completion_reward = {
 			custom_effect_tooltip = {
@@ -17015,7 +16821,6 @@ focus_tree = {
 				CHARACTER = ENG_prince_phillip
 			}
 			show_ideas_tooltip = ENG_phillip_1_idea
-
 			newline = yes
 			unlock_decision_tooltip = {
 				decision = ENG_philip_trust_funds_grants_decision
@@ -17026,7 +16831,6 @@ focus_tree = {
 				localization_key = ENG_ascension_of_character_focus_tt
 				CHARACTER = ENG_prince_phillip
 			}
-
 			if = { #Just to make it easy to debug stuff for development
 				limit = {
 					OR = {
@@ -17047,7 +16851,6 @@ focus_tree = {
 					set_variable = { ENG_ascending_advisor = 5 }
 					country_event = ENG_inner_circle.01
 				}
-
 				newline = yes
 				custom_effect_tooltip = {
 					localization_key = ENG_event_to_replace_ascended_advisor_tt
@@ -17078,21 +16881,26 @@ focus_tree = {
 					set_variable = { ENG_ascended_advisor_3 = 5 }
 				}
 			}
-
 			hidden_effect = {
 				country_event = { id = ENG_inner_circle_philip.01 days = 180 random_days = 50 }
 				country_event = { id = ENG_inner_circle_philip.03 days = 120 random_days = 40 }
-
 				clr_country_flag = ENG_philip_ascension_flag
-
 				ENG_inner_circle_set_ascension_cd = yes
-
 				set_country_flag = { #Flag to prevent AI from taking the focus again after advisor has been replaced
 					flag = ENG_philip_was_ascended_flag
 					days = 1500 # Clear after ~4 years
 					value = 1
 				}
 			}
+		}
+
+		select_effect = { #Necessary to prevent AI from getting stuck if the focus is paused due to available trigger returning false
+			log = "[GetDateText]: [Root.GetName]: Focus ENG_duke_charities"
+			set_country_flag = ENG_philip_ascension_flag
+		}
+
+		ai_will_do = {
+			factor = 1
 		}
 	}
 
@@ -17105,6 +16913,7 @@ focus_tree = {
 		relative_position_id = ENG_duke_charities
 
 		cost = @inner_circle_time_tier_1
+		text_icon = GER_inner_circle_focus_style
 
 		prerequisite = { focus = ENG_duke_charities }
 
@@ -17137,9 +16946,6 @@ focus_tree = {
 				}
 			}
 		}
-
-		text_icon = GER_inner_circle_focus_style
-
 
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus ENG_international_award_conference"
@@ -17176,6 +16982,7 @@ focus_tree = {
 		relative_position_id = ENG_duke_charities
 
 		cost = @inner_circle_time_tier_2
+		text_icon = GER_inner_circle_focus_style
 
 		prerequisite = { focus = ENG_international_award_conference }
 
@@ -17208,9 +17015,6 @@ focus_tree = {
 				}
 			}
 		}
-
-		text_icon = GER_inner_circle_focus_style
-
 
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus ENG_wwf_president_emeritus"
@@ -17252,6 +17056,7 @@ focus_tree = {
 		relative_position_id = ENG_duke_charities
 
 		cost = @inner_circle_time_tier_3
+		text_icon = GER_inner_circle_focus_style
 
 		prerequisite = { focus = ENG_wwf_president_emeritus }
 
@@ -17284,9 +17089,6 @@ focus_tree = {
 				}
 			}
 		}
-
-		text_icon = GER_inner_circle_focus_style
-
 
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus ENG_prince_phillip_medal"
@@ -17333,6 +17135,7 @@ focus_tree = {
 		relative_position_id = ENG_duke_charities
 
 		cost = @inner_circle_time_tier_4
+		text_icon = GER_inner_circle_focus_style
 
 		prerequisite = { focus = ENG_prince_phillip_medal }
 
@@ -17365,9 +17168,6 @@ focus_tree = {
 				}
 			}
 		}
-
-		text_icon = GER_inner_circle_focus_style
-
 
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus ENG_strength_and_stay"
@@ -17409,10 +17209,13 @@ focus_tree = {
 		relative_position_id = ENG_the_queens_family
 
 		cost = 2
+		text_icon = GER_inner_circle_focus_style
 
 		prerequisite = {
 			focus = ENG_the_queens_family
 		}
+
+		search_filters = { FOCUS_FILTER_INNER_CIRCLE FOCUS_FILTER_POLITICAL }
 
 		available = {
 			if = {
@@ -17423,57 +17226,29 @@ focus_tree = {
 					NOT = { has_country_flag = ENG_william_ascension_flag } #Flag to prevent AI from taking the focus again after advisor has been replaced}
 				}
 			}
-
-		text_icon = GER_inner_circle_focus_style
-
 			has_country_flag = ENG_elizabeth_ruling_monarch
-
 			if = {
-
 				limit = {
-
 					has_country_flag = ENG_inner_circle_event_pending_flag
-
 				}
-
 				NOT = { has_country_flag = ENG_inner_circle_event_pending_flag }
-
 			}
-
 			ENG_inner_circle_is_ascension_cd_over = yes
-
 			if = {
-
 				limit = {
-
 					has_country_flag = ENG_inner_circle_cd_flag
-
 				}
-
 				custom_trigger_tooltip = {
-
 					tooltip = ENG_inner_circle_cd_days_tt
-
 					NOT = {	has_country_flag = ENG_inner_circle_cd_flag }
-
 				}
-
 			}
-
-
-		ai_will_do = {
-			factor = 1
 		}
-	}
 
 		#Focus will need to pause while events are pending
+
 		cancel_if_invalid = no
 
-		search_filters = { FOCUS_FILTER_INNER_CIRCLE FOCUS_FILTER_POLITICAL }
-
-		select_effect = { #Necessary to prevent AI from getting stuck if the focus is paused due to available trigger returning false
-			set_country_flag = ENG_william_ascension_flag
-		}
 
 		completion_reward = {
 			custom_effect_tooltip = {
@@ -17481,9 +17256,7 @@ focus_tree = {
 				CHARACTER = ENG_prince_william
 			}
 			show_ideas_tooltip = ENG_william_1_idea
-
 			newline = yes
-
 			custom_effect_tooltip = {
 				localization_key = ENG_ascension_of_character_focus_tt
 				CHARACTER = ENG_prince_william
@@ -17498,7 +17271,6 @@ focus_tree = {
 				show_effect_tooltip = yes
 				show_modifiers = yes
 			}
-
 			if = { #Just to make it easy to debug stuff for development
 				limit = {
 					OR = {
@@ -17519,7 +17291,6 @@ focus_tree = {
 					set_variable = { ENG_ascending_advisor = 6 }
 					country_event = ENG_inner_circle.01
 				}
-
 				newline = yes
 				custom_effect_tooltip = {
 					localization_key = ENG_event_to_replace_ascended_advisor_tt
@@ -17550,21 +17321,26 @@ focus_tree = {
 					set_variable = { ENG_ascended_advisor_3 = 6 }
 				}
 			}
-
 			hidden_effect = {
 				country_event = { id = ENG_inner_circle_william.01 days = 180 random_days = 50 }
 				country_event = { id = ENG_inner_circle_william.03 days = 120 random_days = 40 }
-
 				clr_country_flag = ENG_william_ascension_flag
-
 				ENG_inner_circle_set_ascension_cd = yes
-
 				set_country_flag = { #Flag to prevent AI from taking the focus again after advisor has been replaced
 					flag = ENG_william_was_ascended_flag
 					days = 1500 # Clear after ~4 years
 					value = 1
 				}
 			}
+		}
+
+		select_effect = { #Necessary to prevent AI from getting stuck if the focus is paused due to available trigger returning false
+			log = "[GetDateText]: [Root.GetName]: Focus ENG_from_sandhurst_to_service"
+			set_country_flag = ENG_william_ascension_flag
+		}
+
+		ai_will_do = {
+			factor = 1
 		}
 	}
 
@@ -17577,6 +17353,7 @@ focus_tree = {
 		relative_position_id = ENG_from_sandhurst_to_service
 
 		cost = @inner_circle_time_tier_1
+		text_icon = GER_inner_circle_focus_style
 
 		prerequisite = { focus = ENG_from_sandhurst_to_service }
 
@@ -17609,9 +17386,6 @@ focus_tree = {
 				}
 			}
 		}
-
-		text_icon = GER_inner_circle_focus_style
-
 
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus ENG_royal_foundation"
@@ -17663,6 +17437,7 @@ focus_tree = {
 		relative_position_id = ENG_from_sandhurst_to_service
 
 		cost = @inner_circle_time_tier_2
+		text_icon = GER_inner_circle_focus_style
 
 		prerequisite = { focus = ENG_royal_foundation }
 
@@ -17695,9 +17470,6 @@ focus_tree = {
 				}
 			}
 		}
-
-		text_icon = GER_inner_circle_focus_style
-
 
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus ENG_heads_together"
@@ -17740,6 +17512,7 @@ focus_tree = {
 		relative_position_id = ENG_from_sandhurst_to_service
 
 		cost = @inner_circle_time_tier_3
+		text_icon = GER_inner_circle_focus_style
 
 		prerequisite = { focus = ENG_heads_together }
 
@@ -17772,9 +17545,6 @@ focus_tree = {
 				}
 			}
 		}
-
-		text_icon = GER_inner_circle_focus_style
-
 
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus ENG_veteran_armed_forces_support"
@@ -17817,6 +17587,7 @@ focus_tree = {
 		relative_position_id = ENG_from_sandhurst_to_service
 
 		cost = @inner_circle_time_tier_4
+		text_icon = GER_inner_circle_focus_style
 
 		prerequisite = { focus = ENG_veteran_armed_forces_support }
 
@@ -17849,9 +17620,6 @@ focus_tree = {
 				}
 			}
 		}
-
-		text_icon = GER_inner_circle_focus_style
-
 
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus ENG_bridge_to_the_future"
@@ -17894,6 +17662,7 @@ focus_tree = {
 		relative_position_id = ENG_duke_charities
 
 		cost = 5
+		text_icon = GER_inner_circle_focus_style
 
 		allow_branch = {
 			if = {
@@ -17918,9 +17687,6 @@ focus_tree = {
 		}
 
 		search_filters = { FOCUS_FILTER_INNER_CIRCLE FOCUS_FILTER_POLITICAL }
-
-		text_icon = GER_inner_circle_focus_style
-
 
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus ENG_queen_youngest"
@@ -18383,8 +18149,8 @@ focus_tree = {
 			y = 0
 			trigger = {
 				has_game_rule = {
-				rule = obsolete_focus_branches_visibility
-				option = HIDE
+					rule = obsolete_focus_branches_visibility
+					option = HIDE
 				}
 				has_completed_focus = ENG_a_more_united_kingdom
 			}
@@ -18479,8 +18245,8 @@ focus_tree = {
 			y = 0
 			trigger = {
 				has_game_rule = {
-				rule = obsolete_focus_branches_visibility
-				option = HIDE
+					rule = obsolete_focus_branches_visibility
+					option = HIDE
 				}
 				has_completed_focus = ENG_a_more_united_kingdom
 			}
@@ -18527,8 +18293,8 @@ focus_tree = {
 			y = 0
 			trigger = {
 				has_game_rule = {
-				rule = obsolete_focus_branches_visibility
-				option = HIDE
+					rule = obsolete_focus_branches_visibility
+					option = HIDE
 				}
 				has_completed_focus = ENG_fractured_kingdom_united_state
 			}
@@ -18538,8 +18304,8 @@ focus_tree = {
 			y = 0
 			trigger = {
 				has_game_rule = {
-				rule = obsolete_focus_branches_visibility
-				option = HIDE
+					rule = obsolete_focus_branches_visibility
+					option = HIDE
 				}
 				has_completed_focus = ENG_a_more_united_kingdom
 			}
@@ -18585,8 +18351,8 @@ focus_tree = {
 			y = 0
 			trigger = {
 				has_game_rule = {
-				rule = obsolete_focus_branches_visibility
-				option = HIDE
+					rule = obsolete_focus_branches_visibility
+					option = HIDE
 				}
 				has_completed_focus = ENG_a_more_united_kingdom
 			}
@@ -18636,8 +18402,8 @@ focus_tree = {
 			y = -1
 			trigger = {
 				has_game_rule = {
-				rule = obsolete_focus_branches_visibility
-				option = HIDE
+					rule = obsolete_focus_branches_visibility
+					option = HIDE
 				}
 				has_completed_focus = ENG_a_more_united_kingdom
 			}
@@ -18687,8 +18453,8 @@ focus_tree = {
 			y = -1
 			trigger = {
 				has_game_rule = {
-				rule = obsolete_focus_branches_visibility
-				option = HIDE
+					rule = obsolete_focus_branches_visibility
+					option = HIDE
 				}
 				has_completed_focus = ENG_a_more_united_kingdom
 			}
@@ -18738,8 +18504,8 @@ focus_tree = {
 			y = -1
 			trigger = {
 				has_game_rule = {
-				rule = obsolete_focus_branches_visibility
-				option = HIDE
+					rule = obsolete_focus_branches_visibility
+					option = HIDE
 				}
 				has_completed_focus = ENG_a_more_united_kingdom
 			}
@@ -18789,8 +18555,8 @@ focus_tree = {
 			y = -1
 			trigger = {
 				has_game_rule = {
-				rule = obsolete_focus_branches_visibility
-				option = HIDE
+					rule = obsolete_focus_branches_visibility
+					option = HIDE
 				}
 				has_completed_focus = ENG_a_more_united_kingdom
 			}
@@ -18897,8 +18663,8 @@ focus_tree = {
 			y = 0
 			trigger = {
 				has_game_rule = {
-				rule = obsolete_focus_branches_visibility
-				option = HIDE
+					rule = obsolete_focus_branches_visibility
+					option = HIDE
 				}
 				has_completed_focus = ENG_fractured_kingdom_united_state
 			}
@@ -19032,8 +18798,8 @@ focus_tree = {
 			y = 0
 			trigger = {
 				has_game_rule = {
-				rule = obsolete_focus_branches_visibility
-				option = HIDE
+					rule = obsolete_focus_branches_visibility
+					option = HIDE
 				}
 				has_completed_focus = ENG_fractured_kingdom_united_state
 			}
@@ -19069,8 +18835,8 @@ focus_tree = {
 			y = 0
 			trigger = {
 				has_game_rule = {
-				rule = obsolete_focus_branches_visibility
-				option = HIDE
+					rule = obsolete_focus_branches_visibility
+					option = HIDE
 				}
 				has_completed_focus = ENG_fractured_kingdom_united_state
 			}
@@ -19115,8 +18881,8 @@ focus_tree = {
 			y = 0
 			trigger = {
 				has_game_rule = {
-				rule = obsolete_focus_branches_visibility
-				option = HIDE
+					rule = obsolete_focus_branches_visibility
+					option = HIDE
 				}
 				has_completed_focus = ENG_fractured_kingdom_united_state
 			}
@@ -19384,8 +19150,8 @@ focus_tree = {
 			y = 0
 			trigger = {
 				has_game_rule = {
-				rule = obsolete_focus_branches_visibility
-				option = HIDE
+					rule = obsolete_focus_branches_visibility
+					option = HIDE
 				}
 				has_completed_focus = ENG_fractured_kingdom_united_state
 			}
@@ -19425,8 +19191,8 @@ focus_tree = {
 			y = 0
 			trigger = {
 				has_game_rule = {
-				rule = obsolete_focus_branches_visibility
-				option = HIDE
+					rule = obsolete_focus_branches_visibility
+					option = HIDE
 				}
 				has_completed_focus = ENG_fractured_kingdom_united_state
 			}
@@ -19467,8 +19233,8 @@ focus_tree = {
 			y = 0
 			trigger = {
 				has_game_rule = {
-				rule = obsolete_focus_branches_visibility
-				option = HIDE
+					rule = obsolete_focus_branches_visibility
+					option = HIDE
 				}
 				has_completed_focus = ENG_fractured_kingdom_united_state
 			}

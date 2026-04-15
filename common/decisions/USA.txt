@@ -404,9 +404,6 @@ USA_american_economic_decisions_category = {
 	}
 
 	USA_bring_microsoft_to_court_decision = {
-		allowed = {
-			original_tag = USA
-		}
 		visible = {
 			has_country_flag = USA_allowed_microsoft_merger
 			NOT = { has_country_flag = collapsed_nation }
@@ -684,6 +681,7 @@ USA_congress_md = {
 			USA_congress_small_support = yes
 			USA_scaling_lobbying_effort_cost_effect = yes
 		}
+		ai_will_do = { base = 0 }
 	}
 	USA_political_pandering = {
 		icon = ger_mefo_bills
@@ -707,6 +705,7 @@ USA_congress_md = {
 			USA_congress_medium_support = yes
 			USA_scaling_lobbying_effort_cost_effect = yes
 		}
+		ai_will_do = { base = 0 }
 	}
 	USA_use_huac = {
 		icon = oppression
@@ -734,6 +733,7 @@ USA_congress_md = {
 			add_stability = -0.03
 			add_war_support = -0.06
 		}
+		ai_will_do = { base = 0 }
 	}
 	USA_beat_up_opposition = {
 		icon = oppression
@@ -1340,7 +1340,6 @@ USA_asteroid_mining_decision = {
 		}
 	}
 }
-
 
 ## Domestic Policies
 USA_decisions_domestic_policies = {
@@ -2452,7 +2451,6 @@ USA_decisions_domestic_policies = {
 	}
 }
 
-
 ##Political and Economic Reforms
 USA_political_and_economic_reforms = {
 	USA_anti_trust_department = {
@@ -3405,6 +3403,7 @@ USA_f35_program_decisions = {
 	# Orders
 
 	small_f35a_order = {
+		fixed_random_seed = no
 		icon = GFX_decision_nato_f35_expansion_button
 
 		days_mission_timeout = 360
@@ -3443,6 +3442,7 @@ USA_f35_program_decisions = {
 	}
 
 	small_f35b_order = {
+		fixed_random_seed = no
 		icon = GFX_decision_nato_f35_expansion_button
 
 		days_mission_timeout = 360
@@ -3483,6 +3483,7 @@ USA_f35_program_decisions = {
 	# Large Orders
 
 	large_f35a_order = {
+		fixed_random_seed = no
 		icon = GFX_decision_nato_f35_expansion_button
 
 		days_mission_timeout = 500
@@ -3521,6 +3522,7 @@ USA_f35_program_decisions = {
 	}
 
 	large_f35b_order = {
+		fixed_random_seed = no
 		icon = GFX_decision_nato_f35_expansion_button
 
 		days_mission_timeout = 500
@@ -3606,20 +3608,23 @@ USA_f35_program_decisions = {
 		allowed = {
 			original_tag = USA
 		}
-		visible = {
-			if = {
-				limit = {
-					is_ai = no
-				}
-				has_country_flag = USA_removals_opened
-			}
+
+		target_array = global.f35_members
+		target_trigger = {
 			is_in_array = {
 				array = global.f35_members
 				value = FROM.id
 			}
 		}
 
-		target_array = global.f35_members
+		target_root_trigger = {
+			if = {
+				limit = {
+					is_ai = no
+				}
+				has_country_flag = USA_removals_opened
+			}
+		}
 
 		complete_effect = {
 			log = "[GetDateText]: [Root.GetName]: Decision USA_kick_out_of_program"
@@ -4396,6 +4401,7 @@ USA_foreign_policy = {
 	}
 
 	USA_belarus_reauthorization_act = {
+		fixed_random_seed = no
 		icon = GFX_decision_generic_operation
 		fire_only_once = yes
 
@@ -5690,9 +5696,7 @@ USA_iraq_most_wanted = {
 					clr_country_flag = IRQ_majid_here
 				}
 				USA = {
-					country_event = {
-						id = iraqi_MNF.14
-					}
+					country_event = iraqi_MNF.14
 				}
 			}
 			if = {
@@ -5705,9 +5709,7 @@ USA_iraq_most_wanted = {
 					clr_country_flag = IRQ_walter_here
 				}
 				USA = {
-					country_event = {
-						id = iraqi_MNF.15
-					}
+					country_event = iraqi_MNF.15
 				}
 			}
 			if = {
@@ -5720,9 +5722,7 @@ USA_iraq_most_wanted = {
 					clr_country_flag = IRQ_tilfah_here
 				}
 				USA = {
-					country_event = {
-						id = iraqi_MNF.16
-					}
+					country_event = iraqi_MNF.16
 				}
 			}
 			if = {
@@ -5735,9 +5735,7 @@ USA_iraq_most_wanted = {
 					clr_country_flag = IRQ_salih_here
 				}
 				USA = {
-					country_event = {
-						id = iraqi_MNF.17
-					}
+					country_event = iraqi_MNF.17
 				}
 			}
 		}
@@ -5793,9 +5791,7 @@ USA_iraq_most_wanted = {
 					clr_country_flag = IRQ_majid_here
 				}
 				USA = {
-					country_event = {
-						id = iraqi_MNF.14
-					}
+					country_event = iraqi_MNF.14
 				}
 			}
 			if = {
@@ -5808,9 +5804,7 @@ USA_iraq_most_wanted = {
 					clr_country_flag = IRQ_walter_here
 				}
 				USA = {
-					country_event = {
-						id = iraqi_MNF.15
-					}
+					country_event = iraqi_MNF.15
 				}
 			}
 			if = {
@@ -5823,9 +5817,7 @@ USA_iraq_most_wanted = {
 					clr_country_flag = IRQ_tilfah_here
 				}
 				USA = {
-					country_event = {
-						id = iraqi_MNF.16
-					}
+					country_event = iraqi_MNF.16
 				}
 			}
 			if = {
@@ -5838,9 +5830,7 @@ USA_iraq_most_wanted = {
 					clr_country_flag = IRQ_salih_here
 				}
 				USA = {
-					country_event = {
-						id = iraqi_MNF.17
-					}
+					country_event = iraqi_MNF.17
 				}
 			}
 		}
@@ -5896,9 +5886,7 @@ USA_iraq_most_wanted = {
 					clr_country_flag = IRQ_majid_here
 				}
 				USA = {
-					country_event = {
-						id = iraqi_MNF.14
-					}
+					country_event = iraqi_MNF.14
 				}
 			}
 			if = {
@@ -5911,9 +5899,7 @@ USA_iraq_most_wanted = {
 					clr_country_flag = IRQ_walter_here
 				}
 				USA = {
-					country_event = {
-						id = iraqi_MNF.15
-					}
+					country_event = iraqi_MNF.15
 				}
 			}
 			if = {
@@ -5926,9 +5912,7 @@ USA_iraq_most_wanted = {
 					clr_country_flag = IRQ_tilfah_here
 				}
 				USA = {
-					country_event = {
-						id = iraqi_MNF.16
-					}
+					country_event = iraqi_MNF.16
 				}
 			}
 			if = {
@@ -5941,9 +5925,7 @@ USA_iraq_most_wanted = {
 					clr_country_flag = IRQ_salih_here
 				}
 				USA = {
-					country_event = {
-						id = iraqi_MNF.17
-					}
+					country_event = iraqi_MNF.17
 				}
 			}
 		}
@@ -5999,9 +5981,7 @@ USA_iraq_most_wanted = {
 					clr_country_flag = IRQ_majid_here
 				}
 				USA = {
-					country_event = {
-						id = iraqi_MNF.14
-					}
+					country_event = iraqi_MNF.14
 				}
 			}
 			if = {
@@ -6014,9 +5994,7 @@ USA_iraq_most_wanted = {
 					clr_country_flag = IRQ_walter_here
 				}
 				USA = {
-					country_event = {
-						id = iraqi_MNF.15
-					}
+					country_event = iraqi_MNF.15
 				}
 			}
 			if = {
@@ -6029,9 +6007,7 @@ USA_iraq_most_wanted = {
 					clr_country_flag = IRQ_tilfah_here
 				}
 				USA = {
-					country_event = {
-						id = iraqi_MNF.16
-					}
+					country_event = iraqi_MNF.16
 				}
 			}
 			if = {
@@ -6044,9 +6020,7 @@ USA_iraq_most_wanted = {
 					clr_country_flag = IRQ_salih_here
 				}
 				USA = {
-					country_event = {
-						id = iraqi_MNF.17
-					}
+					country_event = iraqi_MNF.17
 				}
 			}
 		}
@@ -6102,9 +6076,7 @@ USA_iraq_most_wanted = {
 					clr_country_flag = IRQ_majid_here
 				}
 				USA = {
-					country_event = {
-						id = iraqi_MNF.14
-					}
+					country_event = iraqi_MNF.14
 				}
 			}
 			if = {
@@ -6117,9 +6089,7 @@ USA_iraq_most_wanted = {
 					clr_country_flag = IRQ_walter_here
 				}
 				USA = {
-					country_event = {
-						id = iraqi_MNF.15
-					}
+					country_event = iraqi_MNF.15
 				}
 			}
 			if = {
@@ -6132,9 +6102,7 @@ USA_iraq_most_wanted = {
 					clr_country_flag = IRQ_tilfah_here
 				}
 				USA = {
-					country_event = {
-						id = iraqi_MNF.16
-					}
+					country_event = iraqi_MNF.16
 				}
 			}
 			if = {
@@ -6147,9 +6115,7 @@ USA_iraq_most_wanted = {
 					clr_country_flag = IRQ_salih_here
 				}
 				USA = {
-					country_event = {
-						id = iraqi_MNF.17
-					}
+					country_event = iraqi_MNF.17
 				}
 			}
 		}
@@ -6205,9 +6171,7 @@ USA_iraq_most_wanted = {
 					clr_country_flag = IRQ_majid_here
 				}
 				USA = {
-					country_event = {
-						id = iraqi_MNF.14
-					}
+					country_event = iraqi_MNF.14
 				}
 			}
 			if = {
@@ -6220,9 +6184,7 @@ USA_iraq_most_wanted = {
 					clr_country_flag = IRQ_walter_here
 				}
 				USA = {
-					country_event = {
-						id = iraqi_MNF.15
-					}
+					country_event = iraqi_MNF.15
 				}
 			}
 			if = {
@@ -6235,9 +6197,7 @@ USA_iraq_most_wanted = {
 					clr_country_flag = IRQ_tilfah_here
 				}
 				USA = {
-					country_event = {
-						id = iraqi_MNF.16
-					}
+					country_event = iraqi_MNF.16
 				}
 			}
 			if = {
@@ -6250,9 +6210,7 @@ USA_iraq_most_wanted = {
 					clr_country_flag = IRQ_salih_here
 				}
 				USA = {
-					country_event = {
-						id = iraqi_MNF.17
-					}
+					country_event = iraqi_MNF.17
 				}
 			}
 		}
@@ -6308,9 +6266,7 @@ USA_iraq_most_wanted = {
 					clr_country_flag = IRQ_majid_here
 				}
 				USA = {
-					country_event = {
-						id = iraqi_MNF.14
-					}
+					country_event = iraqi_MNF.14
 				}
 			}
 			if = {
@@ -6323,9 +6279,7 @@ USA_iraq_most_wanted = {
 					clr_country_flag = IRQ_walter_here
 				}
 				USA = {
-					country_event = {
-						id = iraqi_MNF.15
-					}
+					country_event = iraqi_MNF.15
 				}
 			}
 			if = {
@@ -6338,9 +6292,7 @@ USA_iraq_most_wanted = {
 					clr_country_flag = IRQ_tilfah_here
 				}
 				USA = {
-					country_event = {
-						id = iraqi_MNF.16
-					}
+					country_event = iraqi_MNF.16
 				}
 			}
 			if = {
@@ -6353,9 +6305,7 @@ USA_iraq_most_wanted = {
 					clr_country_flag = IRQ_salih_here
 				}
 				USA = {
-					country_event = {
-						id = iraqi_MNF.17
-					}
+					country_event = iraqi_MNF.17
 				}
 			}
 		}
@@ -6407,9 +6357,7 @@ USA_iraq_most_wanted = {
 		is_good = no
 		timeout_effect = {
 			log = "[GetDateText]: [Root.GetName]: Decision USA_fugitive_countdown"
-			country_event = {
-				id = iraqi_MNF.200
-			}
+			country_event = iraqi_MNF.200
 		}
 	}
 }

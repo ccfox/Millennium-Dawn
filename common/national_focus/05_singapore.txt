@@ -1906,7 +1906,7 @@ focus_tree = {
 		search_filters = { FOCUS_FILTER_MILITARY_LAWS FOCUS_FILTER_NAVY }
 		available = {
 			is_subject = no
-			has_tech = human_imitation_ai
+			has_tech = artificial_intelligence_8
 		}
 
 		prerequisite = { focus = SIN_navy_naval_exercise }
@@ -1936,7 +1936,7 @@ focus_tree = {
 		search_filters = { FOCUS_FILTER_MILITARY_LAWS FOCUS_FILTER_NAVY }
 		available = {
 			is_subject = no
-			has_tech = human_imitation_ai
+			has_tech = artificial_intelligence_8
 		}
 
 		prerequisite = { focus = SIN_navy_frigate }
@@ -2488,7 +2488,7 @@ focus_tree = {
 		search_filters = { FOCUS_FILTER_MILITARY_LAWS FOCUS_FILTER_AIRCRAFT }
 		available = {
 			is_subject = no
-			has_tech = human_imitation_ai
+			has_tech = artificial_intelligence_8
 		}
 
 		prerequisite = { focus = SIN_air_force_pilot_daily_exercise }
@@ -2526,7 +2526,7 @@ focus_tree = {
 		search_filters = { FOCUS_FILTER_MILITARY_LAWS FOCUS_FILTER_AIRCRAFT }
 		available = {
 			is_subject = no
-			has_tech = human_imitation_ai
+			has_tech = artificial_intelligence_8
 		}
 
 		prerequisite = { focus = SIN_air_force_efficient_pilot }
@@ -3580,7 +3580,7 @@ focus_tree = {
 		prerequisite = { focus = SIN_sinister_ideas }
 		completion_reward = {
 			log = "[GetDateText]: [THIS.GetName]: Focus SIN_a_new_march"
-			country_event = { id = singapore.3 }
+			country_event = singapore.3
 		}
 
 		ai_will_do = {

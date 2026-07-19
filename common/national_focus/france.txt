@@ -467,9 +467,11 @@ focus_tree = {
 			modifier = {
 				factor = 0
 				NOT = { has_global_flag = FRA_CHAOS_PATH }
-				has_government = neutrality
-				has_government = communism
-				has_government = nationalist
+				OR = {
+					has_government = neutrality
+					has_government = communism
+					has_government = nationalist
+				}
 			}
 			modifier = {
 				add = 1
@@ -660,7 +662,10 @@ focus_tree = {
 			for_each_scope_loop = {
 				array = global.EU_member
 				tooltip = TT_ALL_EU_MEMBER_NATIONS_GAIN
-				add_opinion_modifier = { target = ROOT modifier = european_commitment }
+				if = {
+					limit = { NOT = { TAG = ROOT } }
+					add_opinion_modifier = { target = ROOT modifier = european_commitment }
+				}
 			}
 			add_political_power = 50
 		}
@@ -1209,13 +1214,15 @@ focus_tree = {
 			log = "[GetDateText]: [THIS.GetName]: Focus FRA_french_political_dominance"
 			for_each_scope_loop = {
 				array = global.EU_member
-				limit = {
-					check_variable = { THIS.EU_pop_ratio > 0.05 }
-					NOT = { TAG = ROOT }
+				if = {
+					limit = {
+						check_variable = { THIS.EU_pop_ratio > 0.05 }
+						NOT = { TAG = ROOT }
+					}
+					set_temp_variable = { modify_eurosceptic = 0.25 }
+					set_temp_variable = { modify_eurosceptic_target = THIS }
+					eurosceptic_change = yes
 				}
-				set_temp_variable = { modify_eurosceptic = 0.25 }
-				set_temp_variable = { modify_eurosceptic_target = THIS }
-				eurosceptic_change = yes
 			}
 			hidden_effect = {
 				set_temp_variable = { temp1 = 10 }
@@ -1227,14 +1234,16 @@ focus_tree = {
 
 			for_each_scope_loop = {
 				array = global.EU_member
-				limit = {
-					NOT = { TAG = ROOT }
-				}
-				add_opinion_modifier = { target = ROOT modifier = french_pol_dominance }
-				EU_money_for_influence = yes
-				effect_tooltip = {
-					set_temp_variable = { treasury_change = 10 }
-					modify_treasury_effect = yes
+				if = {
+					limit = {
+						NOT = { TAG = ROOT }
+					}
+					add_opinion_modifier = { target = ROOT modifier = french_pol_dominance }
+					EU_money_for_influence = yes
+					effect_tooltip = {
+						set_temp_variable = { treasury_change = 10 }
+						modify_treasury_effect = yes
+					}
 				}
 			}
 			add_political_power = 75
@@ -1392,30 +1401,32 @@ focus_tree = {
 			log = "[GetDateText]: [THIS.GetName]: Focus FRA_a_international_language"
 			for_each_scope_loop = {
 				array = global.EU_member
-				limit = {
-					check_variable = { THIS.EU_pop_ratio > 0.05 }
-					NOT = { TAG = ROOT }
+				if = {
+					limit = {
+						check_variable = { THIS.EU_pop_ratio > 0.05 }
+						NOT = { TAG = ROOT }
+					}
+					set_temp_variable = { modify_eurosceptic = 0.10 }
+					set_temp_variable = { modify_eurosceptic_target = THIS }
+					eurosceptic_change = yes
 				}
-				set_temp_variable = { modify_eurosceptic = 0.10 }
-				set_temp_variable = { modify_eurosceptic_target = THIS }
-				eurosceptic_change = yes
 			}
 			for_each_scope_loop = {
 				array = global.EU_member
-				limit = {
-					check_variable = { THIS.EU_pop_ratio < 0.05 }
-					NOT = { TAG = ROOT }
+				if = {
+					limit = {
+						check_variable = { THIS.EU_pop_ratio < 0.05 }
+						NOT = { TAG = ROOT }
+					}
+					set_temp_variable = { modify_eurosceptic = -0.05 }
+					set_temp_variable = { modify_eurosceptic_target = THIS }
+					eurosceptic_change = yes
 				}
-				set_temp_variable = { modify_eurosceptic = -0.05 }
-				set_temp_variable = { modify_eurosceptic_target = THIS }
-				eurosceptic_change = yes
 			}
 			for_each_scope_loop = {
 				array = global.EU_member
 				tooltip = TT_ALL_EU_MEMBER_NATIONS_GAIN
 				set_temp_variable = { percent_change = 2 }
-				set_temp_variable = { tag_index = FRA.id }
-				set_temp_variable = { influence_target = THIS.id }
 				change_influence_percentage = yes
 			}
 		}
@@ -3856,11 +3867,11 @@ focus_tree = {
 			}
 			if = {
 				limit = { has_dlc = "Arms Against Tyranny" }
-				mio:FRA_nexter_materiel_manufacturer = {
+				mio:FRA_nexter_manufacturer = {
 					add_mio_size = 2
 					add_to_variable = { free_trait_picks = 2 }
 				}
-				mio:FRA_nexter_tank_manufacturer = {
+				mio:FRA_nexter_manufacturer = {
 					add_mio_size = 2
 					add_to_variable = { free_trait_picks = 2 }
 				}
@@ -4022,7 +4033,7 @@ focus_tree = {
 					add_mio_size = 2
 					add_to_variable = { free_trait_picks = 2 }
 				}
-				mio:FRA_naval_group_naval_manufacturer_2 = {
+				mio:FRA_dcn_manufacturer = {
 					add_mio_size = 2
 					add_to_variable = { free_trait_picks = 2 }
 				}
@@ -5236,7 +5247,7 @@ focus_tree = {
 		completion_reward = {
 			log = "[GetDateText]: [THIS.GetName]: Focus FRA_expanded_enrichment_facilities"
 			set_temp_variable = { temp_change = 1 }
-			build_enrichment_facilities_effect = yes
+			random_owned_state = { add_building_construction = { type = enrichment_facility level = 1 } }
 		}
 
 		ai_will_do = {
@@ -6988,11 +6999,9 @@ focus_tree = {
 			base = 1
 			modifier = {
 				factor = 0
-				NOT = {
-					has_global_flag = FRA_CHAOS_PATH
-					has_government = communism
-					has_government = nationalist
-				}
+				NOT = { has_global_flag = FRA_CHAOS_PATH }
+				NOT = { has_government = communism }
+				NOT = { has_government = nationalist }
 			}
 		}
 	}
@@ -7032,11 +7041,9 @@ focus_tree = {
 			base = 1
 			modifier = {
 				factor = 0
-				NOT = {
-					has_global_flag = FRA_CHAOS_PATH
-					has_government = communism
-					has_government = nationalist
-				}
+				NOT = { has_global_flag = FRA_CHAOS_PATH }
+				NOT = { has_government = communism }
+				NOT = { has_government = nationalist }
 			}
 		}
 	}
@@ -7093,11 +7100,9 @@ focus_tree = {
 			base = 1
 			modifier = {
 				factor = 0
-				NOT = {
-					has_global_flag = FRA_CHAOS_PATH
-					has_government = communism
-					has_government = nationalist
-				}
+				NOT = { has_global_flag = FRA_CHAOS_PATH }
+				NOT = { has_government = communism }
+				NOT = { has_government = nationalist }
 			}
 		}
 	}
@@ -7153,11 +7158,9 @@ focus_tree = {
 			base = 1
 			modifier = {
 				factor = 0
-				NOT = {
-					has_global_flag = FRA_CHAOS_PATH
-					has_government = communism
-					has_government = nationalist
-				}
+				NOT = { has_global_flag = FRA_CHAOS_PATH }
+				NOT = { has_government = communism }
+				NOT = { has_government = nationalist }
 			}
 		}
 	}
@@ -7194,9 +7197,7 @@ focus_tree = {
 				limit = { has_country_flag = FRA_a_peaceful_rise_flag }
 				every_country = {
 					limit = {
-						OR = {
-							capital_scope = { is_on_continent = north_america }
-						}
+						capital_scope = { is_on_continent = north_america }
 					}
 					add_opinion_modifier = { target = ROOT modifier = stage_peaceful }
 				}
@@ -7205,9 +7206,7 @@ focus_tree = {
 				limit = { has_country_flag = FRA_an_aggressive_expansionism_flag }
 				every_country = {
 					limit = {
-						OR = {
-							capital_scope = { is_on_continent = north_america }
-						}
+						capital_scope = { is_on_continent = north_america }
 					}
 					add_opinion_modifier = { target = ROOT modifier = stage_aggresive_expansion }
 				}
@@ -7221,11 +7220,9 @@ focus_tree = {
 			base = 1
 			modifier = {
 				factor = 0
-				NOT = {
-					has_global_flag = FRA_CHAOS_PATH
-					has_government = communism
-					has_government = nationalist
-				}
+				NOT = { has_global_flag = FRA_CHAOS_PATH }
+				NOT = { has_government = communism }
+				NOT = { has_government = nationalist }
 			}
 		}
 	}
@@ -7281,11 +7278,9 @@ focus_tree = {
 			base = 1
 			modifier = {
 				factor = 0
-				NOT = {
-					has_global_flag = FRA_CHAOS_PATH
-					has_government = communism
-					has_government = nationalist
-				}
+				NOT = { has_global_flag = FRA_CHAOS_PATH }
+				NOT = { has_government = communism }
+				NOT = { has_government = nationalist }
 			}
 		}
 	}
@@ -7341,11 +7336,9 @@ focus_tree = {
 			base = 1
 			modifier = {
 				factor = 0
-				NOT = {
-					has_global_flag = FRA_CHAOS_PATH
-					has_government = communism
-					has_government = nationalist
-				}
+				NOT = { has_global_flag = FRA_CHAOS_PATH }
+				NOT = { has_government = communism }
+				NOT = { has_government = nationalist }
 			}
 		}
 	}
@@ -7401,11 +7394,9 @@ focus_tree = {
 			base = 1
 			modifier = {
 				factor = 0
-				NOT = {
-					has_global_flag = FRA_CHAOS_PATH
-					has_government = communism
-					has_government = nationalist
-				}
+				NOT = { has_global_flag = FRA_CHAOS_PATH }
+				NOT = { has_government = communism }
+				NOT = { has_government = nationalist }
 			}
 		}
 	}
@@ -7440,7 +7431,6 @@ focus_tree = {
 			log = "[GetDateText]: [THIS.GetName]: Focus FRA_the_dominican"
 			if = { limit = { has_country_flag = FRA_a_peaceful_rise_flag }
 				set_temp_variable = { percent_change = 3 }
-				set_temp_variable = { tag_index = FRA.id }
 				set_temp_variable = { influence_target = HAI.id }
 				change_influence_percentage = yes
 				set_temp_variable = { influence_target = DOM.id }
@@ -7466,11 +7456,9 @@ focus_tree = {
 			base = 1
 			modifier = {
 				factor = 0
-				NOT = {
-					has_global_flag = FRA_CHAOS_PATH
-					has_government = communism
-					has_government = nationalist
-				}
+				NOT = { has_global_flag = FRA_CHAOS_PATH }
+				NOT = { has_government = communism }
+				NOT = { has_government = nationalist }
 			}
 			modifier = {
 				factor = 0
@@ -7527,11 +7515,9 @@ focus_tree = {
 			base = 1
 			modifier = {
 				factor = 0
-				NOT = {
-					has_global_flag = FRA_CHAOS_PATH
-					has_government = communism
-					has_government = nationalist
-				}
+				NOT = { has_global_flag = FRA_CHAOS_PATH }
+				NOT = { has_government = communism }
+				NOT = { has_government = nationalist }
 			}
 		}
 	}
@@ -7565,20 +7551,14 @@ focus_tree = {
 				limit = { has_country_flag = FRA_a_peaceful_rise_flag }
 				ALG = {
 					set_temp_variable = { percent_change = 3 }
-					set_temp_variable = { tag_index = FRA.id }
-					set_temp_variable = { influence_target = THIS.id }
 					change_influence_percentage = yes
 				}
 				MOR = {
 					set_temp_variable = { percent_change = 3 }
-					set_temp_variable = { tag_index = FRA.id }
-					set_temp_variable = { influence_target = THIS.id }
 					change_influence_percentage = yes
 				}
 				TUN = {
 					set_temp_variable = { percent_change = 3 }
-					set_temp_variable = { tag_index = FRA.id }
-					set_temp_variable = { influence_target = THIS.id }
 					change_influence_percentage = yes
 				}
 			}
@@ -7619,11 +7599,9 @@ focus_tree = {
 			base = 1
 			modifier = {
 				factor = 0
-				NOT = {
-					has_global_flag = FRA_CHAOS_PATH
-					has_government = communism
-					has_government = nationalist
-				}
+				NOT = { has_global_flag = FRA_CHAOS_PATH }
+				NOT = { has_government = communism }
+				NOT = { has_government = nationalist }
 			}
 			modifier = {
 				factor = 0
@@ -7662,20 +7640,14 @@ focus_tree = {
 				limit = { has_country_flag = FRA_a_peaceful_rise_flag }
 				DJI = {
 					set_temp_variable = { percent_change = 3 }
-					set_temp_variable = { tag_index = FRA.id }
-					set_temp_variable = { influence_target = THIS.id }
 					change_influence_percentage = yes
 				}
 				ETH = {
 					set_temp_variable = { percent_change = 3 }
-					set_temp_variable = { tag_index = FRA.id }
-					set_temp_variable = { influence_target = THIS.id }
 					change_influence_percentage = yes
 				}
 				SOM = {
 					set_temp_variable = { percent_change = 3 }
-					set_temp_variable = { tag_index = FRA.id }
-					set_temp_variable = { influence_target = THIS.id }
 					change_influence_percentage = yes
 				}
 			}
@@ -7716,11 +7688,9 @@ focus_tree = {
 			base = 1
 			modifier = {
 				factor = 0
-				NOT = {
-					has_global_flag = FRA_CHAOS_PATH
-					has_government = communism
-					has_government = nationalist
-				}
+				NOT = { has_global_flag = FRA_CHAOS_PATH }
+				NOT = { has_government = communism }
+				NOT = { has_government = nationalist }
 			}
 			modifier = {
 				factor = 0
@@ -7814,11 +7784,9 @@ focus_tree = {
 			base = 1
 			modifier = {
 				factor = 0
-				NOT = {
-					has_global_flag = FRA_CHAOS_PATH
-					has_government = communism
-					has_government = nationalist
-				}
+				NOT = { has_global_flag = FRA_CHAOS_PATH }
+				NOT = { has_government = communism }
+				NOT = { has_government = nationalist }
 			}
 		}
 	}
@@ -7851,8 +7819,6 @@ focus_tree = {
 			if = { limit = { has_country_flag = FRA_a_peaceful_rise_flag }
 				ITA = {
 					set_temp_variable = { percent_change = 3 }
-					set_temp_variable = { tag_index = FRA.id }
-					set_temp_variable = { influence_target = THIS.id }
 					change_influence_percentage = yes
 				}
 			}
@@ -7875,11 +7841,9 @@ focus_tree = {
 			base = 1
 			modifier = {
 				factor = 0
-				NOT = {
-					has_global_flag = FRA_CHAOS_PATH
-					has_government = communism
-					has_government = nationalist
-				}
+				NOT = { has_global_flag = FRA_CHAOS_PATH }
+				NOT = { has_government = communism }
+				NOT = { has_government = nationalist }
 			}
 			modifier = {
 				factor = 0
@@ -7918,20 +7882,14 @@ focus_tree = {
 				limit = { has_country_flag = FRA_a_peaceful_rise_flag }
 				HOL = {
 					set_temp_variable = { percent_change = 3 }
-					set_temp_variable = { tag_index = FRA.id }
-					set_temp_variable = { influence_target = THIS.id }
 					change_influence_percentage = yes
 				}
 				BEL = {
 					set_temp_variable = { percent_change = 3 }
-					set_temp_variable = { tag_index = FRA.id }
-					set_temp_variable = { influence_target = THIS.id }
 					change_influence_percentage = yes
 				}
 				LUX = {
 					set_temp_variable = { percent_change = 3 }
-					set_temp_variable = { tag_index = FRA.id }
-					set_temp_variable = { influence_target = THIS.id }
 					change_influence_percentage = yes
 				}
 			}
@@ -7974,11 +7932,9 @@ focus_tree = {
 			base = 1
 			modifier = {
 				factor = 0
-				NOT = {
-					has_global_flag = FRA_CHAOS_PATH
-					has_government = communism
-					has_government = nationalist
-				}
+				NOT = { has_global_flag = FRA_CHAOS_PATH }
+				NOT = { has_government = communism }
+				NOT = { has_government = nationalist }
 			}
 			modifier = {
 				factor = 0
@@ -8043,11 +7999,9 @@ focus_tree = {
 			base = 1
 			modifier = {
 				factor = 0
-				NOT = {
-					has_global_flag = FRA_CHAOS_PATH
-					has_government = communism
-					has_government = nationalist
-				}
+				NOT = { has_global_flag = FRA_CHAOS_PATH }
+				NOT = { has_government = communism }
+				NOT = { has_government = nationalist }
 			}
 		}
 	}
@@ -8081,20 +8035,14 @@ focus_tree = {
 				limit = { has_country_flag = FRA_a_peaceful_rise_flag }
 				CBD = {
 					set_temp_variable = { percent_change = 3 }
-					set_temp_variable = { tag_index = FRA.id }
-					set_temp_variable = { influence_target = THIS.id }
 					change_influence_percentage = yes
 				}
 				VIE = {
 					set_temp_variable = { percent_change = 3 }
-					set_temp_variable = { tag_index = FRA.id }
-					set_temp_variable = { influence_target = THIS.id }
 					change_influence_percentage = yes
 				}
 				LAO = {
 					set_temp_variable = { percent_change = 3 }
-					set_temp_variable = { tag_index = FRA.id }
-					set_temp_variable = { influence_target = THIS.id }
 					change_influence_percentage = yes
 				}
 			}
@@ -8135,11 +8083,9 @@ focus_tree = {
 			base = 1
 			modifier = {
 				factor = 0
-				NOT = {
-					has_global_flag = FRA_CHAOS_PATH
-					has_government = communism
-					has_government = nationalist
-				}
+				NOT = { has_global_flag = FRA_CHAOS_PATH }
+				NOT = { has_government = communism }
+				NOT = { has_government = nationalist }
 			}
 			modifier = {
 				factor = 0
@@ -8196,11 +8142,9 @@ focus_tree = {
 			base = 1
 			modifier = {
 				factor = 0
-				NOT = {
-					has_global_flag = FRA_CHAOS_PATH
-					has_government = communism
-					has_government = nationalist
-				}
+				NOT = { has_global_flag = FRA_CHAOS_PATH }
+				NOT = { has_government = communism }
+				NOT = { has_government = nationalist }
 			}
 		}
 	}
@@ -8234,26 +8178,18 @@ focus_tree = {
 				limit = { has_country_flag = FRA_a_peaceful_rise_flag }
 				SEN = {
 					set_temp_variable = { percent_change = 3 }
-					set_temp_variable = { tag_index = FRA.id }
-					set_temp_variable = { influence_target = THIS.id }
 					change_influence_percentage = yes
 				}
 				GUB = {
 					set_temp_variable = { percent_change = 3 }
-					set_temp_variable = { tag_index = FRA.id }
-					set_temp_variable = { influence_target = THIS.id }
 					change_influence_percentage = yes
 				}
 				GUI = {
 					set_temp_variable = { percent_change = 3 }
-					set_temp_variable = { tag_index = FRA.id }
-					set_temp_variable = { influence_target = THIS.id }
 					change_influence_percentage = yes
 				}
 				MAU = {
 					set_temp_variable = { percent_change = 3 }
-					set_temp_variable = { tag_index = FRA.id }
-					set_temp_variable = { influence_target = THIS.id }
 					change_influence_percentage = yes
 				}
 			}
@@ -8301,11 +8237,9 @@ focus_tree = {
 			base = 1
 			modifier = {
 				factor = 0
-				NOT = {
-					has_global_flag = FRA_CHAOS_PATH
-					has_government = communism
-					has_government = nationalist
-				}
+				NOT = { has_global_flag = FRA_CHAOS_PATH }
+				NOT = { has_government = communism }
+				NOT = { has_government = nationalist }
 			}
 			modifier = {
 				factor = 0
@@ -8342,7 +8276,6 @@ focus_tree = {
 			log = "[GetDateText]: [THIS.GetName]: Focus FRA_subsahara"
 			if = { limit = { has_country_flag = FRA_a_peaceful_rise_flag }
 				set_temp_variable = { percent_change = 3 }
-				set_temp_variable = { tag_index = FRA.id }
 				set_temp_variable = { influence_target = MAL.id }
 				change_influence_percentage = yes
 				set_temp_variable = { influence_target = CDI.id }
@@ -8388,11 +8321,9 @@ focus_tree = {
 			base = 1
 			modifier = {
 				factor = 0
-				NOT = {
-					has_global_flag = FRA_CHAOS_PATH
-					has_government = communism
-					has_government = nationalist
-				}
+				NOT = { has_global_flag = FRA_CHAOS_PATH }
+				NOT = { has_government = communism }
+				NOT = { has_government = nationalist }
 			}
 			modifier = {
 				factor = 0
@@ -8431,8 +8362,6 @@ focus_tree = {
 				limit = { has_country_flag = FRA_a_peaceful_rise_flag }
 				USA = {
 					set_temp_variable = { percent_change = 5 }
-					set_temp_variable = { tag_index = FRA.id }
-					set_temp_variable = { influence_target = THIS.id }
 					change_influence_percentage = yes
 				}
 			}
@@ -8460,11 +8389,9 @@ focus_tree = {
 			base = 1
 			modifier = {
 				factor = 0
-				NOT = {
-					has_global_flag = FRA_CHAOS_PATH
-					has_government = communism
-					has_government = nationalist
-				}
+				NOT = { has_global_flag = FRA_CHAOS_PATH }
+				NOT = { has_government = communism }
+				NOT = { has_government = nationalist }
 			}
 			modifier = {
 				factor = 0
@@ -8503,14 +8430,10 @@ focus_tree = {
 				limit = { has_country_flag = FRA_a_peaceful_rise_flag }
 				SPR = {
 					set_temp_variable = { percent_change = 3 }
-					set_temp_variable = { tag_index = FRA.id }
-					set_temp_variable = { influence_target = THIS.id }
 					change_influence_percentage = yes
 				}
 				POR = {
 					set_temp_variable = { percent_change = 3 }
-					set_temp_variable = { tag_index = FRA.id }
-					set_temp_variable = { influence_target = THIS.id }
 					change_influence_percentage = yes
 				}
 			}
@@ -8544,11 +8467,9 @@ focus_tree = {
 			base = 1
 			modifier = {
 				factor = 0
-				NOT = {
-					has_global_flag = FRA_CHAOS_PATH
-					has_government = communism
-					has_government = nationalist
-				}
+				NOT = { has_global_flag = FRA_CHAOS_PATH }
+				NOT = { has_government = communism }
+				NOT = { has_government = nationalist }
 			}
 			modifier = {
 				factor = 0
@@ -8587,14 +8508,10 @@ focus_tree = {
 				limit = { has_country_flag = FRA_a_peaceful_rise_flag }
 				SWI = {
 					set_temp_variable = { percent_change = 3 }
-					set_temp_variable = { tag_index = FRA.id }
-					set_temp_variable = { influence_target = THIS.id }
 					change_influence_percentage = yes
 				}
 				AUS = {
 					set_temp_variable = { percent_change = 3 }
-					set_temp_variable = { tag_index = FRA.id }
-					set_temp_variable = { influence_target = THIS.id }
 					change_influence_percentage = yes
 				}
 			}
@@ -8629,11 +8546,9 @@ focus_tree = {
 			base = 1
 			modifier = {
 				factor = 0
-				NOT = {
-					has_global_flag = FRA_CHAOS_PATH
-					has_government = communism
-					has_government = nationalist
-				}
+				NOT = { has_global_flag = FRA_CHAOS_PATH }
+				NOT = { has_government = communism }
+				NOT = { has_government = nationalist }
 			}
 			modifier = {
 				factor = 0
@@ -8673,8 +8588,6 @@ focus_tree = {
 				limit = { has_completed_focus = FRA_peaceful_rise }
 				GER = {
 					set_temp_variable = { percent_change = 3 }
-					set_temp_variable = { tag_index = FRA.id }
-					set_temp_variable = { influence_target = THIS.id }
 					change_influence_percentage = yes
 				}
 			}
@@ -8701,11 +8614,9 @@ focus_tree = {
 			base = 1
 			modifier = {
 				factor = 0
-				NOT = {
-					has_global_flag = FRA_CHAOS_PATH
-					has_government = communism
-					has_government = nationalist
-				}
+				NOT = { has_global_flag = FRA_CHAOS_PATH }
+				NOT = { has_government = communism }
+				NOT = { has_government = nationalist }
 			}
 			modifier = {
 				factor = 0
@@ -8746,8 +8657,6 @@ focus_tree = {
 				limit = { has_completed_focus = FRA_peaceful_rise }
 				SOV = {
 					set_temp_variable = { percent_change = 3 }
-					set_temp_variable = { tag_index = FRA.id }
-					set_temp_variable = { influence_target = THIS.id }
 					change_influence_percentage = yes
 				}
 			}
@@ -8774,11 +8683,9 @@ focus_tree = {
 			base = 1
 			modifier = {
 				factor = 0
-				NOT = {
-					has_global_flag = FRA_CHAOS_PATH
-					has_government = communism
-					has_government = nationalist
-				}
+				NOT = { has_global_flag = FRA_CHAOS_PATH }
+				NOT = { has_government = communism }
+				NOT = { has_government = nationalist }
 			}
 			modifier = {
 				factor = 0
@@ -8885,7 +8792,6 @@ focus_tree = {
 			log = "[GetDateText]: [THIS.GetName]: Focus FRA_the_levant_problem"
 			add_political_power = 100
 			set_temp_variable = { percent_change = 2 }
-			set_temp_variable = { tag_index = FRA.id }
 			if = {
 				limit = { country_exists = LEB }
 				set_temp_variable = { influence_target = LEB.id }
@@ -8968,28 +8874,7 @@ focus_tree = {
 			base = 1
 			modifier = {
 				factor = 1.75
-				OR = {
-					AND = {
-						ARM = { has_government = democratic }
-						has_government = democratic
-					}
-					AND = {
-						ARM = { has_government = communism }
-						has_government = communism
-					}
-					AND = {
-						ARM = { has_government = neutrality }
-						has_government = neutrality
-					}
-					AND = {
-						ARM = { has_government = nationalist }
-						has_government = nationalist
-					}
-					AND = {
-						ARM = { has_government = fascism }
-						has_government = fascism
-					}
-				}
+				has_government = ARM
 			}
 			modifier = {
 				factor = 1.5
@@ -9037,7 +8922,6 @@ focus_tree = {
 		completion_reward = {
 			log = "[GetDateText]: [THIS.GetName]: Focus FRA_antagonize_syria"
 			set_temp_variable = { percent_change = 1 }
-			set_temp_variable = { tag_index = FRA.id }
 			set_temp_variable = { influence_target = SYR.id }
 			change_influence_percentage = yes
 			SYR = { add_opinion_modifier = { target = FRA modifier = FRA_antagonize_syria_opinion } }
@@ -9167,10 +9051,8 @@ focus_tree = {
 			OR = {
 				SYR = { has_completed_focus = SYR_flowers_of_damascus_spring }
 				SYR = {
-					NOT = {
-						has_government = nationalist
-						has_government = fascism
-					}
+					NOT = { has_government = nationalist }
+					NOT = { has_government = fascism }
 					has_elections = yes
 					NOT = {
 						has_country_leader = { name = "Bashar al-Assad" ruling_only = yes }
@@ -10041,8 +9923,10 @@ focus_tree = {
 				has_idea = non_power
 			}
 			country_exists = HAI
-			HAI = { has_country_flag = HAI_demands_french_reparations }
-			HAI = { has_country_leader = { name = "Jean-Bertrand Aristide" ruling_only = yes } }
+			HAI = {
+				has_country_flag = HAI_demands_french_reparations
+				has_country_leader = { name = "Jean-Bertrand Aristide" ruling_only = yes }
+			}
 			OR = {
 				HAI = {
 					has_country_flag = HAI_ignores_amiot
@@ -10115,7 +9999,6 @@ focus_tree = {
 		completion_reward = {
 			log = "[GetDateText]: [THIS.GetName]: Focus FRA_repeal_the_ordiance"
 			set_temp_variable = { percent_change = 3 }
-			set_temp_variable = { tag_index = FRA.id }
 			set_temp_variable = { influence_target = HAI.id }
 			change_influence_percentage = yes
 			reverse_add_opinion_modifier = {
@@ -10215,13 +10098,11 @@ focus_tree = {
 			add_political_power = 100
 			every_country = {
 				limit = {
-					is_french_africa_nation = yes
+					has_country_flag = french_africa_nation_flag
 					influence_higher_15 = yes
 				}
 				add_opinion_modifier = { target = ROOT modifier = political_outreach }
 				set_temp_variable = { percent_change = 0.2 }
-				set_temp_variable = { tag_index = FRA.id }
-				set_temp_variable = { influence_target = THIS.id }
 				change_influence_percentage = yes
 			}
 		}
@@ -10265,14 +10146,12 @@ focus_tree = {
 		completion_reward = {
 			log = "[GetDateText]: [THIS.GetName]: Focus FRA_francophone_solidarity"
 			set_temp_variable = { percent_change = 1 }
-			set_temp_variable = { tag_index = FRA.id }
 			every_country = {
 				limit = {
-					is_french_africa_nation = yes
+					has_country_flag = french_africa_nation_flag
 					influence_higher_15 = yes
 				}
 				add_opinion_modifier = { target = ROOT modifier = FRA_francophone_solidarity_opinion }
-				set_temp_variable = { influence_target = THIS.id }
 				change_influence_percentage = yes
 			}
 		}
@@ -10358,7 +10237,7 @@ focus_tree = {
 			log = "[GetDateText]: [THIS.GetName]: Focus FRA_NEPAD_development"
 			# TODO: Rework this into a more "dynamic" time system. We will use 3 years for now
 			every_other_country = {
-				limit = { is_african_nation = yes }
+				limit = { has_country_flag = african_nation_flag }
 				add_dynamic_modifier = {
 					modifier = AFRICA_idea_nepad_modifier
 					days = 1095
@@ -10425,19 +10304,19 @@ focus_tree = {
 		bypass = {
 			is_french_africa_nation = yes
 			NOT = { has_idea = cfa_franc }
+			NOT = { has_idea = cfa_franc_2 }
+			NOT = { has_idea = the_eco }
 		}
 
 		completion_reward = {
 			log = "[GetDateText]: [THIS.GetName]: Focus FRA_CFA_Reforms"
 			set_temp_variable = { percent_change = 0.5 }
-			set_temp_variable = { tag_index = FRA.id }
 			every_other_country = {
 				limit = {
 					has_idea = cfa_franc
 					influence_higher_15 = yes
 				}
 				swap_ideas = { remove_idea = cfa_franc add_idea = cfa_franc_2 }
-				set_temp_variable = { influence_target = THIS.id }
 				change_influence_percentage = yes
 			}
 		}
@@ -10525,10 +10404,8 @@ focus_tree = {
 		completion_reward = {
 			log = "[GetDateText]: [THIS.GetName]: Focus FRA_sahel_region"
 			set_temp_variable = { percent_change = 1.2 }
-			set_temp_variable = { tag_index = FRA.id }
 			every_other_country = {
-				limit = { is_sahel_nation = yes }
-				set_temp_variable = { influence_target = THIS.id }
+				limit = { has_country_flag = sahel_nation_flag }
 				change_influence_percentage = yes
 			}
 		}
@@ -10549,7 +10426,6 @@ focus_tree = {
 		}
 	}
 
-	# TODO: We want to have this configured with some content
 	focus = {
 		id = FRA_introduce_the_eco
 		icon = eco_one
@@ -10577,16 +10453,13 @@ focus_tree = {
 		}
 		bypass = {
 			is_french_africa_nation = yes
-			NOT = {
-				has_idea = cfa_franc
-				has_idea = cfa_franc_2
-			}
+			NOT = { has_idea = cfa_franc }
+			NOT = { has_idea = cfa_franc_2 }
+			NOT = { has_idea = the_eco }
 		}
 
 		completion_reward = {
 			log = "[GetDateText]: [THIS.GetName]: Focus FRA_introduce_the_eco"
-			set_temp_variable = { percent_change = 0.5 }
-			set_temp_variable = { tag_index = FRA.id }
 			every_other_country = {
 				limit = {
 					OR = {
@@ -10595,9 +10468,20 @@ focus_tree = {
 					}
 					influence_higher_15 = yes
 				}
-				swap_ideas = { remove_idea = cfa_franc_2 add_idea = the_eco }
-				set_temp_variable = { influence_target = THIS.id }
+				country_event = { id = france_md.509 days = 1 }
+			}
+			newline = yes
+			custom_effect_tooltip = TT_IF_THEY_ACCEPT
+			effect_tooltip = {
+				swap_ideas = { remove_idea = cfa_franc add_idea = the_eco }
+				add_opinion_modifier = { target = FRA modifier = FRA_supported_financial_independence }
+				set_temp_variable = { percent_change = 0.5 }
+				set_temp_variable = { tag_index = FRA.id }
 				change_influence_percentage = yes
+			}
+			custom_effect_tooltip = TT_IF_THEY_REJECT
+			effect_tooltip = {
+				add_opinion_modifier = { target = FRA modifier = FRA_rejected_financial_independence }
 			}
 		}
 
@@ -10640,12 +10524,10 @@ focus_tree = {
 		completion_reward = {
 			log = "[GetDateText]: [THIS.GetName]: Focus FRA_afrique_centrale"
 			set_temp_variable = { percent_change = 1.2 }
-			set_temp_variable = { tag_index = FRA.id }
 			every_other_country = {
 				limit = {
-					is_central_african_nation = yes
+					has_country_flag = central_african_nation_flag
 				}
-				set_temp_variable = { influence_target = THIS.id }
 				change_influence_percentage = yes
 			}
 		}
@@ -10692,19 +10574,17 @@ focus_tree = {
 			multiply_temp_variable = { treasury_change = -0.005 }
 			modify_treasury_effect = yes
 			set_temp_variable = { percent_change = 1.2 }
-			set_temp_variable = { tag_index = FRA.id }
 			every_other_country = {
 				limit = {
 					OR = {
-						is_sahel_nation = yes
-						is_central_african_nation = yes
+						has_country_flag = sahel_nation_flag
+						has_country_flag = central_african_nation_flag
 					}
 				}
 				add_timed_idea = {
 					idea = FRA_resource_prospects_idea
 					days = 365
 				}
-				set_temp_variable = { influence_target = THIS.id }
 				change_influence_percentage = yes
 			}
 		}
@@ -10751,19 +10631,17 @@ focus_tree = {
 			multiply_temp_variable = { treasury_change = -0.005 }
 			modify_treasury_effect = yes
 			set_temp_variable = { percent_change = 1.2 }
-			set_temp_variable = { tag_index = FRA.id }
 			every_other_country = {
 				limit = {
 					OR = {
-						is_sahel_nation = yes
-						is_central_african_nation = yes
+						has_country_flag = sahel_nation_flag
+						has_country_flag = central_african_nation_flag
 					}
 				}
 				add_timed_idea = {
 					idea = FRA_idea_development_investment
 					days = 365
 				}
-				set_temp_variable = { influence_target = THIS.id }
 				change_influence_percentage = yes
 			}
 		}
@@ -10810,19 +10688,17 @@ focus_tree = {
 			multiply_temp_variable = { treasury_change = -0.005 }
 			modify_treasury_effect = yes
 			set_temp_variable = { percent_change = 1.2 }
-			set_temp_variable = { tag_index = FRA.id }
 			every_other_country = {
 				limit = {
 					OR = {
-						is_sahel_nation = yes
-						is_central_african_nation = yes
+						has_country_flag = sahel_nation_flag
+						has_country_flag = central_african_nation_flag
 					}
 				}
 				add_timed_idea = {
 					idea = FRA_educational_development_idea
 					days = 365
 				}
-				set_temp_variable = { influence_target = THIS.id }
 				change_influence_percentage = yes
 			}
 		}
@@ -10910,9 +10786,8 @@ focus_tree = {
 		completion_reward = {
 			log = "[GetDateText]: [THIS.GetName]: Focus FRA_sahel_support_initiative"
 			set_temp_variable = { percent_change = 1.2 }
-			set_temp_variable = { tag_index = FRA.id }
 			every_other_country = {
-				limit = { is_sahel_nation = yes }
+				limit = { has_country_flag = sahel_nation_flag }
 				PREV = {
 					send_equipment = {
 						equipment = infantry_weapons_type
@@ -10920,7 +10795,6 @@ focus_tree = {
 						target = PREV
 					}
 				}
-				set_temp_variable = { influence_target = THIS.id }
 				change_influence_percentage = yes
 			}
 		}
@@ -10970,13 +10844,11 @@ focus_tree = {
 			multiply_temp_variable = { treasury_change = -0.007 }
 			modify_treasury_effect = yes
 			set_temp_variable = { percent_change = 1.2 }
-			set_temp_variable = { tag_index = FRA.id }
 			every_other_country = {
-				limit = { is_sahel_nation = yes }
+				limit = { has_country_flag = sahel_nation_flag }
 				every_unit_leader = {
 					add_skill_level = 1
 				}
-				set_temp_variable = { influence_target = THIS.id }
 				change_influence_percentage = yes
 			}
 		}
@@ -11066,7 +10938,6 @@ focus_tree = {
 		completion_reward = {
 			log = "[GetDateText]: [THIS.GetName]: Focus FRA_returning_to_indochina"
 			set_temp_variable = { percent_change = 3 }
-			set_temp_variable = { tag_index = FRA.id }
 			set_temp_variable = { influence_target = CBD.id }
 			change_influence_percentage = yes
 			set_temp_variable = { influence_target = VIE.id }
@@ -11113,7 +10984,6 @@ focus_tree = {
 		completion_reward = {
 			log = "[GetDateText]: [THIS.GetName]: Focus FRA_former_indian_colonial"
 			set_temp_variable = { percent_change = 3 }
-			set_temp_variable = { tag_index = FRA.id }
 			set_temp_variable = { influence_target = SEY.id }
 			change_influence_percentage = yes
 			set_temp_variable = { influence_target = MRT.id }

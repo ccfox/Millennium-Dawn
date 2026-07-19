@@ -15,7 +15,7 @@ RUS_establish_me = {
 				country_exists = RUS
 			}
 		}
-		remove_effect = {
+		complete_effect = {
 			log = "[GetDateText]: [Root.GetName]: Decision RUS_hold_kaliningrad_conference"
 			country_event = department_of_state.37
 			set_global_flag = kaliningrad_conference
@@ -47,10 +47,12 @@ RUS_establish_me = {
 					is_core_of = KOM
 					is_core_of = KAE
 					is_core_of = URA
-					is_core_of = ESB
 				}
 			}
 		}
+
+		days_remove = 14
+
 		remove_effect = {
 			log = "[GetDateText]: [Root.GetName]: Decision RUS_continue_reunification"
 			country_event = department_of_state.37
@@ -63,7 +65,6 @@ RUS_establish_me = {
 					NOT = { original_tag = CHI }
 					NOT = { original_tag = KAE }
 					NOT = { original_tag = URA }
-					NOT = { original_tag = KAE }
 					NOT = { original_tag = UKR }
 					any_controlled_state = {
 						OR = {
@@ -73,7 +74,6 @@ RUS_establish_me = {
 							is_core_of = KOM
 							is_core_of = KAE
 							is_core_of = URA
-							is_core_of = ESB
 						}
 					}
 				}
@@ -99,6 +99,9 @@ RUS_establish_me = {
 				}
 			}
 		}
+
+		days_remove = 7
+
 		remove_effect = {
 			log = "[GetDateText]: [Root.GetName]: Decision RUS_establish_rusfor"
 			hidden_effect = {

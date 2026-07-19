@@ -11437,7 +11437,7 @@ communist_cadres_at_least_positive_opinion = yes
 				add = 1
 				OR = {
 					is_historical_focus_on = no
-					has_idea = superpower
+					has_idea = super_power
 				}
 			}
 		}
@@ -13818,9 +13818,7 @@ communist_cadres_at_least_positive_opinion = yes
 		    hidden_effect = {
 			every_state = {  #add core for Bhutan
 					limit = {
-						OR = {
-							is_bhutan_state = yes
-						}
+						is_bhutan_state = yes
 					}
 					add_core_of = CHI
 				}
@@ -14376,9 +14374,7 @@ communist_cadres_at_least_positive_opinion = yes
 			hidden_effect = {
 			 every_state = {  #add core for Khalkharegion
 					limit = {
-						OR = {
-							is_outer_mongolia_state = yes
-						}
+						is_outer_mongolia_state = yes
 					}
 					add_core_of = CHI
 				}
@@ -14401,7 +14397,7 @@ communist_cadres_at_least_positive_opinion = yes
 				add = 1
 				OR = {
 					is_historical_focus_on = yes
-					has_idea = superpower
+					has_idea = super_power
 				}
 			}
 		}
@@ -14764,7 +14760,7 @@ communist_cadres_at_least_positive_opinion = yes
 		mutually_exclusive = { focus = CHI_Favor_Multipolarity }
 
 		available = {
-			has_idea = superpower
+			has_idea = super_power
 			NOT = { has_government = democratic }
 		}
 

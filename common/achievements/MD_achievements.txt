@@ -288,7 +288,7 @@ quite_literally_the_eu = {
 		game_rules_allow_achievements = yes
 		custom_trigger_tooltip = {
 			tooltip = eu_achievement_tt
-			is_EU_potential = yes
+			EU_is_potential = yes
 		}
 	}
 
@@ -738,7 +738,7 @@ form_north_sea_empire = {
 			original_tag = ENG
 			original_tag = SWE
 			original_tag = DEN
-			original_tag = NOR
+			original_tag = NRY
 		}
 	}
 
@@ -931,7 +931,7 @@ unite_the_nordic_people = {
 		OR = {
 			original_tag = SWE
 			original_tag = DEN
-			original_tag = NOR
+			original_tag = NRY
 			original_tag = FIN
 		}
 	}
@@ -1268,7 +1268,7 @@ libya_f_is_for_family = {
 			tooltip = libya_f_is_for_family_saif_al_arab_gaddafi_tt
 			OR = {
 				has_country_flag = saif_al_arab_gaddafi_dead
-				has_country_flag = saif_al_arab_gaddafi_dead
+				has_country_flag = saif_al_arab_gaddafi_exile
 			}
 		}
 		custom_trigger_tooltip = {
@@ -1532,6 +1532,7 @@ achievement_who_needs_them_silly_trees_anyways = {
 		}
 	}
 }
+
 achievement_legacy_of_michiel_de_ruyter = {
 	possible = {
 		difficulty > 1
@@ -1540,7 +1541,7 @@ achievement_legacy_of_michiel_de_ruyter = {
 		original_tag = HOL
 	}
 	happened = {
-		has_completed_focus = HOL_Maritiem_Masterplan
+		has_completed_focus = HOL_maritiem_masterplan
 		USA = { FROM_is_top3_influencer = yes }
 		ENG = { FROM_is_top3_influencer = yes }
 		SOV = { FROM_is_top3_influencer = yes }
@@ -1671,6 +1672,24 @@ achievement_the_dutch_empire_once_again = {
 		}
 	}
 }
+
+achievement_the_polar_express = {
+	possible = {
+		difficulty > 1
+		has_any_custom_difficulty_setting = no
+		game_rules_allow_achievements = yes
+		original_tag = GRN
+	}
+
+	happened = {
+		has_completed_focus = GRN_focus_Nuuk_Western_Railway
+		has_completed_focus = GRN_focus_Southern_Fjords_Railway
+		has_completed_focus = GRN_focus_General_National_Investments
+		has_country_flag = GRN_country_flag_southern_polar_railway
+		has_country_flag = GRN_country_flag_central_arctic_railroad
+	}
+}
+
 
 # Russia Achievements
 # TODO: Add graphics for back_in_the_ussr, from_russia_with_nukes
@@ -2182,12 +2201,12 @@ oil_rich_viking = {
 		difficulty > 1
 		has_any_custom_difficulty_setting = no
 		game_rules_allow_achievements = yes
-		original_tag = NOR
+		original_tag = NRY
 	}
 
 	happened = {
 		date > 1999.01.02
-		original_tag = NOR
+		original_tag = NRY
 		custom_trigger_tooltip = {
 			tooltip = oil_rich_viking_tt
 			check_variable = { gdp_per_capita > 99.99 }

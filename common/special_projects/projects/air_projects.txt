@@ -798,6 +798,7 @@ sp_hypersonic_engine = {
 	project_output = {
 		enable_equipment_modules = {
 			air_module_hypersonic_engine_1
+			air_module_hypersonic_engine_jet_1
 		}
 	}
 
@@ -888,7 +889,13 @@ sp_awacs_project = {
 	}
 	available = {
 		FROM = {
-			has_tech = avionics_1
+			if = {
+				limit = { has_dlc = "By Blood Alone" }
+				has_tech = avionics_1
+			}
+			else = {
+				has_tech = early_bomber
+			}
 		}
 	}
 

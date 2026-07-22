@@ -27,7 +27,7 @@ IRQ_iraq_war = {
 			}
 		}
 		complete_effect = {
-			log = "[GetDateText]: [Root.GetName]: Decision timeout IRQ_war_phase_two"
+			log = "[GetDateText]: [Root.GetName]: Decision timeout IRQ_war_phase_one"
 			if = {
 				limit = {
 					488 = {
@@ -741,6 +741,7 @@ IRQ_political_decisions = {
 		days_remove = 25
 		fixed_random_seed = yes
 		fire_only_once = yes
+		war_with_on_remove = PER
 		highlight_states = {
 			highlight_state_targets = {
 				state = 408
@@ -2501,7 +2502,7 @@ IRQ_fao_decisions = {
 			has_country_flag = IRQ_open_invite_menu
 		}
 		complete_effect = {
-			log = "[GetDateText]: [Root.GetName]: Decision IRQ_open_invites"
+			log = "[GetDateText]: [Root.GetName]: Decision IRQ_close_invites"
 			clr_country_flag = IRQ_open_invite_menu
 		}
 		ai_will_do = {

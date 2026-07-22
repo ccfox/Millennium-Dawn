@@ -431,6 +431,10 @@ focus_tree = {
 				add = 10
 				is_historical_focus_on = yes
 			}
+			modifier = {
+				factor = 0
+				has_active_mission = bankruptcy_incoming_collapse
+			}
 		}
 	}
 	focus = {
@@ -462,6 +466,10 @@ focus_tree = {
 			modifier = {
 				add = 10
 				is_historical_focus_on = yes
+			}
+			modifier = {
+				factor = 0
+				has_active_mission = bankruptcy_incoming_collapse
 			}
 		}
 	}
@@ -1448,8 +1456,10 @@ focus_tree = {
 		y = 1
 		available = {
 			NOT = {
-				has_government = fascism
-				has_government = nationalist
+				OR = {
+					has_government = fascism
+					has_government = nationalist
+				}
 			}
 		}
 		prerequisite = { focus = CES_our_state_kaz }
@@ -1485,8 +1495,10 @@ focus_tree = {
 		cost = 5
 		available = {
 			NOT = {
-				has_government = fascism
-				has_government = nationalist
+				OR = {
+					has_government = fascism
+					has_government = nationalist
+				}
 			}
 		}
 		relative_position_id = CES_raise_from_ash
@@ -1529,8 +1541,10 @@ focus_tree = {
 		cost = 7
 		available = {
 			NOT = {
-				has_government = fascism
-				has_government = nationalist
+				OR = {
+					has_government = fascism
+					has_government = nationalist
+				}
 			}
 		}
 		relative_position_id = CES_raise_from_ash
@@ -1565,8 +1579,10 @@ focus_tree = {
 		cost = 6
 		available = {
 			NOT = {
-				has_government = fascism
-				has_government = nationalist
+				OR = {
+					has_government = fascism
+					has_government = nationalist
+				}
 			}
 		}
 		relative_position_id = CES_raise_from_ash
@@ -1604,8 +1620,10 @@ focus_tree = {
 		cost = 7
 		available = {
 			NOT = {
-				has_government = fascism
-				has_government = nationalist
+				OR = {
+					has_government = fascism
+					has_government = nationalist
+				}
 			}
 		}
 		relative_position_id = CES_raise_from_ash
@@ -1634,8 +1652,10 @@ focus_tree = {
 		cost = 5
 		available = {
 			NOT = {
-				has_government = fascism
-				has_government = nationalist
+				OR = {
+					has_government = fascism
+					has_government = nationalist
+				}
 			}
 		}
 		relative_position_id = CES_raise_from_ash
@@ -1667,8 +1687,10 @@ focus_tree = {
 		cost = 7
 		available = {
 			NOT = {
-				has_government = fascism
-				has_government = nationalist
+				OR = {
+					has_government = fascism
+					has_government = nationalist
+				}
 			}
 		}
 		relative_position_id = CES_raise_from_ash
@@ -1697,8 +1719,10 @@ focus_tree = {
 		cost = 7
 		available = {
 			NOT = {
-				has_government = fascism
-				has_government = nationalist
+				OR = {
+					has_government = fascism
+					has_government = nationalist
+				}
 			}
 		}
 		relative_position_id = CES_raise_from_ash
@@ -1756,8 +1780,10 @@ focus_tree = {
 		cost = 5
 		available = {
 			NOT = {
-				has_government = fascism
-				has_government = nationalist
+				OR = {
+					has_government = fascism
+					has_government = nationalist
+				}
 			}
 		}
 		relative_position_id = CES_raise_from_ash
@@ -1797,8 +1823,10 @@ focus_tree = {
 		cost = 7
 		available = {
 			NOT = {
-				has_government = fascism
-				has_government = nationalist
+				OR = {
+					has_government = fascism
+					has_government = nationalist
+				}
 			}
 		}
 		relative_position_id = CES_raise_from_ash
@@ -1830,8 +1858,10 @@ focus_tree = {
 		cost = 5
 		available = {
 			NOT = {
-				has_government = fascism
-				has_government = nationalist
+				OR = {
+					has_government = fascism
+					has_government = nationalist
+				}
 			}
 		}
 		relative_position_id = CES_raise_from_ash
@@ -1863,8 +1893,10 @@ focus_tree = {
 		cost = 7
 		available = {
 			NOT = {
-				has_government = fascism
-				has_government = nationalist
+				OR = {
+					has_government = fascism
+					has_government = nationalist
+				}
 			}
 		}
 		relative_position_id = CES_raise_from_ash
@@ -1894,8 +1926,10 @@ focus_tree = {
 		cost = 7
 		available = {
 			NOT = {
-				has_government = fascism
-				has_government = nationalist
+				OR = {
+					has_government = fascism
+					has_government = nationalist
+				}
 			}
 		}
 		relative_position_id = CES_raise_from_ash
@@ -1933,8 +1967,10 @@ focus_tree = {
 		cost = 7
 		available = {
 			NOT = {
-				has_government = fascism
-				has_government = nationalist
+				OR = {
+					has_government = fascism
+					has_government = nationalist
+				}
 			}
 		}
 		relative_position_id = CES_raise_from_ash
@@ -1964,8 +2000,10 @@ focus_tree = {
 		cost = 5
 		available = {
 			NOT = {
-				has_government = fascism
-				has_government = nationalist
+				OR = {
+					has_government = fascism
+					has_government = nationalist
+				}
 			}
 		}
 		relative_position_id = CES_raise_from_ash
@@ -1999,8 +2037,10 @@ focus_tree = {
 		cost = 5
 		available = {
 			NOT = {
-				has_government = fascism
-				has_government = nationalist
+				OR = {
+					has_government = fascism
+					has_government = nationalist
+				}
 			}
 		}
 		relative_position_id = CES_raise_from_ash
@@ -2046,8 +2086,10 @@ focus_tree = {
 		cost = 7
 		available = {
 			NOT = {
-				has_government = fascism
-				has_government = nationalist
+				OR = {
+					has_government = fascism
+					has_government = nationalist
+				}
 			}
 		}
 		relative_position_id = CES_raise_from_ash
@@ -2081,8 +2123,10 @@ focus_tree = {
 		cost = 7
 		available = {
 			NOT = {
-				has_government = fascism
-				has_government = nationalist
+				OR = {
+					has_government = fascism
+					has_government = nationalist
+				}
 			}
 		}
 		relative_position_id = CES_raise_from_ash
@@ -2501,8 +2545,10 @@ focus_tree = {
 		cost = 5
 		available = {
 			NOT = {
-				has_government = fascism
-				has_government = nationalist
+				OR = {
+					has_government = fascism
+					has_government = nationalist
+				}
 			}
 		}
 		relative_position_id = CES_raise_from_ash
@@ -2531,8 +2577,10 @@ focus_tree = {
 		cost = 7
 		available = {
 			NOT = {
-				has_government = fascism
-				has_government = nationalist
+				OR = {
+					has_government = fascism
+					has_government = nationalist
+				}
 			}
 		}
 		relative_position_id = CES_raise_from_ash
@@ -2564,8 +2612,10 @@ focus_tree = {
 		cost = 7
 		available = {
 			NOT = {
-				has_government = fascism
-				has_government = nationalist
+				OR = {
+					has_government = fascism
+					has_government = nationalist
+				}
 			}
 		}
 		relative_position_id = CES_raise_from_ash
@@ -2596,8 +2646,10 @@ focus_tree = {
 		cost = 5
 		available = {
 			NOT = {
-				has_government = fascism
-				has_government = nationalist
+				OR = {
+					has_government = fascism
+					has_government = nationalist
+				}
 			}
 		}
 		relative_position_id = CES_personal_guard
@@ -2633,8 +2685,10 @@ focus_tree = {
 		cost = 5
 		available = {
 			NOT = {
-				has_government = fascism
-				has_government = nationalist
+				OR = {
+					has_government = fascism
+					has_government = nationalist
+				}
 			}
 		}
 		relative_position_id = CES_put_diss_in_jail
@@ -2668,8 +2722,10 @@ focus_tree = {
 		cost = 5
 		available = {
 			NOT = {
-				has_government = fascism
-				has_government = nationalist
+				OR = {
+					has_government = fascism
+					has_government = nationalist
+				}
 			}
 		}
 		relative_position_id = CES_governmental_propaganda
@@ -2704,8 +2760,10 @@ focus_tree = {
 		cost = 7
 		available = {
 			NOT = {
-				has_government = fascism
-				has_government = nationalist
+				OR = {
+					has_government = fascism
+					has_government = nationalist
+				}
 			}
 		}
 		relative_position_id = CES_pensions_increase
@@ -2734,8 +2792,10 @@ focus_tree = {
 		cost = 5
 		available = {
 			NOT = {
-				has_government = fascism
-				has_government = nationalist
+				OR = {
+					has_government = fascism
+					has_government = nationalist
+				}
 			}
 		}
 		relative_position_id = CES_healthcare_reform
@@ -2770,8 +2830,10 @@ focus_tree = {
 		cost = 7
 		available = {
 			NOT = {
-				has_government = fascism
-				has_government = nationalist
+				OR = {
+					has_government = fascism
+					has_government = nationalist
+				}
 			}
 		}
 		relative_position_id = CES_constitutional_reform
@@ -2804,8 +2866,10 @@ focus_tree = {
 		cost = 5
 		available = {
 			NOT = {
-				has_government = fascism
-				has_government = nationalist
+				OR = {
+					has_government = fascism
+					has_government = nationalist
+				}
 			}
 		}
 		relative_position_id = CES_put_diss_in_jail
@@ -2834,8 +2898,10 @@ focus_tree = {
 		cost = 5
 		available = {
 			NOT = {
-				has_government = fascism
-				has_government = nationalist
+				OR = {
+					has_government = fascism
+					has_government = nationalist
+				}
 			}
 		}
 		relative_position_id = CES_put_diss_in_jail
@@ -2864,8 +2930,10 @@ focus_tree = {
 		cost = 5
 		available = {
 			NOT = {
-				has_government = fascism
-				has_government = nationalist
+				OR = {
+					has_government = fascism
+					has_government = nationalist
+				}
 			}
 		}
 		relative_position_id = CES_put_diss_in_jail
@@ -2898,8 +2966,10 @@ focus_tree = {
 		cost = 6
 		available = {
 			NOT = {
-				has_government = fascism
-				has_government = nationalist
+				OR = {
+					has_government = fascism
+					has_government = nationalist
+				}
 			}
 		}
 		relative_position_id = CES_peaceful_prowestern
@@ -2943,9 +3013,9 @@ focus_tree = {
 						reverse_add_opinion_modifier = { target = ROOT modifier = supports_us }
 					}
 				}
-				set_temp_variable = { modify_eurosceptic = -0.1 }
-				set_temp_variable = { modify_eurosceptic_target = THIS }
-				eurosceptic_change = yes
+				set_temp_variable = { modify_europeanism = 0.1 }
+				set_temp_variable = { modify_europeanism_target = THIS }
+				europeanism_change = yes
 			}
 			if = {
 				limit = {
@@ -2973,8 +3043,10 @@ focus_tree = {
 		cost = 6
 		available = {
 			NOT = {
-				has_government = fascism
-				has_government = nationalist
+				OR = {
+					has_government = fascism
+					has_government = nationalist
+				}
 			}
 		}
 		relative_position_id = CES_changing_the_course
@@ -3035,8 +3107,10 @@ focus_tree = {
 		cost = 6
 		available = {
 			NOT = {
-				has_government = fascism
-				has_government = nationalist
+				OR = {
+					has_government = fascism
+					has_government = nationalist
+				}
 			}
 		}
 		relative_position_id = CES_peaceful_eastern
@@ -3191,7 +3265,7 @@ focus_tree = {
 		prerequisite = { focus = CES_economic_affairs }
 		search_filters = { FOCUS_FILTER_INDUSTRY }
 		completion_reward = {
-			log = "[GetDateText]: [Root.GetName]: Focus GENERIC_attract_foreign_investors"
+			log = "[GetDateText]: [Root.GetName]: Focus CES_debt_reafctoring"
 			set_temp_variable = { debt_change = debt }
 			multiply_temp_variable = { debt_change = 0.05 }
 			clamp_temp_variable = { var = debt_change min = 0 max = 100 }
@@ -3207,6 +3281,10 @@ focus_tree = {
 			modifier = {
 				check_variable = { interest_rate > 5 }
 				factor = 10
+			}
+			modifier = {
+				factor = 0
+				has_active_mission = bankruptcy_incoming_collapse
 			}
 		}
 	}
@@ -3432,6 +3510,10 @@ focus_tree = {
 				add = 10
 				is_historical_focus_on = yes
 			}
+			modifier = {
+				factor = 0
+				has_active_mission = bankruptcy_incoming_collapse
+			}
 		}
 	}
 	focus = {
@@ -3492,6 +3574,14 @@ focus_tree = {
 				add = 10
 				is_historical_focus_on = yes
 			}
+			modifier = {
+				factor = 0
+				can_staff_an_industrial_complex = no
+			}
+			modifier = {
+				factor = 0
+				has_active_mission = bankruptcy_incoming_collapse
+			}
 		}
 	}
 	focus = {
@@ -3521,6 +3611,14 @@ focus_tree = {
 				add = 10
 				is_historical_focus_on = yes
 			}
+			modifier = {
+				factor = 0
+				can_staff_an_industrial_complex = no
+			}
+			modifier = {
+				factor = 0
+				has_active_mission = bankruptcy_incoming_collapse
+			}
 		}
 	}
 	focus = {
@@ -3549,6 +3647,14 @@ focus_tree = {
 			modifier = {
 				add = 10
 				is_historical_focus_on = yes
+			}
+			modifier = {
+				factor = 0
+				can_staff_an_industrial_complex = no
+			}
+			modifier = {
+				factor = 0
+				has_active_mission = bankruptcy_incoming_collapse
 			}
 		}
 	}
@@ -3642,6 +3748,14 @@ focus_tree = {
 				add = 10
 				is_historical_focus_on = yes
 			}
+			modifier = {
+				factor = 0
+				can_staff_an_offices = no
+			}
+			modifier = {
+				factor = 0
+				has_active_mission = bankruptcy_incoming_collapse
+			}
 		}
 	}
 	focus = {
@@ -3671,6 +3785,14 @@ focus_tree = {
 				add = 10
 				is_historical_focus_on = yes
 			}
+			modifier = {
+				factor = 0
+				can_staff_an_offices = no
+			}
+			modifier = {
+				factor = 0
+				has_active_mission = bankruptcy_incoming_collapse
+			}
 		}
 	}
 	focus = {
@@ -3697,6 +3819,14 @@ focus_tree = {
 			modifier = {
 				add = 10
 				is_historical_focus_on = yes
+			}
+			modifier = {
+				factor = 0
+				can_staff_an_offices = no
+			}
+			modifier = {
+				factor = 0
+				has_active_mission = bankruptcy_incoming_collapse
 			}
 		}
 	}
@@ -3793,6 +3923,10 @@ focus_tree = {
 			modifier = {
 				add = 10
 				is_historical_focus_on = yes
+			}
+			modifier = {
+				factor = 0
+				has_active_mission = bankruptcy_incoming_collapse
 			}
 		}
 	}
@@ -4152,6 +4286,10 @@ focus_tree = {
 				add = 10
 				is_historical_focus_on = yes
 			}
+			modifier = {
+				factor = 0
+				has_active_mission = bankruptcy_incoming_collapse
+			}
 		}
 	}
 	focus = {
@@ -4182,6 +4320,10 @@ focus_tree = {
 			modifier = {
 				add = 10
 				is_historical_focus_on = yes
+			}
+			modifier = {
+				factor = 0
+				has_active_mission = bankruptcy_incoming_collapse
 			}
 		}
 	}
@@ -4244,6 +4386,10 @@ focus_tree = {
 			modifier = {
 				add = 10
 				is_historical_focus_on = yes
+			}
+			modifier = {
+				factor = 0
+				has_active_mission = bankruptcy_incoming_collapse
 			}
 		}
 	}
@@ -4314,6 +4460,10 @@ focus_tree = {
 			modifier = {
 				add = 10
 				is_historical_focus_on = yes
+			}
+			modifier = {
+				factor = 0
+				has_active_mission = bankruptcy_incoming_collapse
 			}
 		}
 	}
@@ -4451,6 +4601,10 @@ focus_tree = {
 				add = 10
 				is_historical_focus_on = yes
 			}
+			modifier = {
+				factor = 0
+				has_active_mission = bankruptcy_incoming_collapse
+			}
 		}
 	}
 	focus = {
@@ -4474,6 +4628,14 @@ focus_tree = {
 			modifier = {
 				add = 10
 				is_historical_focus_on = yes
+			}
+			modifier = {
+				factor = 0
+				can_staff_an_agriculture_district = no
+			}
+			modifier = {
+				factor = 0
+				has_active_mission = bankruptcy_incoming_collapse
 			}
 		}
 	}
@@ -4529,6 +4691,14 @@ focus_tree = {
 			modifier = {
 				add = 10
 				is_historical_focus_on = yes
+			}
+			modifier = {
+				factor = 0
+				can_staff_an_industrial_complex = no
+			}
+			modifier = {
+				factor = 0
+				has_active_mission = bankruptcy_incoming_collapse
 			}
 		}
 	}
@@ -4708,6 +4878,14 @@ focus_tree = {
 			modifier = {
 				add = 10
 				is_historical_focus_on = yes
+			}
+			modifier = {
+				factor = 0
+				can_staff_an_industrial_complex = no
+			}
+			modifier = {
+				factor = 0
+				has_active_mission = bankruptcy_incoming_collapse
 			}
 		}
 	}
@@ -5032,6 +5210,10 @@ focus_tree = {
 				add = 10
 				is_historical_focus_on = yes
 			}
+			modifier = {
+				factor = 0
+				has_active_mission = bankruptcy_incoming_collapse
+			}
 		}
 	}
 	focus = {
@@ -5196,9 +5378,9 @@ focus_tree = {
 						modify_international_investment_effect = yes
 					}
 				}
-				set_temp_variable = { modify_eurosceptic = -0.1 }
-				set_temp_variable = { modify_eurosceptic_target = THIS }
-				eurosceptic_change = yes
+				set_temp_variable = { modify_europeanism = 0.1 }
+				set_temp_variable = { modify_europeanism_target = THIS }
+				europeanism_change = yes
 			}
 			else = {
 				add_opinion_modifier = { target = GER modifier = improve_trade }
@@ -5275,6 +5457,10 @@ focus_tree = {
 				add = 10
 				is_historical_focus_on = yes
 			}
+			modifier = {
+				factor = 0
+				has_active_mission = bankruptcy_incoming_collapse
+			}
 		}
 	}
 	focus = {
@@ -5342,9 +5528,6 @@ focus_tree = {
 		search_filters = { FOCUS_FILTER_ECONOMY FOCUS_FILTER_TRADE FOCUS_FILTER_INFLUENCE FOCUS_FILTER_FOREIGN_POLICY FOCUS_FILTER_FOREIGN_INVESTMENTS }
 		completion_reward = {
 			log = "[GetDateText]: [This.GetName]: focus CES_trade_with_united_kingdom executed"
-			# ROOT = {
-			# 	country_event = britain_md.8
-			# }
 			set_temp_variable = { int_investment_change = 1 }
 			modify_international_investment_effect = yes
 			set_temp_variable = { percent_change = 1 }
@@ -5715,6 +5898,10 @@ focus_tree = {
 			modifier = {
 				add = 10
 				is_historical_focus_on = yes
+			}
+			modifier = {
+				factor = 0
+				has_active_mission = bankruptcy_incoming_collapse
 			}
 		}
 	}
@@ -6768,6 +6955,7 @@ focus_tree = {
 	}
 	focus = {
 		id = CES_uprising_in_russia
+		will_lead_to_war_with = SOV
 		icon = chechen_jihad
 
 		x = 1
@@ -6781,7 +6969,7 @@ focus_tree = {
 		}
 		prerequisite = { focus = CES_khurasan_form }
 		prerequisite = { focus = CES_symbol_power }
-		search_filters = { FOCUS_FILTER_POLITICAL FOCUS_FILTER_FOREIGN_POLICY }
+		search_filters = { FOCUS_FILTER_POLITICAL FOCUS_FILTER_FOREIGN_POLICY FOCUS_FILTER_EXPENDITURE }
 		completion_reward = {
 			log = "[GetDateText]: [This.GetName]: focus CES_uprising_in_russia executed"
 			custom_effect_tooltip = chechenskaya_machina_tt
@@ -6892,6 +7080,10 @@ focus_tree = {
 
 		ai_will_do = {
 			base = 1
+			modifier = {
+				factor = 0
+				has_active_mission = bankruptcy_incoming_collapse
+			}
 		}
 	}
 	focus = {
@@ -6939,10 +7131,12 @@ focus_tree = {
 			}
 			for_each_scope_loop = {
 				array = global.EU_member
+				tooltip = TT_ALL_EU_MEMBER_NATIONS_GAIN
 				add_opinion_modifier = { target = ROOT modifier = major_breach_of_trust }
 			}
 			for_each_scope_loop = {
 				array = global.nato_members
+				tooltip = TT_ALL_NATO_MEMBER_NATIONS_GAIN
 				add_opinion_modifier = { target = ROOT modifier = major_breach_of_trust }
 			}
 			every_country = {
@@ -8745,6 +8939,10 @@ focus_tree = {
 				add = 10
 				is_historical_focus_on = yes
 			}
+			modifier = {
+				factor = 0
+				has_active_mission = bankruptcy_incoming_collapse
+			}
 		}
 	}
 	focus = {
@@ -8904,6 +9102,10 @@ focus_tree = {
 				add = 10
 				is_historical_focus_on = yes
 			}
+			modifier = {
+				factor = 0
+				has_active_mission = bankruptcy_incoming_collapse
+			}
 		}
 	}
 	focus = {
@@ -8918,7 +9120,7 @@ focus_tree = {
 		prerequisite = { focus = CES_airforce_trainings }
 		search_filters = { FOCUS_FILTER_MILITARY_LAWS FOCUS_FILTER_AIR_XP }
 		completion_reward = {
-			log = "[GetDateText]: [This.GetName]: focus CES_buying_planes executed"
+			log = "[GetDateText]: [This.GetName]: focus CES_new_air_doctrine executed"
 			air_experience = 75
 			add_war_support = 0.02
 
@@ -8973,6 +9175,10 @@ focus_tree = {
 				add = 10
 				is_historical_focus_on = yes
 			}
+			modifier = {
+				factor = 0
+				has_active_mission = bankruptcy_incoming_collapse
+			}
 		}
 	}
 	focus = {
@@ -9009,6 +9215,10 @@ focus_tree = {
 			modifier = {
 				add = 10
 				is_historical_focus_on = yes
+			}
+			modifier = {
+				factor = 0
+				has_active_mission = bankruptcy_incoming_collapse
 			}
 		}
 	}
@@ -9052,6 +9262,10 @@ focus_tree = {
 				add = 10
 				is_historical_focus_on = yes
 			}
+			modifier = {
+				factor = 0
+				has_active_mission = bankruptcy_incoming_collapse
+			}
 		}
 	}
 	focus = {
@@ -9093,6 +9307,10 @@ focus_tree = {
 			modifier = {
 				add = 10
 				is_historical_focus_on = yes
+			}
+			modifier = {
+				factor = 0
+				has_active_mission = bankruptcy_incoming_collapse
 			}
 		}
 	}
@@ -9181,6 +9399,10 @@ focus_tree = {
 			modifier = {
 				add = 10
 				is_historical_focus_on = yes
+			}
+			modifier = {
+				factor = 0
+				has_active_mission = bankruptcy_incoming_collapse
 			}
 		}
 	}
@@ -9481,6 +9703,10 @@ focus_tree = {
 				add = 10
 				is_historical_focus_on = yes
 			}
+			modifier = {
+				factor = 0
+				has_active_mission = bankruptcy_incoming_collapse
+			}
 		}
 	}
 	focus = {
@@ -9516,6 +9742,10 @@ focus_tree = {
 				add = 10
 				is_historical_focus_on = yes
 			}
+			modifier = {
+				factor = 0
+				has_active_mission = bankruptcy_incoming_collapse
+			}
 		}
 	}
 	focus = {
@@ -9531,7 +9761,7 @@ focus_tree = {
 		prerequisite = { focus = CES_infantr_guns }
 		search_filters = { FOCUS_FILTER_MILITARY_LAWS }
 		completion_reward = {
-			log = "[GetDateText]: [This.GetName]: focus CES_chinese_guns executed"
+			log = "[GetDateText]: [This.GetName]: focus CES_us_guns executed"
 			add_timed_idea = {
 				idea = rifle_production_bonus2
 				days = 365
@@ -9550,6 +9780,10 @@ focus_tree = {
 			modifier = {
 				add = 10
 				is_historical_focus_on = yes
+			}
+			modifier = {
+				factor = 0
+				has_active_mission = bankruptcy_incoming_collapse
 			}
 		}
 	}
@@ -9871,6 +10105,14 @@ focus_tree = {
 			modifier = {
 				add = 10
 				is_historical_focus_on = yes
+			}
+			modifier = {
+				factor = 0
+				has_active_mission = bankruptcy_incoming_collapse
+			}
+			modifier = {
+				factor = 0
+				can_staff_an_dockyard = no
 			}
 		}
 	}
@@ -10704,6 +10946,10 @@ focus_tree = {
 
 		ai_will_do = {
 			base = 1
+			modifier = {
+				factor = 0
+				has_active_mission = bankruptcy_incoming_collapse
+			}
 		}
 	}
 	focus = {
@@ -10729,6 +10975,10 @@ focus_tree = {
 
 		ai_will_do = {
 			base = 1
+			modifier = {
+				factor = 0
+				has_active_mission = bankruptcy_incoming_collapse
+			}
 		}
 	}
 	focus = {
@@ -10792,6 +11042,10 @@ focus_tree = {
 
 		ai_will_do = {
 			base = 1
+			modifier = {
+				factor = 0
+				has_active_mission = bankruptcy_incoming_collapse
+			}
 		}
 	}
 	focus = {
@@ -10818,6 +11072,10 @@ focus_tree = {
 
 		ai_will_do = {
 			base = 1
+			modifier = {
+				factor = 0
+				has_active_mission = bankruptcy_incoming_collapse
+			}
 		}
 	}
 	focus = {
@@ -10894,7 +11152,7 @@ focus_tree = {
 		relative_position_id = CES_kaz_reform_vs
 		search_filters = { FOCUS_FILTER_MILITARY_LAWS }
 		completion_reward = {
-			log = "[GetDateText]: [This.GetName]: focus ter_oborna executed"
+			log = "[GetDateText]: [This.GetName]: focus CES_kaz_ter_oborna executed"
 			custom_effect_tooltip = { localization_key = modifies_dynamic_modifier_tt MODIFIER = CES_kaz_modifier }
 			add_to_variable = { CES_kaz_army_core_defence_factor = 0.10 tooltip = army_core_defence_factor_tt }
 			custom_effect_tooltip = CES_ter_oborona_tt

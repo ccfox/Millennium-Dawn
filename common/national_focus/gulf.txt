@@ -63,7 +63,7 @@ focus_tree = {
 
 		prerequisite = { focus = GCC_socio_economic_affairs }
 
-		search_filters = { FOCUS_FILTER_RESOURCE }
+		search_filters = { FOCUS_FILTER_RESOURCE FOCUS_FILTER_EXPENDITURE }
 		completion_reward = {
 			if = {
 				limit = { original_tag = SAU }
@@ -87,7 +87,13 @@ focus_tree = {
 			log = "[GetDateText]: [This.GetName]: focus GCC_expand_oil_extraction executed"
 		}
 
-		ai_will_do = { base = 1 }
+		ai_will_do = {
+			base = 1
+			modifier = {
+				factor = 0
+				has_active_mission = bankruptcy_incoming_collapse
+			}
+		}
 	}
 
 	focus = {
@@ -162,7 +168,13 @@ focus_tree = {
 			log = "[GetDateText]: [This.GetName]: focus GCC_total_sa executed"
 		}
 
-		ai_will_do = { base = 1 }
+		ai_will_do = {
+			base = 1
+			modifier = {
+				factor = 0
+				has_active_mission = bankruptcy_incoming_collapse
+			}
+		}
 	}
 
 	focus = {
@@ -218,7 +230,13 @@ focus_tree = {
 			two_fuel_reserve = yes
 		}
 
-		ai_will_do = { base = 1 }
+		ai_will_do = {
+			base = 1
+			modifier = {
+				factor = 0
+				has_active_mission = bankruptcy_incoming_collapse
+			}
+		}
 	}
 
 	focus = {
@@ -266,7 +284,13 @@ focus_tree = {
 			log = "[GetDateText]: [This.GetName]: focus GCC_lukoil executed"
 		}
 
-		ai_will_do = { base = 1 }
+		ai_will_do = {
+			base = 1
+			modifier = {
+				factor = 0
+				has_active_mission = bankruptcy_incoming_collapse
+			}
+		}
 	}
 
 	focus = {
@@ -314,7 +338,13 @@ focus_tree = {
 			log = "[GetDateText]: [This.GetName]: focus GCC_sinopec executed"
 		}
 
-		ai_will_do = { base = 1 }
+		ai_will_do = {
+			base = 1
+			modifier = {
+				factor = 0
+				has_active_mission = bankruptcy_incoming_collapse
+			}
+		}
 	}
 
 	focus = {
@@ -435,7 +465,7 @@ focus_tree = {
 		prerequisite = { focus = GCC_sovereign_wealth_fund }
 		mutually_exclusive = { focus = GCC_untether_the_fossil_fuel_industry }
 
-		search_filters = { FOCUS_FILTER_INTERNAL_FACTION }
+		search_filters = { FOCUS_FILTER_INTERNAL_FACTION FOCUS_FILTER_EXPENDITURE }
 		completion_reward = {
 			log = "[GetDateText]: [This.GetName]: focus GCC_secure_the_fossil_fuel_industry executed"
 			if = {
@@ -469,7 +499,13 @@ focus_tree = {
 			add_stability = 0.05
 		}
 
-		ai_will_do = { base = 1 }
+		ai_will_do = {
+			base = 1
+			modifier = {
+				factor = 0
+				has_active_mission = bankruptcy_incoming_collapse
+			}
+		}
 	}
 
 	focus = {
@@ -485,7 +521,7 @@ focus_tree = {
 		prerequisite = { focus = GCC_sovereign_wealth_fund }
 		mutually_exclusive = { focus = GCC_secure_the_fossil_fuel_industry }
 
-		search_filters = { FOCUS_FILTER_INTERNAL_FACTION FOCUS_FILTER_RESOURCE }
+		search_filters = { FOCUS_FILTER_INTERNAL_FACTION FOCUS_FILTER_RESOURCE FOCUS_FILTER_EXPENDITURE }
 		completion_reward = {
 			if = {
 				limit = { original_tag = SAU }
@@ -523,7 +559,13 @@ focus_tree = {
 			log = "[GetDateText]: [This.GetName]: focus GCC_untether_the_fossil_fuel_industry executed"
 		}
 
-		ai_will_do = { base = 1 }
+		ai_will_do = {
+			base = 1
+			modifier = {
+				factor = 0
+				has_active_mission = bankruptcy_incoming_collapse
+			}
+		}
 	}
 
 	focus = {
@@ -550,7 +592,13 @@ focus_tree = {
 			log = "[GetDateText]: [This.GetName]: focus GCC_innovative_techniques executed"
 		}
 
-		ai_will_do = { base = 1 }
+		ai_will_do = {
+			base = 1
+			modifier = {
+				factor = 0
+				has_active_mission = bankruptcy_incoming_collapse
+			}
+		}
 	}
 
 	focus = {
@@ -605,7 +653,13 @@ focus_tree = {
 			log = "[GetDateText]: [This.GetName]: focus GCC_subsidize_economic_activity executed"
 		}
 
-		ai_will_do = { base = 1 }
+		ai_will_do = {
+			base = 1
+			modifier = {
+				factor = 0
+				has_active_mission = bankruptcy_incoming_collapse
+			}
+		}
 	}
 
 	focus = {
@@ -620,7 +674,7 @@ focus_tree = {
 
 		prerequisite = { focus = GCC_subsidize_economic_activity }
 
-		search_filters = { FOCUS_FILTER_INTERNAL_FACTION }
+		search_filters = { FOCUS_FILTER_INTERNAL_FACTION FOCUS_FILTER_EXPENDITURE }
 		completion_reward = {
 			if = {
 				limit = { original_tag = SAU }
@@ -637,7 +691,13 @@ focus_tree = {
 			log = "[GetDateText]: [This.GetName]: focus GCC_reinforce_patronage_networks executed"
 		}
 
-		ai_will_do = { base = 1 }
+		ai_will_do = {
+			base = 1
+			modifier = {
+				factor = 0
+				has_active_mission = bankruptcy_incoming_collapse
+			}
+		}
 	}
 
 	focus = {
@@ -652,7 +712,7 @@ focus_tree = {
 
 		prerequisite = { focus = GCC_socio_economic_affairs }
 
-		search_filters = { FOCUS_FILTER_RESOURCE }
+		search_filters = { FOCUS_FILTER_RESOURCE FOCUS_FILTER_EXPENDITURE }
 		completion_reward = {
 			if = {
 				limit = { original_tag = SAU }
@@ -676,7 +736,13 @@ focus_tree = {
 			log = "[GetDateText]: [This.GetName]: focus GCC_invest_in_the_metal_industry executed"
 		}
 
-		ai_will_do = { base = 1 }
+		ai_will_do = {
+			base = 1
+			modifier = {
+				factor = 0
+				has_active_mission = bankruptcy_incoming_collapse
+			}
+		}
 	}
 
 	focus = {
@@ -796,7 +862,17 @@ focus_tree = {
 			log = "[GetDateText]: [This.GetName]: focus GCC_private_sector_job_creation executed"
 		}
 
-		ai_will_do = { base = 1 }
+		ai_will_do = {
+			base = 1
+			modifier = {
+				factor = 0
+				can_staff_an_offices = no
+			}
+			modifier = {
+				factor = 0
+				has_active_mission = bankruptcy_incoming_collapse
+			}
+		}
 	}
 
 	focus = {
@@ -827,7 +903,13 @@ focus_tree = {
 			log = "[GetDateText]: [This.GetName]: focus GCC_construction_boom executed"
 		}
 
-		ai_will_do = { base = 1 }
+		ai_will_do = {
+			base = 1
+			modifier = {
+				factor = 0
+				has_active_mission = bankruptcy_incoming_collapse
+			}
+		}
 	}
 
 	focus = {
@@ -864,7 +946,13 @@ focus_tree = {
 			log = "[GetDateText]: [This.GetName]: focus GCC_support_the_aviation_sector executed"
 		}
 
-		ai_will_do = { base = 1 }
+		ai_will_do = {
+			base = 1
+			modifier = {
+				factor = 0
+				has_active_mission = bankruptcy_incoming_collapse
+			}
+		}
 	}
 
 	focus = {
@@ -920,7 +1008,21 @@ focus_tree = {
 			log = "[GetDateText]: [This.GetName]: focus GCC_support_manufacturing executed"
 		}
 
-		ai_will_do = { base = 1 }
+		ai_will_do = {
+			base = 1
+			modifier = {
+				factor = 0
+				can_staff_an_industrial_complex = no
+			}
+			modifier = {
+				factor = 0
+				can_staff_an_offices = no
+			}
+			modifier = {
+				factor = 0
+				has_active_mission = bankruptcy_incoming_collapse
+			}
+		}
 	}
 
 	focus = {
@@ -970,7 +1072,17 @@ focus_tree = {
 			log = "[GetDateText]: [This.GetName]: focus GCC_the_dubai_model executed"
 		}
 
-		ai_will_do = { base = 1 }
+		ai_will_do = {
+			base = 1
+			modifier = {
+				factor = 0
+				has_active_mission = bankruptcy_incoming_collapse
+			}
+			modifier = {
+				factor = 0
+				can_staff_an_offices = no
+			}
+		}
 	}
 
 	focus = {
@@ -1054,7 +1166,17 @@ focus_tree = {
 			log = "[GetDateText]: [This.GetName]: focus GCC_court_tourism_and_foreign_businesses executed"
 		}
 
-		ai_will_do = { base = 1 }
+		ai_will_do = {
+			base = 1
+			modifier = {
+				factor = 0
+				has_active_mission = bankruptcy_incoming_collapse
+			}
+			modifier = {
+				factor = 0
+				can_staff_an_offices = no
+			}
+		}
 	}
 
 	focus = {
@@ -1144,7 +1266,17 @@ focus_tree = {
 			log = "[GetDateText]: [This.GetName]: focus GCC_empower_industrial_conglomerates executed"
 		}
 
-		ai_will_do = { base = 1 }
+		ai_will_do = {
+			base = 1
+			modifier = {
+				factor = 0
+				can_staff_an_industrial_complex = no
+			}
+			modifier = {
+				factor = 0
+				has_active_mission = bankruptcy_incoming_collapse
+			}
+		}
 	}
 
 	focus = {
@@ -1178,7 +1310,13 @@ focus_tree = {
 			log = "[GetDateText]: [This.GetName]: focus GCC_commit_to_domestic_merchants executed"
 		}
 
-		ai_will_do = { base = 1 }
+		ai_will_do = {
+			base = 1
+			modifier = {
+				factor = 0
+				has_active_mission = bankruptcy_incoming_collapse
+			}
+		}
 	}
 
 	focus = {
@@ -1224,7 +1362,17 @@ focus_tree = {
 			log = "[GetDateText]: [This.GetName]: focus GCC_cater_to_investors executed"
 		}
 
-		ai_will_do = { base = 1 }
+		ai_will_do = {
+			base = 1
+			modifier = {
+				factor = 0
+				can_staff_an_offices = no
+			}
+			modifier = {
+				factor = 0
+				has_active_mission = bankruptcy_incoming_collapse
+			}
+		}
 	}
 
 	focus = {
@@ -1928,6 +2076,8 @@ focus_tree = {
 				subtract_from_variable = { mbs = 1 }
 			}
 			log = "[GetDateText]: [This.GetName]: focus GCC_empower_the_mutaween executed"
+			unlock_decision_tooltip = GCC_discourage_female_representation
+			unlock_decision_tooltip = GCC_limit_female_employment
 		}
 
 		ai_will_do = {
@@ -1976,6 +2126,8 @@ focus_tree = {
 				add_to_variable = { mbs = 1 }
 			}
 			log = "[GetDateText]: [This.GetName]: focus GCC_weaken_the_mutaween executed"
+			unlock_decision_tooltip = GCC_encourage_female_representation
+			unlock_decision_tooltip = GCC_expand_female_employment
 		}
 
 		ai_will_do = {
@@ -2040,6 +2192,8 @@ focus_tree = {
 		completion_reward = {
 			custom_effect_tooltip = GCC_women_economy_tt
 			log = "[GetDateText]: [This.GetName]: focus GCC_women_in_the_economy executed"
+			unlock_decision_tooltip = GCC_expand_female_employment
+			unlock_decision_tooltip = GCC_limit_female_employment
 		}
 
 		ai_will_do = { base = 1 }
@@ -2061,6 +2215,8 @@ focus_tree = {
 		completion_reward = {
 			custom_effect_tooltip = GCC_women_politics_tt
 			log = "[GetDateText]: [This.GetName]: focus GCC_women_in_politics executed"
+			unlock_decision_tooltip = GCC_encourage_female_representation
+			unlock_decision_tooltip = GCC_discourage_female_representation
 		}
 
 		ai_will_do = { base = 1 }
@@ -2564,6 +2720,8 @@ focus_tree = {
 		prerequisite = { focus = GCC_mass_deportation }
 		mutually_exclusive = { focus = GCC_aggressive_nationalism }
 
+		search_filters = { FOCUS_FILTER_POLITICAL }
+
 		available = { has_government = nationalist }
 
 		completion_reward = {
@@ -2587,6 +2745,8 @@ focus_tree = {
 		prerequisite = { focus = GCC_empower_baath_supporters }
 		prerequisite = { focus = GCC_mass_deportation }
 		mutually_exclusive = { focus = GCC_defensive_nationalism }
+
+		search_filters = { FOCUS_FILTER_POLITICAL }
 
 		available = { has_government = nationalist }
 
@@ -2978,7 +3138,7 @@ focus_tree = {
 
 		prerequisite = { focus = GCC_maintain_tradition focus = GCC_favor_khomeinism focus = GCC_favor_the_shiraziyyin }
 
-		search_filters = { FOCUS_FILTER_INTERNAL_FACTION FOCUS_FILTER_SOCIAL_CONSERVATISM }
+		search_filters = { FOCUS_FILTER_INTERNAL_FACTION FOCUS_FILTER_SOCIAL_CONSERVATISM FOCUS_FILTER_EXPENDITURE }
 		completion_reward = {
 			if = {
 				limit = { original_tag = SAU }
@@ -2994,7 +3154,13 @@ focus_tree = {
 			log = "[GetDateText]: [This.GetName]: focus GCC_religious_subsidies executed"
 		}
 
-		ai_will_do = { base = 1 }
+		ai_will_do = {
+			base = 1
+			modifier = {
+				factor = 0
+				has_active_mission = bankruptcy_incoming_collapse
+			}
+		}
 	}
 
 	focus = {
@@ -3036,6 +3202,8 @@ focus_tree = {
 		cost = 8.58
 
 		prerequisite = { focus = GCC_defensive_nationalism focus = GCC_favor_khomeinism }
+
+		search_filters = { FOCUS_FILTER_FOREIGN_POLICY FOCUS_FILTER_INFLUENCE }
 
 		available = {
 			OR = {
@@ -4076,6 +4244,7 @@ focus_tree = {
 
 	focus = {
 		id = GCC_start_the_uprising
+		will_lead_to_war_with = SAU
 		icon = violent_coup
 
 		x = -1
@@ -4168,7 +4337,7 @@ focus_tree = {
 				SAG = {
 					add_ideas = {
 						sunni
-						systematic_corruption
+						corruption_level_06
 						LoAS_member
 						idea_gcc_member_state
 						birthplace_of_wahhabism
@@ -4318,8 +4487,9 @@ focus_tree = {
 					joint_gcc_ventures
 				}
 				remove_from_faction = THIS
-				every_country = {
-					limit = { has_idea = idea_gcc_member_state }
+				for_each_scope_loop = {
+					array = global.gcc_member_state
+					tooltip = TT_ALL_GCC_MEMBER_NATIONS_GAIN
 					remove_opinion_modifier = {
 						target = ROOT
 						modifier = Gulf_Cooperation_Council_Relations
@@ -4902,6 +5072,7 @@ focus_tree = {
 
 	focus = {
 		id = GCC_war_on_daesh
+		will_lead_to_war_with = ISI
 		icon = attack_isis
 
 		x = 0
@@ -4936,6 +5107,17 @@ focus_tree = {
 
 	focus = {
 		id = GCC_jihad_in_arabia
+		will_lead_to_war_with = BHR
+		will_lead_to_war_with = HEJ
+		will_lead_to_war_with = HOU
+		will_lead_to_war_with = KUW
+		will_lead_to_war_with = NEJ
+		will_lead_to_war_with = OMA
+		will_lead_to_war_with = QAT
+		will_lead_to_war_with = QTF
+		will_lead_to_war_with = SAU
+		will_lead_to_war_with = UAE
+		will_lead_to_war_with = YEM
 		icon = jihad_in_arabia
 
 		x = -1
@@ -5112,6 +5294,17 @@ focus_tree = {
 
 	focus = {
 		id = GCC_jihad_in_the_levant
+		will_lead_to_war_with = FSA
+		will_lead_to_war_with = IRQ
+		will_lead_to_war_with = ISR
+		will_lead_to_war_with = LEB
+		will_lead_to_war_with = JOR
+		will_lead_to_war_with = KUR
+		will_lead_to_war_with = PUK
+		will_lead_to_war_with = PAL
+		will_lead_to_war_with = ROJ
+		will_lead_to_war_with = SYR
+		will_lead_to_war_with = DRU
 		icon = jihad_in_the_levant
 
 		x = 0
@@ -5288,6 +5481,15 @@ focus_tree = {
 
 	focus = {
 		id = GCC_jihad_in_the_maghreb
+		will_lead_to_war_with = ALG
+		will_lead_to_war_with = EGY
+		will_lead_to_war_with = GNA
+		will_lead_to_war_with = LBA
+		will_lead_to_war_with = HOR
+		will_lead_to_war_with = MOR
+		will_lead_to_war_with = SHA
+		will_lead_to_war_with = TUA
+		will_lead_to_war_with = TUN
 		icon = jihad_in_the_maghreb
 
 		x = 1
@@ -5438,6 +5640,13 @@ focus_tree = {
 
 	focus = {
 		id = GCC_jihad_in_west_africa
+		will_lead_to_war_with = BFA
+		will_lead_to_war_with = CHA
+		will_lead_to_war_with = MAL
+		will_lead_to_war_with = MAU
+		will_lead_to_war_with = NGR
+		will_lead_to_war_with = NIG
+		will_lead_to_war_with = SUD
 		icon = jihad_in_west_africa
 
 		x = 0
@@ -5637,6 +5846,8 @@ focus_tree = {
 		prerequisite = { focus = GCC_influence_muslim_europe }
 		mutually_exclusive = { focus = GCC_contain_the_turks }
 
+		search_filters = { FOCUS_FILTER_FOREIGN_POLICY }
+
 		available = {
 			if = {
 				limit = { TUR = { no_jihadist_government = yes } }
@@ -5724,6 +5935,8 @@ focus_tree = {
 
 		prerequisite = { focus = GCC_befriend_the_turks }
 
+		search_filters = { FOCUS_FILTER_DIPLOMACY }
+
 		available = {
 			if = {
 				limit = { TUR = { no_jihadist_government = yes } }
@@ -5780,6 +5993,8 @@ focus_tree = {
 		cost = 5
 
 		prerequisite = { focus = GCC_turkish_bases }
+
+		search_filters = { FOCUS_FILTER_DIPLOMACY }
 
 		available = {
 			if = {
@@ -5838,6 +6053,8 @@ focus_tree = {
 
 		prerequisite = { focus = GCC_influence_muslim_europe }
 		mutually_exclusive = { focus = GCC_befriend_the_turks }
+
+		search_filters = { FOCUS_FILTER_FOREIGN_POLICY }
 
 		available = {
 			country_exists = TUR
@@ -6024,6 +6241,8 @@ focus_tree = {
 		cost = 4.3
 
 		prerequisite = { focus = GCC_contain_the_turks }
+
+		search_filters = { FOCUS_FILTER_FOREIGN_POLICY }
 
 		available = {
 			country_exists = TUR
@@ -6216,8 +6435,11 @@ focus_tree = {
 		}
 
 		completion_reward = {
-			USA = {
-				country_event = gulf.16
+			if = {
+				limit = { USA = { NOT = { has_country_flag = received_assad_coalition_proposal } } }
+				USA = {
+					country_event = gulf.16
+				}
 			}
 			custom_effect_tooltip = GCC_intervention_syria_tt
 			set_country_flag = proposed_coalition_against_assad
@@ -6257,6 +6479,8 @@ focus_tree = {
 
 		prerequisite = { focus = GCC_influence_the_levant }
 		mutually_exclusive = { focus = GCC_back_the_syrian_opposition }
+
+		search_filters = { FOCUS_FILTER_FOREIGN_POLICY }
 
 		available = { country_exists = SYR }
 
@@ -6314,6 +6538,8 @@ focus_tree = {
 
 		prerequisite = { focus = GCC_denounce_the_opposition }
 
+		search_filters = { FOCUS_FILTER_FOREIGN_POLICY }
+
 		available = {
 			country_exists = SYR
 			NOT = { has_war_with = SYR }
@@ -6362,6 +6588,8 @@ focus_tree = {
 		cost = 4.3
 
 		prerequisite = { focus = GCC_foreign_affairs }
+
+		search_filters = { FOCUS_FILTER_FOREIGN_POLICY }
 
 		available = {
 			no_jihadist_government = yes
@@ -6526,6 +6754,8 @@ focus_tree = {
 		prerequisite = { focus = GCC_secret_cooperation }
 		prerequisite = { focus = GCC_denounce_iranian_meddling }
 
+		search_filters = { FOCUS_FILTER_FOREIGN_POLICY }
+
 		available = {
 			NOT = { has_government = communism }
 			if = { limit = { tag = SAU }
@@ -6623,17 +6853,18 @@ focus_tree = {
 					modifier = recognises_us
 				}
 			}
-			every_country = {
-				limit = {
-					has_idea = LoAS_member
-					NOT = { has_completed_focus = GCC_grant_recognition }
+			for_each_scope_loop = {
+				array = global.arab_league_members
+				tooltip = TT_ALL_ARAB_LEAGUE_MEMBER_NATIONS_GAIN
+				if = {
+					limit = { NOT = { has_completed_focus = GCC_grant_recognition } }
+					add_opinion_modifier = {
+						target = ROOT
+						modifier = recognises_israel
+					}
+					custom_effect_tooltip = strategic_reasons_antagonize_tt
+					add_ai_strategy = { type = antagonize id = ROOT value = 20 }
 				}
-				add_opinion_modifier = {
-					target = ROOT
-					modifier = recognises_israel
-				}
-				custom_effect_tooltip = strategic_reasons_antagonize_tt
-				add_ai_strategy = { type = antagonize id = ROOT value = 20 }
 			}
 			if = {
 				limit = { ISR = { has_idea = palestinian_resistance } }
@@ -6807,6 +7038,8 @@ focus_tree = {
 
 		prerequisite = { focus = GCC_favor_resistance }
 
+		search_filters = { FOCUS_FILTER_FOREIGN_POLICY }
+
 		available = { NOT = { has_war_with = LEB } }
 
 		completion_reward = {
@@ -6836,6 +7069,8 @@ focus_tree = {
 		cost = 5
 
 		prerequisite = { focus = GCC_secret_cooperation focus = GCC_live_and_let_live }
+
+		search_filters = { FOCUS_FILTER_DIPLOMACY }
 
 		available = {
 			no_jihadist_government = yes
@@ -6882,6 +7117,8 @@ focus_tree = {
 		cost = 7.2
 
 		prerequisite = { focus = GCC_host_talks }
+
+		search_filters = { FOCUS_FILTER_FOREIGN_POLICY FOCUS_FILTER_EXPENDITURE }
 
 		available = {
 			no_jihadist_government = yes
@@ -6930,6 +7167,10 @@ focus_tree = {
 					has_government = communism
 					has_government = nationalist
 				}
+			}
+			modifier = {
+				factor = 0
+				has_active_mission = bankruptcy_incoming_collapse
 			}
 		}
 	}
@@ -7052,6 +7293,8 @@ focus_tree = {
 
 		prerequisite = { focus = GCC_live_and_let_live }
 		prerequisite = { focus = GCC_the_arab_street focus = GCC_expel_us_interests }
+
+		search_filters = { FOCUS_FILTER_FOREIGN_POLICY }
 
 		available = {
 			NOT = { has_war_with = HAM }
@@ -7279,6 +7522,8 @@ focus_tree = {
 
 		prerequisite = { focus = GCC_foreign_affairs }
 
+		search_filters = { FOCUS_FILTER_FOREIGN_POLICY }
+
 		available = {
 			if = {
 				limit = { tag = SAU }
@@ -7325,6 +7570,8 @@ focus_tree = {
 
 		prerequisite = { focus = GCC_foreign_affairs }
 
+		search_filters = { FOCUS_FILTER_FOREIGN_POLICY }
+
 		available = {
 			no_jihadist_government = yes
 			NOT = { has_government = communism }
@@ -7370,6 +7617,8 @@ focus_tree = {
 
 		prerequisite = { focus = GCC_forge_an_independent_path focus = GCC_strategic_hedging }
 
+		search_filters = { FOCUS_FILTER_FOREIGN_POLICY }
+
 		available = {
 			country_exists = PER
 			NOT = { has_war_with = PER }
@@ -7410,6 +7659,7 @@ focus_tree = {
 				modify_gcc_unity = yes
 			}
 			log = "[GetDateText]: [This.GetName]: focus GCC_improve_relations_with_iran executed"
+			unlock_decision_tooltip = GCC_blockade
 		}
 
 		ai_will_do = { base = 1 }
@@ -7599,21 +7849,28 @@ focus_tree = {
 		available = { has_government = communism }
 
 		completion_reward = {
-			every_other_country = {
-				limit = { has_idea = idea_gcc_member_state NOT = { has_government = communism } }
+			for_each_scope_loop = {
+				array = global.gcc_member_state
+				tooltip = TT_ALL_GCC_MEMBER_NATIONS_GAIN
 				if = {
 					limit = {
-						check_variable = { shia_population > 0 }
-						NOT = { has_completed_focus = GCC_comprehensive_crackdown }
+						NOT = { tag = ROOT }
+						NOT = { has_government = communism }
 					}
-					shia_resistance_level_up = yes
+					if = {
+						limit = {
+							check_variable = { shia_population > 0 }
+							NOT = { has_completed_focus = GCC_comprehensive_crackdown }
+						}
+						shia_resistance_level_up = yes
+					}
+					add_opinion_modifier = {
+						target = ROOT
+						modifier = supported_opposition
+					}
+					custom_effect_tooltip = strategic_reasons_contain_tt
+					add_ai_strategy = { type = contain id = ROOT value = 20 }
 				}
-				add_opinion_modifier = {
-					target = ROOT
-					modifier = supported_opposition
-				}
-				custom_effect_tooltip = strategic_reasons_contain_tt
-				add_ai_strategy = { type = contain id = ROOT value = 20 }
 			}
 			if = {
 				limit = {
@@ -7882,6 +8139,8 @@ focus_tree = {
 		prerequisite = { focus = GCC_combat_iranian_influence }
 		mutually_exclusive = { focus = GCC_align_with_iran }
 
+		search_filters = { FOCUS_FILTER_INTERNAL_FACTION }
+
 		available = {
 			NOT = { has_government = communism }
 			NOT = { has_completed_focus = GCC_strategic_hedging }
@@ -7894,6 +8153,7 @@ focus_tree = {
 
 		completion_reward = {
 			log = "[GetDateText]: [This.GetName]: focus GCC_confront_iranian_partners executed"
+			unlock_decision_tooltip = GCC_blockade
 			custom_effect_tooltip = GCC_confront_iranian_partners_tt
 			if = {
 				limit = {
@@ -7928,6 +8188,12 @@ focus_tree = {
 
 	focus = {
 		id = GCC_the_war_within
+		will_lead_to_war_with = BHR
+		will_lead_to_war_with = KUW
+		will_lead_to_war_with = OMA
+		will_lead_to_war_with = QAT
+		will_lead_to_war_with = UAE
+		will_lead_to_war_with = SAU
 		icon = war3
 
 		x = 1
@@ -8293,6 +8559,8 @@ focus_tree = {
 
 		prerequisite = { focus = GCC_amplify_sectarian_rhetoric }
 
+		search_filters = { FOCUS_FILTER_FOREIGN_POLICY FOCUS_FILTER_SECTARIANISM }
+
 		available = {
 			NOT = { has_government = communism }
 			country_exists = PER
@@ -8323,6 +8591,7 @@ focus_tree = {
 
 	focus = {
 		id = GCC_behead_the_snake
+		will_lead_to_war_with = PER
 		icon = attack_iran
 
 		x = 0
@@ -8516,6 +8785,8 @@ focus_tree = {
 		prerequisite = { focus = GCC_expel_us_interests }
 		mutually_exclusive = { focus = GCC_reject_foreign_interference }
 
+		search_filters = { FOCUS_FILTER_FOREIGN_POLICY }
+
 		available = {
 			NOT = { has_war_with = SOV }
 			no_jihadist_government = yes
@@ -8552,6 +8823,8 @@ focus_tree = {
 
 		prerequisite = { focus = GCC_friendship_with_russia }
 
+		search_filters = { FOCUS_FILTER_FOREIGN_POLICY FOCUS_FILTER_MILITARY_LAWS }
+
 		available = {
 			has_war = no
 			SOV = {
@@ -8566,7 +8839,6 @@ focus_tree = {
 		completion_reward = {
 			add_ideas = russian_military_advisors
 			hidden_effect = {
-				SOV = { set_country_flag = military_advisors_@ROOT }
 				add_to_variable = { foreign_advisors = 1 }
 			}
 			log = "[GetDateText]: [This.GetName]: focus GCC_invite_russian_advisors executed"
@@ -8586,6 +8858,8 @@ focus_tree = {
 		cost = 7.2
 
 		prerequisite = { focus = GCC_invite_russian_advisors }
+
+		search_filters = { FOCUS_FILTER_DIPLOMACY }
 
 		available = {
 			has_war = no
@@ -8711,6 +8985,9 @@ focus_tree = {
 		cost = 5
 
 		prerequisite = { focus = GCC_reject_foreign_interference }
+
+		search_filters = { FOCUS_FILTER_FOREIGN_POLICY }
+
 		completion_reward = {
 			every_country = {
 				limit = {
@@ -8749,6 +9026,17 @@ focus_tree = {
 
 	focus = {
 		id = GCC_war_with_imperialism
+		will_lead_to_war_with = BHR
+		will_lead_to_war_with = EGY
+		will_lead_to_war_with = IRQ
+		will_lead_to_war_with = JOR
+		will_lead_to_war_with = KUW
+		will_lead_to_war_with = LEB
+		will_lead_to_war_with = OMA
+		will_lead_to_war_with = QAT
+		will_lead_to_war_with = SAU
+		will_lead_to_war_with = SYR
+		will_lead_to_war_with = UAE
 		icon = colonialism
 
 		x = 0
@@ -9031,6 +9319,8 @@ focus_tree = {
 		prerequisite = { focus = GCC_influence_north_africa }
 		mutually_exclusive = { focus = GCC_moroccan_ties }
 
+		search_filters = { FOCUS_FILTER_FOREIGN_POLICY }
+
 		available = {
 			country_exists = ALG
 			NOT = { has_war_with = ALG }
@@ -9115,6 +9405,8 @@ focus_tree = {
 		prerequisite = { focus = GCC_influence_north_africa }
 		mutually_exclusive = { focus = GCC_algerian_ties }
 
+		search_filters = { FOCUS_FILTER_FOREIGN_POLICY }
+
 		available = {
 			country_exists = MOR
 			NOT = { has_war_with = MOR }
@@ -9197,6 +9489,8 @@ focus_tree = {
 		prerequisite = { focus = GCC_algerian_ties focus = GCC_moroccan_ties }
 		mutually_exclusive = { focus = GCC_sanction_sudan }
 
+		search_filters = { FOCUS_FILTER_FOREIGN_POLICY }
+
 		available = { country_exists = SUD }
 		bypass = { NOT = { country_exists = SUD } }
 
@@ -9255,6 +9549,8 @@ focus_tree = {
 
 		prerequisite = { focus = GCC_algerian_ties focus = GCC_moroccan_ties }
 		mutually_exclusive = { focus = GCC_aid_sudan }
+
+		search_filters = { FOCUS_FILTER_FOREIGN_POLICY }
 
 		available = {
 			country_exists = SUD
@@ -9379,6 +9675,7 @@ focus_tree = {
 			set_temp_variable = { temp_opinion = 10 }
 			change_saudi_royal_family_opinion = yes
 			log = "[GetDateText]: [This.GetName]: focus GCC_back_the_strongman executed"
+			unlock_decision_tooltip = send_support_to_hor
 		}
 
 		ai_will_do = { base = 1 }
@@ -9463,6 +9760,9 @@ focus_tree = {
 		cost = 2.9
 
 		prerequisite = { focus = GCC_back_the_strongman focus = GCC_back_the_brotherhood }
+
+		search_filters = { FOCUS_FILTER_INTERNAL_FACTION }
+
 		available = {
 			custom_trigger_tooltip = {
 				tooltip = libya_at_war_tt
@@ -9580,6 +9880,8 @@ focus_tree = {
 
 		prerequisite = { focus = GCC_influence_south_asia }
 
+		search_filters = { FOCUS_FILTER_FOREIGN_POLICY }
+
 		available = {
 			NOT = { has_war_with = PAK }
 			country_exists = PAK
@@ -9612,7 +9914,7 @@ focus_tree = {
 
 		prerequisite = { focus = GCC_affirm_pakistani_ties }
 
-		search_filters = { FOCUS_FILTER_INFLUENCE }
+		search_filters = { FOCUS_FILTER_INFLUENCE FOCUS_FILTER_EXPENDITURE }
 
 		available = {
 			NOT = { has_war_with = PAK }
@@ -9664,7 +9966,13 @@ focus_tree = {
 			log = "[GetDateText]: [This.GetName]: focus GCC_oil_refineries_in_pakistan executed"
 		}
 
-		ai_will_do = { base = 1 }
+		ai_will_do = {
+			base = 1
+			modifier = {
+				factor = 0
+				has_active_mission = bankruptcy_incoming_collapse
+			}
+		}
 	}
 
 	focus = {
@@ -9679,6 +9987,8 @@ focus_tree = {
 
 		prerequisite = { focus = GCC_oil_refineries_in_pakistan }
 		mutually_exclusive = { focus = GCC_end_the_special_relationship }
+
+		search_filters = { FOCUS_FILTER_FOREIGN_POLICY FOCUS_FILTER_MILITARY_LAWS }
 
 		available = {
 			if = {
@@ -9769,6 +10079,8 @@ focus_tree = {
 
 		prerequisite = { focus = GCC_deepen_military_cooperation }
 
+		search_filters = { FOCUS_FILTER_DIPLOMACY }
+
 		available = {
 			if = {
 				limit = { PAK = { no_jihadist_government = yes } }
@@ -9816,6 +10128,8 @@ focus_tree = {
 		cost = 4.3
 
 		prerequisite = { focus = GCC_influence_south_asia }
+
+		search_filters = { FOCUS_FILTER_FOREIGN_POLICY }
 
 		available = {
 			NOT = { has_war_with = RAJ }
@@ -9895,6 +10209,9 @@ focus_tree = {
 
 		prerequisite = { focus = GCC_improve_trade_relations }
 		mutually_exclusive = { focus = GCC_deepen_military_cooperation }
+
+		search_filters = { FOCUS_FILTER_FOREIGN_POLICY FOCUS_FILTER_DIPLOMACY }
+
 		completion_reward = {
 			if = {
 				limit = { ROOT = { tag = SAU } }
@@ -10022,6 +10339,8 @@ focus_tree = {
 
 		prerequisite = { focus = GCC_end_the_special_relationship }
 
+		search_filters = { FOCUS_FILTER_DIPLOMACY }
+
 		available = {
 			NOT = { is_in_faction_with = PAK }
 			NOT = { has_military_access_to = PAK }
@@ -10113,7 +10432,13 @@ focus_tree = {
 			log = "[GetDateText]: [This.GetName]: focus GCC_equipment_modernizations executed"
 		}
 
-		ai_will_do = { base = 1 }
+		ai_will_do = {
+			base = 1
+			modifier = {
+				factor = 0
+				has_active_mission = bankruptcy_incoming_collapse
+			}
+		}
 	}
 
 	focus = {
@@ -10335,7 +10660,13 @@ focus_tree = {
 			log = "[GetDateText]: [This.GetName]: focus GCC_armored_vehicles executed"
 		}
 
-		ai_will_do = { base = 1 }
+		ai_will_do = {
+			base = 1
+			modifier = {
+				factor = 0
+				has_active_mission = bankruptcy_incoming_collapse
+			}
+		}
 	}
 
 	focus = {
@@ -10514,7 +10845,13 @@ focus_tree = {
 			log = "[GetDateText]: [This.GetName]: focus GCC_f35 executed"
 		}
 
-		ai_will_do = { base = 1 }
+		ai_will_do = {
+			base = 1
+			modifier = {
+				factor = 0
+				has_active_mission = bankruptcy_incoming_collapse
+			}
+		}
 	}
 
 	focus = {
@@ -10616,7 +10953,13 @@ focus_tree = {
 			}
 		}
 
-		ai_will_do = { base = 1 }
+		ai_will_do = {
+			base = 1
+			modifier = {
+				factor = 0
+				has_active_mission = bankruptcy_incoming_collapse
+			}
+		}
 	}
 
 	focus = {
@@ -10686,7 +11029,13 @@ focus_tree = {
 			log = "[GetDateText]: [This.GetName]: focus GCC_rafale executed"
 		}
 
-		ai_will_do = { base = 1 }
+		ai_will_do = {
+			base = 1
+			modifier = {
+				factor = 0
+				has_active_mission = bankruptcy_incoming_collapse
+			}
+		}
 	}
 
 	focus = {
@@ -10755,7 +11104,13 @@ focus_tree = {
 			log = "[GetDateText]: [This.GetName]: focus GCC_su57 executed"
 		}
 
-		ai_will_do = { base = 1 }
+		ai_will_do = {
+			base = 1
+			modifier = {
+				factor = 0
+				has_active_mission = bankruptcy_incoming_collapse
+			}
+		}
 	}
 
 	focus = {
@@ -10799,7 +11154,17 @@ focus_tree = {
 			log = "[GetDateText]: [This.GetName]: focus GCC_military_industry_investments executed"
 		}
 
-		ai_will_do = { base = 1 }
+		ai_will_do = {
+			base = 1
+			modifier = {
+				factor = 0
+				has_active_mission = bankruptcy_incoming_collapse
+			}
+			modifier = {
+				factor = 0
+				can_staff_an_arms_industry = no
+			}
+		}
 	}
 
 	focus = {
@@ -10843,7 +11208,17 @@ focus_tree = {
 			log = "[GetDateText]: [This.GetName]: focus GCC_naval_industry_investments executed"
 		}
 
-		ai_will_do = { base = 1 }
+		ai_will_do = {
+			base = 1
+			modifier = {
+				factor = 0
+				has_active_mission = bankruptcy_incoming_collapse
+			}
+			modifier = {
+				factor = 0
+				can_staff_an_dockyard = no
+			}
+		}
 	}
 
 	focus = {
@@ -10871,7 +11246,13 @@ focus_tree = {
 			log = "[GetDateText]: [This.GetName]: focus GCC_corvette_program executed"
 		}
 
-		ai_will_do = { base = 1 }
+		ai_will_do = {
+			base = 1
+			modifier = {
+				factor = 0
+				has_active_mission = bankruptcy_incoming_collapse
+			}
+		}
 	}
 
 	focus = {
@@ -10978,7 +11359,7 @@ focus_tree = {
 
 		prerequisite = { focus = GCC_asymmetric_warfare }
 
-		search_filters = { FOCUS_FILTER_INTERNAL_FACTION }
+		search_filters = { FOCUS_FILTER_INTERNAL_FACTION FOCUS_FILTER_EXPENDITURE }
 
 		available = { has_tech = radar }
 
@@ -11004,7 +11385,13 @@ focus_tree = {
 			log = "[GetDateText]: [This.GetName]: focus GCC_radar_improvements executed"
 		}
 
-		ai_will_do = { base = 1 }
+		ai_will_do = {
+			base = 1
+			modifier = {
+				factor = 0
+				has_active_mission = bankruptcy_incoming_collapse
+			}
+		}
 	}
 
 	focus = {
@@ -11034,7 +11421,13 @@ focus_tree = {
 			log = "[GetDateText]: [This.GetName]: focus GCC_develop_indigenous_drone_capability executed"
 		}
 
-		ai_will_do = { base = 1 }
+		ai_will_do = {
+			base = 1
+			modifier = {
+				factor = 0
+				has_active_mission = bankruptcy_incoming_collapse
+			}
+		}
 	}
 
 	focus = {
@@ -11128,7 +11521,13 @@ focus_tree = {
 			log = "[GetDateText]: [This.GetName]: focus GCC_improve_sam_sites executed"
 		}
 
-		ai_will_do = { base = 1 }
+		ai_will_do = {
+			base = 1
+			modifier = {
+				factor = 0
+				has_active_mission = bankruptcy_incoming_collapse
+			}
+		}
 	}
 
 	focus = {
@@ -11260,7 +11659,13 @@ focus_tree = {
 			log = "[GetDateText]: [This.GetName]: focus GCC_expand_air_bases executed"
 		}
 
-		ai_will_do = { base = 1 }
+		ai_will_do = {
+			base = 1
+			modifier = {
+				factor = 0
+				has_active_mission = bankruptcy_incoming_collapse
+			}
+		}
 	}
 
 	focus = {
@@ -11532,6 +11937,12 @@ focus_tree = {
 					remove_idea = sunni
 					add_idea = shia
 				}
+				PER = {
+					remove_opinion_modifier = {
+						target = ROOT
+						modifier = oppresses_shiites
+					}
+				}
 			}
 			if = {
 				limit = {
@@ -11586,6 +11997,12 @@ focus_tree = {
 				swap_ideas = {
 					remove_idea = sunni
 					add_idea = shia
+				}
+				PER = {
+					remove_opinion_modifier = {
+						target = ROOT
+						modifier = oppresses_shiites
+					}
 				}
 			}
 			if = {

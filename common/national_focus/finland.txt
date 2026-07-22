@@ -146,7 +146,7 @@ focus_tree = {
 
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus FIN_industrial_expansion_policy"
-			add_ideas = civilian_industry_project
+			improve_civilian_industrial_projects = yes
 			set_temp_variable = { temp_opinion = 5 }
 			change_industrial_conglomerates_opinion = yes
 		}
@@ -337,6 +337,10 @@ focus_tree = {
 
 		ai_will_do = {
 			base = 1
+			modifier = {
+				factor = 0
+				has_active_mission = bankruptcy_incoming_collapse
+			}
 		}
 	}
 
@@ -402,6 +406,14 @@ focus_tree = {
 
 		ai_will_do = {
 			base = 1
+			modifier = {
+				factor = 0
+				has_active_mission = bankruptcy_incoming_collapse
+			}
+			modifier = {
+				factor = 0
+				can_staff_an_industrial_complex = no
+			}
 		}
 	}
 
@@ -441,6 +453,14 @@ focus_tree = {
 
 		ai_will_do = {
 			base = 1
+			modifier = {
+				factor = 0
+				has_active_mission = bankruptcy_incoming_collapse
+			}
+			modifier = {
+				factor = 0
+				can_staff_an_industrial_complex = no
+			}
 		}
 	}
 
@@ -519,8 +539,8 @@ focus_tree = {
 
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus FIN_secure_european_trade_deals"
-			set_temp_variable = { modify_eurosceptic = -0.05 }
-			EU_eurosceptic_change = yes
+			set_temp_variable = { modify_europeanism = 0.05 }
+			EU_europeanism_change = yes
 			for_each_scope_loop = {
 				array = global.EU_member
 				tooltip = TT_ALL_EU_MEMBER_NATIONS_GAIN
@@ -1508,6 +1528,14 @@ focus_tree = {
 
 		ai_will_do = {
 			base = 1
+			modifier = {
+				factor = 0
+				has_active_mission = bankruptcy_incoming_collapse
+			}
+			modifier = {
+				factor = 0
+				can_staff_an_arms_industry = no
+			}
 		}
 	}
 
@@ -1577,6 +1605,10 @@ focus_tree = {
 
 		ai_will_do = {
 			base = 1
+			modifier = {
+				factor = 0
+				has_active_mission = bankruptcy_incoming_collapse
+			}
 		}
 	}
 
@@ -1649,6 +1681,14 @@ focus_tree = {
 
 		ai_will_do = {
 			base = 1
+			modifier = {
+				factor = 0
+				has_active_mission = bankruptcy_incoming_collapse
+			}
+			modifier = {
+				factor = 0
+				can_staff_an_arms_industry = no
+			}
 		}
 	}
 
@@ -1694,6 +1734,14 @@ focus_tree = {
 
 		ai_will_do = {
 			base = 1
+			modifier = {
+				factor = 0
+				has_active_mission = bankruptcy_incoming_collapse
+			}
+			modifier = {
+				factor = 0
+				can_staff_an_dockyard = no
+			}
 		}
 	}
 
@@ -1841,6 +1889,10 @@ focus_tree = {
 
 		ai_will_do = {
 			base = 1
+			modifier = {
+				factor = 0
+				has_active_mission = bankruptcy_incoming_collapse
+			}
 		}
 	}
 
@@ -1898,8 +1950,8 @@ focus_tree = {
 
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus FIN_european_involvement"
-			set_temp_variable = { modify_eurosceptic = -0.05 }
-			EU_eurosceptic_change = yes
+			set_temp_variable = { modify_europeanism = 0.05 }
+			EU_europeanism_change = yes
 			for_each_scope_loop = {
 				array = global.EU_member
 				tooltip = TT_ALL_EU_MEMBER_NATIONS_GAIN
@@ -1980,6 +2032,10 @@ focus_tree = {
 
 		ai_will_do = {
 			base = 1
+			modifier = {
+				factor = 0
+				has_active_mission = bankruptcy_incoming_collapse
+			}
 		}
 	}
 
@@ -2337,6 +2393,10 @@ focus_tree = {
 
 		ai_will_do = {
 			base = 1
+			modifier = {
+				factor = 0
+				has_active_mission = bankruptcy_incoming_collapse
+			}
 		}
 	}
 
@@ -2602,6 +2662,14 @@ focus_tree = {
 
 		ai_will_do = {
 			base = 1
+			modifier = {
+				factor = 0
+				has_active_mission = bankruptcy_incoming_collapse
+			}
+			modifier = {
+				factor = 0
+				can_staff_an_industrial_complex = no
+			}
 		}
 	}
 
@@ -2740,6 +2808,10 @@ focus_tree = {
 
 		ai_will_do = {
 			base = 1
+			modifier = {
+				factor = 0
+				has_active_mission = bankruptcy_incoming_collapse
+			}
 		}
 	}
 
@@ -2835,11 +2907,11 @@ focus_tree = {
 
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus FIN_russia"
-			set_temp_variable = { modify_eurosceptic = 0.03 }
-			EU_potential_eurosceptic_change = yes
-			set_temp_variable = { modify_eurosceptic = 0.15 }
-			set_temp_variable = { modify_eurosceptic_target = ROOT }
-			eurosceptic_change = yes
+			set_temp_variable = { modify_europeanism = -0.03 }
+			EU_potential_europeanism_change = yes
+			set_temp_variable = { modify_europeanism = -0.15 }
+			set_temp_variable = { modify_europeanism_target = ROOT }
+			europeanism_change = yes
 			SOV = {
 				add_opinion_modifier = {
 					target = FIN
@@ -2887,11 +2959,11 @@ focus_tree = {
 
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus FIN_political_alliance_with_vladimir_putin"
-			set_temp_variable = { modify_eurosceptic = 0.03 }
-			EU_potential_eurosceptic_change = yes
-			set_temp_variable = { modify_eurosceptic = 0.20 }
-			set_temp_variable = { modify_eurosceptic_target = ROOT }
-			eurosceptic_change = yes
+			set_temp_variable = { modify_europeanism = -0.03 }
+			EU_potential_europeanism_change = yes
+			set_temp_variable = { modify_europeanism = -0.20 }
+			set_temp_variable = { modify_europeanism_target = ROOT }
+			europeanism_change = yes
 			add_political_power = 20
 			SOV = {
 				add_opinion_modifier = {
@@ -3332,6 +3404,10 @@ focus_tree = {
 
 		ai_will_do = {
 			base = 1
+			modifier = {
+				factor = 0
+				has_active_mission = bankruptcy_incoming_collapse
+			}
 		}
 	}
 

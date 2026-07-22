@@ -182,6 +182,18 @@ focus_tree = {
 			base = 1
 			modifier = { factor = 3 has_government = communism }
 			modifier = { factor = 0 has_government = democratic }
+			modifier = {
+				factor = 0
+				NOT = { check_variable = { influence_array^0 = CHI } }
+			}
+			modifier = {
+				factor = 0
+				NOT = { check_variable = { influence_array_val^0 > 79 } }
+			}
+			modifier = {
+				factor = 0
+				check_variable = { HKG_contract_standing > 19 }
+			}
 		}
 	}
 
@@ -562,7 +574,7 @@ focus_tree = {
 		relative_position_id = HKG_city_state_idea
 		cost = 10
 		prerequisite = { focus = HKG_revise_basic_law }
-		search_filters = { FOCUS_FILTER_INFLUENCE }
+		search_filters = { FOCUS_FILTER_INFLUENCE FOCUS_FILTER_EXPENDITURE }
 
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus HKG_pearl_of_east_asia"
@@ -580,6 +592,10 @@ focus_tree = {
 
 		ai_will_do = {
 			base = 2
+			modifier = {
+				factor = 0
+				has_active_mission = bankruptcy_incoming_collapse
+			}
 		}
 	}
 
@@ -603,6 +619,14 @@ focus_tree = {
 
 		ai_will_do = {
 			base = 2
+			modifier = {
+				factor = 0
+				can_staff_an_offices = no
+			}
+			modifier = {
+				factor = 0
+				has_active_mission = bankruptcy_incoming_collapse
+			}
 		}
 	}
 
@@ -640,6 +664,10 @@ focus_tree = {
 		ai_will_do = {
 			base = 1
 			modifier = { factor = 4 has_country_flag = HKG_independence_path_chosen }
+			modifier = {
+				factor = 0
+				has_active_mission = bankruptcy_incoming_collapse
+			}
 		}
 	}
 
@@ -853,7 +881,7 @@ focus_tree = {
 		relative_position_id = HKG_public_housing_problem
 		cost = 10
 		prerequisite = { focus = HKG_regulate_sale_of_residential_buildings }
-		search_filters = { FOCUS_FILTER_INFRASTRUCTURE FOCUS_FILTER_ADD_BUILDING }
+		search_filters = { FOCUS_FILTER_INFRASTRUCTURE FOCUS_FILTER_ADD_BUILDING FOCUS_FILTER_EXPENDITURE }
 
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus HKG_land_reclamation"
@@ -895,7 +923,6 @@ focus_tree = {
 
 		ai_will_do = {
 			base = 10
-			modifier = { factor = 0 has_active_mission = bankruptcy_incoming_collapse }
 		}
 	}
 
@@ -921,7 +948,6 @@ focus_tree = {
 
 		ai_will_do = {
 			base = 10
-			modifier = { factor = 0 has_active_mission = bankruptcy_incoming_collapse }
 		}
 	}
 
@@ -949,7 +975,6 @@ focus_tree = {
 
 		ai_will_do = {
 			base = 10
-			modifier = { factor = 0 has_active_mission = bankruptcy_incoming_collapse }
 		}
 	}
 
@@ -990,7 +1015,7 @@ focus_tree = {
 		relative_position_id = HKG_public_housing_problem
 		cost = 10
 		prerequisite = { focus = HKG_green_form_subsidised_home_ownership_scheme }
-		search_filters = { FOCUS_FILTER_INFRASTRUCTURE FOCUS_FILTER_ADD_BUILDING }
+		search_filters = { FOCUS_FILTER_INFRASTRUCTURE FOCUS_FILTER_ADD_BUILDING FOCUS_FILTER_EXPENDITURE }
 
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus HKG_northern_metropolis"
@@ -1032,7 +1057,6 @@ focus_tree = {
 
 		ai_will_do = {
 			base = 10
-			modifier = { factor = 0 has_active_mission = bankruptcy_incoming_collapse }
 		}
 	}
 
@@ -1187,7 +1211,7 @@ focus_tree = {
 			set_temp_variable = { temp_opinion = 5 }
 			change_labour_unions_opinion = yes
 			change_communist_cadres_opinion = yes
-			log = "[GetDateText]: [This.GetName]: HKG_gender_pay_gap executed"
+			log = "[GetDateText]: [This.GetName]: Focus HKG_gender_pay_gap executed"
 		}
 
 		ai_will_do = {
@@ -1217,7 +1241,7 @@ focus_tree = {
 				set_temp_variable = { temp_opinion = 10 }
 			}
 			change_labour_unions_opinion = yes
-			log = "[GetDateText]: [This.GetName]: HKG_require_greater_transparency_from_employers executed"
+			log = "[GetDateText]: [This.GetName]: Focus HKG_require_greater_transparency_from_employers executed"
 		}
 
 		ai_will_do = {
@@ -1246,7 +1270,7 @@ focus_tree = {
 			change_industrial_conglomerates_opinion = yes
 			set_temp_variable = { temp_opinion = -10 }
 			change_farmers_opinion = yes
-			log = "[GetDateText]: [This.GetName]: HKG_deny_existence_of_pay_gap executed"
+			log = "[GetDateText]: [This.GetName]: Focus HKG_deny_existence_of_pay_gap executed"
 		}
 
 		ai_will_do = {
@@ -1327,16 +1351,19 @@ focus_tree = {
 						595 = {
 							one_state_office_construction = yes
 						}
-			
+
 						log = "[GetDateText]: [This.GetName]: focus HKG_merge_into_HKEX executed"
 		}
 
 		ai_will_do = {
 			factor = 1
-		
 			modifier = {
 				factor = 0
 				has_active_mission = bankruptcy_incoming_collapse
+			}
+			modifier = {
+				factor = 0
+				can_staff_an_offices = no
 			}
 		}
 	}
@@ -1440,7 +1467,7 @@ focus_tree = {
 		relative_position_id = HKG_gong_hei_fat_coi
 		cost = 10
 		prerequisite = { focus = HKG_expand_Kwai_Tsing_terminals focus = HKG_merge_into_HKEX }
-		search_filters = { FOCUS_FILTER_FOREIGN_INVESTMENTS }
+		search_filters = { FOCUS_FILTER_FOREIGN_INVESTMENTS FOCUS_FILTER_EXPENDITURE }
 
 		completion_reward = {
 			set_temp_variable = { treasury_change = -7.50 }
@@ -1448,17 +1475,17 @@ focus_tree = {
 			add_timed_idea = {
 				idea = HKG_improve_trade
 				days = 730
-			} 
+			}
 			add_offsite_building = {
 				type = industrial_complex
 				level = 1
 			}
+			add_ideas = HKG_support_the_business
 			log = "[GetDateText]: [This.GetName]: focus HKG_attract_foreign_investment executed"
 		}
 
 		ai_will_do = {
 			factor = 1
-		
 			modifier = {
 				factor = 0
 				has_active_mission = bankruptcy_incoming_collapse
@@ -1481,23 +1508,23 @@ focus_tree = {
 			add_political_power = -50
 			set_temp_variable = { treasury_change = 5.20 }
 			modify_treasury_effect = yes
-			add_opinion_modifier = { 
+			add_opinion_modifier = {
 				target = ENG
 				modifier = HKG_european_bussiness_opinion
 			}
-			add_opinion_modifier = { 
+			add_opinion_modifier = {
 				target = FRA
 				modifier = HKG_european_bussiness_opinion
 			}
-			add_opinion_modifier = { 
+			add_opinion_modifier = {
 				target = GER
 				modifier = HKG_european_bussiness_opinion
 			}
-			add_opinion_modifier = { 
+			add_opinion_modifier = {
 				target = HOL
 				modifier = HKG_european_bussiness_opinion
 			}
-			add_opinion_modifier = { 
+			add_opinion_modifier = {
 				target = NRY
 				modifier = HKG_european_bussiness_opinion
 			}
@@ -1524,7 +1551,7 @@ focus_tree = {
 			add_political_power = -50
 			set_temp_variable = { treasury_change = 8.40 }
 			modify_treasury_effect = yes
-			add_opinion_modifier = { 
+			add_opinion_modifier = {
 				target = CHI
 				modifier = HKG_chinese_entrepreneurs_opinion
 			}
@@ -1561,7 +1588,6 @@ focus_tree = {
 
 		ai_will_do = {
 			factor = 1
-		
 			modifier = {
 				factor = 0
 				has_active_mission = bankruptcy_incoming_collapse
@@ -1589,7 +1615,6 @@ focus_tree = {
 
 		ai_will_do = {
 			factor = 1
-		
 			modifier = {
 				factor = 0
 				has_active_mission = bankruptcy_incoming_collapse
@@ -1619,6 +1644,14 @@ focus_tree = {
 
 		ai_will_do = {
 			base = 3
+			modifier = {
+				factor = 0
+				can_staff_an_agriculture_district = no
+			}
+			modifier = {
+				factor = 0
+				has_active_mission = bankruptcy_incoming_collapse
+			}
 		}
 	}
 
@@ -1631,7 +1664,7 @@ focus_tree = {
 		cost = 10
 		prerequisite = { focus = HKG_new_development_idea }
 		prerequisite = { focus = HKG_attract_foreign_investment }
-		search_filters = { FOCUS_FILTER_FOREIGN_INVESTMENTS }
+		search_filters = { FOCUS_FILTER_FOREIGN_INVESTMENTS FOCUS_FILTER_INDUSTRY }
 
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus HKG_invest_hong_kong"
@@ -1650,10 +1683,13 @@ focus_tree = {
 
 		ai_will_do = {
 			factor = 1
-		
 			modifier = {
 				factor = 0
 				has_active_mission = bankruptcy_incoming_collapse
+			}
+			modifier = {
+				factor = 0
+				can_staff_an_offices = no
 			}
 		}
 	}
@@ -1704,10 +1740,13 @@ focus_tree = {
 
 		ai_will_do = {
 			factor = 1
-		
 			modifier = {
 				factor = 0
 				has_active_mission = bankruptcy_incoming_collapse
+			}
+			modifier = {
+				factor = 0
+				can_staff_an_offices = no
 			}
 		}
 	}
@@ -1736,10 +1775,13 @@ focus_tree = {
 
 		ai_will_do = {
 			factor = 1
-		
 			modifier = {
 				factor = 0
 				has_active_mission = bankruptcy_incoming_collapse
+			}
+			modifier = {
+				factor = 0
+				can_staff_an_offices = no
 			}
 		}
 	}
@@ -1800,9 +1842,9 @@ focus_tree = {
 			set_temp_variable = { treasury_change = -1.875 }
 			modify_treasury_effect = yes
 			add_resource = {
-			    type = oil
-			    amount = 2
-			    state = 595
+				type = oil
+				amount = 2
+				state = 595
 			}
 			log = "[GetDateText]: [This.GetName]: focus HKG_indonesian_gas executed"
 		}
@@ -1820,7 +1862,7 @@ focus_tree = {
 		relative_position_id = HKG_gong_hei_fat_coi
 		cost = 10
 		prerequisite = { focus = HKG_indonesian_gas }
-		search_filters = { FOCUS_FILTER_RESOURCE FOCUS_FILTER_TRADE }
+		search_filters = { FOCUS_FILTER_RESOURCE FOCUS_FILTER_TRADE FOCUS_FILTER_EXPENDITURE }
 		available = {
 			AST = {
 				has_opinion = {
@@ -1834,16 +1876,15 @@ focus_tree = {
 			set_temp_variable = { treasury_change = -5.625 }
 			modify_treasury_effect = yes
 			add_resource = {
-			    type = oil
-			    amount = 6
-			    state = 595
+				type = oil
+				amount = 6
+				state = 595
 			}
 			log = "[GetDateText]: [This.GetName]: focus HKG_australian_oil executed"
 		}
 
 		ai_will_do = {
 			factor = 1
-		
 			modifier = {
 				factor = 0
 				has_active_mission = bankruptcy_incoming_collapse
@@ -1961,7 +2002,6 @@ focus_tree = {
 
 		ai_will_do = {
 			factor = 1
-		
 			modifier = {
 				factor = 0
 				has_active_mission = bankruptcy_incoming_collapse
@@ -1995,7 +2035,6 @@ focus_tree = {
 
 		ai_will_do = {
 			factor = 1
-		
 			modifier = {
 				factor = 0
 				has_active_mission = bankruptcy_incoming_collapse
@@ -2123,7 +2162,6 @@ focus_tree = {
 
 		ai_will_do = {
 			factor = 1
-		
 			modifier = {
 				factor = 0
 				has_active_mission = bankruptcy_incoming_collapse
@@ -2156,7 +2194,6 @@ focus_tree = {
 
 		ai_will_do = {
 			factor = 1
-		
 			modifier = {
 				factor = 0
 				has_active_mission = bankruptcy_incoming_collapse
@@ -2267,6 +2304,7 @@ focus_tree = {
 				limit = { has_idea = HKG_silenced_press }
 				remove_ideas = HKG_silenced_press
 			}
+			add_ideas = HKG_pro_democracy_media
 		}
 
 		ai_will_do = {
@@ -2293,6 +2331,8 @@ focus_tree = {
 			add_stability = 0.10
 			add_popularity = { ideology = democratic popularity = 0.10 }
 			add_ideas = HKG_consolidated_democracy
+			add_ideas = HKG_civil_society_funding
+			add_ideas = HKG_modern_healthcare_system
 		}
 
 		ai_will_do = {
@@ -2308,7 +2348,7 @@ focus_tree = {
 		x = 6
 		y = 1
 		cost = 10
-		search_filters = { FOCUS_FILTER_INFRASTRUCTURE FOCUS_FILTER_ADD_BUILDING }
+		search_filters = { FOCUS_FILTER_INFRASTRUCTURE FOCUS_FILTER_ADD_BUILDING FOCUS_FILTER_EXPENDITURE }
 		prerequisite = { focus = HKG_public_housing_problem }
 
 
@@ -2327,7 +2367,8 @@ focus_tree = {
 				MODIFIER = HKG_housing_policy_modifier
 			}
 			add_to_variable = { HKG_housing_dockyard_income = 0.05 tooltip = dockyard_income_tax_modifier_tt }
-		
+			add_ideas = HKG_modernised_infrastructure_idea
+
 		}
 
 		ai_will_do = {
@@ -2357,7 +2398,6 @@ focus_tree = {
 
 		ai_will_do = {
 			base = 10
-			modifier = { factor = 0 has_active_mission = bankruptcy_incoming_collapse }
 		}
 	}
 
@@ -2369,7 +2409,7 @@ focus_tree = {
 		relative_position_id = HKG_infrastructure_megaproject
 		cost = 10
 		prerequisite = { focus = HKG_infrastructure_megaproject }
-		search_filters = { FOCUS_FILTER_INFRASTRUCTURE }
+		search_filters = { FOCUS_FILTER_INFRASTRUCTURE FOCUS_FILTER_INDUSTRY }
 
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus HKG_expanded_shipyards"
@@ -2382,6 +2422,10 @@ focus_tree = {
 		ai_will_do = {
 			base = 10
 			modifier = { factor = 0 has_active_mission = bankruptcy_incoming_collapse }
+			modifier = {
+				factor = 0
+				can_staff_an_dockyard = no
+			}
 		}
 	}
 
@@ -2393,7 +2437,7 @@ focus_tree = {
 		relative_position_id = HKG_infrastructure_megaproject
 		cost = 10
 		prerequisite = { focus = HKG_expanded_shipyards }
-		search_filters = { FOCUS_FILTER_INFRASTRUCTURE }
+		search_filters = { FOCUS_FILTER_INFRASTRUCTURE FOCUS_FILTER_INDUSTRY }
 
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus HKG_expanded_trade_capacity"
@@ -2405,6 +2449,7 @@ focus_tree = {
 					type = naval_supply_hub
 					level = 1
 					instant_build = yes
+					province = 10062
 				}
 			}
 		}
@@ -2412,6 +2457,10 @@ focus_tree = {
 		ai_will_do = {
 			base = 10
 			modifier = { factor = 0 has_active_mission = bankruptcy_incoming_collapse }
+			modifier = {
+				factor = 0
+				can_staff_an_industrial_complex = no
+			}
 		}
 	}
 
@@ -2423,7 +2472,7 @@ focus_tree = {
 		relative_position_id = HKG_infrastructure_megaproject
 		cost = 10
 		prerequisite = { focus = HKG_expanded_trade_capacity }
-		search_filters = { FOCUS_FILTER_INFRASTRUCTURE }
+		search_filters = { FOCUS_FILTER_INFRASTRUCTURE FOCUS_FILTER_INDUSTRY }
 
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus HKG_carrier_home"
@@ -2439,6 +2488,10 @@ focus_tree = {
 		ai_will_do = {
 			base = 10
 			modifier = { factor = 0 has_active_mission = bankruptcy_incoming_collapse }
+			modifier = {
+				factor = 0
+				can_staff_an_dockyard = no
+			}
 		}
 	}
 
@@ -2450,7 +2503,7 @@ focus_tree = {
 		relative_position_id = HKG_infrastructure_megaproject
 		cost = 10
 		prerequisite = { focus = HKG_carrier_home }
-		search_filters = { FOCUS_FILTER_INFRASTRUCTURE }
+		search_filters = { FOCUS_FILTER_INFRASTRUCTURE FOCUS_FILTER_INDUSTRY }
 
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus HKG_carrier_construction"
@@ -2466,6 +2519,10 @@ focus_tree = {
 		ai_will_do = {
 			base = 10
 			modifier = { factor = 0 has_active_mission = bankruptcy_incoming_collapse }
+			modifier = {
+				factor = 0
+				can_staff_an_dockyard = no
+			}
 		}
 	}
 
@@ -2477,7 +2534,7 @@ focus_tree = {
 		relative_position_id = HKG_infrastructure_megaproject
 		cost = 10
 		prerequisite = { focus = HKG_carrier_construction }
-		search_filters = { FOCUS_FILTER_INFRASTRUCTURE }
+		search_filters = { FOCUS_FILTER_INFRASTRUCTURE FOCUS_FILTER_EXPENDITURE }
 
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus HKG_carrier_special_airwing"
@@ -2501,7 +2558,7 @@ focus_tree = {
 		relative_position_id = HKG_infrastructure_megaproject
 		cost = 10
 		prerequisite = { focus = HKG_carrier_construction }
-		search_filters = { FOCUS_FILTER_INFRASTRUCTURE }
+		search_filters = { FOCUS_FILTER_INFRASTRUCTURE FOCUS_FILTER_EXPENDITURE }
 
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus HKG_carrier_defensive_weapons"
@@ -2525,7 +2582,7 @@ focus_tree = {
 		relative_position_id = HKG_infrastructure_megaproject
 		cost = 10
 		prerequisite = { focus = HKG_carrier_construction }
-		search_filters = { FOCUS_FILTER_INFRASTRUCTURE }
+		search_filters = { FOCUS_FILTER_INFRASTRUCTURE FOCUS_FILTER_EXPENDITURE }
 
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus HKG_carrier_logistics"
@@ -2552,7 +2609,7 @@ focus_tree = {
 		relative_position_id = HKG_infrastructure_megaproject
 		cost = 10
 		prerequisite = { focus = HKG_carrier_home }
-		search_filters = { FOCUS_FILTER_INFRASTRUCTURE }
+		search_filters = { FOCUS_FILTER_INFRASTRUCTURE FOCUS_FILTER_INDUSTRY }
 
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus HKG_carrier_construction2"
@@ -2572,6 +2629,10 @@ focus_tree = {
 		ai_will_do = {
 			base = 10
 			modifier = { factor = 0 has_active_mission = bankruptcy_incoming_collapse }
+			modifier = {
+				factor = 0
+				can_staff_an_dockyard = no
+			}
 		}
 	}
 
@@ -2583,7 +2644,7 @@ focus_tree = {
 		relative_position_id = HKG_infrastructure_megaproject
 		cost = 10
 		prerequisite = { focus = HKG_carrier_construction2 }
-		search_filters = { FOCUS_FILTER_INFRASTRUCTURE }
+		search_filters = { FOCUS_FILTER_INFRASTRUCTURE FOCUS_FILTER_EXPENDITURE }
 
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus HKG_carrier_modules"
@@ -2607,7 +2668,7 @@ focus_tree = {
 		relative_position_id = HKG_infrastructure_megaproject
 		cost = 10
 		prerequisite = { focus = HKG_carrier_construction2 }
-		search_filters = { FOCUS_FILTER_INFRASTRUCTURE }
+		search_filters = { FOCUS_FILTER_INFRASTRUCTURE FOCUS_FILTER_EXPENDITURE }
 
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus HKG_flight_deck_limitations"
@@ -2652,7 +2713,6 @@ focus_tree = {
 
 		ai_will_do = {
 			base = 10
-			modifier = { factor = 0 has_active_mission = bankruptcy_incoming_collapse }
 		}
 	}
 
@@ -2687,7 +2747,7 @@ focus_tree = {
 		relative_position_id = HKG_infrastructure_megaproject
 		cost = 10
 		prerequisite = { focus = HKG_mtr_expansion_phase_2 }
-		search_filters = { FOCUS_FILTER_INFRASTRUCTURE }
+		search_filters = { FOCUS_FILTER_INFRASTRUCTURE FOCUS_FILTER_INDUSTRY }
 
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus HKG_offshore_industry"
@@ -2699,6 +2759,10 @@ focus_tree = {
 		ai_will_do = {
 			base = 10
 			modifier = { factor = 0 has_active_mission = bankruptcy_incoming_collapse }
+			modifier = {
+				factor = 0
+				can_staff_an_industrial_complex = no
+			}
 		}
 	}
 
@@ -2710,7 +2774,7 @@ focus_tree = {
 		relative_position_id = HKG_infrastructure_megaproject
 		cost = 10
 		prerequisite = { focus = HKG_mtr_expansion_phase_2 }
-		search_filters = { FOCUS_FILTER_INFRASTRUCTURE }
+		search_filters = { FOCUS_FILTER_INFRASTRUCTURE FOCUS_FILTER_INDUSTRY }
 
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus HKG_offshore_industry2"
@@ -2724,6 +2788,10 @@ focus_tree = {
 		ai_will_do = {
 			base = 10
 			modifier = { factor = 0 has_active_mission = bankruptcy_incoming_collapse }
+			modifier = {
+				factor = 0
+				can_staff_an_industrial_complex = no
+			}
 		}
 	}
 
@@ -2814,6 +2882,10 @@ focus_tree = {
 			base = 2
 			modifier = { factor = 2 CHI = { has_government = communism } }
 			modifier = { factor = 0 has_government = democratic }
+			modifier = {
+				factor = 0
+				has_active_mission = bankruptcy_incoming_collapse
+			}
 		}
 	}
 
@@ -2865,6 +2937,14 @@ focus_tree = {
 
 		ai_will_do = {
 			base = 3
+			modifier = {
+				factor = 0
+				can_staff_an_offices = no
+			}
+			modifier = {
+				factor = 0
+				has_active_mission = bankruptcy_incoming_collapse
+			}
 		}
 	}
 
@@ -2896,6 +2976,14 @@ focus_tree = {
 
 		ai_will_do = {
 			base = 3
+			modifier = {
+				factor = 0
+				can_staff_an_offices = no
+			}
+			modifier = {
+				factor = 0
+				has_active_mission = bankruptcy_incoming_collapse
+			}
 		}
 	}
 
@@ -2949,7 +3037,6 @@ focus_tree = {
 
 		ai_will_do = {
 			factor = 1
-		
 			modifier = {
 				factor = 0
 				has_active_mission = bankruptcy_incoming_collapse
@@ -3003,6 +3090,14 @@ focus_tree = {
 		ai_will_do = {
 			base = 2
 			modifier = { factor = 0 has_idea = HKG_silenced_press }
+			modifier = {
+				factor = 0
+				can_staff_an_offices = no
+			}
+			modifier = {
+				factor = 0
+				has_active_mission = bankruptcy_incoming_collapse
+			}
 		}
 	}
 
@@ -3028,10 +3123,13 @@ focus_tree = {
 
 		ai_will_do = {
 			factor = 1
-		
 			modifier = {
 				factor = 0
 				has_active_mission = bankruptcy_incoming_collapse
+			}
+			modifier = {
+				factor = 0
+				can_staff_an_offices = no
 			}
 		}
 	}

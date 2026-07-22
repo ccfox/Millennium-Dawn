@@ -76,10 +76,12 @@ focus_tree = {
 			}
 		}
 		bypass = {
-			NOT = {
-				country_exists = ENG
+			OR = {
+				NOT = {
+					country_exists = ENG
+				}
+				has_war_with = ENG
 			}
-			has_war_with = ENG
 		}
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus NRY_increased_cooperation_with_uk"
@@ -124,10 +126,13 @@ focus_tree = {
 			has_country_flag = NRY_UK_AGREED
 		}
 		bypass = {
-			NOT = {
-				country_exists = ENG
+			OR = {
+				NOT = {
+					country_exists = ENG
+				}
+				has_war_with = ENG
+				has_country_flag = NRY_UK_DECLINED
 			}
-			has_war_with = ENG
 		}
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus NRY_investments_into_shetland"
@@ -156,6 +161,10 @@ focus_tree = {
 
 		ai_will_do = {
 			base = 1
+			modifier = {
+				factor = 0
+				has_active_mission = bankruptcy_incoming_collapse
+			}
 		}
 	}
 
@@ -167,7 +176,7 @@ focus_tree = {
 		y = 1
 		relative_position_id = NRY_north_sea_oil
 		cost = 5.72
-		search_filters = { FOCUS_FILTER_RESOURCE }
+		search_filters = { FOCUS_FILTER_RESOURCE FOCUS_FILTER_EXPENDITURE }
 		prerequisite = { focus = NRY_north_sea_oil }
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus NRY_statoil"
@@ -180,6 +189,10 @@ focus_tree = {
 
 		ai_will_do = {
 			base = 1
+			modifier = {
+				factor = 0
+				has_active_mission = bankruptcy_incoming_collapse
+			}
 		}
 	}
 
@@ -317,10 +330,12 @@ focus_tree = {
 			}
 		}
 		bypass = {
-			NOT = {
-				country_exists = ENG
+			OR = {
+				NOT = {
+					country_exists = ENG
+				}
+				has_war_with = ENG
 			}
-			has_war_with = ENG
 		}
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus NRY_sintef_research_org"
@@ -419,6 +434,10 @@ focus_tree = {
 
 		ai_will_do = {
 			base = 1
+			modifier = {
+				factor = 0
+				has_active_mission = bankruptcy_incoming_collapse
+			}
 		}
 	}
 
@@ -502,6 +521,10 @@ focus_tree = {
 
 		ai_will_do = {
 			base = 1
+			modifier = {
+				factor = 0
+				has_active_mission = bankruptcy_incoming_collapse
+			}
 		}
 	}
 
@@ -537,6 +560,10 @@ focus_tree = {
 
 		ai_will_do = {
 			base = 1
+			modifier = {
+				factor = 0
+				has_active_mission = bankruptcy_incoming_collapse
+			}
 		}
 	}
 
@@ -571,7 +598,7 @@ focus_tree = {
 		y = 2
 		relative_position_id = NRY_renewable_investments
 		cost = 7.15
-		search_filters = { FOCUS_FILTER_RENEWABLE_ENERGY_INFRASTRUCTURE }
+		search_filters = { FOCUS_FILTER_RENEWABLE_ENERGY_INFRASTRUCTURE FOCUS_FILTER_EXPENDITURE }
 		prerequisite = { focus = NRY_renewable_investments }
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus NRY_green_cities"
@@ -588,6 +615,10 @@ focus_tree = {
 
 		ai_will_do = {
 			base = 1
+			modifier = {
+				factor = 0
+				has_active_mission = bankruptcy_incoming_collapse
+			}
 		}
 	}
 
@@ -599,7 +630,7 @@ focus_tree = {
 		y = 3
 		relative_position_id = NRY_renewable_investments
 		cost = 10
-		search_filters = { FOCUS_FILTER_RENEWABLE_ENERGY_INFRASTRUCTURE }
+		search_filters = { FOCUS_FILTER_RENEWABLE_ENERGY_INFRASTRUCTURE FOCUS_FILTER_EXPENDITURE }
 		prerequisite = { focus = NRY_electric_vehicle_incentives }
 		prerequisite = { focus = NRY_scan_wind }
 		available = {
@@ -681,6 +712,10 @@ focus_tree = {
 
 		ai_will_do = {
 			base = 1
+			modifier = {
+				factor = 0
+				has_active_mission = bankruptcy_incoming_collapse
+			}
 		}
 	}
 
@@ -844,6 +879,14 @@ focus_tree = {
 
 		ai_will_do = {
 			base = 1
+			modifier = {
+				factor = 0
+				has_active_mission = bankruptcy_incoming_collapse
+			}
+			modifier = {
+				factor = 0
+				can_staff_an_offices = no
+			}
 		}
 	}
 
@@ -908,6 +951,10 @@ focus_tree = {
 
 		ai_will_do = {
 			base = 1
+			modifier = {
+				factor = 0
+				has_active_mission = bankruptcy_incoming_collapse
+			}
 		}
 	}
 
@@ -987,6 +1034,10 @@ focus_tree = {
 		}
 		ai_will_do = {
 			base = 1
+			modifier = {
+				factor = 0
+				has_active_mission = bankruptcy_incoming_collapse
+			}
 		}
 	}
 
@@ -1079,6 +1130,10 @@ focus_tree = {
 		}
 		ai_will_do = {
 			base = 1
+			modifier = {
+				factor = 0
+				has_active_mission = bankruptcy_incoming_collapse
+			}
 		}
 	}
 
@@ -1300,6 +1355,18 @@ focus_tree = {
 
 		ai_will_do = {
 			base = 1
+			modifier = {
+				factor = 0
+				has_active_mission = bankruptcy_incoming_collapse
+			}
+			modifier = {
+				factor = 0
+				can_staff_an_industrial_complex = no
+			}
+			modifier = {
+				factor = 0
+				can_staff_an_offices = no
+			}
 		}
 	}
 
@@ -1409,10 +1476,7 @@ focus_tree = {
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus NRY_ministry_of_agriculture_and_food"
 			add_ideas = NRY_ministry_of_agri_and_food
-			set_temp_variable = { temp_opinion = 5 }
-			change_farmers_opinion = yes
-			change_landowners_opinion = yes
-			change_oligarchs_opinion = yes
+			NRY_boost_agri_opinions = yes
 		}
 		ai_will_do = {
 			base = 1
@@ -1436,10 +1500,7 @@ focus_tree = {
 				add_idea = NRY_ministry_of_agri_and_food2
 			}
 
-			set_temp_variable = { temp_opinion = 5 }
-			change_farmers_opinion = yes
-			change_landowners_opinion = yes
-			change_oligarchs_opinion = yes
+			NRY_boost_agri_opinions = yes
 		}
 		ai_will_do = {
 			base = 1
@@ -1473,10 +1534,7 @@ focus_tree = {
 				category = CAT_genes
 			}
 
-			set_temp_variable = { temp_opinion = 5 }
-			change_farmers_opinion = yes
-			change_landowners_opinion = yes
-			change_oligarchs_opinion = yes
+			NRY_boost_agri_opinions = yes
 		}
 		ai_will_do = {
 			base = 1
@@ -1528,6 +1586,14 @@ focus_tree = {
 		}
 		ai_will_do = {
 			base = 1
+			modifier = {
+				factor = 0
+				can_staff_an_dockyard = no
+			}
+			modifier = {
+				factor = 0
+				has_active_mission = bankruptcy_incoming_collapse
+			}
 		}
 	}
 
@@ -1653,6 +1719,14 @@ focus_tree = {
 		}
 		ai_will_do = {
 			base = 1
+			modifier = {
+				factor = 0
+				can_staff_an_arms_industry = no
+			}
+			modifier = {
+				factor = 0
+				has_active_mission = bankruptcy_incoming_collapse
+			}
 		}
 	}
 
@@ -1795,6 +1869,10 @@ focus_tree = {
 		}
 		ai_will_do = {
 			base = 1
+			modifier = {
+				factor = 0
+				has_active_mission = bankruptcy_incoming_collapse
+			}
 		}
 	}
 
@@ -1923,6 +2001,10 @@ focus_tree = {
 		}
 		ai_will_do = {
 			base = 1
+			modifier = {
+				add = 25
+				has_global_flag = NRY_LABOUR_FOCUS_PATH
+			}
 		}
 	}
 
@@ -1979,7 +2061,7 @@ focus_tree = {
 		y = 1
 
 		cost = 5.72
-		search_filters = { FOCUS_FILTER_POLITICAL }
+		search_filters = { FOCUS_FILTER_POLITICAL FOCUS_FILTER_INDUSTRY }
 		prerequisite = { focus = NRY_modernization_of_the_welfare_state }
 		relative_position_id = NRY_modernization_of_the_welfare_state
 		available = {
@@ -2028,6 +2110,14 @@ focus_tree = {
 		}
 		ai_will_do = {
 			base = 1
+			modifier = {
+				factor = 0
+				has_active_mission = bankruptcy_incoming_collapse
+			}
+			modifier = {
+				factor = 0
+				can_staff_an_offices = no
+			}
 		}
 	}
 
@@ -2039,7 +2129,7 @@ focus_tree = {
 		y = 1
 
 		cost = 7.15
-		search_filters = { FOCUS_FILTER_POLITICAL }
+		search_filters = { FOCUS_FILTER_POLITICAL FOCUS_FILTER_EXPENDITURE }
 		prerequisite = { focus = NRY_modernization_of_the_welfare_state }
 		relative_position_id = NRY_modernization_of_the_welfare_state
 		available = {
@@ -2056,7 +2146,7 @@ focus_tree = {
 			}
 		}
 		completion_reward = {
-			log = "[GetDateText]: [Root.GetName]: Focus add_building_construction"
+			log = "[GetDateText]: [Root.GetName]: Focus NRY_forest_conservation_plans"
 			set_temp_variable = { party_popularity_increase = 0.045 }
 			set_temp_variable = { temp_outlook_increase = 0.03 }
 			add_relative_party_popularity = yes
@@ -2073,6 +2163,10 @@ focus_tree = {
 
 		ai_will_do = {
 			base = 1
+			modifier = {
+				factor = 0
+				has_active_mission = bankruptcy_incoming_collapse
+			}
 		}
 	}
 
@@ -2086,7 +2180,7 @@ focus_tree = {
 			western_social_democrats_are_in_power = yes
 		}
 		cost = 5.72
-		search_filters = { FOCUS_FILTER_POLITICAL }
+		search_filters = { FOCUS_FILTER_POLITICAL FOCUS_FILTER_EXPENDITURE }
 		prerequisite = { focus = NRY_forest_conservation_plans }
 		relative_position_id = NRY_modernization_of_the_welfare_state
 		completion_reward = {
@@ -2104,6 +2198,10 @@ focus_tree = {
 
 		ai_will_do = {
 			base = 1
+			modifier = {
+				factor = 0
+				has_active_mission = bankruptcy_incoming_collapse
+			}
 		}
 	}
 
@@ -2232,10 +2330,12 @@ focus_tree = {
 			western_social_democrats_are_in_power = yes
 		}
 		bypass = {
-			NOT = {
-				country_exists = PAL
+			OR = {
+				NOT = {
+					country_exists = PAL
+				}
+				has_war_with = PAL
 			}
-			has_war_with = PAL
 		}
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus NRY_weight_behind_gaza"
@@ -2284,10 +2384,12 @@ focus_tree = {
 			western_social_democrats_are_in_power = yes
 		}
 		bypass = {
-			NOT = {
-				country_exists = PAL
+			OR = {
+				NOT = {
+					country_exists = PAL
+				}
+				has_war_with = PAL
 			}
-			has_war_with = PAL
 		}
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus NRY_packages_of_aid"
@@ -2318,10 +2420,12 @@ focus_tree = {
 			western_social_democrats_are_in_power = yes
 		}
 		bypass = {
-			NOT = {
-				country_exists = SOV
+			OR = {
+				NOT = {
+					country_exists = SOV
+				}
+				has_war_with = SOV
 			}
-			has_war_with = SOV
 		}
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus NRY_constructive_dialogue_with_russia"
@@ -2381,6 +2485,10 @@ focus_tree = {
 
 		ai_will_do = {
 			base = 1
+			modifier = {
+				add = 25
+				has_global_flag = NRY_CHRISTIAN_PEOPLES_FOCUS_PATH
+			}
 		}
 	}
 
@@ -2515,7 +2623,7 @@ focus_tree = {
 			neutrality_neutral_conservatism_are_in_power = yes
 		}
 		cost = 5
-		search_filters = { FOCUS_FILTER_POLITICAL }
+		search_filters = { FOCUS_FILTER_POLITICAL FOCUS_FILTER_EXPENDITURE }
 		prerequisite = { focus = NRY_developmental_aid }
 		relative_position_id = NRY_christan_peoples_party
 		completion_reward = {
@@ -2529,6 +2637,10 @@ focus_tree = {
 		}
 		ai_will_do = {
 			base = 1
+			modifier = {
+				factor = 0
+				has_active_mission = bankruptcy_incoming_collapse
+			}
 		}
 	}
 
@@ -2576,10 +2688,12 @@ focus_tree = {
 			}
 		}
 		bypass = {
-			NOT = {
-				country_exists = GRE
+			OR = {
+				NOT = {
+					country_exists = GRE
+				}
+				has_war_with = GRE
 			}
-			has_war_with = GRE
 		}
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus NRY_relieve_pressure_from_greece"
@@ -2685,7 +2799,7 @@ focus_tree = {
 			neutrality_neutral_conservatism_are_in_power = yes
 		}
 		cost = 10
-		search_filters = { FOCUS_FILTER_POLITICAL }
+		search_filters = { FOCUS_FILTER_POLITICAL FOCUS_FILTER_INDUSTRY }
 		prerequisite = { focus = NRY_christan_peoples_party }
 		relative_position_id = NRY_christan_peoples_party
 		completion_reward = {
@@ -2713,6 +2827,14 @@ focus_tree = {
 
 		ai_will_do = {
 			base = 1
+			modifier = {
+				factor = 0
+				can_staff_an_industrial_complex = no
+			}
+			modifier = {
+				factor = 0
+				has_active_mission = bankruptcy_incoming_collapse
+			}
 		}
 	}
 
@@ -2757,9 +2879,9 @@ focus_tree = {
 		relative_position_id = NRY_christan_peoples_party
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus NRY_maintain_eu_distance"
-			set_temp_variable = { modify_eurosceptic = 0.05 }
-			set_temp_variable = { modify_eurosceptic_target = ROOT }
-			eurosceptic_change = yes
+			set_temp_variable = { modify_europeanism = -0.05 }
+			set_temp_variable = { modify_europeanism_target = ROOT }
+			europeanism_change = yes
 			newline = yes
 			set_temp_variable = { party_popularity_increase = 0.035 }
 			set_temp_variable = { temp_outlook_increase = 0.035 }
@@ -2792,6 +2914,10 @@ focus_tree = {
 
 		ai_will_do = {
 			base = 1
+			modifier = {
+				add = 25
+				has_global_flag = NRY_PROGRESS_FOCUS_PATH
+			}
 		}
 	}
 
@@ -2803,7 +2929,7 @@ focus_tree = {
 		y = 1
 
 		cost = 7.15
-		search_filters = { FOCUS_FILTER_POLITICAL }
+		search_filters = { FOCUS_FILTER_POLITICAL FOCUS_FILTER_INDUSTRY }
 		prerequisite = { focus = NRY_party_of_progress }
 		relative_position_id = NRY_party_of_progress
 		available = {
@@ -2834,6 +2960,14 @@ focus_tree = {
 
 		ai_will_do = {
 			base = 1
+			modifier = {
+				factor = 0
+				has_active_mission = bankruptcy_incoming_collapse
+			}
+			modifier = {
+				factor = 0
+				can_staff_an_offices = no
+			}
 		}
 	}
 
@@ -2847,7 +2981,7 @@ focus_tree = {
 			nationalist_right_wing_populists_are_in_power = yes
 		}
 		cost = 5.72
-		search_filters = { FOCUS_FILTER_POLITICAL }
+		search_filters = { FOCUS_FILTER_POLITICAL FOCUS_FILTER_EXPENDITURE }
 		prerequisite = { focus = NRY_shortened_wait_times }
 		relative_position_id = NRY_party_of_progress
 		completion_reward = {
@@ -2862,6 +2996,10 @@ focus_tree = {
 
 		ai_will_do = {
 			base = 1
+			modifier = {
+				factor = 0
+				has_active_mission = bankruptcy_incoming_collapse
+			}
 		}
 	}
 
@@ -3126,7 +3264,7 @@ focus_tree = {
 		y = 3
 
 		cost = 5.72
-		search_filters = { FOCUS_FILTER_POLITICAL }
+		search_filters = { FOCUS_FILTER_POLITICAL FOCUS_FILTER_EXPENDITURE }
 		prerequisite = { focus = NRY_state_of_norway }
 		relative_position_id = NRY_party_of_progress
 		available = {
@@ -3159,6 +3297,10 @@ focus_tree = {
 
 		ai_will_do = {
 			base = 1
+			modifier = {
+				factor = 0
+				has_active_mission = bankruptcy_incoming_collapse
+			}
 		}
 	}
 
@@ -3170,7 +3312,7 @@ focus_tree = {
 		y = 4
 
 		cost = 7.15
-		search_filters = { FOCUS_FILTER_POLITICAL }
+		search_filters = { FOCUS_FILTER_POLITICAL FOCUS_FILTER_INDUSTRY }
 		prerequisite = { focus = NRY_reaffirm_oil_state }
 		relative_position_id = NRY_party_of_progress
 		available = {
@@ -3197,6 +3339,14 @@ focus_tree = {
 
 		ai_will_do = {
 			base = 1
+			modifier = {
+				factor = 0
+				has_active_mission = bankruptcy_incoming_collapse
+			}
+			modifier = {
+				factor = 0
+				can_staff_an_dockyard = no
+			}
 		}
 	}
 
@@ -3215,9 +3365,9 @@ focus_tree = {
 		relative_position_id = NRY_party_of_progress
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus NRY_the_nrk"
-			set_temp_variable = { modify_eurosceptic = 0.05 }
-			set_temp_variable = { modify_eurosceptic_target = ROOT }
-			eurosceptic_change = yes
+			set_temp_variable = { modify_europeanism = -0.05 }
+			set_temp_variable = { modify_europeanism_target = ROOT }
+			europeanism_change = yes
 			newline = yes
 			decrease_corruption = yes
 		}

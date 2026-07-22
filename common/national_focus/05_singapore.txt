@@ -152,6 +152,10 @@ focus_tree = {
 					has_idea = stable_growth
 				}
 			}
+			modifier = {
+				factor = 0
+				has_active_mission = bankruptcy_incoming_collapse
+			}
 		}
 	}
 
@@ -204,10 +208,6 @@ focus_tree = {
 			modifier = {
 				factor = 3.5
 				has_idea = globalized_trade_economy
-			}
-			modifier = {
-				factor = 0
-				has_active_mission = bankruptcy_incoming_collapse
 			}
 		}
 	}
@@ -279,10 +279,6 @@ focus_tree = {
 				# Western Clique likes this
 				is_in_array = { ruling_party = 1 }
 			}
-			modifier = {
-				factor = 0
-				has_active_mission = bankruptcy_incoming_collapse
-			}
 		}
 	}
 
@@ -323,10 +319,6 @@ focus_tree = {
 
 		ai_will_do = {
 			base = 1
-			modifier = {
-				factor = 0
-				has_active_mission = bankruptcy_incoming_collapse
-			}
 		}
 	}
 
@@ -384,17 +376,16 @@ focus_tree = {
 
 		prerequisite = { focus = SIN_bankers_of_asia }
 
-		search_filters = { FOCUS_FILTER_EXPENDITURE }
+		search_filters = { FOCUS_FILTER_POLITICAL }
 
 		completion_reward = {
 			log = "[GetDateText]: [THIS.GetName]: Focus SIN_extreme_financing"
 			set_temp_variable = { treasury_change = 150 }
+			modify_treasury_effect = yes
 			set_temp_variable = { temp_opinion = 8 }
 			change_landowners_opinion = yes
 			change_international_bankers_opinion = yes
 			change_maritime_industry_opinion = yes
-			set_temp_variable = { treasury_change = -1 }
-			modify_treasury_effect = yes
 		}
 
 		ai_will_do = {
@@ -418,7 +409,7 @@ focus_tree = {
 
 		prerequisite = { focus = SIN_build_the_safety_net }
 
-		search_filters = { FOCUS_FILTER_STABILITY FOCUS_FILTER_INTERNAL_FACTION }
+		search_filters = { FOCUS_FILTER_STABILITY FOCUS_FILTER_INTERNAL_FACTION FOCUS_FILTER_EXPENDITURE }
 
 		completion_reward = {
 			log = "[GetDateText]: [THIS.GetName]: Focus SIN_human_rights"
@@ -476,6 +467,10 @@ focus_tree = {
 				NOT = { check_variable = { treasury < 200 } }
 				factor = 2.5
 			}
+			modifier = {
+				factor = 0
+				has_active_mission = bankruptcy_incoming_collapse
+			}
 		}
 	}
 
@@ -497,10 +492,7 @@ focus_tree = {
 		available = {
 			is_subject = no
 			has_war = no
-			custom_trigger_tooltip = {
-				tooltip = 100_total_gdp_tt
-				check_variable = { gdp_total > 100 }
-			}
+			gdp_total_greater_than_100 = yes
 		}
 
 		completion_reward = {
@@ -522,6 +514,10 @@ focus_tree = {
 					has_idea = stable_growth
 				}
 				add = 3
+			}
+			modifier = {
+				factor = 0
+				has_active_mission = bankruptcy_incoming_collapse
 			}
 		}
 	}
@@ -604,10 +600,6 @@ focus_tree = {
 
 		ai_will_do = {
 			base = 1
-			modifier = {
-				factor = 0
-				has_active_mission = bankruptcy_incoming_collapse
-			}
 		}
 	}
 
@@ -655,7 +647,7 @@ focus_tree = {
 						tag = CHI
 						tag = NKO
 						is_in_faction_with = CHI
-						has_idea = sco_member
+						has_idea = CHI_sco_member
 					}
 				}
 				add_opinion_modifier = { target = SIN modifier = declaration_of_friendship }
@@ -665,10 +657,6 @@ focus_tree = {
 
 		ai_will_do = {
 			base = 1
-			modifier = {
-				factor = 0
-				has_active_mission = bankruptcy_incoming_collapse
-			}
 		}
 	}
 
@@ -769,6 +757,10 @@ focus_tree = {
 
 		ai_will_do = {
 			base = 1
+			modifier = {
+				factor = 0
+				has_active_mission = bankruptcy_incoming_collapse
+			}
 		}
 	}
 
@@ -800,6 +792,10 @@ focus_tree = {
 
 		ai_will_do = {
 			base = 1
+			modifier = {
+				factor = 0
+				has_active_mission = bankruptcy_incoming_collapse
+			}
 		}
 	}
 
@@ -821,10 +817,7 @@ focus_tree = {
 			is_subject = no
 			has_war = no
 			has_idea = SIN_expanded_freight_transport
-			custom_trigger_tooltip = {
-				tooltip = 150_total_gdp_tt
-				check_variable = { gdp_total > 150 }
-			}
+			gdp_total_greater_than_150 = yes
 		}
 
 		completion_reward = {
@@ -900,6 +893,10 @@ focus_tree = {
 				amount = 110
 				producer = SIN
 			}
+			swap_ideas = {
+				remove_idea = SIN_expanded_freight_transport_1
+				add_idea = SIN_expanded_freight_transport_2
+			}
 			set_temp_variable = { treasury_change = -7.50 }
 			modify_treasury_effect = yes
 			set_temp_variable = { temp_opinion = 5 }
@@ -908,6 +905,10 @@ focus_tree = {
 
 		ai_will_do = {
 			base = 1
+			modifier = {
+				factor = 0
+				has_active_mission = bankruptcy_incoming_collapse
+			}
 		}
 	}
 
@@ -977,6 +978,10 @@ focus_tree = {
 
 		ai_will_do = {
 			base = 1
+			modifier = {
+				factor = 0
+				has_active_mission = bankruptcy_incoming_collapse
+			}
 		}
 	}
 
@@ -1028,7 +1033,7 @@ focus_tree = {
 
 		prerequisite = { focus = SIN_energy_efforts }
 
-		search_filters = { FOCUS_FILTER_STABILITY }
+		search_filters = { FOCUS_FILTER_STABILITY FOCUS_FILTER_EXPENDITURE }
 
 		available = {
 			is_subject = no
@@ -1061,6 +1066,10 @@ focus_tree = {
 
 		ai_will_do = {
 			base = 1
+			modifier = {
+				factor = 0
+				has_active_mission = bankruptcy_incoming_collapse
+			}
 		}
 	}
 
@@ -1152,6 +1161,7 @@ focus_tree = {
 
 		completion_reward = {
 			log = "[GetDateText]: [THIS.GetName]: focus SIN_renewable_energy"
+			set_temp_variable = { temp_change = 1 }
 			set_temp_variable = { skip_payment = 1 }
 			build_battery_park_effect = yes
 			swap_ideas = {
@@ -1162,6 +1172,10 @@ focus_tree = {
 
 		ai_will_do = {
 			base = 1
+			modifier = {
+				factor = 0
+				has_active_mission = bankruptcy_incoming_collapse
+			}
 		}
 	}
 
@@ -1177,7 +1191,7 @@ focus_tree = {
 
 		prerequisite = { focus = SIN_renewable_energy }
 
-		search_filters = { FOCUS_FILTER_STABILITY }
+		search_filters = { FOCUS_FILTER_STABILITY FOCUS_FILTER_EXPENDITURE }
 
 		available = {
 			is_subject = no
@@ -1225,7 +1239,7 @@ focus_tree = {
 
 		prerequisite = { focus = SIN_renewable_energy }
 
-		search_filters = { FOCUS_FILTER_STABILITY FOCUS_FILTER_DIPLOMACY }
+		search_filters = { FOCUS_FILTER_STABILITY FOCUS_FILTER_DIPLOMACY FOCUS_FILTER_EXPENDITURE }
 
 		available = {
 			is_subject = no
@@ -1259,6 +1273,7 @@ focus_tree = {
 
 		completion_reward = {
 			log = "[GetDateText]: [THIS.GetName]: focus SIN_aapowerlink"
+			set_temp_variable = { temp_change = 1 }
 			set_temp_variable = { skip_payment = 1 }
 			build_battery_park_effect = yes
 			swap_ideas = {
@@ -1325,6 +1340,10 @@ focus_tree = {
 
 		ai_will_do = {
 			base = 1
+			modifier = {
+				factor = 0
+				has_active_mission = bankruptcy_incoming_collapse
+			}
 		}
 	}
 
@@ -1512,6 +1531,14 @@ focus_tree = {
 
 		ai_will_do = {
 			base = 1
+			modifier = {
+				factor = 0
+				can_staff_an_arms_industry = no
+			}
+			modifier = {
+				factor = 0
+				has_active_mission = bankruptcy_incoming_collapse
+			}
 		}
 	}
 
@@ -1627,6 +1654,10 @@ focus_tree = {
 
 		ai_will_do = {
 			base = 1
+			modifier = {
+				factor = 0
+				has_active_mission = bankruptcy_incoming_collapse
+			}
 		}
 	}
 
@@ -1742,10 +1773,6 @@ focus_tree = {
 
 		ai_will_do = {
 			base = 1
-			modifier = {
-				factor = 0
-				has_active_mission = bankruptcy_incoming_collapse
-			}
 		}
 	}
 
@@ -1950,6 +1977,10 @@ focus_tree = {
 
 		ai_will_do = {
 			base = 1
+			modifier = {
+				factor = 0
+				has_active_mission = bankruptcy_incoming_collapse
+			}
 		}
 	}
 
@@ -2163,6 +2194,10 @@ focus_tree = {
 
 		ai_will_do = {
 			base = 1
+			modifier = {
+				factor = 0
+				has_active_mission = bankruptcy_incoming_collapse
+			}
 		}
 	}
 
@@ -2200,6 +2235,10 @@ focus_tree = {
 
 		ai_will_do = {
 			base = 1
+			modifier = {
+				factor = 0
+				has_active_mission = bankruptcy_incoming_collapse
+			}
 		}
 	}
 
@@ -2234,6 +2273,10 @@ focus_tree = {
 
 		ai_will_do = {
 			base = 1
+			modifier = {
+				factor = 0
+				has_active_mission = bankruptcy_incoming_collapse
+			}
 		}
 	}
 
@@ -2266,6 +2309,10 @@ focus_tree = {
 
 		ai_will_do = {
 			base = 1
+			modifier = {
+				factor = 0
+				has_active_mission = bankruptcy_incoming_collapse
+			}
 		}
 	}
 
@@ -2326,6 +2373,10 @@ focus_tree = {
 
 		ai_will_do = {
 			base = 1
+			modifier = {
+				factor = 0
+				has_active_mission = bankruptcy_incoming_collapse
+			}
 		}
 	}
 
@@ -2477,6 +2528,10 @@ focus_tree = {
 
 		ai_will_do = {
 			base = 1
+			modifier = {
+				factor = 0
+				has_active_mission = bankruptcy_incoming_collapse
+			}
 		}
 	}
 
@@ -2553,10 +2608,6 @@ focus_tree = {
 
 		ai_will_do = {
 			base = 1
-			modifier = {
-				factor = 0
-				has_active_mission = bankruptcy_incoming_collapse
-			}
 		}
 	}
 
@@ -2902,6 +2953,10 @@ focus_tree = {
 
 		ai_will_do = {
 			base = 1
+			modifier = {
+				factor = 0
+				has_active_mission = bankruptcy_incoming_collapse
+			}
 		}
 	}
 
@@ -3078,6 +3133,7 @@ focus_tree = {
 			set_temp_variable = { percent_change = 5 }
 			for_each_scope_loop = {
 				array = global.nato_members
+				tooltip = TT_ALL_NATO_MEMBER_NATIONS_GAIN
 				if = {
 					limit = {
 						NOT = { original_tag = SIN }
@@ -3090,6 +3146,7 @@ focus_tree = {
 			}
 			for_each_scope_loop = {
 				array = global.EU_member
+				tooltip = TT_ALL_EU_MEMBER_NATIONS_GAIN
 				if = {
 					limit = {
 						NOT = { original_tag = SIN }
@@ -3230,6 +3287,7 @@ focus_tree = {
 			air_experience = 25
 			for_each_scope_loop = {
 				array = global.nato_members
+				tooltip = TT_ALL_NATO_MEMBER_NATIONS_GAIN
 				add_opinion_modifier = { target = PREV modifier = declaration_of_friendship }
 				reverse_add_opinion_modifier = { target = PREV modifier = declaration_of_friendship }
 			}
@@ -3414,7 +3472,7 @@ focus_tree = {
 				limit = {
 					OR = {
 						has_idea = CSTO_member
-						has_idea = sco_member
+						has_idea = CHI_sco_member
 						has_idea = faction_resistance_axis_member
 						has_idea = CIS_member_state_idea
 						has_idea = RAJ_BRICS
@@ -3434,6 +3492,7 @@ focus_tree = {
 					}
 					NOT = { original_tag = SIN }
 				}
+				set_temp_variable = { percent_change = 2 }
 				change_influence_percentage = yes
 				add_opinion_modifier = { target = ROOT modifier = declaration_of_friendship }
 			}
@@ -3526,7 +3585,7 @@ focus_tree = {
 
 		completion_reward = {
 			log = "[GetDateText]: [THIS.GetName]: Focus SIN_join_brics"
-			add_ideas = RAJ_BRICS
+			BRICS_join_via_event = yes
 		}
 
 		ai_will_do = {
@@ -3651,7 +3710,7 @@ focus_tree = {
 			is_in_faction = no
 			is_subject = no
 			CHI = {
-				has_idea = sco_member
+				has_idea = CHI_sco_member
 				has_opinion = {
 					target = SIN
 					value > 9
@@ -3666,13 +3725,13 @@ focus_tree = {
 			}
 			NOT = {
 				any_enemy_country = {
-					has_idea = sco_member
+					has_idea = CHI_sco_member
 				}
 			}
 			if = {
 				limit = { has_dlc = "By Blood Alone" }
 				any_other_country = {
-					has_idea = sco_member
+					has_idea = CHI_sco_member
 					NOT = { is_embargoed_by = ROOT }
 				}
 			}
@@ -3680,7 +3739,7 @@ focus_tree = {
 
 		completion_reward = {
 			log = "[GetDateText]: [THIS.GetName]: Focus SIN_join_sco"
-			add_ideas = sco_member
+			add_ideas = CHI_sco_member
 		}
 
 		ai_will_do = {
@@ -3723,10 +3782,6 @@ focus_tree = {
 
 		ai_will_do = {
 			base = 0
-			modifier = {
-				factor = 0
-				has_active_mission = bankruptcy_incoming_collapse
-			}
 		}
 	}
 
@@ -3759,10 +3814,6 @@ focus_tree = {
 
 		ai_will_do = {
 			base = 0
-			modifier = {
-				factor = 0
-				has_active_mission = bankruptcy_incoming_collapse
-			}
 		}
 	}
 
@@ -3795,10 +3846,6 @@ focus_tree = {
 
 		ai_will_do = {
 			base = 0
-			modifier = {
-				factor = 0
-				has_active_mission = bankruptcy_incoming_collapse
-			}
 		}
 	}
 
@@ -3831,10 +3878,6 @@ focus_tree = {
 
 		ai_will_do = {
 			base = 0
-			modifier = {
-				factor = 0
-				has_active_mission = bankruptcy_incoming_collapse
-			}
 		}
 	}
 
@@ -4143,10 +4186,6 @@ focus_tree = {
 				add = 10
 				is_historical_focus_on = yes
 			}
-			modifier = {
-				factor = 0
-				has_active_mission = bankruptcy_incoming_collapse
-			}
 		}
 	}
 
@@ -4202,10 +4241,6 @@ focus_tree = {
 				add = 10
 				is_historical_focus_on = no
 			}
-			modifier = {
-				factor = 0
-				has_active_mission = bankruptcy_incoming_collapse
-			}
 		}
 	}
 
@@ -4240,10 +4275,6 @@ focus_tree = {
 
 		ai_will_do = {
 			base = 1
-			modifier = {
-				factor = 0
-				has_active_mission = bankruptcy_incoming_collapse
-			}
 		}
 	}
 
@@ -4268,10 +4299,6 @@ focus_tree = {
 
 		ai_will_do = {
 			base = 1
-			modifier = {
-				factor = 0
-				has_active_mission = bankruptcy_incoming_collapse
-			}
 		}
 	}
 
@@ -4293,7 +4320,7 @@ focus_tree = {
 		search_filters = { FOCUS_FILTER_CORRUPTION }
 
 		available = {
-			NOT = { has_idea = negligible_corruption }
+			NOT = { has_idea = corruption_level_01 }
 		}
 
 		bypass_if_unavailable = yes
@@ -4337,10 +4364,6 @@ focus_tree = {
 
 		ai_will_do = {
 			base = 1
-			modifier = {
-				factor = 0
-				has_active_mission = bankruptcy_incoming_collapse
-			}
 		}
 	}
 
@@ -4375,10 +4398,6 @@ focus_tree = {
 
 		ai_will_do = {
 			base = 1
-			modifier = {
-				factor = 0
-				has_active_mission = bankruptcy_incoming_collapse
-			}
 		}
 	}
 
@@ -4416,10 +4435,6 @@ focus_tree = {
 
 		ai_will_do = {
 			base = 1
-			modifier = {
-				factor = 0
-				has_active_mission = bankruptcy_incoming_collapse
-			}
 		}
 	}
 
@@ -4447,10 +4462,6 @@ focus_tree = {
 
 		ai_will_do = {
 			base = 1
-			modifier = {
-				factor = 0
-				has_active_mission = bankruptcy_incoming_collapse
-			}
 		}
 	}
 
@@ -4507,10 +4518,6 @@ focus_tree = {
 
 		ai_will_do = {
 			base = 1
-			modifier = {
-				factor = 0
-				has_active_mission = bankruptcy_incoming_collapse
-			}
 		}
 	}
 
@@ -4545,10 +4552,6 @@ focus_tree = {
 
 		ai_will_do = {
 			base = 1
-			modifier = {
-				factor = 0
-				has_active_mission = bankruptcy_incoming_collapse
-			}
 		}
 	}
 
@@ -4579,10 +4582,6 @@ focus_tree = {
 
 		ai_will_do = {
 			base = 1
-			modifier = {
-				factor = 0
-				has_active_mission = bankruptcy_incoming_collapse
-			}
 		}
 	}
 
@@ -4613,10 +4612,6 @@ focus_tree = {
 
 		ai_will_do = {
 			base = 1
-			modifier = {
-				factor = 0
-				has_active_mission = bankruptcy_incoming_collapse
-			}
 		}
 	}
 
@@ -4641,10 +4636,6 @@ focus_tree = {
 
 		ai_will_do = {
 			base = 1
-			modifier = {
-				factor = 0
-				has_active_mission = bankruptcy_incoming_collapse
-			}
 		}
 	}
 
@@ -4677,10 +4668,6 @@ focus_tree = {
 
 		ai_will_do = {
 			base = 1
-			modifier = {
-				factor = 0
-				has_active_mission = bankruptcy_incoming_collapse
-			}
 		}
 	}
 
@@ -4705,10 +4692,6 @@ focus_tree = {
 
 		ai_will_do = {
 			base = 1
-			modifier = {
-				factor = 0
-				has_active_mission = bankruptcy_incoming_collapse
-			}
 		}
 	}
 
@@ -4733,10 +4716,6 @@ focus_tree = {
 
 		ai_will_do = {
 			base = 1
-			modifier = {
-				factor = 0
-				has_active_mission = bankruptcy_incoming_collapse
-			}
 		}
 	}
 
@@ -4761,10 +4740,6 @@ focus_tree = {
 
 		ai_will_do = {
 			base = 1
-			modifier = {
-				factor = 0
-				has_active_mission = bankruptcy_incoming_collapse
-			}
 		}
 	}
 
@@ -4792,10 +4767,6 @@ focus_tree = {
 
 		ai_will_do = {
 			base = 1
-			modifier = {
-				factor = 0
-				has_active_mission = bankruptcy_incoming_collapse
-			}
 		}
 	}
 
@@ -5032,10 +5003,6 @@ focus_tree = {
 
 		ai_will_do = {
 			base = 1
-			modifier = {
-				factor = 0
-				has_active_mission = bankruptcy_incoming_collapse
-			}
 		}
 	}
 
@@ -5072,10 +5039,6 @@ focus_tree = {
 
 		ai_will_do = {
 			base = 1
-			modifier = {
-				factor = 0
-				has_active_mission = bankruptcy_incoming_collapse
-			}
 		}
 	}
 
@@ -5145,6 +5108,10 @@ focus_tree = {
 				factor = 0
 				has_active_mission = bankruptcy_incoming_collapse
 			}
+			modifier = {
+				factor = 0
+				can_staff_an_offices = no
+			}
 		}
 	}
 
@@ -5187,10 +5154,6 @@ focus_tree = {
 
 		ai_will_do = {
 			base = 1
-			modifier = {
-				factor = 0
-				has_active_mission = bankruptcy_incoming_collapse
-			}
 		}
 	}
 
@@ -5234,10 +5197,6 @@ focus_tree = {
 
 		ai_will_do = {
 			base = 1
-			modifier = {
-				factor = 0
-				has_active_mission = bankruptcy_incoming_collapse
-			}
 		}
 	}
 
@@ -5273,10 +5232,6 @@ focus_tree = {
 
 		ai_will_do = {
 			base = 1
-			modifier = {
-				factor = 0
-				has_active_mission = bankruptcy_incoming_collapse
-			}
 		}
 	}
 
@@ -5312,7 +5267,7 @@ focus_tree = {
 			every_country = {
 				limit = {
 					OR = {
-						is_in_array = { global.sco_members = THIS.id }
+						is_sco = yes
 						original_tag = CHI
 						is_in_faction_with = CHI
 					}
@@ -5325,10 +5280,6 @@ focus_tree = {
 
 		ai_will_do = {
 			base = 1
-			modifier = {
-				factor = 0
-				has_active_mission = bankruptcy_incoming_collapse
-			}
 		}
 	}
 
@@ -5361,10 +5312,6 @@ focus_tree = {
 
 		ai_will_do = {
 			base = 1
-			modifier = {
-				factor = 0
-				has_active_mission = bankruptcy_incoming_collapse
-			}
 		}
 	}
 
@@ -5406,10 +5353,6 @@ focus_tree = {
 
 		ai_will_do = {
 			base = 1
-			modifier = {
-				factor = 0
-				has_active_mission = bankruptcy_incoming_collapse
-			}
 		}
 	}
 
@@ -5461,10 +5404,6 @@ focus_tree = {
 
 		ai_will_do = {
 			base = 1
-			modifier = {
-				factor = 0
-				has_active_mission = bankruptcy_incoming_collapse
-			}
 		}
 	}
 
@@ -5503,10 +5442,6 @@ focus_tree = {
 
 		ai_will_do = {
 			base = 1
-			modifier = {
-				factor = 0
-				has_active_mission = bankruptcy_incoming_collapse
-			}
 		}
 	}
 
@@ -5544,10 +5479,6 @@ focus_tree = {
 
 		ai_will_do = {
 			base = 1
-			modifier = {
-				factor = 0
-				has_active_mission = bankruptcy_incoming_collapse
-			}
 		}
 	}
 
@@ -5603,10 +5534,6 @@ focus_tree = {
 
 		ai_will_do = {
 			base = 1
-			modifier = {
-				factor = 0
-				has_active_mission = bankruptcy_incoming_collapse
-			}
 		}
 	}
 
@@ -5645,10 +5572,6 @@ focus_tree = {
 
 		ai_will_do = {
 			base = 1
-			modifier = {
-				factor = 0
-				has_active_mission = bankruptcy_incoming_collapse
-			}
 		}
 	}
 
@@ -5690,10 +5613,6 @@ focus_tree = {
 
 		ai_will_do = {
 			base = 1
-			modifier = {
-				factor = 0
-				has_active_mission = bankruptcy_incoming_collapse
-			}
 		}
 	}
 
@@ -5732,10 +5651,6 @@ focus_tree = {
 
 		ai_will_do = {
 			base = 0
-			modifier = {
-				factor = 0
-				has_active_mission = bankruptcy_incoming_collapse
-			}
 		}
 	}
 
@@ -5777,10 +5692,6 @@ focus_tree = {
 
 		ai_will_do = {
 			base = 1
-			modifier = {
-				factor = 0
-				has_active_mission = bankruptcy_incoming_collapse
-			}
 		}
 	}
 
@@ -5817,10 +5728,6 @@ focus_tree = {
 
 		ai_will_do = {
 			base = 1
-			modifier = {
-				factor = 0
-				has_active_mission = bankruptcy_incoming_collapse
-			}
 		}
 	}
 
@@ -5860,10 +5767,6 @@ focus_tree = {
 
 		ai_will_do = {
 			base = 1
-			modifier = {
-				factor = 0
-				has_active_mission = bankruptcy_incoming_collapse
-			}
 		}
 	}
 
@@ -5927,7 +5830,7 @@ focus_tree = {
 
 		prerequisite = { focus = SIN_pressure_the_south_asian_seas }
 
-		search_filters = { FOCUS_FILTER_DIPLOMACY FOCUS_FILTER_WAR_SUPPORT }
+		search_filters = { FOCUS_FILTER_DIPLOMACY FOCUS_FILTER_WAR_SUPPORT FOCUS_FILTER_INDUSTRY }
 
 		available = {
 			is_subject = no
@@ -5948,6 +5851,10 @@ focus_tree = {
 			modifier = {
 				factor = 0
 				has_active_mission = bankruptcy_incoming_collapse
+			}
+			modifier = {
+				factor = 0
+				can_staff_an_arms_industry = no
 			}
 		}
 	}
@@ -5991,10 +5898,6 @@ focus_tree = {
 
 		ai_will_do = {
 			base = 1
-			modifier = {
-				factor = 0
-				has_active_mission = bankruptcy_incoming_collapse
-			}
 		}
 	}
 
@@ -6036,10 +5939,6 @@ focus_tree = {
 
 		ai_will_do = {
 			base = 1
-			modifier = {
-				factor = 0
-				has_active_mission = bankruptcy_incoming_collapse
-			}
 		}
 	}
 
@@ -6076,10 +5975,6 @@ focus_tree = {
 
 		ai_will_do = {
 			base = 1
-			modifier = {
-				factor = 0
-				has_active_mission = bankruptcy_incoming_collapse
-			}
 		}
 	}
 
@@ -6118,10 +6013,6 @@ focus_tree = {
 
 		ai_will_do = {
 			base = 1
-			modifier = {
-				factor = 0
-				has_active_mission = bankruptcy_incoming_collapse
-			}
 		}
 	}
 
@@ -6168,10 +6059,6 @@ focus_tree = {
 
 		ai_will_do = {
 			base = 1
-			modifier = {
-				factor = 0
-				has_active_mission = bankruptcy_incoming_collapse
-			}
 		}
 	}
 
@@ -6220,10 +6107,6 @@ focus_tree = {
 
 		ai_will_do = {
 			base = 1
-			modifier = {
-				factor = 0
-				has_active_mission = bankruptcy_incoming_collapse
-			}
 		}
 	}
 
@@ -6284,10 +6167,6 @@ focus_tree = {
 
 		ai_will_do = {
 			base = 1
-			modifier = {
-				factor = 0
-				has_active_mission = bankruptcy_incoming_collapse
-			}
 		}
 	}
 
@@ -6325,10 +6204,6 @@ focus_tree = {
 
 		ai_will_do = {
 			base = 1
-			modifier = {
-				factor = 0
-				has_active_mission = bankruptcy_incoming_collapse
-			}
 		}
 	}
 
@@ -6368,10 +6243,6 @@ focus_tree = {
 
 		ai_will_do = {
 			base = 1
-			modifier = {
-				factor = 0
-				has_active_mission = bankruptcy_incoming_collapse
-			}
 		}
 	}
 
@@ -6406,10 +6277,6 @@ focus_tree = {
 
 		ai_will_do = {
 			base = 1
-			modifier = {
-				factor = 0
-				has_active_mission = bankruptcy_incoming_collapse
-			}
 		}
 	}
 
@@ -6443,7 +6310,10 @@ focus_tree = {
 
 		completion_reward = {
 			log = "[GetDateText]: [THIS.GetName]: Focus SIN_restrict_migration"
-			remove_ideas = SIN_migrant_workers
+			swap_ideas = {
+				remove_idea = SIN_migrant_workers
+				add_idea = SIN_migrant_workers_restricted_one_idea
+			}
 		}
 
 		ai_will_do = {
@@ -6476,6 +6346,7 @@ focus_tree = {
 
 		completion_reward = {
 			log = "[GetDateText]: [THIS.GetName]: Focus SIN_encourage_migration"
+			unlock_decision_tooltip = SIN_repeal_the_migrant_worker_policy
 			custom_effect_tooltip = SIN_encourage_migration_tt
 			swap_ideas = {
 				remove_idea = SIN_migrant_workers
@@ -6550,6 +6421,7 @@ focus_tree = {
 
 		completion_reward = {
 			log = "[GetDateText]: [THIS.GetName]: Focus SIN_import_cheap_labour"
+			unlock_decision_tooltip = SIN_repeal_the_migrant_worker_policy
 			custom_effect_tooltip = SIN_encourage_migration_worse_tt
 			swap_ideas = {
 				remove_idea = SIN_migrant_workers_encouraged_idea
@@ -6593,9 +6465,6 @@ focus_tree = {
 
 		select_effect = {
 			log = "[GetDateText]: [Root.GetName]: Focus SIN_singapore_south_east_asia"
-			if = { limit = { NOT = { has_variable = signed_trade_agreements } }
-				set_variable = { signed_trade_agreements = 0 }
-			}
 			add_dynamic_modifier = {
 				modifier = SIN_singaporean_trade_strength
 			}
@@ -6640,6 +6509,7 @@ focus_tree = {
 			set_temp_variable = { percent_change = 1 }
 			for_each_scope_loop = {
 				array = global.ASEAN_Member
+				tooltip = TT_ALL_ASEAN_NATIONS_GAIN
 				if = {
 					limit = { NOT = { original_tag = SIN } }
 					change_influence_percentage = yes
@@ -6897,10 +6767,6 @@ focus_tree = {
 
 		ai_will_do = {
 			base = 1
-			modifier = {
-				factor = 0
-				has_active_mission = bankruptcy_incoming_collapse
-			}
 		}
 	}
 
@@ -7072,6 +6938,14 @@ focus_tree = {
 
 		ai_will_do = {
 			base = 1
+			modifier = {
+				factor = 0
+				can_staff_an_dockyard = no
+			}
+			modifier = {
+				factor = 0
+				has_active_mission = bankruptcy_incoming_collapse
+			}
 		}
 	}
 
@@ -7191,10 +7065,6 @@ focus_tree = {
 
 		ai_will_do = {
 			base = 1
-			modifier = {
-				factor = 0
-				has_active_mission = bankruptcy_incoming_collapse
-			}
 		}
 	}
 
@@ -7226,10 +7096,6 @@ focus_tree = {
 
 		ai_will_do = {
 			base = 1
-			modifier = {
-				factor = 0
-				has_active_mission = bankruptcy_incoming_collapse
-			}
 		}
 	}
 
@@ -7425,7 +7291,7 @@ focus_tree = {
 
 		prerequisite = { focus = SIN_dictate_trade_agreements }
 
-		search_filters = { FOCUS_FILTER_POLITICAL }
+		search_filters = { FOCUS_FILTER_POLITICAL FOCUS_FILTER_INDUSTRY }
 
 		available = {
 			is_subject = no
@@ -7458,6 +7324,14 @@ focus_tree = {
 
 		ai_will_do = {
 			base = 1
+			modifier = {
+				factor = 0
+				can_staff_an_offices = no
+			}
+			modifier = {
+				factor = 0
+				has_active_mission = bankruptcy_incoming_collapse
+			}
 		}
 	}
 
@@ -7510,7 +7384,7 @@ focus_tree = {
 
 		prerequisite = { focus = SIN_expand_foreign_reserve }
 
-		search_filters = { FOCUS_FILTER_TRADE FOCUS_FILTER_DIPLOMACY }
+		search_filters = { FOCUS_FILTER_TRADE FOCUS_FILTER_DIPLOMACY FOCUS_FILTER_INDUSTRY }
 
 		available = {
 			is_subject = no
@@ -7602,6 +7476,10 @@ focus_tree = {
 				factor = 0
 				has_active_mission = bankruptcy_incoming_collapse
 			}
+			modifier = {
+				factor = 0
+				can_staff_an_offices = no
+			}
 		}
 	}
 
@@ -7618,7 +7496,7 @@ focus_tree = {
 
 		prerequisite = { focus = SIN_expand_foreign_reserve }
 
-		search_filters = { FOCUS_FILTER_TRADE FOCUS_FILTER_DIPLOMACY }
+		search_filters = { FOCUS_FILTER_TRADE FOCUS_FILTER_DIPLOMACY FOCUS_FILTER_INDUSTRY }
 
 		available = {
 			is_subject = no
@@ -7679,6 +7557,10 @@ focus_tree = {
 				factor = 0
 				has_active_mission = bankruptcy_incoming_collapse
 			}
+			modifier = {
+				factor = 0
+				can_staff_an_offices = no
+			}
 		}
 	}
 
@@ -7695,7 +7577,7 @@ focus_tree = {
 
 		prerequisite = { focus = SIN_expand_foreign_reserve }
 
-		search_filters = { FOCUS_FILTER_TRADE FOCUS_FILTER_DIPLOMACY }
+		search_filters = { FOCUS_FILTER_TRADE FOCUS_FILTER_DIPLOMACY FOCUS_FILTER_INDUSTRY }
 
 		available = {
 			is_subject = no
@@ -7756,6 +7638,10 @@ focus_tree = {
 				factor = 0
 				has_active_mission = bankruptcy_incoming_collapse
 			}
+			modifier = {
+				factor = 0
+				can_staff_an_offices = no
+			}
 		}
 	}
 
@@ -7805,15 +7691,12 @@ focus_tree = {
 
 		prerequisite = { focus = SIN_regional_investment }
 
-		search_filters = { FOCUS_FILTER_TRADE FOCUS_FILTER_DIPLOMACY }
+		search_filters = { FOCUS_FILTER_TRADE FOCUS_FILTER_DIPLOMACY FOCUS_FILTER_INDUSTRY }
 
 		available = {
 			is_subject = no
 			has_war = no
-			custom_trigger_tooltip = {
-				tooltip = 100_total_gdp_tt
-				check_variable = { gdp_total > 100 }
-			}
+			gdp_total_greater_than_100 = yes
 			NOT = { has_idea = intervention_isolation }
 			NOT = { has_idea = intervention_neo_imperialism }
 			NOT = {
@@ -7876,6 +7759,18 @@ focus_tree = {
 
 		ai_will_do = {
 			base = 1
+			modifier = {
+				factor = 0
+				has_active_mission = bankruptcy_incoming_collapse
+			}
+			modifier = {
+				factor = 0
+				can_staff_an_industrial_complex = no
+			}
+			modifier = {
+				factor = 0
+				can_staff_an_offices = no
+			}
 		}
 	}
 
@@ -7892,15 +7787,12 @@ focus_tree = {
 
 		prerequisite = { focus = SIN_regional_investment }
 
-		search_filters = { FOCUS_FILTER_TRADE FOCUS_FILTER_DIPLOMACY }
+		search_filters = { FOCUS_FILTER_TRADE FOCUS_FILTER_DIPLOMACY FOCUS_FILTER_INDUSTRY }
 
 		available = {
 			is_subject = no
 			has_war = no
-			custom_trigger_tooltip = {
-				tooltip = 100_total_gdp_tt
-				check_variable = { gdp_total > 100 }
-			}
+			gdp_total_greater_than_100 = yes
 			NOT = { has_idea = intervention_isolation }
 			NOT = { has_idea = intervention_neo_imperialism }
 			NOT = {
@@ -7980,6 +7872,18 @@ focus_tree = {
 
 		ai_will_do = {
 			base = 1
+			modifier = {
+				factor = 0
+				has_active_mission = bankruptcy_incoming_collapse
+			}
+			modifier = {
+				factor = 0
+				can_staff_an_dockyard = no
+			}
+			modifier = {
+				factor = 0
+				can_staff_an_offices = no
+			}
 		}
 	}
 
@@ -7996,15 +7900,12 @@ focus_tree = {
 
 		prerequisite = { focus = SIN_regional_investment }
 
-		search_filters = { FOCUS_FILTER_TRADE FOCUS_FILTER_DIPLOMACY }
+		search_filters = { FOCUS_FILTER_TRADE FOCUS_FILTER_DIPLOMACY FOCUS_FILTER_INDUSTRY }
 
 		available = {
 			is_subject = no
 			has_war = no
-			custom_trigger_tooltip = {
-				tooltip = 100_total_gdp_tt
-				check_variable = { gdp_total > 100 }
-			}
+			gdp_total_greater_than_100 = yes
 			NOT = { has_idea = intervention_isolation }
 			NOT = { has_idea = intervention_neo_imperialism }
 			NOT = {
@@ -8063,6 +7964,18 @@ focus_tree = {
 
 		ai_will_do = {
 			base = 1
+			modifier = {
+				factor = 0
+				has_active_mission = bankruptcy_incoming_collapse
+			}
+			modifier = {
+				factor = 0
+				can_staff_an_dockyard = no
+			}
+			modifier = {
+				factor = 0
+				can_staff_an_industrial_complex = no
+			}
 		}
 	}
 
@@ -8079,15 +7992,12 @@ focus_tree = {
 
 		prerequisite = { focus = SIN_expand_foreign_reserve }
 
-		search_filters = { FOCUS_FILTER_TRADE FOCUS_FILTER_DIPLOMACY }
+		search_filters = { FOCUS_FILTER_TRADE FOCUS_FILTER_DIPLOMACY FOCUS_FILTER_INDUSTRY }
 
 		available = {
 			is_subject = no
 			has_war = no
-			custom_trigger_tooltip = {
-				tooltip = 400_total_gdp_tt
-				check_variable = { gdp_total > 400 }
-			}
+			gdp_total_greater_than_400 = yes
 			NOT = { has_idea = intervention_isolation }
 			NOT = { has_idea = intervention_neo_imperialism }
 			NOT = {
@@ -8139,6 +8049,10 @@ focus_tree = {
 				factor = 0
 				has_active_mission = bankruptcy_incoming_collapse
 			}
+			modifier = {
+				factor = 0
+				can_staff_an_offices = no
+			}
 		}
 	}
 
@@ -8155,7 +8069,7 @@ focus_tree = {
 
 		prerequisite = { focus = SIN_expand_foreign_reserve }
 
-		search_filters = { FOCUS_FILTER_TRADE FOCUS_FILTER_DIPLOMACY }
+		search_filters = { FOCUS_FILTER_TRADE FOCUS_FILTER_DIPLOMACY FOCUS_FILTER_INDUSTRY }
 
 		available = {
 			is_subject = no
@@ -8190,6 +8104,10 @@ focus_tree = {
 			modifier = {
 				factor = 0
 				has_active_mission = bankruptcy_incoming_collapse
+			}
+			modifier = {
+				factor = 0
+				can_staff_an_offices = no
 			}
 		}
 	}
@@ -8420,6 +8338,10 @@ focus_tree = {
 
 		ai_will_do = {
 			base = 1
+			modifier = {
+				factor = 0
+				has_active_mission = bankruptcy_incoming_collapse
+			}
 		}
 	}
 
@@ -8882,6 +8804,14 @@ focus_tree = {
 
 		ai_will_do = {
 			base = 1
+			modifier = {
+				factor = 0
+				has_active_mission = bankruptcy_incoming_collapse
+			}
+			modifier = {
+				factor = 0
+				can_staff_an_dockyard = no
+			}
 		}
 	}
 
@@ -8955,7 +8885,7 @@ focus_tree = {
 		available = {
 			owns_state = 530
 			is_subject = no
-			has_tech = construction1
+			has_tech = construction4
 		}
 
 		completion_reward = {
@@ -8987,6 +8917,10 @@ focus_tree = {
 			modifier = {
 				factor = 0
 				has_active_mission = bankruptcy_incoming_collapse
+			}
+			modifier = {
+				factor = 0
+				can_staff_an_dockyard = no
 			}
 		}
 	}
@@ -9039,6 +8973,10 @@ focus_tree = {
 			modifier = {
 				factor = 0
 				has_active_mission = bankruptcy_incoming_collapse
+			}
+			modifier = {
+				factor = 0
+				can_staff_an_industrial_complex = no
 			}
 		}
 	}
@@ -9130,6 +9068,18 @@ focus_tree = {
 
 		ai_will_do = {
 			base = 1
+			modifier = {
+				factor = 0
+				has_active_mission = bankruptcy_incoming_collapse
+			}
+			modifier = {
+				factor = 0
+				can_staff_an_industrial_complex = no
+			}
+			modifier = {
+				factor = 0
+				can_staff_an_offices = no
+			}
 		}
 	}
 
@@ -9220,6 +9170,10 @@ focus_tree = {
 				factor = 0
 				has_active_mission = bankruptcy_incoming_collapse
 			}
+			modifier = {
+				factor = 0
+				can_staff_an_dockyard = no
+			}
 		}
 	}
 
@@ -9277,6 +9231,10 @@ focus_tree = {
 			modifier = {
 				factor = 0
 				has_active_mission = bankruptcy_incoming_collapse
+			}
+			modifier = {
+				factor = 0
+				can_staff_an_dockyard = no
 			}
 		}
 	}

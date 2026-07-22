@@ -46,33 +46,33 @@ LAYER 5: GOD OF WAR OVERRIDES (game rule gated)
 
 ### on_startup (`common/on_actions/00_on_actions.txt`)
 
-- **AI Template Init** (line ~1710): every AI country (zombie/joke tags excluded, see `give_AI_templates`) → `give_AI_templates`. Also sets microstate tax rates and investment targets.
+- **AI Template Init**: every AI country (zombie/joke tags excluded, see `give_AI_templates`) → `give_AI_templates`. Also sets microstate tax rates and investment targets.
 
 ### on_daily (`common/on_actions/00_on_actions.txt`)
 
-- **AI Unit-Cap Cache** (line ~101): AI only → `division_limiter_calculation` + `plane_limiter_calculation` + `ship_limiter_calculation`. Each recomputes the cached `*_limiter_limit` variable the matching limiter strategy reads in its `enable`.
+- **AI Unit-Cap Cache**: AI only → `division_limiter_calculation` + `plane_limiter_calculation` + `ship_limiter_calculation`. Each recomputes the cached `*_limiter_limit` variable the matching limiter strategy reads in its `enable`.
 
 ### on_monthly (`common/on_actions/MD_on_actions.txt`)
 
-- **AI Weapon Dump** (line ~939): All AI → `ai_weapon_dump`
-- **AI Taxes** (line ~964): All AI → `calculate_ai_taxes_desire`
-- **AI Influence** (line ~817): AI + PP > 200 + not subject + not bankrupt → `influence.500`
-- **AI Investment Targets** (January only, line ~730): Regional+ powers → `yearly_investment_targets_routine`
-- **AI UN Actions** (line ~1241): `un_ai_evaluate_actions`
-- **AI Recognition** (line ~1243): `recog_ai_monthly`
-- **God of War** (line ~966): `ai_add_xp`, and if no player allies + threat > 0.3: `ai_add_equipment` + `ai_spawn_units`
+- **AI Weapon Dump**: All AI → `ai_weapon_dump`
+- **AI Taxes**: All AI → `calculate_ai_taxes_desire`
+- **AI Influence**: AI + PP > 200 + not subject + not bankrupt → `influence.500`
+- **AI Investment Targets** (January only): Regional+ powers → `yearly_investment_targets_routine`
+- **AI UN Actions**: `un_ai_evaluate_actions`
+- **AI Recognition**: `recog_ai_monthly`
+- **God of War**: `ai_add_xp`, and if no player allies + threat > 0.3: `ai_add_equipment` + `ai_spawn_units`
 
 ### on_weekly (`common/on_actions/MD_on_actions.txt`)
 
-- **AI Investment Pulse** (line ~80): Regional+ powers with investment targets → `AC_event.500`
-- **AI Cyber** (line ~178): Rotates through 4 weekly batches → `ai_cyber_monthly`
-- **AI Counter-Terror** (same lines): `global.active_terror_orgs^num > 0` → `ct_ai_weekly`
+- **AI Investment Pulse**: Regional+ powers with investment targets → `AC_event.500`
+- **AI Cyber**: Rotates through 4 weekly batches → `ai_cyber_monthly`
+- **AI Counter-Terror** (same batch rotation): `global.active_terror_orgs^num > 0` → `ct_ai_weekly`
 
 ### Other on_actions
 
-- **on_puppet** (`01_tfv_on_actions.txt:93`): AI puppeted nations → `give_AI_templates`
-- **on_declare_war** (`00_on_actions.txt:2049`): AI combatants with cyber capability → `ai_cyber_add_target` on each other
-- **on_join_faction / on_leave_faction** (`MD_on_actions.txt:1270`): AI reserve currency auto-switch (Chinese faction → yuan, Russian → rouble, else → dollar)
+- **on_puppet** (`01_tfv_on_actions.txt`): AI puppeted nations → `give_AI_templates`
+- **on_declare_war** (`00_on_actions.txt`): AI combatants with cyber capability → `ai_cyber_add_target` on each other
+- **on_join_faction / on_leave_faction** (`MD_on_actions.txt`): AI reserve currency auto-switch (Chinese faction → yuan, Russian → rouble, else → dollar)
 
 Threat state is no longer pushed by these hooks. It is evaluated live by the `ai_is_threatened` scripted trigger (see below), so nothing has to set or refresh a flag on war/justification/liberation.
 
@@ -113,7 +113,7 @@ Monthly, all AI at peace with threat < 0.51. Sells excess equipment for 30 treas
 - Various tank chassis > 2.5-5k → dump 500 each
 - Artillery > 5k → dump 750
 
-### `calculate_ai_taxes_desire` (`00_money_system.txt:5210`)
+### `calculate_ai_taxes_desire` (`00_money_system.txt`)
 
 Monthly tax rate adjustment:
 
@@ -167,6 +167,26 @@ my_strategy = {
 `reversed = yes` swaps direction: instead of "this country does X to id", it becomes "id does X to this country". Requires `enable_reverse = { ... }` (no default scope, must scope into a country).
 
 Example: Iran's `PER_support_shias` makes Shia countries support Iran (rather than Iran supporting them).
+
+### War & Conquer Weighting (`conquer` + `avoid_starting_wars`)
+
+`avoid_starting_wars` is **additive with the `conquer` strategy and targetless** (per vanilla `_documentation.md`) — it combines with per-target `conquer` weights rather than acting as a standalone "avoidance" dial, so its effect depends on the conquer context. Vanilla's example uses a large negative value to suppress all targets, then `conquer` to carve out one:
+
+```pdx
+ai_strategy = { type = avoid_starting_wars value = -200 }   # targetless, additive with conquer
+ai_strategy = { type = conquer id = GER value = 200 }       # GER: -200+200 = 0 (the only viable target); everyone else -200
+```
+
+Vanilla notes this is "meant for very specific situations, and should not be used widely."
+
+In MD both signs appear intentionally:
+
+- Small **positive** values as a general brake on opening new wars (e.g. RAJ's insurgency strategies use `+20` / `+50` while suppressing a rebellion). The mod author has confirmed positive = stronger avoidance in this usage.
+- **Negative** values for the targetless-suppression technique above (e.g. RAJ's `-100` while already at war with Pakistan, to avoid opening new fronts).
+
+**Do not flag an `avoid_starting_wars` value as a sign bug** in either direction without checking the surrounding `conquer` strategies and the author's intent. It is nuanced, not a simple "higher = more peaceful" scalar.
+
+Authoritative token reference: vanilla `common/ai_strategy/_documentation.md` (in the HOI4 install). Mirror gotchas here as they come up.
 
 ### `MD_combat_ai_strategies.txt` — Production & Combat
 

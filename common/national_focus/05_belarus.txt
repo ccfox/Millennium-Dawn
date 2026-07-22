@@ -28,8 +28,7 @@ focus_tree = {
 			add_political_power = 150
 		}
 
-		ai_will_do = {
-			base = 1
+		ai_will_do = { base = 1
 		}
 	}
 
@@ -49,14 +48,14 @@ focus_tree = {
 
 		completion_reward = {
 			log = "[GetDateText]: [THIS.GetName]: Focus BLR_bountiful_fields"
+			unlock_decision_category_tooltip = BLR_agricultural_districts
 			custom_effect_tooltip = BLR_activates_fermer_mission_TT
 			hidden_effect = {
 				activate_mission = BLR_get_to_work
 			}
 		}
 
-		ai_will_do = {
-			base = 1
+		ai_will_do = { base = 1
 		}
 	}
 
@@ -82,8 +81,7 @@ focus_tree = {
 			decrease_corruption = yes
 		}
 
-		ai_will_do = {
-			base = 1
+		ai_will_do = { base = 1
 		}
 	}
 
@@ -113,8 +111,7 @@ focus_tree = {
 			}
 		}
 
-		ai_will_do = {
-			base = 1
+		ai_will_do = { base = 1
 		}
 	}
 
@@ -143,9 +140,7 @@ focus_tree = {
 			}
 		}
 
-		ai_will_do = {
-			base = 1
-		}
+		ai_will_do = { base = 1 }
 	}
 
 	focus = {
@@ -167,8 +162,7 @@ focus_tree = {
 			add_ideas = BLR_streamlined_taxation
 		}
 
-		ai_will_do = {
-			base = 1
+		ai_will_do = { base = 1
 		}
 	}
 
@@ -207,6 +201,11 @@ focus_tree = {
 
 		ai_will_do = {
 			base = 1
+
+			modifier = {
+				factor = 0
+				can_staff_an_agriculture_district = no
+			}
 		}
 	}
 
@@ -284,8 +283,7 @@ focus_tree = {
 			}
 		}
 
-		ai_will_do = {
-			base = 1
+		ai_will_do = { base = 1
 		}
 	}
 
@@ -308,8 +306,7 @@ focus_tree = {
 			add_ideas = BLR_belneftekhim_idea
 		}
 
-		ai_will_do = {
-			base = 1
+		ai_will_do = { base = 1
 		}
 	}
 
@@ -324,17 +321,11 @@ focus_tree = {
 		cost = 5.8
 
 		prerequisite = { focus = BLR_belneftekhim }
-		mutually_exclusive = {
-			focus = BLR_uplift_grodno_azot
-		}
+		mutually_exclusive = { focus = BLR_uplift_grodno_azot }
 
 		search_filters = { FOCUS_FILTER_ECONOMY }
 
-		available = {
-			703 = {
-				is_owned_and_controlled_by = BLR
-			}
-		}
+		available = { 703 = { is_owned_and_controlled_by = BLR } }
 
 		completion_reward = {
 			log = "[GetDateText]: [THIS.GetName]: Focus BLR_the_belaruskali_monopoly"
@@ -357,10 +348,11 @@ focus_tree = {
 			base = 1
 			modifier = {
 				factor = 0
-				OR = {
-					has_active_mission = bankruptcy_incoming_collapse
-					can_staff_an_industrial_complex = no
-				}
+				has_active_mission = bankruptcy_incoming_collapse
+			}
+			modifier = {
+				factor = 0
+				can_staff_an_industrial_complex = no
 			}
 		}
 	}
@@ -376,17 +368,11 @@ focus_tree = {
 		cost = 5.8
 
 		prerequisite = { focus = BLR_belneftekhim }
-		mutually_exclusive = {
-			focus = BLR_the_belaruskali_monopoly
-		}
+		mutually_exclusive = { focus = BLR_the_belaruskali_monopoly }
 
 		search_filters = { FOCUS_FILTER_ECONOMY }
 
-		available = {
-			702 = {
-				is_owned_and_controlled_by = BLR
-			}
-		}
+		available = { 702 = { is_owned_and_controlled_by = BLR } }
 
 		completion_reward = {
 			log = "[GetDateText]: [THIS.GetName]: Focus BLR_uplift_grodno_azot"
@@ -412,10 +398,11 @@ focus_tree = {
 			base = 1
 			modifier = {
 				factor = 0
-				OR = {
-					has_active_mission = bankruptcy_incoming_collapse
-					can_staff_an_offices = no
-				}
+				has_active_mission = bankruptcy_incoming_collapse
+			}
+			modifier = {
+				factor = 0
+				can_staff_an_offices = no
 			}
 		}
 	}
@@ -434,12 +421,7 @@ focus_tree = {
 
 		search_filters = { FOCUS_FILTER_ECONOMY }
 
-		available = {
-			any_owned_state = {
-				fuel_silo > 2
-			}
-			has_tech = excavation2
-		}
+		available = { any_owned_state = { fuel_silo > 2 } has_tech = excavation2 }
 
 		completion_reward = {
 			log = "[GetDateText]: [THIS.GetName]: Focus BLR_tend_to_oil_shale"
@@ -455,8 +437,7 @@ focus_tree = {
 			}
 		}
 
-		ai_will_do = {
-			base = 1
+		ai_will_do = { base = 1
 		}
 	}
 
@@ -471,9 +452,7 @@ focus_tree = {
 		cost = 5
 
 		prerequisite = { focus = BLR_tend_to_oil_shale }
-		mutually_exclusive = {
-			focus = BLR_award_chinese_contractors
-		}
+		mutually_exclusive = { focus = BLR_award_chinese_contractors }
 
 		search_filters = { FOCUS_FILTER_ECONOMY }
 
@@ -490,8 +469,7 @@ focus_tree = {
 			}
 		}
 
-		ai_will_do = {
-			base = 1
+		ai_will_do = { base = 1
 		}
 	}
 
@@ -506,9 +484,7 @@ focus_tree = {
 		cost = 5
 
 		prerequisite = { focus = BLR_tend_to_oil_shale }
-		mutually_exclusive = {
-			focus = BLR_award_luxembourgian_contractors
-		}
+		mutually_exclusive = { focus = BLR_award_luxembourgian_contractors }
 
 		search_filters = { FOCUS_FILTER_ECONOMY }
 
@@ -517,7 +493,7 @@ focus_tree = {
 			NOT = {
 				has_war_with = CHI
 			}
-			has_country_flag = signed_BRI
+			has_country_flag = CHI_bri_partner
 		}
 
 		completion_reward = {
@@ -638,8 +614,7 @@ focus_tree = {
 			change_farmers_opinion = yes
 		}
 
-		ai_will_do = {
-			base = 1
+		ai_will_do = { base = 1
 		}
 	}
 
@@ -777,8 +752,7 @@ focus_tree = {
 			}
 		}
 
-		ai_will_do = {
-			base = 1
+		ai_will_do = { base = 1
 		}
 	}
 
@@ -801,8 +775,7 @@ focus_tree = {
 			country_event = belarus_md.2
 		}
 
-		ai_will_do = {
-			base = 1
+		ai_will_do = { base = 1
 		}
 	}
 
@@ -821,11 +794,7 @@ focus_tree = {
 
 		search_filters = { FOCUS_FILTER_ECONOMY }
 
-		available = {
-			703 = {
-				is_owned_and_controlled_by = BLR
-			}
-		}
+		available = { 703 = { is_owned_and_controlled_by = BLR } }
 
 		completion_reward = {
 			log = "[GetDateText]: [THIS.GetName]: Focus BLR_fostering_automotive_innovation"
@@ -847,10 +816,11 @@ focus_tree = {
 			base = 1
 			modifier = {
 				factor = 0
-				OR = {
-					has_active_mission = bankruptcy_incoming_collapse
-					can_staff_an_industrial_complex = no
-				}
+				has_active_mission = bankruptcy_incoming_collapse
+			}
+			modifier = {
+				factor = 0
+				can_staff_an_industrial_complex = no
 			}
 		}
 	}
@@ -873,11 +843,7 @@ focus_tree = {
 
 		search_filters = { FOCUS_FILTER_ECONOMY }
 
-		available = {
-			703 = {
-				is_owned_and_controlled_by = BLR
-			}
-		}
+		available = { 703 = { is_owned_and_controlled_by = BLR } }
 
 		completion_reward = {
 			log = "[GetDateText]: [THIS.GetName]: Focus BLR_tractors"
@@ -904,10 +870,11 @@ focus_tree = {
 			base = 1
 			modifier = {
 				factor = 0
-				OR = {
-					has_active_mission = bankruptcy_incoming_collapse
-					can_staff_an_industrial_complex = no
-				}
+				has_active_mission = bankruptcy_incoming_collapse
+			}
+			modifier = {
+				factor = 0
+				can_staff_an_industrial_complex = no
 			}
 		}
 	}
@@ -944,8 +911,7 @@ focus_tree = {
 			}
 		}
 
-		ai_will_do = {
-			base = 1
+		ai_will_do = { base = 1
 		}
 	}
 
@@ -1026,6 +992,10 @@ focus_tree = {
 
 		ai_will_do = {
 			base = 1
+			modifier = {
+				factor = 0
+				has_active_mission = bankruptcy_incoming_collapse
+			}
 		}
 	}
 
@@ -1069,8 +1039,7 @@ focus_tree = {
 			}
 		}
 
-		ai_will_do = {
-			base = 1
+		ai_will_do = { base = 1
 		}
 	}
 
@@ -1085,9 +1054,7 @@ focus_tree = {
 		cost = 5
 
 		prerequisite = { focus = BLR_trains }
-		mutually_exclusive = {
-			focus = BLR_new_paths
-		}
+		mutually_exclusive = { focus = BLR_new_paths }
 
 		search_filters = { FOCUS_FILTER_ECONOMY }
 
@@ -1121,25 +1088,17 @@ focus_tree = {
 		cost = 7.2
 
 		prerequisite = { focus = BLR_trains }
-		mutually_exclusive = {
-			focus = BLR_revamp_railroads
-		}
+		mutually_exclusive = { focus = BLR_revamp_railroads }
 
 		search_filters = { FOCUS_FILTER_ECONOMY }
 
-		available = {
-			703 = {
-				is_owned_and_controlled_by = BLR
-			}
-		}
+		available = { 703 = { is_owned_and_controlled_by = BLR } }
 
 		completion_reward = {
 			log = "[GetDateText]: [THIS.GetName]: Focus BLR_new_paths"
 			703 = {
-				add_building_construction = {
-					type = nuclear_facility
-					province = 216
-					level = 1
+				construct_building_in_random_province = {
+					nuclear_facility = 1
 				}
 			}
 			newline = yes
@@ -1189,9 +1148,7 @@ focus_tree = {
 		}
 	}
 
-		ai_will_do = {
-			base = 500
-		}
+		ai_will_do = { base = 500 }
 	}
 	##Nationalists
 	focus = {
@@ -1301,6 +1258,8 @@ focus_tree = {
 		cost = 7
 
 		prerequisite = { focus = BLR_Belarusisation }
+
+		search_filters = { FOCUS_FILTER_MILITARY_LAWS }
 
 		available = {
 			OR = {
@@ -1887,6 +1846,8 @@ focus_tree = {
 
 		prerequisite = { focus = BLR_Reform_Police }
 
+		search_filters = { FOCUS_FILTER_ECONOMY }
+
 		available = {
 			OR = {
 				nationalist_right_wing_populists_are_in_power = yes
@@ -1923,6 +1884,8 @@ focus_tree = {
 		cost = 5
 
 		prerequisite = { focus = BLR_Democratic_clean }
+
+		search_filters = { FOCUS_FILTER_PROPAGANDA FOCUS_FILTER_RESEARCH }
 
 		available = {
 			OR = {
@@ -2108,6 +2071,8 @@ focus_tree = {
 
 		prerequisite = { focus = BLR_GDL }
 
+		search_filters = { FOCUS_FILTER_ANNEXATION }
+
 		available = {
 			OR = {
 				nationalist_right_wing_populists_are_in_power = yes
@@ -2150,9 +2115,7 @@ focus_tree = {
 			country_exists = LIT
 		}
 
-		bypass = {
-			NOT = { country_exists = LIT }
-		}
+		bypass = { NOT = { country_exists = LIT } }
 
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus BLR_lith_again"
@@ -2195,6 +2158,8 @@ focus_tree = {
 		prerequisite = { focus = BLR_National_science }
 		prerequisite = { focus = BLR_patriotism }
 
+		search_filters = { FOCUS_FILTER_ECONOMY }
+
 		available = {
 			OR = {
 				nationalist_right_wing_populists_are_in_power = yes
@@ -2222,9 +2187,7 @@ focus_tree = {
 			recalculate_party = yes
 		}
 
-		ai_will_do = {
-			base = 155
-		}
+		ai_will_do = { base = 155 }
 	}
 	#Anti immigration policies
 	focus = {
@@ -2306,9 +2269,7 @@ focus_tree = {
 			}
 		}
 
-		ai_will_do = {
-			base = 155
-		}
+		ai_will_do = { base = 155 }
 	}
 	#Church Separate
 	focus = {
@@ -2341,9 +2302,7 @@ focus_tree = {
 			add_ideas = BLR_separate_rel
 		}
 
-		ai_will_do = {
-			base = 155
-		}
+		ai_will_do = { base = 155 }
 	}
 	#Church State
 	focus = {
@@ -2376,9 +2335,7 @@ focus_tree = {
 			add_ideas = BLR_state_rel
 		}
 
-		ai_will_do = {
-			base = 155
-		}
+		ai_will_do = { base = 155 }
 	}
 
 	#Influence on the nationalists of neighboring countries
@@ -2452,6 +2409,8 @@ focus_tree = {
 
 		prerequisite = { focus = BLR_Dismiss_soviet_officers }
 
+		search_filters = { FOCUS_FILTER_STABILITY FOCUS_FILTER_CORRUPTION }
+
 		available = {
 			OR = {
 				nationalist_right_wing_populists_are_in_power = yes
@@ -2469,9 +2428,7 @@ focus_tree = {
 			add_to_variable = { BLR_belarus_nati_bureaucracy_cost_multiplier_modifier = 0.05 tooltip = bureaucracy_cost_multiplier_modifier_tt }
 		}
 
-		ai_will_do = {
-			base = 155
-		}
+		ai_will_do = { base = 155 }
 	}
 	#Territorial Reform
 	focus = {
@@ -2486,6 +2443,8 @@ focus_tree = {
 
 		prerequisite = { focus = BLR_debur }
 		prerequisite = { focus = BLR_Influence_nationalists }
+
+		search_filters = { FOCUS_FILTER_INTERNAL_AFFAIRS }
 
 		available = {
 			OR = {
@@ -2780,9 +2739,7 @@ focus_tree = {
 
 		search_filters = { FOCUS_FILTER_MANPOWER }
 
-		available = {
-			nationalist_fascist_are_in_power = yes
-		}
+		available = { nationalist_fascist_are_in_power = yes }
 
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus BLR_soviet_system"
@@ -2831,9 +2788,7 @@ focus_tree = {
 
 		search_filters = { FOCUS_FILTER_MANPOWER }
 
-		available = {
-			nationalist_fascist_are_in_power = yes
-		}
+		available = { nationalist_fascist_are_in_power = yes }
 
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus BLR_work_army"
@@ -2866,9 +2821,7 @@ focus_tree = {
 
 		search_filters = { FOCUS_FILTER_MANPOWER }
 
-		available = {
-			nationalist_fascist_are_in_power = yes
-		}
+		available = { nationalist_fascist_are_in_power = yes }
 
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus BLR_free_weapon"
@@ -2898,9 +2851,7 @@ focus_tree = {
 
 		search_filters = { FOCUS_FILTER_MANPOWER }
 
-		available = {
-			nationalist_fascist_are_in_power = yes
-		}
+		available = { nationalist_fascist_are_in_power = yes }
 
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus BLR_new_church"
@@ -2934,9 +2885,7 @@ focus_tree = {
 
 		search_filters = { FOCUS_FILTER_MANPOWER }
 
-		available = {
-			nationalist_fascist_are_in_power = yes
-		}
+		available = { nationalist_fascist_are_in_power = yes }
 
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus BLR_reform_education"
@@ -2968,11 +2917,9 @@ focus_tree = {
 		prerequisite = { focus = BLR_new_church }
 		prerequisite = { focus = BLR_free_weapon }
 
-		search_filters = { FOCUS_FILTER_MANPOWER }
+		search_filters = { FOCUS_FILTER_MANPOWER FOCUS_FILTER_INDUSTRY }
 
-		available = {
-			nationalist_fascist_are_in_power = yes
-		}
+		available = { nationalist_fascist_are_in_power = yes }
 
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus BLR_ruralisation"
@@ -2986,6 +2933,14 @@ focus_tree = {
 			modifier = {
 				factor = 50
 				has_global_flag = BLR_RUS_NATIONALIST_PATH
+			}
+			modifier = {
+				factor = 0
+				has_active_mission = bankruptcy_incoming_collapse
+			}
+			modifier = {
+				factor = 0
+				can_staff_an_agriculture_district = no
 			}
 		}
 	}
@@ -3005,9 +2960,7 @@ focus_tree = {
 
 		search_filters = { FOCUS_FILTER_MANPOWER }
 
-		available = {
-			nationalist_fascist_are_in_power = yes
-		}
+		available = { nationalist_fascist_are_in_power = yes }
 
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus BLR_revoult_army"
@@ -3043,9 +2996,7 @@ focus_tree = {
 
 		search_filters = { FOCUS_FILTER_MANPOWER }
 
-		available = {
-			nationalist_fascist_are_in_power = yes
-		}
+		available = { nationalist_fascist_are_in_power = yes }
 
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus BLR_revoult_army_zeks"
@@ -3078,9 +3029,7 @@ focus_tree = {
 
 		search_filters = { FOCUS_FILTER_MANPOWER }
 
-		available = {
-			nationalist_fascist_are_in_power = yes
-		}
+		available = { nationalist_fascist_are_in_power = yes }
 
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus BLR_revoult_rne"
@@ -3110,9 +3059,7 @@ focus_tree = {
 
 		search_filters = { FOCUS_FILTER_MANPOWER }
 
-		available = {
-			nationalist_fascist_are_in_power = yes
-		}
+		available = { nationalist_fascist_are_in_power = yes }
 
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus BLR_revoult_sobor"
@@ -3142,9 +3089,7 @@ focus_tree = {
 
 		search_filters = { FOCUS_FILTER_MANPOWER }
 
-		available = {
-			nationalist_fascist_are_in_power = yes
-		}
+		available = { nationalist_fascist_are_in_power = yes }
 
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus BLR_revoult_army_volunteer"
@@ -3175,9 +3120,7 @@ focus_tree = {
 
 		search_filters = { FOCUS_FILTER_MANPOWER }
 
-		available = {
-			nationalist_fascist_are_in_power = yes
-		}
+		available = { nationalist_fascist_are_in_power = yes }
 
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus BLR_revoult_army_anti_west"
@@ -3207,9 +3150,7 @@ focus_tree = {
 
 		search_filters = { FOCUS_FILTER_MANPOWER }
 
-		available = {
-			nationalist_fascist_are_in_power = yes
-		}
+		available = { nationalist_fascist_are_in_power = yes }
 
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus BLR_revoult_army_interbrigade"
@@ -3252,9 +3193,7 @@ focus_tree = {
 
 		search_filters = { FOCUS_FILTER_MANPOWER }
 
-		available = {
-			nationalist_fascist_are_in_power = yes
-		}
+		available = { nationalist_fascist_are_in_power = yes }
 
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus BLR_kgb_expanded"
@@ -3284,9 +3223,7 @@ focus_tree = {
 
 		search_filters = { FOCUS_FILTER_MANPOWER }
 
-		available = {
-			nationalist_fascist_are_in_power = yes
-		}
+		available = { nationalist_fascist_are_in_power = yes }
 
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus BLR_army_stabilize"
@@ -3319,9 +3256,7 @@ focus_tree = {
 
 		search_filters = { FOCUS_FILTER_MANPOWER }
 
-		available = {
-			nationalist_fascist_are_in_power = yes
-		}
+		available = { nationalist_fascist_are_in_power = yes }
 
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus BLR_prepare_attacks"
@@ -3409,7 +3344,7 @@ focus_tree = {
 
 		prerequisite = { focus = BLR_prepare_attacks }
 
-		search_filters = { FOCUS_FILTER_MANPOWER }
+		search_filters = { FOCUS_FILTER_MANPOWER FOCUS_FILTER_EXPENDITURE }
 
 		available = {
 			country_exists = POL
@@ -3449,6 +3384,10 @@ focus_tree = {
 			modifier = {
 				factor = 50
 				has_global_flag = BLR_RUS_NATIONALIST_PATH
+			}
+			modifier = {
+				factor = 0
+				has_active_mission = bankruptcy_incoming_collapse
 			}
 		}
 	}
@@ -3509,7 +3448,7 @@ focus_tree = {
 
 		prerequisite = { focus = BLR_ukraine_campaign }
 
-		search_filters = { FOCUS_FILTER_MANPOWER }
+		search_filters = { FOCUS_FILTER_MANPOWER FOCUS_FILTER_EXPENDITURE }
 
 		available = {
 			country_exists = UKR
@@ -3549,6 +3488,10 @@ focus_tree = {
 			modifier = {
 				factor = 50
 				has_global_flag = BLR_RUS_NATIONALIST_PATH
+			}
+			modifier = {
+				factor = 0
+				has_active_mission = bankruptcy_incoming_collapse
 			}
 		}
 	}
@@ -3704,9 +3647,7 @@ focus_tree = {
 
 		search_filters = { FOCUS_FILTER_MANPOWER }
 
-		available = {
-			nationalist_fascist_are_in_power = yes
-		}
+		available = { nationalist_fascist_are_in_power = yes }
 
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus BLR_revoult_army_gco"
@@ -3761,11 +3702,9 @@ focus_tree = {
 
 		prerequisite = { focus = BLR_revoult_army }
 
-		search_filters = { FOCUS_FILTER_MANPOWER }
+		search_filters = { FOCUS_FILTER_MANPOWER FOCUS_FILTER_INDUSTRY }
 
-		available = {
-			nationalist_fascist_are_in_power = yes
-		}
+		available = { nationalist_fascist_are_in_power = yes }
 
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus BLR_military_nazbol"
@@ -3777,6 +3716,14 @@ focus_tree = {
 			modifier = {
 				factor = 50
 				has_global_flag = BLR_RUS_NATIONALIST_PATH
+			}
+			modifier = {
+				factor = 0
+				has_active_mission = bankruptcy_incoming_collapse
+			}
+			modifier = {
+				factor = 0
+				can_staff_an_arms_industry = no
 			}
 		}
 	}
@@ -3795,9 +3742,7 @@ focus_tree = {
 
 		search_filters = { FOCUS_FILTER_MANPOWER }
 
-		available = {
-			nationalist_fascist_are_in_power = yes
-		}
+		available = { nationalist_fascist_are_in_power = yes }
 
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus BLR_revoult_army_gco_ground_force"
@@ -3857,9 +3802,7 @@ focus_tree = {
 
 		search_filters = { FOCUS_FILTER_MANPOWER }
 
-		available = {
-			nationalist_fascist_are_in_power = yes
-		}
+		available = { nationalist_fascist_are_in_power = yes }
 
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus BLR_revoult_army_gco_anti_corrupt"
@@ -3889,11 +3832,9 @@ focus_tree = {
 
 		prerequisite = { focus = BLR_revoult_army_gco }
 
-		search_filters = { FOCUS_FILTER_MANPOWER }
+		search_filters = { FOCUS_FILTER_MANPOWER FOCUS_FILTER_INDUSTRY }
 
-		available = {
-			nationalist_fascist_are_in_power = yes
-		}
+		available = { nationalist_fascist_are_in_power = yes }
 
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus BLR_revoult_army_agro_invest"
@@ -3909,6 +3850,14 @@ focus_tree = {
 			modifier = {
 				factor = 50
 				has_global_flag = BLR_RUS_NATIONALIST_PATH
+			}
+			modifier = {
+				factor = 0
+				has_active_mission = bankruptcy_incoming_collapse
+			}
+			modifier = {
+				factor = 0
+				can_staff_an_agriculture_district = no
 			}
 		}
 	}
@@ -3928,9 +3877,7 @@ focus_tree = {
 
 		search_filters = { FOCUS_FILTER_POLITICAL }
 
-		available = {
-			nationalist_fascist_are_in_power = yes
-		}
+		available = { nationalist_fascist_are_in_power = yes }
 
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus BLR_revoult_debur"
@@ -3965,9 +3912,7 @@ focus_tree = {
 
 		search_filters = { FOCUS_FILTER_POLITICAL }
 
-		available = {
-			nationalist_fascist_are_in_power = yes
-		}
+		available = { nationalist_fascist_are_in_power = yes }
 
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus BLR_revoult_dsocial"
@@ -3998,9 +3943,7 @@ focus_tree = {
 
 		search_filters = { FOCUS_FILTER_MANPOWER }
 
-		available = {
-			nationalist_fascist_are_in_power = yes
-		}
+		available = { nationalist_fascist_are_in_power = yes }
 
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus BLR_revoult_army_gco_air"
@@ -4056,9 +3999,7 @@ focus_tree = {
 
 		search_filters = { FOCUS_FILTER_MANPOWER }
 
-		available = {
-			nationalist_fascist_are_in_power = yes
-		}
+		available = { nationalist_fascist_are_in_power = yes }
 
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus BLR_revoult_army_gco_drone"
@@ -4110,6 +4051,7 @@ focus_tree = {
 
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus BLR_white_legion_battalion"
+			unlock_decision_category_tooltip = BLR_whitelegion_battalion_category
 			custom_effect_tooltip = BLR_white_legion_TT
 			hidden_effect = {
 				division_template = {
@@ -4157,9 +4099,7 @@ focus_tree = {
 
 		search_filters = { FOCUS_FILTER_ANNEXATION }
 
-		available = {
-			has_government = nationalist
-		}
+		available = { has_government = nationalist }
 
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus BLR_latgale_or_war"
@@ -4193,6 +4133,8 @@ focus_tree = {
 		cost = 5
 
 		prerequisite = { focus = BLR_white_legion_battalion }
+
+		search_filters = { FOCUS_FILTER_PROPAGANDA FOCUS_FILTER_INFLUENCE }
 
 		available = {
 			country_exists = POL
@@ -4239,6 +4181,8 @@ focus_tree = {
 		cost = 5
 
 		prerequisite = { focus = BLR_pro_poland_propoganda }
+
+		search_filters = { FOCUS_FILTER_INFLUENCE }
 
 		available = {
 			POL = { nationalist_right_wing_populists_are_in_power = yes }
@@ -4323,6 +4267,8 @@ focus_tree = {
 
 		prerequisite = { focus = BLR_Asseco_Poland }
 
+		search_filters = { FOCUS_FILTER_FOREIGN_POLICY FOCUS_FILTER_EQUIPMENT }
+
 		available = {
 			POL = { nationalist_right_wing_populists_are_in_power = yes }
 			country_exists = POL
@@ -4355,6 +4301,10 @@ focus_tree = {
 			modifier = {
 				factor = 50
 				has_global_flag = BLR_NATIONALIST_PATH
+			}
+			modifier = {
+				factor = 0
+				has_active_mission = bankruptcy_incoming_collapse
 			}
 		}
 	}
@@ -4399,6 +4349,14 @@ focus_tree = {
 			modifier = {
 				factor = 50
 				has_global_flag = BLR_NATIONALIST_PATH
+			}
+			modifier = {
+				factor = 0
+				has_active_mission = bankruptcy_incoming_collapse
+			}
+			modifier = {
+				factor = 0
+				can_staff_an_offices = no
 			}
 		}
 	}
@@ -4629,9 +4587,7 @@ focus_tree = {
 			}
 		}
 
-		ai_will_do = {
-			base = 155
-		}
+		ai_will_do = { base = 155 }
 	}
 	#Join GUAM
 	focus = {
@@ -4646,6 +4602,8 @@ focus_tree = {
 
 		prerequisite = { focus = BLR_Ukraine_way }
 
+		search_filters = { FOCUS_FILTER_INFLUENCE }
+
 		available = {
 			country_exists = UKR
 			OR = {
@@ -4655,9 +4613,7 @@ focus_tree = {
 			UKR = { has_idea = idea_GUAM_member_state }
 		}
 
-		bypass = {
-			NOT = { UKR = { has_idea = idea_GUAM_member_state } }
-		}
+		bypass = { NOT = { UKR = { has_idea = idea_GUAM_member_state } } }
 
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus BLR_Join_GUAM_to_Ukraine"
@@ -4688,6 +4644,8 @@ focus_tree = {
 		cost = 5
 
 		prerequisite = { focus = BLR_Ukraine_way }
+
+		search_filters = { FOCUS_FILTER_MILITARY_LAWS }
 
 		available = {
 			UKR = {
@@ -4728,6 +4686,8 @@ focus_tree = {
 
 		prerequisite = { focus = BLR_training_with_ukr }
 		prerequisite = { focus = BLR_Join_GUAM_to_Ukraine }
+
+		search_filters = { FOCUS_FILTER_EQUIPMENT }
 
 		available = {
 			UKR = {
@@ -4772,6 +4732,10 @@ focus_tree = {
 				factor = 50
 				has_global_flag = BLR_NATIONALIST_PATH
 			}
+			modifier = {
+				factor = 0
+				has_active_mission = bankruptcy_incoming_collapse
+			}
 		}
 	}
 	#Union Intermarium
@@ -4787,6 +4751,8 @@ focus_tree = {
 
 		prerequisite = { focus = BLR_military_coop_with_ukraine }
 		mutually_exclusive = { focus = BLR_Intermarium_poland }
+
+		search_filters = { FOCUS_FILTER_POLITICAL }
 
 		available = {
 			UKR = {
@@ -5062,6 +5028,7 @@ focus_tree = {
 
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus BLR_Lykashenko"
+			unlock_decision_category_tooltip = BLR_Lukashenko_category
 			country_event = { id = belarus_character.1 days = 1 }
 			set_temp_variable = { modify_batka = 20 }
 			modify_batka_support = yes
@@ -5128,6 +5095,10 @@ focus_tree = {
 				factor = 50
 				has_global_flag = BLR_POST_LUKA_DEFAULT_PATH
 			}
+			modifier = {
+				factor = 0
+				has_active_mission = bankruptcy_incoming_collapse
+			}
 		}
 	}
 	#Pinsk Dred
@@ -5156,6 +5127,14 @@ focus_tree = {
 
 		ai_will_do = {
 			base = 155
+			modifier = {
+				factor = 0
+				has_active_mission = bankruptcy_incoming_collapse
+			}
+			modifier = {
+				factor = 0
+				can_staff_an_industrial_complex = no
+			}
 		}
 	}
 	#Credit Rus
@@ -5180,9 +5159,7 @@ focus_tree = {
 			SOV = { country_event = { id = belarus_another.59 days = 1 } }
 		}
 
-		ai_will_do = {
-			base = 155
-		}
+		ai_will_do = { base = 155 }
 	}
 	#GrodnoAzot
 	focus = {
@@ -5211,8 +5188,7 @@ focus_tree = {
 			}
 		}
 
-		ai_will_do = {
-			base = 155
+		ai_will_do = { base = 155
 		}
 	}
 	#Bel avia
@@ -5228,6 +5204,8 @@ focus_tree = {
 
 		prerequisite = { focus = BLR_New_Land_code }
 		prerequisite = { focus = BLR_dai_denyag }
+
+		search_filters = { FOCUS_FILTER_INDUSTRY }
 
 		available = { emerging_reactionaries_are_in_power = yes }
 
@@ -5247,6 +5225,10 @@ focus_tree = {
 
 		ai_will_do = {
 			base = 155
+			modifier = {
+				factor = 0
+				has_active_mission = bankruptcy_incoming_collapse
+			}
 		}
 	}
 	#AirPort International minsk
@@ -5264,9 +5246,7 @@ focus_tree = {
 
 		search_filters = { FOCUS_FILTER_INDUSTRY }
 
-		available = {
-			has_government = communism
-		}
+		available = { has_government = communism }
 
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus BLR_AirPort_minsk"
@@ -5289,6 +5269,10 @@ focus_tree = {
 
 		ai_will_do = {
 			base = 35
+			modifier = {
+				factor = 0
+				has_active_mission = bankruptcy_incoming_collapse
+			}
 		}
 	}
 	#Development of domestic tourism
@@ -5304,9 +5288,9 @@ focus_tree = {
 
 		prerequisite = { focus = BLR_AirPort_minsk }
 
-		available = {
-			has_government = communism
-		}
+		search_filters = { FOCUS_FILTER_INDUSTRY }
+
+		available = { has_government = communism }
 
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus BLR_Development_domestic_tourism"
@@ -5320,9 +5304,7 @@ focus_tree = {
 			}
 		}
 
-		ai_will_do = {
-			base = 35
-		}
+		ai_will_do = { base = 35 }
 	}
 	#Gazprom
 	focus = {
@@ -5368,6 +5350,10 @@ focus_tree = {
 			modifier = {
 				factor = 50
 				has_global_flag = BLR_POST_LUKA_DEFAULT_PATH
+			}
+			modifier = {
+				factor = 0
+				has_active_mission = bankruptcy_incoming_collapse
 			}
 		}
 	}
@@ -5418,6 +5404,10 @@ focus_tree = {
 				factor = 15
 				has_global_flag = BLR_POST_LUKA_DEFAULT_PATH
 			}
+			modifier = {
+				factor = 0
+				has_active_mission = bankruptcy_incoming_collapse
+			}
 		}
 	}
 	#BPS-Sberbank
@@ -5433,7 +5423,7 @@ focus_tree = {
 
 		prerequisite = { focus = BLR_Energy_conflict_over }
 
-		search_filters = { FOCUS_FILTER_INFLUENCE }
+		search_filters = { FOCUS_FILTER_INFLUENCE FOCUS_FILTER_INDUSTRY }
 
 		available = { emerging_reactionaries_are_in_power = yes }
 
@@ -5455,6 +5445,14 @@ focus_tree = {
 			modifier = {
 				factor = 15
 				has_global_flag = BLR_POST_LUKA_DEFAULT_PATH
+			}
+			modifier = {
+				factor = 0
+				has_active_mission = bankruptcy_incoming_collapse
+			}
+			modifier = {
+				factor = 0
+				can_staff_an_offices = no
 			}
 		}
 	}
@@ -5489,6 +5487,14 @@ focus_tree = {
 			modifier = {
 				factor = 15
 				has_global_flag = BLR_POST_LUKA_DEFAULT_PATH
+			}
+			modifier = {
+				factor = 0
+				has_active_mission = bankruptcy_incoming_collapse
+			}
+			modifier = {
+				factor = 0
+				can_staff_an_offices = no
 			}
 		}
 	}
@@ -5538,6 +5544,10 @@ focus_tree = {
 				factor = 50
 				has_global_flag = BLR_POST_LUKA_DEFAULT_PATH
 			}
+			modifier = {
+				factor = 0
+				has_active_mission = bankruptcy_incoming_collapse
+			}
 		}
 	}
 	#China Friendship
@@ -5573,9 +5583,7 @@ focus_tree = {
 			}
 		}
 
-		ai_will_do = {
-			base = 1
-		}
+		ai_will_do = { base = 1 }
 	}
 
 	#Modernization and development of the Belarusian Railway
@@ -5612,6 +5620,10 @@ focus_tree = {
 
 		ai_will_do = {
 			base = 155
+			modifier = {
+				factor = 0
+				has_active_mission = bankruptcy_incoming_collapse
+			}
 		}
 	}
 	#TEC 2
@@ -5656,6 +5668,10 @@ focus_tree = {
 
 		ai_will_do = {
 			base = 155
+			modifier = {
+				factor = 0
+				has_active_mission = bankruptcy_incoming_collapse
+			}
 		}
 	}
 	#Kal chinese
@@ -5688,8 +5704,7 @@ focus_tree = {
 			}
 		}
 
-		ai_will_do = {
-			base = 155
+		ai_will_do = { base = 155
 		}
 	}
 	#Konfuci chinese
@@ -5734,9 +5749,7 @@ focus_tree = {
 			add_relative_party_popularity = yes
 		}
 
-		ai_will_do = {
-			base = 155
-		}
+		ai_will_do = { base = 155 }
 	}
 	#Invest chinese
 	focus = {
@@ -5772,6 +5785,14 @@ focus_tree = {
 
 		ai_will_do = {
 			base = 155
+			modifier = {
+				factor = 0
+				has_active_mission = bankruptcy_incoming_collapse
+			}
+			modifier = {
+				factor = 0
+				can_staff_an_industrial_complex = no
+			}
 		}
 	}
 	#Poezda
@@ -5816,6 +5837,10 @@ focus_tree = {
 
 		ai_will_do = {
 			base = 155
+			modifier = {
+				factor = 0
+				has_active_mission = bankruptcy_incoming_collapse
+			}
 		}
 	}
 	#Uchenia
@@ -5849,8 +5874,7 @@ focus_tree = {
 			change_influence_percentage = yes
 		}
 
-		ai_will_do = {
-			base = 155
+		ai_will_do = { base = 155
 		}
 	}
 	#TEC 2
@@ -5888,6 +5912,10 @@ focus_tree = {
 
 		ai_will_do = {
 			base = 155
+			modifier = {
+				factor = 0
+				has_active_mission = bankruptcy_incoming_collapse
+			}
 		}
 	}
 	#Huawei
@@ -5917,7 +5945,7 @@ focus_tree = {
 			set_temp_variable = { treasury_change = -3 }
 			modify_treasury_effect = yes
 			add_tech_bonus = {
-				name = CHI_Huawei
+				name = BLR_Chinese_huawei
 				bonus = 0.25
 				uses = 1
 				category = CAT_internet_tech
@@ -5930,6 +5958,10 @@ focus_tree = {
 
 		ai_will_do = {
 			base = 155
+			modifier = {
+				factor = 0
+				has_active_mission = bankruptcy_incoming_collapse
+			}
 		}
 	}
 	#Skynet
@@ -5970,6 +6002,10 @@ focus_tree = {
 
 		ai_will_do = {
 			base = 155
+			modifier = {
+				factor = 0
+				has_active_mission = bankruptcy_incoming_collapse
+			}
 		}
 	}
 
@@ -6010,8 +6046,7 @@ focus_tree = {
 			change_influence_percentage = yes
 		}
 
-		ai_will_do = {
-			base = 155
+		ai_will_do = { base = 155
 		}
 	}
 	#Yuan
@@ -6049,8 +6084,7 @@ focus_tree = {
 			add_relative_party_popularity = yes
 		}
 
-		ai_will_do = {
-			base = 155
+		ai_will_do = { base = 155
 		}
 	}
 	#Bel_G
@@ -6087,6 +6121,14 @@ focus_tree = {
 
 		ai_will_do = {
 			base = 155
+			modifier = {
+				factor = 0
+				has_active_mission = bankruptcy_incoming_collapse
+			}
+			modifier = {
+				factor = 0
+				can_staff_an_industrial_complex = no
+			}
 		}
 	}
 	#The impact of the KGB
@@ -6382,6 +6424,14 @@ focus_tree = {
 				factor = 155
 				is_historical_focus_on = yes
 			}
+			modifier = {
+				factor = 0
+				has_active_mission = bankruptcy_incoming_collapse
+			}
+			modifier = {
+				factor = 0
+				can_staff_an_offices = no
+			}
 		}
 	}
 	#Milk War
@@ -6448,9 +6498,7 @@ focus_tree = {
 
 		search_filters = { FOCUS_FILTER_POLITICAL }
 
-		available = {
-			emerging_reactionaries_are_in_power = yes
-		}
+		available = { emerging_reactionaries_are_in_power = yes }
 
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus BLR_sso"
@@ -6525,9 +6573,7 @@ focus_tree = {
 
 		search_filters = { FOCUS_FILTER_POLITICAL }
 
-		available = {
-			emerging_reactionaries_are_in_power = yes
-		}
+		available = { emerging_reactionaries_are_in_power = yes }
 
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus BLR_end_reform"
@@ -6836,6 +6882,8 @@ focus_tree = {
 
 		prerequisite = { focus = BLR_Increased_censorship }
 
+		search_filters = { FOCUS_FILTER_CORRUPTION }
+
 		available = { emerging_reactionaries_are_in_power = yes }
 
 		completion_reward = {
@@ -7010,6 +7058,10 @@ focus_tree = {
 				factor = 155
 				is_historical_focus_on = yes
 			}
+			modifier = {
+				factor = 0
+				has_active_mission = bankruptcy_incoming_collapse
+			}
 		}
 	}
 	#Military reform 1998-2005
@@ -7070,7 +7122,7 @@ focus_tree = {
 
 		prerequisite = { focus = BLR_Anti_Corruption }
 
-		search_filters = { FOCUS_FILTER_POLITICAL }
+		search_filters = { FOCUS_FILTER_POLITICAL FOCUS_FILTER_INDUSTRY }
 
 		available = { emerging_reactionaries_are_in_power = yes }
 
@@ -7093,6 +7145,14 @@ focus_tree = {
 			modifier = {
 				factor = 155
 				is_historical_focus_on = yes
+			}
+			modifier = {
+				factor = 0
+				has_active_mission = bankruptcy_incoming_collapse
+			}
+			modifier = {
+				factor = 0
+				can_staff_an_offices = no
 			}
 		}
 	}
@@ -7294,6 +7354,8 @@ focus_tree = {
 
 		prerequisite = { focus = BLR_russian_gazprom }
 
+		search_filters = { FOCUS_FILTER_TRADE }
+
 		available = { emerging_reactionaries_are_in_power = yes }
 
 		completion_reward = {
@@ -7335,9 +7397,9 @@ focus_tree = {
 		prerequisite = { focus = BLR_Changes_Customs_policy }
 		prerequisite = { focus = BLR_mts }
 
-		available = {
-			emerging_reactionaries_are_in_power = yes
-		}
+		search_filters = { FOCUS_FILTER_POLITICAL }
+
+		available = { emerging_reactionaries_are_in_power = yes }
 
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus BLR_jeans_revolution"
@@ -7382,6 +7444,8 @@ focus_tree = {
 
 		prerequisite = { focus = BLR_Lykashenko }
 
+		search_filters = { FOCUS_FILTER_ECONOMY }
+
 		available = { emerging_reactionaries_are_in_power = yes }
 
 		completion_reward = {
@@ -7406,6 +7470,14 @@ focus_tree = {
 			modifier = {
 				factor = 155
 				is_historical_focus_on = yes
+			}
+			modifier = {
+				factor = 0
+				has_active_mission = bankruptcy_incoming_collapse
+			}
+			modifier = {
+				factor = 0
+				can_staff_an_agriculture_district = no
 			}
 		}
 	}
@@ -7540,6 +7612,10 @@ focus_tree = {
 			modifier = {
 				factor = 155
 				is_historical_focus_on = yes
+			}
+			modifier = {
+				factor = 0
+				has_active_mission = bankruptcy_incoming_collapse
 			}
 		}
 	}
@@ -7705,7 +7781,7 @@ focus_tree = {
 
 		prerequisite = { focus = BLR_National_Library }
 
-		search_filters = { FOCUS_FILTER_INFLUENCE }
+		search_filters = { FOCUS_FILTER_INFLUENCE FOCUS_FILTER_INDUSTRY }
 
 		available = { emerging_reactionaries_are_in_power = yes }
 
@@ -7735,6 +7811,14 @@ focus_tree = {
 			modifier = {
 				factor = 155
 				is_historical_focus_on = yes
+			}
+			modifier = {
+				factor = 0
+				has_active_mission = bankruptcy_incoming_collapse
+			}
+			modifier = {
+				factor = 0
+				can_staff_an_offices = no
 			}
 		}
 	}
@@ -7862,6 +7946,10 @@ focus_tree = {
 				factor = 155
 				is_historical_focus_on = yes
 			}
+			modifier = {
+				factor = 0
+				has_active_mission = bankruptcy_incoming_collapse
+			}
 		}
 	}
 	#Investing in the Agro-CAT_industry
@@ -7875,10 +7963,10 @@ focus_tree = {
 
 		cost = 5
 
-		prerequisite = { focus = BLR_Factory_Kommunarka	}
-		prerequisite = { focus = BLR_PolBel_Dplomatic_war	}
+		prerequisite = { focus = BLR_Factory_Kommunarka }
+		prerequisite = { focus = BLR_PolBel_Dplomatic_war }
 
-		search_filters = { FOCUS_FILTER_POLITICAL }
+		search_filters = { FOCUS_FILTER_POLITICAL FOCUS_FILTER_INDUSTRY }
 
 		available = { emerging_reactionaries_are_in_power = yes }
 
@@ -7904,6 +7992,14 @@ focus_tree = {
 			modifier = {
 				factor = 155
 				is_historical_focus_on = yes
+			}
+			modifier = {
+				factor = 0
+				has_active_mission = bankruptcy_incoming_collapse
+			}
+			modifier = {
+				factor = 0
+				can_staff_an_agriculture_district = no
 			}
 		}
 	}
@@ -7960,7 +8056,7 @@ focus_tree = {
 
 		prerequisite = { focus = BLR_Eastern_Partnership }
 
-		search_filters = { FOCUS_FILTER_POLITICAL }
+		search_filters = { FOCUS_FILTER_POLITICAL FOCUS_FILTER_EXPENDITURE }
 
 		available = {
 			SOV = {	has_opinion = {	target = BLR value > 20	} }
@@ -7993,6 +8089,10 @@ focus_tree = {
 				factor = 155
 				is_historical_focus_on = yes
 			}
+			modifier = {
+				factor = 0
+				has_active_mission = bankruptcy_incoming_collapse
+			}
 		}
 	}
 	#Completion of gasification of the country
@@ -8006,7 +8106,7 @@ focus_tree = {
 
 		cost = 7
 
-		prerequisite = { focus = BLR_Azarenok_case	}
+		prerequisite = { focus = BLR_Azarenok_case }
 
 		search_filters = { FOCUS_FILTER_INDUSTRY }
 
@@ -8050,6 +8150,10 @@ focus_tree = {
 				factor = 155
 				is_historical_focus_on = yes
 			}
+			modifier = {
+				factor = 0
+				has_active_mission = bankruptcy_incoming_collapse
+			}
 		}
 	}
 	#Potato Empire
@@ -8065,7 +8169,7 @@ focus_tree = {
 
 		prerequisite = { focus = BLR_end_reform }
 
-		search_filters = { FOCUS_FILTER_INFLUENCE }
+		search_filters = { FOCUS_FILTER_INFLUENCE FOCUS_FILTER_INDUSTRY }
 
 		available = { emerging_reactionaries_are_in_power = yes }
 
@@ -8099,6 +8203,14 @@ focus_tree = {
 				factor = 155
 				is_historical_focus_on = yes
 			}
+			modifier = {
+				factor = 0
+				has_active_mission = bankruptcy_incoming_collapse
+			}
+			modifier = {
+				factor = 0
+				can_staff_an_agriculture_district = no
+			}
 		}
 	}
 	#White Legion Case
@@ -8112,7 +8224,7 @@ focus_tree = {
 
 		cost = 3
 
-		prerequisite = { focus = BLR_Potato_Empire	}
+		prerequisite = { focus = BLR_Potato_Empire }
 		prerequisite = { focus = BLR_gasification_country focus = BLR_launch_own_satellite	}
 
 		search_filters = { FOCUS_FILTER_POLITICAL }
@@ -8163,7 +8275,7 @@ focus_tree = {
 
 		cost = 5
 
-		prerequisite = { focus = BLR_whitelegion_case	}
+		prerequisite = { focus = BLR_whitelegion_case }
 
 		search_filters = { FOCUS_FILTER_POLITICAL }
 
@@ -8260,9 +8372,7 @@ focus_tree = {
 			modify_batka_support = yes
 		}
 
-		ai_will_do = {
-			base = 155
-		}
+		ai_will_do = { base = 155 }
 	}
 	#Pension reform
 	focus = {
@@ -8369,6 +8479,7 @@ focus_tree = {
 
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus BLR_Zimbabwe"
+			unlock_decision_tooltip = BLR_mission_to_Zimbabwe
 			add_opinion_modifier = {
 				target = ZIM
 				modifier = trade_mission
@@ -8402,13 +8513,11 @@ focus_tree = {
 
 		cost = 7
 
-		prerequisite = { focus = BLR_Pension_reform	}
+		prerequisite = { focus = BLR_Pension_reform }
 
 		search_filters = { FOCUS_FILTER_MANPOWER }
 
-		available = {
-			emerging_reactionaries_are_in_power = yes
-		}
+		available = { emerging_reactionaries_are_in_power = yes }
 
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus BLR_People_Militia"
@@ -8701,6 +8810,8 @@ focus_tree = {
 		prerequisite = { focus = BLR_Migrant_crisis  focus = BLR_Wagner_arrest }
 		prerequisite = { focus = BLR_decree_227 }
 
+		search_filters = { FOCUS_FILTER_POLITICAL }
+
 		available = {
 			date > 2013.1.1
 			is_subject = no
@@ -8935,9 +9046,7 @@ focus_tree = {
 
 		search_filters = { FOCUS_FILTER_POLITICAL }
 
-		available = {
-			emerging_reactionaries_are_in_power = yes
-		}
+		available = { emerging_reactionaries_are_in_power = yes }
 
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus BLR_Amendment_to_Constitution"
@@ -8972,13 +9081,9 @@ focus_tree = {
 
 		search_filters = { FOCUS_FILTER_POLITICAL }
 
-		available = {
-			has_government = democratic
-		}
+		available = { has_government = democratic }
 
-		bypass = {
-			western_autocrats_are_in_power = yes
-		}
+		bypass = { western_autocrats_are_in_power = yes }
 
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus BLR_Andrey_sannikov"
@@ -9064,9 +9169,7 @@ focus_tree = {
 
 		search_filters = { FOCUS_FILTER_INDUSTRY }
 
-		available = {
-			has_government = democratic
-		}
+		available = { has_government = democratic }
 
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus BLR_Raiffeisen2"
@@ -9082,6 +9185,14 @@ focus_tree = {
 			modifier = {
 				factor = 15
 				has_global_flag = BLR_DEMOCRATIC_PATH
+			}
+			modifier = {
+				factor = 0
+				has_active_mission = bankruptcy_incoming_collapse
+			}
+			modifier = {
+				factor = 0
+				can_staff_an_offices = no
 			}
 		}
 	}
@@ -9100,9 +9211,7 @@ focus_tree = {
 
 		search_filters = { FOCUS_FILTER_INDUSTRY }
 
-		available = {
-			has_government = democratic
-		}
+		available = { has_government = democratic }
 
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus BLR_Godel_tech"
@@ -9126,6 +9235,14 @@ focus_tree = {
 				factor = 15
 				has_global_flag = BLR_DEMOCRATIC_PATH
 			}
+			modifier = {
+				factor = 0
+				has_active_mission = bankruptcy_incoming_collapse
+			}
+			modifier = {
+				factor = 0
+				can_staff_an_offices = no
+			}
 		}
 	}
 	#BASF
@@ -9142,9 +9259,9 @@ focus_tree = {
 		prerequisite = { focus = BLR_royal_dutch_shell }
 		prerequisite = { focus = BLR_Raiffeisen2 }
 
-		available = {
-			has_government = democratic
-		}
+		search_filters = { FOCUS_FILTER_INDUSTRY }
+
+		available = { has_government = democratic }
 
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus BLR_Basf_tech"
@@ -9167,6 +9284,14 @@ focus_tree = {
 				factor = 50
 				has_global_flag = BLR_DEMOCRATIC_PATH
 			}
+			modifier = {
+				factor = 0
+				has_active_mission = bankruptcy_incoming_collapse
+			}
+			modifier = {
+				factor = 0
+				can_staff_an_industrial_complex = no
+			}
 		}
 	}
 	#Henkel
@@ -9186,9 +9311,7 @@ focus_tree = {
 
 		search_filters = { FOCUS_FILTER_INDUSTRY }
 
-		available = {
-			has_government = democratic
-		}
+		available = { has_government = democratic }
 
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus BLR_Henkel2"
@@ -9204,6 +9327,14 @@ focus_tree = {
 			modifier = {
 				factor = 15
 				has_global_flag = BLR_DEMOCRATIC_PATH
+			}
+			modifier = {
+				factor = 0
+				has_active_mission = bankruptcy_incoming_collapse
+			}
+			modifier = {
+				factor = 0
+				can_staff_an_industrial_complex = no
 			}
 		}
 	}
@@ -9223,9 +9354,7 @@ focus_tree = {
 
 		search_filters = { FOCUS_FILTER_INDUSTRY }
 
-		available = {
-			has_government = democratic
-		}
+		available = { has_government = democratic }
 
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus BLR_Danone"
@@ -9241,6 +9370,14 @@ focus_tree = {
 			modifier = {
 				factor = 15
 				has_global_flag = BLR_DEMOCRATIC_PATH
+			}
+			modifier = {
+				factor = 0
+				has_active_mission = bankruptcy_incoming_collapse
+			}
+			modifier = {
+				factor = 0
+				can_staff_an_industrial_complex = no
 			}
 		}
 	}
@@ -9259,9 +9396,7 @@ focus_tree = {
 
 		search_filters = { FOCUS_FILTER_INDUSTRY }
 
-		available = {
-			has_government = democratic
-		}
+		available = { has_government = democratic }
 
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus BLR_royal_dutch_shell"
@@ -9289,6 +9424,10 @@ focus_tree = {
 				factor = 15
 				has_global_flag = BLR_DEMOCRATIC_PATH
 			}
+			modifier = {
+				factor = 0
+				has_active_mission = bankruptcy_incoming_collapse
+			}
 		}
 	}
 	#Private Railways
@@ -9306,9 +9445,7 @@ focus_tree = {
 
 		search_filters = { FOCUS_FILTER_INDUSTRY }
 
-		available = {
-			has_government = democratic
-		}
+		available = { has_government = democratic }
 
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus BLR_private_railways"
@@ -9322,6 +9459,10 @@ focus_tree = {
 			modifier = {
 				factor = 50
 				has_global_flag = BLR_DEMOCRATIC_PATH
+			}
+			modifier = {
+				factor = 0
+				has_active_mission = bankruptcy_incoming_collapse
 			}
 		}
 	}
@@ -9340,9 +9481,7 @@ focus_tree = {
 
 		search_filters = { FOCUS_FILTER_INDUSTRY }
 
-		available = {
-			has_government = democratic
-		}
+		available = { has_government = democratic }
 
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus BLR_Lith_pol_railways"
@@ -9384,9 +9523,7 @@ focus_tree = {
 
 		search_filters = { FOCUS_FILTER_POLITICAL }
 
-		available = {
-			has_government = democratic
-		}
+		available = { has_government = democratic }
 
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus BLR_western_diplomats"
@@ -9473,9 +9610,7 @@ focus_tree = {
 
 		search_filters = { FOCUS_FILTER_POLITICAL }
 
-		available = {
-			has_government = democratic
-		}
+		available = { has_government = democratic }
 
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus BLR_root_out_nationalists"
@@ -9519,9 +9654,7 @@ focus_tree = {
 			has_government = democratic
 		}
 
-		bypass = {
-			has_idea = BLR_villages
-		}
+		bypass = { has_idea = BLR_villages }
 
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus BLR_decommunize_belarus_society"
@@ -9606,9 +9739,9 @@ focus_tree = {
 
 		prerequisite = { focus = BLR_Andrey_sannikov }
 
-		available = {
-			has_government = democratic
-		}
+		search_filters = { FOCUS_FILTER_FOREIGN_INVESTMENTS }
+
+		available = { has_government = democratic }
 
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus BLR_US_money"
@@ -9645,9 +9778,7 @@ focus_tree = {
 			has_government = democratic
 		}
 
-		bypass = {
-			has_idea = BLR_Closed_border_russia
-		}
+		bypass = { has_idea = BLR_Closed_border_russia }
 
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus BLR_closed_border_with_Russia"
@@ -9690,9 +9821,7 @@ focus_tree = {
 
 		search_filters = { FOCUS_FILTER_POLITICAL }
 
-		available = {
-			has_government = democratic
-		}
+		available = { has_government = democratic }
 
 		completion_reward = {
 			log = "[GetDateText]: [Rpercent_changeoot.GetName]: Focus BLR_Linking_foreign_currency"
@@ -9758,9 +9887,7 @@ focus_tree = {
 
 		search_filters = { FOCUS_FILTER_POLITICAL }
 
-		available = {
-			has_government = democratic
-		}
+		available = { has_government = democratic }
 
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus BLR_new_democratic_constitution"
@@ -9986,7 +10113,7 @@ focus_tree = {
 
 		cost = 5
 
-		prerequisite = { focus = BLR_NATO_Membership_Campaign	}
+		prerequisite = { focus = BLR_NATO_Membership_Campaign }
 
 		search_filters = { FOCUS_FILTER_MILITARY_LAWS }
 
@@ -10059,7 +10186,7 @@ focus_tree = {
 
 		cost = 5
 
-		prerequisite = { focus = BLR_NATO_integration_command	}
+		prerequisite = { focus = BLR_NATO_integration_command }
 
 		search_filters = { FOCUS_FILTER_MILITARY_LAWS }
 
@@ -10096,7 +10223,7 @@ focus_tree = {
 
 		cost = 7
 
-		prerequisite = { focus = BLR_new_democratic_constitution	}
+		prerequisite = { focus = BLR_new_democratic_constitution }
 
 		search_filters = { FOCUS_FILTER_POLITICAL }
 
@@ -10218,9 +10345,7 @@ focus_tree = {
 
 		search_filters = { FOCUS_FILTER_POLITICAL }
 
-		available = {
-			has_government = democratic
-		}
+		available = { has_government = democratic }
 
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus BLR_join_wto"
@@ -10228,7 +10353,7 @@ focus_tree = {
 				ideology = democratic
 				popularity = 0.15
 			}
-			add_ideas = recently_acceded_to_wto
+			add_timed_idea = { idea = recently_acceded_to_wto days = 365 }
 			set_temp_variable = { temp_opinion = 5 }
 			change_international_bankers_opinion = yes
 		}
@@ -10256,9 +10381,7 @@ focus_tree = {
 
 		search_filters = { FOCUS_FILTER_POLITICAL }
 
-		available = {
-			has_government = democratic
-		}
+		available = { has_government = democratic }
 
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus BLR_people_rights"
@@ -10290,13 +10413,11 @@ focus_tree = {
 
 		cost = 5
 
-		prerequisite = { focus = BLR_people_rights	}
+		prerequisite = { focus = BLR_people_rights }
 
 		search_filters = { FOCUS_FILTER_POLITICAL }
 
-		available = {
-			has_government = democratic
-		}
+		available = { has_government = democratic }
 
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus BLR_Delete_KGB2"
@@ -10373,9 +10494,7 @@ focus_tree = {
 
 		search_filters = { FOCUS_FILTER_POLITICAL }
 
-		available = {
-			has_government = democratic
-		}
+		available = { has_government = democratic }
 
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus BLR_Freedom_Meetings"
@@ -10408,9 +10527,7 @@ focus_tree = {
 
 		search_filters = { FOCUS_FILTER_POLITICAL }
 
-		available = {
-			has_government = democratic
-		}
+		available = { has_government = democratic }
 
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus BLR_dont_torture"
@@ -10446,9 +10563,7 @@ focus_tree = {
 
 		search_filters = { FOCUS_FILTER_POLITICAL }
 
-		available = {
-			has_government = democratic
-		}
+		available = { has_government = democratic }
 
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus BLR_EU_integration"
@@ -10505,9 +10620,7 @@ focus_tree = {
 
 		search_filters = { FOCUS_FILTER_POLITICAL }
 
-		available = {
-			has_government = democratic
-		}
+		available = { has_government = democratic }
 
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus BLR_fight_the_oligarchs"
@@ -10541,11 +10654,9 @@ focus_tree = {
 
 		prerequisite = { focus = BLR_EU_integration }
 
-		search_filters = { FOCUS_FILTER_POLITICAL }
+		search_filters = { FOCUS_FILTER_POLITICAL FOCUS_FILTER_INDUSTRY }
 
-		available = {
-			has_government = democratic
-		}
+		available = { has_government = democratic }
 
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus BLR_Attract_European_investments"
@@ -10559,6 +10670,14 @@ focus_tree = {
 			modifier = {
 				factor = 50
 				has_global_flag = BLR_DEMOCRATIC_PATH
+			}
+			modifier = {
+				factor = 0
+				has_active_mission = bankruptcy_incoming_collapse
+			}
+			modifier = {
+				factor = 0
+				can_staff_an_offices = no
 			}
 		}
 	}
@@ -10577,9 +10696,7 @@ focus_tree = {
 
 		search_filters = { FOCUS_FILTER_INDUSTRY }
 
-		available = {
-			has_government = democratic
-		}
+		available = { has_government = democratic }
 
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus BLR_Opening_garment"
@@ -10591,6 +10708,14 @@ focus_tree = {
 			modifier = {
 				factor = 50
 				has_global_flag = BLR_DEMOCRATIC_PATH
+			}
+			modifier = {
+				factor = 0
+				has_active_mission = bankruptcy_incoming_collapse
+			}
+			modifier = {
+				factor = 0
+				can_staff_an_industrial_complex = no
 			}
 		}
 	}
@@ -10610,9 +10735,7 @@ focus_tree = {
 
 		search_filters = { FOCUS_FILTER_POLITICAL }
 
-		available = {
-			has_government = democratic
-		}
+		available = { has_government = democratic }
 
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus BLR_simplification_labor_code"
@@ -10644,9 +10767,7 @@ focus_tree = {
 
 		search_filters = { FOCUS_FILTER_POLITICAL }
 
-		available = {
-			has_government = democratic
-		}
+		available = { has_government = democratic }
 
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus BLR_Encourage_Exchange_Students"
@@ -10678,9 +10799,7 @@ focus_tree = {
 
 		search_filters = { FOCUS_FILTER_POLITICAL }
 
-		available = {
-			has_government = democratic
-		}
+		available = { has_government = democratic }
 
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus BLR_European_university_connections"
@@ -10712,9 +10831,7 @@ focus_tree = {
 
 		search_filters = { FOCUS_FILTER_POLITICAL }
 
-		available = {
-			has_government = democratic
-		}
+		available = { has_government = democratic }
 
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus BLR_LGBT_Belarus_quest"
@@ -10769,9 +10886,7 @@ focus_tree = {
 
 		search_filters = { FOCUS_FILTER_POLITICAL }
 
-		available = {
-			has_government = democratic
-		}
+		available = { has_government = democratic }
 
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus BLR_Adopt_EU_Intellectual"
@@ -10804,9 +10919,9 @@ focus_tree = {
 		prerequisite = { focus = BLR_Attract_European_investments }
 		prerequisite = { focus = BLR_Encourage_Exchange_Students }
 
-		available = {
-			has_government = democratic
-		}
+		search_filters = { FOCUS_FILTER_RESEARCH }
+
+		available = { has_government = democratic }
 
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus BLR_Digitalization"
@@ -10831,6 +10946,10 @@ focus_tree = {
 				factor = 50
 				has_global_flag = BLR_DEMOCRATIC_PATH
 			}
+			modifier = {
+				factor = 0
+				has_active_mission = bankruptcy_incoming_collapse
+			}
 		}
 	}
 	#Creating political platforms for foreign companies
@@ -10849,9 +10968,7 @@ focus_tree = {
 
 		search_filters = { FOCUS_FILTER_POLITICAL }
 
-		available = {
-			has_government = democratic
-		}
+		available = { has_government = democratic }
 
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus BLR_political_platforms"
@@ -10884,9 +11001,7 @@ focus_tree = {
 
 		search_filters = { FOCUS_FILTER_INDUSTRY }
 
-		available = {
-			has_government = democratic
-		}
+		available = { has_government = democratic }
 
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus BLR_wind_farms"
@@ -10908,6 +11023,10 @@ focus_tree = {
 				factor = 50
 				has_global_flag = BLR_DEMOCRATIC_PATH
 			}
+			modifier = {
+				factor = 0
+				has_active_mission = bankruptcy_incoming_collapse
+			}
 		}
 	}
 	#Biofuel
@@ -10925,9 +11044,7 @@ focus_tree = {
 
 		search_filters = { FOCUS_FILTER_POLITICAL }
 
-		available = {
-			has_government = democratic
-		}
+		available = { has_government = democratic }
 
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus BLR_Custom_Institutional_reforms"
@@ -10943,6 +11060,10 @@ focus_tree = {
 			modifier = {
 				factor = 50
 				has_global_flag = BLR_DEMOCRATIC_PATH
+			}
+			modifier = {
+				factor = 0
+				has_active_mission = bankruptcy_incoming_collapse
 			}
 		}
 	}
@@ -10961,9 +11082,7 @@ focus_tree = {
 
 		search_filters = { FOCUS_FILTER_POLITICAL }
 
-		available = {
-			has_government = democratic
-		}
+		available = { has_government = democratic }
 
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus BLR_Market_Economy"
@@ -11002,11 +11121,9 @@ focus_tree = {
 		prerequisite = { focus = BLR_Market_Economy }
 		prerequisite = { focus = BLR_political_platforms }
 
-		search_filters = { FOCUS_FILTER_POLITICAL }
+		search_filters = { FOCUS_FILTER_POLITICAL FOCUS_FILTER_INDUSTRY }
 
-		available = {
-			has_government = democratic
-		}
+		available = { has_government = democratic }
 
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus BLR_Offshore_heaven"
@@ -11031,6 +11148,14 @@ focus_tree = {
 			modifier = {
 				factor = 50
 				has_global_flag = BLR_DEMOCRATIC_PATH
+			}
+			modifier = {
+				factor = 0
+				has_active_mission = bankruptcy_incoming_collapse
+			}
+			modifier = {
+				factor = 0
+				can_staff_an_offices = no
 			}
 		}
 	}
@@ -11079,6 +11204,10 @@ focus_tree = {
 				factor = 355
 				has_global_flag = BLR_POST_LUKA_DEFAULT_PATH
 				date < 2005.3.3
+			}
+			modifier = {
+				factor = 0
+				has_active_mission = bankruptcy_incoming_collapse
 			}
 		}
 	}
@@ -11210,8 +11339,7 @@ focus_tree = {
 			unlock_decision_category_tooltip = BLR_belarus_support_category
 		}
 
-		ai_will_do = {
-			base = 155
+		ai_will_do = { base = 155
 		}
 	}
 	#Increase funding for Special Forces Almaz
@@ -11406,6 +11534,10 @@ focus_tree = {
 				has_global_flag = BLR_POST_LUKA_DEFAULT_PATH
 				date < 2005.3.3
 			}
+			modifier = {
+				factor = 0
+				has_active_mission = bankruptcy_incoming_collapse
+			}
 		}
 	}
 	#Occupation management strategies
@@ -11471,6 +11603,10 @@ focus_tree = {
 
 		ai_will_do = {
 			base = 155
+			modifier = {
+				factor = 0
+				has_active_mission = bankruptcy_incoming_collapse
+			}
 		}
 	}
 	#Ger guns
@@ -11503,6 +11639,10 @@ focus_tree = {
 
 		ai_will_do = {
 			base = 155
+			modifier = {
+				factor = 0
+				has_active_mission = bankruptcy_incoming_collapse
+			}
 		}
 	}
 	##USSR Legacy
@@ -11521,7 +11661,7 @@ focus_tree = {
 			log = "[GetDateText]: [Root.GetName]: Focus USSR_Legacy"
 			two_random_industrial_complex = yes
 			add_tech_bonus = {
-				name = industrial_bonus
+				name = USSR_Legacy
 				bonus = 0.45
 				uses = 1
 				category = CAT_industry
@@ -11530,6 +11670,14 @@ focus_tree = {
 
 		ai_will_do = {
 			base = 155
+			modifier = {
+				factor = 0
+				has_active_mission = bankruptcy_incoming_collapse
+			}
+			modifier = {
+				factor = 0
+				can_staff_an_industrial_complex = no
+			}
 		}
 	}
 	##558 zavod
@@ -11556,6 +11704,14 @@ focus_tree = {
 
 		ai_will_do = {
 			base = 155
+			modifier = {
+				factor = 0
+				has_active_mission = bankruptcy_incoming_collapse
+			}
+			modifier = {
+				factor = 0
+				can_staff_an_arms_industry = no
+			}
 		}
 	}
 	##MZKT
@@ -11580,6 +11736,14 @@ focus_tree = {
 
 		ai_will_do = {
 			base = 155
+			modifier = {
+				factor = 0
+				has_active_mission = bankruptcy_incoming_collapse
+			}
+			modifier = {
+				factor = 0
+				can_staff_an_industrial_complex = no
+			}
 		}
 	}
 	##Peleng
@@ -11607,6 +11771,14 @@ focus_tree = {
 
 		ai_will_do = {
 			base = 155
+			modifier = {
+				factor = 0
+				has_active_mission = bankruptcy_incoming_collapse
+			}
+			modifier = {
+				factor = 0
+				can_staff_an_industrial_complex = no
+			}
 		}
 	}
 	##MTZ
@@ -11633,6 +11805,14 @@ focus_tree = {
 
 		ai_will_do = {
 			base = 155
+			modifier = {
+				factor = 0
+				has_active_mission = bankruptcy_incoming_collapse
+			}
+			modifier = {
+				factor = 0
+				can_staff_an_industrial_complex = no
+			}
 		}
 	}
 	##Minotor-servis
@@ -11660,6 +11840,14 @@ focus_tree = {
 
 		ai_will_do = {
 			base = 155
+			modifier = {
+				factor = 0
+				has_active_mission = bankruptcy_incoming_collapse
+			}
+			modifier = {
+				factor = 0
+				can_staff_an_arms_industry = no
+			}
 		}
 	}
 	##Belspecveshtech
@@ -11685,6 +11873,14 @@ focus_tree = {
 
 		ai_will_do = {
 			base = 155
+			modifier = {
+				factor = 0
+				has_active_mission = bankruptcy_incoming_collapse
+			}
+			modifier = {
+				factor = 0
+				can_staff_an_industrial_complex = no
+			}
 		}
 	}
 	##140 zavod
@@ -11709,6 +11905,14 @@ focus_tree = {
 
 		ai_will_do = {
 			base = 155
+			modifier = {
+				factor = 0
+				has_active_mission = bankruptcy_incoming_collapse
+			}
+			modifier = {
+				factor = 0
+				can_staff_an_arms_industry = no
+			}
 		}
 	}
 
@@ -11725,9 +11929,7 @@ focus_tree = {
 
 		search_filters = { FOCUS_FILTER_POLITICAL }
 
-		available = {
-			emerging_communist_state_are_in_power = yes
-		}
+		available = { emerging_communist_state_are_in_power = yes }
 
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus BLR_Communism_start"
@@ -11792,9 +11994,7 @@ focus_tree = {
 
 		search_filters = { FOCUS_FILTER_POLITICAL }
 
-		available = {
-			emerging_communist_state_are_in_power = yes
-		}
+		available = { emerging_communist_state_are_in_power = yes }
 
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus BLR_collectivism"
@@ -11826,9 +12026,7 @@ focus_tree = {
 
 		search_filters = { FOCUS_FILTER_POLITICAL }
 
-		available = {
-			emerging_communist_state_are_in_power = yes
-		}
+		available = { emerging_communist_state_are_in_power = yes }
 
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus BLR_constitution_BSSR"
@@ -11872,9 +12070,7 @@ focus_tree = {
 
 		search_filters = { FOCUS_FILTER_POLITICAL }
 
-		available = {
-			emerging_communist_state_are_in_power = yes
-		}
+		available = { emerging_communist_state_are_in_power = yes }
 
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus BLR_single_party"
@@ -11910,9 +12106,7 @@ focus_tree = {
 
 		search_filters = { FOCUS_FILTER_POLITICAL }
 
-		available = {
-			emerging_communist_state_are_in_power = yes
-		}
+		available = { emerging_communist_state_are_in_power = yes }
 
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus BLR_free_education"
@@ -11948,9 +12142,7 @@ focus_tree = {
 
 		search_filters = { FOCUS_FILTER_POLITICAL }
 
-		available = {
-			emerging_communist_state_are_in_power = yes
-		}
+		available = { emerging_communist_state_are_in_power = yes }
 
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus BLR_pioneria"
@@ -11988,9 +12180,7 @@ focus_tree = {
 
 		search_filters = { FOCUS_FILTER_POLITICAL }
 
-		available = {
-			emerging_communist_state_are_in_power = yes
-		}
+		available = { emerging_communist_state_are_in_power = yes }
 
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus BLR_Marks_school"
@@ -12001,9 +12191,9 @@ focus_tree = {
 			add_to_variable = { BLR_belarus_stability_factor = -0.07 tooltip = stability_factor_tt }
 			add_to_variable = { BLR_belarus_kommi_education_cost_multiplier_modifier = 0.05 tooltip = education_cost_multiplier_modifier_tt }
 			if = { limit = { has_idea = EU_member }
-				set_temp_variable = { modify_eurosceptic = 0.20 }
-				set_temp_variable = { modify_eurosceptic_target = ROOT }
-				eurosceptic_change = yes
+				set_temp_variable = { modify_europeanism = -0.20 }
+				set_temp_variable = { modify_europeanism_target = ROOT }
+				europeanism_change = yes
 			}
 		}
 
@@ -12029,9 +12219,9 @@ focus_tree = {
 		prerequisite = { focus = BLR_Marks_school }
 		prerequisite = { focus = BLR_empower_the_kgb }
 
-		available = {
-			emerging_communist_state_are_in_power = yes
-		}
+		search_filters = { FOCUS_FILTER_POLITICAL }
+
+		available = { emerging_communist_state_are_in_power = yes }
 
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus BLR_state_atheism"
@@ -12074,9 +12264,7 @@ focus_tree = {
 
 		search_filters = { FOCUS_FILTER_POLITICAL }
 
-		available = {
-			emerging_communist_state_are_in_power = yes
-		}
+		available = { emerging_communist_state_are_in_power = yes }
 
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus BLR_dissolve_monasteries"
@@ -12100,6 +12288,10 @@ focus_tree = {
 				factor = 50
 				has_global_flag = BLR_COMMUNISM_PATH
 			}
+			modifier = {
+				factor = 0
+				has_active_mission = bankruptcy_incoming_collapse
+			}
 		}
 	}
 	#Culture of Proletarianism
@@ -12116,9 +12308,9 @@ focus_tree = {
 		prerequisite = { focus = BLR_pioneria }
 		prerequisite = { focus = BLR_erase_nationalist }
 
-		available = {
-			emerging_communist_state_are_in_power = yes
-		}
+		search_filters = { FOCUS_FILTER_POLITICAL }
+
+		available = { emerging_communist_state_are_in_power = yes }
 
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus BLR_the_culture_of_proletarianism"
@@ -12156,9 +12348,7 @@ focus_tree = {
 
 		search_filters = { FOCUS_FILTER_POLITICAL }
 
-		available = {
-			emerging_communist_state_are_in_power = yes
-		}
+		available = { emerging_communist_state_are_in_power = yes }
 
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus BLR_arest_silovic"
@@ -12192,15 +12382,14 @@ focus_tree = {
 
 		search_filters = { FOCUS_FILTER_POLITICAL }
 
-		available = {
-			emerging_communist_state_are_in_power = yes
-		}
+		available = { emerging_communist_state_are_in_power = yes }
 
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus BLR_erase_nationalist"
 			set_temp_variable = { party_index = 4 }
 			set_temp_variable = { party_popularity_increase = 0.07 }
 			set_temp_variable = { temp_outlook_increase = 0.07 }
+			add_relative_party_popularity = yes
 			custom_effect_tooltip = { localization_key = modifies_dynamic_modifier_tt MODIFIER = BLR_belarus_kommi_modifier }
 			add_to_variable = { BLR_belarus_kommi_nationalist_drift = -0.03 tooltip = nationalist_drift_tt }
 			add_political_power = -70
@@ -12210,6 +12399,7 @@ focus_tree = {
 				popularity = -0.2
 			}
 			recalculate_party = yes
+			set_temp_variable = { temp_outlook_increase = 0 }
 			set_temp_variable = { party_index = 21 }
 			set_temp_variable = { party_popularity_increase = -0.1 }
 			add_relative_party_popularity = yes
@@ -12245,9 +12435,7 @@ focus_tree = {
 
 		search_filters = { FOCUS_FILTER_POLITICAL }
 
-		available = {
-			emerging_communist_state_are_in_power = yes
-		}
+		available = { emerging_communist_state_are_in_power = yes }
 
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus BLR_antigay_propaganda_laws"
@@ -12280,9 +12468,7 @@ focus_tree = {
 
 		search_filters = { FOCUS_FILTER_POLITICAL }
 
-		available = {
-			emerging_communist_state_are_in_power = yes
-		}
+		available = { emerging_communist_state_are_in_power = yes }
 
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus BLR_clean_soc_net"
@@ -12314,9 +12500,7 @@ focus_tree = {
 
 		search_filters = { FOCUS_FILTER_POLITICAL }
 
-		available = {
-			emerging_communist_state_are_in_power = yes
-		}
+		available = { emerging_communist_state_are_in_power = yes }
 
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus BLR_fight_international_capitalists"
@@ -12353,9 +12537,7 @@ focus_tree = {
 
 		search_filters = { FOCUS_FILTER_POLITICAL }
 
-		available = {
-			emerging_communist_state_are_in_power = yes
-		}
+		available = { emerging_communist_state_are_in_power = yes }
 
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus BLR_support_of_the_worker"
@@ -12392,9 +12574,7 @@ focus_tree = {
 
 		search_filters = { FOCUS_FILTER_POLITICAL }
 
-		available = {
-			emerging_communist_state_are_in_power = yes
-		}
+		available = { emerging_communist_state_are_in_power = yes }
 
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus BLR_weaken_the_banks"
@@ -12428,9 +12608,7 @@ focus_tree = {
 
 		search_filters = { FOCUS_FILTER_INDUSTRY }
 
-		available = {
-			emerging_communist_state_are_in_power = yes
-		}
+		available = { emerging_communist_state_are_in_power = yes }
 
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus BLR_nationalize_foreign_business"
@@ -12448,6 +12626,14 @@ focus_tree = {
 			modifier = {
 				factor = 50
 				has_global_flag = BLR_COMMUNISM_PATH
+			}
+			modifier = {
+				factor = 0
+				has_active_mission = bankruptcy_incoming_collapse
+			}
+			modifier = {
+				factor = 0
+				can_staff_an_industrial_complex = no
 			}
 		}
 	}
@@ -12468,9 +12654,7 @@ focus_tree = {
 
 		search_filters = { FOCUS_FILTER_POLITICAL }
 
-		available = {
-			emerging_communist_state_are_in_power = yes
-		}
+		available = { emerging_communist_state_are_in_power = yes }
 
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus BLR_five_year_plan"
@@ -12513,9 +12697,7 @@ focus_tree = {
 
 		search_filters = { FOCUS_FILTER_POLITICAL }
 
-		available = {
-			emerging_communist_state_are_in_power = yes
-		}
+		available = { emerging_communist_state_are_in_power = yes }
 
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus BLR_ultimate_tax_reform"
@@ -12553,9 +12735,7 @@ focus_tree = {
 
 		search_filters = { FOCUS_FILTER_INDUSTRY }
 
-		available = {
-			emerging_communist_state_are_in_power = yes
-		}
+		available = { emerging_communist_state_are_in_power = yes }
 
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus BLR_better_roads"
@@ -12569,6 +12749,10 @@ focus_tree = {
 			modifier = {
 				factor = 50
 				has_global_flag = BLR_COMMUNISM_PATH
+			}
+			modifier = {
+				factor = 0
+				has_active_mission = bankruptcy_incoming_collapse
 			}
 		}
 	}
@@ -12587,9 +12771,7 @@ focus_tree = {
 
 		search_filters = { FOCUS_FILTER_RESEARCH }
 
-		available = {
-			emerging_communist_state_are_in_power = yes
-		}
+		available = { emerging_communist_state_are_in_power = yes }
 
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus BLR_soviet_academy_of_sciences"
@@ -12606,6 +12788,10 @@ focus_tree = {
 			modifier = {
 				factor = 50
 				has_global_flag = BLR_COMMUNISM_PATH
+			}
+			modifier = {
+				factor = 0
+				has_active_mission = bankruptcy_incoming_collapse
 			}
 		}
 	}
@@ -12624,9 +12810,7 @@ focus_tree = {
 
 		search_filters = { FOCUS_FILTER_POLITICAL }
 
-		available = {
-			emerging_communist_state_are_in_power = yes
-		}
+		available = { emerging_communist_state_are_in_power = yes }
 
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus BLR_progress_cult"
@@ -12663,9 +12847,7 @@ focus_tree = {
 
 		search_filters = { FOCUS_FILTER_POLITICAL }
 
-		available = {
-			emerging_communist_state_are_in_power = yes
-		}
+		available = { emerging_communist_state_are_in_power = yes }
 
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus BLR_rotation_KGB"
@@ -12697,9 +12879,7 @@ focus_tree = {
 
 		search_filters = { FOCUS_FILTER_POLITICAL }
 
-		available = {
-			emerging_communist_state_are_in_power = yes
-		}
+		available = { emerging_communist_state_are_in_power = yes }
 
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus BLR_SMERSH_2"
@@ -12734,9 +12914,7 @@ focus_tree = {
 
 		search_filters = { FOCUS_FILTER_POLITICAL }
 
-		available = {
-			emerging_communist_state_are_in_power = yes
-		}
+		available = { emerging_communist_state_are_in_power = yes }
 
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus BLR_empower_the_kgb"
@@ -12769,9 +12947,7 @@ focus_tree = {
 
 		search_filters = { FOCUS_FILTER_MILITARY_LAWS }
 
-		available = {
-			emerging_communist_state_are_in_power = yes
-		}
+		available = { emerging_communist_state_are_in_power = yes }
 
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus BLR_mobilize_the_masses"
@@ -12809,9 +12985,7 @@ focus_tree = {
 
 		search_filters = { FOCUS_FILTER_MILITARY_LAWS }
 
-		available = {
-			emerging_communist_state_are_in_power = yes
-		}
+		available = { emerging_communist_state_are_in_power = yes }
 
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus BLR_reestablish_the_military_industrial_complex"
@@ -12826,6 +13000,14 @@ focus_tree = {
 			modifier = {
 				factor = 50
 				has_global_flag = BLR_COMMUNISM_PATH
+			}
+			modifier = {
+				factor = 0
+				has_active_mission = bankruptcy_incoming_collapse
+			}
+			modifier = {
+				factor = 0
+				can_staff_an_arms_industry = no
 			}
 		}
 	}
@@ -12861,9 +13043,7 @@ focus_tree = {
 			}
 		}
 
-		ai_will_do = {
-			base = 155
-		}
+		ai_will_do = { base = 155 }
 	}
 	#North Korea workers
 	focus = {
@@ -12878,7 +13058,7 @@ focus_tree = {
 
 		prerequisite = { focus = BLR_trade_with_nko }
 
-		search_filters = { FOCUS_FILTER_POLITICAL }
+		search_filters = { FOCUS_FILTER_POLITICAL FOCUS_FILTER_EXPENDITURE }
 
 		available = {
 			country_exists = NKO
@@ -12902,6 +13082,10 @@ focus_tree = {
 
 		ai_will_do = {
 			base = 155
+			modifier = {
+				factor = 0
+				has_active_mission = bankruptcy_incoming_collapse
+			}
 		}
 	}
 
@@ -12954,6 +13138,10 @@ focus_tree = {
 
 		ai_will_do = {
 			base = 155
+			modifier = {
+				factor = 0
+				has_active_mission = bankruptcy_incoming_collapse
+			}
 		}
 	}
 	#Project Litbel
@@ -12971,9 +13159,7 @@ focus_tree = {
 
 		search_filters = { FOCUS_FILTER_ANNEXATION }
 
-		available = {
-			emerging_communist_state_are_in_power = yes
-		}
+		available = { emerging_communist_state_are_in_power = yes }
 
 		bypass = {
 			LIT = {
@@ -13020,9 +13206,7 @@ focus_tree = {
 			emerging_communist_state_are_in_power = yes
 		}
 
-		bypass = {
-			LIT = {	is_subject_of = BLR	}
-		}
+		bypass = { LIT = { is_subject_of = BLR } }
 
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus BLR_peaceful_litbel"
@@ -13205,9 +13389,7 @@ focus_tree = {
 
 		search_filters = { FOCUS_FILTER_POLITICAL }
 
-		available = {
-			neutrality_neutral_oligarch_are_in_power = yes
-		}
+		available = { neutrality_neutral_oligarch_are_in_power = yes }
 
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus BLR_Hajdukiewicz"
@@ -13253,13 +13435,9 @@ focus_tree = {
 
 		search_filters = { FOCUS_FILTER_POLITICAL }
 
-		available = {
-			neutrality_neutral_oligarch_are_in_power = yes
-		}
+		available = { neutrality_neutral_oligarch_are_in_power = yes }
 
-		completion_reward = {
-			log = "[GetDateText]: [Root.GetName]: Focus BLR_union_state_course"
-		}
+		completion_reward = { log = "[GetDateText]: [Root.GetName]: Focus BLR_union_state_course" }
 
 		ai_will_do = {
 			base = 155
@@ -13284,19 +13462,20 @@ focus_tree = {
 
 		search_filters = { FOCUS_FILTER_POLITICAL }
 
-		available = {
-			neutrality_neutral_oligarch_are_in_power = yes
-		}
+		available = { neutrality_neutral_oligarch_are_in_power = yes }
 
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus BLR_Hardline_EuroScepticism"
 			set_temp_variable = { party_popularity_increase = 0.04 }
 			add_relative_party_popularity = yes
-			set_temp_variable = { modify_eurosceptic = 0.01 }
-			EU_eurosceptic_change = yes
-			set_temp_variable = { modify_eurosceptic = 0.07 }
-			set_temp_variable = { modify_eurosceptic_target = ROOT }
-			eurosceptic_change = yes
+			if = { limit = { NOT = { has_global_flag = GAME_RULE_eu_disabled } }
+				newline = yes
+				set_temp_variable = { modify_europeanism = -0.01 }
+				EU_europeanism_change = yes
+				set_temp_variable = { modify_europeanism = -0.07 }
+				set_temp_variable = { modify_europeanism_target = ROOT }
+				europeanism_change = yes
+			}
 		}
 
 		ai_will_do = {
@@ -13323,9 +13502,7 @@ focus_tree = {
 
 		search_filters = { FOCUS_FILTER_POLITICAL }
 
-		available = {
-			neutrality_neutral_oligarch_are_in_power = yes
-		}
+		available = { neutrality_neutral_oligarch_are_in_power = yes }
 
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus BLR_Belarusian_nation_law"
@@ -13363,9 +13540,7 @@ focus_tree = {
 
 		search_filters = { FOCUS_FILTER_POLITICAL }
 
-		available = {
-			neutrality_neutral_oligarch_are_in_power = yes
-		}
+		available = { neutrality_neutral_oligarch_are_in_power = yes }
 
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus BLR_support_army"
@@ -13444,9 +13619,7 @@ focus_tree = {
 
 		search_filters = { FOCUS_FILTER_POLITICAL }
 
-		available = {
-			neutrality_neutral_oligarch_are_in_power = yes
-		}
+		available = { neutrality_neutral_oligarch_are_in_power = yes }
 
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus BLR_cyphrovizacia"
@@ -13466,6 +13639,10 @@ focus_tree = {
 				factor = 50
 				has_global_flag = BLR_NEUTRALITY_PATH
 			}
+			modifier = {
+				factor = 0
+				has_active_mission = bankruptcy_incoming_collapse
+			}
 		}
 	}
 	#Son will rule
@@ -13483,9 +13660,7 @@ focus_tree = {
 
 		search_filters = { FOCUS_FILTER_POLITICAL }
 
-		available = {
-			neutrality_neutral_oligarch_are_in_power = yes
-		}
+		available = { neutrality_neutral_oligarch_are_in_power = yes }
 
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus BLR_Son_will_rule"
@@ -13568,9 +13743,7 @@ focus_tree = {
 
 		search_filters = { FOCUS_FILTER_POLITICAL }
 
-		available = {
-			neutrality_neutral_oligarch_are_in_power = yes
-		}
+		available = { neutrality_neutral_oligarch_are_in_power = yes }
 
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus BLR_Ban_Enemies"
@@ -13651,9 +13824,7 @@ focus_tree = {
 
 		search_filters = { FOCUS_FILTER_POLITICAL }
 
-		available = {
-			neutrality_neutral_oligarch_are_in_power = yes
-		}
+		available = { neutrality_neutral_oligarch_are_in_power = yes }
 
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus BLR_Spiritual_revival"
@@ -13696,9 +13867,7 @@ focus_tree = {
 
 		search_filters = { FOCUS_FILTER_POLITICAL }
 
-		available = {
-			neutrality_neutral_oligarch_are_in_power = yes
-		}
+		available = { neutrality_neutral_oligarch_are_in_power = yes }
 
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus BLR_anti_gibdd"
@@ -13729,9 +13898,7 @@ focus_tree = {
 
 		search_filters = { FOCUS_FILTER_POLITICAL }
 
-		available = {
-			neutrality_neutral_oligarch_are_in_power = yes
-		}
+		available = { neutrality_neutral_oligarch_are_in_power = yes }
 
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus BLR_science_boost"
@@ -13763,11 +13930,9 @@ focus_tree = {
 		prerequisite = { focus = BLR_anti_gibdd }
 		prerequisite = { focus = BLR_Spiritual_revival }
 
-		search_filters = { FOCUS_FILTER_POLITICAL }
+		search_filters = { FOCUS_FILTER_POLITICAL FOCUS_FILTER_INDUSTRY }
 
-		available = {
-			neutrality_neutral_oligarch_are_in_power = yes
-		}
+		available = { neutrality_neutral_oligarch_are_in_power = yes }
 
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus BLR_support_promka"
@@ -13779,6 +13944,14 @@ focus_tree = {
 			modifier = {
 				factor = 50
 				has_global_flag = BLR_NEUTRALITY_PATH
+			}
+			modifier = {
+				factor = 0
+				has_active_mission = bankruptcy_incoming_collapse
+			}
+			modifier = {
+				factor = 0
+				can_staff_an_industrial_complex = no
 			}
 		}
 	}
@@ -13798,9 +13971,7 @@ focus_tree = {
 
 		search_filters = { FOCUS_FILTER_POLITICAL }
 
-		available = {
-			neutrality_neutral_oligarch_are_in_power = yes
-		}
+		available = { neutrality_neutral_oligarch_are_in_power = yes }
 
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus BLR_boost_economic"
@@ -13913,6 +14084,10 @@ focus_tree = {
 				factor = 50
 				has_global_flag = BLR_NEUTRALITY_PATH
 			}
+			modifier = {
+				factor = 0
+				has_active_mission = bankruptcy_incoming_collapse
+			}
 		}
 	}
 	#Belorussia Teplo
@@ -13960,6 +14135,10 @@ focus_tree = {
 			modifier = {
 				factor = 50
 				has_global_flag = BLR_NEUTRALITY_PATH
+			}
+			modifier = {
+				factor = 0
+				has_active_mission = bankruptcy_incoming_collapse
 			}
 		}
 	}
@@ -14040,11 +14219,9 @@ focus_tree = {
 
 		prerequisite = { focus = BLR_russian_uvz }
 
-		search_filters = { FOCUS_FILTER_ANNEXATION }
+		search_filters = { FOCUS_FILTER_ANNEXATION FOCUS_FILTER_EXPENDITURE }
 
-		available = {
-			neutrality_neutral_oligarch_are_in_power = yes
-		}
+		available = { neutrality_neutral_oligarch_are_in_power = yes }
 
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus BLR_all_cyphro"
@@ -14060,6 +14237,10 @@ focus_tree = {
 
 		ai_will_do = {
 			base = 155
+			modifier = {
+				factor = 0
+				has_active_mission = bankruptcy_incoming_collapse
+			}
 		}
 	}
 	#Kalash
@@ -14075,7 +14256,7 @@ focus_tree = {
 
 		prerequisite = { focus = BLR_russian_uvz }
 
-		search_filters = { FOCUS_FILTER_ANNEXATION }
+		search_filters = { FOCUS_FILTER_ANNEXATION FOCUS_FILTER_EXPENDITURE }
 
 		available = {
 			OR = {
@@ -14098,6 +14279,10 @@ focus_tree = {
 			modifier = {
 				factor = 50
 				has_global_flag = BLR_NEUTRALITY_PATH
+			}
+			modifier = {
+				factor = 0
+				has_active_mission = bankruptcy_incoming_collapse
 			}
 		}
 	}

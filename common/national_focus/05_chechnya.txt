@@ -23,9 +23,7 @@ focus_tree = {
 
 		search_filters = { FOCUS_FILTER_POLITICAL }
 
-		available = {
-			has_war_with = SOV
-		}
+		available = { has_war_with = SOV }
 
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus CHE_we_are_at_war"
@@ -33,9 +31,7 @@ focus_tree = {
 			add_timed_idea = { idea = CHE_defence_nation days = 90 }
 		}
 
-		ai_will_do = {
-			base = 1
-		}
+		ai_will_do = { base = 1 }
 	}
 
 	focus = {
@@ -52,9 +48,7 @@ focus_tree = {
 
 		search_filters = { FOCUS_FILTER_MILITARY_LAWS }
 
-		available = {
-			has_war_with = SOV
-		}
+		available = { has_war_with = SOV }
 
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus CHE_call_for_volunteers"
@@ -62,9 +56,7 @@ focus_tree = {
 			add_war_support = 0.10
 		}
 
-		ai_will_do = {
-			base = 1
-		}
+		ai_will_do = { base = 1 }
 	}
 
 	focus = {
@@ -81,9 +73,7 @@ focus_tree = {
 
 		search_filters = { FOCUS_FILTER_MILITARY_LAWS }
 
-		available = {
-			has_war_with = SOV
-		}
+		available = { has_war_with = SOV }
 
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus CHE_last_defense"
@@ -95,9 +85,7 @@ focus_tree = {
 			}
 		}
 
-		ai_will_do = {
-			base = 1
-		}
+		ai_will_do = { base = 1 }
 	}
 
 	focus = {
@@ -114,9 +102,7 @@ focus_tree = {
 
 		search_filters = { FOCUS_FILTER_POLITICAL }
 
-		available = {
-			has_war_with = SOV
-		}
+		available = { has_war_with = SOV }
 
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus CHE_smuggle_guns_from_geo"
@@ -135,9 +121,7 @@ focus_tree = {
 			change_influence_percentage = yes
 		}
 
-		ai_will_do = {
-			base = 1
-		}
+		ai_will_do = { base = 1 }
 	}
 
 	focus = {
@@ -154,9 +138,7 @@ focus_tree = {
 
 		search_filters = { FOCUS_FILTER_POLITICAL }
 
-		available = {
-			has_war_with = SOV
-		}
+		available = { has_war_with = SOV }
 
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus CHE_smuggle_guns_from_aze"
@@ -175,9 +157,7 @@ focus_tree = {
 			change_influence_percentage = yes
 		}
 
-		ai_will_do = {
-			base = 1
-		}
+		ai_will_do = { base = 1 }
 	}
 
 	focus = {
@@ -194,9 +174,7 @@ focus_tree = {
 
 		search_filters = { FOCUS_FILTER_POLITICAL }
 
-		available = {
-			has_war_with = SOV
-		}
+		available = { has_war_with = SOV }
 
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus CHE_invite_grey_wolves"
@@ -206,9 +184,7 @@ focus_tree = {
 			change_influence_percentage = yes
 		}
 
-		ai_will_do = {
-			base = 1
-		}
+		ai_will_do = { base = 1 }
 	}
 
 	focus = {
@@ -225,9 +201,7 @@ focus_tree = {
 
 		search_filters = { FOCUS_FILTER_POLITICAL }
 
-		available = {
-			has_war_with = SOV
-		}
+		available = { has_war_with = SOV }
 
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus CHE_gain_support_from_saudis"
@@ -239,9 +213,7 @@ focus_tree = {
 			change_influence_percentage = yes
 		}
 
-		ai_will_do = {
-			base = 1
-		}
+		ai_will_do = { base = 1 }
 	}
 
 	focus = {
@@ -258,9 +230,7 @@ focus_tree = {
 
 		search_filters = { FOCUS_FILTER_POLITICAL }
 
-		available = {
-			has_war_with = SOV
-		}
+		available = { has_war_with = SOV }
 
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus CHE_gain_support_from_qatar"
@@ -272,9 +242,7 @@ focus_tree = {
 			change_influence_percentage = yes
 		}
 
-		ai_will_do = {
-			base = 1
-		}
+		ai_will_do = { base = 1 }
 	}
 
 	focus = {
@@ -291,18 +259,14 @@ focus_tree = {
 
 		search_filters = { FOCUS_FILTER_MILITARY_LAWS }
 
-		available = {
-			has_war_with = SOV
-		}
+		available = { has_war_with = SOV }
 
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus CHE_raid_ingush_bases"
 			country_event = chechnya.16
 		}
 
-		ai_will_do = {
-			base = 1
-		}
+		ai_will_do = { base = 1 }
 	}
 
 	focus = {
@@ -319,24 +283,18 @@ focus_tree = {
 		prerequisite = { focus = CHE_gain_support_from_qatar }
 		prerequisite = { focus = CHE_smuggle_guns_from_geo }
 		prerequisite = { focus = CHE_invite_grey_wolves }
-		mutually_exclusive = {
-			focus = CHE_uprise_in_dagestan
-		}
+		mutually_exclusive = { focus = CHE_uprise_in_dagestan }
 
 		search_filters = { FOCUS_FILTER_POLITICAL }
 
-		available = {
-			has_war_with = SOV
-		}
+		available = { has_war_with = SOV }
 
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus CHE_propose_peace_to_rus"
 			SOV = { country_event = chechnya.18 }
 		}
 
-		ai_will_do = {
-			base = 1
-		}
+		ai_will_do = { base = 1 }
 	}
 
 	focus = {
@@ -353,24 +311,18 @@ focus_tree = {
 		prerequisite = { focus = CHE_gain_support_from_qatar }
 		prerequisite = { focus = CHE_smuggle_guns_from_geo }
 		prerequisite = { focus = CHE_invite_grey_wolves }
-		mutually_exclusive = {
-			focus = CHE_propose_peace_to_rus
-		}
+		mutually_exclusive = { focus = CHE_propose_peace_to_rus }
 
 		search_filters = { FOCUS_FILTER_WAR_SUPPORT FOCUS_FILTER_POLITICAL }
 
-		available = {
-			has_war_with = SOV
-		}
+		available = { has_war_with = SOV }
 
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus CHE_uprise_in_dagestan"
 			country_event = chechnya.17
 		}
 
-		ai_will_do = {
-			base = 90
-		}
+		ai_will_do = { base = 90 }
 	}
 
 	focus = {
@@ -384,9 +336,7 @@ focus_tree = {
 
 		search_filters = { FOCUS_FILTER_POLITICAL }
 
-		available = {
-			is_subject_of = SOV
-		}
+		available = { is_subject_of = SOV }
 
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus CHE_ahmat_start"
@@ -413,9 +363,7 @@ focus_tree = {
 			}
 		}
 
-		ai_will_do = {
-			base = 155
-		}
+		ai_will_do = { base = 155 }
 	}
 
 	focus = {
@@ -449,9 +397,7 @@ focus_tree = {
 			CHE_ahmat_ai_popularity_bump = yes
 		}
 
-		ai_will_do = {
-			base = 155
-		}
+		ai_will_do = { base = 155 }
 	}
 
 	focus = {
@@ -467,9 +413,7 @@ focus_tree = {
 
 		search_filters = { FOCUS_FILTER_POLITICAL }
 
-		available = {
-			is_subject_of = SOV
-		}
+		available = { is_subject_of = SOV }
 
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus CHE_ahmat_political"
@@ -477,9 +421,7 @@ focus_tree = {
 			CHE_ahmat_ai_popularity_bump = yes
 		}
 
-		ai_will_do = {
-			base = 155
-		}
+		ai_will_do = { base = 155 }
 	}
 
 	focus = {
@@ -495,9 +437,7 @@ focus_tree = {
 
 		search_filters = { FOCUS_FILTER_POLITICAL }
 
-		available = {
-			is_subject_of = SOV
-		}
+		available = { is_subject_of = SOV }
 
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus CHE_ahmat_social_med"
@@ -507,9 +447,7 @@ focus_tree = {
 			CHE_ahmat_ai_popularity_bump = yes
 		}
 
-		ai_will_do = {
-			base = 155
-		}
+		ai_will_do = { base = 155 }
 	}
 
 	focus = {
@@ -525,9 +463,7 @@ focus_tree = {
 
 		search_filters = { FOCUS_FILTER_POLITICAL }
 
-		available = {
-			is_subject_of = SOV
-		}
+		available = { is_subject_of = SOV }
 
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus CHE_ahmat_infra"
@@ -540,6 +476,10 @@ focus_tree = {
 
 		ai_will_do = {
 			base = 155
+			modifier = {
+				factor = 0
+				has_active_mission = bankruptcy_incoming_collapse
+			}
 		}
 	}
 
@@ -558,9 +498,7 @@ focus_tree = {
 
 		search_filters = { FOCUS_FILTER_ECONOMY }
 
-		available = {
-			is_subject_of = SOV
-		}
+		available = { is_subject_of = SOV }
 
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus CHE_ahmat_economic"
@@ -569,8 +507,7 @@ focus_tree = {
 			CHE_ahmat_ai_popularity_bump = yes
 		}
 
-		ai_will_do = {
-			base = 155
+		ai_will_do = { base = 155
 		}
 	}
 
@@ -587,9 +524,7 @@ focus_tree = {
 
 		search_filters = { FOCUS_FILTER_POLITICAL }
 
-		available = {
-			is_subject_of = SOV
-		}
+		available = { is_subject_of = SOV }
 
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus CHE_ahmat_new_chechnya"
@@ -600,9 +535,7 @@ focus_tree = {
 			CHE_ahmat_ai_popularity_bump = yes
 		}
 
-		ai_will_do = {
-			base = 155
-		}
+		ai_will_do = { base = 155 }
 	}
 
 	focus = {
@@ -616,9 +549,7 @@ focus_tree = {
 		cost = 2
 
 		prerequisite = { focus = CHE_ahmat_new_chechnya }
-		mutually_exclusive = {
-			focus = CHE_loyal_govern
-		}
+		mutually_exclusive = { focus = CHE_loyal_govern }
 
 		search_filters = { FOCUS_FILTER_POLITICAL }
 
@@ -639,9 +570,7 @@ focus_tree = {
 			}
 		}
 
-		ai_will_do = {
-			base = 155
-		}
+		ai_will_do = { base = 155 }
 	}
 
 	focus = {
@@ -658,9 +587,7 @@ focus_tree = {
 
 		search_filters = { FOCUS_FILTER_POLITICAL }
 
-		available = {
-			is_subject_of = SOV
-		}
+		available = { is_subject_of = SOV }
 
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus CHE_alhanov_again"
@@ -684,9 +611,7 @@ focus_tree = {
 			}
 		}
 
-		ai_will_do = {
-			base = 155
-		}
+		ai_will_do = { base = 155 }
 	}
 
 	focus = {
@@ -703,9 +628,7 @@ focus_tree = {
 
 		search_filters = { FOCUS_FILTER_POLITICAL }
 
-		available = {
-			is_subject_of = SOV
-		}
+		available = { is_subject_of = SOV }
 
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus CHE_alhanov_sb"
@@ -716,9 +639,7 @@ focus_tree = {
 			}
 		}
 
-		ai_will_do = {
-			base = 155
-		}
+		ai_will_do = { base = 155 }
 	}
 
 	focus = {
@@ -735,9 +656,7 @@ focus_tree = {
 
 		search_filters = { FOCUS_FILTER_POLITICAL }
 
-		available = {
-			is_subject_of = SOV
-		}
+		available = { is_subject_of = SOV }
 
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus CHE_kadyrov_case"
@@ -746,9 +665,7 @@ focus_tree = {
 			}
 		}
 
-		ai_will_do = {
-			base = 155
-		}
+		ai_will_do = { base = 155 }
 	}
 
 	focus = {
@@ -762,9 +679,7 @@ focus_tree = {
 		cost = 5
 
 		prerequisite = { focus = CHE_ahmat_new_chechnya }
-		mutually_exclusive = {
-			focus = CHE_ahmat_after
-		}
+		mutually_exclusive = { focus = CHE_ahmat_after }
 
 		search_filters = { FOCUS_FILTER_POLITICAL }
 
@@ -814,9 +729,7 @@ focus_tree = {
 			}
 		}
 
-		ai_will_do = {
-			base = 155
-		}
+		ai_will_do = { base = 155 }
 	}
 
 	focus = {
@@ -867,9 +780,7 @@ focus_tree = {
 			}
 		}
 
-		ai_will_do = {
-			base = 155
-		}
+		ai_will_do = { base = 155 }
 	}
 
 	focus = {
@@ -909,9 +820,7 @@ focus_tree = {
 			change_influence_percentage = yes
 		}
 
-		ai_will_do = {
-			base = 155
-		}
+		ai_will_do = { base = 155 }
 	}
 
 	focus = {
@@ -942,9 +851,7 @@ focus_tree = {
 			}
 		}
 
-		ai_will_do = {
-			base = 155
-		}
+		ai_will_do = { base = 155 }
 	}
 
 	focus = {
@@ -975,9 +882,7 @@ focus_tree = {
 			}
 		}
 
-		ai_will_do = {
-			base = 155
-		}
+		ai_will_do = { base = 155 }
 	}
 
 	focus = {
@@ -1004,9 +909,7 @@ focus_tree = {
 			remove_ideas = CHE_narcos_idea
 		}
 
-		ai_will_do = {
-			base = 155
-		}
+		ai_will_do = { base = 155 }
 	}
 
 	focus = {
@@ -1037,9 +940,7 @@ focus_tree = {
 			}
 		}
 
-		ai_will_do = {
-			base = 155
-		}
+		ai_will_do = { base = 155 }
 	}
 
 	focus = {
@@ -1073,9 +974,7 @@ focus_tree = {
 			}
 		}
 
-		ai_will_do = {
-			base = 155
-		}
+		ai_will_do = { base = 155 }
 	}
 
 	focus = {
@@ -1106,9 +1005,7 @@ focus_tree = {
 			}
 		}
 
-		ai_will_do = {
-			base = 155
-		}
+		ai_will_do = { base = 155 }
 	}
 
 	focus = {
@@ -1135,9 +1032,7 @@ focus_tree = {
 			}
 		}
 
-		bypass = {
-			has_completed_focus = CHE_alhanov_again
-		}
+		bypass = { has_completed_focus = CHE_alhanov_again }
 
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus CHE_loyal_alhanov"
@@ -1161,9 +1056,7 @@ focus_tree = {
 			}
 		}
 
-		ai_will_do = {
-			base = 155
-		}
+		ai_will_do = { base = 155 }
 	}
 
 	focus = {
@@ -1185,9 +1078,7 @@ focus_tree = {
 			has_country_leader = { name = "Ali Alkhanov" ruling_only = yes }
 		}
 
-		bypass = {
-			has_completed_focus = CHE_alhanov_sb
-		}
+		bypass = { has_completed_focus = CHE_alhanov_sb }
 
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus CHE_loyal_sb"
@@ -1201,9 +1092,7 @@ focus_tree = {
 			change_influence_percentage = yes
 		}
 
-		ai_will_do = {
-			base = 155
-		}
+		ai_will_do = { base = 155 }
 	}
 
 	focus = {
@@ -1234,9 +1123,7 @@ focus_tree = {
 			}
 		}
 
-		ai_will_do = {
-			base = 155
-		}
+		ai_will_do = { base = 155 }
 	}
 
 	focus = {
@@ -1251,7 +1138,7 @@ focus_tree = {
 
 		prerequisite = { focus = CHE_economic_autonomy }
 
-		search_filters = { FOCUS_FILTER_POLITICAL }
+		search_filters = { FOCUS_FILTER_POLITICAL FOCUS_FILTER_INDUSTRY }
 
 		available = {
 			is_subject_of = SOV
@@ -1283,6 +1170,15 @@ focus_tree = {
 
 		ai_will_do = {
 			base = 155
+			modifier = {
+				factor = 0
+				has_active_mission = bankruptcy_incoming_collapse
+			}
+
+			modifier = {
+				factor = 0
+				can_staff_an_industrial_complex = no
+			}
 		}
 	}
 
@@ -1314,9 +1210,7 @@ focus_tree = {
 			}
 		}
 
-		ai_will_do = {
-			base = 155
-		}
+		ai_will_do = { base = 155 }
 	}
 
 	focus = {
@@ -1331,7 +1225,7 @@ focus_tree = {
 
 		prerequisite = { focus = CHE_economic_autonomy }
 
-		search_filters = { FOCUS_FILTER_POLITICAL }
+		search_filters = { FOCUS_FILTER_POLITICAL FOCUS_FILTER_EXPENDITURE }
 
 		available = {
 			is_subject_of = SOV
@@ -1357,6 +1251,10 @@ focus_tree = {
 
 		ai_will_do = {
 			base = 155
+			modifier = {
+				factor = 0
+				has_active_mission = bankruptcy_incoming_collapse
+			}
 		}
 	}
 
@@ -1390,9 +1288,7 @@ focus_tree = {
 			}
 		}
 
-		ai_will_do = {
-			base = 155
-		}
+		ai_will_do = { base = 155 }
 	}
 
 	focus = {
@@ -1421,9 +1317,7 @@ focus_tree = {
 			add_political_power = -150
 		}
 
-		ai_will_do = {
-			base = 155
-		}
+		ai_will_do = { base = 155 }
 	}
 
 	focus = {
@@ -1471,9 +1365,7 @@ focus_tree = {
 			}
 		}
 
-		ai_will_do = {
-			base = 155
-		}
+		ai_will_do = { base = 155 }
 	}
 
 	focus = {
@@ -1512,9 +1404,7 @@ focus_tree = {
 			change_influence_percentage = yes
 		}
 
-		ai_will_do = {
-			base = 155
-		}
+		ai_will_do = { base = 155 }
 	}
 
 	focus = {
@@ -1564,9 +1454,7 @@ focus_tree = {
 			}
 		}
 
-		ai_will_do = {
-			base = 155
-		}
+		ai_will_do = { base = 155 }
 	}
 
 	focus = {
@@ -1610,6 +1498,10 @@ focus_tree = {
 
 		ai_will_do = {
 			base = 155
+			modifier = {
+				factor = 0
+				has_active_mission = bankruptcy_incoming_collapse
+			}
 		}
 	}
 
@@ -1644,9 +1536,7 @@ focus_tree = {
 			}
 		}
 
-		ai_will_do = {
-			base = 155
-		}
+		ai_will_do = { base = 155 }
 	}
 
 	focus = {
@@ -1683,9 +1573,7 @@ focus_tree = {
 			}
 		}
 
-		ai_will_do = {
-			base = 155
-		}
+		ai_will_do = { base = 155 }
 	}
 
 	focus = {
@@ -1727,9 +1615,7 @@ focus_tree = {
 			}
 		}
 
-		ai_will_do = {
-			base = 155
-		}
+		ai_will_do = { base = 155 }
 	}
 
 	focus = {
@@ -1759,9 +1645,7 @@ focus_tree = {
 			remove_ideas = CHE_narcos_idea
 		}
 
-		ai_will_do = {
-			base = 155
-		}
+		ai_will_do = { base = 155 }
 	}
 
 	focus = {
@@ -1776,9 +1660,7 @@ focus_tree = {
 
 		search_filters = { FOCUS_FILTER_POLITICAL }
 
-		available = {
-			emerging_communist_state_are_in_power = yes
-		}
+		available = { emerging_communist_state_are_in_power = yes }
 
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus CHE_establish_commies"
@@ -1794,9 +1676,7 @@ focus_tree = {
 			}
 		}
 
-		ai_will_do = {
-			base = 155
-		}
+		ai_will_do = { base = 155 }
 	}
 
 	focus = {
@@ -1811,11 +1691,9 @@ focus_tree = {
 
 		prerequisite = { focus = CHE_establish_commies }
 
-		search_filters = { FOCUS_FILTER_OSSETIA_COMMI }
+		search_filters = { FOCUS_FILTER_OSSETIA_COMMI FOCUS_FILTER_INDUSTRY }
 
-		available = {
-			emerging_communist_state_are_in_power = yes
-		}
+		available = { emerging_communist_state_are_in_power = yes }
 
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus CHE_reestablish_the_military_industrial_complex"
@@ -1834,7 +1712,18 @@ focus_tree = {
 			}
 		}
 
-		ai_will_do = { base = 150 }
+		ai_will_do = {
+			base = 150
+			modifier = {
+				factor = 0
+				has_active_mission = bankruptcy_incoming_collapse
+			}
+
+			modifier = {
+				factor = 0
+				can_staff_an_arms_industry = no
+			}
+		}
 	}
 
 	focus = {
@@ -1851,9 +1740,7 @@ focus_tree = {
 
 		search_filters = { FOCUS_FILTER_OSSETIA_COMMI }
 
-		available = {
-			emerging_communist_state_are_in_power = yes
-		}
+		available = { emerging_communist_state_are_in_power = yes }
 
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus CHE_arest_silovic"
@@ -1891,22 +1778,26 @@ focus_tree = {
 
 		search_filters = { FOCUS_FILTER_OSSETIA_COMMI }
 
-		available = {
-			emerging_communist_state_are_in_power = yes
-		}
+		available = { emerging_communist_state_are_in_power = yes }
 
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus CHE_erase_nationalist"
 			set_temp_variable = { party_index = 4 }
 			set_temp_variable = { party_popularity_increase = 0.07 }
 			set_temp_variable = { temp_outlook_increase = 0.07 }
+			add_relative_party_popularity = yes
 			add_political_power = -70
 			add_stability = -0.02
 			add_popularity = {
 				ideology = democratic
 				popularity = -0.2
 			}
+			add_popularity = {
+				ideology = nationalist
+				popularity = -0.05
+			}
 			recalculate_party = yes
+			set_temp_variable = { temp_outlook_increase = 0 }
 			set_temp_variable = { party_index = 21 }
 			set_temp_variable = { party_popularity_increase = -0.1 }
 			add_relative_party_popularity = yes
@@ -1935,9 +1826,7 @@ focus_tree = {
 
 		search_filters = { FOCUS_FILTER_OSSETIA_COMMI }
 
-		available = {
-			emerging_communist_state_are_in_power = yes
-		}
+		available = { emerging_communist_state_are_in_power = yes }
 
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus CHE_antigay_propaganda_laws"
@@ -1963,9 +1852,7 @@ focus_tree = {
 
 		search_filters = { FOCUS_FILTER_OSSETIA_COMMI }
 
-		available = {
-			emerging_communist_state_are_in_power = yes
-		}
+		available = { emerging_communist_state_are_in_power = yes }
 
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus CHE_power_to_the_workers"
@@ -1994,9 +1881,7 @@ focus_tree = {
 
 		search_filters = { FOCUS_FILTER_OSSETIA_COMMI }
 
-		available = {
-			emerging_communist_state_are_in_power = yes
-		}
+		available = { emerging_communist_state_are_in_power = yes }
 
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus CHE_authoritarian_control_over_economy"
@@ -2019,11 +1904,9 @@ focus_tree = {
 		prerequisite = { focus = CHE_power_to_the_workers }
 		prerequisite = { focus = CHE_authoritarian_control_over_economy }
 
-		search_filters = { FOCUS_FILTER_POLITICAL }
+		search_filters = { FOCUS_FILTER_POLITICAL FOCUS_FILTER_EXPENDITURE }
 
-		available = {
-			emerging_communist_state_are_in_power = yes
-		}
+		available = { emerging_communist_state_are_in_power = yes }
 
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus CHE_a_new_economic_policy"
@@ -2034,6 +1917,10 @@ focus_tree = {
 
 		ai_will_do = {
 			base = 150
+			modifier = {
+				factor = 0
+				has_active_mission = bankruptcy_incoming_collapse
+			}
 		}
 	}
 
@@ -2052,18 +1939,14 @@ focus_tree = {
 
 		search_filters = { FOCUS_FILTER_POLITICAL }
 
-		available = {
-			emerging_communist_state_are_in_power = yes
-		}
+		available = { emerging_communist_state_are_in_power = yes }
 
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus CHE_socialist_humanism"
 			add_ideas = SUB_socialist_humanism_idea
 		}
 
-		ai_will_do = {
-			base = 150
-		}
+		ai_will_do = { base = 150 }
 	}
 
 	focus = {
@@ -2081,9 +1964,7 @@ focus_tree = {
 
 		search_filters = { FOCUS_FILTER_POLITICAL }
 
-		available = {
-			emerging_communist_state_are_in_power = yes
-		}
+		available = { emerging_communist_state_are_in_power = yes }
 
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus CHE_caucas_commies_federation"
@@ -2099,9 +1980,7 @@ focus_tree = {
 			}
 		}
 
-		ai_will_do = {
-			base = 1
-		}
+		ai_will_do = { base = 1 }
 	}
 
 	focus = {
@@ -2118,9 +1997,7 @@ focus_tree = {
 
 		search_filters = { FOCUS_FILTER_OSSETIA_COMMI }
 
-		available = {
-			emerging_communist_state_are_in_power = yes
-		}
+		available = { emerging_communist_state_are_in_power = yes }
 
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus CHE_five_year_plan"
@@ -2150,9 +2027,7 @@ focus_tree = {
 
 		search_filters = { FOCUS_FILTER_OSSETIA_COMMI }
 
-		available = {
-			emerging_communist_state_are_in_power = yes
-		}
+		available = { emerging_communist_state_are_in_power = yes }
 
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus CHE_clean_soc_net"
@@ -2259,9 +2134,7 @@ focus_tree = {
 			}
 		}
 
-		ai_will_do = {
-			base = 155
-		}
+		ai_will_do = { base = 155 }
 	}
 
 	focus = {
@@ -2317,8 +2190,7 @@ focus_tree = {
 			}
 		}
 
-		ai_will_do = {
-			base = 1
+		ai_will_do = { base = 1
 		}
 	}
 
@@ -2366,8 +2238,7 @@ focus_tree = {
 			}
 		}
 
-		ai_will_do = {
-			base = 1
+		ai_will_do = { base = 1
 		}
 	}
 
@@ -2414,8 +2285,7 @@ focus_tree = {
 			}
 		}
 
-		ai_will_do = {
-			base = 1
+		ai_will_do = { base = 1
 		}
 	}
 
@@ -2462,8 +2332,7 @@ focus_tree = {
 			}
 		}
 
-		ai_will_do = {
-			base = 1
+		ai_will_do = { base = 1
 		}
 	}
 
@@ -2511,8 +2380,7 @@ focus_tree = {
 			}
 		}
 
-		ai_will_do = {
-			base = 1
+		ai_will_do = { base = 1
 		}
 	}
 
@@ -2569,8 +2437,7 @@ focus_tree = {
 			}
 		}
 
-		ai_will_do = {
-			base = 1
+		ai_will_do = { base = 1
 		}
 	}
 
@@ -2619,8 +2486,7 @@ focus_tree = {
 			}
 		}
 
-		ai_will_do = {
-			base = 1
+		ai_will_do = { base = 1
 		}
 	}
 
@@ -2666,9 +2532,7 @@ focus_tree = {
 			}
 		}
 
-		ai_will_do = {
-			base = 1
-		}
+		ai_will_do = { base = 1 }
 	}
 
 	focus = {
@@ -2706,9 +2570,7 @@ focus_tree = {
 			}
 		}
 
-		ai_will_do = {
-			base = 1
-		}
+		ai_will_do = { base = 1 }
 	}
 
 	focus = {
@@ -2761,9 +2623,7 @@ focus_tree = {
 			}
 		}
 
-		ai_will_do = {
-			base = 1
-		}
+		ai_will_do = { base = 1 }
 	}
 
 	focus = {
@@ -2802,6 +2662,10 @@ focus_tree = {
 
 		ai_will_do = {
 			base = 1
+			modifier = {
+				factor = 0
+				has_active_mission = bankruptcy_incoming_collapse
+			}
 		}
 	}
 
@@ -2854,8 +2718,7 @@ focus_tree = {
 			}
 		}
 
-		ai_will_do = {
-			base = 1
+		ai_will_do = { base = 1
 		}
 	}
 
@@ -2871,7 +2734,7 @@ focus_tree = {
 
 		prerequisite = { focus = CHE_allah_money }
 
-		search_filters = { FOCUS_FILTER_POLITICAL }
+		search_filters = { FOCUS_FILTER_POLITICAL FOCUS_FILTER_INDUSTRY }
 
 		available = {
 			is_subject_of = SOV
@@ -2892,6 +2755,15 @@ focus_tree = {
 
 		ai_will_do = {
 			base = 1
+			modifier = {
+				factor = 0
+				has_active_mission = bankruptcy_incoming_collapse
+			}
+
+			modifier = {
+				factor = 0
+				can_staff_an_arms_industry = no
+			}
 		}
 	}
 
@@ -2938,8 +2810,7 @@ focus_tree = {
 			}
 		}
 
-		ai_will_do = {
-			base = 1
+		ai_will_do = { base = 1
 		}
 	}
 
@@ -2973,8 +2844,7 @@ focus_tree = {
 			}
 		}
 
-		ai_will_do = {
-			base = 1
+		ai_will_do = { base = 1
 		}
 	}
 
@@ -3011,8 +2881,7 @@ focus_tree = {
 			}
 		}
 
-		ai_will_do = {
-			base = 1
+		ai_will_do = { base = 1
 		}
 	}
 
@@ -3050,8 +2919,7 @@ focus_tree = {
 			}
 		}
 
-		ai_will_do = {
-			base = 1
+		ai_will_do = { base = 1
 		}
 	}
 
@@ -3098,8 +2966,7 @@ focus_tree = {
 			}
 		}
 
-		ai_will_do = {
-			base = 1
+		ai_will_do = { base = 1
 		}
 	}
 
@@ -3132,9 +2999,7 @@ focus_tree = {
 			change_the_ulema_opinion = yes
 		}
 
-		ai_will_do = {
-			base = 1
-		}
+		ai_will_do = { base = 1 }
 	}
 
 	focus = {
@@ -3180,9 +3045,7 @@ focus_tree = {
 			change_permanent_investment_target = yes
 		}
 
-		ai_will_do = {
-			base = 1
-		}
+		ai_will_do = { base = 1 }
 	}
 
 	focus = {
@@ -3216,9 +3079,7 @@ focus_tree = {
 			add_relative_party_popularity = yes
 		}
 
-		ai_will_do = {
-			base = 1
-		}
+		ai_will_do = { base = 1 }
 	}
 
 	focus = {
@@ -3251,8 +3112,7 @@ focus_tree = {
 			add_relative_party_popularity = yes
 		}
 
-		ai_will_do = {
-			base = 1
+		ai_will_do = { base = 1
 		}
 	}
 
@@ -3287,8 +3147,7 @@ focus_tree = {
 			}
 		}
 
-		ai_will_do = {
-			base = 1
+		ai_will_do = { base = 1
 		}
 	}
 
@@ -3304,7 +3163,7 @@ focus_tree = {
 
 		prerequisite = { focus = CHE_suppress_political_opposition }
 
-		search_filters = { FOCUS_FILTER_POLITICAL }
+		search_filters = { FOCUS_FILTER_POLITICAL FOCUS_FILTER_EXPENDITURE }
 
 		available = {
 			is_subject_of = SOV
@@ -3333,6 +3192,10 @@ focus_tree = {
 
 		ai_will_do = {
 			base = 1
+			modifier = {
+				factor = 0
+				has_active_mission = bankruptcy_incoming_collapse
+			}
 		}
 	}
 
@@ -3348,7 +3211,7 @@ focus_tree = {
 
 		prerequisite = { focus = CHE_revive_chgu }
 
-		search_filters = { FOCUS_FILTER_POLITICAL }
+		search_filters = { FOCUS_FILTER_POLITICAL FOCUS_FILTER_INDUSTRY }
 
 		available = {
 			is_subject_of = SOV
@@ -3371,6 +3234,15 @@ focus_tree = {
 
 		ai_will_do = {
 			base = 1
+			modifier = {
+				factor = 0
+				has_active_mission = bankruptcy_incoming_collapse
+			}
+
+			modifier = {
+				factor = 0
+				can_staff_an_offices = no
+			}
 		}
 	}
 
@@ -3407,8 +3279,7 @@ focus_tree = {
 			}
 		}
 
-		ai_will_do = {
-			base = 1
+		ai_will_do = { base = 1
 		}
 	}
 
@@ -3441,9 +3312,7 @@ focus_tree = {
 			increase_corruption = yes
 		}
 
-		ai_will_do = {
-			base = 1
-		}
+		ai_will_do = { base = 1 }
 	}
 
 	focus = {
@@ -3480,6 +3349,10 @@ focus_tree = {
 
 		ai_will_do = {
 			base = 1
+			modifier = {
+				factor = 0
+				has_active_mission = bankruptcy_incoming_collapse
+			}
 		}
 	}
 
@@ -3510,9 +3383,7 @@ focus_tree = {
 			add_ideas = CHE_ahmat_sila_idea
 		}
 
-		ai_will_do = {
-			base = 1
-		}
+		ai_will_do = { base = 1 }
 	}
 
 	focus = {
@@ -3543,9 +3414,7 @@ focus_tree = {
 			CHE_kadyrov_cult_script = yes
 		}
 
-		ai_will_do = {
-			base = 1
-		}
+		ai_will_do = { base = 1 }
 	}
 
 	focus = {
@@ -3595,9 +3464,7 @@ focus_tree = {
 			}
 		}
 
-		ai_will_do = {
-			base = 1
-		}
+		ai_will_do = { base = 1 }
 	}
 
 	focus = {
@@ -3614,18 +3481,14 @@ focus_tree = {
 
 		search_filters = { FOCUS_FILTER_POLITICAL }
 
-		available = {
-			NOT = { is_subject_of = SOV }
-		}
+		available = { NOT = { is_subject_of = SOV } }
 
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus CHE_gover"
 			add_political_power = 100
 		}
 
-		ai_will_do = {
-			base = 1
-		}
+		ai_will_do = { base = 1 }
 	}
 
 	focus = {
@@ -3642,9 +3505,7 @@ focus_tree = {
 
 		search_filters = { FOCUS_FILTER_MILITARY_LAWS }
 
-		available = {
-			NOT = { is_subject_of = SOV }
-		}
+		available = { NOT = { is_subject_of = SOV } }
 
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus CHE_return_ichkerian"
@@ -3673,8 +3534,7 @@ focus_tree = {
 			}
 		}
 
-		ai_will_do = {
-			base = 1
+		ai_will_do = { base = 1
 		}
 	}
 
@@ -3692,9 +3552,7 @@ focus_tree = {
 
 		search_filters = { FOCUS_FILTER_MILITARY_LAWS }
 
-		available = {
-			NOT = { is_subject_of = SOV }
-		}
+		available = { NOT = { is_subject_of = SOV } }
 
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus CHE_ismalic_polk"
@@ -3712,8 +3570,7 @@ focus_tree = {
 			}
 		}
 
-		ai_will_do = {
-			base = 1
+		ai_will_do = { base = 1
 		}
 	}
 
@@ -3731,9 +3588,7 @@ focus_tree = {
 
 		search_filters = { FOCUS_FILTER_POLITICAL }
 
-		available = {
-			NOT = { is_subject_of = SOV }
-		}
+		available = { NOT = { is_subject_of = SOV } }
 
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus CHE_snb_return"
@@ -3741,9 +3596,7 @@ focus_tree = {
 			change_intelligence_community_opinion = yes
 		}
 
-		ai_will_do = {
-			base = 1
-		}
+		ai_will_do = { base = 1 }
 	}
 
 	focus = {
@@ -3760,9 +3613,7 @@ focus_tree = {
 
 		search_filters = { FOCUS_FILTER_POLITICAL }
 
-		available = {
-			NOT = { is_subject_of = SOV }
-		}
+		available = { NOT = { is_subject_of = SOV } }
 
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus CHE_maskhadovs_primacy"
@@ -3773,9 +3624,7 @@ focus_tree = {
 			add_stability = 0.09
 		}
 
-		ai_will_do = {
-			base = 1
-		}
+		ai_will_do = { base = 1 }
 	}
 
 	focus = {
@@ -3792,18 +3641,14 @@ focus_tree = {
 
 		search_filters = { FOCUS_FILTER_POLITICAL }
 
-		available = {
-			NOT = { is_subject_of = SOV }
-		}
+		available = { NOT = { is_subject_of = SOV } }
 
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus CHE_honor_dudaev"
 			add_political_power = 100
 		}
 
-		ai_will_do = {
-			base = 1
-		}
+		ai_will_do = { base = 1 }
 	}
 
 	focus = {
@@ -3820,9 +3665,7 @@ focus_tree = {
 
 		search_filters = { FOCUS_FILTER_POLITICAL }
 
-		available = {
-			NOT = { is_subject_of = SOV }
-		}
+		available = { NOT = { is_subject_of = SOV } }
 
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus CHE_zalizat_rani"
@@ -3834,6 +3677,10 @@ focus_tree = {
 
 		ai_will_do = {
 			base = 1
+			modifier = {
+				factor = 0
+				has_active_mission = bankruptcy_incoming_collapse
+			}
 		}
 	}
 
@@ -3848,15 +3695,11 @@ focus_tree = {
 		cost = 5
 
 		prerequisite = { focus = CHE_maskhadovs_primacy }
-		mutually_exclusive = {
-			focus = CHE_detach_islamists
-		}
+		mutually_exclusive = { focus = CHE_detach_islamists }
 
 		search_filters = { FOCUS_FILTER_POLITICAL }
 
-		available = {
-			NOT = { is_subject_of = SOV }
-		}
+		available = { NOT = { is_subject_of = SOV } }
 
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus CHE_compromise_with_islamists"
@@ -3868,9 +3711,7 @@ focus_tree = {
 			add_stability = -0.05
 		}
 
-		ai_will_do = {
-			base = 1
-		}
+		ai_will_do = { base = 1 }
 	}
 
 	focus = {
@@ -3887,9 +3728,7 @@ focus_tree = {
 
 		search_filters = { FOCUS_FILTER_POLITICAL }
 
-		available = {
-			NOT = { is_subject_of = SOV }
-		}
+		available = { NOT = { is_subject_of = SOV } }
 
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus CHE_empower_coalition_government"
@@ -3906,9 +3745,7 @@ focus_tree = {
 			change_foreign_jihadis_opinion = yes
 		}
 
-		ai_will_do = {
-			base = 1
-		}
+		ai_will_do = { base = 1 }
 	}
 
 	focus = {
@@ -3925,9 +3762,7 @@ focus_tree = {
 
 		search_filters = { FOCUS_FILTER_POLITICAL }
 
-		available = {
-			NOT = { is_subject_of = SOV }
-		}
+		available = { NOT = { is_subject_of = SOV } }
 
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus CHE_detach_but_recruit_maskhadov"
@@ -3950,9 +3785,7 @@ focus_tree = {
 			}
 		}
 
-		ai_will_do = {
-			base = 1
-		}
+		ai_will_do = { base = 1 }
 	}
 
 	focus = {
@@ -3969,9 +3802,7 @@ focus_tree = {
 
 		search_filters = { FOCUS_FILTER_POLITICAL }
 
-		available = {
-			NOT = { is_subject_of = SOV }
-		}
+		available = { NOT = { is_subject_of = SOV } }
 
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus CHE_appoint_khattab"
@@ -3993,9 +3824,7 @@ focus_tree = {
 			}
 		}
 
-		ai_will_do = {
-			base = 1
-		}
+		ai_will_do = { base = 1 }
 	}
 
 	focus = {
@@ -4052,9 +3881,7 @@ focus_tree = {
 			}
 		}
 
-		ai_will_do = {
-			base = 1
-		}
+		ai_will_do = { base = 1 }
 	}
 
 	focus = {
@@ -4090,9 +3917,7 @@ focus_tree = {
 			}
 		}
 
-		ai_will_do = {
-			base = 1
-		}
+		ai_will_do = { base = 1 }
 	}
 
 	focus = {
@@ -4125,9 +3950,7 @@ focus_tree = {
 			change_foreign_jihadis_opinion = yes
 		}
 
-		ai_will_do = {
-			base = 1
-		}
+		ai_will_do = { base = 1 }
 	}
 
 	focus = {
@@ -4160,8 +3983,7 @@ focus_tree = {
 			change_foreign_jihadis_opinion = yes
 		}
 
-		ai_will_do = {
-			base = 1
+		ai_will_do = { base = 1
 		}
 	}
 
@@ -4199,9 +4021,7 @@ focus_tree = {
 			}
 		}
 
-		ai_will_do = {
-			base = 1
-		}
+		ai_will_do = { base = 1 }
 	}
 
 	focus = {
@@ -4216,6 +4036,7 @@ focus_tree = {
 
 		prerequisite = { focus = CHE_salafist_propaganda }
 		prerequisite = { focus = CHE_meet_with_bin_laden }
+		will_lead_to_war_with = GEO
 
 		search_filters = { FOCUS_FILTER_WAR_SUPPORT FOCUS_FILTER_POLITICAL }
 
@@ -4237,9 +4058,7 @@ focus_tree = {
 			}
 		}
 
-		ai_will_do = {
-			base = 1
-		}
+		ai_will_do = { base = 1 }
 	}
 
 	focus = {
@@ -4254,6 +4073,7 @@ focus_tree = {
 
 		prerequisite = { focus = CHE_salafist_propaganda }
 		prerequisite = { focus = CHE_meet_with_bin_laden }
+		will_lead_to_war_with = SOV
 
 		search_filters = { FOCUS_FILTER_WAR_SUPPORT FOCUS_FILTER_POLITICAL }
 
@@ -4302,9 +4122,7 @@ focus_tree = {
 			}
 		}
 
-		ai_will_do = {
-			base = 1
-		}
+		ai_will_do = { base = 1 }
 	}
 
 	focus = {
@@ -4341,9 +4159,7 @@ focus_tree = {
 			}
 		}
 
-		ai_will_do = {
-			base = 1
-		}
+		ai_will_do = { base = 1 }
 	}
 
 	focus = {
@@ -4359,6 +4175,13 @@ focus_tree = {
 		prerequisite = { focus = CHE_start_raids_into_russia }
 		prerequisite = { focus = CHE_support_taliban }
 		prerequisite = { focus = CHE_biggest_raid_to_georgia }
+		will_lead_to_war_with = SOV
+		will_lead_to_war_with = GER
+		will_lead_to_war_with = FRA
+		will_lead_to_war_with = POL
+		will_lead_to_war_with = UKR
+		will_lead_to_war_with = BLR
+		will_lead_to_war_with = SPR
 
 		search_filters = { FOCUS_FILTER_WAR_SUPPORT FOCUS_FILTER_POLITICAL }
 
@@ -4422,9 +4245,7 @@ focus_tree = {
 			}
 		}
 
-		ai_will_do = {
-			base = 1
-		}
+		ai_will_do = { base = 1 }
 	}
 
 	focus = {
@@ -4452,9 +4273,7 @@ focus_tree = {
 			country_event = chechnya.25
 		}
 
-		ai_will_do = {
-			base = 1
-		}
+		ai_will_do = { base = 1 }
 	}
 
 	focus = {
@@ -4468,15 +4287,11 @@ focus_tree = {
 		cost = 5
 
 		prerequisite = { focus = CHE_maskhadovs_primacy }
-		mutually_exclusive = {
-			focus = CHE_compromise_with_islamists
-		}
+		mutually_exclusive = { focus = CHE_compromise_with_islamists }
 
 		search_filters = { FOCUS_FILTER_POLITICAL }
 
-		available = {
-			NOT = { is_subject_of = SOV }
-		}
+		available = { NOT = { is_subject_of = SOV } }
 
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus CHE_detach_islamists"
@@ -4488,9 +4303,7 @@ focus_tree = {
 			add_stability = 0.05
 		}
 
-		ai_will_do = {
-			base = 1
-		}
+		ai_will_do = { base = 1 }
 	}
 
 	focus = {
@@ -4508,9 +4321,7 @@ focus_tree = {
 
 		search_filters = { FOCUS_FILTER_POLITICAL }
 
-		available = {
-			NOT = { is_subject_of = SOV }
-		}
+		available = { NOT = { is_subject_of = SOV } }
 
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus CHE_secularist_rise"
@@ -4525,9 +4336,7 @@ focus_tree = {
 			}
 		}
 
-		ai_will_do = {
-			base = 1
-		}
+		ai_will_do = { base = 1 }
 	}
 
 	focus = {
@@ -4541,15 +4350,11 @@ focus_tree = {
 		cost = 5
 
 		prerequisite = { focus = CHE_secularist_rise }
-		mutually_exclusive = {
-			focus = CHE_raduevs_rise
-		}
+		mutually_exclusive = { focus = CHE_raduevs_rise }
 
 		search_filters = { FOCUS_FILTER_POLITICAL }
 
-		available = {
-			NOT = { is_subject_of = SOV }
-		}
+		available = { NOT = { is_subject_of = SOV } }
 
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus CHE_nationalist_dominance"
@@ -4560,9 +4365,7 @@ focus_tree = {
 			add_political_power = 100
 		}
 
-		ai_will_do = {
-			base = 1
-		}
+		ai_will_do = { base = 1 }
 	}
 
 	focus = {
@@ -4600,9 +4403,7 @@ focus_tree = {
 			}
 		}
 
-		ai_will_do = {
-			base = 1
-		}
+		ai_will_do = { base = 1 }
 	}
 
 	focus = {
@@ -4677,9 +4478,7 @@ focus_tree = {
 			change_influence_percentage = yes
 		}
 
-		ai_will_do = {
-			base = 1
-		}
+		ai_will_do = { base = 1 }
 	}
 
 	focus = {
@@ -4741,9 +4540,7 @@ focus_tree = {
 			}
 		}
 
-		ai_will_do = {
-			base = 1
-		}
+		ai_will_do = { base = 1 }
 	}
 
 	focus = {
@@ -4789,9 +4586,7 @@ focus_tree = {
 			change_influence_percentage = yes
 		}
 
-		ai_will_do = {
-			base = 1
-		}
+		ai_will_do = { base = 1 }
 	}
 
 	focus = {
@@ -4820,9 +4615,7 @@ focus_tree = {
 			change_domestic_influence_percentage = yes
 		}
 
-		ai_will_do = {
-			base = 1
-		}
+		ai_will_do = { base = 1 }
 	}
 
 	focus = {
@@ -4869,9 +4662,7 @@ focus_tree = {
 			}
 		}
 
-		ai_will_do = {
-			base = 1
-		}
+		ai_will_do = { base = 1 }
 	}
 
 	focus = {
@@ -4887,9 +4678,7 @@ focus_tree = {
 		prerequisite = { focus = CHE_turkish_azeri_raltions }
 		prerequisite = { focus = CHE_maintain_a_republic }
 		prerequisite = { focus = CHE_unso_invite }
-		mutually_exclusive = {
-			focus = CHE_western_democracy
-		}
+		mutually_exclusive = { focus = CHE_western_democracy }
 
 		search_filters = { FOCUS_FILTER_POLITICAL }
 
@@ -4910,9 +4699,7 @@ focus_tree = {
 			}
 		}
 
-		ai_will_do = {
-			base = 1
-		}
+		ai_will_do = { base = 1 }
 	}
 
 	focus = {
@@ -4939,9 +4726,7 @@ focus_tree = {
 			add_ideas = CHE_caucas_nationalism_idea
 		}
 
-		ai_will_do = {
-			base = 1
-		}
+		ai_will_do = { base = 1 }
 	}
 
 	focus = {
@@ -4957,9 +4742,7 @@ focus_tree = {
 		prerequisite = { focus = CHE_turkish_azeri_raltions }
 		prerequisite = { focus = CHE_maintain_a_republic }
 		prerequisite = { focus = CHE_unso_invite }
-		mutually_exclusive = {
-			focus = CHE_caucasian_federalism
-		}
+		mutually_exclusive = { focus = CHE_caucasian_federalism }
 
 		search_filters = { FOCUS_FILTER_POLITICAL }
 
@@ -4980,9 +4763,7 @@ focus_tree = {
 			}
 		}
 
-		ai_will_do = {
-			base = 1
-		}
+		ai_will_do = { base = 1 }
 	}
 
 	focus = {
@@ -5018,9 +4799,7 @@ focus_tree = {
 			}
 		}
 
-		ai_will_do = {
-			base = 1
-		}
+		ai_will_do = { base = 1 }
 	}
 
 	focus = {
@@ -5035,9 +4814,7 @@ focus_tree = {
 
 		search_filters = { FOCUS_FILTER_POLITICAL }
 
-		available = {
-			neutrality_neutral_communism_are_in_power = yes
-		}
+		available = { neutrality_neutral_communism_are_in_power = yes }
 
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus CHE_raduevs"
@@ -5057,9 +4834,7 @@ focus_tree = {
 			}
 		}
 
-		ai_will_do = {
-			base = 1
-		}
+		ai_will_do = { base = 1 }
 	}
 
 	focus = {
@@ -5073,15 +4848,11 @@ focus_tree = {
 		cost = 5
 
 		prerequisite = { focus = CHE_secularist_rise }
-		mutually_exclusive = {
-			focus = CHE_nationalist_dominance
-		}
+		mutually_exclusive = { focus = CHE_nationalist_dominance }
 
 		search_filters = { FOCUS_FILTER_POLITICAL }
 
-		available = {
-			NOT = { is_subject_of = SOV }
-		}
+		available = { NOT = { is_subject_of = SOV } }
 
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus CHE_raduevs_rise"
@@ -5115,9 +4886,7 @@ focus_tree = {
 			}
 		}
 
-		ai_will_do = {
-			base = 1
-		}
+		ai_will_do = { base = 1 }
 	}
 
 	focus = {
@@ -5134,18 +4903,14 @@ focus_tree = {
 
 		search_filters = { FOCUS_FILTER_POLITICAL }
 
-		available = {
-			neutrality_neutral_communism_are_in_power = yes
-		}
+		available = { neutrality_neutral_communism_are_in_power = yes }
 
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus CHE_ickeriyskie_pioneri"
 			add_ideas = CHE_commi_army
 		}
 
-		ai_will_do = {
-			base = 1
-		}
+		ai_will_do = { base = 1 }
 	}
 
 	focus = {
@@ -5162,18 +4927,14 @@ focus_tree = {
 
 		search_filters = { FOCUS_FILTER_POLITICAL }
 
-		available = {
-			neutrality_neutral_communism_are_in_power = yes
-		}
+		available = { neutrality_neutral_communism_are_in_power = yes }
 
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus CHE_reinvent_socialism"
 			add_ideas = CHE_commi_propaganda
 		}
 
-		ai_will_do = {
-			base = 1
-		}
+		ai_will_do = { base = 1 }
 	}
 
 	focus = {
@@ -5191,9 +4952,7 @@ focus_tree = {
 
 		search_filters = { FOCUS_FILTER_POLITICAL }
 
-		available = {
-			neutrality_neutral_communism_are_in_power = yes
-		}
+		available = { neutrality_neutral_communism_are_in_power = yes }
 
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus CHE_army_of_dudaev"
@@ -5203,9 +4962,7 @@ focus_tree = {
 			}
 		}
 
-		ai_will_do = {
-			base = 1
-		}
+		ai_will_do = { base = 1 }
 	}
 
 	focus = {
@@ -5223,9 +4980,7 @@ focus_tree = {
 
 		search_filters = { FOCUS_FILTER_POLITICAL }
 
-		available = {
-			neutrality_neutral_communism_are_in_power = yes
-		}
+		available = { neutrality_neutral_communism_are_in_power = yes }
 
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus CHE_partbilet_and_quran"
@@ -5235,9 +4990,7 @@ focus_tree = {
 			}
 		}
 
-		ai_will_do = {
-			base = 1
-		}
+		ai_will_do = { base = 1 }
 	}
 
 	focus = {
@@ -5255,9 +5008,7 @@ focus_tree = {
 
 		search_filters = { FOCUS_FILTER_POLITICAL }
 
-		available = {
-			neutrality_neutral_communism_are_in_power = yes
-		}
+		available = { neutrality_neutral_communism_are_in_power = yes }
 
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus CHE_decrease_radicalism"
@@ -5267,9 +5018,7 @@ focus_tree = {
 			}
 		}
 
-		ai_will_do = {
-			base = 1
-		}
+		ai_will_do = { base = 1 }
 	}
 
 	focus = {
@@ -5288,9 +5037,7 @@ focus_tree = {
 
 		search_filters = { FOCUS_FILTER_POLITICAL }
 
-		available = {
-			neutrality_neutral_communism_are_in_power = yes
-		}
+		available = { neutrality_neutral_communism_are_in_power = yes }
 
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus CHE_political_domination"
@@ -5300,9 +5047,7 @@ focus_tree = {
 			}
 		}
 
-		ai_will_do = {
-			base = 1
-		}
+		ai_will_do = { base = 1 }
 	}
 
 	focus = {
@@ -5321,18 +5066,14 @@ focus_tree = {
 
 		search_filters = { FOCUS_FILTER_POLITICAL }
 
-		available = {
-			neutrality_neutral_communism_are_in_power = yes
-		}
+		available = { neutrality_neutral_communism_are_in_power = yes }
 
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus CHE_apologize_for_pervomaysk"
 			SOV = { country_event = { id = chechnya.19 days = 1 } }
 		}
 
-		ai_will_do = {
-			base = 1
-		}
+		ai_will_do = { base = 1 }
 	}
 
 	focus = {
@@ -5368,9 +5109,7 @@ focus_tree = {
 			}
 		}
 
-		ai_will_do = {
-			base = 1
-		}
+		ai_will_do = { base = 1 }
 	}
 
 	focus = {
@@ -5388,9 +5127,7 @@ focus_tree = {
 
 		search_filters = { FOCUS_FILTER_POLITICAL }
 
-		available = {
-			neutrality_neutral_communism_are_in_power = yes
-		}
+		available = { neutrality_neutral_communism_are_in_power = yes }
 
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus CHE_chechen_komsomol"
@@ -5401,9 +5138,7 @@ focus_tree = {
 			add_political_power = 50
 		}
 
-		ai_will_do = {
-			base = 1
-		}
+		ai_will_do = { base = 1 }
 	}
 
 	focus = {
@@ -5420,9 +5155,7 @@ focus_tree = {
 
 		search_filters = { FOCUS_FILTER_POLITICAL }
 
-		available = {
-			neutrality_neutral_communism_are_in_power = yes
-		}
+		available = { neutrality_neutral_communism_are_in_power = yes }
 
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus CHE_KSSR"
@@ -5434,9 +5167,7 @@ focus_tree = {
 			unlock_decision_category_tooltip = CHE_caucasian_revol_category
 		}
 
-		ai_will_do = {
-			base = 1
-		}
+		ai_will_do = { base = 1 }
 	}
 
 	focus = {
@@ -5453,9 +5184,7 @@ focus_tree = {
 
 		search_filters = { FOCUS_FILTER_POLITICAL }
 
-		available = {
-			NOT = { is_subject_of = SOV }
-		}
+		available = { NOT = { is_subject_of = SOV } }
 
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus CHE_protect_borders"
@@ -5491,6 +5220,10 @@ focus_tree = {
 
 		ai_will_do = {
 			base = 1
+			modifier = {
+				factor = 0
+				has_active_mission = bankruptcy_incoming_collapse
+			}
 		}
 	}
 
@@ -5508,18 +5241,14 @@ focus_tree = {
 
 		search_filters = { FOCUS_FILTER_POLITICAL }
 
-		available = {
-			NOT = { is_subject_of = SOV }
-		}
+		available = { NOT = { is_subject_of = SOV } }
 
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus CHE_icherian_identity"
 			add_ideas = CHE_the_true_identity
 		}
 
-		ai_will_do = {
-			base = 1
-		}
+		ai_will_do = { base = 1 }
 	}
 
 	focus = {
@@ -5538,9 +5267,7 @@ focus_tree = {
 
 		search_filters = { FOCUS_FILTER_POLITICAL }
 
-		available = {
-			NOT = { is_subject_of = SOV }
-		}
+		available = { NOT = { is_subject_of = SOV } }
 
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus CHE_icherian_youth"
@@ -5550,9 +5277,7 @@ focus_tree = {
 			}
 		}
 
-		ai_will_do = {
-			base = 1
-		}
+		ai_will_do = { base = 1 }
 	}
 
 	focus = {
@@ -5569,9 +5294,7 @@ focus_tree = {
 
 		search_filters = { FOCUS_FILTER_POLITICAL }
 
-		available = {
-			NOT = { is_subject_of = SOV }
-		}
+		available = { NOT = { is_subject_of = SOV } }
 
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus CHE_integrate_officers"
@@ -5581,9 +5304,7 @@ focus_tree = {
 			increase_military_spending = yes
 		}
 
-		ai_will_do = {
-			base = 1
-		}
+		ai_will_do = { base = 1 }
 	}
 
 	focus = {
@@ -5600,9 +5321,7 @@ focus_tree = {
 
 		search_filters = { FOCUS_FILTER_MILITARY_LAWS }
 
-		available = {
-			NOT = { is_subject_of = SOV }
-		}
+		available = { NOT = { is_subject_of = SOV } }
 
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus CHE_icherian_mobilise"
@@ -5610,8 +5329,7 @@ focus_tree = {
 			add_ideas = CHE_mobilize_the_nation_idea
 		}
 
-		ai_will_do = {
-			base = 1
+		ai_will_do = { base = 1
 		}
 	}
 
@@ -5630,9 +5348,7 @@ focus_tree = {
 
 		search_filters = { FOCUS_FILTER_MILITARY_LAWS }
 
-		available = {
-			NOT = { is_subject_of = SOV }
-		}
+		available = { NOT = { is_subject_of = SOV } }
 
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus CHE_icherian_glory_army"
@@ -5642,8 +5358,7 @@ focus_tree = {
 			}
 		}
 
-		ai_will_do = {
-			base = 1
+		ai_will_do = { base = 1
 		}
 	}
 
@@ -5661,9 +5376,7 @@ focus_tree = {
 
 		search_filters = { FOCUS_FILTER_MILITARY_LAWS }
 
-		available = {
-			NOT = { is_subject_of = SOV }
-		}
+		available = { NOT = { is_subject_of = SOV } }
 
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus CHE_return_vs"
@@ -5671,8 +5384,7 @@ focus_tree = {
 			add_ideas = CHE_nat_guard_idea1
 		}
 
-		ai_will_do = {
-			base = 1
+		ai_will_do = { base = 1
 		}
 	}
 
@@ -5717,9 +5429,7 @@ focus_tree = {
 			change_influence_percentage = yes
 		}
 
-		ai_will_do = {
-			base = 1
-		}
+		ai_will_do = { base = 1 }
 	}
 
 	focus = {
@@ -5763,9 +5473,7 @@ focus_tree = {
 			change_influence_percentage = yes
 		}
 
-		ai_will_do = {
-			base = 1
-		}
+		ai_will_do = { base = 1 }
 	}
 
 	focus = {
@@ -5782,9 +5490,7 @@ focus_tree = {
 
 		search_filters = { FOCUS_FILTER_MILITARY_LAWS }
 
-		available = {
-			NOT = { is_subject_of = SOV }
-		}
+		available = { NOT = { is_subject_of = SOV } }
 
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus CHE_return_nac_gvard"
@@ -5826,8 +5532,7 @@ focus_tree = {
 			}
 		}
 
-		ai_will_do = {
-			base = 1
+		ai_will_do = { base = 1
 		}
 	}
 
@@ -5842,17 +5547,14 @@ focus_tree = {
 
 		search_filters = { FOCUS_FILTER_ECONOMY }
 
-		available = {
-			has_war = no
-		}
+		available = { has_war = no }
 
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus CHE_ichker_economys"
 			add_political_power = 100
 		}
 
-		ai_will_do = {
-			base = 1
+		ai_will_do = { base = 1
 		}
 	}
 
@@ -5875,8 +5577,7 @@ focus_tree = {
 			add_timed_idea = { idea = civilian_industry_project days = 490 }
 		}
 
-		ai_will_do = {
-			base = 1
+		ai_will_do = { base = 1
 		}
 	}
 
@@ -5894,9 +5595,7 @@ focus_tree = {
 
 		search_filters = { FOCUS_FILTER_ECONOMY }
 
-		available = {
-			has_war = no
-		}
+		available = { has_war = no }
 
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus CHE_agro_return"
@@ -5907,8 +5606,7 @@ focus_tree = {
 			change_landowners_opinion = yes
 		}
 
-		ai_will_do = {
-			base = 1
+		ai_will_do = { base = 1
 		}
 	}
 
@@ -5938,8 +5636,7 @@ focus_tree = {
 			}
 		}
 
-		ai_will_do = {
-			base = 1
+		ai_will_do = { base = 1
 		}
 	}
 
@@ -5964,6 +5661,15 @@ focus_tree = {
 
 		ai_will_do = {
 			base = 1
+			modifier = {
+				factor = 0
+				has_active_mission = bankruptcy_incoming_collapse
+			}
+
+			modifier = {
+				factor = 0
+				can_staff_an_agriculture_district = no
+			}
 		}
 	}
 
@@ -5988,6 +5694,15 @@ focus_tree = {
 
 		ai_will_do = {
 			base = 1
+			modifier = {
+				factor = 0
+				has_active_mission = bankruptcy_incoming_collapse
+			}
+
+			modifier = {
+				factor = 0
+				can_staff_an_agriculture_district = no
+			}
 		}
 	}
 
@@ -6012,6 +5727,15 @@ focus_tree = {
 
 		ai_will_do = {
 			base = 1
+			modifier = {
+				factor = 0
+				has_active_mission = bankruptcy_incoming_collapse
+			}
+
+			modifier = {
+				factor = 0
+				can_staff_an_agriculture_district = no
+			}
 		}
 	}
 
@@ -6034,8 +5758,7 @@ focus_tree = {
 			add_timed_idea = { idea = civilian_industry_project2 days = 490 }
 		}
 
-		ai_will_do = {
-			base = 1
+		ai_will_do = { base = 1
 		}
 	}
 
@@ -6068,6 +5791,10 @@ focus_tree = {
 
 		ai_will_do = {
 			base = 1
+			modifier = {
+				factor = 0
+				has_active_mission = bankruptcy_incoming_collapse
+			}
 		}
 	}
 
@@ -6093,6 +5820,15 @@ focus_tree = {
 
 		ai_will_do = {
 			base = 1
+			modifier = {
+				factor = 0
+				has_active_mission = bankruptcy_incoming_collapse
+			}
+
+			modifier = {
+				factor = 0
+				can_staff_an_industrial_complex = no
+			}
 		}
 	}
 
@@ -6118,6 +5854,15 @@ focus_tree = {
 
 		ai_will_do = {
 			base = 1
+			modifier = {
+				factor = 0
+				has_active_mission = bankruptcy_incoming_collapse
+			}
+
+			modifier = {
+				factor = 0
+				can_staff_an_industrial_complex = no
+			}
 		}
 	}
 
@@ -6148,9 +5893,7 @@ focus_tree = {
 			add_ideas = CHE_black_market_idea
 		}
 
-		ai_will_do = {
-			base = 1
-		}
+		ai_will_do = { base = 1 }
 	}
 
 	focus = {
@@ -6186,9 +5929,7 @@ focus_tree = {
 			}
 		}
 
-		ai_will_do = {
-			base = 1
-		}
+		ai_will_do = { base = 1 }
 	}
 
 	focus = {
@@ -6202,9 +5943,7 @@ focus_tree = {
 		cost = 5
 
 		prerequisite = { focus = CHE_georgia_black_market }
-		mutually_exclusive = {
-			focus = CHE_black_trade_link_to_aze
-		}
+		mutually_exclusive = { focus = CHE_black_trade_link_to_aze }
 
 		search_filters = { FOCUS_FILTER_POLITICAL }
 
@@ -6227,9 +5966,7 @@ focus_tree = {
 		}
 		}
 
-		ai_will_do = {
-			base = 1
-		}
+		ai_will_do = { base = 1 }
 	}
 
 	focus = {
@@ -6243,9 +5980,7 @@ focus_tree = {
 		cost = 5
 
 		prerequisite = { focus = CHE_georgia_black_market }
-		mutually_exclusive = {
-			focus = CHE_black_trade_link_to_arm
-		}
+		mutually_exclusive = { focus = CHE_black_trade_link_to_arm }
 
 		search_filters = { FOCUS_FILTER_POLITICAL }
 
@@ -6268,9 +6003,7 @@ focus_tree = {
 			}
 		}
 
-		ai_will_do = {
-			base = 1
-		}
+		ai_will_do = { base = 1 }
 	}
 
 	focus = {
@@ -6306,9 +6039,7 @@ focus_tree = {
 			}
 		}
 
-		ai_will_do = {
-			base = 1
-		}
+		ai_will_do = { base = 1 }
 	}
 
 	focus = {
@@ -6326,9 +6057,7 @@ focus_tree = {
 
 		search_filters = { FOCUS_FILTER_INDUSTRY }
 
-		available = {
-			is_subject_of = SOV
-		}
+		available = { is_subject_of = SOV }
 
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus CHE_electro_pult"
@@ -6341,6 +6070,15 @@ focus_tree = {
 
 		ai_will_do = {
 			base = 1
+			modifier = {
+				factor = 0
+				has_active_mission = bankruptcy_incoming_collapse
+			}
+
+			modifier = {
+				factor = 0
+				can_staff_an_industrial_complex = no
+			}
 		}
 	}
 
@@ -6374,9 +6112,7 @@ focus_tree = {
 			change_influence_percentage = yes
 		}
 
-		ai_will_do = {
-			base = 1
-		}
+		ai_will_do = { base = 1 }
 	}
 
 	focus = {
@@ -6409,9 +6145,7 @@ focus_tree = {
 			change_influence_percentage = yes
 		}
 
-		ai_will_do = {
-			base = 1
-		}
+		ai_will_do = { base = 1 }
 	}
 
 	focus = {
@@ -6429,9 +6163,7 @@ focus_tree = {
 
 		search_filters = { FOCUS_FILTER_RESOURCE }
 
-		available = {
-			is_subject_of = SOV
-		}
+		available = { is_subject_of = SOV }
 
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus CHE_Grozneftegaz"
@@ -6454,6 +6186,10 @@ focus_tree = {
 
 		ai_will_do = {
 			base = 1
+			modifier = {
+				factor = 0
+				has_active_mission = bankruptcy_incoming_collapse
+			}
 		}
 	}
 
@@ -6483,9 +6219,7 @@ focus_tree = {
 			}
 		}
 
-		ai_will_do = {
-			base = 1
-		}
+		ai_will_do = { base = 1 }
 	}
 
 	focus = {
@@ -6509,6 +6243,10 @@ focus_tree = {
 
 		ai_will_do = {
 			base = 1
+			modifier = {
+				factor = 0
+				has_active_mission = bankruptcy_incoming_collapse
+			}
 		}
 	}
 
@@ -6524,7 +6262,7 @@ focus_tree = {
 
 		prerequisite = { focus = CHE_infrastructure }
 
-		search_filters = { FOCUS_FILTER_POLITICAL }
+		search_filters = { FOCUS_FILTER_POLITICAL FOCUS_FILTER_EXPENDITURE }
 
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus CHE_airport"
@@ -6545,6 +6283,10 @@ focus_tree = {
 
 		ai_will_do = {
 			base = 1
+			modifier = {
+				factor = 0
+				has_active_mission = bankruptcy_incoming_collapse
+			}
 		}
 	}
 
@@ -6562,9 +6304,7 @@ focus_tree = {
 
 		search_filters = { FOCUS_FILTER_ECONOMY }
 
-		available = {
-			NOT = { is_subject_of = SOV }
-		}
+		available = { NOT = { is_subject_of = SOV } }
 
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus CHE_allow_narcotics_creat"
@@ -6576,8 +6316,7 @@ focus_tree = {
 			modify_treasury_effect = yes
 		}
 
-		ai_will_do = {
-			base = 1
+		ai_will_do = { base = 1
 		}
 	}
 
@@ -6594,11 +6333,9 @@ focus_tree = {
 		prerequisite = { focus = CHE_Grozneftegaz }
 		prerequisite = { focus = CHE_electro_pult }
 
-		search_filters = { FOCUS_FILTER_RESOURCE }
+		search_filters = { FOCUS_FILTER_RESOURCE FOCUS_FILTER_EXPENDITURE }
 
-		available = {
-			is_subject_of = SOV
-		}
+		available = { is_subject_of = SOV }
 
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus CHE_chechen_neftehim"
@@ -6619,6 +6356,10 @@ focus_tree = {
 
 		ai_will_do = {
 			base = 1
+			modifier = {
+				factor = 0
+				has_active_mission = bankruptcy_incoming_collapse
+			}
 		}
 	}
 
@@ -6636,9 +6377,7 @@ focus_tree = {
 
 		search_filters = { FOCUS_FILTER_ECONOMY }
 
-		available = {
-			NOT = { is_subject_of = SOV }
-		}
+		available = { NOT = { is_subject_of = SOV } }
 
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus CHE_secret_export_to_russia"
@@ -6651,8 +6390,7 @@ focus_tree = {
 			}
 		}
 
-		ai_will_do = {
-			base = 1
+		ai_will_do = { base = 1
 		}
 	}
 
@@ -6670,9 +6408,7 @@ focus_tree = {
 
 		search_filters = { FOCUS_FILTER_ECONOMY }
 
-		available = {
-			NOT = { is_subject_of = SOV }
-		}
+		available = { NOT = { is_subject_of = SOV } }
 
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus CHE_secret_export_to_centralas"
@@ -6686,8 +6422,7 @@ focus_tree = {
 			UZB = { add_ideas = CHE_narcos_outer_idea }
 		}
 
-		ai_will_do = {
-			base = 1
+		ai_will_do = { base = 1
 		}
 	}
 
@@ -6707,8 +6442,8 @@ focus_tree = {
 
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus CHE_gcc_deal"
-			every_country = {
-				limit = { has_idea = idea_gcc_member_state }
+			for_each_scope_loop = {
+				array = global.gcc_member_state
 				if = {
 					limit = { NOT = { original_tag = BHR } BHR = { has_idea = idea_gcc_member_state } }
 					add_opinion_modifier = {
@@ -6791,9 +6526,7 @@ focus_tree = {
 			}
 		}
 
-		ai_will_do = {
-			base = 1
-		}
+		ai_will_do = { base = 1 }
 	}
 
 	focus = {
@@ -6826,9 +6559,7 @@ focus_tree = {
 			change_influence_percentage = yes
 		}
 
-		ai_will_do = {
-			base = 1
-		}
+		ai_will_do = { base = 1 }
 	}
 
 	focus = {
@@ -6870,6 +6601,10 @@ focus_tree = {
 
 		ai_will_do = {
 			base = 1
+			modifier = {
+				factor = 0
+				has_active_mission = bankruptcy_incoming_collapse
+			}
 		}
 	}
 
@@ -6903,8 +6638,6 @@ focus_tree = {
 			change_influence_percentage = yes
 		}
 
-		ai_will_do = {
-			base = 1
-		}
+		ai_will_do = { base = 1 }
 	}
 }

@@ -18,7 +18,7 @@ country_event = {
 		name = tag_ns.N.a
 		log = "[GetDateText]: [This.GetName]: tag_ns.N.a executed"
 		set_temp_variable = { party_popularity_increase = -0.01 }
-		add_relative_party_popularity = yes
+		change_relative_party_popularity = yes
 
 		ai_chance = { base = 1 }
 	}
@@ -112,6 +112,8 @@ trigger_year_2067_events = {
 ```
 
 When the intended recipient may no longer own the target state, use the owner-guard pattern (check expected owner, fall back to `random_country = { limit = { owns_state = X } }`).
+
+An event whose own `trigger` carries a `date > YYYY.M.D` lower bound must have a scheduling entry here; the guard only blocks an early fire, it never causes one. `validate_events.py` enforces this (`date-gated-not-scheduled`); a chain event fired by an already-scheduled parent inherits its schedule and needs no entry of its own.
 
 ## Treasury/Debt/Productivity Effects
 

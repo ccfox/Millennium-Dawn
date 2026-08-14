@@ -86,9 +86,7 @@ focus_tree = {
 			add_ideas = DEN_idea_joint_material_command
 		}
 
-		ai_will_do = {
-			base = 1
-		}
+		ai_will_do = { base = 1 }
 	}
 
 	focus = {
@@ -1701,9 +1699,7 @@ focus_tree = {
 			increase_military_spending = yes
 		}
 
-		ai_will_do = {
-			base = 1
-		}
+		ai_will_do = { base = 1 }
 	}
 
 	focus = {
@@ -1727,9 +1723,7 @@ focus_tree = {
 			add_ideas = idea_focus_new_recruitment_strategies
 		}
 
-		ai_will_do = {
-			base = 1
-		}
+		ai_will_do = { base = 1 }
 	}
 
 	focus = {
@@ -1757,9 +1751,7 @@ focus_tree = {
 			increase_officer_training_level = yes
 		}
 
-		ai_will_do = {
-			base = 1
-		}
+		ai_will_do = { base = 1 }
 	}
 
 	focus = {
@@ -1792,13 +1784,7 @@ focus_tree = {
 			add_to_variable = { DEN_equipment_cost_multiplier_modifier = 0.03 tooltip = equipment_cost_multiplier_modifier_tt }
 		}
 
-		ai_will_do = {
-			base = 1
-			modifier = {
-				factor = 0
-				has_active_mission = bankruptcy_incoming_collapse
-			}
-		}
+		ai_will_do = { base = 1 }
 	}
 
 	focus = {
@@ -1822,9 +1808,7 @@ focus_tree = {
 			army_experience = 35
 		}
 
-		ai_will_do = {
-			base = 1
-		}
+		ai_will_do = { base = 1 }
 	}
 
 	focus = {
@@ -1881,9 +1865,7 @@ focus_tree = {
 			add_to_variable = { DEN_experience_gain_army = 0.02 tooltip = experience_gain_army_tt }
 		}
 
-		ai_will_do = {
-			base = 1
-		}
+		ai_will_do = { base = 1 }
 	}
 
 	focus = {
@@ -2068,9 +2050,7 @@ focus_tree = {
 			navy_experience = 50
 		}
 
-		ai_will_do = {
-			base = 1
-		}
+		ai_will_do = { base = 1 }
 	}
 
 	focus = {
@@ -2111,9 +2091,7 @@ focus_tree = {
 			}
 		}
 
-		ai_will_do = {
-			base = 1
-		}
+		ai_will_do = { base = 1 }
 	}
 
 	focus = {
@@ -2154,9 +2132,7 @@ focus_tree = {
 			}
 		}
 
-		ai_will_do = {
-			base = 1
-		}
+		ai_will_do = { base = 1 }
 	}
 
 	focus = {
@@ -2281,9 +2257,7 @@ focus_tree = {
 			add_to_variable = { DEN_navy_personnel_cost_multiplier_modifier = 0.05 tooltip = navy_personnel_cost_multiplier_modifier_tt }
 		}
 
-		ai_will_do = {
-			base = 1
-		}
+		ai_will_do = { base = 1 }
 	}
 
 	focus = {
@@ -2371,9 +2345,10 @@ focus_tree = {
 					fixed_ship_radar_slot = module_sonar_3
 					fixed_ship_auxillary_slot_3 = module_torpedoes_2
 					fixed_ship_auxillary_slot_2 = module_sub_esm_1
-					fixed_ship_auxillary_slot_1 = module_vls_sub_lam_2
-					fixed_ship_auxillary_slot = module_vls_sub_lam_2
+					fixed_ship_auxillary_slot_1 = module_naval_sub_vls_cells_8
+					fixed_ship_auxillary_slot = module_naval_sub_vls_cells_8
 					fixed_ship_battery_slot = module_anti_ship_torpedoes_2
+					fixed_ship_missile_ammo_slot = module_naval_sub_ammo_land_attack_2
 				}
 			}
 		}
@@ -2422,9 +2397,10 @@ focus_tree = {
 					fixed_ship_radar_slot = module_sonar_4
 					fixed_ship_auxillary_slot_3 = module_torpedoes_2
 					fixed_ship_auxillary_slot_2 = module_sub_esm_1
-					fixed_ship_auxillary_slot_1 = module_vls_sub_lam_2
-					fixed_ship_auxillary_slot = module_vls_sub_lam_2
+					fixed_ship_auxillary_slot_1 = module_naval_sub_vls_cells_32
+					fixed_ship_auxillary_slot = module_naval_sub_vls_cells_32
 					fixed_ship_battery_slot = module_anti_ship_torpedoes_2
+					fixed_ship_missile_ammo_slot = module_naval_sub_ammo_land_attack_2
 				}
 			}
 		}
@@ -2522,10 +2498,11 @@ focus_tree = {
 					fixed_ship_radar_slot = module_radar_4
 					fixed_ship_auxillary_slot_2 = module_chain_gun
 					fixed_ship_auxillary_slot_1 = module_chain_gun
-					fixed_ship_auxillary_slot = module_aa_missiles_3
+					fixed_ship_auxillary_slot = module_naval_missile_mount_quad
 					fixed_ship_battery_slot = module_76mm_gun_2
 					front_1_custom_slot = module_torpedoes_3
 					rear_1_custom_slot = module_light_helipad_1
+					fixed_ship_missile_ammo_slot = module_naval_ammo_air_defense_3
 				}
 			}
 		}
@@ -2617,9 +2594,7 @@ focus_tree = {
 			add_to_variable = { DEN_positioning = 0.05 tooltip = positioning_tt }
 		}
 
-		ai_will_do = {
-			base = 1
-		}
+		ai_will_do = { base = 1 }
 	}
 
 	###Air Force Tree
@@ -2650,9 +2625,7 @@ focus_tree = {
 			}
 		}
 
-		ai_will_do = {
-			base = 1
-		}
+		ai_will_do = { base = 1 }
 	}
 
 	focus = {
@@ -2680,9 +2653,7 @@ focus_tree = {
 			add_to_variable = { DEN_air_defence = 0.04 tooltip = air_defence_factor_tt }
 		}
 
-		ai_will_do = {
-			base = 1
-		}
+		ai_will_do = { base = 1 }
 	}
 
 	focus = {
@@ -2730,9 +2701,7 @@ focus_tree = {
 			}
 		}
 
-		ai_will_do = {
-			base = 1
-		}
+		ai_will_do = { base = 1 }
 	}
 
 	focus = {
@@ -3090,9 +3059,7 @@ focus_tree = {
 			}
 		}
 
-		ai_will_do = {
-			base = 1
-		}
+		ai_will_do = { base = 1 }
 	}
 
 	focus = {
@@ -3130,9 +3097,7 @@ focus_tree = {
 			}
 		}
 
-		ai_will_do = {
-			base = 1
-		}
+		ai_will_do = { base = 1 }
 	}
 
 	focus = {
@@ -3807,9 +3772,7 @@ focus_tree = {
 			add_ideas = DEN_Idea_VFK
 		}
 
-		ai_will_do = {
-			base = 1
-		}
+		ai_will_do = { base = 1 }
 	}
 
 	### Economic Tree /Gouvernance
@@ -3925,9 +3888,7 @@ focus_tree = {
 			add_political_power = 150
 		}
 
-		ai_will_do = {
-			base = 1
-		}
+		ai_will_do = { base = 1 }
 	}
 
 	focus = {
@@ -3961,9 +3922,7 @@ focus_tree = {
 			increase_centralization = yes
 		}
 
-		ai_will_do = {
-			base = 1
-		}
+		ai_will_do = { base = 1 }
 	}
 
 	focus = {
@@ -3997,9 +3956,7 @@ focus_tree = {
 			decrease_centralization = yes
 		}
 
-		ai_will_do = {
-			base = 1
-		}
+		ai_will_do = { base = 1 }
 	}
 
 	focus = {
@@ -4036,9 +3993,7 @@ focus_tree = {
 			country_event = denmark.100
 		}
 
-		ai_will_do = {
-			base = 1
-		}
+		ai_will_do = { base = 1 }
 	}
 
 	focus = {
@@ -4067,9 +4022,7 @@ focus_tree = {
 			add_ideas = DEN_regional_investments_idea_1
 		}
 
-		ai_will_do = {
-			base = 1
-		}
+		ai_will_do = { base = 1 }
 	}
 
 	focus = {
@@ -4098,9 +4051,7 @@ focus_tree = {
 			add_ideas = DEN_social_spending_reforms_centralization_idea_1
 		}
 
-		ai_will_do = {
-			base = 1
-		}
+		ai_will_do = { base = 1 }
 	}
 
 	focus = {
@@ -4129,9 +4080,7 @@ focus_tree = {
 			add_ideas = DEN_social_spending_reforms_decentralization_idea_1
 		}
 
-		ai_will_do = {
-			base = 1
-		}
+		ai_will_do = { base = 1 }
 	}
 
 	focus = {
@@ -4158,9 +4107,7 @@ focus_tree = {
 			}
 		}
 
-		ai_will_do = {
-			base = 1
-		}
+		ai_will_do = { base = 1 }
 	}
 
 	focus = {
@@ -4187,9 +4134,7 @@ focus_tree = {
 			}
 		}
 
-		ai_will_do = {
-			base = 1
-		}
+		ai_will_do = { base = 1 }
 	}
 
 	focus = {
@@ -4220,9 +4165,7 @@ focus_tree = {
 			}
 		}
 
-		ai_will_do = {
-			base = 1
-		}
+		ai_will_do = { base = 1 }
 	}
 
 	focus = {
@@ -4249,9 +4192,7 @@ focus_tree = {
 			}
 		}
 
-		ai_will_do = {
-			base = 1
-		}
+		ai_will_do = { base = 1 }
 	}
 
 	focus = {
@@ -4280,9 +4221,7 @@ focus_tree = {
 			add_ideas = DEN_local_municipalities_idea_1
 		}
 
-		ai_will_do = {
-			base = 1
-		}
+		ai_will_do = { base = 1 }
 	}
 
 	focus = {
@@ -4309,9 +4248,7 @@ focus_tree = {
 			}
 		}
 
-		ai_will_do = {
-			base = 1
-		}
+		ai_will_do = { base = 1 }
 	}
 
 	focus = {
@@ -4338,9 +4275,7 @@ focus_tree = {
 			}
 		}
 
-		ai_will_do = {
-			base = 1
-		}
+		ai_will_do = { base = 1 }
 	}
 
 	focus = {
@@ -4367,9 +4302,7 @@ focus_tree = {
 			}
 		}
 
-		ai_will_do = {
-			base = 1
-		}
+		ai_will_do = { base = 1 }
 	}
 
 	focus = {
@@ -4394,9 +4327,7 @@ focus_tree = {
 			unlock_decision_category_tooltip = DEN_colonial_separatism_category
 		}
 
-		ai_will_do = {
-			base = 1
-		}
+		ai_will_do = { base = 1 }
 	}
 
 	focus = {
@@ -4438,7 +4369,7 @@ focus_tree = {
 			mark_focus_tree_layout_dirty = yes
 			set_temp_variable = { party_popularity_increase = 0.05 }
 			set_temp_variable = { temp_outlook_increase = 0.05 }
-			add_relative_party_popularity = yes
+			change_relative_party_popularity = yes
 			add_stability = 0.03
 			add_political_power = -75
 		}
@@ -4495,7 +4426,7 @@ focus_tree = {
 			set_temp_variable = { party_index = 20 }
 			set_temp_variable = { party_popularity_increase = 0.05 }
 			set_temp_variable = { temp_outlook_increase = 0.05 }
-			add_relative_party_popularity = yes
+			change_relative_party_popularity = yes
 			add_stability = -0.02
 			add_political_power = 75
 		}
@@ -4535,9 +4466,7 @@ focus_tree = {
 			country_event = { days = 3 id = denmark.44 }
 		}
 
-		ai_will_do = {
-			base = 1
-		}
+		ai_will_do = { base = 1 }
 	}
 
 	focus = {
@@ -4561,9 +4490,7 @@ focus_tree = {
 			country_event = { days = 3 id = denmark.45 }
 		}
 
-		ai_will_do = {
-			base = 1
-		}
+		ai_will_do = { base = 1 }
 	}
 
 	focus = {
@@ -4587,9 +4514,7 @@ focus_tree = {
 			add_ideas = DEN_autonomous_administration_idea
 		}
 
-		ai_will_do = {
-			base = 1
-		}
+		ai_will_do = { base = 1 }
 	}
 
 	focus = {
@@ -4637,9 +4562,7 @@ focus_tree = {
 			}
 		}
 
-		ai_will_do = {
-			base = 1
-		}
+		ai_will_do = { base = 1 }
 	}
 
 	focus = {
@@ -5121,9 +5044,7 @@ focus_tree = {
 			increase_centralization = yes
 		}
 
-		ai_will_do = {
-			base = 10
-		}
+		ai_will_do = { base = 10 }
 	}
 
 	focus = {
@@ -5151,9 +5072,7 @@ focus_tree = {
 			}
 		}
 
-		ai_will_do = {
-			base = 1
-		}
+		ai_will_do = { base = 1 }
 	}
 
 	focus = {
@@ -5182,9 +5101,7 @@ focus_tree = {
 			remove_ideas = DEN_in_need_of_banking_reforms_idea
 		}
 
-		ai_will_do = {
-			base = 1
-		}
+		ai_will_do = { base = 1 }
 	}
 
 	focus = {
@@ -5206,9 +5123,7 @@ focus_tree = {
 			add_stability = 0.04
 		}
 
-		ai_will_do = {
-			base = 1
-		}
+		ai_will_do = { base = 1 }
 	}
 
 	focus = {
@@ -5232,7 +5147,7 @@ focus_tree = {
 			set_temp_variable = { party_index = 17 }
 			set_temp_variable = { party_popularity_increase = 0.03 }
 			set_temp_variable = { temp_outlook_increase = 0.03 }
-			add_relative_party_popularity = yes
+			change_relative_party_popularity = yes
 			add_ideas = DEN_idea_clean_energy_initiatives
 			one_random_renewable_energy_infra = yes
 		}
@@ -5265,16 +5180,14 @@ focus_tree = {
 			set_temp_variable = { party_index = 17 }
 			set_temp_variable = { party_popularity_increase = 0.03 }
 			set_temp_variable = { temp_outlook_increase = 0.03 }
-			add_relative_party_popularity = yes
+			change_relative_party_popularity = yes
 			swap_ideas = {
 				remove_idea = DEN_idea_clean_energy_initiatives
 				add_idea = DEN_idea_clean_energy_initiatives_1
 			}
 		}
 
-		ai_will_do = {
-			base = 1
-		}
+		ai_will_do = { base = 1 }
 	}
 
 	focus = {
@@ -5343,7 +5256,7 @@ focus_tree = {
 			set_temp_variable = { party_index = 17 }
 			set_temp_variable = { party_popularity_increase = 0.03 }
 			set_temp_variable = { temp_outlook_increase = 0.03 }
-			add_relative_party_popularity = yes
+			change_relative_party_popularity = yes
 			swap_ideas = {
 				remove_idea = DEN_idea_clean_energy_initiatives_1
 				add_idea = DEN_idea_clean_energy_initiatives_2
@@ -5424,9 +5337,7 @@ focus_tree = {
 			add_ideas = DEN_energy_exports_idea
 		}
 
-		ai_will_do = {
-			base = 1
-		}
+		ai_will_do = { base = 1 }
 	}
 
 	focus = {
@@ -5577,9 +5488,7 @@ focus_tree = {
 			unlock_decision_tooltip = DEN_rollback_flexicurity_model_improvements_decision
 		}
 
-		ai_will_do = {
-			base = 1
-		}
+		ai_will_do = { base = 1 }
 	}
 
 	focus = {
@@ -5601,9 +5510,7 @@ focus_tree = {
 			add_ideas = DEN_danish_pharmaceuticals_idea
 		}
 
-		ai_will_do = {
-			base = 1
-		}
+		ai_will_do = { base = 1 }
 	}
 
 	focus = {
@@ -6058,9 +5965,7 @@ focus_tree = {
 			add_political_power = 100
 		}
 
-		ai_will_do = {
-			base = 1
-		}
+		ai_will_do = { base = 1 }
 	}
 
 	###FFA Tree
@@ -6084,9 +5989,7 @@ focus_tree = {
 			add_political_power = 100
 		}
 
-		ai_will_do = {
-			base = 1
-		}
+		ai_will_do = { base = 1 }
 	}
 
 	focus = {
@@ -6671,9 +6574,7 @@ focus_tree = {
 			change_influence_percentage = yes
 		}
 
-		ai_will_do = {
-			base = 1
-		}
+		ai_will_do = { base = 1 }
 	}
 
 	focus = {
@@ -6702,9 +6603,7 @@ focus_tree = {
 			add_war_support = 0.05
 		}
 
-		ai_will_do = {
-			base = 1
-		}
+		ai_will_do = { base = 1 }
 	}
 
 	###Tree: Leave EU
@@ -6919,9 +6818,7 @@ focus_tree = {
 			}
 		}
 
-		ai_will_do = {
-			base = 1
-		}
+		ai_will_do = { base = 1 }
 	}
 
 	focus = {
@@ -8185,19 +8082,19 @@ focus_tree = {
 				set_temp_variable = { party_index = 23 }
 				set_temp_variable = { party_popularity_increase = 0.10 }
 				set_temp_variable = { temp_outlook_increase = 0.10 }
-				add_relative_party_popularity = yes
+				change_relative_party_popularity = yes
 			}
 			BEL = {
 				set_temp_variable = { party_index = 23 }
 				set_temp_variable = { party_popularity_increase = 0.03 }
 				set_temp_variable = { temp_outlook_increase = 0.03 }
-				add_relative_party_popularity = yes
+				change_relative_party_popularity = yes
 			}
 			SPR = {
 				set_temp_variable = { party_index = 23 }
 				set_temp_variable = { party_popularity_increase = 0.10 }
 				set_temp_variable = { temp_outlook_increase = 0.10 }
-				add_relative_party_popularity = yes
+				change_relative_party_popularity = yes
 			}
 		}
 
@@ -8230,19 +8127,19 @@ focus_tree = {
 				set_temp_variable = { party_index = 23 }
 				set_temp_variable = { party_popularity_increase = 0.05 }
 				set_temp_variable = { temp_outlook_increase = 0.05 }
-				add_relative_party_popularity = yes
+				change_relative_party_popularity = yes
 			}
 			NRY = {
 				set_temp_variable = { party_index = 23 }
 				set_temp_variable = { party_popularity_increase = 0.05 }
 				set_temp_variable = { temp_outlook_increase = 0.05 }
-				add_relative_party_popularity = yes
+				change_relative_party_popularity = yes
 			}
 			ENG = {
 				set_temp_variable = { party_index = 23 }
 				set_temp_variable = { party_popularity_increase = 0.03 }
 				set_temp_variable = { temp_outlook_increase = 0.03 }
-				add_relative_party_popularity = yes
+				change_relative_party_popularity = yes
 			}
 		}
 
@@ -8574,7 +8471,7 @@ focus_tree = {
 			mark_focus_tree_layout_dirty = yes
 			set_temp_variable = { party_index = 23 }
 				set_temp_variable = { party_popularity_increase = 0.02 }
-				add_relative_party_popularity = yes
+				change_relative_party_popularity = yes
 		}
 
 		ai_will_do = {
@@ -8638,7 +8535,7 @@ focus_tree = {
 			}
 			set_temp_variable = { party_index = 23 }
 				set_temp_variable = { party_popularity_increase = 0.05 }
-				add_relative_party_popularity = yes
+				change_relative_party_popularity = yes
 		}
 
 		ai_will_do = {
@@ -8675,15 +8572,13 @@ focus_tree = {
 			country_event = denmark.20
 			set_temp_variable = { party_index = 23 }
 				set_temp_variable = { party_popularity_increase = 0.05 }
-				add_relative_party_popularity = yes
+				change_relative_party_popularity = yes
 				set_temp_variable = { rul_party_temp = 23 }
 				set_temp_variable = { disable_elections = 1 }
 				change_ruling_party_effect = yes
 		}
 
-		ai_will_do = {
-			base = 1
-		}
+		ai_will_do = { base = 1 }
 	}
 
 	focus = {
@@ -9161,7 +9056,7 @@ focus_tree = {
 				set_temp_variable = { party_index = 23 }
 				set_temp_variable = { party_popularity_increase = 0.05 }
 				set_temp_variable = { temp_outlook_increase = 0.05 }
-				add_relative_party_popularity = yes
+				change_relative_party_popularity = yes
 				set_temp_variable = { percent_change = 4 }
 				change_influence_percentage = yes
 				add_stability = -0.02
@@ -9198,7 +9093,7 @@ focus_tree = {
 				set_temp_variable = { party_index = 23 }
 				set_temp_variable = { party_popularity_increase = 0.05 }
 				set_temp_variable = { temp_outlook_increase = 0.05 }
-				add_relative_party_popularity = yes
+				change_relative_party_popularity = yes
 				set_temp_variable = { percent_change = 4 }
 				change_influence_percentage = yes
 				add_stability = -0.02
@@ -9235,7 +9130,7 @@ focus_tree = {
 				set_temp_variable = { party_index = 23 }
 				set_temp_variable = { party_popularity_increase = 0.05 }
 				set_temp_variable = { temp_outlook_increase = 0.05 }
-				add_relative_party_popularity = yes
+				change_relative_party_popularity = yes
 				set_temp_variable = { percent_change = 4 }
 				change_influence_percentage = yes
 				add_stability = -0.02
@@ -9272,7 +9167,7 @@ focus_tree = {
 				set_temp_variable = { party_index = 23 }
 				set_temp_variable = { party_popularity_increase = 0.05 }
 				set_temp_variable = { temp_outlook_increase = 0.05 }
-				add_relative_party_popularity = yes
+				change_relative_party_popularity = yes
 				set_temp_variable = { percent_change = 4 }
 				change_influence_percentage = yes
 				add_stability = -0.02
@@ -9324,9 +9219,7 @@ focus_tree = {
 			}
 		}
 
-		ai_will_do = {
-			base = 1
-		}
+		ai_will_do = { base = 1 }
 	}
 
 	focus = {
@@ -10469,7 +10362,7 @@ focus_tree = {
 				set_temp_variable = { party_index = 4 }
 				set_temp_variable = { party_popularity_increase = 0.05 }
 				set_temp_variable = { temp_outlook_increase = 0.05 }
-				add_relative_party_popularity = yes
+				change_relative_party_popularity = yes
 				add_stability = -0.02
 			}
 			newline = yes
@@ -10477,7 +10370,7 @@ focus_tree = {
 				set_temp_variable = { party_index = 4 }
 				set_temp_variable = { party_popularity_increase = 0.05 }
 				set_temp_variable = { temp_outlook_increase = 0.05 }
-				add_relative_party_popularity = yes
+				change_relative_party_popularity = yes
 				add_stability = -0.02
 			}
 			newline = yes
@@ -10485,7 +10378,7 @@ focus_tree = {
 				set_temp_variable = { party_index = 4 }
 				set_temp_variable = { party_popularity_increase = 0.03 }
 				set_temp_variable = { temp_outlook_increase = 0.03 }
-				add_relative_party_popularity = yes
+				change_relative_party_popularity = yes
 				add_stability = -0.02
 			}
 			newline = yes
@@ -10493,7 +10386,7 @@ focus_tree = {
 				set_temp_variable = { party_index = 4 }
 				set_temp_variable = { party_popularity_increase = 0.10 }
 				set_temp_variable = { temp_outlook_increase = 0.10 }
-				add_relative_party_popularity = yes
+				change_relative_party_popularity = yes
 				add_stability = -0.02
 			}
 		}
@@ -10755,9 +10648,7 @@ focus_tree = {
 			change_domestic_influence_percentage = yes
 		}
 
-		ai_will_do = {
-			base = 1
-		}
+		ai_will_do = { base = 1 }
 	}
 
 	focus = {
@@ -10781,9 +10672,7 @@ focus_tree = {
 			country_event = { id = denmark.9 days = 1 }
 		}
 
-		ai_will_do = {
-			base = 1
-		}
+		ai_will_do = { base = 1 }
 	}
 
 	focus = {
@@ -10828,9 +10717,7 @@ focus_tree = {
 			country_event = { id = denmark.13 days = 1 }
 		}
 
-		ai_will_do = {
-			base = 1
-		}
+		ai_will_do = { base = 1 }
 	}
 
 	focus = {
@@ -10854,9 +10741,7 @@ focus_tree = {
 			BRICS_join_via_event = yes
 		}
 
-		ai_will_do = {
-			base = 10
-		}
+		ai_will_do = { base = 10 }
 	}
 
 	focus = {
@@ -10884,11 +10769,10 @@ focus_tree = {
 				limit = { has_idea = DEN_idea_margrethe }
 				remove_ideas = DEN_idea_margrethe
 			}
+			news_event = denmark_news.1
 		}
 
-		ai_will_do = {
-			base = 1
-		}
+		ai_will_do = { base = 1 }
 	}
 
 	focus = {
@@ -10927,12 +10811,10 @@ focus_tree = {
 			set_temp_variable = { party_index = 4 }
 			set_temp_variable = { party_popularity_increase = 0.05 }
 			set_temp_variable = { temp_outlook_increase = 0.05 }
-			add_relative_party_popularity = yes
+			change_relative_party_popularity = yes
 		}
 
-		ai_will_do = {
-			base = 1
-		}
+		ai_will_do = { base = 1 }
 	}
 
 	focus = {
@@ -10973,9 +10855,7 @@ focus_tree = {
 			}
 		}
 
-		ai_will_do = {
-			base = 1
-		}
+		ai_will_do = { base = 1 }
 	}
 
 	focus = {
@@ -11003,12 +10883,10 @@ focus_tree = {
 			set_temp_variable = { party_index = 4 }
 			set_temp_variable = { party_popularity_increase = 0.05 }
 			set_temp_variable = { temp_outlook_increase = 0.05 }
-			add_relative_party_popularity = yes
+			change_relative_party_popularity = yes
 		}
 
-		ai_will_do = {
-			base = 1
-		}
+		ai_will_do = { base = 1 }
 	}
 
 	focus = {
@@ -11068,9 +10946,7 @@ focus_tree = {
 			add_ideas = DEN_idea_unemployment_benefits
 		}
 
-		ai_will_do = {
-			base = 1
-		}
+		ai_will_do = { base = 1 }
 	}
 
 	focus = {
@@ -11209,36 +11085,34 @@ focus_tree = {
 				set_temp_variable = { party_index = 4 }
 				set_temp_variable = { party_popularity_increase = 0.05 }
 				set_temp_variable = { temp_outlook_increase = 0.05 }
-				add_relative_party_popularity = yes
+				change_relative_party_popularity = yes
 			}
 			newline = yes
 			NRY = {
 				set_temp_variable = { party_index = 4 }
 				set_temp_variable = { party_popularity_increase = 0.05 }
 				set_temp_variable = { temp_outlook_increase = 0.05 }
-				add_relative_party_popularity = yes
+				change_relative_party_popularity = yes
 			}
 			newline = yes
 			FIN = {
 				set_temp_variable = { party_index = 4 }
 				set_temp_variable = { party_popularity_increase = 0.03 }
 				set_temp_variable = { temp_outlook_increase = 0.03 }
-				add_relative_party_popularity = yes
+				change_relative_party_popularity = yes
 			}
 			newline = yes
 			ICE = {
 				set_temp_variable = { party_index = 4 }
 				set_temp_variable = { party_popularity_increase = 0.10 }
 				set_temp_variable = { temp_outlook_increase = 0.10 }
-				add_relative_party_popularity = yes
+				change_relative_party_popularity = yes
 			}
 			newline = yes
 			DEN = { country_event = denmark.17 }
 		}
 
-		ai_will_do = {
-			base = 1
-		}
+		ai_will_do = { base = 1 }
 	}
 
 	focus = {
@@ -11302,9 +11176,7 @@ focus_tree = {
 			}
 		}
 
-		ai_will_do = {
-			base = 1
-		}
+		ai_will_do = { base = 1 }
 	}
 
 	focus = {
@@ -11351,9 +11223,7 @@ focus_tree = {
 				}
 			}
 
-		ai_will_do = {
-			base = 1
-		}
+		ai_will_do = { base = 1 }
 	}
 
 	focus = {
@@ -11400,9 +11270,7 @@ focus_tree = {
 			}
 		}
 
-		ai_will_do = {
-			base = 1
-		}
+		ai_will_do = { base = 1 }
 	}
 
 	### Rise of people Party
@@ -11546,9 +11414,7 @@ focus_tree = {
 			add_to_variable = { DEN_Culture_army_core_defence_factor = 0.03 tooltip = army_core_defence_factor_tt }
 		}
 
-		ai_will_do = {
-			base = 1
-		}
+		ai_will_do = { base = 1 }
 	}
 
 	focus = {
@@ -11585,9 +11451,7 @@ focus_tree = {
 			add_to_variable = { DEN_Culture_stability_factor = 0.01 tooltip = stability_factor_tt }
 		}
 
-		ai_will_do = {
-			base = 1
-		}
+		ai_will_do = { base = 1 }
 	}
 
 	focus = {
@@ -11628,9 +11492,7 @@ focus_tree = {
 				add_to_variable = { DEN_Culture_monthly_population = 0.02 tooltip = monthly_population_tt }
 		}
 
-		ai_will_do = {
-			base = 1
-		}
+		ai_will_do = { base = 1 }
 	}
 
 	focus = {
@@ -11672,9 +11534,7 @@ focus_tree = {
 			add_to_variable = { DEN_Culture_war_support_factor = 0.04 tooltip = war_support_factor_tt }
 		}
 
-		ai_will_do = {
-			base = 1
-		}
+		ai_will_do = { base = 1 }
 	}
 
 	focus = {
@@ -11703,9 +11563,7 @@ focus_tree = {
 			add_to_variable = { DEN_Culture_nationalist_drift = 0.01 tooltip = nationalist_drift_tt }
 		}
 
-		ai_will_do = {
-			base = 1
-		}
+		ai_will_do = { base = 1 }
 	}
 
 	focus = {
@@ -11736,9 +11594,7 @@ focus_tree = {
 			add_to_variable = { DEN_Culture_army_core_defence_factor = 0.03 tooltip = army_core_defence_factor_tt }
 		}
 
-		ai_will_do = {
-			base = 1
-		}
+		ai_will_do = { base = 1 }
 	}
 
 	focus = {
@@ -11769,9 +11625,7 @@ focus_tree = {
 			add_to_variable = { DEN_Culture_stability_factor = 0.02 tooltip = stability_factor_tt }
 		}
 
-		ai_will_do = {
-			base = 1
-		}
+		ai_will_do = { base = 1 }
 	}
 
 	focus = {
@@ -11962,9 +11816,7 @@ focus_tree = {
 			add_ideas = DEN_idea_militarization
 		}
 
-		ai_will_do = {
-			base = 1
-		}
+		ai_will_do = { base = 1 }
 	}
 
 	focus = {
@@ -11988,9 +11840,7 @@ focus_tree = {
 			37 = { add_core_of = DEN }
 		}
 
-		ai_will_do = {
-			base = 1
-		}
+		ai_will_do = { base = 1 }
 	}
 
 	focus = {
@@ -12022,9 +11872,7 @@ focus_tree = {
 			}
 		}
 
-		ai_will_do = {
-			base = 1
-		}
+		ai_will_do = { base = 1 }
 	}
 
 	focus = {
@@ -12055,9 +11903,7 @@ focus_tree = {
 			}
 		}
 
-		ai_will_do = {
-			base = 1
-		}
+		ai_will_do = { base = 1 }
 	}
 
 	focus = {
@@ -12096,9 +11942,7 @@ focus_tree = {
 			}
 		}
 
-		ai_will_do = {
-			base = 1
-		}
+		ai_will_do = { base = 1 }
 	}
 
 	focus = {
@@ -12129,9 +11973,7 @@ focus_tree = {
 			}
 		}
 
-		ai_will_do = {
-			base = 1
-		}
+		ai_will_do = { base = 1 }
 	}
 
 	focus = {
@@ -12252,9 +12094,7 @@ focus_tree = {
 			}
 		}
 
-		ai_will_do = {
-			base = 1
-		}
+		ai_will_do = { base = 1 }
 	}
 
 	focus = {
@@ -12291,9 +12131,7 @@ focus_tree = {
 			}
 		}
 
-		ai_will_do = {
-			base = 1
-		}
+		ai_will_do = { base = 1 }
 	}
 
 	focus = {
@@ -12585,9 +12423,7 @@ focus_tree = {
 			add_to_variable = { DEN_monthly_population = 0.015 tooltip = monthly_population_tt }
 		}
 
-		ai_will_do = {
-			base = 1
-		}
+		ai_will_do = { base = 1 }
 	}
 
 	focus = {
@@ -12630,9 +12466,7 @@ focus_tree = {
 			add_to_variable = { DEN_monthly_population = 0.02 tooltip = monthly_population_tt }
 		}
 
-		ai_will_do = {
-			base = 1
-		}
+		ai_will_do = { base = 1 }
 	}
 
 	focus = {
@@ -12665,9 +12499,7 @@ focus_tree = {
 			add_to_variable = { DEN_monthly_population = 0.05 tooltip = monthly_population_tt }
 		}
 
-		ai_will_do = {
-			base = 1
-		}
+		ai_will_do = { base = 1 }
 	}
 
 	focus = {
@@ -12711,9 +12543,7 @@ focus_tree = {
 			add_to_variable = { DEN_monthly_population = -0.01 tooltip = monthly_population_tt }
 		}
 
-		ai_will_do = {
-			base = 1
-		}
+		ai_will_do = { base = 1 }
 	}
 
 	focus = {
@@ -12759,9 +12589,7 @@ focus_tree = {
 			add_to_variable = { DEN_social_cost_multiplier_modifier_var = -0.025 tooltip = social_cost_multiplier_modifier_tt }
 		}
 
-		ai_will_do = {
-			base = 1
-		}
+		ai_will_do = { base = 1 }
 	}
 
 	focus = {
@@ -12980,9 +12808,7 @@ focus_tree = {
 			change_landowners_opinion = yes
 		}
 
-		ai_will_do = {
-			base = 1
-		}
+		ai_will_do = { base = 1 }
 	}
 
 	focus = {
@@ -13084,9 +12910,7 @@ focus_tree = {
 			change_landowners_opinion = yes
 		}
 
-		ai_will_do = {
-			base = 1
-		}
+		ai_will_do = { base = 1 }
 	}
 
 	focus = {
@@ -13141,9 +12965,7 @@ focus_tree = {
 			add_to_variable = { DEN_production_factory_efficiency_gain_factor = 0.02 tooltip = production_factory_efficiency_gain_factor_tt }
 		}
 
-		ai_will_do = {
-			base = 1
-		}
+		ai_will_do = { base = 1 }
 	}
 
 	focus = {
@@ -13621,9 +13443,7 @@ focus_tree = {
 			}
 		}
 
-		ai_will_do = {
-			base = 1
-		}
+		ai_will_do = { base = 1 }
 	}
 
 	focus = {
@@ -13783,9 +13603,7 @@ focus_tree = {
 			add_stability = 0.04
 		}
 
-		ai_will_do = {
-			base = 1
-		}
+		ai_will_do = { base = 1 }
 	}
 
 	focus = {
@@ -13851,9 +13669,7 @@ focus_tree = {
 			add_to_variable = { DEN_breakthrough_factor = 0.03 tooltip = breakthrough_factor_tt }
 		}
 
-		ai_will_do = {
-			base = 1
-		}
+		ai_will_do = { base = 1 }
 	}
 
 	focus = {
@@ -14360,10 +14176,6 @@ focus_tree = {
 				is_historical_focus_on = yes
 				factor = 10
 			}
-			modifier = {
-				factor = 0
-				has_active_mission = bankruptcy_incoming_collapse
-			}
 		}
 	}
 
@@ -14404,10 +14216,6 @@ focus_tree = {
 				is_historical_focus_on = yes
 				factor = 10
 			}
-			modifier = {
-				factor = 0
-				has_active_mission = bankruptcy_incoming_collapse
-			}
 		}
 	}
 
@@ -14445,10 +14253,6 @@ focus_tree = {
 			modifier = {
 				is_historical_focus_on = yes
 				factor = 10
-			}
-			modifier = {
-				factor = 0
-				has_active_mission = bankruptcy_incoming_collapse
 			}
 		}
 	}
@@ -14491,10 +14295,6 @@ focus_tree = {
 				is_historical_focus_on = yes
 				factor = 10
 			}
-			modifier = {
-				factor = 0
-				has_active_mission = bankruptcy_incoming_collapse
-			}
 		}
 	}
 
@@ -14532,10 +14332,6 @@ focus_tree = {
 			modifier = {
 				is_historical_focus_on = yes
 				factor = 10
-			}
-			modifier = {
-				factor = 0
-				has_active_mission = bankruptcy_incoming_collapse
 			}
 		}
 	}
@@ -15118,7 +14914,7 @@ focus_tree = {
 			change_labour_unions_opinion = yes
 			set_temp_variable = { party_index = 2 }
 				set_temp_variable = { party_popularity_increase = 0.003 }
-				add_relative_party_popularity = yes
+				change_relative_party_popularity = yes
 			custom_effect_tooltip = { localization_key = modifies_dynamic_modifier_tt MODIFIER = DEN_the_State }
 			add_to_variable = { DEN_bureaucracy_cost_multiplier_modifier_var = -0.10 tooltip = bureaucracy_cost_multiplier_modifier_tt }
 			add_to_variable = { DEN_health_cost_multiplier_modifier_var = -0.05 tooltip = health_cost_multiplier_modifier_tt }
@@ -15271,7 +15067,7 @@ focus_tree = {
 			change_labour_unions_opinion = yes
 			set_temp_variable = { party_index = 3 }
 				set_temp_variable = { party_popularity_increase = 0.003 }
-				add_relative_party_popularity = yes
+				change_relative_party_popularity = yes
 			custom_effect_tooltip = { localization_key = modifies_dynamic_modifier_tt MODIFIER = DEN_the_State }
 			add_to_variable = { DEN_stability_factor = -0.03 tooltip = stability_factor_tt }
 			add_to_variable = { DEN_bureaucracy_cost_multiplier_modifier_var = 0.05 tooltip = bureaucracy_cost_multiplier_modifier_tt }
@@ -15474,7 +15270,7 @@ focus_tree = {
 			change_labour_unions_opinion = yes
 			set_temp_variable = { party_index = 18 }
 				set_temp_variable = { party_popularity_increase = 0.003 }
-				add_relative_party_popularity = yes
+				change_relative_party_popularity = yes
 			custom_effect_tooltip = { localization_key = modifies_dynamic_modifier_tt MODIFIER = DEN_the_State }
 			add_to_variable = { DEN_stability_factor = 0.03 tooltip = stability_factor_tt }
 			add_to_variable = { DEN_bureaucracy_cost_multiplier_modifier_var = 0.03 tooltip = bureaucracy_cost_multiplier_modifier_tt }
@@ -15524,7 +15320,7 @@ focus_tree = {
 			set_temp_variable = { party_index = 17 }
 			set_temp_variable = { party_popularity_increase = 0.005 }
 			set_temp_variable = { temp_outlook_increase = 0.02 }
-			add_relative_party_popularity = yes
+			change_relative_party_popularity = yes
 			recalculate_party = yes
 			update_party_name = yes
 			}
@@ -15557,7 +15353,7 @@ focus_tree = {
 			log = "[GetDateText]: [Root.GetName]: Focus DEN_new_political_culture"
 			set_temp_variable = { party_index = 17 }
 			set_temp_variable = { party_popularity_increase = 0.003 }
-			add_relative_party_popularity = yes
+			change_relative_party_popularity = yes
 		}
 
 		ai_will_do = {
@@ -15615,7 +15411,7 @@ focus_tree = {
 			log = "[GetDateText]: [Root.GetName]: Focus DEN_entrepreneurship"
 			set_temp_variable = { party_index = 17 }
 			set_temp_variable = { party_popularity_increase = 0.003 }
-			add_relative_party_popularity = yes
+			change_relative_party_popularity = yes
 		}
 
 		ai_will_do = {
@@ -15646,7 +15442,7 @@ focus_tree = {
 			set_temp_variable = { party_index = 17 }
 			set_temp_variable = { party_popularity_increase = 0.003 }
 			set_temp_variable = { temp_outlook_increase = 0.01 }
-			add_relative_party_popularity = yes
+			change_relative_party_popularity = yes
 			recalculate_party = yes
 			newline = yes
 			add_ideas = DEN_a_green_leap_forward
@@ -15682,7 +15478,7 @@ focus_tree = {
 			set_country_flag = DEN_new_aliance_name_switch
 			set_temp_variable = { party_index = 14 }
 			set_temp_variable = { party_popularity_increase = 0.003 }
-			add_relative_party_popularity = yes
+			change_relative_party_popularity = yes
 			update_party_name = yes
 			}
 		}
@@ -15745,7 +15541,7 @@ focus_tree = {
 			hidden_effect = {
 				set_temp_variable = { party_index = 14 }
 			set_temp_variable = { party_popularity_increase = 0.003 }
-			add_relative_party_popularity = yes
+			change_relative_party_popularity = yes
 			}
 		}
 
@@ -15779,7 +15575,7 @@ focus_tree = {
 			hidden_effect = {
 				set_temp_variable = { party_index = 14 }
 			set_temp_variable = { party_popularity_increase = 0.003 }
-			add_relative_party_popularity = yes
+			change_relative_party_popularity = yes
 			}
 		}
 
@@ -15812,7 +15608,7 @@ focus_tree = {
 			hidden_effect = {
 				set_temp_variable = { party_index = 14 }
 			set_temp_variable = { party_popularity_increase = 0.003 }
-			add_relative_party_popularity = yes
+			change_relative_party_popularity = yes
 			}
 		}
 
@@ -15846,7 +15642,7 @@ focus_tree = {
 			set_country_flag = DEN_Borgers_name_switch
 			set_temp_variable = { party_index = 20 }
 			set_temp_variable = { party_popularity_increase = 0.003 }
-			add_relative_party_popularity = yes
+			change_relative_party_popularity = yes
 			update_party_name = yes
 			}
 		}
@@ -15883,7 +15679,7 @@ focus_tree = {
 			hidden_effect = {
 				set_temp_variable = { party_index = 20 }
 			set_temp_variable = { party_popularity_increase = 0.003 }
-			add_relative_party_popularity = yes
+			change_relative_party_popularity = yes
 			}
 		}
 
@@ -15948,7 +15744,7 @@ focus_tree = {
 			hidden_effect = {
 				set_temp_variable = { party_index = 20 }
 			set_temp_variable = { party_popularity_increase = 0.003 }
-			add_relative_party_popularity = yes
+			change_relative_party_popularity = yes
 			}
 		}
 
@@ -15984,7 +15780,7 @@ focus_tree = {
 			hidden_effect = {
 				set_temp_variable = { party_index = 20 }
 			set_temp_variable = { party_popularity_increase = 0.003 }
-			add_relative_party_popularity = yes
+			change_relative_party_popularity = yes
 			}
 		}
 
@@ -16016,9 +15812,7 @@ focus_tree = {
 			add_ideas = DEN_Maersk1
 		}
 
-		ai_will_do = {
-			base = 1
-		}
+		ai_will_do = { base = 1 }
 	}
 
 	focus = {
@@ -16040,9 +15834,7 @@ focus_tree = {
 			add_ideas = DEN_idea_DSV1
 		}
 
-		ai_will_do = {
-			base = 1
-		}
+		ai_will_do = { base = 1 }
 	}
 
 	focus = {
@@ -16067,9 +15859,7 @@ focus_tree = {
 			}
 		}
 
-		ai_will_do = {
-			base = 1
-		}
+		ai_will_do = { base = 1 }
 	}
 
 	focus = {
@@ -16130,9 +15920,7 @@ focus_tree = {
 			}
 		}
 
-		ai_will_do = {
-			base = 1
-		}
+		ai_will_do = { base = 1 }
 	}
 
 	focus = {
@@ -16236,9 +16024,7 @@ focus_tree = {
 			}
 		}
 
-		ai_will_do = {
-			base = 1
-		}
+		ai_will_do = { base = 1 }
 	}
 
 	focus = {
@@ -16335,9 +16121,7 @@ focus_tree = {
 			}
 		}
 
-		ai_will_do = {
-			base = 1
-		}
+		ai_will_do = { base = 1 }
 	}
 
 	# Can safely ignore this entry. It is necessary merely for the EU Focus tree

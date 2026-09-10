@@ -32,7 +32,7 @@ focus_tree = {
 
 	shortcut = {
 		name = GER_Military
-		target = Ger_Einsatzfuhrungskommando
+		target = GER_Einsatzfuhrungskommando
 		scroll_wheel_factor = 0.80
 	}
 
@@ -62,7 +62,10 @@ focus_tree = {
 			add_stability = 0.05
 		}
 
-		ai_will_do = { base = 1 }
+		ai_will_do = {
+			base = 1
+			modifier = { factor = 10 GER_ai_phase_rebuild = yes }
+		}
 	}
 
 	#EXPAND THE OIL & GAS SECTOR
@@ -645,6 +648,7 @@ focus_tree = {
 				factor = 0
 				has_active_mission = bankruptcy_incoming_collapse
 			}
+			modifier = { factor = 10 GER_ai_phase_rebuild = yes }
 		}
 	}
 
@@ -683,7 +687,10 @@ focus_tree = {
 			add_to_variable = { GER_welfare_cost = 0.02 tooltip = social_cost_multiplier_modifier_tt }
 		}
 
-		ai_will_do = { base = 1 }
+		ai_will_do = {
+			base = 1
+			modifier = { factor = 10 GER_ai_phase_rebuild = yes }
+		}
 	}
 
 	focus = {
@@ -717,6 +724,7 @@ focus_tree = {
 				factor = 0
 				has_active_mission = bankruptcy_incoming_collapse
 			}
+			modifier = { factor = 10 GER_ai_phase_rebuild = yes }
 		}
 	}
 
@@ -750,7 +758,10 @@ focus_tree = {
 			change_labour_unions_opinion = yes
 		}
 
-		ai_will_do = { base = 1 }
+		ai_will_do = {
+			base = 1
+			modifier = { factor = 10 GER_ai_phase_rebuild = yes }
+		}
 	}
 
 	focus = {
@@ -813,7 +824,10 @@ focus_tree = {
 			add_to_variable = { GER_east_opinion = 3 }
 		}
 
-		ai_will_do = { base = 1 }
+		ai_will_do = {
+			base = 1
+			modifier = { factor = 10 GER_ai_phase_rebuild = yes }
+		}
 	}
 
 	focus = {
@@ -1507,7 +1521,10 @@ focus_tree = {
 			}
 		}
 
-		ai_will_do = { base = 1 }
+		ai_will_do = {
+			base = 1
+			modifier = { factor = 10 GER_ai_phase_rebuild = yes }
+		}
 	}
 
 	focus = {
@@ -1544,6 +1561,7 @@ focus_tree = {
 				factor = 0
 				has_active_mission = bankruptcy_incoming_collapse
 			}
+			modifier = { factor = 10 GER_ai_phase_rebuild = yes }
 		}
 	}
 
@@ -1586,6 +1604,7 @@ focus_tree = {
 				factor = 0
 				has_active_mission = bankruptcy_incoming_collapse
 			}
+			modifier = { factor = 10 GER_ai_phase_rebuild = yes }
 		}
 	}
 
@@ -1623,7 +1642,10 @@ focus_tree = {
 			}
 		}
 
-		ai_will_do = { base = 1 }
+		ai_will_do = {
+			base = 1
+			modifier = { factor = 10 GER_ai_phase_rebuild = yes }
+		}
 	}
 
 	focus = {
@@ -1676,6 +1698,7 @@ focus_tree = {
 				factor = 0
 				has_active_mission = bankruptcy_incoming_collapse
 			}
+			modifier = { factor = 10 GER_ai_phase_rebuild = yes }
 		}
 	}
 
@@ -1729,6 +1752,7 @@ focus_tree = {
 				factor = 0
 				has_active_mission = bankruptcy_incoming_collapse
 			}
+			modifier = { factor = 10 GER_ai_phase_rebuild = yes }
 		}
 	}
 
@@ -1782,6 +1806,7 @@ focus_tree = {
 				factor = 0
 				has_active_mission = bankruptcy_incoming_collapse
 			}
+			modifier = { factor = 10 GER_ai_phase_rebuild = yes }
 		}
 	}
 
@@ -1835,6 +1860,7 @@ focus_tree = {
 				factor = 0
 				has_active_mission = bankruptcy_incoming_collapse
 			}
+			modifier = { factor = 10 GER_ai_phase_rebuild = yes }
 		}
 	}
 
@@ -1888,6 +1914,7 @@ focus_tree = {
 				factor = 0
 				has_active_mission = bankruptcy_incoming_collapse
 			}
+			modifier = { factor = 10 GER_ai_phase_rebuild = yes }
 		}
 	}
 
@@ -1945,6 +1972,7 @@ focus_tree = {
 				factor = 0
 				has_active_mission = bankruptcy_incoming_collapse
 			}
+			modifier = { factor = 10 GER_ai_phase_rebuild = yes }
 		}
 	}
 
@@ -1990,6 +2018,7 @@ focus_tree = {
 				factor = 0
 				has_active_mission = bankruptcy_incoming_collapse
 			}
+			modifier = { factor = 10 GER_ai_phase_rebuild = yes }
 		}
 	}
 
@@ -2044,7 +2073,10 @@ focus_tree = {
 			}
 		}
 
-		ai_will_do = { base = 1 }
+		ai_will_do = {
+			base = 1
+			modifier = { factor = 10 GER_ai_phase_rebuild = yes }
+		}
 	}
 
 	focus = {
@@ -2103,6 +2135,7 @@ focus_tree = {
 				factor = 0
 				can_staff_an_industrial_complex = no
 			}
+			modifier = { factor = 10 GER_ai_phase_rebuild = yes }
 		}
 	}
 
@@ -2125,13 +2158,14 @@ focus_tree = {
 			add_ideas = GER_idea_rhineland_industry
 			newline = yes
 			39 = {
-				remove_dynamic_modifier = {
-					modifier = GER_downfall_of_heavy_industrie
-				}
+				if = { limit = { has_dynamic_modifier = { modifier = GER_downfall_of_heavy_industrie } } remove_dynamic_modifier = { modifier = GER_downfall_of_heavy_industrie } }
 			}
 		}
 
-		ai_will_do = { base = 1 }
+		ai_will_do = {
+			base = 1
+			modifier = { factor = 10 GER_ai_phase_rebuild = yes }
+		}
 	}
 
 	focus = {
@@ -2255,6 +2289,7 @@ focus_tree = {
 				factor = 0
 				can_staff_an_dockyard = no
 			}
+			modifier = { factor = 10 GER_ai_phase_rebuild = yes }
 		}
 	}
 
@@ -2286,7 +2321,10 @@ focus_tree = {
 			add_to_variable = { GER_police_cost = -0.03 tooltip = police_cost_multiplier_modifier_tt }
 		}
 
-		ai_will_do = { base = 1 }
+		ai_will_do = {
+			base = 1
+			modifier = { factor = 10 GER_ai_phase_rebuild = yes }
+		}
 	}
 
 	focus = {
@@ -2342,6 +2380,7 @@ focus_tree = {
 				factor = 0
 				has_active_mission = bankruptcy_incoming_collapse
 			}
+			modifier = { factor = 10 GER_ai_phase_rebuild = yes }
 		}
 	}
 
@@ -2400,6 +2439,7 @@ focus_tree = {
 				factor = 0
 				has_active_mission = bankruptcy_incoming_collapse
 			}
+			modifier = { factor = 10 GER_ai_phase_rebuild = yes }
 		}
 	}
 
@@ -2454,6 +2494,7 @@ focus_tree = {
 				factor = 0
 				can_staff_an_offices = no
 			}
+			modifier = { factor = 10 GER_ai_phase_rebuild = yes }
 		}
 	}
 
@@ -2525,7 +2566,14 @@ focus_tree = {
 			}
 		}
 
-		ai_will_do = { base = 1 }
+		ai_will_do = {
+			base = 1
+			modifier = {
+				factor = 3
+				has_idea = GER_idea_germany_divided
+			}
+			modifier = { factor = 10 GER_ai_phase_rebuild = yes }
+		}
 	}
 
 	focus = {
@@ -2567,7 +2615,6 @@ focus_tree = {
 				}
 			}
 			two_random_industrial_complex = yes
-			newline = yes
 		}
 
 		ai_will_do = {
@@ -2770,7 +2817,13 @@ focus_tree = {
 			}
 		}
 
-		ai_will_do = { base = 1 }
+		ai_will_do = {
+			base = 1
+			modifier = {
+				factor = 2
+				has_idea = GER_idea_aging_population
+			}
+		}
 	}
 
 	focus = {
@@ -2822,7 +2875,13 @@ focus_tree = {
 			}
 		}
 
-		ai_will_do = { base = 1 }
+		ai_will_do = {
+			base = 1
+			modifier = {
+				factor = 3
+				has_idea = GER_idea_aging_population
+			}
+		}
 	}
 
 	focus = {
@@ -3990,7 +4049,6 @@ focus_tree = {
 
 		continue_if_invalid = yes
 
-
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus GER_the_glowing_one"
 			custom_effect_tooltip = focus_select_effect_tt
@@ -4104,7 +4162,6 @@ focus_tree = {
 
 		continue_if_invalid = yes
 
-
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus GER_acquire_enbw_energy"
 			custom_effect_tooltip = focus_select_effect_tt
@@ -4180,7 +4237,6 @@ focus_tree = {
 		}
 
 		continue_if_invalid = yes
-
 
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus GER_acquire_rwe_energy"
@@ -4258,7 +4314,6 @@ focus_tree = {
 
 		continue_if_invalid = yes
 
-
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus GER_acquire_eon_energy"
 			custom_effect_tooltip = focus_select_effect_tt
@@ -4324,7 +4379,6 @@ focus_tree = {
 		}
 
 		continue_if_invalid = yes
-
 
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus GER_nationalise_german_energy_companies"
@@ -4455,7 +4509,11 @@ focus_tree = {
 			custom_effect_tooltip = GER_how_to_overthrow_TT
 		}
 
-		ai_will_do = { base = 1 }
+		ai_will_do = {
+			base = 1
+			modifier = { factor = 25 GER_ai_republic_collapse_path = yes }
+			modifier = { factor = 0 GER_ai_not_republic_collapse_path = yes }
+		}
 	}
 
 	focus = {
@@ -4480,7 +4538,11 @@ focus_tree = {
 			add_stability = -0.05
 		}
 
-		ai_will_do = { base = 1 }
+		ai_will_do = {
+			base = 1
+			modifier = { factor = 25 GER_ai_republic_collapse_path = yes }
+			modifier = { factor = 0 GER_ai_not_republic_collapse_path = yes }
+		}
 	}
 
 	focus = {
@@ -4538,7 +4600,11 @@ focus_tree = {
 			}
 		}
 
-		ai_will_do = { base = 1 }
+		ai_will_do = {
+			base = 1
+			modifier = { factor = 25 GER_ai_republic_collapse_path = yes }
+			modifier = { factor = 0 GER_ai_not_republic_collapse_path = yes }
+		}
 	}
 
 	focus = {
@@ -4588,7 +4654,11 @@ focus_tree = {
 			}
 		}
 
-		ai_will_do = { base = 1 }
+		ai_will_do = {
+			base = 1
+			modifier = { factor = 25 GER_ai_republic_collapse_path = yes }
+			modifier = { factor = 0 GER_ai_not_republic_collapse_path = yes }
+		}
 	}
 
 	#Constitution of Germany
@@ -4610,7 +4680,10 @@ focus_tree = {
 			clr_country_flag = GER_Grundgesetz
 		}
 
-		ai_will_do = { base = 1 }
+		ai_will_do = {
+			base = 1
+			modifier = { factor = 0 GER_ai_phase_rebuild = yes }
+		}
 	}
 
 	focus = {
@@ -4790,7 +4863,12 @@ focus_tree = {
 			add_to_variable = { GER_rightwing_department_status = -5 }
 		}
 
-		ai_will_do = { base = 1 }
+		ai_will_do = {
+			base = 1
+			modifier = { factor = 50 GER_ai_republic_collapse_path = yes }
+			modifier = { factor = 0 GER_ai_not_republic_collapse_path = yes }
+			modifier = { factor = 0 GER_ai_phase_rebuild = yes }
+		}
 	}
 
 	focus = {
@@ -4822,7 +4900,12 @@ focus_tree = {
 			custom_effect_tooltip = GER_how_to_overthrow_TT
 		}
 
-		ai_will_do = { base = 1 }
+		ai_will_do = {
+			base = 1
+			modifier = { factor = 150 GER_ai_republic_collapse_path = yes }
+			modifier = { factor = 0 GER_ai_not_republic_collapse_path = yes }
+			modifier = { factor = 0 GER_ai_phase_rebuild = yes }
+		}
 	}
 
 	focus = {
@@ -4851,7 +4934,12 @@ focus_tree = {
 			add_to_variable = { GER_rightwing_department_status = 5 }
 		}
 
-		ai_will_do = { base = 1 }
+		ai_will_do = {
+			base = 1
+			modifier = { factor = 25 GER_ai_stable_republic_path = yes }
+			modifier = { factor = 0 GER_ai_not_stable_republic_path = yes }
+			modifier = { factor = 0 GER_ai_phase_rebuild = yes }
+		}
 	}
 
 	focus = {
@@ -4886,10 +4974,14 @@ focus_tree = {
 			add_to_variable = { GER_leftwing_department_status = 3 }
 			custom_effect_tooltip = GER_increase_rightist_status_by_3
 			add_to_variable = { GER_rightwing_department_status = 3 }
-			newline = yes
 		}
 
-		ai_will_do = { base = 1 }
+		ai_will_do = {
+			base = 1
+			modifier = { factor = 25 GER_ai_stable_republic_path = yes }
+			modifier = { factor = 0 GER_ai_not_stable_republic_path = yes }
+			modifier = { factor = 0 GER_ai_phase_rebuild = yes }
+		}
 	}
 	#Unemployment Crisis
 	focus = {
@@ -4922,6 +5014,8 @@ focus_tree = {
 				factor = 0
 				can_staff_an_industrial_complex = no
 			}
+			modifier = { factor = 12 GER_ai_phase_recovery_statist = yes }
+			modifier = { factor = 12 GER_ai_phase_recovery_market = yes }
 		}
 	}
 
@@ -4945,7 +5039,10 @@ focus_tree = {
 			decrease_exports = yes
 		}
 
-		ai_will_do = { base = 1 }
+		ai_will_do = {
+			base = 1
+			modifier = { factor = 12 GER_ai_phase_recovery_statist = yes }
+		}
 	}
 
 	focus = {
@@ -4970,7 +5067,14 @@ focus_tree = {
 			}
 		}
 
-		ai_will_do = { base = 1 }
+		ai_will_do = {
+			base = 1
+			modifier = {
+				factor = 2
+				has_idea = GER_idea_unemployment_crisis
+			}
+			modifier = { factor = 12 GER_ai_phase_recovery_statist = yes }
+		}
 	}
 
 	focus = {
@@ -5020,6 +5124,7 @@ focus_tree = {
 				factor = 0
 				has_active_mission = bankruptcy_incoming_collapse
 			}
+			modifier = { factor = 12 GER_ai_phase_recovery_statist = yes }
 		}
 	}
 
@@ -5071,6 +5176,7 @@ focus_tree = {
 				factor = 0
 				has_active_mission = bankruptcy_incoming_collapse
 			}
+			modifier = { factor = 12 GER_ai_phase_recovery_statist = yes }
 		}
 	}
 
@@ -5093,7 +5199,10 @@ focus_tree = {
 			country_event = germany.19
 		}
 
-		ai_will_do = { base = 1 }
+		ai_will_do = {
+			base = 1
+			modifier = { factor = 12 GER_ai_phase_recovery_statist = yes }
+		}
 	}
 
 	focus = {
@@ -5115,7 +5224,10 @@ focus_tree = {
 			add_ideas = GER_idea_hotels
 		}
 
-		ai_will_do = { base = 1 }
+		ai_will_do = {
+			base = 1
+			modifier = { factor = 12 GER_ai_phase_recovery_statist = yes }
+		}
 	}
 
 	focus = {
@@ -5140,7 +5252,14 @@ focus_tree = {
 			remove_ideas = GER_idea_unemployment_crisis2
 		}
 
-		ai_will_do = { base = 1 }
+		ai_will_do = {
+			base = 1
+			modifier = {
+				factor = 3
+				has_idea = GER_idea_unemployment_crisis2
+			}
+			modifier = { factor = 12 GER_ai_phase_recovery_statist = yes }
+		}
 	}
 
 	focus = {
@@ -5166,7 +5285,10 @@ focus_tree = {
 			add_to_variable = { GER_welfare_cost = -0.01 tooltip = social_cost_multiplier_modifier_tt }
 		}
 
-		ai_will_do = { base = 1 }
+		ai_will_do = {
+			base = 1
+			modifier = { factor = 12 GER_ai_phase_recovery_statist = yes }
+		}
 	}
 
 	focus = {
@@ -5204,7 +5326,10 @@ focus_tree = {
 			}
 		}
 
-		ai_will_do = { base = 1 }
+		ai_will_do = {
+			base = 1
+			modifier = { factor = 12 GER_ai_phase_recovery_statist = yes }
+		}
 	}
 
 	focus = {
@@ -5228,7 +5353,10 @@ focus_tree = {
 			add_stability = 0.03
 		}
 
-		ai_will_do = { base = 1 }
+		ai_will_do = {
+			base = 1
+			modifier = { factor = 12 GER_ai_phase_recovery_statist = yes }
+		}
 	}
 
 	focus = {
@@ -5261,7 +5389,10 @@ focus_tree = {
 			}
 		}
 
-		ai_will_do = { base = 1 }
+		ai_will_do = {
+			base = 1
+			modifier = { factor = 12 GER_ai_phase_recovery_statist = yes }
+		}
 	}
 
 	focus = {
@@ -5348,6 +5479,7 @@ focus_tree = {
 				factor = 0
 				can_staff_an_offices = no
 			}
+			modifier = { factor = 12 GER_ai_phase_recovery_statist = yes }
 		}
 	}
 	# # #
@@ -5371,7 +5503,10 @@ focus_tree = {
 			increase_economic_growth = yes
 		}
 
-		ai_will_do = { base = 1 }
+		ai_will_do = {
+			base = 1
+			modifier = { factor = 12 GER_ai_phase_recovery_market = yes }
+		}
 	}
 
 	focus = {
@@ -5393,7 +5528,10 @@ focus_tree = {
 			increase_exports = yes
 		}
 
-		ai_will_do = { base = 1 }
+		ai_will_do = {
+			base = 1
+			modifier = { factor = 12 GER_ai_phase_recovery_market = yes }
+		}
 	}
 
 	focus = {
@@ -5450,6 +5588,7 @@ focus_tree = {
 				factor = 0
 				can_staff_an_industrial_complex = no
 			}
+			modifier = { factor = 12 GER_ai_phase_recovery_market = yes }
 		}
 	}
 
@@ -5507,6 +5646,7 @@ focus_tree = {
 				factor = 0
 				can_staff_an_industrial_complex = no
 			}
+			modifier = { factor = 12 GER_ai_phase_recovery_market = yes }
 		}
 	}
 
@@ -5527,14 +5667,11 @@ focus_tree = {
 
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus GER_foreign_investment_opportunities"
-			set_temp_variable = { treasury_change = gdp_total }
-			multiply_temp_variable = { treasury_change = -0.05 }
+			set_temp_variable = { treasury_change = { value = gdp_total multiply = -0.05 } }
 			modify_treasury_effect = yes
-			set_temp_variable = { int_investment_change = treasury_change }
-			multiply_temp_variable = { int_investment_change = -1.25 }
+			set_temp_variable = { int_investment_change = { value = treasury_change multiply = -1.25 } }
 			modify_international_investment_effect = yes
-			set_temp_variable = { debt_change = debt }
-			multiply_temp_variable = { debt_change = -0.02 }
+			set_temp_variable = { debt_change = { value = debt multiply = -0.02 } }
 			modify_debt_effect = yes
 		}
 
@@ -5544,6 +5681,7 @@ focus_tree = {
 				factor = 0
 				has_active_mission = bankruptcy_incoming_collapse
 			}
+			modifier = { factor = 12 GER_ai_phase_recovery_market = yes }
 		}
 	}
 	#
@@ -5569,7 +5707,14 @@ focus_tree = {
 			}
 		}
 
-		ai_will_do = { base = 1 }
+		ai_will_do = {
+			base = 1
+			modifier = {
+				factor = 2
+				has_idea = GER_idea_unemployment_crisis
+			}
+			modifier = { factor = 12 GER_ai_phase_recovery_market = yes }
+		}
 	}
 
 	focus = {
@@ -5597,14 +5742,17 @@ focus_tree = {
 			set_temp_variable = { influence_target = JAP }
 			change_influence_percentage = yes
 			add_tech_bonus = {
-				name = GER_foreign_exchange
+				name = GER_scientific_exchanges
 				bonus = 0.5
 				uses = 2
 				category = CAT_internet_tech
 			}
 		}
 
-		ai_will_do = { base = 1 }
+		ai_will_do = {
+			base = 1
+			modifier = { factor = 12 GER_ai_phase_recovery_market = yes }
+		}
 	}
 
 	focus = {
@@ -5659,6 +5807,7 @@ focus_tree = {
 				factor = 0
 				can_staff_an_dockyard = no
 			}
+			modifier = { factor = 12 GER_ai_phase_recovery_market = yes }
 		}
 	}
 
@@ -5698,7 +5847,10 @@ focus_tree = {
 			}
 		}
 
-		ai_will_do = { base = 1 }
+		ai_will_do = {
+			base = 1
+			modifier = { factor = 12 GER_ai_phase_recovery_market = yes }
+		}
 	}
 
 	focus = {
@@ -5724,7 +5876,10 @@ focus_tree = {
 			add_to_variable = { GER_education_cost = -0.01 tooltip = education_cost_multiplier_modifier_tt }
 		}
 
-		ai_will_do = { base = 1 }
+		ai_will_do = {
+			base = 1
+			modifier = { factor = 12 GER_ai_phase_recovery_market = yes }
+		}
 	}
 
 	focus = {
@@ -5748,7 +5903,14 @@ focus_tree = {
 			remove_ideas = GER_idea_unemployment_crisis2
 		}
 
-		ai_will_do = { base = 1 }
+		ai_will_do = {
+			base = 1
+			modifier = {
+				factor = 3
+				has_idea = GER_idea_unemployment_crisis2
+			}
+			modifier = { factor = 12 GER_ai_phase_recovery_market = yes }
+		}
 	}
 	#Bundeswehr
 	focus = {
@@ -5769,7 +5931,10 @@ focus_tree = {
 			add_ideas = GER_idea_Innere_fuhrung_I
 		}
 
-		ai_will_do = { base = 1 }
+		ai_will_do = {
+			base = 1
+			modifier = { factor = 15 has_war = yes }
+		}
 	}
 
 	focus = {
@@ -5801,11 +5966,14 @@ focus_tree = {
 			country_event = { id = GER_Cold_War.10 days = 12 }
 		}
 
-		ai_will_do = { base = 1 }
+		ai_will_do = {
+			base = 1
+			modifier = { factor = 15 has_war = yes }
+		}
 	}
 
 	focus = {
-		id = Ger_Einsatzfuhrungskommando
+		id = GER_Einsatzfuhrungskommando
 		icon = einsfukdobw
 
 		x = 31
@@ -5819,7 +5987,7 @@ focus_tree = {
 		search_filters = { FOCUS_FILTER_MILITARY_LAWS FOCUS_FILTER_ARMY }
 
 		completion_reward = {
-			log = "[GetDateText]: [Root.GetName]: Focus Ger_Einsatzfuhrungskommando"
+			log = "[GetDateText]: [Root.GetName]: Focus GER_Einsatzfuhrungskommando"
 			custom_effect_tooltip = {
 				localization_key = modifies_dynamic_modifier_tt
 				MODIFIER = GER_Bundeswehr_modifier
@@ -5829,7 +5997,10 @@ focus_tree = {
 			add_to_variable = { GER_command_abilities_cost_factor = 0.02 tooltip = command_abilities_cost_factor_tt }
 		}
 
-		ai_will_do = { base = 1 }
+		ai_will_do = {
+			base = 1
+			modifier = { factor = 15 has_war = yes }
+		}
 	}
 
 	focus = {
@@ -5838,11 +6009,11 @@ focus_tree = {
 
 		x = 0
 		y = 1
-		relative_position_id = Ger_Einsatzfuhrungskommando
+		relative_position_id = GER_Einsatzfuhrungskommando
 
 		cost = 6
 
-		prerequisite = { focus = Ger_Einsatzfuhrungskommando }
+		prerequisite = { focus = GER_Einsatzfuhrungskommando }
 		mutually_exclusive = {
 			focus = GER_HVK_army
 			focus = GER_KRK_army
@@ -5882,7 +6053,10 @@ focus_tree = {
 			add_to_variable = { GER_airforce_personnel_cost_multiplier_modifier_luftwaffe = -0.3 tooltip = airforce_personnel_cost_multiplier_modifier_tt }
 		}
 
-		ai_will_do = { base = 1 }
+		ai_will_do = {
+			base = 1
+			modifier = { factor = 15 has_war = yes }
+		}
 	}
 
 	focus = {
@@ -5910,7 +6084,10 @@ focus_tree = {
 			add_to_variable = { GER_initiative_factor = 0.05 tooltip = initiative_factor_tt }
 		}
 
-		ai_will_do = { base = 1 }
+		ai_will_do = {
+			base = 1
+			modifier = { factor = 15 has_war = yes }
+		}
 	}
 
 	focus = {
@@ -5937,7 +6114,10 @@ focus_tree = {
 			add_to_variable = { GER_command_abilities_cost_factor = 0.05 tooltip = command_abilities_cost_factor_tt }
 		}
 
-		ai_will_do = { base = 1 }
+		ai_will_do = {
+			base = 1
+			modifier = { factor = 15 has_war = yes }
+		}
 	}
 
 	focus = {
@@ -5965,7 +6145,10 @@ focus_tree = {
 			add_to_variable = { GER_army_infantry_attack_factor = 0.04 tooltip = army_infantry_attack_factor_tt }
 		}
 
-		ai_will_do = { base = 1 }
+		ai_will_do = {
+			base = 1
+			modifier = { factor = 15 has_war = yes }
+		}
 	}
 
 	focus = {
@@ -5992,7 +6175,10 @@ focus_tree = {
 			add_to_variable = { GER_army_speed_factor = 0.05 tooltip = army_speed_factor_tt }
 		}
 
-		ai_will_do = { base = 1 }
+		ai_will_do = {
+			base = 1
+			modifier = { factor = 15 has_war = yes }
+		}
 	}
 
 	focus = {
@@ -6020,7 +6206,10 @@ focus_tree = {
 			add_to_variable = { GER_Army_defence = 0.03 tooltip = army_defence_factor_tt }
 		}
 
-		ai_will_do = { base = 1 }
+		ai_will_do = {
+			base = 1
+			modifier = { factor = 15 has_war = yes }
+		}
 	}
 
 	focus = {
@@ -6049,7 +6238,10 @@ focus_tree = {
 			add_to_variable = { GER_army_artillery_defence_factor = 0.06 tooltip = army_artillery_defence_factor_tt }
 		}
 
-		ai_will_do = { base = 1 }
+		ai_will_do = {
+			base = 1
+			modifier = { factor = 15 has_war = yes }
+		}
 	}
 
 	focus = {
@@ -6080,7 +6272,10 @@ focus_tree = {
 			add_to_variable = { GER_aarmy_attack_speed_factor = 0.04 tooltip = army_attack_speed_factor_tt }
 		}
 
-		ai_will_do = { base = 1 }
+		ai_will_do = {
+			base = 1
+			modifier = { factor = 15 has_war = yes }
+		}
 	}
 
 	focus = {
@@ -6126,7 +6321,10 @@ focus_tree = {
 			add_to_variable = { GER_personnel_cost_multiplier_modifier_heer = 0.30 tooltip = personnel_cost_multiplier_modifier_tt }
 		}
 
-		ai_will_do = { base = 1 }
+		ai_will_do = {
+			base = 1
+			modifier = { factor = 15 has_war = yes }
+		}
 	}
 
 	focus = {
@@ -6155,7 +6353,10 @@ focus_tree = {
 			add_to_variable = { GER_modifier_army_sub_unit_L_Air_assault_Bat_defence_factor = 0.03 tooltip = modifier_army_sub_unit_L_Air_assault_Bat_defence_factor_tt }
 		}
 
-		ai_will_do = { base = 1 }
+		ai_will_do = {
+			base = 1
+			modifier = { factor = 15 has_war = yes }
+		}
 	}
 
 	focus = {
@@ -6184,7 +6385,10 @@ focus_tree = {
 			add_to_variable = { GER_army_armor_attack = 0.03 tooltip = army_armor_attack_factor_tt }
 		}
 
-		ai_will_do = { base = 1 }
+		ai_will_do = {
+			base = 1
+			modifier = { factor = 15 has_war = yes }
+		}
 	}
 
 	focus = {
@@ -6211,7 +6415,10 @@ focus_tree = {
 			add_to_variable = { GER_army_core_defence_factor = 0.02 tooltip = army_core_defence_factor_tt }
 		}
 
-		ai_will_do = { base = 1 }
+		ai_will_do = {
+			base = 1
+			modifier = { factor = 15 has_war = yes }
+		}
 	}
 
 	focus = {
@@ -6240,7 +6447,10 @@ focus_tree = {
 			add_to_variable = { GER_mechanized_attack_factor = 0.04 tooltip = mechanized_attack_factor_tt }
 		}
 
-		ai_will_do = { base = 1 }
+		ai_will_do = {
+			base = 1
+			modifier = { factor = 15 has_war = yes }
+		}
 	}
 
 	focus = {
@@ -6267,7 +6477,10 @@ focus_tree = {
 			add_to_variable = { GER_army_speed_factor = 0.05 tooltip = army_speed_factor_tt }
 		}
 
-		ai_will_do = { base = 1 }
+		ai_will_do = {
+			base = 1
+			modifier = { factor = 15 has_war = yes }
+		}
 	}
 
 	focus = {
@@ -6296,7 +6509,10 @@ focus_tree = {
 			add_to_variable = { GER_modifier_army_sub_unit_L_Air_assault_Bat_defence_factor = 0.04 tooltip = modifier_army_sub_unit_L_Air_assault_Bat_defence_factor_tt }
 		}
 
-		ai_will_do = { base = 1 }
+		ai_will_do = {
+			base = 1
+			modifier = { factor = 15 has_war = yes }
+		}
 	}
 
 	focus = {
@@ -6324,7 +6540,10 @@ focus_tree = {
 			add_to_variable = { GER_army_morale_factor = 0.05 tooltip = army_morale_factor_tt }
 		}
 
-		ai_will_do = { base = 1 }
+		ai_will_do = {
+			base = 1
+			modifier = { factor = 15 has_war = yes }
+		}
 	}
 
 	focus = {
@@ -6333,11 +6552,11 @@ focus_tree = {
 
 		x = -7
 		y = 1
-		relative_position_id = Ger_Einsatzfuhrungskommando
+		relative_position_id = GER_Einsatzfuhrungskommando
 
 		cost = 6
 
-		prerequisite = { focus = Ger_Einsatzfuhrungskommando }
+		prerequisite = { focus = GER_Einsatzfuhrungskommando }
 		mutually_exclusive = {
 			focus = GER_the_balanced_Army
 			focus = GER_HVK_army
@@ -6390,7 +6609,10 @@ focus_tree = {
 			}
 		}
 
-		ai_will_do = { base = 1 }
+		ai_will_do = {
+			base = 1
+			modifier = { factor = 15 has_war = yes }
+		}
 	}
 
 	focus = {
@@ -6417,7 +6639,10 @@ focus_tree = {
 			add_to_variable = { GER_training_time_factor = 0.1 tooltip = training_time_factor_tt }
 		}
 
-		ai_will_do = { base = 1 }
+		ai_will_do = {
+			base = 1
+			modifier = { factor = 15 has_war = yes }
+		}
 	}
 
 	focus = {
@@ -6444,7 +6669,10 @@ focus_tree = {
 			add_to_variable = { GER_initiative_factor = 0.05 tooltip = initiative_factor_tt }
 		}
 
-		ai_will_do = { base = 1 }
+		ai_will_do = {
+			base = 1
+			modifier = { factor = 15 has_war = yes }
+		}
 	}
 
 	focus = {
@@ -6472,7 +6700,10 @@ focus_tree = {
 			add_to_variable = { GER_army_infantry_attack_factor = 0.02 tooltip = army_infantry_attack_factor_tt }
 		}
 
-		ai_will_do = { base = 1 }
+		ai_will_do = {
+			base = 1
+			modifier = { factor = 15 has_war = yes }
+		}
 	}
 
 	focus = {
@@ -6500,7 +6731,10 @@ focus_tree = {
 			add_to_variable = { GER_army_org_factor = 0.05 tooltip = army_org_factor_tt }
 		}
 
-		ai_will_do = { base = 1 }
+		ai_will_do = {
+			base = 1
+			modifier = { factor = 15 has_war = yes }
+		}
 	}
 
 	focus = {
@@ -6529,7 +6763,10 @@ focus_tree = {
 			add_to_variable = { GER_breakthrough_factor = 0.05 tooltip = breakthrough_factor_tt }
 		}
 
-		ai_will_do = { base = 1 }
+		ai_will_do = {
+			base = 1
+			modifier = { factor = 15 has_war = yes }
+		}
 	}
 
 	focus = {
@@ -6556,7 +6793,10 @@ focus_tree = {
 			add_to_variable = { GER_training_time_factor = 0.1 tooltip = training_time_factor_tt }
 		}
 
-		ai_will_do = { base = 1 }
+		ai_will_do = {
+			base = 1
+			modifier = { factor = 15 has_war = yes }
+		}
 	}
 
 	focus = {
@@ -6583,7 +6823,10 @@ focus_tree = {
 			add_to_variable = { GER_mechanized_attack_factor = 0.05 tooltip = mechanized_attack_factor_tt }
 		}
 
-		ai_will_do = { base = 1 }
+		ai_will_do = {
+			base = 1
+			modifier = { factor = 15 has_war = yes }
+		}
 	}
 
 	focus = {
@@ -6616,7 +6859,10 @@ focus_tree = {
 			increase_intervention_law_effect = yes
 		}
 
-		ai_will_do = { base = 1 }
+		ai_will_do = {
+			base = 1
+			modifier = { factor = 15 has_war = yes }
+		}
 	}
 
 	focus = {
@@ -6645,7 +6891,10 @@ focus_tree = {
 			add_to_variable = { GER_modifier_army_sub_unit_L_Air_assault_Bat_defence_factor = 0.03 tooltip = modifier_army_sub_unit_L_Air_assault_Bat_defence_factor_tt }
 		}
 
-		ai_will_do = { base = 1 }
+		ai_will_do = {
+			base = 1
+			modifier = { factor = 15 has_war = yes }
+		}
 	}
 
 	focus = {
@@ -6671,7 +6920,10 @@ focus_tree = {
 			add_to_variable = { GER_army_morale_factor = 0.05 tooltip = army_morale_factor_tt }
 		}
 
-		ai_will_do = { base = 1 }
+		ai_will_do = {
+			base = 1
+			modifier = { factor = 15 has_war = yes }
+		}
 	}
 
 	focus = {
@@ -6698,7 +6950,10 @@ focus_tree = {
 			add_to_variable = { GER_intel_from_combat_factor = 0.1 tooltip = intel_from_combat_factor_tt }
 		}
 
-		ai_will_do = { base = 1 }
+		ai_will_do = {
+			base = 1
+			modifier = { factor = 15 has_war = yes }
+		}
 	}
 
 	focus = {
@@ -6736,7 +6991,10 @@ focus_tree = {
 			}
 		}
 
-		ai_will_do = { base = 1 }
+		ai_will_do = {
+			base = 1
+			modifier = { factor = 15 has_war = yes }
+		}
 	}
 
 	focus = {
@@ -6765,7 +7023,10 @@ focus_tree = {
 			add_to_variable = { GER_attrition_modifier = -0.05 tooltip = attrition_tt }
 		}
 
-		ai_will_do = { base = 1 }
+		ai_will_do = {
+			base = 1
+			modifier = { factor = 15 has_war = yes }
+		}
 	}
 
 	focus = {
@@ -6774,11 +7035,11 @@ focus_tree = {
 
 		x = 7
 		y = 1
-		relative_position_id = Ger_Einsatzfuhrungskommando
+		relative_position_id = GER_Einsatzfuhrungskommando
 
 		cost = 6
 
-		prerequisite = { focus = Ger_Einsatzfuhrungskommando }
+		prerequisite = { focus = GER_Einsatzfuhrungskommando }
 		mutually_exclusive = {
 			focus = GER_the_balanced_Army
 			focus = GER_KRK_army
@@ -6825,7 +7086,10 @@ focus_tree = {
 			}
 		}
 
-		ai_will_do = { base = 1 }
+		ai_will_do = {
+			base = 1
+			modifier = { factor = 15 has_war = yes }
+		}
 	}
 
 	focus = {
@@ -6853,7 +7117,10 @@ focus_tree = {
 			add_to_variable = { GER_breakthrough_factor = 0.06 tooltip = breakthrough_factor_tt }
 		}
 
-		ai_will_do = { base = 1 }
+		ai_will_do = {
+			base = 1
+			modifier = { factor = 15 has_war = yes }
+		}
 	}
 
 	focus = {
@@ -6881,7 +7148,10 @@ focus_tree = {
 			add_to_variable = { GER_recon_factor_while_entrenched = 0.02 tooltip = recon_factor_while_entrenched_tt }
 		}
 
-		ai_will_do = { base = 1 }
+		ai_will_do = {
+			base = 1
+			modifier = { factor = 15 has_war = yes }
+		}
 	}
 
 	focus = {
@@ -6910,7 +7180,10 @@ focus_tree = {
 			add_to_variable = { GER_army_org_factor = 0.05 tooltip = army_org_factor_tt }
 		}
 
-		ai_will_do = { base = 1 }
+		ai_will_do = {
+			base = 1
+			modifier = { factor = 15 has_war = yes }
+		}
 	}
 
 	focus = {
@@ -6941,7 +7214,10 @@ focus_tree = {
 			add_to_variable = { GER_army_org_regain = 0.01 tooltip = army_org_regain_tt }
 		}
 
-		ai_will_do = { base = 1 }
+		ai_will_do = {
+			base = 1
+			modifier = { factor = 15 has_war = yes }
+		}
 	}
 
 	focus = {
@@ -6969,7 +7245,10 @@ focus_tree = {
 			add_to_variable = { GER_land_reinforce_rate = 0.07 tooltip = land_reinforce_rate_tt }
 		}
 
-		ai_will_do = { base = 1 }
+		ai_will_do = {
+			base = 1
+			modifier = { factor = 15 has_war = yes }
+		}
 	}
 
 	focus = {
@@ -6996,7 +7275,10 @@ focus_tree = {
 			add_to_variable = { GER_army_infantry_attack_factor = 0.05 tooltip = army_infantry_attack_factor_tt }
 		}
 
-		ai_will_do = { base = 1 }
+		ai_will_do = {
+			base = 1
+			modifier = { factor = 15 has_war = yes }
+		}
 	}
 
 	focus = {
@@ -7027,7 +7309,10 @@ focus_tree = {
 			add_to_variable = { GER_supply_factor = 0.05 tooltip = supply_consumption_factor_tt }
 		}
 
-		ai_will_do = { base = 1 }
+		ai_will_do = {
+			base = 1
+			modifier = { factor = 15 has_war = yes }
+		}
 	}
 
 	focus = {
@@ -7055,7 +7340,10 @@ focus_tree = {
 			add_to_variable = { GER_army_core_defence_factor = 0.04 tooltip = army_core_defence_factor_tt }
 		}
 
-		ai_will_do = { base = 1 }
+		ai_will_do = {
+			base = 1
+			modifier = { factor = 15 has_war = yes }
+		}
 	}
 
 	focus = {
@@ -7083,7 +7371,10 @@ focus_tree = {
 			add_to_variable = { GER_command_abilities_cost_factor = 0.05 tooltip = command_abilities_cost_factor_tt }
 		}
 
-		ai_will_do = { base = 1 }
+		ai_will_do = {
+			base = 1
+			modifier = { factor = 15 has_war = yes }
+		}
 	}
 
 	focus = {
@@ -7116,7 +7407,10 @@ focus_tree = {
 			add_to_variable = { GER_combat_width_factor = 0.02 tooltip = combat_width_factor_tt }
 		}
 
-		ai_will_do = { base = 1 }
+		ai_will_do = {
+			base = 1
+			modifier = { factor = 15 has_war = yes }
+		}
 	}
 
 	focus = {
@@ -7144,7 +7438,10 @@ focus_tree = {
 			add_to_variable = { GER_land_reinforce_rate = 0.05 tooltip = land_reinforce_rate_tt }
 		}
 
-		ai_will_do = { base = 1 }
+		ai_will_do = {
+			base = 1
+			modifier = { factor = 15 has_war = yes }
+		}
 	}
 
 	focus = {
@@ -7173,7 +7470,10 @@ focus_tree = {
 			add_to_variable = { GER_attrition_modifier = -0.04 tooltip = attrition_tt }
 		}
 
-		ai_will_do = { base = 1 }
+		ai_will_do = {
+			base = 1
+			modifier = { factor = 15 has_war = yes }
+		}
 	}
 
 	focus = {
@@ -7201,7 +7501,10 @@ focus_tree = {
 			add_to_variable = { GER_initiative_factor = 0.025 tooltip = initiative_factor_tt }
 		}
 
-		ai_will_do = { base = 1 }
+		ai_will_do = {
+			base = 1
+			modifier = { factor = 15 has_war = yes }
+		}
 	}
 
 	focus = {
@@ -7229,7 +7532,10 @@ focus_tree = {
 			country_event = { id = germany.580 days = 1 }
 		}
 
-		ai_will_do = { base = 1 }
+		ai_will_do = {
+			base = 1
+			modifier = { factor = 15 has_war = yes }
+		}
 	}
 
 	focus = {
@@ -7270,7 +7576,10 @@ focus_tree = {
 			}
 		}
 
-		ai_will_do = { base = 1 }
+		ai_will_do = {
+			base = 1
+			modifier = { factor = 15 has_war = yes }
+		}
 	}
 
 	focus = {
@@ -7297,7 +7606,10 @@ focus_tree = {
 			add_to_variable = { GER_home_defence_factor = 0.05 tooltip = air_home_defence_factor_tt }
 		}
 
-		ai_will_do = { base = 1 }
+		ai_will_do = {
+			base = 1
+			modifier = { factor = 15 has_war = yes }
+		}
 	}
 
 	focus = {
@@ -7324,7 +7636,10 @@ focus_tree = {
 			add_to_variable = { GER_air_accidents = 0.05 tooltip = air_accidents_factor_tt }
 		}
 
-		ai_will_do = { base = 1 }
+		ai_will_do = {
+			base = 1
+			modifier = { factor = 15 has_war = yes }
+		}
 	}
 
 	focus = {
@@ -7361,7 +7676,10 @@ focus_tree = {
 			}
 		}
 
-		ai_will_do = { base = 1 }
+		ai_will_do = {
+			base = 1
+			modifier = { factor = 15 has_war = yes }
+		}
 	}
 
 	focus = {
@@ -7391,7 +7709,10 @@ focus_tree = {
 			add_to_variable = { GER_air_mission_efficiency = 0.05 tooltip = air_mission_efficiency_tt }
 		}
 
-		ai_will_do = { base = 1 }
+		ai_will_do = {
+			base = 1
+			modifier = { factor = 15 has_war = yes }
+		}
 	}
 
 	focus = {
@@ -7418,7 +7739,10 @@ focus_tree = {
 			add_to_variable = { GER_ground_attack = 0.05 tooltip = ground_attack_factor_tt }
 		}
 
-		ai_will_do = { base = 1 }
+		ai_will_do = {
+			base = 1
+			modifier = { factor = 15 has_war = yes }
+		}
 	}
 
 	focus = {
@@ -7445,7 +7769,10 @@ focus_tree = {
 			add_to_variable = { GER_ground_attack = 0.05 tooltip = ground_attack_factor_tt }
 		}
 
-		ai_will_do = { base = 1 }
+		ai_will_do = {
+			base = 1
+			modifier = { factor = 15 has_war = yes }
+		}
 	}
 
 	focus = {
@@ -7472,7 +7799,10 @@ focus_tree = {
 			add_to_variable = { GER_air_mission_xp_gain_factor = 0.05 tooltip = air_mission_xp_gain_factor_tt }
 		}
 
-		ai_will_do = { base = 1 }
+		ai_will_do = {
+			base = 1
+			modifier = { factor = 15 has_war = yes }
+		}
 	}
 
 	focus = {
@@ -7508,7 +7838,10 @@ focus_tree = {
 			add_to_variable = { GER_recon_factor = 0.05 tooltip = recon_factor_tt }
 		}
 
-		ai_will_do = { base = 1 }
+		ai_will_do = {
+			base = 1
+			modifier = { factor = 15 has_war = yes }
+		}
 	}
 
 	focus = {
@@ -7534,7 +7867,10 @@ focus_tree = {
 			add_to_variable = { GER_initiative_factor = 0.05 tooltip = initiative_factor_tt }
 		}
 
-		ai_will_do = { base = 1 }
+		ai_will_do = {
+			base = 1
+			modifier = { factor = 15 has_war = yes }
+		}
 	}
 
 	focus = {
@@ -7560,7 +7896,10 @@ focus_tree = {
 			add_to_variable = { GER_naval_strike_targetting = 0.05 tooltip = naval_strike_targetting_factor_tt }
 		}
 
-		ai_will_do = { base = 1 }
+		ai_will_do = {
+			base = 1
+			modifier = { factor = 15 has_war = yes }
+		}
 	}
 
 	focus = {
@@ -7590,7 +7929,10 @@ focus_tree = {
 			add_to_variable = { GER_air_superiority_efficiency = 0.1 tooltip = air_superiority_efficiency_tt }
 		}
 
-		ai_will_do = { base = 1 }
+		ai_will_do = {
+			base = 1
+			modifier = { factor = 15 has_war = yes }
+		}
 	}
 
 	focus = {
@@ -7617,7 +7959,10 @@ focus_tree = {
 			add_to_variable = { GER_air_mission_efficiency = 0.09 tooltip = air_mission_efficiency_tt }
 		}
 
-		ai_will_do = { base = 1 }
+		ai_will_do = {
+			base = 1
+			modifier = { factor = 15 has_war = yes }
+		}
 	}
 
 	focus = {
@@ -7644,7 +7989,10 @@ focus_tree = {
 			add_to_variable = { GER_air_ace_generator_chance_factor = 0.02 tooltip = air_ace_generation_chance_factor_tt }
 		}
 
-		ai_will_do = { base = 1 }
+		ai_will_do = {
+			base = 1
+			modifier = { factor = 15 has_war = yes }
+		}
 	}
 
 	focus = {
@@ -7671,7 +8019,10 @@ focus_tree = {
 			add_to_variable = { GER_air_defence = 0.05 tooltip = air_defence_factor_tt }
 		}
 
-		ai_will_do = { base = 1 }
+		ai_will_do = {
+			base = 1
+			modifier = { factor = 15 has_war = yes }
+		}
 	}
 
 	focus = {
@@ -7693,7 +8044,7 @@ focus_tree = {
 			if = {
 				limit = { has_dlc = "By Blood Alone" }
 				add_tech_bonus = {
-					name = GER_AIR_REC
+					name = GER_update_rec_equipment
 					bonus = 0.10
 					uses = 1
 					category = CAT_air_camera
@@ -7701,7 +8052,7 @@ focus_tree = {
 			}
 			else = {
 				add_tech_bonus = {
-					name = GER_AIR_REC
+					name = GER_update_rec_equipment
 					bonus = 0.10
 					uses = 1
 					category = CAT_air_eqp
@@ -7709,7 +8060,10 @@ focus_tree = {
 			}
 		}
 
-		ai_will_do = { base = 1 }
+		ai_will_do = {
+			base = 1
+			modifier = { factor = 15 has_war = yes }
+		}
 	}
 
 	focus = {
@@ -7738,8 +8092,7 @@ focus_tree = {
 				uses = 1
 				category = CAT_air_eqp
 			}
-			set_temp_variable = { treasury_change = gdp_per_capita }
-			multiply_temp_variable = { treasury_change = -0.15 }
+			set_temp_variable = { treasury_change = { value = gdp_per_capita multiply = -0.15 } }
 			modify_treasury_effect = yes
 			if = {
 				limit = {
@@ -7757,6 +8110,7 @@ focus_tree = {
 				factor = 0
 				has_active_mission = bankruptcy_incoming_collapse
 			}
+			modifier = { factor = 15 has_war = yes }
 		}
 	}
 
@@ -7786,8 +8140,7 @@ focus_tree = {
 			add_to_variable = { GER_air_mission_efficiency = 0.07 tooltip = air_mission_efficiency_tt }
 			add_to_variable = { GER_air_attack = 0.05 tooltip = air_attack_factor_tt }
 			newline = yes
-			set_temp_variable = { treasury_change = gdp_per_capita }
-			multiply_temp_variable = { treasury_change = -0.15 }
+			set_temp_variable = { treasury_change = { value = gdp_per_capita multiply = -0.15 } }
 			modify_treasury_effect = yes
 		}
 
@@ -7797,6 +8150,7 @@ focus_tree = {
 				factor = 0
 				has_active_mission = bankruptcy_incoming_collapse
 			}
+			modifier = { factor = 15 has_war = yes }
 		}
 	}
 
@@ -7838,7 +8192,10 @@ focus_tree = {
 			}
 		}
 
-		ai_will_do = { base = 1 }
+		ai_will_do = {
+			base = 1
+			modifier = { factor = 15 has_war = yes }
+		}
 	}
 
 	focus = {
@@ -7865,7 +8222,10 @@ focus_tree = {
 			add_to_variable = { GER_air_defence = 0.05 tooltip = air_defence_factor_tt }
 		}
 
-		ai_will_do = { base = 1 }
+		ai_will_do = {
+			base = 1
+			modifier = { factor = 15 has_war = yes }
+		}
 	}
 
 	focus = {
@@ -7891,8 +8251,7 @@ focus_tree = {
 			add_to_variable = { GER_air_superiority_bonus_in_combat = 0.02 tooltip = air_superiority_bonus_in_combat_tt }
 			add_to_variable = { GER_intercept_efficiency = 0.02 tooltip = air_intercept_efficiency_tt }
 			newline = yes
-			set_temp_variable = { treasury_change = gdp_per_capita }
-			multiply_temp_variable = { treasury_change = -0.15 }
+			set_temp_variable = { treasury_change = { value = gdp_per_capita multiply = -0.15 } }
 			modify_treasury_effect = yes
 		}
 
@@ -7902,6 +8261,7 @@ focus_tree = {
 				factor = 0
 				has_active_mission = bankruptcy_incoming_collapse
 			}
+			modifier = { factor = 15 has_war = yes }
 		}
 	}
 
@@ -7937,7 +8297,10 @@ focus_tree = {
 			}
 		}
 
-		ai_will_do = { base = 1 }
+		ai_will_do = {
+			base = 1
+			modifier = { factor = 15 has_war = yes }
+		}
 	}
 
 	focus = {
@@ -7964,7 +8327,10 @@ focus_tree = {
 			add_to_variable = { GER_air_night_penalty = 0.03 tooltip = air_night_penalty_tt }
 		}
 
-		ai_will_do = { base = 1 }
+		ai_will_do = {
+			base = 1
+			modifier = { factor = 15 has_war = yes }
+		}
 	}
 
 	focus = {
@@ -7995,8 +8361,7 @@ focus_tree = {
 			}
 			add_to_variable = { GER_initiative_factor = 0.02 tooltip = initiative_factor_tt }
 			newline = yes
-			set_temp_variable = { treasury_change = gdp_per_capita }
-			multiply_temp_variable = { treasury_change = -0.15 }
+			set_temp_variable = { treasury_change = { value = gdp_per_capita multiply = -0.15 } }
 			modify_treasury_effect = yes
 		}
 
@@ -8006,6 +8371,7 @@ focus_tree = {
 				factor = 0
 				has_active_mission = bankruptcy_incoming_collapse
 			}
+			modifier = { factor = 15 has_war = yes }
 		}
 	}
 
@@ -8041,7 +8407,10 @@ focus_tree = {
 			}
 		}
 
-		ai_will_do = { base = 1 }
+		ai_will_do = {
+			base = 1
+			modifier = { factor = 15 has_war = yes }
+		}
 	}
 
 	focus = {
@@ -8062,8 +8431,7 @@ focus_tree = {
 
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus GER_own_killsat_capability"
-			set_temp_variable = { treasury_change = gdp_per_capita }
-			multiply_temp_variable = { treasury_change = -0.15 }
+			set_temp_variable = { treasury_change = { value = gdp_per_capita multiply = -0.15 } }
 			modify_treasury_effect = yes
 			add_tech_bonus = {
 				name = GER_own_killsat_capability
@@ -8079,6 +8447,7 @@ focus_tree = {
 				factor = 0
 				has_active_mission = bankruptcy_incoming_collapse
 			}
+			modifier = { factor = 15 has_war = yes }
 		}
 	}
 
@@ -8098,8 +8467,7 @@ focus_tree = {
 
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus GER_own_rec_sattelites"
-			set_temp_variable = { treasury_change = gdp_per_capita }
-			multiply_temp_variable = { treasury_change = -0.15 }
+			set_temp_variable = { treasury_change = { value = gdp_per_capita multiply = -0.15 } }
 			modify_treasury_effect = yes
 			add_tech_bonus = {
 				name = GER_own_rec_sattelites
@@ -8115,6 +8483,7 @@ focus_tree = {
 				factor = 0
 				has_active_mission = bankruptcy_incoming_collapse
 			}
+			modifier = { factor = 15 has_war = yes }
 		}
 	}
 
@@ -8143,7 +8512,10 @@ focus_tree = {
 			}
 		}
 
-		ai_will_do = { base = 1 }
+		ai_will_do = {
+			base = 1
+			modifier = { factor = 15 has_war = yes }
+		}
 	}
 
 	focus = {
@@ -8180,7 +8552,10 @@ focus_tree = {
 			add_to_variable = { GER_ships_at_battle_start = 0.02 tooltip = ships_at_battle_start_tt }
 		}
 
-		ai_will_do = { base = 1 }
+		ai_will_do = {
+			base = 1
+			modifier = { factor = 15 has_war = yes }
+		}
 	}
 
 	focus = {
@@ -8217,7 +8592,10 @@ focus_tree = {
 			add_to_variable = { GER_navy_capital_ship_attack_factor = 0.02 tooltip = navy_capital_ship_attack_factor_tt }
 		}
 
-		ai_will_do = { base = 1 }
+		ai_will_do = {
+			base = 1
+			modifier = { factor = 15 has_war = yes }
+		}
 	}
 
 	focus = {
@@ -8254,7 +8632,10 @@ focus_tree = {
 			add_to_variable = { GER_screening_without_screens = 0.02 tooltip = screening_without_screens_tt }
 		}
 
-		ai_will_do = { base = 1 }
+		ai_will_do = {
+			base = 1
+			modifier = { factor = 15 has_war = yes }
+		}
 	}
 
 	focus = {
@@ -8282,7 +8663,10 @@ focus_tree = {
 			add_to_variable = { GER_naval_invasion_planning_bonus_speed = 0.02 tooltip = naval_invasion_planning_bonus_speed_tt }
 		}
 
-		ai_will_do = { base = 1 }
+		ai_will_do = {
+			base = 1
+			modifier = { factor = 15 has_war = yes }
+		}
 	}
 
 	focus = {
@@ -8310,7 +8694,10 @@ focus_tree = {
 			add_to_variable = { GER_ships_at_battle_start = 0.02 tooltip = ships_at_battle_start_tt }
 		}
 
-		ai_will_do = { base = 1 }
+		ai_will_do = {
+			base = 1
+			modifier = { factor = 15 has_war = yes }
+		}
 	}
 
 	focus = {
@@ -8338,7 +8725,10 @@ focus_tree = {
 			add_to_variable = { GER_naval_retreat_chance_after_initial_combat = 0.02 tooltip = naval_retreat_chance_after_initial_combat_tt }
 		}
 
-		ai_will_do = { base = 1 }
+		ai_will_do = {
+			base = 1
+			modifier = { factor = 15 has_war = yes }
+		}
 	}
 
 	focus = {
@@ -8369,7 +8759,10 @@ focus_tree = {
 			add_to_variable = { GER_naval_torpedo_hit_chance_factor = 0.02 tooltip = naval_torpedo_hit_chance_factor_tt }
 		}
 
-		ai_will_do = { base = 1 }
+		ai_will_do = {
+			base = 1
+			modifier = { factor = 15 has_war = yes }
+		}
 	}
 
 	focus = {
@@ -8400,7 +8793,10 @@ focus_tree = {
 			add_to_variable = { GER_positioning = 0.02 tooltip = positioning_tt }
 		}
 
-		ai_will_do = { base = 1 }
+		ai_will_do = {
+			base = 1
+			modifier = { factor = 15 has_war = yes }
+		}
 	}
 
 	focus = {
@@ -8428,7 +8824,10 @@ focus_tree = {
 			add_to_variable = { GER_naval_retreat_chance_after_initial_combat = 0.02 tooltip = naval_retreat_chance_after_initial_combat_tt }
 		}
 
-		ai_will_do = { base = 1 }
+		ai_will_do = {
+			base = 1
+			modifier = { factor = 15 has_war = yes }
+		}
 	}
 
 	focus = {
@@ -8459,7 +8858,10 @@ focus_tree = {
 			add_to_variable = { GER_naval_damage_factor = 0.02 tooltip = naval_damage_factor_tt }
 		}
 
-		ai_will_do = { base = 1 }
+		ai_will_do = {
+			base = 1
+			modifier = { factor = 15 has_war = yes }
+		}
 	}
 
 	focus = {
@@ -8488,14 +8890,17 @@ focus_tree = {
 			add_to_variable = { GER_naval_enemy_fleet_size_ratio_penalty_factor = 0.02 tooltip = naval_enemy_fleet_size_ratio_penalty_factor_tt }
 		}
 
-		ai_will_do = { base = 1 }
+		ai_will_do = {
+			base = 1
+			modifier = { factor = 15 has_war = yes }
+		}
 	}
 
 	focus = {
 		id = GER_Coasteal_and_open_sea_defense
 		icon = Generic_Submarine1
 
-		x = 2
+		x = 3
 		y = 1
 		relative_position_id = GER_handle_asymetrick_threat
 
@@ -8519,7 +8924,10 @@ focus_tree = {
 			add_to_variable = { GER_naval_coordination = 0.02 tooltip = naval_coordination_tt }
 		}
 
-		ai_will_do = { base = 1 }
+		ai_will_do = {
+			base = 1
+			modifier = { factor = 15 has_war = yes }
+		}
 	}
 
 	focus = {
@@ -8546,7 +8954,10 @@ focus_tree = {
 			add_to_variable = { GER_navy_screen_attack_factor = 0.02 tooltip = navy_screen_attack_factor_tt }
 		}
 
-		ai_will_do = { base = 1 }
+		ai_will_do = {
+			base = 1
+			modifier = { factor = 15 has_war = yes }
+		}
 	}
 
 	focus = {
@@ -8573,7 +8984,10 @@ focus_tree = {
 			add_to_variable = { GER_naval_invasion_planning_bonus_speed = 0.02 tooltip = naval_invasion_planning_bonus_speed_tt }
 		}
 
-		ai_will_do = { base = 1 }
+		ai_will_do = {
+			base = 1
+			modifier = { factor = 15 has_war = yes }
+		}
 	}
 
 	focus = {
@@ -8601,7 +9015,10 @@ focus_tree = {
 			add_to_variable = { GER_naval_hit_chance = 0.02 tooltip = naval_hit_chance_tt }
 		}
 
-		ai_will_do = { base = 1 }
+		ai_will_do = {
+			base = 1
+			modifier = { factor = 15 has_war = yes }
+		}
 	}
 
 	focus = {
@@ -8628,7 +9045,10 @@ focus_tree = {
 			add_to_variable = { GER_navy_org_factor = 0.02 tooltip = navy_org_factor_tt }
 		}
 
-		ai_will_do = { base = 1 }
+		ai_will_do = {
+			base = 1
+			modifier = { factor = 15 has_war = yes }
+		}
 	}
 
 	focus = {
@@ -8659,7 +9079,10 @@ focus_tree = {
 			add_to_variable = { GER_naval_defense_factor = 0.02 tooltip = naval_defense_factor_tt }
 		}
 
-		ai_will_do = { base = 1 }
+		ai_will_do = {
+			base = 1
+			modifier = { factor = 15 has_war = yes }
+		}
 	}
 
 	focus = {
@@ -8688,14 +9111,17 @@ focus_tree = {
 			add_to_variable = { GER_naval_mines_effect_reduction = 0.02 tooltip = naval_mines_effect_reduction_tt }
 		}
 
-		ai_will_do = { base = 1 }
+		ai_will_do = {
+			base = 1
+			modifier = { factor = 15 has_war = yes }
+		}
 	}
 
 	focus = {
 		id = GER_coasteal_and_shallow_sea_defense
 		icon = Generic_Submarine2
 
-		x = -2
+		x = -3
 		y = 1
 		relative_position_id = GER_Improve_mine_warfare
 
@@ -8719,7 +9145,10 @@ focus_tree = {
 			add_to_variable = { GER_naval_morale_factor = 0.02 tooltip = naval_morale_factor_tt }
 		}
 
-		ai_will_do = { base = 1 }
+		ai_will_do = {
+			base = 1
+			modifier = { factor = 15 has_war = yes }
+		}
 	}
 
 	focus = {
@@ -8746,7 +9175,10 @@ focus_tree = {
 			add_to_variable = { GER_ships_at_battle_start = 0.02 tooltip = ships_at_battle_start_tt }
 		}
 
-		ai_will_do = { base = 1 }
+		ai_will_do = {
+			base = 1
+			modifier = { factor = 15 has_war = yes }
+		}
 	}
 
 	focus = {
@@ -8774,7 +9206,10 @@ focus_tree = {
 			add_to_variable = { GER_naval_speed_factor = 0.02 tooltip = naval_speed_factor_tt }
 		}
 
-		ai_will_do = { base = 1 }
+		ai_will_do = {
+			base = 1
+			modifier = { factor = 15 has_war = yes }
+		}
 	}
 
 	focus = {
@@ -8801,7 +9236,10 @@ focus_tree = {
 			add_to_variable = { GER_naval_detection = 0.02 tooltip = naval_detection_tt }
 		}
 
-		ai_will_do = { base = 1 }
+		ai_will_do = {
+			base = 1
+			modifier = { factor = 15 has_war = yes }
+		}
 	}
 
 	focus = {
@@ -8829,7 +9267,10 @@ focus_tree = {
 			add_to_variable = { GER_naval_enemy_fleet_size_ratio_penalty_factor = 0.02 tooltip = naval_enemy_fleet_size_ratio_penalty_factor_tt }
 		}
 
-		ai_will_do = { base = 1 }
+		ai_will_do = {
+			base = 1
+			modifier = { factor = 15 has_war = yes }
+		}
 	}
 
 	focus = {
@@ -8864,7 +9305,10 @@ focus_tree = {
 			add_to_variable = { GER_naval_detection = 0.02 tooltip = naval_detection_tt }
 		}
 
-		ai_will_do = { base = 1 }
+		ai_will_do = {
+			base = 1
+			modifier = { factor = 15 has_war = yes }
+		}
 	}
 
 	focus = {
@@ -8891,7 +9335,10 @@ focus_tree = {
 			add_to_variable = { GER_naval_hit_chance = 0.02 tooltip = naval_hit_chance_tt }
 		}
 
-		ai_will_do = { base = 1 }
+		ai_will_do = {
+			base = 1
+			modifier = { factor = 15 has_war = yes }
+		}
 	}
 
 	focus = {
@@ -8920,7 +9367,10 @@ focus_tree = {
 			add_to_variable = { GER_naval_hit_chance = 0.02 tooltip = naval_hit_chance_tt }
 		}
 
-		ai_will_do = { base = 1 }
+		ai_will_do = {
+			base = 1
+			modifier = { factor = 15 has_war = yes }
+		}
 	}
 
 	focus = {
@@ -8947,7 +9397,10 @@ focus_tree = {
 			add_to_variable = { GER_navy_fuel_consumption_factor = 0.02 tooltip = navy_fuel_consumption_factor_tt }
 		}
 
-		ai_will_do = { base = 1 }
+		ai_will_do = {
+			base = 1
+			modifier = { factor = 15 has_war = yes }
+		}
 	}
 
 	focus = {
@@ -8975,7 +9428,10 @@ focus_tree = {
 			add_to_variable = { GER_ships_at_battle_start = 0.02 tooltip = ships_at_battle_start_tt }
 		}
 
-		ai_will_do = { base = 1 }
+		ai_will_do = {
+			base = 1
+			modifier = { factor = 15 has_war = yes }
+		}
 	}
 
 	focus = {
@@ -9003,7 +9459,10 @@ focus_tree = {
 			add_to_variable = { GER_naval_mine_hit_chance = 0.02 tooltip = naval_mine_hit_chance_tt }
 		}
 
-		ai_will_do = { base = 1 }
+		ai_will_do = {
+			base = 1
+			modifier = { factor = 15 has_war = yes }
+		}
 	}
 
 	focus = {
@@ -9030,7 +9489,10 @@ focus_tree = {
 			add_to_variable = { GER_naval_damage_factor = 0.02 tooltip = naval_damage_factor_tt }
 		}
 
-		ai_will_do = { base = 1 }
+		ai_will_do = {
+			base = 1
+			modifier = { factor = 15 has_war = yes }
+		}
 	}
 
 	focus = {
@@ -9057,7 +9519,10 @@ focus_tree = {
 			add_to_variable = { GER_navy_screen_defence_factor = 0.02 tooltip = navy_screen_defence_factor_tt }
 		}
 
-		ai_will_do = { base = 1 }
+		ai_will_do = {
+			base = 1
+			modifier = { factor = 15 has_war = yes }
+		}
 	}
 
 	focus = {
@@ -9084,7 +9549,10 @@ focus_tree = {
 			add_to_variable = { GER_critical_receive_chance = 0.02 tooltip = critical_receive_chance_tt }
 		}
 
-		ai_will_do = { base = 1 }
+		ai_will_do = {
+			base = 1
+			modifier = { factor = 15 has_war = yes }
+		}
 	}
 
 	focus = {
@@ -9115,7 +9583,10 @@ focus_tree = {
 			add_to_variable = { GER_ships_at_battle_start = 0.02 tooltip = ships_at_battle_start_tt }
 		}
 
-		ai_will_do = { base = 1 }
+		ai_will_do = {
+			base = 1
+			modifier = { factor = 15 has_war = yes }
+		}
 	}
 
 	focus = {
@@ -9142,7 +9613,10 @@ focus_tree = {
 			add_to_variable = { GER_navy_org_factor = 0.02 tooltip = navy_org_factor_tt }
 		}
 
-		ai_will_do = { base = 1 }
+		ai_will_do = {
+			base = 1
+			modifier = { factor = 15 has_war = yes }
+		}
 	}
 
 	focus = {
@@ -9169,7 +9643,10 @@ focus_tree = {
 			add_to_variable = { GER_spotting_chance = 0.02 tooltip = spotting_chance_tt }
 		}
 
-		ai_will_do = { base = 1 }
+		ai_will_do = {
+			base = 1
+			modifier = { factor = 15 has_war = yes }
+		}
 	}
 
 	focus = {
@@ -9196,7 +9673,10 @@ focus_tree = {
 			add_to_variable = { GER_positioning = 0.02 tooltip = positioning_tt }
 		}
 
-		ai_will_do = { base = 1 }
+		ai_will_do = {
+			base = 1
+			modifier = { factor = 15 has_war = yes }
+		}
 	}
 
 	focus = {
@@ -9227,14 +9707,17 @@ focus_tree = {
 			add_to_variable = { GER_naval_mines_damage_factor = 0.02 tooltip = naval_mines_damage_factor_tt }
 		}
 
-		ai_will_do = { base = 1 }
+		ai_will_do = {
+			base = 1
+			modifier = { factor = 15 has_war = yes }
+		}
 	}
 
 	focus = {
 		id = GER_Shipyards
 		icon = naval_dockyard
 
-		x = 0
+		x = -7
 		y = 1
 		relative_position_id = GER_not_perfect_but_flexible
 
@@ -9242,8 +9725,8 @@ focus_tree = {
 
 		prerequisite = {
 			focus = GER_not_perfect_but_flexible
-			 focus = GER_handle_asymetrick_threat
-			 focus = GER_Improve_mine_warfare
+			focus = GER_handle_asymetrick_threat
+			focus = GER_Improve_mine_warfare
 		 }
 
 		search_filters = { FOCUS_FILTER_MILITARY_LAWS FOCUS_FILTER_NAVY FOCUS_FILTER_EXPENDITURE }
@@ -9255,8 +9738,7 @@ focus_tree = {
 				MODIFIER = GER_Deutsche_Marine_modifier
 			}
 			add_to_variable = { GER_dockyard_productivity = 0.03 tooltip = dockyard_productivity_tt }
-			set_temp_variable = { treasury_change = gdp_per_capita }
-			multiply_temp_variable = { treasury_change = -0.15 }
+			set_temp_variable = { treasury_change = { value = gdp_per_capita multiply = -0.15 } }
 			modify_treasury_effect = yes
 		}
 
@@ -9266,6 +9748,7 @@ focus_tree = {
 				factor = 0
 				has_active_mission = bankruptcy_incoming_collapse
 			}
+			modifier = { factor = 15 has_war = yes }
 		}
 	}
 
@@ -9302,8 +9785,7 @@ focus_tree = {
 			}
 			add_to_variable = { GER_dockyard_productivity = 0.03 tooltip = dockyard_productivity_tt }
 			newline = yes
-			set_temp_variable = { treasury_change = gdp_per_capita }
-			multiply_temp_variable = { treasury_change = -0.15 }
+			set_temp_variable = { treasury_change = { value = gdp_per_capita multiply = -0.15 } }
 			modify_treasury_effect = yes
 		}
 
@@ -9313,6 +9795,7 @@ focus_tree = {
 				factor = 0
 				has_active_mission = bankruptcy_incoming_collapse
 			}
+			modifier = { factor = 15 has_war = yes }
 		}
 	}
 
@@ -9350,8 +9833,7 @@ focus_tree = {
 			}
 			add_to_variable = { GER_dockyard_productivity = 0.03 tooltip = dockyard_productivity_tt }
 			newline = yes
-			set_temp_variable = { treasury_change = gdp_per_capita }
-			multiply_temp_variable = { treasury_change = -0.15 }
+			set_temp_variable = { treasury_change = { value = gdp_per_capita multiply = -0.15 } }
 			modify_treasury_effect = yes
 		}
 
@@ -9361,6 +9843,7 @@ focus_tree = {
 				factor = 0
 				has_active_mission = bankruptcy_incoming_collapse
 			}
+			modifier = { factor = 15 has_war = yes }
 		}
 	}
 
@@ -9397,8 +9880,7 @@ focus_tree = {
 			}
 			add_to_variable = { GER_dockyard_productivity = 0.03 tooltip = dockyard_productivity_tt }
 			newline = yes
-			set_temp_variable = { treasury_change = gdp_per_capita }
-			multiply_temp_variable = { treasury_change = -0.15 }
+			set_temp_variable = { treasury_change = { value = gdp_per_capita multiply = -0.15 } }
 			modify_treasury_effect = yes
 		}
 
@@ -9408,6 +9890,7 @@ focus_tree = {
 				factor = 0
 				has_active_mission = bankruptcy_incoming_collapse
 			}
+			modifier = { factor = 15 has_war = yes }
 		}
 	}
 
@@ -9439,8 +9922,7 @@ focus_tree = {
 				limit = { has_dlc = "Arms Against Tyranny" }
 				unlock_military_industrial_organization_tooltip = mio:GER_german_naval_yards
 			}
-			set_temp_variable = { treasury_change = gdp_per_capita }
-			multiply_temp_variable = { treasury_change = -0.15 }
+			set_temp_variable = { treasury_change = { value = gdp_per_capita multiply = -0.15 } }
 			modify_treasury_effect = yes
 		}
 
@@ -9450,6 +9932,7 @@ focus_tree = {
 				factor = 0
 				has_active_mission = bankruptcy_incoming_collapse
 			}
+			modifier = { factor = 15 has_war = yes }
 		}
 	}
 
@@ -9496,8 +9979,7 @@ focus_tree = {
 				}
 			}
 			newline = yes
-			set_temp_variable = { treasury_change = gdp_per_capita }
-			multiply_temp_variable = { treasury_change = -0.15 }
+			set_temp_variable = { treasury_change = { value = gdp_per_capita multiply = -0.15 } }
 			modify_treasury_effect = yes
 		}
 
@@ -9507,6 +9989,7 @@ focus_tree = {
 				factor = 0
 				has_active_mission = bankruptcy_incoming_collapse
 			}
+			modifier = { factor = 15 has_war = yes }
 		}
 	}
 
@@ -9555,8 +10038,7 @@ focus_tree = {
 				}
 			}
 			newline = yes
-			set_temp_variable = { treasury_change = gdp_per_capita }
-			multiply_temp_variable = { treasury_change = -0.15 }
+			set_temp_variable = { treasury_change = { value = gdp_per_capita multiply = -0.15 } }
 			modify_treasury_effect = yes
 		}
 
@@ -9566,6 +10048,7 @@ focus_tree = {
 				factor = 0
 				has_active_mission = bankruptcy_incoming_collapse
 			}
+			modifier = { factor = 15 has_war = yes }
 		}
 	}
 
@@ -9612,8 +10095,7 @@ focus_tree = {
 				}
 			}
 			newline = yes
-			set_temp_variable = { treasury_change = gdp_per_capita }
-			multiply_temp_variable = { treasury_change = -0.15 }
+			set_temp_variable = { treasury_change = { value = gdp_per_capita multiply = -0.15 } }
 			modify_treasury_effect = yes
 		}
 
@@ -9623,6 +10105,7 @@ focus_tree = {
 				factor = 0
 				has_active_mission = bankruptcy_incoming_collapse
 			}
+			modifier = { factor = 15 has_war = yes }
 		}
 	}
 
@@ -9669,8 +10152,7 @@ focus_tree = {
 				}
 			}
 			newline = yes
-			set_temp_variable = { treasury_change = gdp_per_capita }
-			multiply_temp_variable = { treasury_change = -0.15 }
+			set_temp_variable = { treasury_change = { value = gdp_per_capita multiply = -0.15 } }
 			modify_treasury_effect = yes
 		}
 
@@ -9680,6 +10162,7 @@ focus_tree = {
 				factor = 0
 				has_active_mission = bankruptcy_incoming_collapse
 			}
+			modifier = { factor = 15 has_war = yes }
 		}
 	}
 
@@ -9708,8 +10191,7 @@ focus_tree = {
 
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus GER_AFV_projects"
-			set_temp_variable = { treasury_change = gdp_per_capita }
-			multiply_temp_variable = { treasury_change = -0.12 }
+			set_temp_variable = { treasury_change = { value = gdp_per_capita multiply = -0.12 } }
 			modify_treasury_effect = yes
 		}
 
@@ -9719,6 +10201,7 @@ focus_tree = {
 				factor = 0
 				has_active_mission = bankruptcy_incoming_collapse
 			}
+			modifier = { factor = 15 has_war = yes }
 		}
 	}
 
@@ -9764,6 +10247,11 @@ focus_tree = {
 				factor = 0
 				has_active_mission = bankruptcy_incoming_collapse
 			}
+			modifier = {
+				factor = 2
+				ai_is_threatened = yes
+			}
+			modifier = { factor = 15 has_war = yes }
 		}
 	}
 
@@ -9810,6 +10298,11 @@ focus_tree = {
 				factor = 0
 				has_active_mission = bankruptcy_incoming_collapse
 			}
+			modifier = {
+				factor = 2
+				ai_is_threatened = yes
+			}
+			modifier = { factor = 15 has_war = yes }
 		}
 	}
 
@@ -9855,6 +10348,11 @@ focus_tree = {
 				factor = 0
 				has_active_mission = bankruptcy_incoming_collapse
 			}
+			modifier = {
+				factor = 2
+				ai_is_threatened = yes
+			}
+			modifier = { factor = 15 has_war = yes }
 		}
 	}
 
@@ -9881,7 +10379,10 @@ focus_tree = {
 			country_event = germany_foci.9
 		}
 
-		ai_will_do = { base = 1 }
+		ai_will_do = {
+			base = 1
+			modifier = { factor = 15 has_war = yes }
+		}
 	}
 
 	focus = {
@@ -9907,7 +10408,10 @@ focus_tree = {
 			country_event = germany_foci.10
 		}
 
-		ai_will_do = { base = 1 }
+		ai_will_do = {
+			base = 1
+			modifier = { factor = 15 has_war = yes }
+		}
 	}
 
 	focus = {
@@ -9933,7 +10437,10 @@ focus_tree = {
 			country_event = germany_foci.8
 		}
 
-		ai_will_do = { base = 1 }
+		ai_will_do = {
+			base = 1
+			modifier = { factor = 15 has_war = yes }
+		}
 	}
 
 	focus = {
@@ -9959,7 +10466,10 @@ focus_tree = {
 			country_event = germany_foci.7
 		}
 
-		ai_will_do = { base = 1 }
+		ai_will_do = {
+			base = 1
+			modifier = { factor = 15 has_war = yes }
+		}
 	}
 
 	focus = {
@@ -9984,8 +10494,7 @@ focus_tree = {
 				uses = 1
 				category = CAT_sam
 			}
-			set_temp_variable = { treasury_change = gdp_per_capita }
-			multiply_temp_variable = { treasury_change = -0.15 }
+			set_temp_variable = { treasury_change = { value = gdp_per_capita multiply = -0.15 } }
 			modify_treasury_effect = yes
 		}
 
@@ -9995,6 +10504,7 @@ focus_tree = {
 				factor = 0
 				has_active_mission = bankruptcy_incoming_collapse
 			}
+			modifier = { factor = 15 has_war = yes }
 		}
 	}
 
@@ -10020,8 +10530,7 @@ focus_tree = {
 				uses = 2
 				category = CAT_aa
 			}
-			set_temp_variable = { treasury_change = gdp_per_capita }
-			multiply_temp_variable = { treasury_change = -0.15 }
+			set_temp_variable = { treasury_change = { value = gdp_per_capita multiply = -0.15 } }
 			modify_treasury_effect = yes
 		}
 
@@ -10031,6 +10540,7 @@ focus_tree = {
 				factor = 0
 				has_active_mission = bankruptcy_incoming_collapse
 			}
+			modifier = { factor = 15 has_war = yes }
 		}
 	}
 
@@ -10065,7 +10575,10 @@ focus_tree = {
 			}
 		}
 
-		ai_will_do = { base = 1 }
+		ai_will_do = {
+			base = 1
+			modifier = { factor = 15 has_war = yes }
+		}
 	}
 
 	focus = {
@@ -10098,7 +10611,10 @@ focus_tree = {
 			}
 		}
 
-		ai_will_do = { base = 1 }
+		ai_will_do = {
+			base = 1
+			modifier = { factor = 15 has_war = yes }
+		}
 	}
 
 	focus = {
@@ -10123,8 +10639,7 @@ focus_tree = {
 				uses = 3
 				category = CAT_air_eqp
 			}
-			set_temp_variable = { treasury_change = gdp_per_capita }
-			multiply_temp_variable = { treasury_change = -0.15 }
+			set_temp_variable = { treasury_change = { value = gdp_per_capita multiply = -0.15 } }
 			modify_treasury_effect = yes
 		}
 
@@ -10134,6 +10649,7 @@ focus_tree = {
 				factor = 0
 				has_active_mission = bankruptcy_incoming_collapse
 			}
+			modifier = { factor = 15 has_war = yes }
 		}
 	}
 
@@ -10170,8 +10686,7 @@ focus_tree = {
 					category = CAT_air_eqp
 				}
 			}
-			set_temp_variable = { treasury_change = gdp_per_capita }
-			multiply_temp_variable = { treasury_change = -0.15 }
+			set_temp_variable = { treasury_change = { value = gdp_per_capita multiply = -0.15 } }
 			modify_treasury_effect = yes
 		}
 
@@ -10181,6 +10696,7 @@ focus_tree = {
 				factor = 0
 				has_active_mission = bankruptcy_incoming_collapse
 			}
+			modifier = { factor = 15 has_war = yes }
 		}
 	}
 
@@ -10206,8 +10722,7 @@ focus_tree = {
 				uses = 1
 				category = CAT_sam
 			}
-			set_temp_variable = { treasury_change = gdp_per_capita }
-			multiply_temp_variable = { treasury_change = -0.15 }
+			set_temp_variable = { treasury_change = { value = gdp_per_capita multiply = -0.15 } }
 			modify_treasury_effect = yes
 		}
 
@@ -10217,6 +10732,7 @@ focus_tree = {
 				factor = 0
 				has_active_mission = bankruptcy_incoming_collapse
 			}
+			modifier = { factor = 15 has_war = yes }
 		}
 	}
 
@@ -10242,8 +10758,7 @@ focus_tree = {
 				uses = 2
 				category = CAT_mr_fighter
 			}
-			set_temp_variable = { treasury_change = gdp_per_capita }
-			multiply_temp_variable = { treasury_change = -0.15 }
+			set_temp_variable = { treasury_change = { value = gdp_per_capita multiply = -0.15 } }
 			modify_treasury_effect = yes
 		}
 
@@ -10253,6 +10768,7 @@ focus_tree = {
 				factor = 0
 				has_active_mission = bankruptcy_incoming_collapse
 			}
+			modifier = { factor = 15 has_war = yes }
 		}
 	}
 
@@ -10289,8 +10805,7 @@ focus_tree = {
 					category = CAT_air_eqp
 				}
 			}
-			set_temp_variable = { treasury_change = gdp_per_capita }
-			multiply_temp_variable = { treasury_change = -0.15 }
+			set_temp_variable = { treasury_change = { value = gdp_per_capita multiply = -0.15 } }
 			modify_treasury_effect = yes
 		}
 
@@ -10300,6 +10815,7 @@ focus_tree = {
 				factor = 0
 				has_active_mission = bankruptcy_incoming_collapse
 			}
+			modifier = { factor = 15 has_war = yes }
 		}
 	}
 
@@ -10325,8 +10841,7 @@ focus_tree = {
 				uses = 2
 				category = CAT_fighter
 			}
-			set_temp_variable = { treasury_change = gdp_per_capita }
-			multiply_temp_variable = { treasury_change = -0.15 }
+			set_temp_variable = { treasury_change = { value = gdp_per_capita multiply = -0.15 } }
 			modify_treasury_effect = yes
 		}
 
@@ -10336,6 +10851,7 @@ focus_tree = {
 				factor = 0
 				has_active_mission = bankruptcy_incoming_collapse
 			}
+			modifier = { factor = 15 has_war = yes }
 		}
 	}
 
@@ -10376,7 +10892,10 @@ focus_tree = {
 			add_to_variable = { GER_initiative_factor = 0.05 tooltip = initiative_factor_tt }
 		}
 
-		ai_will_do = { base = 1 }
+		ai_will_do = {
+			base = 1
+			modifier = { factor = 15 has_war = yes }
+		}
 	}
 
 	focus = {
@@ -10419,6 +10938,7 @@ focus_tree = {
 				factor = 0
 				has_active_mission = bankruptcy_incoming_collapse
 			}
+			modifier = { factor = 15 has_war = yes }
 		}
 	}
 
@@ -10462,6 +10982,7 @@ focus_tree = {
 				factor = 0
 				has_active_mission = bankruptcy_incoming_collapse
 			}
+			modifier = { factor = 15 has_war = yes }
 		}
 	}
 
@@ -10505,6 +11026,7 @@ focus_tree = {
 				factor = 0
 				has_active_mission = bankruptcy_incoming_collapse
 			}
+			modifier = { factor = 15 has_war = yes }
 		}
 	}
 
@@ -10556,6 +11078,11 @@ focus_tree = {
 				factor = 0
 				can_staff_an_arms_industry = no
 			}
+			modifier = {
+				factor = 2
+				ai_is_threatened = yes
+			}
+			modifier = { factor = 15 has_war = yes }
 		}
 	}
 
@@ -10601,6 +11128,7 @@ focus_tree = {
 				factor = 0
 				has_active_mission = bankruptcy_incoming_collapse
 			}
+			modifier = { factor = 15 has_war = yes }
 		}
 	}
 
@@ -10629,8 +11157,7 @@ focus_tree = {
 			add_to_variable = { GER_leader_xp_gain = 0.04 tooltip = leader_experience_gain_factor_tt }
 			add_to_variable = { GER_army_leader_start_level = 1 tooltip = army_leader_start_level_tt }
 			newline = yes
-			set_temp_variable = { treasury_change = gdp_per_capita }
-			multiply_temp_variable = { treasury_change = -0.15 }
+			set_temp_variable = { treasury_change = { value = gdp_per_capita multiply = -0.15 } }
 			modify_treasury_effect = yes
 		}
 
@@ -10640,6 +11167,7 @@ focus_tree = {
 				factor = 0
 				has_active_mission = bankruptcy_incoming_collapse
 			}
+			modifier = { factor = 15 has_war = yes }
 		}
 	}
 
@@ -10665,8 +11193,7 @@ focus_tree = {
 				remove_idea = GER_idea_Innere_fuhrung_I
 				add_idea = GER_Idea_Innere_fuhrung_II
 			}
-			set_temp_variable = { treasury_change = gdp_per_capita }
-			multiply_temp_variable = { treasury_change = -0.15 }
+			set_temp_variable = { treasury_change = { value = gdp_per_capita multiply = -0.15 } }
 			modify_treasury_effect = yes
 		}
 
@@ -10676,6 +11203,7 @@ focus_tree = {
 				factor = 0
 				has_active_mission = bankruptcy_incoming_collapse
 			}
+			modifier = { factor = 15 has_war = yes }
 		}
 	}
 
@@ -10712,10 +11240,12 @@ focus_tree = {
 					logistics_skill = 2
 				}
 			}
-			newline = yes
 		}
 
-		ai_will_do = { base = 1 }
+		ai_will_do = {
+			base = 1
+			modifier = { factor = 15 has_war = yes }
+		}
 	}
 
 	focus = {
@@ -10747,8 +11277,7 @@ focus_tree = {
 			add_to_variable = { GER_army_leader_start_logistics_level = 0.04 tooltip = army_leader_start_logistics_level_tt }
 			add_to_variable = { GER_army_leader_start_planning_level = 0.02 tooltip = army_leader_start_planning_level_tt }
 			newline = yes
-			set_temp_variable = { treasury_change = gdp_per_capita }
-			multiply_temp_variable = { treasury_change = -0.15 }
+			set_temp_variable = { treasury_change = { value = gdp_per_capita multiply = -0.15 } }
 			modify_treasury_effect = yes
 		}
 
@@ -10758,6 +11287,7 @@ focus_tree = {
 				factor = 0
 				has_active_mission = bankruptcy_incoming_collapse
 			}
+			modifier = { factor = 15 has_war = yes }
 		}
 	}
 
@@ -10787,7 +11317,10 @@ focus_tree = {
 			add_to_variable = { GER_army_leader_start_planning_level = 1 tooltip = army_leader_start_planning_level_tt }
 		}
 
-		ai_will_do = { base = 1 }
+		ai_will_do = {
+			base = 1
+			modifier = { factor = 15 has_war = yes }
+		}
 	}
 
 	focus = {
@@ -10829,8 +11362,7 @@ focus_tree = {
 				}
 			}
 			newline = yes
-			set_temp_variable = { treasury_change = gdp_per_capita }
-			multiply_temp_variable = { treasury_change = -0.15 }
+			set_temp_variable = { treasury_change = { value = gdp_per_capita multiply = -0.15 } }
 			modify_treasury_effect = yes
 		}
 
@@ -10840,6 +11372,7 @@ focus_tree = {
 				factor = 0
 				has_active_mission = bankruptcy_incoming_collapse
 			}
+			modifier = { factor = 15 has_war = yes }
 		}
 	}
 
@@ -10882,8 +11415,7 @@ focus_tree = {
 				}
 			}
 			newline = yes
-			set_temp_variable = { treasury_change = gdp_per_capita }
-			multiply_temp_variable = { treasury_change = -0.15 }
+			set_temp_variable = { treasury_change = { value = gdp_per_capita multiply = -0.15 } }
 			modify_treasury_effect = yes
 		}
 
@@ -10893,6 +11425,7 @@ focus_tree = {
 				factor = 0
 				has_active_mission = bankruptcy_incoming_collapse
 			}
+			modifier = { factor = 15 has_war = yes }
 		}
 	}
 
@@ -10934,8 +11467,7 @@ focus_tree = {
 				}
 			}
 			newline = yes
-			set_temp_variable = { treasury_change = gdp_per_capita }
-			multiply_temp_variable = { treasury_change = -0.15 }
+			set_temp_variable = { treasury_change = { value = gdp_per_capita multiply = -0.15 } }
 			modify_treasury_effect = yes
 		}
 
@@ -10945,6 +11477,7 @@ focus_tree = {
 				factor = 0
 				has_active_mission = bankruptcy_incoming_collapse
 			}
+			modifier = { factor = 15 has_war = yes }
 		}
 	}
 
@@ -10970,8 +11503,7 @@ focus_tree = {
 				uses = 2
 				cost_reduction = 0.5
 			}
-			set_temp_variable = { treasury_change = gdp_per_capita }
-			multiply_temp_variable = { treasury_change = -0.15 }
+			set_temp_variable = { treasury_change = { value = gdp_per_capita multiply = -0.15 } }
 			modify_treasury_effect = yes
 		}
 
@@ -10981,6 +11513,7 @@ focus_tree = {
 				factor = 0
 				has_active_mission = bankruptcy_incoming_collapse
 			}
+			modifier = { factor = 15 has_war = yes }
 		}
 	}
 
@@ -11014,8 +11547,7 @@ focus_tree = {
 			add_to_variable = { GER_army_morale_factor = 0.02 tooltip = army_morale_factor_tt }
 			add_to_variable = { GER_Army_attack = 0.02 tooltip = army_attack_factor_tt }
 			newline = yes
-			set_temp_variable = { treasury_change = gdp_per_capita }
-			multiply_temp_variable = { treasury_change = -0.15 }
+			set_temp_variable = { treasury_change = { value = gdp_per_capita multiply = -0.15 } }
 			modify_treasury_effect = yes
 		}
 
@@ -11025,6 +11557,7 @@ focus_tree = {
 				factor = 0
 				has_active_mission = bankruptcy_incoming_collapse
 			}
+			modifier = { factor = 15 has_war = yes }
 		}
 	}
 
@@ -11051,8 +11584,7 @@ focus_tree = {
 			add_to_variable = { GER_max_planning_modifier = 0.05 tooltip = max_planning_factor_tt }
 			add_to_variable = { GER_planning_speed = 0.06 tooltip = planning_speed_tt }
 			newline = yes
-			set_temp_variable = { treasury_change = gdp_per_capita }
-			multiply_temp_variable = { treasury_change = -0.15 }
+			set_temp_variable = { treasury_change = { value = gdp_per_capita multiply = -0.15 } }
 			modify_treasury_effect = yes
 		}
 
@@ -11062,6 +11594,7 @@ focus_tree = {
 				factor = 0
 				has_active_mission = bankruptcy_incoming_collapse
 			}
+			modifier = { factor = 15 has_war = yes }
 		}
 	}
 
@@ -11095,8 +11628,7 @@ focus_tree = {
 			}
 			add_to_variable = { GER_decryption_factor_luftwaffe = 0.07 tooltip = decryption_factor_tt }
 			newline = yes
-			set_temp_variable = { treasury_change = gdp_per_capita }
-			multiply_temp_variable = { treasury_change = -0.15 }
+			set_temp_variable = { treasury_change = { value = gdp_per_capita multiply = -0.15 } }
 			modify_treasury_effect = yes
 		}
 
@@ -11106,6 +11638,7 @@ focus_tree = {
 				factor = 0
 				has_active_mission = bankruptcy_incoming_collapse
 			}
+			modifier = { factor = 15 has_war = yes }
 		}
 	}
 
@@ -11132,7 +11665,10 @@ focus_tree = {
 			country_event = GER_Cold_War.30
 		}
 
-		ai_will_do = { base = 1 }
+		ai_will_do = {
+			base = 1
+			modifier = { factor = 15 has_war = yes }
+		}
 	}
 
 	focus = {
@@ -11166,7 +11702,10 @@ focus_tree = {
 			}
 		}
 
-		ai_will_do = { base = 1 }
+		ai_will_do = {
+			base = 1
+			modifier = { factor = 15 has_war = yes }
+		}
 	}
 
 	focus = {
@@ -11200,7 +11739,10 @@ focus_tree = {
 			}
 		}
 
-		ai_will_do = { base = 1 }
+		ai_will_do = {
+			base = 1
+			modifier = { factor = 15 has_war = yes }
+		}
 	}
 
 	focus = {
@@ -11234,7 +11776,10 @@ focus_tree = {
 			}
 		}
 
-		ai_will_do = { base = 1 }
+		ai_will_do = {
+			base = 1
+			modifier = { factor = 15 has_war = yes }
+		}
 	}
 
 	focus = {
@@ -11261,8 +11806,7 @@ focus_tree = {
 			add_to_variable = { GER_intel_from_combat_factor = 0.04 tooltip = intel_from_combat_factor_tt }
 			add_to_variable = { GER_no_supply_grace = 0.02 tooltip = no_supply_grace_tt }
 			newline = yes
-			set_temp_variable = { treasury_change = gdp_per_capita }
-			multiply_temp_variable = { treasury_change = -0.15 }
+			set_temp_variable = { treasury_change = { value = gdp_per_capita multiply = -0.15 } }
 			modify_treasury_effect = yes
 		}
 
@@ -11272,6 +11816,7 @@ focus_tree = {
 				factor = 0
 				has_active_mission = bankruptcy_incoming_collapse
 			}
+			modifier = { factor = 15 has_war = yes }
 		}
 	}
 
@@ -11303,7 +11848,10 @@ focus_tree = {
 			add_to_variable = { GER_army_night_attack = 0.02 tooltip = land_night_attack_tt }
 		}
 
-		ai_will_do = { base = 1 }
+		ai_will_do = {
+			base = 1
+			modifier = { factor = 15 has_war = yes }
+		}
 	}
 
 	focus = {
@@ -11333,14 +11881,17 @@ focus_tree = {
 			add_to_variable = { GER_recon_factor_while_entrenched = 0.02 tooltip = recon_factor_while_entrenched_tt }
 			newline = yes
 			add_tech_bonus = {
-				name = GER_Artillerie_tech
+				name = GER_Introduce_drone_rec_troop
 				bonus = 0.4
 				uses = 1
 				category = CAT_l_drone
 			}
 		}
 
-		ai_will_do = { base = 1 }
+		ai_will_do = {
+			base = 1
+			modifier = { factor = 15 has_war = yes }
+		}
 	}
 
 	focus = {
@@ -11376,7 +11927,10 @@ focus_tree = {
 			add_to_variable = { GER_initiative_factor = 0.03 tooltip = initiative_factor_tt }
 		}
 
-		ai_will_do = { base = 1 }
+		ai_will_do = {
+			base = 1
+			modifier = { factor = 15 has_war = yes }
+		}
 	}
 
 	focus = {
@@ -11407,7 +11961,10 @@ focus_tree = {
 			add_to_variable = { GER_planning_speed = 0.04 tooltip = planning_speed_tt }
 		}
 
-		ai_will_do = { base = 1 }
+		ai_will_do = {
+			base = 1
+			modifier = { factor = 15 has_war = yes }
+		}
 	}
 
 	focus = {
@@ -11433,8 +11990,7 @@ focus_tree = {
 			add_to_variable = { GER_special_forces_out_of_supply_factor = 0.04 tooltip = special_forces_out_of_supply_factor_tt }
 			add_to_variable = { GER_special_forces_cap = 0.04 tooltip = special_forces_cap_tt }
 			newline = yes
-			set_temp_variable = { treasury_change = gdp_per_capita }
-			multiply_temp_variable = { treasury_change = -0.15 }
+			set_temp_variable = { treasury_change = { value = gdp_per_capita multiply = -0.15 } }
 			modify_treasury_effect = yes
 		}
 
@@ -11444,6 +12000,7 @@ focus_tree = {
 				factor = 0
 				has_active_mission = bankruptcy_incoming_collapse
 			}
+			modifier = { factor = 15 has_war = yes }
 		}
 	}
 
@@ -11475,7 +12032,10 @@ focus_tree = {
 			add_to_variable = { GER_special_forces_defence_factor = 0.06 tooltip = special_forces_defence_factor_tt }
 		}
 
-		ai_will_do = { base = 1 }
+		ai_will_do = {
+			base = 1
+			modifier = { factor = 15 has_war = yes }
+		}
 	}
 
 	focus = {
@@ -11506,7 +12066,10 @@ focus_tree = {
 			add_to_variable = { GER_special_forces_out_of_supply_factor = 0.06 tooltip = special_forces_out_of_supply_factor_tt }
 		}
 
-		ai_will_do = { base = 1 }
+		ai_will_do = {
+			base = 1
+			modifier = { factor = 15 has_war = yes }
+		}
 	}
 
 	focus = {
@@ -11537,7 +12100,10 @@ focus_tree = {
 			add_to_variable = { GER_modifier_army_sub_unit_L_Air_assault_Bat_defence_factor = 0.04 tooltip = modifier_army_sub_unit_L_Air_assault_Bat_defence_factor_tt }
 		}
 
-		ai_will_do = { base = 1 }
+		ai_will_do = {
+			base = 1
+			modifier = { factor = 15 has_war = yes }
+		}
 	}
 
 	focus = {
@@ -11568,7 +12134,10 @@ focus_tree = {
 			add_to_variable = { GER_special_forces_out_of_supply_factor = 0.03 tooltip = special_forces_out_of_supply_factor_tt }
 		}
 
-		ai_will_do = { base = 1 }
+		ai_will_do = {
+			base = 1
+			modifier = { factor = 15 has_war = yes }
+		}
 	}
 
 	#Foreign_Tree
@@ -11589,11 +12158,9 @@ focus_tree = {
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus GER_Alexander_von_humboldt_Institutes_Strengthen_reswarch_cooperations"
 			add_dynamic_modifier = { modifier = GER_Diplomatic }
-			set_temp_variable = { int_investment_change = GER.gdp_per_capita }
-					multiply_temp_variable = { int_investment_change = 0.34 }
+			set_temp_variable = { int_investment_change = { value = GER.gdp_per_capita multiply = 0.34 } }
 					modify_international_investment_effect = yes
-					set_temp_variable = { debt_change = GER.gdp_per_capita }
-					multiply_temp_variable = { debt_change = 0.31 }
+					set_temp_variable = { debt_change = { value = GER.gdp_per_capita multiply = 0.31 } }
 					modify_debt_effect = yes
 			set_country_flag = GER_Humbold_foundation
 			newline = yes
@@ -11608,6 +12175,7 @@ focus_tree = {
 				factor = 0
 				has_active_mission = bankruptcy_incoming_collapse
 			}
+			modifier = { factor = 15 has_war = yes }
 		}
 	}
 
@@ -11640,7 +12208,10 @@ focus_tree = {
 			}
 		}
 
-		ai_will_do = { base = 1 }
+		ai_will_do = {
+			base = 1
+			modifier = { factor = 15 has_war = yes }
+		}
 	}
 
 	focus = {
@@ -11745,14 +12316,17 @@ focus_tree = {
 			add_to_variable = { GER_dip_production_speed_infrastructure_factor = 0.05 tooltip = production_speed_infrastructure_factor_tt }
 		}
 
-		ai_will_do = { base = 1 }
+		ai_will_do = {
+			base = 1
+			modifier = { factor = 15 has_war = yes }
+		}
 	}
 
 	focus = {
 		id = GER_seek_permanent_unsc_seat
 		icon = united_nations
 
-		x = 0
+		x = -1
 		y = 1
 		relative_position_id = GER_global_infrastructure_projects
 
@@ -11769,7 +12343,10 @@ focus_tree = {
 			unlock_decision_category_tooltip = UNSC_permanent_seat_campaign
 		}
 
-		ai_will_do = { base = 1 }
+		ai_will_do = {
+			base = 1
+			modifier = { factor = 15 has_war = yes }
+		}
 	}
 
 	focus = {
@@ -11877,7 +12454,10 @@ focus_tree = {
 			add_to_variable = { GER_dip_renewable_energy_gain_multiplier = 0.05 tooltip = renewable_energy_gain_multiplier_tt }
 		}
 
-		ai_will_do = { base = 1 }
+		ai_will_do = {
+			base = 1
+			modifier = { factor = 15 has_war = yes }
+		}
 	}
 
 	focus = {
@@ -11917,7 +12497,10 @@ focus_tree = {
 			}
 		}
 
-		ai_will_do = { base = 1 }
+		ai_will_do = {
+			base = 1
+			modifier = { factor = 15 has_war = yes }
+		}
 	}
 
 	focus = {
@@ -12008,7 +12591,10 @@ focus_tree = {
 			}
 		}
 
-		ai_will_do = { base = 1 }
+		ai_will_do = {
+			base = 1
+			modifier = { factor = 15 has_war = yes }
+		}
 	}
 
 	focus = {
@@ -12126,7 +12712,10 @@ focus_tree = {
 			}
 		}
 
-		ai_will_do = { base = 1 }
+		ai_will_do = {
+			base = 1
+			modifier = { factor = 15 has_war = yes }
+		}
 	}
 
 	focus = {
@@ -12155,7 +12744,10 @@ focus_tree = {
 			add_to_variable = { GER_dip_industrial_capacity_factory = 0.02 tooltip = industrial_capacity_factory_tt }
 		}
 
-		ai_will_do = { base = 1 }
+		ai_will_do = {
+			base = 1
+			modifier = { factor = 15 has_war = yes }
+		}
 	}
 
 	focus = {
@@ -12182,7 +12774,10 @@ focus_tree = {
 			}
 		}
 
-		ai_will_do = { base = 1 }
+		ai_will_do = {
+			base = 1
+			modifier = { factor = 15 has_war = yes }
+		}
 	}
 
 	focus = {
@@ -12281,7 +12876,10 @@ focus_tree = {
 			}
 		}
 
-		ai_will_do = { base = 1 }
+		ai_will_do = {
+			base = 1
+			modifier = { factor = 15 has_war = yes }
+		}
 	}
 
 	focus = {
@@ -12311,7 +12909,10 @@ focus_tree = {
 			add_to_variable = { GER_dip_research_speed_factor = 0.02 tooltip = research_speed_factor_tt }
 		}
 
-		ai_will_do = { base = 1 }
+		ai_will_do = {
+			base = 1
+			modifier = { factor = 15 has_war = yes }
+		}
 	}
 
 	focus = {
@@ -12407,7 +13008,10 @@ focus_tree = {
 			add_to_variable = { GER_dip_research_speed_factor = 0.02 tooltip = research_speed_factor_tt }
 		}
 
-		ai_will_do = { base = 1 }
+		ai_will_do = {
+			base = 1
+			modifier = { factor = 15 has_war = yes }
+		}
 	}
 
 	focus = {
@@ -12503,7 +13107,10 @@ focus_tree = {
 			add_to_variable = { GER_dip_return_on_investment_modifier = 0.02 tooltip = return_on_investment_modifier_tt }
 		}
 
-		ai_will_do = { base = 1 }
+		ai_will_do = {
+			base = 1
+			modifier = { factor = 15 has_war = yes }
+		}
 	}
 
 	focus = {
@@ -12550,7 +13157,10 @@ focus_tree = {
 			}
 		}
 
-		ai_will_do = { base = 1 }
+		ai_will_do = {
+			base = 1
+			modifier = { factor = 15 has_war = yes }
+		}
 	}
 
 	focus = {
@@ -12582,7 +13192,10 @@ focus_tree = {
 			}
 		}
 
-		ai_will_do = { base = 1 }
+		ai_will_do = {
+			base = 1
+			modifier = { factor = 15 has_war = yes }
+		}
 	}
 
 	focus = {
@@ -12651,7 +13264,10 @@ focus_tree = {
 			add_to_variable = { GER_dip_foreign_influence_defense_modifier = 0.05 tooltip = foreign_influence_defense_modifier_tt }
 		}
 
-		ai_will_do = { base = 1 }
+		ai_will_do = {
+			base = 1
+			modifier = { factor = 15 has_war = yes }
+		}
 	}
 
 	focus = {
@@ -12720,7 +13336,10 @@ focus_tree = {
 			add_to_variable = { GER_dip_migration_rate_value_factor = 0.05 tooltip = migration_rate_value_factor_tt }
 		}
 
-		ai_will_do = { base = 1 }
+		ai_will_do = {
+			base = 1
+			modifier = { factor = 15 has_war = yes }
+		}
 	}
 
 	focus = {
@@ -12759,7 +13378,10 @@ focus_tree = {
 			}
 		}
 
-		ai_will_do = { base = 1 }
+		ai_will_do = {
+			base = 1
+			modifier = { factor = 15 has_war = yes }
+		}
 	}
 
 	focus = {
@@ -12788,7 +13410,10 @@ focus_tree = {
 			add_to_variable = { GER_dip_foreign_influence_defense_modifier = 0.02 tooltip = foreign_influence_defense_modifier_tt }
 		}
 
-		ai_will_do = { base = 1 }
+		ai_will_do = {
+			base = 1
+			modifier = { factor = 15 has_war = yes }
+		}
 	}
 
 	focus = {
@@ -12819,14 +13444,12 @@ focus_tree = {
 			effect_tooltip = {
 				USA = {
 					add_to_tech_sharing_group = Humbold_foundation_sharing_group
-					set_temp_variable = { int_investment_change = gdp_per_capita }
-					multiply_temp_variable = { int_investment_change = 0.46 }
+					set_temp_variable = { int_investment_change = { value = gdp_per_capita multiply = 0.46 } }
 					modify_international_investment_effect = yes
-					set_temp_variable = { debt_change = gdp_per_capita }
-					multiply_temp_variable = { debt_change = 0.31 }
+					set_temp_variable = { debt_change = { value = gdp_per_capita multiply = 0.31 } }
 					modify_debt_effect = yes
 					add_tech_bonus = {
-						name = CAT_ai
+						name = GER_International_cutting_edge_research
 						category = CAT_ai
 						category = CAT_computing_tech
 						bonus = 1.0
@@ -12837,14 +13460,12 @@ focus_tree = {
 				set_temp_variable = { tag_index = GER }
 				set_temp_variable = { influence_target = USA }
 				change_influence_percentage = yes
-				set_temp_variable = { int_investment_change = USA.gdp_per_capita }
-				multiply_temp_variable = { int_investment_change = 0.39 }
+				set_temp_variable = { int_investment_change = { value = USA.gdp_per_capita multiply = 0.39 } }
 				modify_international_investment_effect = yes
-				set_temp_variable = { debt_change = USA.gdp_per_capita }
-				multiply_temp_variable = { debt_change = 0.30 }
+				set_temp_variable = { debt_change = { value = USA.gdp_per_capita multiply = 0.30 } }
 				modify_debt_effect = yes
 				add_tech_bonus = {
-					name = CAT_ai
+					name = GER_International_cutting_edge_research
 					category = CAT_ai
 					category = CAT_computing_tech
 					bonus = 1.0
@@ -12861,14 +13482,12 @@ focus_tree = {
 			effect_tooltip = {
 				CAN = {
 					add_to_tech_sharing_group = Humbold_foundation_sharing_group
-					set_temp_variable = { int_investment_change = gdp_per_capita }
-					multiply_temp_variable = { int_investment_change = 0.46 }
+					set_temp_variable = { int_investment_change = { value = gdp_per_capita multiply = 0.46 } }
 					modify_international_investment_effect = yes
-					set_temp_variable = { debt_change = gdp_per_capita }
-					multiply_temp_variable = { debt_change = 0.31 }
+					set_temp_variable = { debt_change = { value = gdp_per_capita multiply = 0.31 } }
 					modify_debt_effect = yes
 					add_tech_bonus = {
-						name = CAT_ai
+						name = GER_International_cutting_edge_research
 						category = CAT_ai
 						category = CAT_computing_tech
 						bonus = 1.0
@@ -12879,14 +13498,12 @@ focus_tree = {
 				set_temp_variable = { tag_index = GER }
 				set_temp_variable = { influence_target = CAN }
 				change_influence_percentage = yes
-				set_temp_variable = { int_investment_change = CAN.gdp_per_capita }
-				multiply_temp_variable = { int_investment_change = 0.39 }
+				set_temp_variable = { int_investment_change = { value = CAN.gdp_per_capita multiply = 0.39 } }
 				modify_international_investment_effect = yes
-				set_temp_variable = { debt_change = CAN.gdp_per_capita }
-				multiply_temp_variable = { debt_change = 0.30 }
+				set_temp_variable = { debt_change = { value = CAN.gdp_per_capita multiply = 0.30 } }
 				modify_debt_effect = yes
 				add_tech_bonus = {
-					name = CAT_ai
+					name = GER_International_cutting_edge_research
 					category = CAT_ai
 					category = CAT_computing_tech
 					bonus = 1.0
@@ -12895,7 +13512,10 @@ focus_tree = {
 			}
 		}
 
-		ai_will_do = { base = 1 }
+		ai_will_do = {
+			base = 1
+			modifier = { factor = 15 has_war = yes }
+		}
 	}
 
 	focus = {
@@ -12926,14 +13546,12 @@ focus_tree = {
 			effect_tooltip = {
 				AST = {
 					add_to_tech_sharing_group = Humbold_foundation_sharing_group
-					set_temp_variable = { int_investment_change = gdp_per_capita }
-					multiply_temp_variable = { int_investment_change = 0.46 }
+					set_temp_variable = { int_investment_change = { value = gdp_per_capita multiply = 0.46 } }
 					modify_international_investment_effect = yes
-					set_temp_variable = { debt_change = gdp_per_capita }
-					multiply_temp_variable = { debt_change = 0.31 }
+					set_temp_variable = { debt_change = { value = gdp_per_capita multiply = 0.31 } }
 					modify_debt_effect = yes
 					add_tech_bonus = {
-						name = CAT_ai
+						name = GER_Promote_academic_elites
 						category = CAT_ai
 						category = CAT_computing_tech
 						bonus = 1.0
@@ -12944,14 +13562,12 @@ focus_tree = {
 				set_temp_variable = { tag_index = GER }
 				set_temp_variable = { influence_target = AST }
 				change_influence_percentage = yes
-				set_temp_variable = { int_investment_change = AST.gdp_per_capita }
-				multiply_temp_variable = { int_investment_change = 0.39 }
+				set_temp_variable = { int_investment_change = { value = AST.gdp_per_capita multiply = 0.39 } }
 				modify_international_investment_effect = yes
-				set_temp_variable = { debt_change = AST.gdp_per_capita }
-				multiply_temp_variable = { debt_change = 0.30 }
+				set_temp_variable = { debt_change = { value = AST.gdp_per_capita multiply = 0.30 } }
 				modify_debt_effect = yes
 				add_tech_bonus = {
-					name = CAT_ai
+					name = GER_Promote_academic_elites
 					category = CAT_ai
 					category = CAT_computing_tech
 					bonus = 1.0
@@ -12968,14 +13584,12 @@ focus_tree = {
 			effect_tooltip = {
 				TAI = {
 					add_to_tech_sharing_group = Humbold_foundation_sharing_group
-					set_temp_variable = { int_investment_change = gdp_per_capita }
-					multiply_temp_variable = { int_investment_change = 0.46 }
+					set_temp_variable = { int_investment_change = { value = gdp_per_capita multiply = 0.46 } }
 					modify_international_investment_effect = yes
-					set_temp_variable = { debt_change = gdp_per_capita }
-					multiply_temp_variable = { debt_change = 0.31 }
+					set_temp_variable = { debt_change = { value = gdp_per_capita multiply = 0.31 } }
 					modify_debt_effect = yes
 					add_tech_bonus = {
-						name = CAT_ai
+						name = GER_Promote_academic_elites
 						category = CAT_ai
 						category = CAT_computing_tech
 						bonus = 1.0
@@ -12986,14 +13600,12 @@ focus_tree = {
 				set_temp_variable = { tag_index = GER }
 				set_temp_variable = { influence_target = TAI }
 				change_influence_percentage = yes
-				set_temp_variable = { int_investment_change = TAI.gdp_per_capita }
-				multiply_temp_variable = { int_investment_change = 0.39 }
+				set_temp_variable = { int_investment_change = { value = TAI.gdp_per_capita multiply = 0.39 } }
 				modify_international_investment_effect = yes
-				set_temp_variable = { debt_change = TAI.gdp_per_capita }
-				multiply_temp_variable = { debt_change = 0.30 }
+				set_temp_variable = { debt_change = { value = TAI.gdp_per_capita multiply = 0.30 } }
 				modify_debt_effect = yes
 				add_tech_bonus = {
-					name = CAT_ai
+					name = GER_Promote_academic_elites
 					category = CAT_ai
 					category = CAT_computing_tech
 					bonus = 1.0
@@ -13002,7 +13614,10 @@ focus_tree = {
 			}
 		}
 
-		ai_will_do = { base = 1 }
+		ai_will_do = {
+			base = 1
+			modifier = { factor = 15 has_war = yes }
+		}
 	}
 
 	focus = {
@@ -13041,7 +13656,10 @@ focus_tree = {
 			}
 		}
 
-		ai_will_do = { base = 1 }
+		ai_will_do = {
+			base = 1
+			modifier = { factor = 15 has_war = yes }
+		}
 	}
 
 	focus = {
@@ -13070,7 +13688,10 @@ focus_tree = {
 			add_to_variable = { GER_dip_industrial_capacity_factory = 0.02 tooltip = industrial_capacity_factory_tt }
 		}
 
-		ai_will_do = { base = 1 }
+		ai_will_do = {
+			base = 1
+			modifier = { factor = 15 has_war = yes }
+		}
 	}
 
 	focus = {
@@ -13112,7 +13733,7 @@ focus_tree = {
 				COL = {
 					add_ideas = GER_idea_Agriculture_I
 					add_tech_bonus = {
-						name = CAT_Civilian
+						name = GER_Suitable_Agriculture_programs
 						category = CAT_Civilian
 						bonus = 1.0
 						uses = 2
@@ -13121,7 +13742,7 @@ focus_tree = {
 				ETH = {
 					add_ideas = GER_idea_Agriculture_I
 					add_tech_bonus = {
-						name = CAT_Civilian
+						name = GER_Suitable_Agriculture_programs
 						category = CAT_Civilian
 						bonus = 1.0
 						uses = 2
@@ -13130,7 +13751,7 @@ focus_tree = {
 				VIE = {
 					add_ideas = GER_idea_Agriculture_I
 					add_tech_bonus = {
-						name = CAT_Civilian
+						name = GER_Suitable_Agriculture_programs
 						category = CAT_Civilian
 						bonus = 1.0
 						uses = 2
@@ -13157,7 +13778,10 @@ focus_tree = {
 			}
 		}
 
-		ai_will_do = { base = 1 }
+		ai_will_do = {
+			base = 1
+			modifier = { factor = 15 has_war = yes }
+		}
 	}
 
 	focus = {
@@ -13191,7 +13815,10 @@ focus_tree = {
 			add_to_variable = { GER_dip_foreign_influence_defense_modifier = 0.02 tooltip = foreign_influence_defense_modifier_tt }
 		}
 
-		ai_will_do = { base = 1 }
+		ai_will_do = {
+			base = 1
+			modifier = { factor = 15 has_war = yes }
+		}
 	}
 
 	focus = {
@@ -13224,7 +13851,7 @@ focus_tree = {
 					add_ideas = GER_wandel_durch_handel
 				}
 				add_tech_bonus = {
-					name = CAT_space
+					name = GER_Strategic_Partnership_Japan
 					bonus = 0.50
 					uses = 2
 					category = CAT_space
@@ -13232,7 +13859,10 @@ focus_tree = {
 			}
 		}
 
-		ai_will_do = { base = 1 }
+		ai_will_do = {
+			base = 1
+			modifier = { factor = 15 has_war = yes }
+		}
 	}
 
 	focus = {
@@ -13265,7 +13895,7 @@ focus_tree = {
 					add_ideas = GER_wandel_durch_handel
 				}
 				add_tech_bonus = {
-					name = CAT_computing_tech
+					name = GER_Strategic_Partnership_South_korea
 					bonus = 0.6
 					uses = 2
 					category = CAT_computing_tech
@@ -13273,7 +13903,10 @@ focus_tree = {
 			}
 		}
 
-		ai_will_do = { base = 1 }
+		ai_will_do = {
+			base = 1
+			modifier = { factor = 15 has_war = yes }
+		}
 	}
 
 	focus = {
@@ -13314,7 +13947,10 @@ focus_tree = {
 			}
 		}
 
-		ai_will_do = { base = 1 }
+		ai_will_do = {
+			base = 1
+			modifier = { factor = 15 has_war = yes }
+		}
 	}
 
 	focus = {
@@ -13357,7 +13993,10 @@ focus_tree = {
 			}
 		}
 
-		ai_will_do = { base = 1 }
+		ai_will_do = {
+			base = 1
+			modifier = { factor = 15 has_war = yes }
+		}
 	}
 
 	focus = {
@@ -14162,7 +14801,11 @@ focus_tree = {
 			}
 		}
 
-		ai_will_do = { base = 1 }
+		ai_will_do = {
+			base = 1
+			modifier = { factor = 25 GER_ai_irredentist_path = yes }
+			modifier = { factor = 0 GER_ai_not_irredentist_path = yes }
+		}
 	}
 
 	focus = {
@@ -14585,7 +15228,12 @@ focus_tree = {
 			custom_effect_tooltip = GER_how_to_overthrow_TT
 		}
 
-		ai_will_do = { base = 1 }
+		ai_will_do = {
+			base = 1
+			modifier = { factor = 150 GER_ai_republic_collapse_path = yes }
+			modifier = { factor = 0 GER_ai_not_republic_collapse_path = yes }
+			modifier = { factor = 0 GER_ai_phase_rebuild = yes }
+		}
 	}
 	#
 	#SPD Tree
@@ -14605,7 +15253,6 @@ focus_tree = {
 
 		available = {
 			western_social_democrats_are_in_power = yes
-			has_country_leader = { name = "Gerhard Schröder" ruling_only = yes }
 		}
 
 		completion_reward = {
@@ -14619,7 +15266,11 @@ focus_tree = {
 			change_relative_party_popularity = yes
 		}
 
-		ai_will_do = { base = 1 }
+		ai_will_do = {
+			base = 1
+			modifier = { factor = 25 GER_ai_historical_path = yes }
+			modifier = { factor = 0 GER_ai_not_historical_path = yes }
+		}
 	}
 	## SPD TREE
 	focus = {
@@ -14638,7 +15289,6 @@ focus_tree = {
 
 		available = {
 			western_social_democrats_are_in_power = yes
-			has_country_leader = { name = "Gerhard Schröder" ruling_only = yes }
 		}
 
 		completion_reward = {
@@ -14647,11 +15297,9 @@ focus_tree = {
 		}
 
 		ai_will_do = {
-			base = 0
-			modifier = {
-				factor = 1
-				has_global_flag = GER_SOCIAL_DEMOCRATIC
-			}
+			base = 1
+			modifier = { factor = 25 GER_ai_historical_path = yes }
+			modifier = { factor = 0 GER_ai_not_historical_path = yes }
 		}
 	}
 	#
@@ -14671,7 +15319,6 @@ focus_tree = {
 
 		available = {
 			western_social_democrats_are_in_power = yes
-			has_country_leader = { name = "Gerhard Schröder" ruling_only = yes }
 		}
 
 		completion_reward = {
@@ -14686,7 +15333,11 @@ focus_tree = {
 			add_to_variable = { GER_welfare_cost = -0.02 tooltip = social_cost_multiplier_modifier_tt }
 		}
 
-		ai_will_do = { base = 1 }
+		ai_will_do = {
+			base = 1
+			modifier = { factor = 25 GER_ai_historical_path = yes }
+			modifier = { factor = 0 GER_ai_not_historical_path = yes }
+		}
 	}
 
 	focus = {
@@ -14705,7 +15356,6 @@ focus_tree = {
 
 		available = {
 			western_social_democrats_are_in_power = yes
-			has_country_leader = { name = "Gerhard Schröder" ruling_only = yes }
 		}
 
 		completion_reward = {
@@ -14720,7 +15370,11 @@ focus_tree = {
 			block_health_increase = yes
 		}
 
-		ai_will_do = { base = 1 }
+		ai_will_do = {
+			base = 1
+			modifier = { factor = 25 GER_ai_historical_path = yes }
+			modifier = { factor = 0 GER_ai_not_historical_path = yes }
+		}
 	}
 
 	focus = {
@@ -14739,7 +15393,6 @@ focus_tree = {
 
 		available = {
 			western_social_democrats_are_in_power = yes
-			has_country_leader = { name = "Gerhard Schröder" ruling_only = yes }
 		}
 
 		completion_reward = {
@@ -14750,7 +15403,11 @@ focus_tree = {
 			}
 		}
 
-		ai_will_do = { base = 1 }
+		ai_will_do = {
+			base = 1
+			modifier = { factor = 25 GER_ai_historical_path = yes }
+			modifier = { factor = 0 GER_ai_not_historical_path = yes }
+		}
 	}
 	#
 	focus = {
@@ -14771,7 +15428,6 @@ focus_tree = {
 
 		available = {
 			western_social_democrats_are_in_power = yes
-			has_country_leader = { name = "Gerhard Schröder" ruling_only = yes }
 		}
 
 		completion_reward = {
@@ -14779,7 +15435,11 @@ focus_tree = {
 			increase_economic_growth = yes
 		}
 
-		ai_will_do = { base = 1 }
+		ai_will_do = {
+			base = 1
+			modifier = { factor = 25 GER_ai_historical_path = yes }
+			modifier = { factor = 0 GER_ai_not_historical_path = yes }
+		}
 	}
 	#
 	focus = {
@@ -14803,7 +15463,6 @@ focus_tree = {
 				is_owned_and_controlled_by = GER
 			}
 			western_social_democrats_are_in_power = yes
-			has_country_leader = { name = "Gerhard Schröder" ruling_only = yes }
 		}
 
 		bypass = { NOT = { 545 = { is_owned_and_controlled_by = GER } } }
@@ -14833,6 +15492,8 @@ focus_tree = {
 				factor = 0
 				can_staff_an_offices = no
 			}
+			modifier = { factor = 25 GER_ai_historical_path = yes }
+			modifier = { factor = 0 GER_ai_not_historical_path = yes }
 		}
 	}
 
@@ -14854,7 +15515,6 @@ focus_tree = {
 
 		available = {
 			western_social_democrats_are_in_power = yes
-			has_country_leader = { name = "Gerhard Schröder" ruling_only = yes }
 		}
 
 		completion_reward = {
@@ -14873,7 +15533,11 @@ focus_tree = {
 			}
 		}
 
-		ai_will_do = { base = 1 }
+		ai_will_do = {
+			base = 1
+			modifier = { factor = 25 GER_ai_historical_path = yes }
+			modifier = { factor = 0 GER_ai_not_historical_path = yes }
+		}
 	}
 
 	focus = {
@@ -14893,7 +15557,6 @@ focus_tree = {
 
 		available = {
 			western_social_democrats_are_in_power = yes
-			has_country_leader = { name = "Gerhard Schröder" ruling_only = yes }
 		}
 
 		completion_reward = {
@@ -14907,7 +15570,11 @@ focus_tree = {
 			add_to_variable = { GER_welfare_cost = -0.01 tooltip = social_cost_multiplier_modifier_tt }
 		}
 
-		ai_will_do = { base = 1 }
+		ai_will_do = {
+			base = 1
+			modifier = { factor = 25 GER_ai_historical_path = yes }
+			modifier = { factor = 0 GER_ai_not_historical_path = yes }
+		}
 	}
 
 	focus = {
@@ -14928,7 +15595,6 @@ focus_tree = {
 
 		available = {
 			western_social_democrats_are_in_power = yes
-			has_country_leader = { name = "Gerhard Schröder" ruling_only = yes }
 		}
 
 		completion_reward = {
@@ -14940,7 +15606,11 @@ focus_tree = {
 			add_to_variable = { GER_centralization_cost = -0.05 tooltip = bureaucracy_cost_multiplier_modifier_tt }
 		}
 
-		ai_will_do = { base = 1 }
+		ai_will_do = {
+			base = 1
+			modifier = { factor = 25 GER_ai_historical_path = yes }
+			modifier = { factor = 0 GER_ai_not_historical_path = yes }
+		}
 	}
 
 	focus = {
@@ -14961,7 +15631,6 @@ focus_tree = {
 
 		available = {
 			western_social_democrats_are_in_power = yes
-			has_country_leader = { name = "Gerhard Schröder" ruling_only = yes }
 			42 = {
 				is_owned_and_controlled_by = GER
 			}
@@ -15033,6 +15702,8 @@ focus_tree = {
 				factor = 0
 				can_staff_an_industrial_complex = no
 			}
+			modifier = { factor = 25 GER_ai_historical_path = yes }
+			modifier = { factor = 0 GER_ai_not_historical_path = yes }
 		}
 	}
 	#
@@ -15052,7 +15723,6 @@ focus_tree = {
 
 		available = {
 			western_social_democrats_are_in_power = yes
-			has_country_leader = { name = "Gerhard Schröder" ruling_only = yes }
 		}
 
 		completion_reward = {
@@ -15068,7 +15738,11 @@ focus_tree = {
 			}
 		}
 
-		ai_will_do = { base = 1 }
+		ai_will_do = {
+			base = 1
+			modifier = { factor = 25 GER_ai_historical_path = yes }
+			modifier = { factor = 0 GER_ai_not_historical_path = yes }
+		}
 	}
 	#
 	focus = {
@@ -15087,7 +15761,6 @@ focus_tree = {
 
 		available = {
 			western_social_democrats_are_in_power = yes
-			has_country_leader = { name = "Gerhard Schröder" ruling_only = yes }
 		}
 
 		completion_reward = {
@@ -15095,7 +15768,11 @@ focus_tree = {
 			add_ideas = GER_idea_friends_with_east
 		}
 
-		ai_will_do = { base = 1 }
+		ai_will_do = {
+			base = 1
+			modifier = { factor = 25 GER_ai_historical_path = yes }
+			modifier = { factor = 0 GER_ai_not_historical_path = yes }
+		}
 	}
 	#
 	focus = {
@@ -15114,7 +15791,6 @@ focus_tree = {
 
 		available = {
 			western_social_democrats_are_in_power = yes
-			has_country_leader = { name = "Gerhard Schröder" ruling_only = yes }
 			country_exists = SOV
 			NOT = {
 				has_war_with = SOV
@@ -15124,9 +15800,7 @@ focus_tree = {
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus GER_partnership_with_companies"
 			hidden_effect = { add_ideas = GER_russian_buddies }
-			set_temp_variable = { additional_income_change = gdp_total }
-			multiply_temp_variable = { additional_income_change = 0.02 } #2% of yearly GDP
-			multiply_temp_variable = { additional_income_change = 0.02 } #weekly
+			set_temp_variable = { additional_income_change = { value = gdp_total multiply = 0.02 multiply = 0.02 } } #2% of yearly GDP #weekly
 			custom_effect_tooltip = additional_income_rate_percent_tt
 			set_temp_variable = { percent_change = 3 }
 			set_temp_variable = { tag_index = SOV }
@@ -15146,7 +15820,11 @@ focus_tree = {
 			}
 		}
 
-		ai_will_do = { base = 1 }
+		ai_will_do = {
+			base = 1
+			modifier = { factor = 25 GER_ai_historical_path = yes }
+			modifier = { factor = 0 GER_ai_not_historical_path = yes }
+		}
 	}
 
 	focus = {
@@ -15165,7 +15843,6 @@ focus_tree = {
 
 		available = {
 			western_social_democrats_are_in_power = yes
-			has_country_leader = { name = "Gerhard Schröder" ruling_only = yes }
 			country_exists = CHI
 			NOT = {
 				has_war_with = CHI
@@ -15191,7 +15868,11 @@ focus_tree = {
 			}
 		}
 
-		ai_will_do = { base = 1 }
+		ai_will_do = {
+			base = 1
+			modifier = { factor = 25 GER_ai_historical_path = yes }
+			modifier = { factor = 0 GER_ai_not_historical_path = yes }
+		}
 	}
 	#### CDU TREE ####
 	focus = {
@@ -15224,11 +15905,9 @@ focus_tree = {
 		}
 
 		ai_will_do = {
-			base = 0
-			modifier = {
-				factor = 1
-				has_global_flag = GER_CONSERVATIVE
-			}
+			base = 1
+			modifier = { factor = 25 GER_ai_historical_path = yes }
+			modifier = { factor = 0 GER_ai_not_historical_path = yes }
 		}
 	}
 
@@ -15253,7 +15932,11 @@ focus_tree = {
 			add_ideas = GER_idea_bmvi
 		}
 
-		ai_will_do = { base = 1 }
+		ai_will_do = {
+			base = 1
+			modifier = { factor = 25 GER_ai_historical_path = yes }
+			modifier = { factor = 0 GER_ai_not_historical_path = yes }
+		}
 	}
 
 	focus = {
@@ -15283,7 +15966,11 @@ focus_tree = {
 			}
 		}
 
-		ai_will_do = { base = 1 }
+		ai_will_do = {
+			base = 1
+			modifier = { factor = 25 GER_ai_historical_path = yes }
+			modifier = { factor = 0 GER_ai_not_historical_path = yes }
+		}
 	}
 
 	focus = {
@@ -15317,6 +16004,8 @@ focus_tree = {
 				factor = 0
 				can_staff_an_offices = no
 			}
+			modifier = { factor = 25 GER_ai_historical_path = yes }
+			modifier = { factor = 0 GER_ai_not_historical_path = yes }
 		}
 	}
 
@@ -15339,11 +16028,9 @@ focus_tree = {
 
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus GER_european_business_opportunities"
-			set_temp_variable = { treasury_change = gdp_total }
-			multiply_temp_variable = { treasury_change = -0.05 }
+			set_temp_variable = { treasury_change = { value = gdp_total multiply = -0.05 } }
 			modify_treasury_effect = yes
-			set_temp_variable = { int_investment_change = treasury_change }
-			multiply_temp_variable = { int_investment_change = -1.25 }
+			set_temp_variable = { int_investment_change = { value = treasury_change multiply = -1.25 } }
 			modify_international_investment_effect = yes
 		}
 
@@ -15353,6 +16040,8 @@ focus_tree = {
 				factor = 0
 				has_active_mission = bankruptcy_incoming_collapse
 			}
+			modifier = { factor = 25 GER_ai_historical_path = yes }
+			modifier = { factor = 0 GER_ai_not_historical_path = yes }
 		}
 	}
 	#
@@ -15382,7 +16071,11 @@ focus_tree = {
 			}
 		}
 
-		ai_will_do = { base = 1 }
+		ai_will_do = {
+			base = 1
+			modifier = { factor = 25 GER_ai_historical_path = yes }
+			modifier = { factor = 0 GER_ai_not_historical_path = yes }
+		}
 	}
 
 	focus = {
@@ -15406,7 +16099,11 @@ focus_tree = {
 			decrease_conscription_effect = yes
 		}
 
-		ai_will_do = { base = 1 }
+		ai_will_do = {
+			base = 1
+			modifier = { factor = 25 GER_ai_historical_path = yes }
+			modifier = { factor = 0 GER_ai_not_historical_path = yes }
+		}
 	}
 
 	focus = {
@@ -15441,7 +16138,11 @@ focus_tree = {
 			}
 		}
 
-		ai_will_do = { base = 1 }
+		ai_will_do = {
+			base = 1
+			modifier = { factor = 25 GER_ai_historical_path = yes }
+			modifier = { factor = 0 GER_ai_not_historical_path = yes }
+		}
 	}
 
 	focus = {
@@ -15478,7 +16179,11 @@ focus_tree = {
 			custom_effect_tooltip = GER_non_nuclear_path2_TT
 		}
 
-		ai_will_do = { base = 1 }
+		ai_will_do = {
+			base = 1
+			modifier = { factor = 30 GER_ai_historical_path = yes }
+			modifier = { factor = 0 GER_ai_not_historical_path = yes }
+		}
 	}
 
 	focus = {
@@ -15522,6 +16227,8 @@ focus_tree = {
 				factor = 0
 				has_active_mission = bankruptcy_incoming_collapse
 			}
+			modifier = { factor = 25 GER_ai_historical_path = yes }
+			modifier = { factor = 0 GER_ai_not_historical_path = yes }
 		}
 	}
 
@@ -15554,6 +16261,8 @@ focus_tree = {
 				factor = 0
 				has_active_mission = bankruptcy_incoming_collapse
 			}
+			modifier = { factor = 25 GER_ai_historical_path = yes }
+			modifier = { factor = 0 GER_ai_not_historical_path = yes }
 		}
 	}
 	#
@@ -15578,7 +16287,11 @@ focus_tree = {
 			add_country_leader_trait = agricultural_resource_economist
 		}
 
-		ai_will_do = { base = 1 }
+		ai_will_do = {
+			base = 1
+			modifier = { factor = 25 GER_ai_historical_path = yes }
+			modifier = { factor = 0 GER_ai_not_historical_path = yes }
+		}
 	}
 
 	focus = {
@@ -15605,7 +16318,11 @@ focus_tree = {
 			change_relative_party_popularity = yes
 		}
 
-		ai_will_do = { base = 1 }
+		ai_will_do = {
+			base = 1
+			modifier = { factor = 25 GER_ai_historical_path = yes }
+			modifier = { factor = 0 GER_ai_not_historical_path = yes }
+		}
 	}
 
 	focus = {
@@ -15632,7 +16349,11 @@ focus_tree = {
 			add_ideas = GER_idea_farming_practices
 		}
 
-		ai_will_do = { base = 1 }
+		ai_will_do = {
+			base = 1
+			modifier = { factor = 25 GER_ai_historical_path = yes }
+			modifier = { factor = 0 GER_ai_not_historical_path = yes }
+		}
 	}
 
 	focus = {
@@ -15662,7 +16383,11 @@ focus_tree = {
 			add_to_variable = { GER_welfare_cost = 0.01 tooltip = social_cost_multiplier_modifier_tt }
 		}
 
-		ai_will_do = { base = 1 }
+		ai_will_do = {
+			base = 1
+			modifier = { factor = 25 GER_ai_historical_path = yes }
+			modifier = { factor = 0 GER_ai_not_historical_path = yes }
+		}
 	}
 
 	focus = {
@@ -15687,7 +16412,11 @@ focus_tree = {
 			add_political_power = 100
 		}
 
-		ai_will_do = { base = 1 }
+		ai_will_do = {
+			base = 1
+			modifier = { factor = 25 GER_ai_historical_path = yes }
+			modifier = { factor = 0 GER_ai_not_historical_path = yes }
+		}
 	}
 
 	focus = {
@@ -15721,7 +16450,11 @@ focus_tree = {
 			change_relative_party_popularity = yes
 		}
 
-		ai_will_do = { base = 1 }
+		ai_will_do = {
+			base = 1
+			modifier = { factor = 25 GER_ai_historical_path = yes }
+			modifier = { factor = 0 GER_ai_not_historical_path = yes }
+		}
 	}
 
 	focus = {
@@ -15749,7 +16482,11 @@ focus_tree = {
 			change_relative_party_popularity = yes
 		}
 
-		ai_will_do = { base = 1 }
+		ai_will_do = {
+			base = 1
+			modifier = { factor = 30 GER_ai_historical_path = yes }
+			modifier = { factor = 0 GER_ai_not_historical_path = yes }
+		}
 	}
 
 	focus = {
@@ -15774,7 +16511,11 @@ focus_tree = {
 			country_event = germany.203
 		}
 
-		ai_will_do = { base = 1 }
+		ai_will_do = {
+			base = 1
+			modifier = { factor = 25 GER_ai_historical_path = yes }
+			modifier = { factor = 0 GER_ai_not_historical_path = yes }
+		}
 	}
 
 	focus = {
@@ -15800,7 +16541,11 @@ focus_tree = {
 			increase_migration_law = yes
 		}
 
-		ai_will_do = { base = 1 }
+		ai_will_do = {
+			base = 1
+			modifier = { factor = 25 GER_ai_historical_path = yes }
+			modifier = { factor = 0 GER_ai_not_historical_path = yes }
+		}
 	}
 
 	focus = {
@@ -15832,7 +16577,11 @@ focus_tree = {
 			change_influence_percentage = yes
 		}
 
-		ai_will_do = { base = 1 }
+		ai_will_do = {
+			base = 1
+			modifier = { factor = 25 GER_ai_historical_path = yes }
+			modifier = { factor = 0 GER_ai_not_historical_path = yes }
+		}
 	}
 
 	focus = {
@@ -15876,7 +16625,11 @@ focus_tree = {
 			}
 		}
 
-		ai_will_do = { base = 1 }
+		ai_will_do = {
+			base = 1
+			modifier = { factor = 25 GER_ai_historical_path = yes }
+			modifier = { factor = 0 GER_ai_not_historical_path = yes }
+		}
 	}
 
 	focus = {
@@ -15927,7 +16680,11 @@ focus_tree = {
 			change_influence_percentage = yes
 		}
 
-		ai_will_do = { base = 1 }
+		ai_will_do = {
+			base = 1
+			modifier = { factor = 25 GER_ai_historical_path = yes }
+			modifier = { factor = 0 GER_ai_not_historical_path = yes }
+		}
 	}
 
 	focus = {
@@ -15954,7 +16711,11 @@ focus_tree = {
 			}
 		}
 
-		ai_will_do = { base = 1 }
+		ai_will_do = {
+			base = 1
+			modifier = { factor = 25 GER_ai_historical_path = yes }
+			modifier = { factor = 0 GER_ai_not_historical_path = yes }
+		}
 	}
 	#### FDP TREE ####
 
@@ -15990,11 +16751,9 @@ focus_tree = {
 		}
 
 		ai_will_do = {
-			base = 0
-			modifier = {
-				factor = 1
-				has_global_flag = GER_LIBERALISM
-			}
+			base = 1
+			modifier = { factor = 25 has_global_flag = GER_LIBERAL_FOCUS_PATH }
+			modifier = { factor = 0 GER_ai_not_liberal_path = yes }
 		}
 	}
 
@@ -16036,7 +16795,11 @@ focus_tree = {
 			}
 		}
 
-		ai_will_do = { base = 1 }
+		ai_will_do = {
+			base = 1
+			modifier = { factor = 25 has_global_flag = GER_LIBERAL_FOCUS_PATH }
+			modifier = { factor = 0 GER_ai_not_liberal_path = yes }
+		}
 	}
 
 	focus = {
@@ -16067,7 +16830,11 @@ focus_tree = {
 			add_ideas = GER_idea_free_market_economy
 		}
 
-		ai_will_do = { base = 1 }
+		ai_will_do = {
+			base = 1
+			modifier = { factor = 25 has_global_flag = GER_LIBERAL_FOCUS_PATH }
+			modifier = { factor = 0 GER_ai_not_liberal_path = yes }
+		}
 	}
 
 	focus = {
@@ -16101,7 +16868,11 @@ focus_tree = {
 			modify_corporate_tax_rate_effect = yes
 		}
 
-		ai_will_do = { base = 1 }
+		ai_will_do = {
+			base = 1
+			modifier = { factor = 25 has_global_flag = GER_LIBERAL_FOCUS_PATH }
+			modifier = { factor = 0 GER_ai_not_liberal_path = yes }
+		}
 	}
 
 	focus = {
@@ -16138,7 +16909,11 @@ focus_tree = {
 			add_to_variable = { GER_welfare_cost = -0.05 tooltip = social_cost_multiplier_modifier_tt }
 		}
 
-		ai_will_do = { base = 1 }
+		ai_will_do = {
+			base = 1
+			modifier = { factor = 25 has_global_flag = GER_LIBERAL_FOCUS_PATH }
+			modifier = { factor = 0 GER_ai_not_liberal_path = yes }
+		}
 	}
 
 	focus = {
@@ -16173,7 +16948,11 @@ focus_tree = {
 			}
 		}
 
-		ai_will_do = { base = 1 }
+		ai_will_do = {
+			base = 1
+			modifier = { factor = 25 has_global_flag = GER_LIBERAL_FOCUS_PATH }
+			modifier = { factor = 0 GER_ai_not_liberal_path = yes }
+		}
 	}
 
 	focus = {
@@ -16209,7 +16988,11 @@ focus_tree = {
 			add_to_variable = { GER_education_cost = -0.05 tooltip = education_cost_multiplier_modifier_tt }
 		}
 
-		ai_will_do = { base = 1 }
+		ai_will_do = {
+			base = 1
+			modifier = { factor = 25 has_global_flag = GER_LIBERAL_FOCUS_PATH }
+			modifier = { factor = 0 GER_ai_not_liberal_path = yes }
+		}
 	}
 
 	focus = {
@@ -16251,6 +17034,12 @@ focus_tree = {
 				factor = 0
 				can_staff_an_arms_industry = no
 			}
+			modifier = {
+				factor = 2
+				ai_is_threatened = yes
+			}
+			modifier = { factor = 25 has_global_flag = GER_LIBERAL_FOCUS_PATH }
+			modifier = { factor = 0 GER_ai_not_liberal_path = yes }
 		}
 	}
 
@@ -16293,6 +17082,8 @@ focus_tree = {
 				factor = 0
 				has_active_mission = bankruptcy_incoming_collapse
 			}
+			modifier = { factor = 25 has_global_flag = GER_LIBERAL_FOCUS_PATH }
+			modifier = { factor = 0 GER_ai_not_liberal_path = yes }
 		}
 	}
 
@@ -16336,7 +17127,11 @@ focus_tree = {
 			}
 		}
 
-		ai_will_do = { base = 1 }
+		ai_will_do = {
+			base = 1
+			modifier = { factor = 25 has_global_flag = GER_LIBERAL_FOCUS_PATH }
+			modifier = { factor = 0 GER_ai_not_liberal_path = yes }
+		}
 	}
 
 	focus = {
@@ -16375,7 +17170,11 @@ focus_tree = {
 			}
 		}
 
-		ai_will_do = { base = 1 }
+		ai_will_do = {
+			base = 1
+			modifier = { factor = 25 has_global_flag = GER_LIBERAL_FOCUS_PATH }
+			modifier = { factor = 0 GER_ai_not_liberal_path = yes }
+		}
 	}
 
 	focus = {
@@ -16405,7 +17204,7 @@ focus_tree = {
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus GER_cyber_workforce"
 			add_tech_bonus = {
-				name = GER_cyberworkforce
+				name = GER_cyber_workforce
 				bonus = 0.5
 				uses = 2
 				category = CAT_ai
@@ -16413,7 +17212,11 @@ focus_tree = {
 			}
 		}
 
-		ai_will_do = { base = 1 }
+		ai_will_do = {
+			base = 1
+			modifier = { factor = 25 has_global_flag = GER_LIBERAL_FOCUS_PATH }
+			modifier = { factor = 0 GER_ai_not_liberal_path = yes }
+		}
 	}
 
 	focus = {
@@ -16458,7 +17261,11 @@ focus_tree = {
 			change_relative_party_popularity = yes
 		}
 
-		ai_will_do = { base = 1 }
+		ai_will_do = {
+			base = 1
+			modifier = { factor = 25 has_global_flag = GER_LIBERAL_FOCUS_PATH }
+			modifier = { factor = 0 GER_ai_not_liberal_path = yes }
+		}
 	}
 
 	focus = {
@@ -16502,7 +17309,11 @@ focus_tree = {
 			}
 		}
 
-		ai_will_do = { base = 1 }
+		ai_will_do = {
+			base = 1
+			modifier = { factor = 25 has_global_flag = GER_LIBERAL_FOCUS_PATH }
+			modifier = { factor = 0 GER_ai_not_liberal_path = yes }
+		}
 	}
 
 	focus = {
@@ -16536,7 +17347,11 @@ focus_tree = {
 			change_relative_party_popularity = yes
 		}
 
-		ai_will_do = { base = 1 }
+		ai_will_do = {
+			base = 1
+			modifier = { factor = 25 has_global_flag = GER_LIBERAL_FOCUS_PATH }
+			modifier = { factor = 0 GER_ai_not_liberal_path = yes }
+		}
 	}
 
 	focus = {
@@ -16611,6 +17426,8 @@ focus_tree = {
 				factor = 0
 				has_active_mission = bankruptcy_incoming_collapse
 			}
+			modifier = { factor = 25 has_global_flag = GER_LIBERAL_FOCUS_PATH }
+			modifier = { factor = 0 GER_ai_not_liberal_path = yes }
 		}
 	}
 
@@ -16643,7 +17460,11 @@ focus_tree = {
 			country_event = germany.204
 		}
 
-		ai_will_do = { base = 1 }
+		ai_will_do = {
+			base = 1
+			modifier = { factor = 25 has_global_flag = GER_LIBERAL_FOCUS_PATH }
+			modifier = { factor = 0 GER_ai_not_liberal_path = yes }
+		}
 	}
 
 	#### Green party Tree ####
@@ -16677,11 +17498,9 @@ focus_tree = {
 		}
 
 		ai_will_do = {
-			base = 0
-			modifier = {
-				factor = 1
-				has_global_flag = GER_GREEN
-			}
+			base = 1
+			modifier = { factor = 25 has_global_flag = GER_GREEN_FOCUS_PATH }
+			modifier = { factor = 0 GER_ai_not_green_path = yes }
 		}
 	}
 
@@ -16711,7 +17530,11 @@ focus_tree = {
 			add_ideas = GER_idea_sustainable_development
 		}
 
-		ai_will_do = { base = 1 }
+		ai_will_do = {
+			base = 1
+			modifier = { factor = 25 has_global_flag = GER_GREEN_FOCUS_PATH }
+			modifier = { factor = 0 GER_ai_not_green_path = yes }
+		}
 	}
 
 	focus = {
@@ -16743,7 +17566,11 @@ focus_tree = {
 			}
 		}
 
-		ai_will_do = { base = 1 }
+		ai_will_do = {
+			base = 1
+			modifier = { factor = 25 has_global_flag = GER_GREEN_FOCUS_PATH }
+			modifier = { factor = 0 GER_ai_not_green_path = yes }
+		}
 	}
 
 	focus = {
@@ -16784,7 +17611,11 @@ focus_tree = {
 			custom_effect_tooltip = GER_non_nuclear_path2_TT
 		}
 
-		ai_will_do = { base = 1 }
+		ai_will_do = {
+			base = 1
+			modifier = { factor = 25 has_global_flag = GER_GREEN_FOCUS_PATH }
+			modifier = { factor = 0 GER_ai_not_green_path = yes }
+		}
 	}
 
 	focus = {
@@ -16820,7 +17651,11 @@ focus_tree = {
 			europeanism_change = yes
 		}
 
-		ai_will_do = { base = 1 }
+		ai_will_do = {
+			base = 1
+			modifier = { factor = 25 has_global_flag = GER_GREEN_FOCUS_PATH }
+			modifier = { factor = 0 GER_ai_not_green_path = yes }
+		}
 	}
 
 	focus = {
@@ -16853,7 +17688,11 @@ focus_tree = {
 			add_stability = -0.04
 		}
 
-		ai_will_do = { base = 1 }
+		ai_will_do = {
+			base = 1
+			modifier = { factor = 25 has_global_flag = GER_GREEN_FOCUS_PATH }
+			modifier = { factor = 0 GER_ai_not_green_path = yes }
+		}
 	}
 
 	focus = {
@@ -16963,7 +17802,11 @@ focus_tree = {
 			custom_effect_tooltip = GER_more_likely_to_accept
 		}
 
-		ai_will_do = { base = 1 }
+		ai_will_do = {
+			base = 1
+			modifier = { factor = 25 has_global_flag = GER_GREEN_FOCUS_PATH }
+			modifier = { factor = 0 GER_ai_not_green_path = yes }
+		}
 	}
 
 	focus = {
@@ -17036,7 +17879,11 @@ focus_tree = {
 			}
 		}
 
-		ai_will_do = { base = 1 }
+		ai_will_do = {
+			base = 1
+			modifier = { factor = 25 has_global_flag = GER_GREEN_FOCUS_PATH }
+			modifier = { factor = 0 GER_ai_not_green_path = yes }
+		}
 	}
 
 	focus = {
@@ -17122,7 +17969,11 @@ focus_tree = {
 			}
 		}
 
-		ai_will_do = { base = 1 }
+		ai_will_do = {
+			base = 1
+			modifier = { factor = 25 has_global_flag = GER_GREEN_FOCUS_PATH }
+			modifier = { factor = 0 GER_ai_not_green_path = yes }
+		}
 	}
 
 	focus = {
@@ -17183,7 +18034,11 @@ focus_tree = {
 			}
 		}
 
-		ai_will_do = { base = 1 }
+		ai_will_do = {
+			base = 1
+			modifier = { factor = 25 has_global_flag = GER_GREEN_FOCUS_PATH }
+			modifier = { factor = 0 GER_ai_not_green_path = yes }
+		}
 	}
 	#
 	focus = {
@@ -17212,7 +18067,11 @@ focus_tree = {
 			add_ideas = GER_idea_greater_regulations
 		}
 
-		ai_will_do = { base = 1 }
+		ai_will_do = {
+			base = 1
+			modifier = { factor = 25 has_global_flag = GER_GREEN_FOCUS_PATH }
+			modifier = { factor = 0 GER_ai_not_green_path = yes }
+		}
 	}
 
 	focus = {
@@ -17244,7 +18103,11 @@ focus_tree = {
 			}
 		}
 
-		ai_will_do = { base = 1 }
+		ai_will_do = {
+			base = 1
+			modifier = { factor = 25 has_global_flag = GER_GREEN_FOCUS_PATH }
+			modifier = { factor = 0 GER_ai_not_green_path = yes }
+		}
 	}
 
 	focus = {
@@ -17280,7 +18143,11 @@ focus_tree = {
 			add_to_variable = { GER_welfare_cost = 0.01 tooltip = social_cost_multiplier_modifier_tt }
 		}
 
-		ai_will_do = { base = 1 }
+		ai_will_do = {
+			base = 1
+			modifier = { factor = 25 has_global_flag = GER_GREEN_FOCUS_PATH }
+			modifier = { factor = 0 GER_ai_not_green_path = yes }
+		}
 	}
 
 	focus = {
@@ -17305,7 +18172,11 @@ focus_tree = {
 			add_country_leader_trait = peoples_leader
 		}
 
-		ai_will_do = { base = 1 }
+		ai_will_do = {
+			base = 1
+			modifier = { factor = 25 has_global_flag = GER_GREEN_FOCUS_PATH }
+			modifier = { factor = 0 GER_ai_not_green_path = yes }
+		}
 	}
 
 	focus = {
@@ -17335,7 +18206,11 @@ focus_tree = {
 			add_to_variable = { GER_east_opinion = 3 }
 		}
 
-		ai_will_do = { base = 1 }
+		ai_will_do = {
+			base = 1
+			modifier = { factor = 25 has_global_flag = GER_GREEN_FOCUS_PATH }
+			modifier = { factor = 0 GER_ai_not_green_path = yes }
+		}
 	}
 
 	focus = {
@@ -17359,7 +18234,11 @@ focus_tree = {
 			country_event = germany.208
 		}
 
-		ai_will_do = { base = 1 }
+		ai_will_do = {
+			base = 1
+			modifier = { factor = 25 has_global_flag = GER_GREEN_FOCUS_PATH }
+			modifier = { factor = 0 GER_ai_not_green_path = yes }
+		}
 	}
 
 	focus = {
@@ -17392,7 +18271,11 @@ focus_tree = {
 			change_relative_party_popularity = yes
 		}
 
-		ai_will_do = { base = 1 }
+		ai_will_do = {
+			base = 1
+			modifier = { factor = 25 has_global_flag = GER_GREEN_FOCUS_PATH }
+			modifier = { factor = 0 GER_ai_not_green_path = yes }
+		}
 	}
 
 	#### Alternative for Germany Tree ####
@@ -17419,7 +18302,6 @@ focus_tree = {
 
 		dynamic = yes
 
-
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus GER_the_alternative"
 			set_temp_variable = { party_index = 20 }
@@ -17429,11 +18311,9 @@ focus_tree = {
 		}
 
 		ai_will_do = {
-			base = 0
-			modifier = {
-				factor = 1
-				has_global_flag = GER_POPULISM
-			}
+			base = 1
+			modifier = { factor = 25 has_global_flag = GER_POPULIST_FOCUS_PATH }
+			modifier = { factor = 0 GER_ai_not_populist_path = yes }
 		}
 	}
 
@@ -17458,7 +18338,11 @@ focus_tree = {
 			add_ideas = GER_idea_volk
 		}
 
-		ai_will_do = { base = 1 }
+		ai_will_do = {
+			base = 1
+			modifier = { factor = 25 has_global_flag = GER_POPULIST_FOCUS_PATH }
+			modifier = { factor = 0 GER_ai_not_populist_path = yes }
+		}
 	}
 
 	focus = {
@@ -17483,7 +18367,11 @@ focus_tree = {
 			add_war_support = 0.05
 		}
 
-		ai_will_do = { base = 1 }
+		ai_will_do = {
+			base = 1
+			modifier = { factor = 25 has_global_flag = GER_POPULIST_FOCUS_PATH }
+			modifier = { factor = 0 GER_ai_not_populist_path = yes }
+		}
 	}
 
 	focus = {
@@ -17519,7 +18407,11 @@ focus_tree = {
 			}
 		}
 
-		ai_will_do = { base = 1 }
+		ai_will_do = {
+			base = 1
+			modifier = { factor = 25 has_global_flag = GER_POPULIST_FOCUS_PATH }
+			modifier = { factor = 0 GER_ai_not_populist_path = yes }
+		}
 	}
 
 	focus = {
@@ -17554,6 +18446,8 @@ focus_tree = {
 				factor = 0
 				has_active_mission = bankruptcy_incoming_collapse
 			}
+			modifier = { factor = 25 has_global_flag = GER_POPULIST_FOCUS_PATH }
+			modifier = { factor = 0 GER_ai_not_populist_path = yes }
 		}
 	}
 
@@ -17576,14 +18470,19 @@ focus_tree = {
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus GER_restrictions_on_practice"
 			custom_effect_tooltip = GER_will_ban_ADD
-			set_country_flag = party12_banned
+			set_temp_variable = { party_index = 11 }
+			ban_party_scripted_call = yes
 			add_popularity = {
 				ideology = democratic
 				popularity = -0.03
 			}
 		}
 
-		ai_will_do = { base = 1 }
+		ai_will_do = {
+			base = 1
+			modifier = { factor = 25 has_global_flag = GER_POPULIST_FOCUS_PATH }
+			modifier = { factor = 0 GER_ai_not_populist_path = yes }
+		}
 	}
 
 	focus = {
@@ -17615,7 +18514,11 @@ focus_tree = {
 			}
 		}
 
-		ai_will_do = { base = 1 }
+		ai_will_do = {
+			base = 1
+			modifier = { factor = 25 has_global_flag = GER_POPULIST_FOCUS_PATH }
+			modifier = { factor = 0 GER_ai_not_populist_path = yes }
+		}
 	}
 
 	focus = {
@@ -17644,7 +18547,11 @@ focus_tree = {
 			add_to_variable = { GER_police_cost = -0.03 tooltip = police_cost_multiplier_modifier_tt }
 		}
 
-		ai_will_do = { base = 1 }
+		ai_will_do = {
+			base = 1
+			modifier = { factor = 25 has_global_flag = GER_POPULIST_FOCUS_PATH }
+			modifier = { factor = 0 GER_ai_not_populist_path = yes }
+		}
 	}
 
 	focus = {
@@ -17670,7 +18577,11 @@ focus_tree = {
 			add_ideas = GER_idea_german_heritage
 		}
 
-		ai_will_do = { base = 1 }
+		ai_will_do = {
+			base = 1
+			modifier = { factor = 25 has_global_flag = GER_POPULIST_FOCUS_PATH }
+			modifier = { factor = 0 GER_ai_not_populist_path = yes }
+		}
 	}
 
 	focus = {
@@ -17694,7 +18605,11 @@ focus_tree = {
 			country_event = germany.209
 		}
 
-		ai_will_do = { base = 1 }
+		ai_will_do = {
+			base = 1
+			modifier = { factor = 25 has_global_flag = GER_POPULIST_FOCUS_PATH }
+			modifier = { factor = 0 GER_ai_not_populist_path = yes }
+		}
 	}
 
 	focus = {
@@ -17720,7 +18635,11 @@ focus_tree = {
 			europeanism_change = yes
 		}
 
-		ai_will_do = { base = 1 }
+		ai_will_do = {
+			base = 1
+			modifier = { factor = 25 has_global_flag = GER_POPULIST_FOCUS_PATH }
+			modifier = { factor = 0 GER_ai_not_populist_path = yes }
+		}
 	}
 
 	focus = {
@@ -17771,7 +18690,11 @@ focus_tree = {
 			recalculate_party = yes
 		}
 
-		ai_will_do = { base = 1 }
+		ai_will_do = {
+			base = 1
+			modifier = { factor = 25 has_global_flag = GER_POPULIST_FOCUS_PATH }
+			modifier = { factor = 0 GER_ai_not_populist_path = yes }
+		}
 	}
 
 	focus = {
@@ -17796,7 +18719,11 @@ focus_tree = {
 			add_ideas = GER_idea_anti_lgbt
 		}
 
-		ai_will_do = { base = 1 }
+		ai_will_do = {
+			base = 1
+			modifier = { factor = 25 has_global_flag = GER_POPULIST_FOCUS_PATH }
+			modifier = { factor = 0 GER_ai_not_populist_path = yes }
+		}
 	}
 
 	focus = {
@@ -17831,6 +18758,8 @@ focus_tree = {
 				factor = 0
 				has_active_mission = bankruptcy_incoming_collapse
 			}
+			modifier = { factor = 25 has_global_flag = GER_POPULIST_FOCUS_PATH }
+			modifier = { factor = 0 GER_ai_not_populist_path = yes }
 		}
 	}
 
@@ -17877,6 +18806,12 @@ focus_tree = {
 				factor = 0
 				has_active_mission = bankruptcy_incoming_collapse
 			}
+			modifier = {
+				factor = 2
+				ai_is_threatened = yes
+			}
+			modifier = { factor = 25 has_global_flag = GER_POPULIST_FOCUS_PATH }
+			modifier = { factor = 0 GER_ai_not_populist_path = yes }
 		}
 	}
 
@@ -17904,7 +18839,11 @@ focus_tree = {
 			}
 		}
 
-		ai_will_do = { base = 1 }
+		ai_will_do = {
+			base = 1
+			modifier = { factor = 25 has_global_flag = GER_POPULIST_FOCUS_PATH }
+			modifier = { factor = 0 GER_ai_not_populist_path = yes }
+		}
 	}
 
 	focus = {
@@ -17931,7 +18870,11 @@ focus_tree = {
 			change_relative_party_popularity = yes
 		}
 
-		ai_will_do = { base = 1 }
+		ai_will_do = {
+			base = 1
+			modifier = { factor = 25 has_global_flag = GER_POPULIST_FOCUS_PATH }
+			modifier = { factor = 0 GER_ai_not_populist_path = yes }
+		}
 	}
 
 	focus = {
@@ -18004,7 +18947,11 @@ focus_tree = {
 			}
 		}
 
-		ai_will_do = { base = 1 }
+		ai_will_do = {
+			base = 1
+			modifier = { factor = 30 has_global_flag = GER_POPULIST_FOCUS_PATH }
+			modifier = { factor = 0 GER_ai_not_populist_path = yes }
+		}
 	}
 
 	focus = {
@@ -18046,7 +18993,11 @@ focus_tree = {
 			country_event = germany.210
 		}
 
-		ai_will_do = { base = 1 }
+		ai_will_do = {
+			base = 1
+			modifier = { factor = 25 has_global_flag = GER_POPULIST_FOCUS_PATH }
+			modifier = { factor = 0 GER_ai_not_populist_path = yes }
+		}
 	}
 	#
 	focus = {
@@ -18082,7 +19033,11 @@ focus_tree = {
 			}
 		}
 
-		ai_will_do = { base = 1 }
+		ai_will_do = {
+			base = 1
+			modifier = { factor = 25 has_global_flag = GER_POPULIST_FOCUS_PATH }
+			modifier = { factor = 0 GER_ai_not_populist_path = yes }
+		}
 	}
 	#### Die Linke (The Left) ####
 	focus = {
@@ -18115,11 +19070,9 @@ focus_tree = {
 		}
 
 		ai_will_do = {
-			base = 0
-			modifier = {
-				factor = 1
-				has_global_flag = GER_SOCIALIST
-			}
+			base = 1
+			modifier = { factor = 25 has_global_flag = GER_SOCIALIST_FOCUS_PATH }
+			modifier = { factor = 0 GER_ai_not_socialist_path = yes }
 		}
 	}
 
@@ -18170,7 +19123,11 @@ focus_tree = {
 			recalculate_party = yes
 		}
 
-		ai_will_do = { base = 1 }
+		ai_will_do = {
+			base = 1
+			modifier = { factor = 25 has_global_flag = GER_SOCIALIST_FOCUS_PATH }
+			modifier = { factor = 0 GER_ai_not_socialist_path = yes }
+		}
 	}
 
 	focus = {
@@ -18195,7 +19152,11 @@ focus_tree = {
 			change_labour_unions_opinion = yes
 		}
 
-		ai_will_do = { base = 1 }
+		ai_will_do = {
+			base = 1
+			modifier = { factor = 25 has_global_flag = GER_SOCIALIST_FOCUS_PATH }
+			modifier = { factor = 0 GER_ai_not_socialist_path = yes }
+		}
 	}
 
 	focus = {
@@ -18227,7 +19188,11 @@ focus_tree = {
 			}
 		}
 
-		ai_will_do = { base = 1 }
+		ai_will_do = {
+			base = 1
+			modifier = { factor = 25 has_global_flag = GER_SOCIALIST_FOCUS_PATH }
+			modifier = { factor = 0 GER_ai_not_socialist_path = yes }
+		}
 	}
 
 	focus = {
@@ -18261,7 +19226,11 @@ focus_tree = {
 			}
 		}
 
-		ai_will_do = { base = 1 }
+		ai_will_do = {
+			base = 1
+			modifier = { factor = 25 has_global_flag = GER_SOCIALIST_FOCUS_PATH }
+			modifier = { factor = 0 GER_ai_not_socialist_path = yes }
+		}
 	}
 
 	focus = {
@@ -18287,7 +19256,11 @@ focus_tree = {
 			custom_effect_tooltip = GER_more_likely_to_accept
 		}
 
-		ai_will_do = { base = 1 }
+		ai_will_do = {
+			base = 1
+			modifier = { factor = 25 has_global_flag = GER_SOCIALIST_FOCUS_PATH }
+			modifier = { factor = 0 GER_ai_not_socialist_path = yes }
+		}
 	}
 
 	focus = {
@@ -18313,7 +19286,11 @@ focus_tree = {
 			add_ideas = GER_idea_pacifist_nation
 		}
 
-		ai_will_do = { base = 1 }
+		ai_will_do = {
+			base = 1
+			modifier = { factor = 25 has_global_flag = GER_SOCIALIST_FOCUS_PATH }
+			modifier = { factor = 0 GER_ai_not_socialist_path = yes }
+		}
 	}
 
 	focus = {
@@ -18350,7 +19327,11 @@ focus_tree = {
 			}
 		}
 
-		ai_will_do = { base = 1 }
+		ai_will_do = {
+			base = 1
+			modifier = { factor = 25 has_global_flag = GER_SOCIALIST_FOCUS_PATH }
+			modifier = { factor = 0 GER_ai_not_socialist_path = yes }
+		}
 	}
 
 	focus = {
@@ -18467,7 +19448,11 @@ focus_tree = {
 			}
 		}
 
-		ai_will_do = { base = 1 }
+		ai_will_do = {
+			base = 1
+			modifier = { factor = 25 has_global_flag = GER_SOCIALIST_FOCUS_PATH }
+			modifier = { factor = 0 GER_ai_not_socialist_path = yes }
+		}
 	}
 
 	focus = {
@@ -18511,6 +19496,8 @@ focus_tree = {
 				factor = 0
 				has_active_mission = bankruptcy_incoming_collapse
 			}
+			modifier = { factor = 25 has_global_flag = GER_SOCIALIST_FOCUS_PATH }
+			modifier = { factor = 0 GER_ai_not_socialist_path = yes }
 		}
 	}
 
@@ -18538,7 +19525,11 @@ focus_tree = {
 			change_influence_percentage = yes
 		}
 
-		ai_will_do = { base = 1 }
+		ai_will_do = {
+			base = 1
+			modifier = { factor = 25 has_global_flag = GER_SOCIALIST_FOCUS_PATH }
+			modifier = { factor = 0 GER_ai_not_socialist_path = yes }
+		}
 	}
 
 	focus = {
@@ -18564,7 +19555,11 @@ focus_tree = {
 			modify_corporate_tax_rate_effect = yes
 		}
 
-		ai_will_do = { base = 1 }
+		ai_will_do = {
+			base = 1
+			modifier = { factor = 25 has_global_flag = GER_SOCIALIST_FOCUS_PATH }
+			modifier = { factor = 0 GER_ai_not_socialist_path = yes }
+		}
 	}
 
 	focus = {
@@ -18600,7 +19595,11 @@ focus_tree = {
 			}
 		}
 
-		ai_will_do = { base = 1 }
+		ai_will_do = {
+			base = 1
+			modifier = { factor = 25 has_global_flag = GER_SOCIALIST_FOCUS_PATH }
+			modifier = { factor = 0 GER_ai_not_socialist_path = yes }
+		}
 	}
 
 	focus = {
@@ -18626,7 +19625,11 @@ focus_tree = {
 			modify_population_tax_rate_effect = yes
 		}
 
-		ai_will_do = { base = 1 }
+		ai_will_do = {
+			base = 1
+			modifier = { factor = 25 has_global_flag = GER_SOCIALIST_FOCUS_PATH }
+			modifier = { factor = 0 GER_ai_not_socialist_path = yes }
+		}
 	}
 
 	focus = {
@@ -18654,7 +19657,11 @@ focus_tree = {
 			add_to_variable = { GER_welfare_cost = 0.01 tooltip = social_cost_multiplier_modifier_tt }
 		}
 
-		ai_will_do = { base = 1 }
+		ai_will_do = {
+			base = 1
+			modifier = { factor = 25 has_global_flag = GER_SOCIALIST_FOCUS_PATH }
+			modifier = { factor = 0 GER_ai_not_socialist_path = yes }
+		}
 	}
 
 	focus = {
@@ -18681,7 +19688,11 @@ focus_tree = {
 			change_relative_party_popularity = yes
 		}
 
-		ai_will_do = { base = 1 }
+		ai_will_do = {
+			base = 1
+			modifier = { factor = 25 has_global_flag = GER_SOCIALIST_FOCUS_PATH }
+			modifier = { factor = 0 GER_ai_not_socialist_path = yes }
+		}
 	}
 
 	focus = {
@@ -18710,7 +19721,11 @@ focus_tree = {
 			add_to_variable = { GER_interest_cost = -0.005 tooltip = interest_rate_multiplier_modifier_tt }
 		}
 
-		ai_will_do = { base = 1 }
+		ai_will_do = {
+			base = 1
+			modifier = { factor = 25 has_global_flag = GER_SOCIALIST_FOCUS_PATH }
+			modifier = { factor = 0 GER_ai_not_socialist_path = yes }
+		}
 	}
 
 	focus = {
@@ -18745,7 +19760,11 @@ focus_tree = {
 			change_influence_percentage = yes
 		}
 
-		ai_will_do = { base = 1 }
+		ai_will_do = {
+			base = 1
+			modifier = { factor = 25 has_global_flag = GER_SOCIALIST_FOCUS_PATH }
+			modifier = { factor = 0 GER_ai_not_socialist_path = yes }
+		}
 	}
 
 	focus = {
@@ -18774,7 +19793,11 @@ focus_tree = {
 			}
 		}
 
-		ai_will_do = { base = 1 }
+		ai_will_do = {
+			base = 1
+			modifier = { factor = 25 has_global_flag = GER_SOCIALIST_FOCUS_PATH }
+			modifier = { factor = 0 GER_ai_not_socialist_path = yes }
+		}
 	}
 
 	focus = {
@@ -18817,7 +19840,11 @@ focus_tree = {
 			}
 		}
 
-		ai_will_do = { base = 1 }
+		ai_will_do = {
+			base = 1
+			modifier = { factor = 25 has_global_flag = GER_SOCIALIST_FOCUS_PATH }
+			modifier = { factor = 0 GER_ai_not_socialist_path = yes }
+		}
 	}
 
 	focus = {
@@ -18866,10 +19893,14 @@ focus_tree = {
 			custom_effect_tooltip = GER_more_likely_to_accept
 			newline = yes
 			set_cosmetic_tag = GER_franco_german_union
-			set_country_flag = is_GERMAN
+			mark_formed_country_formable = yes
 		}
 
-		ai_will_do = { base = 1 }
+		ai_will_do = {
+			base = 1
+			modifier = { factor = 25 has_global_flag = GER_SOCIALIST_FOCUS_PATH }
+			modifier = { factor = 0 GER_ai_not_socialist_path = yes }
+		}
 	}
 	#
 	focus = {
@@ -18923,7 +19954,11 @@ focus_tree = {
 			custom_effect_tooltip = GER_more_likely_to_accept
 		}
 
-		ai_will_do = { base = 1 }
+		ai_will_do = {
+			base = 1
+			modifier = { factor = 25 has_global_flag = GER_SOCIALIST_FOCUS_PATH }
+			modifier = { factor = 0 GER_ai_not_socialist_path = yes }
+		}
 	}
 
 	focus = {
@@ -18977,7 +20012,11 @@ focus_tree = {
 			custom_effect_tooltip = GER_more_likely_to_accept
 		}
 
-		ai_will_do = { base = 1 }
+		ai_will_do = {
+			base = 1
+			modifier = { factor = 25 has_global_flag = GER_SOCIALIST_FOCUS_PATH }
+			modifier = { factor = 0 GER_ai_not_socialist_path = yes }
+		}
 	}
 	#### NPD TREE ####
 	focus = {
@@ -19005,11 +20044,9 @@ focus_tree = {
 		}
 
 		ai_will_do = {
-			base = 0
-			modifier = {
-				factor = 1
-				has_global_flag = GER_NATIONALIST
-			}
+			base = 1
+			modifier = { factor = 25 has_global_flag = GER_NATIONALIST_FOCUS_PATH }
+			modifier = { factor = 0 GER_ai_not_nationalist_path = yes }
 		}
 	}
 
@@ -19034,7 +20071,11 @@ focus_tree = {
 			add_ideas = GER_idea_pride_in_history
 		}
 
-		ai_will_do = { base = 1 }
+		ai_will_do = {
+			base = 1
+			modifier = { factor = 25 has_global_flag = GER_NATIONALIST_FOCUS_PATH }
+			modifier = { factor = 0 GER_ai_not_nationalist_path = yes }
+		}
 	}
 
 	focus = {
@@ -19061,7 +20102,11 @@ focus_tree = {
 			change_relative_party_popularity = yes
 		}
 
-		ai_will_do = { base = 1 }
+		ai_will_do = {
+			base = 1
+			modifier = { factor = 25 has_global_flag = GER_NATIONALIST_FOCUS_PATH }
+			modifier = { factor = 0 GER_ai_not_nationalist_path = yes }
+		}
 	}
 
 	focus = {
@@ -19111,7 +20156,11 @@ focus_tree = {
 			recalculate_party = yes
 		}
 
-		ai_will_do = { base = 1 }
+		ai_will_do = {
+			base = 1
+			modifier = { factor = 25 has_global_flag = GER_NATIONALIST_FOCUS_PATH }
+			modifier = { factor = 0 GER_ai_not_nationalist_path = yes }
+		}
 	}
 
 	focus = {
@@ -19134,36 +20183,15 @@ focus_tree = {
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus GER_one_party_state"
 			custom_effect_tooltip = GER_one_party_state_TT
-			set_country_flag = party1_banned
-			set_country_flag = party1_banned
-			set_country_flag = party2_banned
-			set_country_flag = party3_banned
-			set_country_flag = party4_banned
-			set_country_flag = party5_banned
-			set_country_flag = party6_banned
-			set_country_flag = party7_banned
-			set_country_flag = party8_banned
-			set_country_flag = party9_banned
-			set_country_flag = party10_banned
-			set_country_flag = party11_banned
-			set_country_flag = party12_banned
-			set_country_flag = party13_banned
-			set_country_flag = party14_banned
-			set_country_flag = party14_banned
-			set_country_flag = party15_banned
-			set_country_flag = party16_banned
-			set_country_flag = party17_banned
-			set_country_flag = party16_banned
-			set_country_flag = party17_banned
-			set_country_flag = party18_banned
-			set_country_flag = party19_banned
-			set_country_flag = party20_banned
-			set_country_flag = party21_banned
-			set_country_flag = party23_banned
-			set_country_flag = party24_banned
+			add_to_temp_array = { ban_except_array = 21 }
+			ban_all_parties_except_array = yes
 		}
 
-		ai_will_do = { base = 1 }
+		ai_will_do = {
+			base = 1
+			modifier = { factor = 25 has_global_flag = GER_NATIONALIST_FOCUS_PATH }
+			modifier = { factor = 0 GER_ai_not_nationalist_path = yes }
+		}
 	}
 
 	focus = {
@@ -19199,7 +20227,11 @@ focus_tree = {
 			}
 		}
 
-		ai_will_do = { base = 1 }
+		ai_will_do = {
+			base = 1
+			modifier = { factor = 25 has_global_flag = GER_NATIONALIST_FOCUS_PATH }
+			modifier = { factor = 0 GER_ai_not_nationalist_path = yes }
+		}
 	}
 
 	focus = {
@@ -19232,7 +20264,11 @@ focus_tree = {
 			}
 		}
 
-		ai_will_do = { base = 1 }
+		ai_will_do = {
+			base = 1
+			modifier = { factor = 25 has_global_flag = GER_NATIONALIST_FOCUS_PATH }
+			modifier = { factor = 0 GER_ai_not_nationalist_path = yes }
+		}
 	}
 
 	focus = {
@@ -19263,7 +20299,11 @@ focus_tree = {
 			}
 		}
 
-		ai_will_do = { base = 1 }
+		ai_will_do = {
+			base = 1
+			modifier = { factor = 25 has_global_flag = GER_NATIONALIST_FOCUS_PATH }
+			modifier = { factor = 0 GER_ai_not_nationalist_path = yes }
+		}
 	}
 	#
 	focus = {
@@ -19287,7 +20327,11 @@ focus_tree = {
 			add_ideas = GER_idea_german_order
 		}
 
-		ai_will_do = { base = 1 }
+		ai_will_do = {
+			base = 1
+			modifier = { factor = 25 has_global_flag = GER_NATIONALIST_FOCUS_PATH }
+			modifier = { factor = 0 GER_ai_not_nationalist_path = yes }
+		}
 	}
 
 	focus = {
@@ -19328,7 +20372,11 @@ focus_tree = {
 			custom_effect_tooltip = GER_torment_israel_npd_TT
 		}
 
-		ai_will_do = { base = 1 }
+		ai_will_do = {
+			base = 1
+			modifier = { factor = 30 has_global_flag = GER_NATIONALIST_FOCUS_PATH }
+			modifier = { factor = 0 GER_ai_not_nationalist_path = yes }
+		}
 	}
 
 	focus = {
@@ -19370,7 +20418,11 @@ focus_tree = {
 			change_influence_percentage = yes
 		}
 
-		ai_will_do = { base = 1 }
+		ai_will_do = {
+			base = 1
+			modifier = { factor = 25 has_global_flag = GER_NATIONALIST_FOCUS_PATH }
+			modifier = { factor = 0 GER_ai_not_nationalist_path = yes }
+		}
 	}
 
 	focus = {
@@ -19403,7 +20455,11 @@ focus_tree = {
 			country_event = germany.226
 		}
 
-		ai_will_do = { base = 1 }
+		ai_will_do = {
+			base = 1
+			modifier = { factor = 25 has_global_flag = GER_NATIONALIST_FOCUS_PATH }
+			modifier = { factor = 0 GER_ai_not_nationalist_path = yes }
+		}
 	}
 	#
 	focus = {
@@ -19430,7 +20486,11 @@ focus_tree = {
 			}
 		}
 
-		ai_will_do = { base = 1 }
+		ai_will_do = {
+			base = 1
+			modifier = { factor = 25 has_global_flag = GER_NATIONALIST_FOCUS_PATH }
+			modifier = { factor = 0 GER_ai_not_nationalist_path = yes }
+		}
 	}
 
 	focus = {
@@ -19460,7 +20520,11 @@ focus_tree = {
 			add_stability = 0.03
 		}
 
-		ai_will_do = { base = 1 }
+		ai_will_do = {
+			base = 1
+			modifier = { factor = 25 has_global_flag = GER_NATIONALIST_FOCUS_PATH }
+			modifier = { factor = 0 GER_ai_not_nationalist_path = yes }
+		}
 	}
 
 	focus = {
@@ -19487,7 +20551,11 @@ focus_tree = {
 			}
 		}
 
-		ai_will_do = { base = 1 }
+		ai_will_do = {
+			base = 1
+			modifier = { factor = 25 has_global_flag = GER_NATIONALIST_FOCUS_PATH }
+			modifier = { factor = 0 GER_ai_not_nationalist_path = yes }
+		}
 	}
 
 	focus = {
@@ -19536,6 +20604,8 @@ focus_tree = {
 				factor = 0
 				has_active_mission = bankruptcy_incoming_collapse
 			}
+			modifier = { factor = 25 has_global_flag = GER_NATIONALIST_FOCUS_PATH }
+			modifier = { factor = 0 GER_ai_not_nationalist_path = yes }
 		}
 	}
 	#
@@ -19566,7 +20636,11 @@ focus_tree = {
 			add_ideas = GER_idea_against_migrants
 		}
 
-		ai_will_do = { base = 1 }
+		ai_will_do = {
+			base = 1
+			modifier = { factor = 25 has_global_flag = GER_NATIONALIST_FOCUS_PATH }
+			modifier = { factor = 0 GER_ai_not_nationalist_path = yes }
+		}
 	}
 
 	focus = {
@@ -19593,7 +20667,11 @@ focus_tree = {
 			}
 		}
 
-		ai_will_do = { base = 1 }
+		ai_will_do = {
+			base = 1
+			modifier = { factor = 25 has_global_flag = GER_NATIONALIST_FOCUS_PATH }
+			modifier = { factor = 0 GER_ai_not_nationalist_path = yes }
+		}
 	}
 
 	focus = {
@@ -19638,7 +20716,11 @@ focus_tree = {
 			}
 		}
 
-		ai_will_do = { base = 1 }
+		ai_will_do = {
+			base = 1
+			modifier = { factor = 25 has_global_flag = GER_NATIONALIST_FOCUS_PATH }
+			modifier = { factor = 0 GER_ai_not_nationalist_path = yes }
+		}
 	}
 
 	focus = {
@@ -19670,7 +20752,11 @@ focus_tree = {
 			}
 		}
 
-		ai_will_do = { base = 1 }
+		ai_will_do = {
+			base = 1
+			modifier = { factor = 25 has_global_flag = GER_NATIONALIST_FOCUS_PATH }
+			modifier = { factor = 0 GER_ai_not_nationalist_path = yes }
+		}
 	}
 
 	focus = {
@@ -19708,7 +20794,11 @@ focus_tree = {
 			}
 		}
 
-		ai_will_do = { base = 1 }
+		ai_will_do = {
+			base = 1
+			modifier = { factor = 25 has_global_flag = GER_NATIONALIST_FOCUS_PATH }
+			modifier = { factor = 0 GER_ai_not_nationalist_path = yes }
+		}
 	}
 
 	focus = {
@@ -19735,7 +20825,11 @@ focus_tree = {
 			}
 		}
 
-		ai_will_do = { base = 1 }
+		ai_will_do = {
+			base = 1
+			modifier = { factor = 25 has_global_flag = GER_NATIONALIST_FOCUS_PATH }
+			modifier = { factor = 0 GER_ai_not_nationalist_path = yes }
+		}
 	}
 
 	focus = {
@@ -19809,7 +20903,11 @@ focus_tree = {
 			}
 		}
 
-		ai_will_do = { base = 1 }
+		ai_will_do = {
+			base = 1
+			modifier = { factor = 25 has_global_flag = GER_NATIONALIST_FOCUS_PATH }
+			modifier = { factor = 0 GER_ai_not_nationalist_path = yes }
+		}
 	}
 
 	focus = {
@@ -19836,7 +20934,7 @@ focus_tree = {
 				add_idea = GER_idea_german_order3
 			}
 			add_tech_bonus = {
-				name = GER_wunder_engine
+				name = GER_wunder_waffen
 				bonus = 0.15
 				uses = 1
 				category = CAT_nuclear_weapons
@@ -19845,7 +20943,7 @@ focus_tree = {
 			if = {
 				limit = { has_dlc = "By Blood Alone" }
 				add_tech_bonus = {
-					name = GER_wunder_engine
+					name = GER_wunder_waffen
 					bonus = 0.20
 					uses = 1
 					technology = nuclear_engines
@@ -19853,7 +20951,11 @@ focus_tree = {
 			}
 		}
 
-		ai_will_do = { base = 1 }
+		ai_will_do = {
+			base = 1
+			modifier = { factor = 25 has_global_flag = GER_NATIONALIST_FOCUS_PATH }
+			modifier = { factor = 0 GER_ai_not_nationalist_path = yes }
+		}
 	}
 	#
 	focus = {
@@ -19876,7 +20978,7 @@ focus_tree = {
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus GER_our_long_lost_glory"
 			add_war_support = 0.15
-			set_country_flag = is_GERMAN
+			mark_formed_country_formable = yes
 			add_named_threat = {
 				threat = 10
 				name = "Germany Proclaims The 'Reich'"
@@ -19886,7 +20988,11 @@ focus_tree = {
 			country_event = germany.419
 		}
 
-		ai_will_do = { base = 1 }
+		ai_will_do = {
+			base = 1
+			modifier = { factor = 25 has_global_flag = GER_NATIONALIST_FOCUS_PATH }
+			modifier = { factor = 0 GER_ai_not_nationalist_path = yes }
+		}
 	}
 	#### The Old Ways (Kaiser) ####
 	focus = {
@@ -19914,11 +21020,10 @@ focus_tree = {
 		}
 
 		ai_will_do = {
-			base = 0
-			modifier = {
-				factor = 1
-				has_global_flag = GER_MONARCHIST
-			}
+			base = 1
+			modifier = { factor = 25 has_global_flag = GER_MONARCHIST_FOCUS_PATH }
+			modifier = { factor = 0 GER_ai_not_monarchist_path = yes }
+			modifier = { factor = 0 NOT = { GER_ai_phase_recovery_done = yes } }
 		}
 	}
 
@@ -19943,7 +21048,12 @@ focus_tree = {
 			decrease_corruption = yes
 		}
 
-		ai_will_do = { base = 1 }
+		ai_will_do = {
+			base = 1
+			modifier = { factor = 25 has_global_flag = GER_MONARCHIST_FOCUS_PATH }
+			modifier = { factor = 0 GER_ai_not_monarchist_path = yes }
+			modifier = { factor = 0 NOT = { GER_ai_phase_recovery_done = yes } }
+		}
 	}
 
 	focus = {
@@ -19971,7 +21081,12 @@ focus_tree = {
 			change_relative_party_popularity = yes
 		}
 
-		ai_will_do = { base = 1 }
+		ai_will_do = {
+			base = 1
+			modifier = { factor = 25 has_global_flag = GER_MONARCHIST_FOCUS_PATH }
+			modifier = { factor = 0 GER_ai_not_monarchist_path = yes }
+			modifier = { factor = 0 NOT = { GER_ai_phase_recovery_done = yes } }
+		}
 	}
 
 	focus = {
@@ -20001,7 +21116,12 @@ focus_tree = {
 			add_to_variable = { GER_centralization_cost = -0.03 tooltip = bureaucracy_cost_multiplier_modifier_tt }
 		}
 
-		ai_will_do = { base = 1 }
+		ai_will_do = {
+			base = 1
+			modifier = { factor = 25 has_global_flag = GER_MONARCHIST_FOCUS_PATH }
+			modifier = { factor = 0 GER_ai_not_monarchist_path = yes }
+			modifier = { factor = 0 NOT = { GER_ai_phase_recovery_done = yes } }
+		}
 	}
 
 	focus = {
@@ -20039,7 +21159,12 @@ focus_tree = {
 			}
 		}
 
-		ai_will_do = { base = 1 }
+		ai_will_do = {
+			base = 1
+			modifier = { factor = 25 has_global_flag = GER_MONARCHIST_FOCUS_PATH }
+			modifier = { factor = 0 GER_ai_not_monarchist_path = yes }
+			modifier = { factor = 0 NOT = { GER_ai_phase_recovery_done = yes } }
+		}
 	}
 
 	focus = {
@@ -20073,7 +21198,12 @@ focus_tree = {
 			}
 		}
 
-		ai_will_do = { base = 1 }
+		ai_will_do = {
+			base = 1
+			modifier = { factor = 25 has_global_flag = GER_MONARCHIST_FOCUS_PATH }
+			modifier = { factor = 0 GER_ai_not_monarchist_path = yes }
+			modifier = { factor = 0 NOT = { GER_ai_phase_recovery_done = yes } }
+		}
 	}
 
 	focus = {
@@ -20107,6 +21237,13 @@ focus_tree = {
 				factor = 0
 				can_staff_an_arms_industry = no
 			}
+			modifier = {
+				factor = 2
+				ai_is_threatened = yes
+			}
+			modifier = { factor = 25 has_global_flag = GER_MONARCHIST_FOCUS_PATH }
+			modifier = { factor = 0 GER_ai_not_monarchist_path = yes }
+			modifier = { factor = 0 NOT = { GER_ai_phase_recovery_done = yes } }
 		}
 	}
 
@@ -20141,7 +21278,12 @@ focus_tree = {
 			}
 		}
 
-		ai_will_do = { base = 1 }
+		ai_will_do = {
+			base = 1
+			modifier = { factor = 25 has_global_flag = GER_MONARCHIST_FOCUS_PATH }
+			modifier = { factor = 0 GER_ai_not_monarchist_path = yes }
+			modifier = { factor = 0 NOT = { GER_ai_phase_recovery_done = yes } }
+		}
 	}
 
 	focus = {
@@ -20223,7 +21365,12 @@ focus_tree = {
 			}
 		}
 
-		ai_will_do = { base = 1 }
+		ai_will_do = {
+			base = 1
+			modifier = { factor = 25 has_global_flag = GER_MONARCHIST_FOCUS_PATH }
+			modifier = { factor = 0 GER_ai_not_monarchist_path = yes }
+			modifier = { factor = 0 NOT = { GER_ai_phase_recovery_done = yes } }
+		}
 	}
 
 	focus = {
@@ -20247,7 +21394,12 @@ focus_tree = {
 			add_ideas = GER_idea_extended_work_hours
 		}
 
-		ai_will_do = { base = 1 }
+		ai_will_do = {
+			base = 1
+			modifier = { factor = 25 has_global_flag = GER_MONARCHIST_FOCUS_PATH }
+			modifier = { factor = 0 GER_ai_not_monarchist_path = yes }
+			modifier = { factor = 0 NOT = { GER_ai_phase_recovery_done = yes } }
+		}
 	}
 
 	focus = {
@@ -20288,7 +21440,12 @@ focus_tree = {
 			}
 		}
 
-		ai_will_do = { base = 1 }
+		ai_will_do = {
+			base = 1
+			modifier = { factor = 25 has_global_flag = GER_MONARCHIST_FOCUS_PATH }
+			modifier = { factor = 0 GER_ai_not_monarchist_path = yes }
+			modifier = { factor = 0 NOT = { GER_ai_phase_recovery_done = yes } }
+		}
 	}
 
 	focus = {
@@ -20315,7 +21472,12 @@ focus_tree = {
 			}
 		}
 
-		ai_will_do = { base = 1 }
+		ai_will_do = {
+			base = 1
+			modifier = { factor = 25 has_global_flag = GER_MONARCHIST_FOCUS_PATH }
+			modifier = { factor = 0 GER_ai_not_monarchist_path = yes }
+			modifier = { factor = 0 NOT = { GER_ai_phase_recovery_done = yes } }
+		}
 	}
 
 	focus = {
@@ -20353,6 +21515,9 @@ focus_tree = {
 				factor = 0
 				can_staff_an_industrial_complex = no
 			}
+			modifier = { factor = 25 has_global_flag = GER_MONARCHIST_FOCUS_PATH }
+			modifier = { factor = 0 GER_ai_not_monarchist_path = yes }
+			modifier = { factor = 0 NOT = { GER_ai_phase_recovery_done = yes } }
 		}
 	}
 
@@ -20379,7 +21544,12 @@ focus_tree = {
 			add_ideas = GER_idea_fuck_versailles
 		}
 
-		ai_will_do = { base = 1 }
+		ai_will_do = {
+			base = 1
+			modifier = { factor = 25 has_global_flag = GER_MONARCHIST_FOCUS_PATH }
+			modifier = { factor = 0 GER_ai_not_monarchist_path = yes }
+			modifier = { factor = 0 NOT = { GER_ai_phase_recovery_done = yes } }
+		}
 	}
 
 	focus = {
@@ -20410,14 +21580,12 @@ focus_tree = {
 				custom_effect_tooltip = TT_IF_THEY_ACCEPT
 				effect_tooltip = {
 					ENG = {
-						set_temp_variable = { treasury_change = gdp_total }
-						multiply_temp_variable = { treasury_change = -0.015 }
+						set_temp_variable = { treasury_change = { value = gdp_total multiply = -0.015 } }
 						modify_treasury_effect = yes
 						set_temp_variable = { treasury_change = -40.00 }
 						modify_treasury_effect = yes
 					}
-					set_temp_variable = { treasury_change = ENG.gdp_total }
-					multiply_temp_variable = { treasury_change = 0.015 }
+					set_temp_variable = { treasury_change = { value = ENG.gdp_total multiply = 0.015 } }
 					modify_treasury_effect = yes
 					set_temp_variable = { treasury_change = 40.00 }
 					modify_treasury_effect = yes
@@ -20432,14 +21600,12 @@ focus_tree = {
 				custom_effect_tooltip = TT_IF_THEY_ACCEPT
 				effect_tooltip = {
 					FRA = {
-						set_temp_variable = { treasury_change = gdp_total }
-						multiply_temp_variable = { treasury_change = -0.015 }
+						set_temp_variable = { treasury_change = { value = gdp_total multiply = -0.015 } }
 						modify_treasury_effect = yes
 						set_temp_variable = { treasury_change = -40.00 }
 						modify_treasury_effect = yes
 					}
-					set_temp_variable = { treasury_change = FRA.gdp_total }
-					multiply_temp_variable = { treasury_change = 0.015 }
+					set_temp_variable = { treasury_change = { value = FRA.gdp_total multiply = 0.015 } }
 					modify_treasury_effect = yes
 					set_temp_variable = { treasury_change = 40.00 }
 					modify_treasury_effect = yes
@@ -20454,14 +21620,12 @@ focus_tree = {
 				custom_effect_tooltip = TT_IF_THEY_ACCEPT
 				effect_tooltip = {
 					USA = {
-						set_temp_variable = { treasury_change = gdp_total }
-						multiply_temp_variable = { treasury_change = -0.015 }
+						set_temp_variable = { treasury_change = { value = gdp_total multiply = -0.015 } }
 						modify_treasury_effect = yes
 						set_temp_variable = { treasury_change = -40.00 }
 						modify_treasury_effect = yes
 					}
-					set_temp_variable = { treasury_change = USA.gdp_total }
-					multiply_temp_variable = { treasury_change = 0.015 }
+					set_temp_variable = { treasury_change = { value = USA.gdp_total multiply = 0.015 } }
 					modify_treasury_effect = yes
 					set_temp_variable = { treasury_change = 40.00 }
 					modify_treasury_effect = yes
@@ -20476,14 +21640,12 @@ focus_tree = {
 				custom_effect_tooltip = TT_IF_THEY_ACCEPT
 				effect_tooltip = {
 					SOV = {
-						set_temp_variable = { treasury_change = gdp_total }
-						multiply_temp_variable = { treasury_change = -0.015 }
+						set_temp_variable = { treasury_change = { value = gdp_total multiply = -0.015 } }
 						modify_treasury_effect = yes
 						set_temp_variable = { treasury_change = -40.00 }
 						modify_treasury_effect = yes
 					}
-					set_temp_variable = { treasury_change = SOV.gdp_total }
-					multiply_temp_variable = { treasury_change = 0.015 }
+					set_temp_variable = { treasury_change = { value = SOV.gdp_total multiply = 0.015 } }
 					modify_treasury_effect = yes
 					set_temp_variable = { treasury_change = 40.00 }
 					modify_treasury_effect = yes
@@ -20494,7 +21656,12 @@ focus_tree = {
 			custom_effect_tooltip = GER_more_likely_to_accept
 		}
 
-		ai_will_do = { base = 1 }
+		ai_will_do = {
+			base = 1
+			modifier = { factor = 25 has_global_flag = GER_MONARCHIST_FOCUS_PATH }
+			modifier = { factor = 0 GER_ai_not_monarchist_path = yes }
+			modifier = { factor = 0 NOT = { GER_ai_phase_recovery_done = yes } }
+		}
 	}
 
 	focus = {
@@ -20548,7 +21715,11 @@ focus_tree = {
 			change_influence_percentage = yes
 		}
 
-		ai_will_do = { base = 1 }
+		ai_will_do = {
+			base = 1
+			modifier = { factor = 25 has_global_flag = GER_MONARCHIST_FOCUS_PATH }
+			modifier = { factor = 0 GER_ai_not_monarchist_path = yes }
+		}
 	}
 
 	focus = {
@@ -20572,7 +21743,11 @@ focus_tree = {
 			add_country_leader_trait = protector_of_german_culture
 		}
 
-		ai_will_do = { base = 1 }
+		ai_will_do = {
+			base = 1
+			modifier = { factor = 25 has_global_flag = GER_MONARCHIST_FOCUS_PATH }
+			modifier = { factor = 0 GER_ai_not_monarchist_path = yes }
+		}
 	}
 
 	focus = {
@@ -20625,7 +21800,7 @@ focus_tree = {
 			hidden_effect = {
 				puppet = SWI
 				SWI = {
-					set_country_flag = is_GERMAN
+					mark_formed_country_formable = yes
 					set_cosmetic_tag = SWI_royal_puppet_german
 					set_temp_variable = { party_index = 23 }
 					set_temp_variable = { party_popularity_increase = 0.45 }
@@ -20646,7 +21821,11 @@ focus_tree = {
 			}
 		}
 
-		ai_will_do = { base = 1 }
+		ai_will_do = {
+			base = 1
+			modifier = { factor = 25 has_global_flag = GER_MONARCHIST_FOCUS_PATH }
+			modifier = { factor = 0 GER_ai_not_monarchist_path = yes }
+		}
 	}
 
 	focus = {
@@ -20705,7 +21884,7 @@ focus_tree = {
 					change_relative_party_popularity = yes
 					hidden_effect = {
 						set_cosmetic_tag = AUS_royal_puppet_german
-						set_country_flag = is_GERMAN
+						mark_formed_country_formable = yes
 						set_temp_variable = { rul_party_temp = 23 }
 						set_temp_variable = { disable_elections = 1 }
 						change_ruling_party_effect = yes
@@ -20720,7 +21899,11 @@ focus_tree = {
 			}
 		}
 
-		ai_will_do = { base = 1 }
+		ai_will_do = {
+			base = 1
+			modifier = { factor = 25 has_global_flag = GER_MONARCHIST_FOCUS_PATH }
+			modifier = { factor = 0 GER_ai_not_monarchist_path = yes }
+		}
 	}
 	#
 	focus = {
@@ -20777,7 +21960,11 @@ focus_tree = {
 			53 = { add_core_of = ROOT }
 		}
 
-		ai_will_do = { base = 1 }
+		ai_will_do = {
+			base = 1
+			modifier = { factor = 25 has_global_flag = GER_MONARCHIST_FOCUS_PATH }
+			modifier = { factor = 0 GER_ai_not_monarchist_path = yes }
+		}
 	}
 	#
 	focus = {
@@ -20832,7 +22019,7 @@ focus_tree = {
 			hidden_effect = {
 				puppet = BEL
 				BEL = {
-					set_country_flag = is_GERMAN
+					mark_formed_country_formable = yes
 					set_cosmetic_tag = BEL_royal_puppet_german
 					set_temp_variable = { party_index = 23 }
 					set_temp_variable = { party_popularity_increase = 0.45 }
@@ -20853,7 +22040,11 @@ focus_tree = {
 			}
 		}
 
-		ai_will_do = { base = 1 }
+		ai_will_do = {
+			base = 1
+			modifier = { factor = 25 has_global_flag = GER_MONARCHIST_FOCUS_PATH }
+			modifier = { factor = 0 GER_ai_not_monarchist_path = yes }
+		}
 	}
 	##
 	focus = {
@@ -20895,7 +22086,11 @@ focus_tree = {
 			change_influence_percentage = yes
 		}
 
-		ai_will_do = { base = 1 }
+		ai_will_do = {
+			base = 1
+			modifier = { factor = 25 has_global_flag = GER_MONARCHIST_FOCUS_PATH }
+			modifier = { factor = 0 GER_ai_not_monarchist_path = yes }
+		}
 	}
 
 	focus = {
@@ -20971,7 +22166,11 @@ focus_tree = {
 			}
 		}
 
-		ai_will_do = { base = 1 }
+		ai_will_do = {
+			base = 1
+			modifier = { factor = 25 has_global_flag = GER_MONARCHIST_FOCUS_PATH }
+			modifier = { factor = 0 GER_ai_not_monarchist_path = yes }
+		}
 	}
 
 	focus = {
@@ -21120,7 +22319,11 @@ focus_tree = {
 			custom_effect_tooltip = GER_more_influence_better
 		}
 
-		ai_will_do = { base = 1 }
+		ai_will_do = {
+			base = 1
+			modifier = { factor = 25 has_global_flag = GER_MONARCHIST_FOCUS_PATH }
+			modifier = { factor = 0 GER_ai_not_monarchist_path = yes }
+		}
 	}
 
 	focus = {
@@ -21196,7 +22399,11 @@ focus_tree = {
 			}
 		}
 
-		ai_will_do = { base = 1 }
+		ai_will_do = {
+			base = 1
+			modifier = { factor = 25 has_global_flag = GER_MONARCHIST_FOCUS_PATH }
+			modifier = { factor = 0 GER_ai_not_monarchist_path = yes }
+		}
 	}
 
 	focus = {
@@ -21244,7 +22451,11 @@ focus_tree = {
 			custom_effect_tooltip = GER_make_imperial_for_invite
 		}
 
-		ai_will_do = { base = 1 }
+		ai_will_do = {
+			base = 1
+			modifier = { factor = 25 has_global_flag = GER_MONARCHIST_FOCUS_PATH }
+			modifier = { factor = 0 GER_ai_not_monarchist_path = yes }
+		}
 	}
 
 	focus = {
@@ -21268,7 +22479,7 @@ focus_tree = {
 
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus GER_restore_the_empire"
-			set_country_flag = is_GERMAN
+			mark_formed_country_formable = yes
 			country_event = germany.218
 			set_temp_variable = { party_index = 23 }
 			set_temp_variable = { party_popularity_increase = 0.10 }
@@ -21276,7 +22487,11 @@ focus_tree = {
 			change_relative_party_popularity = yes
 		}
 
-		ai_will_do = { base = 1 }
+		ai_will_do = {
+			base = 1
+			modifier = { factor = 25 has_global_flag = GER_MONARCHIST_FOCUS_PATH }
+			modifier = { factor = 0 GER_ai_not_monarchist_path = yes }
+		}
 	}
 	#### Nationalism Tree ####
 
@@ -21296,7 +22511,6 @@ focus_tree = {
 
 		available = {
 			western_social_democrats_are_in_power = yes
-			has_country_leader = { name = "Gerhard Schröder" ruling_only = yes }
 		}
 
 		completion_reward = {
@@ -21307,7 +22521,11 @@ focus_tree = {
 			change_labour_unions_opinion = yes
 		}
 
-		ai_will_do = { base = 1 }
+		ai_will_do = {
+			base = 1
+			modifier = { factor = 25 GER_ai_historical_path = yes }
+			modifier = { factor = 0 GER_ai_not_historical_path = yes }
+		}
 	}
 	#
 	focus = {
@@ -21326,7 +22544,6 @@ focus_tree = {
 
 		available = {
 			western_social_democrats_are_in_power = yes
-			has_country_leader = { name = "Gerhard Schröder" ruling_only = yes }
 		}
 
 		completion_reward = {
@@ -21348,6 +22565,8 @@ focus_tree = {
 				factor = 0
 				has_active_mission = bankruptcy_incoming_collapse
 			}
+			modifier = { factor = 25 GER_ai_historical_path = yes }
+			modifier = { factor = 0 GER_ai_not_historical_path = yes }
 		}
 	}
 	#
@@ -21367,7 +22586,6 @@ focus_tree = {
 
 		available = {
 			western_social_democrats_are_in_power = yes
-			has_country_leader = { name = "Gerhard Schröder" ruling_only = yes }
 		}
 
 		completion_reward = {
@@ -21384,7 +22602,11 @@ focus_tree = {
 			custom_effect_tooltip = GER_non_nuclear_path2_TT
 		}
 
-		ai_will_do = { base = 1 }
+		ai_will_do = {
+			base = 1
+			modifier = { factor = 25 GER_ai_historical_path = yes }
+			modifier = { factor = 0 GER_ai_not_historical_path = yes }
+		}
 	}
 	#
 	focus = {
@@ -21406,7 +22628,6 @@ focus_tree = {
 				is_owned_and_controlled_by = GER
 			}
 			western_social_democrats_are_in_power = yes
-			has_country_leader = { name = "Gerhard Schröder" ruling_only = yes }
 		}
 
 		bypass = {
@@ -21439,6 +22660,8 @@ focus_tree = {
 				factor = 0
 				has_active_mission = bankruptcy_incoming_collapse
 			}
+			modifier = { factor = 25 GER_ai_historical_path = yes }
+			modifier = { factor = 0 GER_ai_not_historical_path = yes }
 		}
 	}
 	# # #
@@ -21468,9 +22691,7 @@ focus_tree = {
 		}
 
 		cancel_if_invalid = no
-
 		continue_if_invalid = yes
-
 
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus GER_Form_Daimler_Chrysler_AG"
@@ -21526,9 +22747,7 @@ focus_tree = {
 		}
 
 		cancel_if_invalid = no
-
 		continue_if_invalid = yes
-
 
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus GER_Fujian_Benz_Automotive"
@@ -21608,7 +22827,6 @@ focus_tree = {
 				}
 			}
 			newline = yes
-			add_political_power = -50
 			set_temp_variable = { treasury_change = -40 }
 			modify_treasury_effect = yes
 		}
@@ -21974,6 +23192,11 @@ focus_tree = {
 				factor = 0
 				can_staff_an_arms_industry = no
 			}
+			modifier = {
+				factor = 2
+				ai_is_threatened = yes
+			}
+			modifier = { factor = 15 has_war = yes }
 		}
 	}
 
@@ -22000,7 +23223,10 @@ focus_tree = {
 			custom_effect_tooltip = GER_Flensburger_Fahrzeugbau_I_TT
 		}
 
-		ai_will_do = { base = 1 }
+		ai_will_do = {
+			base = 1
+			modifier = { factor = 15 has_war = yes }
+		}
 	}
 
 	focus = {
@@ -22026,7 +23252,10 @@ focus_tree = {
 			custom_effect_tooltip = GER_Armored_Car_Systems_I_TT
 		}
 
-		ai_will_do = { base = 1 }
+		ai_will_do = {
+			base = 1
+			modifier = { factor = 15 has_war = yes }
+		}
 	}
 
 	focus = {
@@ -22057,7 +23286,10 @@ focus_tree = {
 			}
 		}
 
-		ai_will_do = { base = 1 }
+		ai_will_do = {
+			base = 1
+			modifier = { factor = 15 has_war = yes }
+		}
 	}
 
 	focus = {
@@ -22085,7 +23317,10 @@ focus_tree = {
 			country_event = germany_foci.11
 		}
 
-		ai_will_do = { base = 1 }
+		ai_will_do = {
+			base = 1
+			modifier = { factor = 15 has_war = yes }
+		}
 	}
 
 	focus = {
@@ -22113,7 +23348,10 @@ focus_tree = {
 			country_event = germany_foci.12
 		}
 
-		ai_will_do = { base = 1 }
+		ai_will_do = {
+			base = 1
+			modifier = { factor = 15 has_war = yes }
+		}
 	}
 
 	focus = {
@@ -22140,7 +23378,10 @@ focus_tree = {
 			country_event = germany_foci.13
 		}
 
-		ai_will_do = { base = 1 }
+		ai_will_do = {
+			base = 1
+			modifier = { factor = 15 has_war = yes }
+		}
 	}
 
 	focus = {
@@ -22276,7 +23517,7 @@ focus_tree = {
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus GER_home_Grown_Software"
 			add_tech_bonus = {
-				name = GER_foreign_exchange
+				name = GER_home_Grown_Software
 				bonus = 0.5
 				uses = 2
 				category = CAT_ai
@@ -22425,7 +23666,7 @@ focus_tree = {
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus GER_Nature_reserve"
 			add_tech_bonus = {
-				name = GER_resource_excavation_research
+				name = GER_Nature_reserve
 				bonus = 0.25
 				uses = 2
 				category = CAT_excavation_tech
@@ -22477,7 +23718,7 @@ focus_tree = {
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus GER_Deutsche_Bahn"
 			add_tech_bonus = {
-					name = GER_resource_excavation_research
+					name = GER_Deutsche_Bahn
 					bonus = 0.30
 					uses = 1
 					technology = early_high_speed_rail
@@ -22723,7 +23964,7 @@ focus_tree = {
 			add_to_variable = { GER_civ_construction_speed = 0.03 tooltip = production_speed_industrial_complex_factor_tt }
 			newline = yes
 			add_tech_bonus = {
-				name = GER_resource_excavation_research
+				name = GER_DB_Schenker
 				bonus = 0.15
 				uses = 1
 				category = CAT_infrastructure
@@ -22799,7 +24040,12 @@ focus_tree = {
 			add_war_support = 0.10
 		}
 
-		ai_will_do = { base = 1 }
+		ai_will_do = {
+			base = 1
+			modifier = { factor = 25 GER_ai_irredentist_path = yes }
+			modifier = { factor = 0 GER_ai_not_irredentist_path = yes }
+			modifier = { factor = 0 NOT = { GER_ai_warpath_ready = yes } }
+		}
 	}
 	#
 	focus = {
@@ -22827,7 +24073,12 @@ focus_tree = {
 			add_to_variable = { GER_military_cost = -0.02 tooltip = personnel_cost_multiplier_modifier_tt }
 		}
 
-		ai_will_do = { base = 1 }
+		ai_will_do = {
+			base = 1
+			modifier = { factor = 25 GER_ai_irredentist_path = yes }
+			modifier = { factor = 0 GER_ai_not_irredentist_path = yes }
+			modifier = { factor = 0 NOT = { GER_ai_warpath_ready = yes } }
+		}
 	}
 	#
 	focus = {
@@ -22867,7 +24118,12 @@ focus_tree = {
 			}
 		}
 
-		ai_will_do = { base = 1 }
+		ai_will_do = {
+			base = 1
+			modifier = { factor = 25 GER_ai_irredentist_path = yes }
+			modifier = { factor = 0 GER_ai_not_irredentist_path = yes }
+			modifier = { factor = 0 NOT = { GER_ai_warpath_ready = yes } }
+		}
 	}
 
 	focus = {
@@ -22896,7 +24152,12 @@ focus_tree = {
 			add_ideas = GER_idea_war_machine
 		}
 
-		ai_will_do = { base = 1 }
+		ai_will_do = {
+			base = 1
+			modifier = { factor = 25 GER_ai_irredentist_path = yes }
+			modifier = { factor = 0 GER_ai_not_irredentist_path = yes }
+			modifier = { factor = 0 NOT = { GER_ai_warpath_ready = yes } }
+		}
 	}
 
 	focus = {
@@ -22928,7 +24189,12 @@ focus_tree = {
 			}
 		}
 
-		ai_will_do = { base = 1 }
+		ai_will_do = {
+			base = 1
+			modifier = { factor = 25 GER_ai_irredentist_path = yes }
+			modifier = { factor = 0 GER_ai_not_irredentist_path = yes }
+			modifier = { factor = 0 NOT = { GER_ai_warpath_ready = yes } }
+		}
 	}
 	#
 	focus = {
@@ -22960,7 +24226,12 @@ focus_tree = {
 			}
 		}
 
-		ai_will_do = { base = 1 }
+		ai_will_do = {
+			base = 1
+			modifier = { factor = 25 GER_ai_irredentist_path = yes }
+			modifier = { factor = 0 GER_ai_not_irredentist_path = yes }
+			modifier = { factor = 0 NOT = { GER_ai_warpath_ready = yes } }
+		}
 	}
 	#
 	focus = {
@@ -23003,7 +24274,13 @@ focus_tree = {
 			}
 		}
 
-		ai_will_do = { base = 1 }
+		ai_will_do = {
+			base = 1
+			modifier = { factor = 25 GER_ai_irredentist_path = yes }
+			modifier = { factor = 0 GER_ai_not_irredentist_path = yes }
+			modifier = { factor = 0 NOT = { GER_ai_warpath_ready = yes } }
+			modifier = { factor = 0 TNZ = { NOT = { MD_can_reach_for_invasion = yes } } }
+		}
 	}
 	#
 	focus = {
@@ -23046,7 +24323,13 @@ focus_tree = {
 			}
 		}
 
-		ai_will_do = { base = 1 }
+		ai_will_do = {
+			base = 1
+			modifier = { factor = 25 GER_ai_irredentist_path = yes }
+			modifier = { factor = 0 GER_ai_not_irredentist_path = yes }
+			modifier = { factor = 0 NOT = { GER_ai_warpath_ready = yes } }
+			modifier = { factor = 0 CAM = { NOT = { MD_can_reach_for_invasion = yes } } }
+		}
 	}
 	#
 	focus = {
@@ -23090,7 +24373,13 @@ focus_tree = {
 			}
 		}
 
-		ai_will_do = { base = 1 }
+		ai_will_do = {
+			base = 1
+			modifier = { factor = 25 GER_ai_irredentist_path = yes }
+			modifier = { factor = 0 GER_ai_not_irredentist_path = yes }
+			modifier = { factor = 0 NOT = { GER_ai_warpath_ready = yes } }
+			modifier = { factor = 0 NAM = { NOT = { MD_can_reach_for_invasion = yes } } }
+		}
 	}
 
 	focus = {
@@ -23133,7 +24422,13 @@ focus_tree = {
 			}
 		}
 
-		ai_will_do = { base = 1 }
+		ai_will_do = {
+			base = 1
+			modifier = { factor = 25 GER_ai_irredentist_path = yes }
+			modifier = { factor = 0 GER_ai_not_irredentist_path = yes }
+			modifier = { factor = 0 NOT = { GER_ai_warpath_ready = yes } }
+			modifier = { factor = 0 TOG = { NOT = { MD_can_reach_for_invasion = yes } } }
+		}
 	}
 
 	focus = {
@@ -23176,7 +24471,13 @@ focus_tree = {
 			}
 		}
 
-		ai_will_do = { base = 1 }
+		ai_will_do = {
+			base = 1
+			modifier = { factor = 25 GER_ai_irredentist_path = yes }
+			modifier = { factor = 0 GER_ai_not_irredentist_path = yes }
+			modifier = { factor = 0 NOT = { GER_ai_warpath_ready = yes } }
+			modifier = { factor = 0 DRC = { NOT = { MD_can_reach_for_invasion = yes } } }
+		}
 	}
 	#
 	focus = {
@@ -23219,7 +24520,13 @@ focus_tree = {
 			}
 		}
 
-		ai_will_do = { base = 1 }
+		ai_will_do = {
+			base = 1
+			modifier = { factor = 25 GER_ai_irredentist_path = yes }
+			modifier = { factor = 0 GER_ai_not_irredentist_path = yes }
+			modifier = { factor = 0 NOT = { GER_ai_warpath_ready = yes } }
+			modifier = { factor = 0 PAP = { NOT = { MD_can_reach_for_invasion = yes } } }
+		}
 	}
 	#
 	focus = {
@@ -23262,7 +24569,13 @@ focus_tree = {
 			}
 		}
 
-		ai_will_do = { base = 1 }
+		ai_will_do = {
+			base = 1
+			modifier = { factor = 25 GER_ai_irredentist_path = yes }
+			modifier = { factor = 0 GER_ai_not_irredentist_path = yes }
+			modifier = { factor = 0 NOT = { GER_ai_warpath_ready = yes } }
+			modifier = { factor = 0 MIC = { NOT = { MD_can_reach_for_invasion = yes } } }
+		}
 	}
 	#
 	focus = {
@@ -23314,7 +24627,13 @@ focus_tree = {
 			custom_effect_tooltip = GER_more_warsupport_better
 		}
 
-		ai_will_do = { base = 1 }
+		ai_will_do = {
+			base = 1
+			modifier = { factor = 25 GER_ai_irredentist_path = yes }
+			modifier = { factor = 0 GER_ai_not_irredentist_path = yes }
+			modifier = { factor = 0 NOT = { GER_ai_warpath_ready = yes } }
+			modifier = { factor = 0 USA = { NOT = { MD_can_reach_for_invasion = yes } } }
+		}
 	}
 	#
 	focus = {
@@ -23349,7 +24668,12 @@ focus_tree = {
 			}
 		}
 
-		ai_will_do = { base = 1 }
+		ai_will_do = {
+			base = 1
+			modifier = { factor = 25 GER_ai_irredentist_path = yes }
+			modifier = { factor = 0 GER_ai_not_irredentist_path = yes }
+			modifier = { factor = 0 NOT = { GER_ai_warpath_ready = yes } }
+		}
 	}
 	#
 	focus = {
@@ -23406,7 +24730,13 @@ focus_tree = {
 			}
 		}
 
-		ai_will_do = { base = 1 }
+		ai_will_do = {
+			base = 1
+			modifier = { factor = 25 GER_ai_irredentist_path = yes }
+			modifier = { factor = 0 GER_ai_not_irredentist_path = yes }
+			modifier = { factor = 0 NOT = { GER_ai_warpath_ready = yes } }
+			modifier = { factor = 0 CZE = { NOT = { MD_can_reach_for_invasion = yes } } }
+		}
 	}
 
 	focus = {
@@ -23465,7 +24795,13 @@ focus_tree = {
 			}
 		}
 
-		ai_will_do = { base = 1 }
+		ai_will_do = {
+			base = 1
+			modifier = { factor = 25 GER_ai_irredentist_path = yes }
+			modifier = { factor = 0 GER_ai_not_irredentist_path = yes }
+			modifier = { factor = 0 NOT = { GER_ai_warpath_ready = yes } }
+			modifier = { factor = 0 AUS = { NOT = { MD_can_reach_for_invasion = yes } } }
+		}
 	}
 
 	focus = {
@@ -23522,7 +24858,13 @@ focus_tree = {
 			}
 		}
 
-		ai_will_do = { base = 1 }
+		ai_will_do = {
+			base = 1
+			modifier = { factor = 25 GER_ai_irredentist_path = yes }
+			modifier = { factor = 0 GER_ai_not_irredentist_path = yes }
+			modifier = { factor = 0 NOT = { GER_ai_warpath_ready = yes } }
+			modifier = { factor = 0 BEL = { NOT = { MD_can_reach_for_invasion = yes } } }
+		}
 	}
 
 	focus = {
@@ -23582,7 +24924,13 @@ focus_tree = {
 			}
 		}
 
-		ai_will_do = { base = 1 }
+		ai_will_do = {
+			base = 1
+			modifier = { factor = 25 GER_ai_irredentist_path = yes }
+			modifier = { factor = 0 GER_ai_not_irredentist_path = yes }
+			modifier = { factor = 0 NOT = { GER_ai_warpath_ready = yes } }
+			modifier = { factor = 0 ITA = { NOT = { MD_can_reach_for_invasion = yes } } }
+		}
 	}
 
 	focus = {
@@ -23639,7 +24987,13 @@ focus_tree = {
 			}
 		}
 
-		ai_will_do = { base = 1 }
+		ai_will_do = {
+			base = 1
+			modifier = { factor = 25 GER_ai_irredentist_path = yes }
+			modifier = { factor = 0 GER_ai_not_irredentist_path = yes }
+			modifier = { factor = 0 NOT = { GER_ai_warpath_ready = yes } }
+			modifier = { factor = 0 POL = { NOT = { MD_can_reach_for_invasion = yes } } }
+		}
 	}
 
 	focus = {
@@ -23696,7 +25050,13 @@ focus_tree = {
 			}
 		}
 
-		ai_will_do = { base = 1 }
+		ai_will_do = {
+			base = 1
+			modifier = { factor = 25 GER_ai_irredentist_path = yes }
+			modifier = { factor = 0 GER_ai_not_irredentist_path = yes }
+			modifier = { factor = 0 NOT = { GER_ai_warpath_ready = yes } }
+			modifier = { factor = 0 DEN = { NOT = { MD_can_reach_for_invasion = yes } } }
+		}
 	}
 
 	focus = {
@@ -23760,7 +25120,13 @@ focus_tree = {
 			}
 		}
 
-		ai_will_do = { base = 1 }
+		ai_will_do = {
+			base = 1
+			modifier = { factor = 25 GER_ai_irredentist_path = yes }
+			modifier = { factor = 0 GER_ai_not_irredentist_path = yes }
+			modifier = { factor = 0 NOT = { GER_ai_warpath_ready = yes } }
+			modifier = { factor = 0 FRA = { NOT = { MD_can_reach_for_invasion = yes } } }
+		}
 	}
 
 	focus = {
@@ -23862,7 +25228,13 @@ focus_tree = {
 			custom_effect_tooltip = GER_more_likely_to_accept
 		}
 
-		ai_will_do = { base = 1 }
+		ai_will_do = {
+			base = 1
+			modifier = { factor = 30 GER_ai_irredentist_path = yes }
+			modifier = { factor = 0 GER_ai_not_irredentist_path = yes }
+			modifier = { factor = 0 NOT = { GER_ai_warpath_ready = yes } }
+			modifier = { factor = 0 SOV = { NOT = { MD_can_reach_for_invasion = yes } } }
+		}
 	}
 
 	focus = {
@@ -23920,7 +25292,13 @@ focus_tree = {
 			}
 		}
 
-		ai_will_do = { base = 1 }
+		ai_will_do = {
+			base = 1
+			modifier = { factor = 25 GER_ai_irredentist_path = yes }
+			modifier = { factor = 0 GER_ai_not_irredentist_path = yes }
+			modifier = { factor = 0 NOT = { GER_ai_warpath_ready = yes } }
+			modifier = { factor = 0 UKR = { NOT = { MD_can_reach_for_invasion = yes } } }
+		}
 	}
 
 	focus = {
@@ -23977,7 +25355,13 @@ focus_tree = {
 			}
 		}
 
-		ai_will_do = { base = 1 }
+		ai_will_do = {
+			base = 1
+			modifier = { factor = 25 GER_ai_irredentist_path = yes }
+			modifier = { factor = 0 GER_ai_not_irredentist_path = yes }
+			modifier = { factor = 0 NOT = { GER_ai_warpath_ready = yes } }
+			modifier = { factor = 0 SOV = { NOT = { MD_can_reach_for_invasion = yes } } }
+		}
 	}
 
 	focus = {
@@ -24040,7 +25424,13 @@ focus_tree = {
 			}
 		}
 
-		ai_will_do = { base = 1 }
+		ai_will_do = {
+			base = 1
+			modifier = { factor = 25 GER_ai_irredentist_path = yes }
+			modifier = { factor = 0 GER_ai_not_irredentist_path = yes }
+			modifier = { factor = 0 NOT = { GER_ai_warpath_ready = yes } }
+			modifier = { factor = 0 ENG = { NOT = { MD_can_reach_for_invasion = yes } } }
+		}
 	}
 
 	focus = {
@@ -24146,7 +25536,13 @@ focus_tree = {
 			custom_effect_tooltip = GER_more_likely_to_accept
 		}
 
-		ai_will_do = { base = 1 }
+		ai_will_do = {
+			base = 1
+			modifier = { factor = 25 GER_ai_irredentist_path = yes }
+			modifier = { factor = 0 GER_ai_not_irredentist_path = yes }
+			modifier = { factor = 0 NOT = { GER_ai_warpath_ready = yes } }
+			modifier = { factor = 0 USA = { NOT = { MD_can_reach_for_invasion = yes } } }
+		}
 	}
 
 	focus = {
@@ -24204,7 +25600,13 @@ focus_tree = {
 			}
 		}
 
-		ai_will_do = { base = 1 }
+		ai_will_do = {
+			base = 1
+			modifier = { factor = 30 GER_ai_irredentist_path = yes }
+			modifier = { factor = 0 GER_ai_not_irredentist_path = yes }
+			modifier = { factor = 0 NOT = { GER_ai_warpath_ready = yes } }
+			modifier = { factor = 0 CAN = { NOT = { MD_can_reach_for_invasion = yes } } }
+		}
 	}
 
 	focus = {
@@ -24261,7 +25663,13 @@ focus_tree = {
 			}
 		}
 
-		ai_will_do = { base = 1 }
+		ai_will_do = {
+			base = 1
+			modifier = { factor = 25 GER_ai_irredentist_path = yes }
+			modifier = { factor = 0 GER_ai_not_irredentist_path = yes }
+			modifier = { factor = 0 NOT = { GER_ai_warpath_ready = yes } }
+			modifier = { factor = 0 USA = { NOT = { MD_can_reach_for_invasion = yes } } }
+		}
 	}
 	#
 	focus = {
@@ -24318,7 +25726,13 @@ focus_tree = {
 			}
 		}
 
-		ai_will_do = { base = 1 }
+		ai_will_do = {
+			base = 1
+			modifier = { factor = 25 GER_ai_irredentist_path = yes }
+			modifier = { factor = 0 GER_ai_not_irredentist_path = yes }
+			modifier = { factor = 0 NOT = { GER_ai_warpath_ready = yes } }
+			modifier = { factor = 0 CHI = { NOT = { MD_can_reach_for_invasion = yes } } }
+		}
 	}
 	#
 ##############################

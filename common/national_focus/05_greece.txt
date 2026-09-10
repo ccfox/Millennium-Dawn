@@ -57,9 +57,7 @@ focus_tree = {
 			}
 		}
 
-		ai_will_do = {
-			base = 10
-		}
+		ai_will_do = { base = 10 }
 	}
 
 	focus = {
@@ -98,9 +96,7 @@ focus_tree = {
 			add_to_variable = { GRE_naval_invasion_penalty_navy = -0.10 tooltip = naval_invasion_penalty_tt }
 		}
 
-		ai_will_do = {
-			base = 10
-		}
+		ai_will_do = { base = 10 }
 	}
 
 	focus = {
@@ -137,9 +133,7 @@ focus_tree = {
 			add_to_variable = { GRE_supply_node_range_landforces = 0.05 tooltip = supply_node_range_tt }
 		}
 
-		ai_will_do = {
-			base = 10
-		}
+		ai_will_do = { base = 10 }
 	}
 
 	focus = {
@@ -186,9 +180,7 @@ focus_tree = {
 			}
 		}
 
-		ai_will_do = {
-			base = 10
-		}
+		ai_will_do = { base = 10 }
 	}
 
 	focus = {
@@ -235,9 +227,7 @@ focus_tree = {
 			add_to_variable = { GRE_naval_detection_navy = 0.10 tooltip = naval_detection_tt }
 		}
 
-		ai_will_do = {
-			base = 10
-		}
+		ai_will_do = { base = 10 }
 	}
 
 	focus = {
@@ -276,9 +266,7 @@ focus_tree = {
 			add_to_variable = { GRE_air_cas_efficiency_airforce = 0.15 tooltip = air_cas_efficiency_tt }
 		}
 
-		ai_will_do = {
-			base = 10
-		}
+		ai_will_do = { base = 10 }
 	}
 
 	focus = {
@@ -313,9 +301,7 @@ focus_tree = {
 			add_to_variable = { GRE_air_strategic_bomber_bombing_factor_airforce = 0.10 tooltip = air_strategic_bomber_bombing_factor_tt }
 		}
 
-		ai_will_do = {
-			base = 10
-		}
+		ai_will_do = { base = 10 }
 	}
 
 	focus = {
@@ -347,9 +333,7 @@ focus_tree = {
 			add_to_variable = { GRE_air_defence_factor_airforce = 0.10 tooltip = air_defence_factor_tt }
 		}
 
-		ai_will_do = {
-			base = 10
-		}
+		ai_will_do = { base = 10 }
 	}
 
 	focus = {
@@ -391,9 +375,7 @@ focus_tree = {
 			add_to_variable = { GRE_air_nav_efficiency_navy = 0.10 tooltip = air_nav_efficiency_tt }
 		}
 
-		ai_will_do = {
-			base = 10
-		}
+		ai_will_do = { base = 10 }
 	}
 
 	focus = {
@@ -430,6 +412,7 @@ focus_tree = {
 
 		ai_will_do = {
 			base = 10
+			modifier = { factor = 2 ai_is_threatened = yes }
 		}
 	}
 
@@ -522,6 +505,7 @@ focus_tree = {
 
 		ai_will_do = {
 			base = 10
+			modifier = { factor = 2 ai_is_threatened = yes }
 		}
 	}
 
@@ -594,7 +578,6 @@ focus_tree = {
 						tank_nsb_fire_upgrade = 2
 					}
 					icon = "gfx/interface/technologies/ENG/LAND/M270B2.dds"
-					design_team = mio:ENG_lockheed_martin_manufacturer
 					allow_without_tech = yes
 				}
 			}
@@ -618,6 +601,7 @@ focus_tree = {
 
 		ai_will_do = {
 			base = 10
+			modifier = { factor = 2 ai_is_threatened = yes }
 		}
 	}
 
@@ -653,6 +637,7 @@ focus_tree = {
 
 		ai_will_do = {
 			base = 10
+			modifier = { factor = 2 ai_is_threatened = yes }
 		}
 	}
 
@@ -675,7 +660,7 @@ focus_tree = {
 			add_tech_bonus = {
 				name = GRE_spike_atgm_integration
 				uses = 2
-				ahead_reduction = 5
+				ahead_reduction = 2.5
 				category = CAT_l_at
 				category = CAT_h_at
 			}
@@ -689,6 +674,7 @@ focus_tree = {
 
 		ai_will_do = {
 			base = 10
+			modifier = { factor = 2 ai_is_threatened = yes }
 		}
 	}
 
@@ -716,6 +702,7 @@ focus_tree = {
 
 		ai_will_do = {
 			base = 10
+			modifier = { factor = 2 ai_is_threatened = yes }
 		}
 	}
 
@@ -788,6 +775,7 @@ focus_tree = {
 
 		ai_will_do = {
 			base = 10
+			modifier = { factor = 2 ai_is_threatened = yes }
 			modifier = {
 				factor = 0
 				has_active_mission = bankruptcy_incoming_collapse
@@ -850,9 +838,7 @@ focus_tree = {
 			add_to_variable = { GRE_personnel_cost_multiplier_modifier_landforces = 0.05 tooltip = personnel_cost_multiplier_modifier_tt }
 		}
 
-		ai_will_do = {
-			base = 10
-		}
+		ai_will_do = { base = 10 }
 	}
 
 	focus = {
@@ -879,15 +865,13 @@ focus_tree = {
 			}
 			add_tech_bonus = {
 				name = GRE_infantry_digitisation
-				ahead_reduction = 5
+				ahead_reduction = 2.5
 				uses = 1
 				category = CAT_inf_wep
 			}
 		}
 
-		ai_will_do = {
-			base = 10
-		}
+		ai_will_do = { base = 10 }
 	}
 
 	focus = {
@@ -923,9 +907,7 @@ focus_tree = {
 			unlock_decision_tooltip = GRE_archipelago_air_defense_expansion
 		}
 
-		ai_will_do = {
-			base = 10
-		}
+		ai_will_do = { base = 10 }
 	}
 
 	focus = {
@@ -1000,9 +982,7 @@ focus_tree = {
 			}
 		}
 
-		ai_will_do = {
-			base = 10
-		}
+		ai_will_do = { base = 10 }
 	}
 
 	focus = {
@@ -1062,13 +1042,13 @@ focus_tree = {
 					bonus = 0.50
 				}
 			}
-			set_temp_variable = { treasury_change = gdp_total }
-			multiply_temp_variable = { treasury_change = -0.05 }
+			set_temp_variable = { treasury_change = { value = gdp_total multiply = -0.05 } }
 			modify_treasury_effect = yes
 		}
 
 		ai_will_do = {
 			base = 10
+			modifier = { factor = 2 ai_is_threatened = yes }
 			modifier = {
 				factor = 0
 				has_active_mission = bankruptcy_incoming_collapse
@@ -1100,9 +1080,7 @@ focus_tree = {
 			add_to_variable = { GRE_air_mastery_gain_factor_airforce = 0.10 tooltip = air_mastery_gain_factor_tt }
 		}
 
-		ai_will_do = {
-			base = 10
-		}
+		ai_will_do = { base = 10 }
 	}
 
 	focus = {
@@ -1129,9 +1107,7 @@ focus_tree = {
 			add_to_variable = { GRE_air_ace_generation_chance_factor_airforce = 0.10 tooltip = air_ace_generation_chance_factor_tt }
 		}
 
-		ai_will_do = {
-			base = 10
-		}
+		ai_will_do = { base = 10 }
 	}
 
 	focus = {
@@ -1165,6 +1141,7 @@ focus_tree = {
 
 		ai_will_do = {
 			base = 10
+			modifier = { factor = 2 ai_is_threatened = yes }
 		}
 	}
 
@@ -1201,6 +1178,7 @@ focus_tree = {
 
 		ai_will_do = {
 			base = 10
+			modifier = { factor = 2 ai_is_threatened = yes }
 		}
 	}
 
@@ -1316,13 +1294,13 @@ focus_tree = {
 						amount = 50
 						variant_name = "F-35A"
 					}
-					newline = yes
 				}
 			}
 		}
 
 		ai_will_do = {
 			base = 10
+			modifier = { factor = 2 ai_is_threatened = yes }
 		}
 	}
 
@@ -1366,7 +1344,7 @@ focus_tree = {
 			newline = yes
 			add_tech_bonus = {
 				name = GRE_patriot_air_defense
-				ahead_reduction = 5
+				ahead_reduction = 2.5
 				uses = 2
 				category = CAT_sam
 			}
@@ -1377,6 +1355,7 @@ focus_tree = {
 
 		ai_will_do = {
 			base = 10
+			modifier = { factor = 2 ai_is_threatened = yes }
 			modifier = {
 				factor = 0
 				has_active_mission = bankruptcy_incoming_collapse
@@ -1431,6 +1410,7 @@ focus_tree = {
 
 		ai_will_do = {
 			base = 10
+			modifier = { factor = 2 ai_is_threatened = yes }
 		}
 	}
 
@@ -1477,7 +1457,7 @@ focus_tree = {
 			else = {
 				add_tech_bonus = {
 					name = GRE_grypas_ucav
-					ahead_reduction = 5
+					ahead_reduction = 2.5
 					uses = 2
 					category = CAT_drones
 				}
@@ -1486,6 +1466,7 @@ focus_tree = {
 
 		ai_will_do = {
 			base = 10
+			modifier = { factor = 2 ai_is_threatened = yes }
 		}
 	}
 
@@ -1514,6 +1495,7 @@ focus_tree = {
 
 		ai_will_do = {
 			base = 10
+			modifier = { factor = 2 ai_is_threatened = yes }
 		}
 	}
 
@@ -1544,9 +1526,7 @@ focus_tree = {
 			add_to_variable = { GRE_air_detection_airforce = 0.10 tooltip = air_detection_tt }
 		}
 
-		ai_will_do = {
-			base = 10
-		}
+		ai_will_do = { base = 10 }
 	}
 
 	focus = {
@@ -1600,6 +1580,7 @@ focus_tree = {
 
 		ai_will_do = {
 			base = 10
+			modifier = { factor = 2 ai_is_threatened = yes }
 			modifier = {
 				factor = 0
 				has_active_mission = bankruptcy_incoming_collapse
@@ -1647,9 +1628,7 @@ focus_tree = {
 			update_focus_tree_obsolete_branches = yes
 		}
 
-		ai_will_do = {
-			base = 10
-		}
+		ai_will_do = { base = 10 }
 	}
 
 	focus = {
@@ -1677,9 +1656,7 @@ focus_tree = {
 			add_to_variable = { GRE_navy_submarine_attack_factor_navy = 0.10 tooltip = navy_submarine_attack_factor_tt }
 		}
 
-		ai_will_do = {
-			base = 10
-		}
+		ai_will_do = { base = 10 }
 	}
 
 	focus = {
@@ -1713,6 +1690,7 @@ focus_tree = {
 
 		ai_will_do = {
 			base = 10
+			modifier = { factor = 2 ai_is_threatened = yes }
 		}
 	}
 
@@ -1745,9 +1723,7 @@ focus_tree = {
 			add_to_variable = { GRE_naval_mine_hit_chance_navy = 0.10 tooltip = naval_mine_hit_chance_tt }
 		}
 
-		ai_will_do = {
-			base = 10
-		}
+		ai_will_do = { base = 10 }
 	}
 
 	focus = {
@@ -1777,9 +1753,7 @@ focus_tree = {
 			add_to_variable = { GRE_naval_defense_factor_navy = 0.15 tooltip = naval_defense_factor_tt }
 		}
 
-		ai_will_do = {
-			base = 10
-		}
+		ai_will_do = { base = 10 }
 	}
 
 	focus = {
@@ -1833,9 +1807,7 @@ focus_tree = {
 			update_focus_tree_obsolete_branches = yes
 		}
 
-		ai_will_do = {
-			base = 10
-		}
+		ai_will_do = { base = 10 }
 	}
 
 	focus = {
@@ -1876,9 +1848,7 @@ focus_tree = {
 			add_to_variable = { GRE_naval_enemy_retreat_chance_navy = -0.10 tooltip = naval_enemy_retreat_chance_tt }
 		}
 
-		ai_will_do = {
-			base = 10
-		}
+		ai_will_do = { base = 10 }
 	}
 
 	focus = {
@@ -1919,9 +1889,7 @@ focus_tree = {
 			add_to_variable = { GRE_naval_retreat_chance_after_initial_combat_navy = 0.125 tooltip = naval_retreat_chance_after_initial_combat_tt }
 		}
 
-		ai_will_do = {
-			base = 10
-		}
+		ai_will_do = { base = 10 }
 	}
 
 	focus = {
@@ -1955,9 +1923,7 @@ focus_tree = {
 			add_to_variable = { GRE_naval_damage_factor_navy = 0.10 tooltip = naval_damage_factor_tt }
 		}
 
-		ai_will_do = {
-			base = 10
-		}
+		ai_will_do = { base = 10 }
 	}
 
 	focus = {
@@ -1987,9 +1953,7 @@ focus_tree = {
 			add_to_variable = { GRE_industrial_capacity_dockyard_navy = 0.05 tooltip = industrial_capacity_dockyard_tt }
 		}
 
-		ai_will_do = {
-			base = 10
-		}
+		ai_will_do = { base = 10 }
 	}
 
 	focus = {
@@ -2049,6 +2013,7 @@ focus_tree = {
 
 		ai_will_do = {
 			base = 10
+			modifier = { factor = 2 ai_is_threatened = yes }
 		}
 	}
 
@@ -2091,6 +2056,7 @@ focus_tree = {
 
 		ai_will_do = {
 			base = 10
+			modifier = { factor = 2 ai_is_threatened = yes }
 			modifier = {
 				factor = 0
 				has_active_mission = bankruptcy_incoming_collapse
@@ -2156,6 +2122,7 @@ focus_tree = {
 
 		ai_will_do = {
 			base = 10
+			modifier = { factor = 2 ai_is_threatened = yes }
 			modifier = {
 				factor = 0
 				has_active_mission = bankruptcy_incoming_collapse
@@ -2198,6 +2165,11 @@ focus_tree = {
 
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus GRE_fremm_frigate"
+			if = {
+				limit = { NOT = { has_tech = frigate_hull_3 } }
+				set_technology = { frigate_hull_3 = 1 }
+				newline = yes
+			}
 			create_equipment_variant = {
 				name = "European Multi-Purpose Frigate"
 				type = frigate_hull_3
@@ -2240,6 +2212,7 @@ focus_tree = {
 
 		ai_will_do = {
 			base = 10
+			modifier = { factor = 2 ai_is_threatened = yes }
 		}
 	}
 
@@ -2269,6 +2242,11 @@ focus_tree = {
 
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus GRE_constellation_co_production"
+			if = {
+				limit = { NOT = { has_tech = frigate_hull_5 } }
+				set_technology = { frigate_hull_5 = 1 }
+				newline = yes
+			}
 			create_equipment_variant = {
 				name = "Constellation Class"
 				type = frigate_hull_5
@@ -2299,6 +2277,7 @@ focus_tree = {
 
 		ai_will_do = {
 			base = 10
+			modifier = { factor = 2 ai_is_threatened = yes }
 			modifier = {
 				factor = 0
 				has_active_mission = bankruptcy_incoming_collapse
@@ -2400,6 +2379,7 @@ focus_tree = {
 
 		ai_will_do = {
 			base = 10
+			modifier = { factor = 2 ai_is_threatened = yes }
 		}
 	}
 
@@ -2425,6 +2405,11 @@ focus_tree = {
 				heavy_frigate = 1
 			}
 			newline = yes
+			if = {
+				limit = { NOT = { has_tech = frigate_hull_5 } }
+				set_technology = { frigate_hull_5 = 1 }
+				newline = yes
+			}
 			create_equipment_variant = {
 				name = "Kimon Class"
 				type = frigate_hull_5
@@ -2454,6 +2439,7 @@ focus_tree = {
 
 		ai_will_do = {
 			base = 10
+			modifier = { factor = 2 ai_is_threatened = yes }
 		}
 	}
 
@@ -2483,6 +2469,7 @@ focus_tree = {
 
 		ai_will_do = {
 			base = 10
+			modifier = { factor = 2 ai_is_threatened = yes }
 		}
 	}
 
@@ -2528,6 +2515,7 @@ focus_tree = {
 
 		ai_will_do = {
 			base = 10
+			modifier = { factor = 2 ai_is_threatened = yes }
 		}
 	}
 
@@ -2563,6 +2551,7 @@ focus_tree = {
 
 		ai_will_do = {
 			base = 10
+			modifier = { factor = 2 ai_is_threatened = yes }
 		}
 	}
 
@@ -2739,9 +2728,7 @@ focus_tree = {
 			add_to_variable = { GRE_scientist_research_bonus_factor_di = 0.10 tooltip = scientist_research_bonus_factor_tt }
 		}
 
-		ai_will_do = {
-			base = 10
-		}
+		ai_will_do = { base = 10 }
 	}
 
 	focus = {
@@ -2826,9 +2813,7 @@ focus_tree = {
 			}
 		}
 
-		ai_will_do = {
-			base = 10
-		}
+		ai_will_do = { base = 10 }
 	}
 
 	focus = {
@@ -2874,9 +2859,7 @@ focus_tree = {
 			add_to_variable = { GRE_land_night_attack_landforces = 0.15 tooltip = land_night_attack_tt }
 		}
 
-		ai_will_do = {
-			base = 10
-		}
+		ai_will_do = { base = 10 }
 	}
 
 	focus = {
@@ -3094,8 +3077,7 @@ focus_tree = {
 
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus GRE_greek_bonds"
-			set_temp_variable = { treasury_change = gdp_total }
-			multiply_temp_variable = { treasury_change = 0.15 }
+			set_temp_variable = { treasury_change = { value = gdp_total multiply = 0.15 } }
 			clamp_temp_variable = { var = treasury_change max = 150 }
 			modify_treasury_effect = yes
 			newline = yes
@@ -3172,9 +3154,7 @@ focus_tree = {
 			unlock_decision_tooltip = GRE_lie_about_financial_records_decision
 		}
 
-		ai_will_do = {
-			base = 20
-		}
+		ai_will_do = { base = 20 }
 	}
 
 	focus = {
@@ -3421,8 +3401,7 @@ focus_tree = {
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus GRE_debt_refactoring"
 			# Reduce generic debt by 5%
-			set_temp_variable = { GRE_refactor_amount = debt }
-			multiply_temp_variable = { GRE_refactor_amount = -0.05 }
+			set_temp_variable = { GRE_refactor_amount = { value = debt multiply = -0.05 } }
 			set_temp_variable = { debt_change = GRE_refactor_amount }
 			modify_debt_effect = yes
 			newline = yes
@@ -3433,15 +3412,13 @@ focus_tree = {
 					array = GRE_creditors
 					value = v
 					index = i
-					set_temp_variable = { GRE_reduce = GRE_creditor_debt^i }
-					multiply_temp_variable = { GRE_reduce = 0.05 }
+					set_temp_variable = { GRE_reduce = { value = GRE_creditor_debt^i multiply = 0.05 } }
 					subtract_from_variable = { GRE_creditor_debt^i = GRE_reduce }
 					var:GRE_creditors^i = {
 						subtract_from_variable = { GRE_debt_held_by_us = ROOT.GRE_reduce }
 					}
 				}
-				set_temp_variable = { GRE_total_reduce = GRE_total_creditor_debt }
-				multiply_temp_variable = { GRE_total_reduce = 0.05 }
+				set_temp_variable = { GRE_total_reduce = { value = GRE_total_creditor_debt multiply = 0.05 } }
 				subtract_from_variable = { GRE_total_creditor_debt = GRE_total_reduce }
 			}
 			GRE_calculate_unified_debt = yes
@@ -3801,8 +3778,7 @@ focus_tree = {
 			add_to_variable = { GRE_economy_stability_factor = 0.03 tooltip = stability_factor_tt }
 			newline = yes
 			# Reduce generic debt by 3%
-			set_temp_variable = { debt_change = debt }
-			multiply_temp_variable = { debt_change = -0.03 }
+			set_temp_variable = { debt_change = { value = debt multiply = -0.03 } }
 			modify_debt_effect = yes
 			# Also reduce creditor-held debt by 3%
 			if = {
@@ -3811,15 +3787,13 @@ focus_tree = {
 					array = GRE_creditors
 					value = v
 					index = i
-					set_temp_variable = { GRE_reduce = GRE_creditor_debt^i }
-					multiply_temp_variable = { GRE_reduce = 0.03 }
+					set_temp_variable = { GRE_reduce = { value = GRE_creditor_debt^i multiply = 0.03 } }
 					subtract_from_variable = { GRE_creditor_debt^i = GRE_reduce }
 					var:GRE_creditors^i = {
 						subtract_from_variable = { GRE_debt_held_by_us = ROOT.GRE_reduce }
 					}
 				}
-				set_temp_variable = { GRE_total_reduce = GRE_total_creditor_debt }
-				multiply_temp_variable = { GRE_total_reduce = 0.03 }
+				set_temp_variable = { GRE_total_reduce = { value = GRE_total_creditor_debt multiply = 0.03 } }
 				subtract_from_variable = { GRE_total_creditor_debt = GRE_total_reduce }
 			}
 			GRE_calculate_unified_debt = yes
@@ -4130,9 +4104,7 @@ focus_tree = {
 			}
 		}
 
-		ai_will_do = {
-			base = 10
-		}
+		ai_will_do = { base = 10 }
 	}
 
 	focus = {
@@ -4471,9 +4443,7 @@ focus_tree = {
 			add_to_variable = { GRE_economy_stability_factor = -0.04 tooltip = stability_factor_tt }
 		}
 
-		ai_will_do = {
-			base = 5
-		}
+		ai_will_do = { base = 5 }
 	}
 
 	focus = {
@@ -4499,9 +4469,7 @@ focus_tree = {
 			add_to_variable = { GRE_economy_monthly_population = 0.05 tooltip = monthly_population_tt }
 		}
 
-		ai_will_do = {
-			base = 5
-		}
+		ai_will_do = { base = 5 }
 	}
 
 	focus = {
@@ -4528,9 +4496,7 @@ focus_tree = {
 			custom_effect_tooltip = GRE_diaspora_remittances_event_TT
 		}
 
-		ai_will_do = {
-			base = 5
-		}
+		ai_will_do = { base = 5 }
 	}
 
 	focus = {
@@ -4589,9 +4555,7 @@ focus_tree = {
 			add_to_variable = { GRE_economy_production_speed_infrastructure_factor = 0.05 tooltip = production_speed_infrastructure_factor_tt }
 		}
 
-		ai_will_do = {
-			base = 5
-		}
+		ai_will_do = { base = 5 }
 	}
 
 	focus = {
@@ -4623,9 +4587,7 @@ focus_tree = {
 			custom_effect_tooltip = GRE_recovery_facility_event_TT
 		}
 
-		ai_will_do = {
-			base = 5
-		}
+		ai_will_do = { base = 5 }
 	}
 
 	focus = {
@@ -4654,7 +4616,7 @@ focus_tree = {
 			if = {
 				limit = { all_owned_state = { free_building_slots = { building = infrastructure size < 1 } } }
 				add_tech_bonus = {
-					name = GRE_highway_initiatives
+					name = GRE_infrastructure_cofinancing
 					bonus = 0.35
 					uses = 2
 					category = CAT_infrastructure
@@ -4831,9 +4793,7 @@ focus_tree = {
 			}
 		}
 
-		ai_will_do = {
-			base = 10
-		}
+		ai_will_do = { base = 10 }
 	}
 
 	focus = {
@@ -4959,9 +4919,7 @@ focus_tree = {
 			CHI = { country_event = greece.18 }
 		}
 
-		ai_will_do = {
-			base = 10
-		}
+		ai_will_do = { base = 10 }
 	}
 
 	focus = {
@@ -5172,8 +5130,7 @@ focus_tree = {
 				limit = { country_exists = CHI }
 				custom_effect_tooltip = TT_IF_THEY_ACCEPT
 				effect_tooltip = {
-					set_temp_variable = { treasury_change = gdp_total }
-					multiply_temp_variable = { treasury_change = 0.10 }
+					set_temp_variable = { treasury_change = { value = gdp_total multiply = 0.10 } }
 					clamp_temp_variable = { var = treasury_change max = 100 }
 					modify_treasury_effect = yes
 				}
@@ -5181,8 +5138,7 @@ focus_tree = {
 				CHI = { country_event = { id = greece.46 days = 2 random_hours = 12 } }
 			}
 			else = {
-				set_temp_variable = { treasury_change = gdp_total }
-				multiply_temp_variable = { treasury_change = 0.10 }
+				set_temp_variable = { treasury_change = { value = gdp_total multiply = 0.10 } }
 				clamp_temp_variable = { var = treasury_change max = 100 }
 				modify_treasury_effect = yes
 			}
@@ -5231,9 +5187,7 @@ focus_tree = {
 			}
 		}
 
-		ai_will_do = {
-			base = 5
-		}
+		ai_will_do = { base = 5 }
 	}
 
 	focus = {
@@ -5411,9 +5365,7 @@ focus_tree = {
 			add_to_variable = { GRE_economy_consumer_goods_factor = -0.03 tooltip = consumer_goods_factor_tt }
 		}
 
-		ai_will_do = {
-			base = 10
-		}
+		ai_will_do = { base = 10 }
 	}
 
 	focus = {
@@ -5433,8 +5385,7 @@ focus_tree = {
 
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus GRE_tax_the_shipowners"
-			set_temp_variable = { treasury_change = gdp_total }
-			multiply_temp_variable = { treasury_change = 0.05 }
+			set_temp_variable = { treasury_change = { value = gdp_total multiply = 0.05 } }
 			clamp_temp_variable = { var = treasury_change max = 60 }
 			modify_treasury_effect = yes
 		}
@@ -5564,9 +5515,7 @@ focus_tree = {
 			}
 		}
 
-		ai_will_do = {
-			base = 10
-		}
+		ai_will_do = { base = 10 }
 	}
 
 	focus = {
@@ -5592,9 +5541,7 @@ focus_tree = {
 			increase_economic_growth = yes
 		}
 
-		ai_will_do = {
-			base = 10
-		}
+		ai_will_do = { base = 10 }
 	}
 
 	focus = {
@@ -5614,8 +5561,7 @@ focus_tree = {
 
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus GRE_privatize_banks"
-			set_temp_variable = { treasury_change = gdp_total }
-			multiply_temp_variable = { treasury_change = 0.08 }
+			set_temp_variable = { treasury_change = { value = gdp_total multiply = 0.08 } }
 			clamp_temp_variable = { var = treasury_change max = 80 }
 			modify_treasury_effect = yes
 			newline = yes
@@ -5655,9 +5601,7 @@ focus_tree = {
 			add_to_variable = { GRE_economy_office_park_income_tax_modifier = 0.05 tooltip = office_park_income_tax_modifier_tt }
 		}
 
-		ai_will_do = {
-			base = 10
-		}
+		ai_will_do = { base = 10 }
 	}
 
 	# Political Trees
@@ -5721,9 +5665,7 @@ focus_tree = {
 			add_political_power = 100
 		}
 
-		ai_will_do = {
-			base = 10
-		}
+		ai_will_do = { base = 10 }
 	}
 
 	focus = {
@@ -5773,25 +5715,8 @@ focus_tree = {
 
 		ai_will_do = {
 			base = 1
-			modifier = {
-				factor = 10
-				is_historical_focus_on = yes
-			}
-			modifier = {
-				factor = 80
-				has_global_flag = GRE_HELLENIC_REPUBLIC_PATH
-			}
-			modifier = {
-				factor = 80
-				has_global_flag = GRE_MULTIPOLAR_PATH
-			}
-			modifier = {
-				factor = 0
-				OR = {
-					has_global_flag = GRE_KKE_PATH
-					has_global_flag = GRE_GOLDEN_DAWN_PATH
-				}
-			}
+			modifier = { factor = 25 GRE_ai_republic_path = yes }
+			modifier = { factor = 0 GRE_ai_not_republic_path = yes }
 		}
 	}
 
@@ -5845,25 +5770,8 @@ focus_tree = {
 
 		ai_will_do = {
 			base = 1
-			modifier = {
-				factor = 0
-				is_historical_focus_on = yes
-			}
-			modifier = {
-				factor = 80
-				OR = {
-					has_global_flag = GRE_KKE_PATH
-					has_global_flag = GRE_GOLDEN_DAWN_PATH
-				}
-			}
-			modifier = {
-				factor = 0
-				has_global_flag = GRE_HELLENIC_REPUBLIC_PATH
-			}
-			modifier = {
-				factor = 0
-				has_global_flag = GRE_MULTIPOLAR_PATH
-			}
+			modifier = { factor = 25 GRE_ai_radical_path = yes }
+			modifier = { factor = 0 GRE_ai_not_radical_path = yes }
 		}
 	}
 
@@ -5930,14 +5838,8 @@ focus_tree = {
 
 		ai_will_do = {
 			base = 1
-			modifier = {
-				factor = 80
-				has_global_flag = GRE_KKE_PATH
-			}
-			modifier = {
-				factor = 0
-				has_global_flag = GRE_GOLDEN_DAWN_PATH
-			}
+			modifier = { factor = 25 has_global_flag = GRE_COMMUNIST_FOCUS_PATH }
+			modifier = { factor = 0 GRE_ai_not_communist_path = yes }
 		}
 	}
 
@@ -5968,7 +5870,11 @@ focus_tree = {
 			add_ideas = GRE_wild_unions
 		}
 
-		ai_will_do = { base = 10 }
+		ai_will_do = {
+			base = 10
+			modifier = { factor = 25 has_global_flag = GRE_COMMUNIST_FOCUS_PATH }
+			modifier = { factor = 0 GRE_ai_not_communist_path = yes }
+		}
 	}
 
 	focus = {
@@ -5996,11 +5902,14 @@ focus_tree = {
 			set_temp_variable = { party_popularity_increase = 0.04 }
 			set_temp_variable = { temp_outlook_increase = 0.04 }
 			change_relative_party_popularity = yes
-			add_to_variable = { GRE_communist_drift_effect = 0.02 }
-			custom_effect_tooltip = GRE_increase_drift_TT
+			add_to_variable = { GRE_communist_drift_effect = 0.02 tooltip = communism_drift_tt }
 		}
 
-		ai_will_do = { base = 10 }
+		ai_will_do = {
+			base = 10
+			modifier = { factor = 25 has_global_flag = GRE_COMMUNIST_FOCUS_PATH }
+			modifier = { factor = 0 GRE_ai_not_communist_path = yes }
+		}
 	}
 
 	focus = {
@@ -6063,7 +5972,11 @@ focus_tree = {
 			}
 		}
 
-		ai_will_do = { base = 10 }
+		ai_will_do = {
+			base = 10
+			modifier = { factor = 25 has_global_flag = GRE_COMMUNIST_FOCUS_PATH }
+			modifier = { factor = 0 GRE_ai_not_communist_path = yes }
+		}
 	}
 
 	focus = {
@@ -6089,11 +6002,14 @@ focus_tree = {
 			set_temp_variable = { party_popularity_increase = 0.05 }
 			set_temp_variable = { temp_outlook_increase = 0.05 }
 			change_relative_party_popularity = yes
-			add_to_variable = { GRE_communist_drift_effect = 0.02 }
-			custom_effect_tooltip = GRE_increase_drift_TT
+			add_to_variable = { GRE_communist_drift_effect = 0.02 tooltip = communism_drift_tt }
 		}
 
-		ai_will_do = { base = 10 }
+		ai_will_do = {
+			base = 10
+			modifier = { factor = 25 has_global_flag = GRE_COMMUNIST_FOCUS_PATH }
+			modifier = { factor = 0 GRE_ai_not_communist_path = yes }
+		}
 	}
 
 	focus = {
@@ -6117,8 +6033,7 @@ focus_tree = {
 			log = "[GetDateText]: [Root.GetName]: Focus GRE_communist_propaganda"
 			set_temp_variable = { treasury_change = -0.5 }
 			modify_treasury_effect = yes
-			add_to_variable = { GRE_communist_drift_effect = 0.02 }
-			custom_effect_tooltip = GRE_increase_drift_TT
+			add_to_variable = { GRE_communist_drift_effect = 0.02 tooltip = communism_drift_tt }
 		}
 
 		ai_will_do = {
@@ -6127,6 +6042,8 @@ focus_tree = {
 				factor = 0
 				has_active_mission = bankruptcy_incoming_collapse
 			}
+			modifier = { factor = 25 has_global_flag = GRE_COMMUNIST_FOCUS_PATH }
+			modifier = { factor = 0 GRE_ai_not_communist_path = yes }
 		}
 	}
 
@@ -6150,8 +6067,7 @@ focus_tree = {
 			log = "[GetDateText]: [Root.GetName]: Focus GRE_prepare_government"
 			set_temp_variable = { treasury_change = -0.5 }
 			modify_treasury_effect = yes
-			add_to_variable = { GRE_communist_drift_effect = 0.02 }
-			custom_effect_tooltip = GRE_increase_drift_TT
+			add_to_variable = { GRE_communist_drift_effect = 0.02 tooltip = communism_drift_tt }
 		}
 
 		ai_will_do = {
@@ -6160,6 +6076,8 @@ focus_tree = {
 				factor = 0
 				has_active_mission = bankruptcy_incoming_collapse
 			}
+			modifier = { factor = 25 has_global_flag = GRE_COMMUNIST_FOCUS_PATH }
+			modifier = { factor = 0 GRE_ai_not_communist_path = yes }
 		}
 	}
 
@@ -6187,14 +6105,17 @@ focus_tree = {
 			set_temp_variable = { party_index = 4 }
 			set_temp_variable = { party_popularity_increase = 0.10 }
 			change_relative_party_popularity = yes
-			add_to_variable = { GRE_communist_drift_effect = 0.02 }
-			custom_effect_tooltip = GRE_increase_drift_TT
+			add_to_variable = { GRE_communist_drift_effect = 0.02 tooltip = communism_drift_tt }
 			set_temp_variable = { temp_opinion = 5 }
 			change_labour_unions_opinion = yes
 			change_communist_cadres_opinion = yes
 		}
 
-		ai_will_do = { base = 10 }
+		ai_will_do = {
+			base = 10
+			modifier = { factor = 25 has_global_flag = GRE_COMMUNIST_FOCUS_PATH }
+			modifier = { factor = 0 GRE_ai_not_communist_path = yes }
+		}
 	}
 
 	focus = {
@@ -6212,9 +6133,7 @@ focus_tree = {
 
 		search_filters = { FOCUS_FILTER_POLITICAL }
 
-		available = {
-			communism > 0.35
-		}
+		available = { communism > 0.35 }
 
 		bypass = { emerging_communist_state_are_in_power = yes }
 
@@ -6231,7 +6150,11 @@ focus_tree = {
 			custom_effect_tooltip = GRE_communist_takeover_TT
 		}
 
-		ai_will_do = { base = 10 }
+		ai_will_do = {
+			base = 10
+			modifier = { factor = 25 has_global_flag = GRE_COMMUNIST_FOCUS_PATH }
+			modifier = { factor = 0 GRE_ai_not_communist_path = yes }
+		}
 	}
 
 	focus = {
@@ -6285,7 +6208,11 @@ focus_tree = {
 			country_event = { id = greece.14 days = 4 }
 		}
 
-		ai_will_do = { base = 10 }
+		ai_will_do = {
+			base = 10
+			modifier = { factor = 25 GRE_ai_radical_path = yes }
+			modifier = { factor = 0 GRE_ai_not_radical_path = yes }
+		}
 	}
 
 	focus = {
@@ -6347,6 +6274,8 @@ focus_tree = {
 
 		ai_will_do = {
 			base = 10
+			modifier = { factor = 25 has_global_flag = GRE_COMMUNIST_FOCUS_PATH }
+			modifier = { factor = 0 GRE_ai_not_communist_path = yes }
 		}
 	}
 
@@ -6407,7 +6336,11 @@ focus_tree = {
 			}
 		}
 
-		ai_will_do = { base = 10 }
+		ai_will_do = {
+			base = 10
+			modifier = { factor = 30 has_global_flag = GRE_COMMUNIST_FOCUS_PATH }
+			modifier = { factor = 0 GRE_ai_not_communist_path = yes }
+		}
 	}
 
 	focus = {
@@ -6429,7 +6362,11 @@ focus_tree = {
 			add_stability = 0.05
 		}
 
-		ai_will_do = { base = 10 }
+		ai_will_do = {
+			base = 10
+			modifier = { factor = 30 has_global_flag = GRE_COMMUNIST_FOCUS_PATH }
+			modifier = { factor = 0 GRE_ai_not_communist_path = yes }
+		}
 	}
 
 	focus = {
@@ -6469,12 +6406,14 @@ focus_tree = {
 					add_idea = farmers
 				}
 			}
-			remove_dynamic_modifier = {
-				modifier = GRE_debt_modifier
-			}
+			if = { limit = { has_dynamic_modifier = { modifier = GRE_debt_modifier } } remove_dynamic_modifier = { modifier = GRE_debt_modifier } }
 		}
 
-		ai_will_do = { base = 10 }
+		ai_will_do = {
+			base = 10
+			modifier = { factor = 25 has_global_flag = GRE_COMMUNIST_FOCUS_PATH }
+			modifier = { factor = 0 GRE_ai_not_communist_path = yes }
+		}
 	}
 
 	focus = {
@@ -6510,6 +6449,8 @@ focus_tree = {
 
 		ai_will_do = {
 			base = 10
+			modifier = { factor = 25 has_global_flag = GRE_COMMUNIST_FOCUS_PATH }
+			modifier = { factor = 0 GRE_ai_not_communist_path = yes }
 		}
 	}
 
@@ -6542,6 +6483,8 @@ focus_tree = {
 
 		ai_will_do = {
 			base = 10
+			modifier = { factor = 25 has_global_flag = GRE_COMMUNIST_FOCUS_PATH }
+			modifier = { factor = 0 GRE_ai_not_communist_path = yes }
 		}
 	}
 
@@ -6576,6 +6519,8 @@ focus_tree = {
 
 		ai_will_do = {
 			base = 10
+			modifier = { factor = 30 has_global_flag = GRE_COMMUNIST_FOCUS_PATH }
+			modifier = { factor = 0 GRE_ai_not_communist_path = yes }
 		}
 	}
 
@@ -6601,6 +6546,8 @@ focus_tree = {
 
 		ai_will_do = {
 			base = 10
+			modifier = { factor = 25 has_global_flag = GRE_COMMUNIST_FOCUS_PATH }
+			modifier = { factor = 0 GRE_ai_not_communist_path = yes }
 		}
 	}
 
@@ -6628,6 +6575,8 @@ focus_tree = {
 
 		ai_will_do = {
 			base = 10
+			modifier = { factor = 25 has_global_flag = GRE_COMMUNIST_FOCUS_PATH }
+			modifier = { factor = 0 GRE_ai_not_communist_path = yes }
 		}
 	}
 
@@ -6667,6 +6616,8 @@ focus_tree = {
 
 		ai_will_do = {
 			base = 10
+			modifier = { factor = 25 has_global_flag = GRE_COMMUNIST_FOCUS_PATH }
+			modifier = { factor = 0 GRE_ai_not_communist_path = yes }
 		}
 	}
 
@@ -6692,7 +6643,11 @@ focus_tree = {
 			}
 		}
 
-		ai_will_do = { base = 10 }
+		ai_will_do = {
+			base = 10
+			modifier = { factor = 25 has_global_flag = GRE_COMMUNIST_FOCUS_PATH }
+			modifier = { factor = 0 GRE_ai_not_communist_path = yes }
+		}
 	}
 
 	focus = {
@@ -6722,6 +6677,8 @@ focus_tree = {
 
 		ai_will_do = {
 			base = 10
+			modifier = { factor = 25 has_global_flag = GRE_COMMUNIST_FOCUS_PATH }
+			modifier = { factor = 0 GRE_ai_not_communist_path = yes }
 		}
 	}
 
@@ -6787,6 +6744,8 @@ focus_tree = {
 				factor = 0
 				can_staff_an_industrial_complex = no
 			}
+			modifier = { factor = 25 has_global_flag = GRE_COMMUNIST_FOCUS_PATH }
+			modifier = { factor = 0 GRE_ai_not_communist_path = yes }
 		}
 	}
 
@@ -6825,6 +6784,8 @@ focus_tree = {
 				factor = 0
 				can_staff_an_industrial_complex = no
 			}
+			modifier = { factor = 25 has_global_flag = GRE_COMMUNIST_FOCUS_PATH }
+			modifier = { factor = 0 GRE_ai_not_communist_path = yes }
 		}
 	}
 
@@ -6856,6 +6817,8 @@ focus_tree = {
 				check_variable = { small_medium_business_owners_opinion < 75 }
 				has_idea = small_medium_business_owners
 			}
+			modifier = { factor = 25 has_global_flag = GRE_COMMUNIST_FOCUS_PATH }
+			modifier = { factor = 0 GRE_ai_not_communist_path = yes }
 		}
 	}
 
@@ -6883,6 +6846,8 @@ focus_tree = {
 
 		ai_will_do = {
 			base = 10
+			modifier = { factor = 25 has_global_flag = GRE_COMMUNIST_FOCUS_PATH }
+			modifier = { factor = 0 GRE_ai_not_communist_path = yes }
 		}
 	}
 
@@ -6914,6 +6879,8 @@ focus_tree = {
 				check_variable = { labour_unions_opinion < 75 }
 				has_idea = labour_unions
 			}
+			modifier = { factor = 25 has_global_flag = GRE_COMMUNIST_FOCUS_PATH }
+			modifier = { factor = 0 GRE_ai_not_communist_path = yes }
 		}
 	}
 
@@ -6940,7 +6907,11 @@ focus_tree = {
 			change_labour_unions_opinion = yes
 		}
 
-		ai_will_do = { base = 10 }
+		ai_will_do = {
+			base = 10
+			modifier = { factor = 25 has_global_flag = GRE_COMMUNIST_FOCUS_PATH }
+			modifier = { factor = 0 GRE_ai_not_communist_path = yes }
+		}
 	}
 
 	focus = {
@@ -6962,7 +6933,11 @@ focus_tree = {
 			add_political_power = 150
 		}
 
-		ai_will_do = { base = 10 }
+		ai_will_do = {
+			base = 10
+			modifier = { factor = 25 has_global_flag = GRE_COMMUNIST_FOCUS_PATH }
+			modifier = { factor = 0 GRE_ai_not_communist_path = yes }
+		}
 	}
 
 	focus = {
@@ -6984,7 +6959,11 @@ focus_tree = {
 			add_political_power = 150
 		}
 
-		ai_will_do = { base = 10 }
+		ai_will_do = {
+			base = 10
+			modifier = { factor = 25 has_global_flag = GRE_COMMUNIST_FOCUS_PATH }
+			modifier = { factor = 0 GRE_ai_not_communist_path = yes }
+		}
 	}
 
 	focus = {
@@ -7008,6 +6987,8 @@ focus_tree = {
 
 		ai_will_do = {
 			base = 10
+			modifier = { factor = 25 has_global_flag = GRE_COMMUNIST_FOCUS_PATH }
+			modifier = { factor = 0 GRE_ai_not_communist_path = yes }
 		}
 	}
 
@@ -7032,6 +7013,8 @@ focus_tree = {
 
 		ai_will_do = {
 			base = 10
+			modifier = { factor = 25 has_global_flag = GRE_COMMUNIST_FOCUS_PATH }
+			modifier = { factor = 0 GRE_ai_not_communist_path = yes }
 		}
 	}
 
@@ -7083,6 +7066,8 @@ focus_tree = {
 
 		ai_will_do = {
 			base = 10
+			modifier = { factor = 25 has_global_flag = GRE_COMMUNIST_FOCUS_PATH }
+			modifier = { factor = 0 GRE_ai_not_communist_path = yes }
 		}
 	}
 
@@ -7113,7 +7098,11 @@ focus_tree = {
 			}
 		}
 
-		ai_will_do = { base = 10 }
+		ai_will_do = {
+			base = 10
+			modifier = { factor = 25 has_global_flag = GRE_COMMUNIST_FOCUS_PATH }
+			modifier = { factor = 0 GRE_ai_not_communist_path = yes }
+		}
 	}
 
 	focus = {
@@ -7143,7 +7132,11 @@ focus_tree = {
 			}
 		}
 
-		ai_will_do = { base = 10 }
+		ai_will_do = {
+			base = 10
+			modifier = { factor = 25 has_global_flag = GRE_COMMUNIST_FOCUS_PATH }
+			modifier = { factor = 0 GRE_ai_not_communist_path = yes }
+		}
 	}
 
 	focus = {
@@ -7173,7 +7166,11 @@ focus_tree = {
 			}
 		}
 
-		ai_will_do = { base = 10 }
+		ai_will_do = {
+			base = 10
+			modifier = { factor = 25 has_global_flag = GRE_COMMUNIST_FOCUS_PATH }
+			modifier = { factor = 0 GRE_ai_not_communist_path = yes }
+		}
 	}
 
 	focus = {
@@ -7203,7 +7200,11 @@ focus_tree = {
 			}
 		}
 
-		ai_will_do = { base = 10 }
+		ai_will_do = {
+			base = 10
+			modifier = { factor = 25 has_global_flag = GRE_COMMUNIST_FOCUS_PATH }
+			modifier = { factor = 0 GRE_ai_not_communist_path = yes }
+		}
 	}
 
 	focus = {
@@ -7233,7 +7234,11 @@ focus_tree = {
 			}
 		}
 
-		ai_will_do = { base = 10 }
+		ai_will_do = {
+			base = 10
+			modifier = { factor = 25 has_global_flag = GRE_COMMUNIST_FOCUS_PATH }
+			modifier = { factor = 0 GRE_ai_not_communist_path = yes }
+		}
 	}
 
 	focus = {
@@ -7295,14 +7300,8 @@ focus_tree = {
 
 		ai_will_do = {
 			base = 1
-			modifier = {
-				factor = 80
-				has_global_flag = GRE_GOLDEN_DAWN_PATH
-			}
-			modifier = {
-				factor = 0
-				has_global_flag = GRE_KKE_PATH
-			}
+			modifier = { factor = 25 has_global_flag = GRE_NATIONALIST_FOCUS_PATH }
+			modifier = { factor = 0 GRE_ai_not_nationalist_path = yes }
 		}
 	}
 
@@ -7331,10 +7330,9 @@ focus_tree = {
 			set_temp_variable = { party_popularity_increase = 0.04 }
 			set_temp_variable = { temp_outlook_increase = 0.04 }
 			change_relative_party_popularity = yes
-			add_to_variable = { GRE_nationalist_drift_effect = 0.02 }
+			add_to_variable = { GRE_nationalist_drift_effect = 0.02 tooltip = nationalist_drift_tt }
 			set_temp_variable = { treasury_change = -0.5 }
 			modify_treasury_effect = yes
-			custom_effect_tooltip = GRE_increase_drift_TT
 		}
 
 		ai_will_do = {
@@ -7343,6 +7341,8 @@ focus_tree = {
 				factor = 0
 				has_active_mission = bankruptcy_incoming_collapse
 			}
+			modifier = { factor = 25 has_global_flag = GRE_NATIONALIST_FOCUS_PATH }
+			modifier = { factor = 0 GRE_ai_not_nationalist_path = yes }
 		}
 	}
 
@@ -7377,6 +7377,8 @@ focus_tree = {
 				factor = 0
 				has_active_mission = bankruptcy_incoming_collapse
 			}
+			modifier = { factor = 25 has_global_flag = GRE_NATIONALIST_FOCUS_PATH }
+			modifier = { factor = 0 GRE_ai_not_nationalist_path = yes }
 		}
 	}
 
@@ -7403,7 +7405,11 @@ focus_tree = {
 			add_ideas = GRE_police_influence
 		}
 
-		ai_will_do = { base = 10 }
+		ai_will_do = {
+			base = 10
+			modifier = { factor = 25 has_global_flag = GRE_NATIONALIST_FOCUS_PATH }
+			modifier = { factor = 0 GRE_ai_not_nationalist_path = yes }
+		}
 	}
 
 	focus = {
@@ -7427,11 +7433,14 @@ focus_tree = {
 			set_temp_variable = { temp_outlook_increase = 0.05 }
 			change_relative_party_popularity = yes
 			add_ideas = GRE_legacy
-			add_to_variable = { GRE_nationalist_drift_effect = 0.02 }
-			custom_effect_tooltip = GRE_increase_drift_TT
+			add_to_variable = { GRE_nationalist_drift_effect = 0.02 tooltip = nationalist_drift_tt }
 		}
 
-		ai_will_do = { base = 10 }
+		ai_will_do = {
+			base = 10
+			modifier = { factor = 25 has_global_flag = GRE_NATIONALIST_FOCUS_PATH }
+			modifier = { factor = 0 GRE_ai_not_nationalist_path = yes }
+		}
 	}
 
 	focus = {
@@ -7454,14 +7463,13 @@ focus_tree = {
 
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus GRE_form_golden_dawn_death_legions"
-			add_to_variable = { GRE_nationalist_drift_effect = 0.02 }
+			add_to_variable = { GRE_nationalist_drift_effect = 0.02 tooltip = nationalist_drift_tt }
 			set_temp_variable = { party_index = 21 }
 			set_temp_variable = { party_popularity_increase = 0.03 }
 			set_temp_variable = { temp_outlook_increase = 0.03 }
 			change_relative_party_popularity = yes
 			set_temp_variable = { treasury_change = -0.5 }
 			modify_treasury_effect = yes
-			custom_effect_tooltip = GRE_increase_drift_TT
 		}
 
 		ai_will_do = {
@@ -7470,6 +7478,8 @@ focus_tree = {
 				factor = 0
 				has_active_mission = bankruptcy_incoming_collapse
 			}
+			modifier = { factor = 25 has_global_flag = GRE_NATIONALIST_FOCUS_PATH }
+			modifier = { factor = 0 GRE_ai_not_nationalist_path = yes }
 		}
 	}
 
@@ -7493,14 +7503,13 @@ focus_tree = {
 
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus GRE_glorify_regime_of_colonels"
-			add_to_variable = { GRE_nationalist_drift_effect = 0.02 }
+			add_to_variable = { GRE_nationalist_drift_effect = 0.02 tooltip = nationalist_drift_tt }
 			set_temp_variable = { party_index = 21 }
 			set_temp_variable = { party_popularity_increase = 0.03 }
 			set_temp_variable = { temp_outlook_increase = 0.03 }
 			change_relative_party_popularity = yes
 			set_temp_variable = { treasury_change = -0.5 }
 			modify_treasury_effect = yes
-			custom_effect_tooltip = GRE_increase_drift_TT
 		}
 
 		ai_will_do = {
@@ -7509,6 +7518,8 @@ focus_tree = {
 				factor = 0
 				has_active_mission = bankruptcy_incoming_collapse
 			}
+			modifier = { factor = 25 has_global_flag = GRE_NATIONALIST_FOCUS_PATH }
+			modifier = { factor = 0 GRE_ai_not_nationalist_path = yes }
 		}
 	}
 
@@ -7527,9 +7538,7 @@ focus_tree = {
 
 		search_filters = { FOCUS_FILTER_POLITICAL }
 
-		available = {
-			nationalist > 0.35
-		}
+		available = { nationalist > 0.35 }
 
 		bypass = { nationalist_fascist_are_in_power = yes }
 
@@ -7546,7 +7555,11 @@ focus_tree = {
 			custom_effect_tooltip = GRE_fascist_takeover_TT
 		}
 
-		ai_will_do = { base = 10 }
+		ai_will_do = {
+			base = 10
+			modifier = { factor = 25 has_global_flag = GRE_NATIONALIST_FOCUS_PATH }
+			modifier = { factor = 0 GRE_ai_not_nationalist_path = yes }
+		}
 	}
 
 	focus = {
@@ -7580,6 +7593,8 @@ focus_tree = {
 
 		ai_will_do = {
 			base = 10
+			modifier = { factor = 25 has_global_flag = GRE_NATIONALIST_FOCUS_PATH }
+			modifier = { factor = 0 GRE_ai_not_nationalist_path = yes }
 		}
 	}
 
@@ -7637,7 +7652,11 @@ focus_tree = {
 			}
 		}
 
-		ai_will_do = { base = 10 }
+		ai_will_do = {
+			base = 10
+			modifier = { factor = 25 has_global_flag = GRE_NATIONALIST_FOCUS_PATH }
+			modifier = { factor = 0 GRE_ai_not_nationalist_path = yes }
+		}
 	}
 
 	focus = {
@@ -7668,7 +7687,11 @@ focus_tree = {
 			}
 		}
 
-		ai_will_do = { base = 10 }
+		ai_will_do = {
+			base = 10
+			modifier = { factor = 25 has_global_flag = GRE_NATIONALIST_FOCUS_PATH }
+			modifier = { factor = 0 GRE_ai_not_nationalist_path = yes }
+		}
 	}
 
 	focus = {
@@ -7699,7 +7722,11 @@ focus_tree = {
 			change_relative_party_popularity = yes
 		}
 
-		ai_will_do = { base = 10 }
+		ai_will_do = {
+			base = 10
+			modifier = { factor = 25 has_global_flag = GRE_NATIONALIST_FOCUS_PATH }
+			modifier = { factor = 0 GRE_ai_not_nationalist_path = yes }
+		}
 	}
 
 	focus = {
@@ -7725,6 +7752,8 @@ focus_tree = {
 
 		ai_will_do = {
 			base = 10
+			modifier = { factor = 25 has_global_flag = GRE_NATIONALIST_FOCUS_PATH }
+			modifier = { factor = 0 GRE_ai_not_nationalist_path = yes }
 		}
 	}
 
@@ -7780,6 +7809,8 @@ focus_tree = {
 
 		ai_will_do = {
 			base = 10
+			modifier = { factor = 25 has_global_flag = GRE_NATIONALIST_FOCUS_PATH }
+			modifier = { factor = 0 GRE_ai_not_nationalist_path = yes }
 		}
 	}
 
@@ -7806,7 +7837,11 @@ focus_tree = {
 			europeanism_change = yes
 		}
 
-		ai_will_do = { base = 10 }
+		ai_will_do = {
+			base = 10
+			modifier = { factor = 25 has_global_flag = GRE_NATIONALIST_FOCUS_PATH }
+			modifier = { factor = 0 GRE_ai_not_nationalist_path = yes }
+		}
 	}
 
 	focus = {
@@ -7829,7 +7864,11 @@ focus_tree = {
 			add_ideas = GRE_metaxism_idea
 		}
 
-		ai_will_do = { base = 10 }
+		ai_will_do = {
+			base = 10
+			modifier = { factor = 25 has_global_flag = GRE_NATIONALIST_FOCUS_PATH }
+			modifier = { factor = 0 GRE_ai_not_nationalist_path = yes }
+		}
 	}
 
 	focus = {
@@ -7855,7 +7894,11 @@ focus_tree = {
 			europeanism_change = yes
 		}
 
-		ai_will_do = { base = 10 }
+		ai_will_do = {
+			base = 10
+			modifier = { factor = 25 has_global_flag = GRE_NATIONALIST_FOCUS_PATH }
+			modifier = { factor = 0 GRE_ai_not_nationalist_path = yes }
+		}
 	}
 
 	focus = {
@@ -7880,6 +7923,8 @@ focus_tree = {
 
 		ai_will_do = {
 			base = 10
+			modifier = { factor = 25 has_global_flag = GRE_NATIONALIST_FOCUS_PATH }
+			modifier = { factor = 0 GRE_ai_not_nationalist_path = yes }
 		}
 	}
 
@@ -7909,6 +7954,8 @@ focus_tree = {
 
 		ai_will_do = {
 			base = 10
+			modifier = { factor = 25 has_global_flag = GRE_NATIONALIST_FOCUS_PATH }
+			modifier = { factor = 0 GRE_ai_not_nationalist_path = yes }
 		}
 	}
 
@@ -7937,6 +7984,8 @@ focus_tree = {
 
 		ai_will_do = {
 			base = 10
+			modifier = { factor = 25 has_global_flag = GRE_NATIONALIST_FOCUS_PATH }
+			modifier = { factor = 0 GRE_ai_not_nationalist_path = yes }
 		}
 	}
 
@@ -7967,6 +8016,8 @@ focus_tree = {
 
 		ai_will_do = {
 			base = 10
+			modifier = { factor = 25 has_global_flag = GRE_NATIONALIST_FOCUS_PATH }
+			modifier = { factor = 0 GRE_ai_not_nationalist_path = yes }
 		}
 	}
 
@@ -7988,8 +8039,7 @@ focus_tree = {
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus GRE_revise_national_debt"
 			# Reduce generic debt by 10%
-			set_temp_variable = { debt_change = debt }
-			multiply_temp_variable = { debt_change = -0.1 }
+			set_temp_variable = { debt_change = { value = debt multiply = -0.1 } }
 			modify_debt_effect = yes
 			# Also reduce creditor debt by 10%
 			if = {
@@ -7998,15 +8048,13 @@ focus_tree = {
 					array = GRE_creditors
 					value = v
 					index = i
-					set_temp_variable = { GRE_reduce = GRE_creditor_debt^i }
-					multiply_temp_variable = { GRE_reduce = 0.1 }
+					set_temp_variable = { GRE_reduce = { value = GRE_creditor_debt^i multiply = 0.1 } }
 					subtract_from_variable = { GRE_creditor_debt^i = GRE_reduce }
 					var:GRE_creditors^i = {
 						subtract_from_variable = { GRE_debt_held_by_us = ROOT.GRE_reduce }
 					}
 				}
-				set_temp_variable = { GRE_total_reduce = GRE_total_creditor_debt }
-				multiply_temp_variable = { GRE_total_reduce = 0.1 }
+				set_temp_variable = { GRE_total_reduce = { value = GRE_total_creditor_debt multiply = 0.1 } }
 				subtract_from_variable = { GRE_total_creditor_debt = GRE_total_reduce }
 			}
 			GRE_calculate_unified_debt = yes
@@ -8023,6 +8071,8 @@ focus_tree = {
 				factor = 0
 				has_active_mission = bankruptcy_incoming_collapse
 			}
+			modifier = { factor = 25 has_global_flag = GRE_NATIONALIST_FOCUS_PATH }
+			modifier = { factor = 0 GRE_ai_not_nationalist_path = yes }
 		}
 	}
 
@@ -8048,6 +8098,8 @@ focus_tree = {
 
 		ai_will_do = {
 			base = 10
+			modifier = { factor = 25 has_global_flag = GRE_NATIONALIST_FOCUS_PATH }
+			modifier = { factor = 0 GRE_ai_not_nationalist_path = yes }
 		}
 	}
 
@@ -8072,7 +8124,11 @@ focus_tree = {
 			increase_exports = yes
 		}
 
-		ai_will_do = { base = 10 }
+		ai_will_do = {
+			base = 10
+			modifier = { factor = 25 has_global_flag = GRE_NATIONALIST_FOCUS_PATH }
+			modifier = { factor = 0 GRE_ai_not_nationalist_path = yes }
+		}
 	}
 
 	focus = {
@@ -8098,6 +8154,8 @@ focus_tree = {
 
 		ai_will_do = {
 			base = 10
+			modifier = { factor = 25 has_global_flag = GRE_NATIONALIST_FOCUS_PATH }
+			modifier = { factor = 0 GRE_ai_not_nationalist_path = yes }
 		}
 	}
 
@@ -8137,6 +8195,8 @@ focus_tree = {
 
 		ai_will_do = {
 			base = 10
+			modifier = { factor = 25 has_global_flag = GRE_NATIONALIST_FOCUS_PATH }
+			modifier = { factor = 0 GRE_ai_not_nationalist_path = yes }
 		}
 	}
 
@@ -8176,6 +8236,8 @@ focus_tree = {
 
 		ai_will_do = {
 			base = 10
+			modifier = { factor = 25 has_global_flag = GRE_NATIONALIST_FOCUS_PATH }
+			modifier = { factor = 0 GRE_ai_not_nationalist_path = yes }
 		}
 	}
 
@@ -8212,6 +8274,8 @@ focus_tree = {
 
 		ai_will_do = {
 			base = 10
+			modifier = { factor = 25 has_global_flag = GRE_NATIONALIST_FOCUS_PATH }
+			modifier = { factor = 0 GRE_ai_not_nationalist_path = yes }
 		}
 	}
 
@@ -8240,7 +8304,11 @@ focus_tree = {
 			}
 		}
 
-		ai_will_do = { base = 10 }
+		ai_will_do = {
+			base = 10
+			modifier = { factor = 25 has_global_flag = GRE_NATIONALIST_FOCUS_PATH }
+			modifier = { factor = 0 GRE_ai_not_nationalist_path = yes }
+		}
 	}
 
 	focus = {
@@ -8272,7 +8340,11 @@ focus_tree = {
 			}
 		}
 
-		ai_will_do = { base = 10 }
+		ai_will_do = {
+			base = 10
+			modifier = { factor = 25 has_global_flag = GRE_NATIONALIST_FOCUS_PATH }
+			modifier = { factor = 0 GRE_ai_not_nationalist_path = yes }
+		}
 	}
 
 	focus = {
@@ -8304,7 +8376,11 @@ focus_tree = {
 			}
 		}
 
-		ai_will_do = { base = 10 }
+		ai_will_do = {
+			base = 10
+			modifier = { factor = 25 has_global_flag = GRE_NATIONALIST_FOCUS_PATH }
+			modifier = { factor = 0 GRE_ai_not_nationalist_path = yes }
+		}
 	}
 
 	focus = {
@@ -8336,7 +8412,11 @@ focus_tree = {
 			}
 		}
 
-		ai_will_do = { base = 10 }
+		ai_will_do = {
+			base = 10
+			modifier = { factor = 25 has_global_flag = GRE_NATIONALIST_FOCUS_PATH }
+			modifier = { factor = 0 GRE_ai_not_nationalist_path = yes }
+		}
 	}
 
 	focus = {
@@ -8392,6 +8472,8 @@ focus_tree = {
 
 		ai_will_do = {
 			base = 10
+			modifier = { factor = 30 has_global_flag = GRE_NATIONALIST_FOCUS_PATH }
+			modifier = { factor = 0 GRE_ai_not_nationalist_path = yes }
 		}
 	}
 
@@ -8442,7 +8524,11 @@ focus_tree = {
 			update_focus_tree_obsolete_branches = yes
 		}
 
-		ai_will_do = { base = 10 }
+		ai_will_do = {
+			base = 10
+			modifier = { factor = 25 has_global_flag = GRE_NATIONALIST_FOCUS_PATH }
+			modifier = { factor = 0 GRE_ai_not_nationalist_path = yes }
+		}
 	}
 
 	focus = {
@@ -8481,6 +8567,8 @@ focus_tree = {
 
 		ai_will_do = {
 			base = 10
+			modifier = { factor = 25 has_global_flag = GRE_NATIONALIST_FOCUS_PATH }
+			modifier = { factor = 0 GRE_ai_not_nationalist_path = yes }
 		}
 	}
 
@@ -8534,10 +8622,8 @@ focus_tree = {
 
 		ai_will_do = {
 			base = 1
-			modifier = {
-				factor = 0
-				is_historical_focus_on = yes
-			}
+			modifier = { factor = 25 has_global_flag = GRE_MULTIPOLAR_FOCUS_PATH }
+			modifier = { factor = 0 GRE_ai_not_multipolar_path = yes }
 		}
 	}
 
@@ -8589,7 +8675,11 @@ focus_tree = {
 			update_focus_tree_obsolete_branches = yes
 		}
 
-		ai_will_do = { base = 10 }
+		ai_will_do = {
+			base = 10
+			modifier = { factor = 25 GRE_ai_historical_path = yes }
+			modifier = { factor = 0 GRE_ai_not_historical_path = yes }
+		}
 	}
 
 	focus = {
@@ -8633,7 +8723,11 @@ focus_tree = {
 			add_stability = 0.03
 		}
 
-		ai_will_do = { base = 10 }
+		ai_will_do = {
+			base = 10
+			modifier = { factor = 25 GRE_ai_republic_path = yes }
+			modifier = { factor = 0 GRE_ai_not_republic_path = yes }
+		}
 	}
 
 	focus = {
@@ -8689,7 +8783,11 @@ focus_tree = {
 			update_focus_tree_obsolete_branches = yes
 		}
 
-		ai_will_do = { base = 10 }
+		ai_will_do = {
+			base = 10
+			modifier = { factor = 25 GRE_ai_republic_path = yes }
+			modifier = { factor = 0 GRE_ai_not_republic_path = yes }
+		}
 	}
 
 	focus = {
@@ -8758,7 +8856,11 @@ focus_tree = {
 			update_focus_tree_obsolete_branches = yes
 		}
 
-		ai_will_do = { base = 10 }
+		ai_will_do = {
+			base = 10
+			modifier = { factor = 5 GRE_ai_republic_path = yes }
+			modifier = { factor = 0 GRE_ai_not_republic_path = yes }
+		}
 	}
 
 	focus = {
@@ -8784,7 +8886,11 @@ focus_tree = {
 			change_international_bankers_opinion = yes
 		}
 
-		ai_will_do = { base = 10 }
+		ai_will_do = {
+			base = 10
+			modifier = { factor = 25 GRE_ai_republic_path = yes }
+			modifier = { factor = 0 GRE_ai_not_republic_path = yes }
+		}
 	}
 
 	focus = {
@@ -8809,7 +8915,11 @@ focus_tree = {
 			add_stability = -0.05
 		}
 
-		ai_will_do = { base = 10 }
+		ai_will_do = {
+			base = 10
+			modifier = { factor = 25 GRE_ai_republic_path = yes }
+			modifier = { factor = 0 GRE_ai_not_republic_path = yes }
+		}
 	}
 
 	focus = {
@@ -8844,7 +8954,11 @@ focus_tree = {
 			change_relative_party_popularity = yes
 		}
 
-		ai_will_do = { base = 10 }
+		ai_will_do = {
+			base = 10
+			modifier = { factor = 25 GRE_ai_republic_path = yes }
+			modifier = { factor = 0 GRE_ai_not_republic_path = yes }
+		}
 	}
 
 	focus = {
@@ -8869,7 +8983,11 @@ focus_tree = {
 			decrease_corruption = yes
 		}
 
-		ai_will_do = { base = 10 }
+		ai_will_do = {
+			base = 10
+			modifier = { factor = 25 GRE_ai_republic_path = yes }
+			modifier = { factor = 0 GRE_ai_not_republic_path = yes }
+		}
 	}
 
 	focus = {
@@ -8899,6 +9017,8 @@ focus_tree = {
 
 		ai_will_do = {
 			base = 10
+			modifier = { factor = 25 GRE_ai_republic_path = yes }
+			modifier = { factor = 0 GRE_ai_not_republic_path = yes }
 		}
 	}
 
@@ -8924,7 +9044,11 @@ focus_tree = {
 			add_stability = 0.03
 		}
 
-		ai_will_do = { base = 10 }
+		ai_will_do = {
+			base = 10
+			modifier = { factor = 25 GRE_ai_republic_path = yes }
+			modifier = { factor = 0 GRE_ai_not_republic_path = yes }
+		}
 	}
 
 	focus = {
@@ -8952,6 +9076,8 @@ focus_tree = {
 
 		ai_will_do = {
 			base = 10
+			modifier = { factor = 25 GRE_ai_republic_path = yes }
+			modifier = { factor = 0 GRE_ai_not_republic_path = yes }
 		}
 	}
 
@@ -8978,7 +9104,11 @@ focus_tree = {
 			change_expected_education_spending = yes
 		}
 
-		ai_will_do = { base = 10 }
+		ai_will_do = {
+			base = 10
+			modifier = { factor = 5 GRE_ai_republic_path = yes }
+			modifier = { factor = 0 GRE_ai_not_republic_path = yes }
+		}
 	}
 
 	focus = {
@@ -9004,7 +9134,11 @@ focus_tree = {
 			europeanism_change = yes
 		}
 
-		ai_will_do = { base = 10 }
+		ai_will_do = {
+			base = 10
+			modifier = { factor = 5 GRE_ai_republic_path = yes }
+			modifier = { factor = 0 GRE_ai_not_republic_path = yes }
+		}
 	}
 
 	focus = {
@@ -9028,7 +9162,11 @@ focus_tree = {
 			add_political_power = 150
 		}
 
-		ai_will_do = { base = 10 }
+		ai_will_do = {
+			base = 10
+			modifier = { factor = 5 GRE_ai_republic_path = yes }
+			modifier = { factor = 0 GRE_ai_not_republic_path = yes }
+		}
 	}
 
 	focus = {
@@ -9054,6 +9192,8 @@ focus_tree = {
 
 		ai_will_do = {
 			base = 10
+			modifier = { factor = 5 GRE_ai_republic_path = yes }
+			modifier = { factor = 0 GRE_ai_not_republic_path = yes }
 		}
 	}
 
@@ -9084,6 +9224,8 @@ focus_tree = {
 
 		ai_will_do = {
 			base = 10
+			modifier = { factor = 5 GRE_ai_republic_path = yes }
+			modifier = { factor = 0 GRE_ai_not_republic_path = yes }
 		}
 	}
 
@@ -9110,7 +9252,11 @@ focus_tree = {
 			change_labour_unions_opinion = yes
 		}
 
-		ai_will_do = { base = 10 }
+		ai_will_do = {
+			base = 10
+			modifier = { factor = 5 GRE_ai_republic_path = yes }
+			modifier = { factor = 0 GRE_ai_not_republic_path = yes }
+		}
 	}
 
 	focus = {
@@ -9136,7 +9282,11 @@ focus_tree = {
 			change_labour_unions_opinion = yes
 		}
 
-		ai_will_do = { base = 10 }
+		ai_will_do = {
+			base = 10
+			modifier = { factor = 5 GRE_ai_republic_path = yes }
+			modifier = { factor = 0 GRE_ai_not_republic_path = yes }
+		}
 	}
 
 	focus = {
@@ -9174,6 +9324,8 @@ focus_tree = {
 
 		ai_will_do = {
 			base = 10
+			modifier = { factor = 25 GRE_ai_republic_path = yes }
+			modifier = { factor = 0 GRE_ai_not_republic_path = yes }
 		}
 	}
 
@@ -9199,6 +9351,8 @@ focus_tree = {
 
 		ai_will_do = {
 			base = 10
+			modifier = { factor = 25 GRE_ai_republic_path = yes }
+			modifier = { factor = 0 GRE_ai_not_republic_path = yes }
 		}
 	}
 
@@ -9225,6 +9379,8 @@ focus_tree = {
 
 		ai_will_do = {
 			base = 10
+			modifier = { factor = 25 GRE_ai_republic_path = yes }
+			modifier = { factor = 0 GRE_ai_not_republic_path = yes }
 		}
 	}
 
@@ -9251,6 +9407,8 @@ focus_tree = {
 
 		ai_will_do = {
 			base = 10
+			modifier = { factor = 25 GRE_ai_republic_path = yes }
+			modifier = { factor = 0 GRE_ai_not_republic_path = yes }
 		}
 	}
 
@@ -9277,6 +9435,8 @@ focus_tree = {
 
 		ai_will_do = {
 			base = 10
+			modifier = { factor = 25 GRE_ai_republic_path = yes }
+			modifier = { factor = 0 GRE_ai_not_republic_path = yes }
 		}
 	}
 
@@ -9303,6 +9463,8 @@ focus_tree = {
 
 		ai_will_do = {
 			base = 10
+			modifier = { factor = 25 GRE_ai_republic_path = yes }
+			modifier = { factor = 0 GRE_ai_not_republic_path = yes }
 		}
 	}
 
@@ -9340,6 +9502,8 @@ focus_tree = {
 
 		ai_will_do = {
 			base = 10
+			modifier = { factor = 25 GRE_ai_republic_path = yes }
+			modifier = { factor = 0 GRE_ai_not_republic_path = yes }
 		}
 	}
 
@@ -9447,14 +9611,8 @@ focus_tree = {
 
 		ai_will_do = {
 			base = 1
-			modifier = {
-				factor = 80
-				has_global_flag = GRE_MULTIPOLAR_PATH
-			}
-			modifier = {
-				factor = 0
-				has_global_flag = GRE_HELLENIC_REPUBLIC_PATH
-			}
+			modifier = { factor = 25 has_global_flag = GRE_MULTIPOLAR_FOCUS_PATH }
+			modifier = { factor = 0 GRE_ai_not_multipolar_path = yes }
 		}
 	}
 
@@ -9502,7 +9660,11 @@ focus_tree = {
 			}
 		}
 
-		ai_will_do = { base = 10 }
+		ai_will_do = {
+			base = 10
+			modifier = { factor = 25 has_global_flag = GRE_MULTIPOLAR_FOCUS_PATH }
+			modifier = { factor = 0 GRE_ai_not_multipolar_path = yes }
+		}
 	}
 
 	focus = {
@@ -9552,7 +9714,11 @@ focus_tree = {
 			}
 		}
 
-		ai_will_do = { base = 10 }
+		ai_will_do = {
+			base = 10
+			modifier = { factor = 25 has_global_flag = GRE_MULTIPOLAR_FOCUS_PATH }
+			modifier = { factor = 0 GRE_ai_not_multipolar_path = yes }
+		}
 	}
 
 	focus = {
@@ -9602,7 +9768,11 @@ focus_tree = {
 			}
 		}
 
-		ai_will_do = { base = 10 }
+		ai_will_do = {
+			base = 10
+			modifier = { factor = 25 has_global_flag = GRE_MULTIPOLAR_FOCUS_PATH }
+			modifier = { factor = 0 GRE_ai_not_multipolar_path = yes }
+		}
 	}
 
 	focus = {
@@ -9648,7 +9818,11 @@ focus_tree = {
 			}
 		}
 
-		ai_will_do = { base = 10 }
+		ai_will_do = {
+			base = 10
+			modifier = { factor = 25 has_global_flag = GRE_MULTIPOLAR_FOCUS_PATH }
+			modifier = { factor = 0 GRE_ai_not_multipolar_path = yes }
+		}
 	}
 
 	focus = {
@@ -9707,6 +9881,8 @@ focus_tree = {
 
 		ai_will_do = {
 			base = 10
+			modifier = { factor = 25 has_global_flag = GRE_MULTIPOLAR_FOCUS_PATH }
+			modifier = { factor = 0 GRE_ai_not_multipolar_path = yes }
 		}
 	}
 
@@ -9760,7 +9936,11 @@ focus_tree = {
 			}
 		}
 
-		ai_will_do = { base = 10 }
+		ai_will_do = {
+			base = 10
+			modifier = { factor = 25 has_global_flag = GRE_MULTIPOLAR_FOCUS_PATH }
+			modifier = { factor = 0 GRE_ai_not_multipolar_path = yes }
+		}
 	}
 
 	focus = {
@@ -9812,7 +9992,11 @@ focus_tree = {
 			}
 		}
 
-		ai_will_do = { base = 10 }
+		ai_will_do = {
+			base = 10
+			modifier = { factor = 25 has_global_flag = GRE_MULTIPOLAR_FOCUS_PATH }
+			modifier = { factor = 0 GRE_ai_not_multipolar_path = yes }
+		}
 	}
 
 	focus = {
@@ -9867,6 +10051,8 @@ focus_tree = {
 
 		ai_will_do = {
 			base = 10
+			modifier = { factor = 25 has_global_flag = GRE_MULTIPOLAR_FOCUS_PATH }
+			modifier = { factor = 0 GRE_ai_not_multipolar_path = yes }
 		}
 	}
 
@@ -9940,14 +10126,8 @@ focus_tree = {
 
 		ai_will_do = {
 			base = 10
-			modifier = {
-				factor = 8
-				has_global_flag = GRE_MULTIPOLAR_PATH
-			}
-			modifier = {
-				factor = 0
-				has_global_flag = GRE_HELLENIC_REPUBLIC_PATH
-			}
+			modifier = { factor = 25 has_global_flag = GRE_MULTIPOLAR_FOCUS_PATH }
+			modifier = { factor = 0 GRE_ai_not_multipolar_path = yes }
 		}
 	}
 
@@ -9976,7 +10156,11 @@ focus_tree = {
 			add_to_variable = { GRE_eastern_alignment_score = 3 tooltip = GRE_eastern_alignment_score_tt }
 		}
 
-		ai_will_do = { base = 10 }
+		ai_will_do = {
+			base = 10
+			modifier = { factor = 25 has_global_flag = GRE_MULTIPOLAR_FOCUS_PATH }
+			modifier = { factor = 0 GRE_ai_not_multipolar_path = yes }
+		}
 	}
 
 	# Western Alignment Branch — East-Med Hub & EU Anchor
@@ -10015,14 +10199,8 @@ focus_tree = {
 
 		ai_will_do = {
 			base = 10
-			modifier = {
-				factor = 8
-				has_global_flag = GRE_HELLENIC_REPUBLIC_PATH
-			}
-			modifier = {
-				factor = 0
-				has_global_flag = GRE_MULTIPOLAR_PATH
-			}
+			modifier = { factor = 25 GRE_ai_historical_path = yes }
+			modifier = { factor = 0 GRE_ai_not_historical_path = yes }
 		}
 	}
 
@@ -10071,6 +10249,8 @@ focus_tree = {
 
 		ai_will_do = {
 			base = 10
+			modifier = { factor = 25 GRE_ai_historical_path = yes }
+			modifier = { factor = 0 GRE_ai_not_historical_path = yes }
 		}
 	}
 
@@ -10121,6 +10301,8 @@ focus_tree = {
 
 		ai_will_do = {
 			base = 10
+			modifier = { factor = 25 GRE_ai_historical_path = yes }
+			modifier = { factor = 0 GRE_ai_not_historical_path = yes }
 		}
 	}
 
@@ -10167,7 +10349,11 @@ focus_tree = {
 			add_to_variable = { GRE_western_commitment = 1 tooltip = GRE_western_commitment_tt }
 		}
 
-		ai_will_do = { base = 10 }
+		ai_will_do = {
+			base = 10
+			modifier = { factor = 25 GRE_ai_historical_path = yes }
+			modifier = { factor = 0 GRE_ai_not_historical_path = yes }
+		}
 	}
 
 	focus = {
@@ -10201,7 +10387,11 @@ focus_tree = {
 			add_political_power = 50
 		}
 
-		ai_will_do = { base = 10 }
+		ai_will_do = {
+			base = 10
+			modifier = { factor = 25 GRE_ai_historical_path = yes }
+			modifier = { factor = 0 GRE_ai_not_historical_path = yes }
+		}
 	}
 
 	focus = {
@@ -10254,6 +10444,8 @@ focus_tree = {
 
 		ai_will_do = {
 			base = 10
+			modifier = { factor = 25 GRE_ai_historical_path = yes }
+			modifier = { factor = 0 GRE_ai_not_historical_path = yes }
 		}
 	}
 
@@ -10303,6 +10495,8 @@ focus_tree = {
 
 		ai_will_do = {
 			base = 10
+			modifier = { factor = 25 GRE_ai_historical_path = yes }
+			modifier = { factor = 0 GRE_ai_not_historical_path = yes }
 		}
 	}
 
@@ -10339,6 +10533,8 @@ focus_tree = {
 
 		ai_will_do = {
 			base = 10
+			modifier = { factor = 25 GRE_ai_historical_path = yes }
+			modifier = { factor = 0 GRE_ai_not_historical_path = yes }
 		}
 	}
 
@@ -10385,14 +10581,8 @@ focus_tree = {
 
 		ai_will_do = {
 			base = 10
-			modifier = {
-				factor = 8
-				has_global_flag = GRE_HELLENIC_REPUBLIC_PATH
-			}
-			modifier = {
-				factor = 0
-				has_global_flag = GRE_MULTIPOLAR_PATH
-			}
+			modifier = { factor = 25 GRE_ai_historical_path = yes }
+			modifier = { factor = 0 GRE_ai_not_historical_path = yes }
 		}
 	}
 
@@ -10851,6 +11041,8 @@ focus_tree = {
 
 		ai_will_do = {
 			base = 10
+			modifier = { factor = 25 GRE_ai_historical_path = yes }
+			modifier = { factor = 0 GRE_ai_not_historical_path = yes }
 		}
 	}
 
@@ -11081,9 +11273,7 @@ focus_tree = {
 			hidden_effect = { country_event = { id = greece.702 days = 90 } }
 		}
 
-		ai_will_do = {
-			base = 10
-		}
+		ai_will_do = { base = 10 }
 	}
 
 	focus = {
@@ -11110,9 +11300,7 @@ focus_tree = {
 			GRE_change_aegean_tension = yes
 		}
 
-		ai_will_do = {
-			base = 10
-		}
+		ai_will_do = { base = 10 }
 	}
 
 	# Cyprus Unification Track
@@ -11224,9 +11412,7 @@ focus_tree = {
 			}
 		}
 
-		ai_will_do = {
-			base = 10
-		}
+		ai_will_do = { base = 10 }
 	}
 
 	focus = {
@@ -11292,9 +11478,7 @@ focus_tree = {
 			}
 		}
 
-		ai_will_do = {
-			base = 10
-		}
+		ai_will_do = { base = 10 }
 	}
 
 	focus = {
@@ -11365,9 +11549,7 @@ focus_tree = {
 			country_event = { id = greece.720 days = 3 }
 		}
 
-		ai_will_do = {
-			base = 5
-		}
+		ai_will_do = { base = 5 }
 	}
 
 	focus = {
@@ -11430,8 +11612,6 @@ focus_tree = {
 			custom_effect_tooltip = GRE_cyprus_reunification_reject_tt
 		}
 
-		ai_will_do = {
-			base = 10
-		}
+		ai_will_do = { base = 10 }
 	}
 }

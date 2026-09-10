@@ -42,6 +42,61 @@ python3 tools/run.py publish_workshop release --full      # pass args through
 python3 tools/run.py gfx_entry_generator                  # works on any platform
 ```
 
+### Validation timing baselines
+
+Save the Actions data without timing instrumentation:
+
+```bash
+gh run view RUN_ID --attempt ATTEMPT --json databaseId,attempt,headSha,displayTitle,status,conclusion,createdAt,startedAt,updatedAt,jobs > timing-RUN_ID-ATTEMPT.json
+```
+
+Add a `metadata` object to each export. Its required fields are `workload`,
+`runner`, `tool`, `python`, `dependencies`, `cache` (`cold` or `warm`),
+`worker_budget`, and `baseSha`. For example, this is user-supplied metadata,
+not independently verified by the report:
+
+```json
+{
+  "metadata": {
+    "workload": "tools-tests",
+    "runner": "ubuntu-24.04",
+    "tool": "6bf489e",
+    "python": "3.14.0",
+    "dependencies": { "pytest": "9.1.0", "ruff": "0.15.17" },
+    "cache": "cold",
+    "worker_budget": 4,
+    "baseSha": "4bce0fe"
+  }
+}
+```
+
+Run the same workload at least three times for cold-cache and three times for
+warm-cache samples, keeping those fields identical within each set. Missing
+memory or cache-hit counters are unknown, not zero. Fewer than three matching
+samples is not an accepted baseline and does not support a speed claim. Then
+run:
+
+```bash
+python3 tools/run.py validation_timing_report timing-*.json
+```
+
+The report lists each real Actions job and step, overall run span, and summed
+job time. It ignores synthetic Checks API jobs that have no `steps`, excludes
+incomplete or unsuccessful runs from summaries, and keeps revisions, cache
+modes, and job/step outcomes separate. Existing section timers and CI artifact
+logs are the timing mechanism. Do not instrument subprocess elapsed time with
+parent wait timestamps. `databaseId` plus positive integer `attempt` identifies
+an export, so duplicate files are ignored while distinct reruns are retained.
+Run history alone is not a controlled baseline and does not establish a
+performance gain. No workflow scheduling, worker count, checkout scope, or cache
+portability changes are part of this report.
+
+Observed run `34426341721` is illustrative only: head
+`3a6f37f9c5677f0276fc1ff8f57802b294b5362a`, base
+`4bce0fe79f9dd293a40a7200c99c63e5a58bb111`, Linux job 422s, worktree 131s,
+coverage 95s, integration 64s, prepare 119s, core batch 283s, targeted-a 143s,
+and targeted-b 115s. It is not a comparable baseline for this worktree.
+
 ## Directory Structure
 
 ```
@@ -52,14 +107,14 @@ tools/
 ├── linting/           Style checkers, formatters, encoding validators
 ├── publishing/        Steam Workshop publishing
 ├── report_lib/        PR validation report renderer + GitHub Checks API client
+├── shared/            Test harness helpers and repo-anchored paths
 ├── standardization/   Auto-standardizers for focuses, events, decisions, ideas
-├── tests/             Test suites for validators
+├── tests/             All Python tests for tools/ (root scripts plus domain subdirs)
 ├── validation/        Content validators (events, decisions, variables, etc.)
 ├── shared_utils.py    Shared utilities (Colors, FileOpener, path helpers, arg parsers)
 ├── loc.py             Localisation utilities
 ├── logging_tool.py    Logging utility
 ├── precommit_validate.py Pre-commit hook: runs the commit-stage validators in parallel
-├── validate_staged.py Legacy staged-file router (no longer wired into pre-commit)
 ├── standardize_staged.py Pre-commit hook: routes staged files to standardizers
 ├── generate_validation_report.py CI: generates PR validation reports
 ├── validate_tools.py  CI: validates Python scripts in tools/
@@ -80,9 +135,9 @@ tools/
 2. Subclass `BaseValidator` from `validator_common`. Implement `run_validations(self, files: List[str]) -> None`.
 3. Use `self.add_error(category, message, file, line)` for structured issues. The PR report renderer picks these up for inline annotations.
 4. Use `DEFAULT_EXTRA_SKIP_PATTERNS` from `validator_common` for `EXTRA_SKIP_PATTERNS` (extend with domain-specific patterns if needed).
-5. Wire into CI: add an entry to `.github/workflows/coding-pipeline.yml` in the `validate-core` or `validate-targeted` matrix. This is the gate for most validators — they run CI-only.
+5. Wire into CI: add a `ValidatorSpec` for it in `tools/validation/validator_batches.py` (batch, changed-file groups, `--strict`). This is the gate for most validators — they run CI-only.
 6. Decide if it should also run on `git commit`. Heavy cross-reference validators stay CI-only. A fast validator can join the commit-stage set: add it to the `_REGISTRY` in `tools/precommit_validate.py` (with its path rules and `--strict` flag) and pin its selection in `tools/tests/precommit_validate_test.py`. The `config_drift_test` enforces that every validator runs on pre-commit or CI.
-7. Add tests in `tools/validation/tests/`.
+7. Add tests in `tools/tests/validation/`.
 
 ```python
 #!/usr/bin/env python3
@@ -145,18 +200,22 @@ if __name__ == "__main__":
 
 Style checkers, formatters, and encoding validators. These are used in pre-commit hooks and CI.
 
-| Script                                | Description                                                                                                                                                                                                |
-| ------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| **check_common_mistakes.py**          | Detects common scripting mistakes: bad value ranges, `allowed`/`cancel` no-ops, `ai_will_do factor` vs `base`, division instead of multiplication, malformed leader rotations in `*_political_leaders.txt` |
-| **fix_styling.py**                    | Comprehensive auto-fixer for style issues (tabs, spacing, braces, whitespace)                                                                                                                              |
-| **fix_line_endings.py**               | Converts CRLF to LF line endings                                                                                                                                                                           |
-| **fix_loc_yaml.py**                   | Fixes localisation YAML issues (quotes, tabs, colons, version keys)                                                                                                                                        |
-| **validate_localization_encoding.py** | Validates and fixes UTF-8 BOM encoding for localisation files                                                                                                                                              |
-| **validate_mod_encoding.py**          | Checks UTF-8 encoding for `.mod` files                                                                                                                                                                     |
+| Script                                | Description                                                                                                                                                                                                                                                                                            |
+| ------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
+| **check_common_mistakes.py**          | Detects common scripting mistakes: bad value ranges, `allowed`/`cancel` no-ops, `ai_will_do factor` vs `base`, division instead of multiplication, malformed leader rotations in `*_political_leaders.txt`. `--output FILE` also writes the `FILE`-stem `.json` sidecar the CI validation report reads |
+| **fix_styling.py**                    | Comprehensive auto-fixer for style issues (tabs, spacing, braces, whitespace)                                                                                                                                                                                                                          |
+| **fix_line_endings.py**               | Converts CRLF to LF line endings                                                                                                                                                                                                                                                                       |
+| **fix_loc_yaml.py**                   | Fixes localisation YAML issues (quotes, tabs, colons, version keys)                                                                                                                                                                                                                                    |
+| **validate_localization_encoding.py** | Validates and fixes UTF-8 BOM encoding for localisation files                                                                                                                                                                                                                                          |
+| **validate_mod_encoding.py**          | Checks UTF-8 encoding for `.mod` files                                                                                                                                                                                                                                                                 |
 
 ### Validation (`validation/`)
 
-Content validators run in CI via matrix strategy. See `validation/README.md` for full list of all 25 validators and their checks.
+Content validators run in CI via matrix strategy. See `validation/README.md` for the full list and check details.
+
+`validate_common_mistakes.py` owns the fast scripting checks formerly run as a
+separate lint hook. The linting module remains its implementation library and
+direct compatibility entry point.
 
 ### Standardization (`standardization/`)
 
@@ -182,8 +241,11 @@ Metrics, reference analysis, and review tools.
 
 | Script                              | Description                                                                                                                                                     |
 | ----------------------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| **ai_path_report.py**               | Reports one country's AI path rule, flag wiring, focus ownership, killswitch orphans, and the burdens/mechanics the AI must be able to resolve (issue #3162)    |
 | **calculate_days.py**               | Calculates days from January 1st for the HOI4 date system                                                                                                       |
 | **estimate_gdp.py**                 | Estimates starting GDP for country tags using MD's building formulas                                                                                            |
+| **event_load.py**                   | Reports how many events the yearly pulse schedules for one country and when, flagging years where several land in the same window                               |
+| **validation_timing_report.py**     | Summarizes saved GitHub Actions validation job and step timings, grouped by compatible revision and environment                                                 |
 | **find_idea_references.py**         | Finds which ideas from a file are referenced elsewhere in the codebase                                                                                          |
 | **find_scripted_loc_references.py** | Checks whether scripted localisation names are actually referenced                                                                                              |
 | **pre_place_power_plants.py**       | Bakes fossil_powerplant + composite_plant counts into `history/states/` to skip startup loops. Re-run after edits to the energy formula or country/state setup. |
@@ -208,19 +270,19 @@ See the [Workshop Publishing Guide](#workshop-publishing-guide) below for full u
 
 ### Report Library (`report_lib/`)
 
-Internal package used by `generate_validation_report.py` to render PR comments and post GitHub Check Runs. Its only inputs are the JSON sidecars produced by each validator.
+Internal package used by `generate_validation_report.py` to render PR comments and post GitHub Check Runs. Its inputs are the JSON sidecars produced by each validator plus the `suite-run.json` artifacts the tools-tests jobs upload.
 
-| Module            | Responsibility                                                          |
-| ----------------- | ----------------------------------------------------------------------- |
-| **models.py**     | `Issue`, `ValidatorRun`, `ReportContext` dataclasses                    |
-| **loader.py**     | Reads `.json` sidecars; falls back to parsing `.log` text when missing  |
-| **dedupe.py**     | Collapses cross-validator duplicates, preserving first-seen order       |
-| **markdown.py**   | Renders the report Markdown — summary table + issues-by-file + raw logs |
-| **truncation.py** | Drops heavy sections when the body exceeds 60 KB, keeping the summary   |
-| **comment.py**    | Find-by-marker + PATCH/POST logic for the bot-authored PR comment       |
-| **checks_api.py** | One Check Run per validator with up to 50 annotations per run           |
+| Module            | Responsibility                                                                                 |
+| ----------------- | ---------------------------------------------------------------------------------------------- |
+| **models.py**     | `Issue`, `ValidatorRun`, `ReportContext` dataclasses                                           |
+| **loader.py**     | Reads `.json` sidecars and `suite-run.json`; falls back to parsing `.log` text when missing    |
+| **dedupe.py**     | Collapses cross-validator duplicates, preserving first-seen order                              |
+| **markdown.py**   | Renders the report Markdown: verdict banner, Tools/Mod test sections, issues-by-file, raw logs |
+| **truncation.py** | Drops heavy sections when the body exceeds 60 KB, keeping the summary                          |
+| **comment.py**    | Find-by-marker + PATCH/POST logic for the bot-authored PR comment                              |
+| **checks_api.py** | One Check Run per CI job with up to 50 annotations per request                                 |
 
-Tests live in `report_lib/tests/` and run on every PR via the `tools-validation.yml` workflow.
+Tests live in `tests/report_lib/` and run on every PR via the `test-suite.yml` workflow.
 
 ### Tests (`tests/`)
 
@@ -229,7 +291,7 @@ Tests live in `report_lib/tests/` and run on every PR via the `tools-validation.
 | **staged_validators_test.py**      | Tests staged validators using synthetic temporary files          |
 | **staged_validators_real_test.py** | Tests staged validators against real mod files with known issues |
 
-Tests for individual validators live in `validation/tests/`:
+Tests for individual validators live in `tests/validation/`:
 
 | Script                               | Description                                                                                                              |
 | ------------------------------------ | ------------------------------------------------------------------------------------------------------------------------ |
@@ -243,7 +305,6 @@ Hook entry points, CI tools, shared libraries, and other scripts that stay at th
 | Script                            | Description                                                                                                                                                                                                                                                                                                                                        |
 | --------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | **precommit_validate.py**         | Pre-commit hook (`md-validate-content`): runs the commit-stage validators in parallel, sharing one staged-file list                                                                                                                                                                                                                                |
-| **validate_staged.py**            | Legacy staged-file router; no longer wired into pre-commit (superseded by `precommit_validate.py`)                                                                                                                                                                                                                                                 |
 | **standardize_staged.py**         | Pre-commit hook: routes staged files to the correct standardizer                                                                                                                                                                                                                                                                                   |
 | **generate_validation_report.py** | CI: renders the PR validation comment + posts GitHub Check Runs                                                                                                                                                                                                                                                                                    |
 | **validate_tools.py**             | CI: validates Python scripts in the tools directory                                                                                                                                                                                                                                                                                                |

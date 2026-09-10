@@ -62,17 +62,7 @@ focus_tree = {
 			change_communist_cadres_opinion = yes
 		}
 
-		ai_will_do = {
-			base = 5
-			modifier = {
-				factor = 0
-				is_historical_focus_on = yes
-			}
-			modifier = {
-				add = 1.5
-				is_historical_focus_on = no
-			}
-		}
+		ai_will_do = { base = 5 }
 	}
 
 	focus = {
@@ -107,6 +97,10 @@ focus_tree = {
 			modifier = {
 				add = 2
 				is_historical_focus_on = yes
+			}
+			modifier = {
+				factor = 2
+				ai_is_threatened = yes
 			}
 		}
 	}
@@ -144,10 +138,6 @@ focus_tree = {
 					instant_build = yes
 				}
 			}
-			newline = yes
-			custom_effect_tooltip = NKO_spa_unlocked_tt
-			NKO_spa_initialise = yes
-			country_event = NKO_spa.0
 			newline = yes
 			set_temp_variable = { treasury_change = -3.75 }
 			modify_treasury_effect = yes
@@ -376,9 +366,7 @@ focus_tree = {
 				limit = { has_idea = NKO_china_economic_assistant }
 				set_temp_variable = { treasury_change = -7.5 }
 			}
-			else = {
-				set_temp_variable = { treasury_change = -15 }
-			}
+			else = { set_temp_variable = { treasury_change = -15 } }
 			modify_treasury_effect = yes
 		}
 
@@ -423,8 +411,7 @@ focus_tree = {
 			newline = yes
 			country_event = korea.51
 			newline = yes
-			set_temp_variable = { treasury_change = gdp_total }
-			multiply_temp_variable = { treasury_change = -0.05 }
+			set_temp_variable = { treasury_change = { value = gdp_total multiply = -0.05 } }
 			modify_treasury_effect = yes
 		}
 
@@ -661,9 +648,7 @@ focus_tree = {
 				limit = { has_idea = NKO_china_economic_assistant }
 				set_temp_variable = { treasury_change = -1.875 }
 			}
-			else = {
-				set_temp_variable = { treasury_change = -3.75 }
-			}
+			else = { set_temp_variable = { treasury_change = -3.75 } }
 			modify_treasury_effect = yes
 		}
 
@@ -765,9 +750,7 @@ focus_tree = {
 				limit = { has_idea = NKO_china_economic_assistant }
 				set_temp_variable = { treasury_change = -5 }
 			}
-			else = {
-				set_temp_variable = { treasury_change = -10 }
-			}
+			else = { set_temp_variable = { treasury_change = -10 } }
 			modify_treasury_effect = yes
 		}
 
@@ -1265,17 +1248,7 @@ focus_tree = {
 			upgrade_intelligence_agency = upgrade_passive_defense
 		}
 
-		ai_will_do = {
-			base = 5
-			modifier = {
-				factor = 0
-				is_historical_focus_on = yes
-			}
-			modifier = {
-				add = 1.5
-				is_historical_focus_on = no
-			}
-		}
+		ai_will_do = { base = 5 }
 	}
 
 	focus = {
@@ -1721,6 +1694,11 @@ focus_tree = {
 			custom_effect_tooltip = TT_IF_THEY_ACCEPT
 		}
 
+		bypass_effect = {
+			log = "[GetDateText]: [Root.GetName]: Focus NKO_invite_the_russians bypassed"
+			NKO_spa_lift_debuff_foreign = yes
+		}
+
 		ai_will_do = { base = 1 }
 	}
 
@@ -1861,9 +1839,7 @@ focus_tree = {
 				limit = { has_idea = NKO_china_economic_assistant }
 				set_temp_variable = { treasury_change = -3.75 }
 			}
-			else = {
-				set_temp_variable = { treasury_change = -7.5 }
-			}
+			else = { set_temp_variable = { treasury_change = -7.5 } }
 			modify_treasury_effect = yes
 		}
 
@@ -1991,9 +1967,7 @@ focus_tree = {
 				limit = { has_idea = NKO_china_economic_assistant }
 				set_temp_variable = { treasury_change = -6 }
 			}
-			else = {
-				set_temp_variable = { treasury_change = -12 }
-			}
+			else = { set_temp_variable = { treasury_change = -12 } }
 			modify_treasury_effect = yes
 		}
 
@@ -2041,7 +2015,13 @@ focus_tree = {
 			modify_treasury_effect = yes
 		}
 
-		ai_will_do = { base = 1 }
+		ai_will_do = {
+			base = 1
+			modifier = {
+				factor = 0
+				has_active_mission = bankruptcy_incoming_collapse
+			}
+		}
 	}
 
 	focus = {
@@ -2076,7 +2056,13 @@ focus_tree = {
 			modify_treasury_effect = yes
 		}
 
-		ai_will_do = { base = 1 }
+		ai_will_do = {
+			base = 1
+			modifier = {
+				factor = 0
+				has_active_mission = bankruptcy_incoming_collapse
+			}
+		}
 	}
 
 	focus = {
@@ -2110,7 +2096,13 @@ focus_tree = {
 			modify_treasury_effect = yes
 		}
 
-		ai_will_do = { base = 1 }
+		ai_will_do = {
+			base = 1
+			modifier = {
+				factor = 0
+				has_active_mission = bankruptcy_incoming_collapse
+			}
+		}
 	}
 
 	focus = {
@@ -2141,9 +2133,7 @@ focus_tree = {
 				limit = { has_idea = NKO_china_economic_assistant }
 				set_temp_variable = { treasury_change = -8.5 }
 			}
-			else = {
-				set_temp_variable = { treasury_change = -17 }
-			}
+			else = { set_temp_variable = { treasury_change = -17 } }
 			modify_treasury_effect = yes
 		}
 
@@ -2288,9 +2278,7 @@ focus_tree = {
 
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus NKO_50k_housing_project executed"
-			every_owned_state = {
-				add_extra_state_shared_building_slots = 2
-			}
+			every_owned_state = { add_extra_state_shared_building_slots = 2 }
 		}
 
 		ai_will_do = { base = 1 }
@@ -2371,9 +2359,7 @@ focus_tree = {
 					add_idea = NKO_national_recovery_plan3
 				}
 			}
-			else = {
-				add_ideas = NKO_national_recovery_plan3
-			}
+			else = { add_ideas = NKO_national_recovery_plan3 }
 		}
 
 		ai_will_do = { base = 1 }
@@ -2404,9 +2390,7 @@ focus_tree = {
 				limit = { has_idea = NKO_china_economic_assistant }
 				set_temp_variable = { treasury_change = -1.875 }
 			}
-			else = {
-				set_temp_variable = { treasury_change = -3.75 }
-			}
+			else = { set_temp_variable = { treasury_change = -3.75 } }
 			modify_treasury_effect = yes
 		}
 
@@ -2473,9 +2457,7 @@ focus_tree = {
 				limit = { has_idea = NKO_china_economic_assistant }
 				set_temp_variable = { treasury_change = -3.75 }
 			}
-			else = {
-				set_temp_variable = { treasury_change = -7.5 }
-			}
+			else = { set_temp_variable = { treasury_change = -7.5 } }
 			modify_treasury_effect = yes
 		}
 
@@ -2527,9 +2509,7 @@ focus_tree = {
 				limit = { has_idea = NKO_china_economic_assistant }
 				set_temp_variable = { treasury_change = -3 }
 			}
-			else = {
-				set_temp_variable = { treasury_change = -6 }
-			}
+			else = { set_temp_variable = { treasury_change = -6 } }
 			modify_treasury_effect = yes
 		}
 
@@ -2578,9 +2558,7 @@ focus_tree = {
 				limit = { has_idea = NKO_china_economic_assistant }
 				set_temp_variable = { treasury_change = -5 }
 			}
-			else = {
-				set_temp_variable = { treasury_change = -10 }
-			}
+			else = { set_temp_variable = { treasury_change = -10 } }
 			modify_treasury_effect = yes
 		}
 
@@ -2619,7 +2597,13 @@ focus_tree = {
 			modify_treasury_effect = yes
 		}
 
-		ai_will_do = { base = 1 }
+		ai_will_do = {
+			base = 1
+			modifier = {
+				factor = 0
+				has_active_mission = bankruptcy_incoming_collapse
+			}
+		}
 	}
 
 	#ARMY TREE
@@ -2658,6 +2642,10 @@ focus_tree = {
 				add = 0.10
 				date < 2002.1.1
 			}
+			modifier = {
+				factor = 2
+				ai_is_threatened = yes
+			}
 		}
 	}
 
@@ -2683,7 +2671,13 @@ focus_tree = {
 			}
 		}
 
-		ai_will_do = { base = 10 }
+		ai_will_do = {
+			base = 10
+			modifier = {
+				factor = 2
+				ai_is_threatened = yes
+			}
+		}
 	}
 
 
@@ -2710,7 +2704,13 @@ focus_tree = {
 			}
 		}
 
-		ai_will_do = { base = 1 }
+		ai_will_do = {
+			base = 1
+			modifier = {
+				factor = 2
+				ai_is_threatened = yes
+			}
+		}
 	}
 
 	focus = {
@@ -2737,7 +2737,13 @@ focus_tree = {
 			}
 		}
 
-		ai_will_do = { base = 40 }
+		ai_will_do = {
+			base = 40
+			modifier = {
+				factor = 2
+				ai_is_threatened = yes
+			}
+		}
 	}
 
 	focus = {
@@ -2778,6 +2784,10 @@ focus_tree = {
 				factor = 0
 				has_active_mission = bankruptcy_incoming_collapse
 			}
+			modifier = {
+				factor = 2
+				ai_is_threatened = yes
+			}
 		}
 	}
 
@@ -2810,7 +2820,13 @@ focus_tree = {
 			}
 		}
 
-		ai_will_do = { base = 40 }
+		ai_will_do = {
+			base = 40
+			modifier = {
+				factor = 2
+				ai_is_threatened = yes
+			}
+		}
 	}
 
 	focus = {
@@ -2861,6 +2877,10 @@ focus_tree = {
 				factor = 0
 				has_active_mission = bankruptcy_incoming_collapse
 			}
+			modifier = {
+				factor = 2
+				ai_is_threatened = yes
+			}
 		}
 	}
 
@@ -2896,7 +2916,13 @@ focus_tree = {
 			}
 		}
 
-		ai_will_do = { base = 40 }
+		ai_will_do = {
+			base = 40
+			modifier = {
+				factor = 2
+				ai_is_threatened = yes
+			}
+		}
 	}
 
 	focus = {
@@ -2927,6 +2953,10 @@ focus_tree = {
 			modifier = {
 				factor = 0
 				can_staff_an_arms_industry = no
+			}
+			modifier = {
+				factor = 2
+				ai_is_threatened = yes
 			}
 		}
 	}
@@ -2961,7 +2991,13 @@ focus_tree = {
 			}
 		}
 
-		ai_will_do = { base = 40 }
+		ai_will_do = {
+			base = 40
+			modifier = {
+				factor = 2
+				ai_is_threatened = yes
+			}
+		}
 	}
 
 	focus = {
@@ -2992,7 +3028,13 @@ focus_tree = {
 			}
 		}
 
-		ai_will_do = { base = 40 }
+		ai_will_do = {
+			base = 40
+			modifier = {
+				factor = 2
+				ai_is_threatened = yes
+			}
+		}
 	}
 
 	focus = {
@@ -3036,7 +3078,13 @@ focus_tree = {
 			}
 		}
 
-		ai_will_do = { base = 40 }
+		ai_will_do = {
+			base = 40
+			modifier = {
+				factor = 2
+				ai_is_threatened = yes
+			}
+		}
 	}
 
 	focus = {
@@ -3061,7 +3109,13 @@ focus_tree = {
 			}
 		}
 
-		ai_will_do = { base = 40 }
+		ai_will_do = {
+			base = 40
+			modifier = {
+				factor = 2
+				ai_is_threatened = yes
+			}
+		}
 	}
 
 	focus = {
@@ -3090,7 +3144,13 @@ focus_tree = {
 			}
 		}
 
-		ai_will_do = { base = 40 }
+		ai_will_do = {
+			base = 40
+			modifier = {
+				factor = 2
+				ai_is_threatened = yes
+			}
+		}
 	}
 
 	focus = {
@@ -3121,9 +3181,7 @@ focus_tree = {
 				}
 				army_experience = 50
 			}
-			else = {
-				set_grand_doctrine = special_forces_ranger_focus
-			}
+			else = { set_grand_doctrine = special_forces_ranger_focus }
 			custom_effect_tooltip = NKO_specialise_commando_tt
 			every_army_leader = {
 				if = {
@@ -3148,7 +3206,7 @@ focus_tree = {
 		}
 
 		ai_will_do = {
-			base = 0
+			base = 5
 			modifier = {
 				add = 40
 				check_variable = { treasury > 7.99 }
@@ -3157,6 +3215,10 @@ focus_tree = {
 					has_wargoal_against = KOR
 					threat > 0.30
 				}
+			}
+			modifier = {
+				factor = 2
+				ai_is_threatened = yes
 			}
 		}
 	}
@@ -3193,6 +3255,10 @@ focus_tree = {
 				factor = 0
 				has_active_mission = bankruptcy_incoming_collapse
 			}
+			modifier = {
+				factor = 2
+				ai_is_threatened = yes
+			}
 		}
 	}
 
@@ -3213,14 +3279,19 @@ focus_tree = {
 		completion_reward = {
 			log = "[GetDateText]: [This.GetName]: focus NKO_naval_modernization executed"
 			navy_experience = 50
-			set_country_flag = NKO_naval_buildup_consider
-			custom_effect_tooltip = NKO_naval_modernization_unlocks_buildup_tt
+			unlock_decision_category_tooltip = NKO_navy_projects
 			hidden_effect = {
 				country_event = { id = nko_naval_buildup.1 days = 1 }
 			}
 		}
 
-		ai_will_do = { base = 1 }
+		ai_will_do = {
+			base = 1
+			modifier = {
+				factor = 2
+				ai_is_threatened = yes
+			}
+		}
 	}
 
 	focus = {
@@ -3256,6 +3327,10 @@ focus_tree = {
 				factor = 0
 				has_active_mission = bankruptcy_incoming_collapse
 			}
+			modifier = {
+				factor = 2
+				ai_is_threatened = yes
+			}
 		}
 	}
 
@@ -3282,7 +3357,7 @@ focus_tree = {
 				category = CAT_naval_modules
 			}
 			if = {
-				limit = { has_country_flag = NKO_naval_buildup_unlocked }
+				limit = { has_completed_focus = NKO_naval_modernization }
 				add_to_variable = { var = NKO_naval_points value = 3 }
 				add_to_variable = { var = NKO_naval_specops_progress value = 10 }
 				clamp_variable = { var = NKO_naval_specops_progress min = 0 max = 100 }
@@ -3301,6 +3376,10 @@ focus_tree = {
 			modifier = {
 				factor = 0
 				has_active_mission = bankruptcy_incoming_collapse
+			}
+			modifier = {
+				factor = 2
+				ai_is_threatened = yes
 			}
 		}
 	}
@@ -3339,6 +3418,10 @@ focus_tree = {
 				factor = 0
 				has_active_mission = bankruptcy_incoming_collapse
 			}
+			modifier = {
+				factor = 2
+				ai_is_threatened = yes
+			}
 		}
 	}
 
@@ -3370,6 +3453,10 @@ focus_tree = {
 			modifier = {
 				factor = 0
 				can_staff_an_dockyard = no
+			}
+			modifier = {
+				factor = 2
+				ai_is_threatened = yes
 			}
 		}
 	}
@@ -3434,6 +3521,10 @@ focus_tree = {
 				factor = 0
 				can_staff_an_dockyard = no
 			}
+			modifier = {
+				factor = 2
+				ai_is_threatened = yes
+			}
 		}
 	}
 
@@ -3460,7 +3551,13 @@ focus_tree = {
 			}
 		}
 
-		ai_will_do = { base = 1 }
+		ai_will_do = {
+			base = 1
+			modifier = {
+				factor = 2
+				ai_is_threatened = yes
+			}
+		}
 	}
 
 	focus = {
@@ -3499,7 +3596,13 @@ focus_tree = {
 			country_event = { id = nko_naval_buildup.70 days = 1 }
 		}
 
-		ai_will_do = { base = 1 }
+		ai_will_do = {
+			base = 1
+			modifier = {
+				factor = 2
+				ai_is_threatened = yes
+			}
+		}
 	}
 
 	focus = {
@@ -3532,7 +3635,13 @@ focus_tree = {
 			country_event = { id = nko_naval_buildup.71 days = 1 }
 		}
 
-		ai_will_do = { base = 1 }
+		ai_will_do = {
+			base = 1
+			modifier = {
+				factor = 2
+				ai_is_threatened = yes
+			}
+		}
 	}
 
 	focus = {
@@ -3564,7 +3673,13 @@ focus_tree = {
 			country_event = { id = nko_naval_buildup.72 days = 1 }
 		}
 
-		ai_will_do = { base = 1 }
+		ai_will_do = {
+			base = 1
+			modifier = {
+				factor = 2
+				ai_is_threatened = yes
+			}
+		}
 	}
 
 	focus = {
@@ -3597,7 +3712,13 @@ focus_tree = {
 			country_event = { id = nko_naval_buildup.73 days = 1 }
 		}
 
-		ai_will_do = { base = 1 }
+		ai_will_do = {
+			base = 1
+			modifier = {
+				factor = 2
+				ai_is_threatened = yes
+			}
+		}
 	}
 
 	focus = {
@@ -3623,7 +3744,13 @@ focus_tree = {
 			}
 		}
 
-		ai_will_do = { base = 1 }
+		ai_will_do = {
+			base = 1
+			modifier = {
+				factor = 2
+				ai_is_threatened = yes
+			}
+		}
 	}
 
 	focus = {
@@ -3673,13 +3800,17 @@ focus_tree = {
 
 		completion_reward = {
 			log = "[GetDateText]: [This.GetName]: focus NKO_use_russian_model executed"
-			SOV = {
-				country_event = korea_russia.14
-			}
+			SOV = { country_event = korea_russia.14 }
 			custom_effect_tooltip = TT_IF_THEY_ACCEPT
 		}
 
-		ai_will_do = { base = 1 }
+		ai_will_do = {
+			base = 1
+			modifier = {
+				factor = 2
+				ai_is_threatened = yes
+			}
+		}
 	}
 
 	focus = {
@@ -3718,7 +3849,13 @@ focus_tree = {
 			}
 		}
 
-		ai_will_do = { base = 1 }
+		ai_will_do = {
+			base = 1
+			modifier = {
+				factor = 2
+				ai_is_threatened = yes
+			}
+		}
 	}
 
 	focus = {
@@ -3756,9 +3893,7 @@ focus_tree = {
 				limit = { has_idea = NKO_china_economic_assistant }
 				set_temp_variable = { treasury_change = -22.5 }
 			}
-			else = {
-				set_temp_variable = { treasury_change = -45 }
-			}
+			else = { set_temp_variable = { treasury_change = -45 } }
 			modify_treasury_effect = yes
 		}
 
@@ -3771,6 +3906,10 @@ focus_tree = {
 			modifier = {
 				factor = 0
 				can_staff_an_dockyard = no
+			}
+			modifier = {
+				factor = 2
+				ai_is_threatened = yes
 			}
 		}
 	}
@@ -3794,18 +3933,14 @@ focus_tree = {
 		completion_reward = {
 			log = "[GetDateText]: [This.GetName]: focus NKO_the_north_korean_carrier executed"
 			if = {
-				limit = {
-					has_tech = carrier_hull_1
-				}
+				limit = { has_tech = carrier_hull_1 }
 				set_technology = { carrier_hull_2 = 1 }
 				newline = yes
 				set_temp_variable = { treasury_change = -45 }
 				modify_treasury_effect = yes
 			}
 			else_if = {
-				limit = {
-					NOT = { has_tech = carrier_hull_1 }
-				}
+				limit = { NOT = { has_tech = carrier_hull_1 } }
 				set_technology = { carrier_hull_1 = 1 }
 				newline = yes
 				set_temp_variable = { treasury_change = -35 }
@@ -3818,6 +3953,10 @@ focus_tree = {
 			modifier = {
 				factor = 0
 				has_active_mission = bankruptcy_incoming_collapse
+			}
+			modifier = {
+				factor = 2
+				ai_is_threatened = yes
 			}
 		}
 	}
@@ -3855,6 +3994,10 @@ focus_tree = {
 				factor = 0
 				has_active_mission = bankruptcy_incoming_collapse
 			}
+			modifier = {
+				factor = 2
+				ai_is_threatened = yes
+			}
 		}
 	}
 
@@ -3882,7 +4025,7 @@ focus_tree = {
 				category = CAT_cruiser
 			}
 			if = {
-				limit = { has_country_flag = NKO_naval_buildup_unlocked }
+				limit = { has_completed_focus = NKO_naval_modernization }
 				add_to_variable = { var = NKO_naval_points value = 3 }
 				add_to_variable = { var = NKO_missile_boat_progress value = 10 }
 				clamp_variable = { var = NKO_missile_boat_progress min = 0 max = 100 }
@@ -3893,7 +4036,13 @@ focus_tree = {
 			}
 		}
 
-		ai_will_do = { base = 1 }
+		ai_will_do = {
+			base = 1
+			modifier = {
+				factor = 2
+				ai_is_threatened = yes
+			}
+		}
 	}
 
 	focus = {
@@ -3915,7 +4064,13 @@ focus_tree = {
 			add_ideas = NKO_marines_idea
 		}
 
-		ai_will_do = { base = 1 }
+		ai_will_do = {
+			base = 1
+			modifier = {
+				factor = 2
+				ai_is_threatened = yes
+			}
+		}
 	}
 
 	focus = {
@@ -3949,30 +4104,18 @@ focus_tree = {
 
 		available = {
 			OR = {
-				601 = {
-					is_owned_and_controlled_by = NKO
-				}
-				602 = {
-					is_owned_and_controlled_by = NKO
-				}
-				603 = {
-					is_owned_and_controlled_by = NKO
-				}
+				601 = { is_owned_and_controlled_by = NKO }
+				602 = { is_owned_and_controlled_by = NKO }
+				603 = { is_owned_and_controlled_by = NKO }
 			}
 		}
 
 		bypass = {
 			NOT = {
 				OR = {
-					601 = {
-						is_owned_and_controlled_by = NKO
-					}
-					602 = {
-						is_owned_and_controlled_by = NKO
-					}
-					603 = {
-						is_owned_and_controlled_by = NKO
-					}
+					601 = { is_owned_and_controlled_by = NKO }
+					602 = { is_owned_and_controlled_by = NKO }
+					603 = { is_owned_and_controlled_by = NKO }
 				}
 			}
 		}
@@ -4011,6 +4154,10 @@ focus_tree = {
 				factor = 0
 				has_active_mission = bankruptcy_incoming_collapse
 			}
+			modifier = {
+				factor = 2
+				ai_is_threatened = yes
+			}
 		}
 	}
 
@@ -4035,7 +4182,13 @@ focus_tree = {
 			add_command_power = 50
 		}
 
-		ai_will_do = { base = 1 }
+		ai_will_do = {
+			base = 1
+			modifier = {
+				factor = 2
+				ai_is_threatened = yes
+			}
+		}
 	}
 
 	focus = {
@@ -4089,9 +4242,7 @@ focus_tree = {
 				uses = 3
 				category = CAT_medium_plane
 			}
-			set_technology = {
-				stealth_tech_1 = 1
-			}
+			set_technology = { stealth_tech_1 = 1 }
 			update_focus_tree_obsolete_branches = yes
 			newline = yes
 			set_temp_variable = { treasury_change = -20 }
@@ -4103,6 +4254,10 @@ focus_tree = {
 			modifier = {
 				factor = 0
 				has_active_mission = bankruptcy_incoming_collapse
+			}
+			modifier = {
+				factor = 2
+				ai_is_threatened = yes
 			}
 		}
 	}
@@ -4170,6 +4325,10 @@ focus_tree = {
 				factor = 0
 				has_active_mission = bankruptcy_incoming_collapse
 			}
+			modifier = {
+				factor = 2
+				ai_is_threatened = yes
+			}
 		}
 	}
 
@@ -4223,6 +4382,10 @@ focus_tree = {
 				factor = 0
 				has_active_mission = bankruptcy_incoming_collapse
 			}
+			modifier = {
+				factor = 2
+				ai_is_threatened = yes
+			}
 		}
 	}
 
@@ -4270,9 +4433,7 @@ focus_tree = {
 
 		available = {
 			has_idea = NKO_korean_russian_friendship
-			SOV = {
-				has_idea = NKO_korean_russian_friendship
-			}
+			SOV = { has_idea = NKO_korean_russian_friendship }
 		}
 
 		bypass = {
@@ -4282,14 +4443,18 @@ focus_tree = {
 
 		completion_reward = {
 			log = "[GetDateText]: [This.GetName]: focus NKO_get_russian_help executed"
-			SOV = {
-				country_event = korea_russia.19
-			}
+			SOV = { country_event = korea_russia.19 }
 			update_focus_tree_obsolete_branches = yes
 			custom_effect_tooltip = TT_IF_THEY_ACCEPT
 		}
 
-		ai_will_do = { base = 1 }
+		ai_will_do = {
+			base = 1
+			modifier = {
+				factor = 2
+				ai_is_threatened = yes
+			}
+		}
 	}
 
 	focus = {
@@ -4337,23 +4502,25 @@ focus_tree = {
 		available = { NKO = { is_subject_of = CHI } }
 
 		bypass = {
-			NOT = {
-				has_dlc = "By Blood Alone"
-			}
+			NOT = { has_dlc = "By Blood Alone" }
 			has_tech = gen_3_light
 			has_tech = gen_3_medium
 		}
 
 		completion_reward = {
 			log = "[GetDateText]: [This.GetName]: focus NKO_get_chinese_help executed"
-			CHI = {
-				country_event = korea_china.1
-			}
+			CHI = { country_event = korea_china.1 }
 			update_focus_tree_obsolete_branches = yes
 			custom_effect_tooltip = TT_IF_THEY_ACCEPT
 		}
 
-		ai_will_do = { base = 1 }
+		ai_will_do = {
+			base = 1
+			modifier = {
+				factor = 2
+				ai_is_threatened = yes
+			}
+		}
 	}
 
 	focus = {
@@ -4404,6 +4571,10 @@ focus_tree = {
 				factor = 0
 				has_active_mission = bankruptcy_incoming_collapse
 			}
+			modifier = {
+				factor = 2
+				ai_is_threatened = yes
+			}
 		}
 	}
 
@@ -4430,7 +4601,13 @@ focus_tree = {
 			}
 		}
 
-		ai_will_do = { base = 1 }
+		ai_will_do = {
+			base = 1
+			modifier = {
+				factor = 2
+				ai_is_threatened = yes
+			}
+		}
 	}
 
 	focus = {
@@ -4486,7 +4663,7 @@ focus_tree = {
 				}
 			}
 			if = {
-				limit = { has_country_flag = NKO_naval_buildup_unlocked }
+				limit = { has_completed_focus = NKO_naval_modernization }
 				add_to_variable = { var = NKO_naval_points value = 3 }
 				add_to_variable = { var = NKO_coastal_defense_progress value = 10 }
 				clamp_variable = { var = NKO_coastal_defense_progress min = 0 max = 100 }
@@ -4505,6 +4682,10 @@ focus_tree = {
 			modifier = {
 				factor = 0
 				has_active_mission = bankruptcy_incoming_collapse
+			}
+			modifier = {
+				factor = 2
+				ai_is_threatened = yes
 			}
 		}
 	}
@@ -4531,7 +4712,13 @@ focus_tree = {
 			}
 		}
 
-		ai_will_do = { base = 1 }
+		ai_will_do = {
+			base = 1
+			modifier = {
+				factor = 2
+				ai_is_threatened = yes
+			}
+		}
 	}
 
 	focus = {
@@ -4577,6 +4764,10 @@ focus_tree = {
 				factor = 0
 				has_active_mission = bankruptcy_incoming_collapse
 			}
+			modifier = {
+				factor = 2
+				ai_is_threatened = yes
+			}
 		}
 	}
 
@@ -4602,7 +4793,13 @@ focus_tree = {
 			}
 		}
 
-		ai_will_do = { base = 1 }
+		ai_will_do = {
+			base = 1
+			modifier = {
+				factor = 2
+				ai_is_threatened = yes
+			}
+		}
 	}
 
 	focus = {
@@ -4627,7 +4824,13 @@ focus_tree = {
 			}
 		}
 
-		ai_will_do = { base = 1 }
+		ai_will_do = {
+			base = 1
+			modifier = {
+				factor = 2
+				ai_is_threatened = yes
+			}
+		}
 	}
 
 	focus = {
@@ -4653,7 +4856,13 @@ focus_tree = {
 			}
 		}
 
-		ai_will_do = { base = 1 }
+		ai_will_do = {
+			base = 1
+			modifier = {
+				factor = 2
+				ai_is_threatened = yes
+			}
+		}
 	}
 
 
@@ -4702,7 +4911,7 @@ focus_tree = {
 		}
 
 		ai_will_do = {
-			base = 1
+			base = 10
 			modifier = {
 				add = 1
 				date > 2001.09.01
@@ -4760,7 +4969,11 @@ focus_tree = {
 			update_focus_tree_obsolete_branches = yes
 		}
 
-		ai_will_do = { base = 1 }
+		ai_will_do = {
+			base = 1
+			modifier = { factor = 25 NKO_ai_orthodox_path = yes }
+			modifier = { factor = 0 NKO_ai_not_orthodox_path = yes }
+		}
 	}
 
 	focus = {
@@ -4793,7 +5006,11 @@ focus_tree = {
 			log = "[GetDateText]: [This.GetName]: focus NKO_promote_self_reliance executed"
 		}
 
-		ai_will_do = { base = 1 }
+		ai_will_do = {
+			base = 1
+			modifier = { factor = 25 NKO_ai_orthodox_path = yes }
+			modifier = { factor = 0 NKO_ai_not_orthodox_path = yes }
+		}
 	}
 
 	focus = {
@@ -4838,7 +5055,11 @@ focus_tree = {
 			}
 		}
 
-		ai_will_do = { base = 1 }
+		ai_will_do = {
+			base = 1
+			modifier = { factor = 25 NKO_ai_orthodox_path = yes }
+			modifier = { factor = 0 NKO_ai_not_orthodox_path = yes }
+		}
 	}
 
 	focus = {
@@ -4886,7 +5107,11 @@ focus_tree = {
 			}
 		}
 
-		ai_will_do = { base = 1 }
+		ai_will_do = {
+			base = 1
+			modifier = { factor = 25 NKO_ai_orthodox_path = yes }
+			modifier = { factor = 0 NKO_ai_not_orthodox_path = yes }
+		}
 	}
 
 	focus = {
@@ -4941,7 +5166,11 @@ focus_tree = {
 			news_event = { id = korea.4 days = 1 }
 		}
 
-		ai_will_do = { base = 1 }
+		ai_will_do = {
+			base = 1
+			modifier = { factor = 25 NKO_ai_orthodox_path = yes }
+			modifier = { factor = 0 NKO_ai_not_orthodox_path = yes }
+		}
 	}
 
 	focus = {
@@ -4971,7 +5200,11 @@ focus_tree = {
 			country_event = kim_jong_il_death.3
 		}
 
-		ai_will_do = { base = 1 }
+		ai_will_do = {
+			base = 1
+			modifier = { factor = 25 NKO_ai_orthodox_path = yes }
+			modifier = { factor = 0 NKO_ai_not_orthodox_path = yes }
+		}
 	}
 
 	focus = {
@@ -5027,10 +5260,8 @@ focus_tree = {
 
 		ai_will_do = {
 			base = 1
-			modifier = {
-				factor = 0
-				is_historical_focus_on = yes
-			}
+			modifier = { factor = 25 has_global_flag = NKO_KIM_JONG_NAM_FOCUS_PATH }
+			modifier = { factor = 0 NKO_ai_not_kim_jong_nam_path = yes }
 		}
 	}
 
@@ -5080,7 +5311,11 @@ focus_tree = {
 			}
 		}
 
-		ai_will_do = { base = 1 }
+		ai_will_do = {
+			base = 1
+			modifier = { factor = 25 has_global_flag = NKO_KIM_JONG_NAM_FOCUS_PATH }
+			modifier = { factor = 0 NKO_ai_not_kim_jong_nam_path = yes }
+		}
 	}
 
 	focus = {
@@ -5128,7 +5363,11 @@ focus_tree = {
 			}
 		}
 
-		ai_will_do = { base = 1 }
+		ai_will_do = {
+			base = 1
+			modifier = { factor = 25 has_global_flag = NKO_KIM_JONG_NAM_FOCUS_PATH }
+			modifier = { factor = 0 NKO_ai_not_kim_jong_nam_path = yes }
+		}
 	}
 
 	focus = {
@@ -5185,7 +5424,11 @@ focus_tree = {
 			}
 		}
 
-		ai_will_do = { base = 1 }
+		ai_will_do = {
+			base = 1
+			modifier = { factor = 25 has_global_flag = NKO_KIM_JONG_NAM_FOCUS_PATH }
+			modifier = { factor = 0 NKO_ai_not_kim_jong_nam_path = yes }
+		}
 	}
 
 	focus = {
@@ -5302,7 +5545,11 @@ focus_tree = {
 			}
 		}
 
-		ai_will_do = { base = 1 }
+		ai_will_do = {
+			base = 1
+			modifier = { factor = 25 has_global_flag = NKO_KIM_JONG_NAM_FOCUS_PATH }
+			modifier = { factor = 0 NKO_ai_not_kim_jong_nam_path = yes }
+		}
 	}
 
 	focus = {
@@ -5376,7 +5623,11 @@ focus_tree = {
 			}
 		}
 
-		ai_will_do = { base = 1 }
+		ai_will_do = {
+			base = 1
+			modifier = { factor = 25 has_global_flag = NKO_KIM_JONG_NAM_FOCUS_PATH }
+			modifier = { factor = 0 NKO_ai_not_kim_jong_nam_path = yes }
+		}
 	}
 
 	focus = {
@@ -5507,6 +5758,10 @@ focus_tree = {
 			set_variable = { party_pop_array^22 = 0.32 } #Nat_Autocracy
 			set_variable = { party_pop_array^23 = 0 } #Monarchist
 			set_temp_variable = { rul_party_temp = 22 }
+			if = {
+				limit = { is_ai = yes }
+				set_temp_variable = { disable_elections = 1 }
+			}
 			change_ruling_party_effect = yes
 			add_timed_idea = { idea = Fallout_leadership_succession days = 730 }
 			update_focus_tree_obsolete_branches = yes
@@ -5514,10 +5769,8 @@ focus_tree = {
 
 		ai_will_do = {
 			base = 1
-			modifier = {
-				is_historical_focus_on = yes
-				factor = 0
-			}
+			modifier = { factor = 25 has_global_flag = NKO_MILITARY_JUNTA_FOCUS_PATH }
+			modifier = { factor = 0 NKO_ai_not_military_junta_path = yes }
 		}
 	}
 
@@ -5566,7 +5819,11 @@ focus_tree = {
 			}
 		}
 
-		ai_will_do = { base = 1 }
+		ai_will_do = {
+			base = 1
+			modifier = { factor = 25 has_global_flag = NKO_MILITARY_JUNTA_FOCUS_PATH }
+			modifier = { factor = 0 NKO_ai_not_military_junta_path = yes }
+		}
 	}
 
 	focus = {
@@ -5598,7 +5855,11 @@ focus_tree = {
 			}
 		}
 
-		ai_will_do = { base = 1 }
+		ai_will_do = {
+			base = 1
+			modifier = { factor = 25 has_global_flag = NKO_MILITARY_JUNTA_FOCUS_PATH }
+			modifier = { factor = 0 NKO_ai_not_military_junta_path = yes }
+		}
 	}
 
 	focus = {
@@ -5626,7 +5887,11 @@ focus_tree = {
 			add_political_power = 100
 		}
 
-		ai_will_do = { base = 1 }
+		ai_will_do = {
+			base = 1
+			modifier = { factor = 25 has_global_flag = NKO_MILITARY_JUNTA_FOCUS_PATH }
+			modifier = { factor = 0 NKO_ai_not_military_junta_path = yes }
+		}
 	}
 
 	focus = {
@@ -5664,6 +5929,8 @@ focus_tree = {
 				factor = 0
 				has_active_mission = bankruptcy_incoming_collapse
 			}
+			modifier = { factor = 25 has_global_flag = NKO_MILITARY_JUNTA_FOCUS_PATH }
+			modifier = { factor = 0 NKO_ai_not_military_junta_path = yes }
 		}
 	}
 
@@ -5689,7 +5956,11 @@ focus_tree = {
 			increase_healthcare_budget = yes
 		}
 
-		ai_will_do = { base = 1 }
+		ai_will_do = {
+			base = 1
+			modifier = { factor = 25 has_global_flag = NKO_MILITARY_JUNTA_FOCUS_PATH }
+			modifier = { factor = 0 NKO_ai_not_military_junta_path = yes }
+		}
 	}
 
 	focus = {
@@ -5719,7 +5990,11 @@ focus_tree = {
 			}
 		}
 
-		ai_will_do = { base = 1 }
+		ai_will_do = {
+			base = 1
+			modifier = { factor = 25 has_global_flag = NKO_MILITARY_JUNTA_FOCUS_PATH }
+			modifier = { factor = 0 NKO_ai_not_military_junta_path = yes }
+		}
 	}
 
 	focus = {
@@ -5745,7 +6020,11 @@ focus_tree = {
 			add_stability = 0.05
 		}
 
-		ai_will_do = { base = 1 }
+		ai_will_do = {
+			base = 1
+			modifier = { factor = 25 has_global_flag = NKO_MILITARY_JUNTA_FOCUS_PATH }
+			modifier = { factor = 0 NKO_ai_not_military_junta_path = yes }
+		}
 	}
 
 	focus = {
@@ -5785,7 +6064,11 @@ focus_tree = {
 			add_ideas = NKO_anti_tatmadaw_sentiment
 		}
 
-		ai_will_do = { base = 1 }
+		ai_will_do = {
+			base = 1
+			modifier = { factor = 25 has_global_flag = NKO_MILITARY_JUNTA_FOCUS_PATH }
+			modifier = { factor = 0 NKO_ai_not_military_junta_path = yes }
+		}
 	}
 
 	focus = {
@@ -5813,7 +6096,11 @@ focus_tree = {
 			}
 		}
 
-		ai_will_do = { base = 1 }
+		ai_will_do = {
+			base = 1
+			modifier = { factor = 25 has_global_flag = NKO_MILITARY_JUNTA_FOCUS_PATH }
+			modifier = { factor = 0 NKO_ai_not_military_junta_path = yes }
+		}
 	}
 
 	focus = {
@@ -5841,7 +6128,11 @@ focus_tree = {
 			change_relative_party_popularity = yes
 		}
 
-		ai_will_do = { base = 1 }
+		ai_will_do = {
+			base = 1
+			modifier = { factor = 25 has_global_flag = NKO_MILITARY_JUNTA_FOCUS_PATH }
+			modifier = { factor = 0 NKO_ai_not_military_junta_path = yes }
+		}
 	}
 
 	focus = {
@@ -5883,13 +6174,15 @@ focus_tree = {
 						icon = GFX_intelligence_agency_logo_nko
 					}
 				}
-				else = {
-					add_ideas = idea_focus_expanded_secret_services
-				}
+				else = { add_ideas = idea_focus_expanded_secret_services }
 			}
 		}
 
-		ai_will_do = { base = 1 }
+		ai_will_do = {
+			base = 1
+			modifier = { factor = 25 has_global_flag = NKO_MILITARY_JUNTA_FOCUS_PATH }
+			modifier = { factor = 0 NKO_ai_not_military_junta_path = yes }
+		}
 	}
 
 	focus = {
@@ -5909,20 +6202,20 @@ focus_tree = {
 		available = {
 			nationalist_military_junta_are_in_power = yes
 			country_exists = CHI
-			NOT = {
-				has_war_with = CHI
-			}
+			NOT = { has_war_with = CHI }
 		}
 
 		completion_reward = {
 			log = "[GetDateText]: [This.GetName]: focus NKO_chi_military_support executed"
-			CHI = {
-				country_event = korea_china.4
-			}
+			CHI = { country_event = korea_china.4 }
 			custom_effect_tooltip = TT_IF_THEY_ACCEPT
 		}
 
-		ai_will_do = { base = 1 }
+		ai_will_do = {
+			base = 1
+			modifier = { factor = 25 has_global_flag = NKO_MILITARY_JUNTA_FOCUS_PATH }
+			modifier = { factor = 0 NKO_ai_not_military_junta_path = yes }
+		}
 	}
 
 	focus = {
@@ -5942,20 +6235,20 @@ focus_tree = {
 		available = {
 			nationalist_military_junta_are_in_power = yes
 			country_exists = CHI
-			NOT = {
-				has_war_with = CHI
-			}
+			NOT = { has_war_with = CHI }
 		}
 
 		completion_reward = {
 			log = "[GetDateText]: [This.GetName]: focus NKO_chi_invest_resources executed"
-			CHI = {
-				country_event = korea_china.7
-			}
+			CHI = { country_event = korea_china.7 }
 			custom_effect_tooltip = TT_IF_THEY_ACCEPT
 		}
 
-		ai_will_do = { base = 1 }
+		ai_will_do = {
+			base = 1
+			modifier = { factor = 25 has_global_flag = NKO_MILITARY_JUNTA_FOCUS_PATH }
+			modifier = { factor = 0 NKO_ai_not_military_junta_path = yes }
+		}
 	}
 
 	focus = {
@@ -5975,20 +6268,20 @@ focus_tree = {
 		available = {
 			nationalist_military_junta_are_in_power = yes
 			country_exists = CHI
-			NOT = {
-				has_war_with = CHI
-			}
+			NOT = { has_war_with = CHI }
 		}
 
 		completion_reward = {
 			log = "[GetDateText]: [This.GetName]: focus NKO_chi_banks executed"
-			CHI = {
-				country_event = korea_china.11
-			}
+			CHI = { country_event = korea_china.11 }
 			custom_effect_tooltip = TT_IF_THEY_ACCEPT
 		}
 
-		ai_will_do = { base = 1 }
+		ai_will_do = {
+			base = 1
+			modifier = { factor = 25 has_global_flag = NKO_MILITARY_JUNTA_FOCUS_PATH }
+			modifier = { factor = 0 NKO_ai_not_military_junta_path = yes }
+		}
 	}
 
 	focus = {
@@ -6008,20 +6301,20 @@ focus_tree = {
 		available = {
 			nationalist_military_junta_are_in_power = yes
 			country_exists = CHI
-			NOT = {
-				has_war_with = CHI
-			}
+			NOT = { has_war_with = CHI }
 		}
 
 		completion_reward = {
 			log = "[GetDateText]: [This.GetName]: focus NKO_chi_help_factories executed"
-			CHI = {
-				country_event = korea_china.9
-			}
+			CHI = { country_event = korea_china.9 }
 			custom_effect_tooltip = TT_IF_THEY_ACCEPT
 		}
 
-		ai_will_do = { base = 1 }
+		ai_will_do = {
+			base = 1
+			modifier = { factor = 25 has_global_flag = NKO_MILITARY_JUNTA_FOCUS_PATH }
+			modifier = { factor = 0 NKO_ai_not_military_junta_path = yes }
+		}
 	}
 
 	focus = {
@@ -6042,20 +6335,20 @@ focus_tree = {
 		available = {
 			nationalist_military_junta_are_in_power = yes
 			country_exists = CHI
-			NOT = {
-				has_war_with = CHI
-			}
+			NOT = { has_war_with = CHI }
 		}
 
 		completion_reward = {
 			log = "[GetDateText]: [This.GetName]: focus NKO_chi_huawei executed"
-			CHI = {
-				country_event = korea_china.13
-			}
+			CHI = { country_event = korea_china.13 }
 			custom_effect_tooltip = TT_IF_THEY_ACCEPT
 		}
 
-		ai_will_do = { base = 1 }
+		ai_will_do = {
+			base = 1
+			modifier = { factor = 25 has_global_flag = NKO_MILITARY_JUNTA_FOCUS_PATH }
+			modifier = { factor = 0 NKO_ai_not_military_junta_path = yes }
+		}
 	}
 
 	focus = {
@@ -6075,20 +6368,20 @@ focus_tree = {
 		available = {
 			nationalist_military_junta_are_in_power = yes
 			country_exists = CHI
-			NOT = {
-				has_war_with = CHI
-			}
+			NOT = { has_war_with = CHI }
 		}
 
 		completion_reward = {
 			log = "[GetDateText]: [This.GetName]: focus NKO_perpetual_war_footing executed"
-			CHI = {
-				country_event = korea_china.15
-			}
+			CHI = { country_event = korea_china.15 }
 			custom_effect_tooltip = TT_IF_THEY_ACCEPT
 		}
 
-		ai_will_do = { base = 1 }
+		ai_will_do = {
+			base = 1
+			modifier = { factor = 25 has_global_flag = NKO_MILITARY_JUNTA_FOCUS_PATH }
+			modifier = { factor = 0 NKO_ai_not_military_junta_path = yes }
+		}
 	}
 
 	focus = {
@@ -6112,7 +6405,11 @@ focus_tree = {
 			add_ideas = NKO_enterprises_privatization_idea
 		}
 
-		ai_will_do = { base = 1 }
+		ai_will_do = {
+			base = 1
+			modifier = { factor = 25 has_global_flag = NKO_MILITARY_JUNTA_FOCUS_PATH }
+			modifier = { factor = 0 NKO_ai_not_military_junta_path = yes }
+		}
 	}
 
 	focus = {
@@ -6141,7 +6438,11 @@ focus_tree = {
 			}
 		}
 
-		ai_will_do = { base = 1 }
+		ai_will_do = {
+			base = 1
+			modifier = { factor = 25 has_global_flag = NKO_MILITARY_JUNTA_FOCUS_PATH }
+			modifier = { factor = 0 NKO_ai_not_military_junta_path = yes }
+		}
 	}
 
 	focus = {
@@ -6197,7 +6498,11 @@ focus_tree = {
 			modify_treasury_effect = yes
 		}
 
-		ai_will_do = { base = 1 }
+		ai_will_do = {
+			base = 1
+			modifier = { factor = 40 has_global_flag = NKO_MILITARY_JUNTA_FOCUS_PATH }
+			modifier = { factor = 0 NKO_ai_not_military_junta_path = yes }
+		}
 	}
 
 	focus = {
@@ -6240,7 +6545,11 @@ focus_tree = {
 			update_focus_tree_obsolete_branches = yes
 		}
 
-		ai_will_do = { base = 1 }
+		ai_will_do = {
+			base = 1
+			modifier = { factor = 10 has_global_flag = NKO_MILITARY_JUNTA_FOCUS_PATH }
+			modifier = { factor = 0 NKO_ai_not_military_junta_path = yes }
+		}
 	}
 
 	focus = {
@@ -6268,7 +6577,11 @@ focus_tree = {
 			remove_ideas = NKO_anti_tatmadaw_sentiment
 		}
 
-		ai_will_do = { base = 1 }
+		ai_will_do = {
+			base = 1
+			modifier = { factor = 25 has_global_flag = NKO_MILITARY_JUNTA_FOCUS_PATH }
+			modifier = { factor = 0 NKO_ai_not_military_junta_path = yes }
+		}
 	}
 
 	focus = {
@@ -6304,6 +6617,8 @@ focus_tree = {
 				factor = 0
 				has_active_mission = bankruptcy_incoming_collapse
 			}
+			modifier = { factor = 25 has_global_flag = NKO_MILITARY_JUNTA_FOCUS_PATH }
+			modifier = { factor = 0 NKO_ai_not_military_junta_path = yes }
 		}
 	}
 
@@ -6332,7 +6647,11 @@ focus_tree = {
 			change_the_military_opinion = yes
 		}
 
-		ai_will_do = { base = 1 }
+		ai_will_do = {
+			base = 1
+			modifier = { factor = 25 has_global_flag = NKO_MILITARY_JUNTA_FOCUS_PATH }
+			modifier = { factor = 0 NKO_ai_not_military_junta_path = yes }
+		}
 	}
 
 	focus = {
@@ -6402,7 +6721,11 @@ focus_tree = {
 			update_focus_tree_obsolete_branches = yes
 		}
 
-		ai_will_do = { base = 100 }
+		ai_will_do = {
+			base = 3
+			modifier = { factor = 25 NKO_ai_historical_path = yes }
+			modifier = { factor = 0 NKO_ai_not_historical_path = yes }
+		}
 	}
 
 	focus = {
@@ -6425,7 +6748,11 @@ focus_tree = {
 			add_stability = 0.03
 		}
 
-		ai_will_do = { base = 1 }
+		ai_will_do = {
+			base = 1
+			modifier = { factor = 25 NKO_ai_historical_path = yes }
+			modifier = { factor = 0 NKO_ai_not_historical_path = yes }
+		}
 	}
 
 	focus = {
@@ -6456,9 +6783,7 @@ focus_tree = {
 				limit = { has_idea = NKO_china_economic_assistant }
 				set_temp_variable = { treasury_change = -3.75 }
 			}
-			else = {
-				set_temp_variable = { treasury_change = -7.5 }
-			}
+			else = { set_temp_variable = { treasury_change = -7.5 } }
 			modify_treasury_effect = yes
 		}
 
@@ -6472,6 +6797,8 @@ focus_tree = {
 				factor = 0
 				has_active_mission = bankruptcy_incoming_collapse
 			}
+			modifier = { factor = 25 NKO_ai_historical_path = yes }
+			modifier = { factor = 0 NKO_ai_not_historical_path = yes }
 		}
 	}
 
@@ -6497,7 +6824,11 @@ focus_tree = {
 			}
 		}
 
-		ai_will_do = { base = 1 }
+		ai_will_do = {
+			base = 1
+			modifier = { factor = 25 NKO_ai_historical_path = yes }
+			modifier = { factor = 0 NKO_ai_not_historical_path = yes }
+		}
 	}
 
 	focus = {
@@ -6525,16 +6856,13 @@ focus_tree = {
 				}
 			}
 			newline = yes
-			set_temp_variable = { treasury_change = gdp_total }
-			multiply_temp_variable = { treasury_change = 0.05 }
+			set_temp_variable = { treasury_change = { value = gdp_total multiply = 0.05 } }
 			modify_treasury_effect = yes
 			if = {
 				limit = { has_idea = NKO_china_economic_assistant }
 				set_temp_variable = { treasury_change = -1.85 }
 			}
-			else = {
-				set_temp_variable = { treasury_change = -3.75 }
-			}
+			else = { set_temp_variable = { treasury_change = -3.75 } }
 			modify_treasury_effect = yes
 		}
 
@@ -6548,6 +6876,8 @@ focus_tree = {
 				factor = 0
 				has_active_mission = bankruptcy_incoming_collapse
 			}
+			modifier = { factor = 25 NKO_ai_historical_path = yes }
+			modifier = { factor = 0 NKO_ai_not_historical_path = yes }
 		}
 	}
 
@@ -6572,8 +6902,7 @@ focus_tree = {
 				add_idea = NKO_broken_juche_2
 			}
 			newline = yes
-			set_temp_variable = { treasury_change = gdp_total }
-			multiply_temp_variable = { treasury_change = -0.03 }
+			set_temp_variable = { treasury_change = { value = gdp_total multiply = -0.03 } }
 			modify_treasury_effect = yes
 		}
 
@@ -6583,6 +6912,8 @@ focus_tree = {
 				factor = 0
 				has_active_mission = bankruptcy_incoming_collapse
 			}
+			modifier = { factor = 25 NKO_ai_historical_path = yes }
+			modifier = { factor = 0 NKO_ai_not_historical_path = yes }
 		}
 	}
 
@@ -6609,7 +6940,11 @@ focus_tree = {
 			}
 		}
 
-		ai_will_do = { base = 1 }
+		ai_will_do = {
+			base = 1
+			modifier = { factor = 25 NKO_ai_historical_path = yes }
+			modifier = { factor = 0 NKO_ai_not_historical_path = yes }
+		}
 	}
 
 	focus = {
@@ -6631,7 +6966,11 @@ focus_tree = {
 			decrease_corruption = yes
 		}
 
-		ai_will_do = { base = 1 }
+		ai_will_do = {
+			base = 1
+			modifier = { factor = 25 NKO_ai_historical_path = yes }
+			modifier = { factor = 0 NKO_ai_not_historical_path = yes }
+		}
 	}
 
 	focus = {
@@ -6657,7 +6996,11 @@ focus_tree = {
 			increase_centralization = yes
 		}
 
-		ai_will_do = { base = 1 }
+		ai_will_do = {
+			base = 1
+			modifier = { factor = 25 NKO_ai_historical_path = yes }
+			modifier = { factor = 0 NKO_ai_not_historical_path = yes }
+		}
 	}
 
 	focus = {
@@ -6683,7 +7026,11 @@ focus_tree = {
 			remove_opinion_modifier = { target = MAY modifier = supports_us }
 		}
 
-		ai_will_do = { base = 1 }
+		ai_will_do = {
+			base = 1
+			modifier = { factor = 25 NKO_ai_historical_path = yes }
+			modifier = { factor = 0 NKO_ai_not_historical_path = yes }
+		}
 	}
 
 	focus = {
@@ -6710,7 +7057,11 @@ focus_tree = {
 			}
 		}
 
-		ai_will_do = { base = 1 }
+		ai_will_do = {
+			base = 1
+			modifier = { factor = 25 NKO_ai_historical_path = yes }
+			modifier = { factor = 0 NKO_ai_not_historical_path = yes }
+		}
 	}
 
 	focus = {
@@ -6737,12 +7088,19 @@ focus_tree = {
 			log = "[GetDateText]: [This.GetName]: focus NKO_civilian_control_of_the_economy executed"
 			increase_Free_Market_Economy = yes
 			newline = yes
-			set_temp_variable = { treasury_change = gdp_total }
-			multiply_temp_variable = { treasury_change = 0.10 }
+			set_temp_variable = { treasury_change = { value = gdp_total multiply = 0.10 } }
 			modify_treasury_effect = yes
 		}
 
-		ai_will_do = { base = 1 }
+		ai_will_do = {
+			base = 1
+			modifier = {
+				factor = 0
+				has_active_mission = bankruptcy_incoming_collapse
+			}
+			modifier = { factor = 25 NKO_ai_historical_path = yes }
+			modifier = { factor = 0 NKO_ai_not_historical_path = yes }
+		}
 	}
 
 	focus = {
@@ -6808,13 +7166,15 @@ focus_tree = {
 					add_idea = NKO_marxism_leninism
 				}
 			}
-			else = {
-				add_ideas = NKO_marxism_leninism
-			}
+			else = { add_ideas = NKO_marxism_leninism }
 			update_focus_tree_obsolete_branches = yes
 		}
 
-		ai_will_do = { base = 1 }
+		ai_will_do = {
+			base = 1
+			modifier = { factor = 40 NKO_ai_historical_path = yes }
+			modifier = { factor = 0 NKO_ai_not_historical_path = yes }
+		}
 	}
 
 	focus = {
@@ -6864,7 +7224,11 @@ focus_tree = {
 			update_focus_tree_obsolete_branches = yes
 		}
 
-		ai_will_do = { base = 1 }
+		ai_will_do = {
+			base = 1
+			modifier = { factor = 10 NKO_ai_historical_path = yes }
+			modifier = { factor = 0 NKO_ai_not_historical_path = yes }
+		}
 	}
 
 	focus = {
@@ -6894,9 +7258,7 @@ focus_tree = {
 
 		completion_reward = {
 			log = "[GetDateText]: [This.GetName]: focus NKO_russian_friendship"
-			SOV = {
-				country_event = korea_russia.8
-			}
+			SOV = { country_event = korea_russia.8 }
 			custom_effect_tooltip = TT_IF_THEY_ACCEPT
 		}
 
@@ -6966,12 +7328,14 @@ focus_tree = {
 					add_idea = NKO_eternal_juche
 				}
 			}
-			else = {
-				add_ideas = NKO_eternal_juche
-			}
+			else = { add_ideas = NKO_eternal_juche }
 		}
 
-		ai_will_do = { base = 1 }
+		ai_will_do = {
+			base = 1
+			modifier = { factor = 10 NKO_ai_historical_path = yes }
+			modifier = { factor = 0 NKO_ai_not_historical_path = yes }
+		}
 	}
 
 
@@ -7040,11 +7404,9 @@ focus_tree = {
 		}
 
 		ai_will_do = {
-			base = 100
-			modifier = {
-				factor = 0
-				is_historical_focus_on = yes
-			}
+			base = 2
+			modifier = { factor = 25 has_global_flag = NKO_KIM_JONG_NAM_FOCUS_PATH }
+			modifier = { factor = 0 NKO_ai_not_kim_jong_nam_path = yes }
 		}
 	}
 
@@ -7089,7 +7451,11 @@ focus_tree = {
 			}
 		}
 
-		ai_will_do = { base = 1 }
+		ai_will_do = {
+			base = 1
+			modifier = { factor = 25 has_global_flag = NKO_KIM_JONG_NAM_FOCUS_PATH }
+			modifier = { factor = 0 NKO_ai_not_kim_jong_nam_path = yes }
+		}
 	}
 
 	focus = {
@@ -7113,7 +7479,11 @@ focus_tree = {
 			log = "[GetDateText]: [This.GetName]: focus NKO_conciliatory_rhetoric executed"
 		}
 
-		ai_will_do = { base = 1 }
+		ai_will_do = {
+			base = 1
+			modifier = { factor = 25 has_global_flag = NKO_KIM_JONG_NAM_FOCUS_PATH }
+			modifier = { factor = 0 NKO_ai_not_kim_jong_nam_path = yes }
+		}
 	}
 
 	focus = {
@@ -7146,7 +7516,11 @@ focus_tree = {
 			log = "[GetDateText]: [This.GetName]: focus NKO_diplomatic_overtures executed"
 		}
 
-		ai_will_do = { base = 1 }
+		ai_will_do = {
+			base = 1
+			modifier = { factor = 25 has_global_flag = NKO_KIM_JONG_NAM_FOCUS_PATH }
+			modifier = { factor = 0 NKO_ai_not_kim_jong_nam_path = yes }
+		}
 	}
 
 	focus = {
@@ -7167,12 +7541,19 @@ focus_tree = {
 			log = "[GetDateText]: [This.GetName]: focus NKO_step_up_joint_ventures executed"
 			add_offsite_building = { type = industrial_complex level = 1 }
 			newline = yes
-			set_temp_variable = { treasury_change = gdp_total }
-			multiply_temp_variable = { treasury_change = 0.10 }
+			set_temp_variable = { treasury_change = { value = gdp_total multiply = 0.10 } }
 			modify_treasury_effect = yes
 		}
 
-		ai_will_do = { base = 1 }
+		ai_will_do = {
+			base = 1
+			modifier = {
+				factor = 0
+				has_active_mission = bankruptcy_incoming_collapse
+			}
+			modifier = { factor = 25 has_global_flag = NKO_KIM_JONG_NAM_FOCUS_PATH }
+			modifier = { factor = 0 NKO_ai_not_kim_jong_nam_path = yes }
+		}
 	}
 
 	focus = {
@@ -7209,7 +7590,11 @@ focus_tree = {
 			add_stability = 0.05
 		}
 
-		ai_will_do = { base = 1 }
+		ai_will_do = {
+			base = 1
+			modifier = { factor = 25 has_global_flag = NKO_KIM_JONG_NAM_FOCUS_PATH }
+			modifier = { factor = 0 NKO_ai_not_kim_jong_nam_path = yes }
+		}
 	}
 
 	focus = {
@@ -7241,7 +7626,11 @@ focus_tree = {
 			log = "[GetDateText]: [This.GetName]: focus NKO_loosen_information_monopoly executed"
 		}
 
-		ai_will_do = { base = 1 }
+		ai_will_do = {
+			base = 1
+			modifier = { factor = 25 has_global_flag = NKO_KIM_JONG_NAM_FOCUS_PATH }
+			modifier = { factor = 0 NKO_ai_not_kim_jong_nam_path = yes }
+		}
 	}
 
 	focus = {
@@ -7275,7 +7664,11 @@ focus_tree = {
 			change_relative_party_popularity = yes
 		}
 
-		ai_will_do = { base = 1 }
+		ai_will_do = {
+			base = 1
+			modifier = { factor = 25 has_global_flag = NKO_KIM_JONG_NAM_FOCUS_PATH }
+			modifier = { factor = 0 NKO_ai_not_kim_jong_nam_path = yes }
+		}
 	}
 
 	focus = {
@@ -7298,7 +7691,11 @@ focus_tree = {
 			remove_ideas = Fallout_leadership_succession
 		}
 
-		ai_will_do = { base = 1 }
+		ai_will_do = {
+			base = 1
+			modifier = { factor = 25 has_global_flag = NKO_KIM_JONG_NAM_FOCUS_PATH }
+			modifier = { factor = 0 NKO_ai_not_kim_jong_nam_path = yes }
+		}
 	}
 
 	focus = {
@@ -7319,7 +7716,7 @@ focus_tree = {
 		available = {
 			custom_trigger_tooltip = {
 				tooltip = NKO_chi_propose_trade_agreement_tooltip
-				ROOT = { has_country_flag = trade_agreementCHI }
+				ROOT = { has_country_flag = trade_agreement@CHI }
 			}
 		}
 
@@ -7329,7 +7726,11 @@ focus_tree = {
 			log = "[GetDateText]: [This.GetName]: focus NKO_expand_sezs executed"
 		}
 
-		ai_will_do = { base = 1 }
+		ai_will_do = {
+			base = 1
+			modifier = { factor = 25 has_global_flag = NKO_KIM_JONG_NAM_FOCUS_PATH }
+			modifier = { factor = 0 NKO_ai_not_kim_jong_nam_path = yes }
+		}
 	}
 
 	focus = {
@@ -7369,6 +7770,8 @@ focus_tree = {
 				factor = 0
 				can_staff_an_industrial_complex = no
 			}
+			modifier = { factor = 25 has_global_flag = NKO_KIM_JONG_NAM_FOCUS_PATH }
+			modifier = { factor = 0 NKO_ai_not_kim_jong_nam_path = yes }
 		}
 	}
 
@@ -7391,7 +7794,11 @@ focus_tree = {
 			add_ideas = NKO_foreign_knowhow
 		}
 
-		ai_will_do = { base = 1 }
+		ai_will_do = {
+			base = 1
+			modifier = { factor = 25 has_global_flag = NKO_KIM_JONG_NAM_FOCUS_PATH }
+			modifier = { factor = 0 NKO_ai_not_kim_jong_nam_path = yes }
+		}
 	}
 
 	focus = {
@@ -7419,14 +7826,16 @@ focus_tree = {
 			increase_Free_Market_Economy = yes
 			news_event = korea_north.2
 			if = {
-				limit = {
-					has_idea = NKO_the_private_markets
-				}
+				limit = { has_idea = NKO_the_private_markets }
 				remove_ideas = NKO_the_private_markets
 			}
 		}
 
-		ai_will_do = { base = 1 }
+		ai_will_do = {
+			base = 1
+			modifier = { factor = 25 has_global_flag = NKO_KIM_JONG_NAM_FOCUS_PATH }
+			modifier = { factor = 0 NKO_ai_not_kim_jong_nam_path = yes }
+		}
 	}
 
 	focus = {
@@ -7477,7 +7886,11 @@ focus_tree = {
 			update_focus_tree_obsolete_branches = yes
 		}
 
-		ai_will_do = { base = 1 }
+		ai_will_do = {
+			base = 1
+			modifier = { factor = 10 has_global_flag = NKO_KIM_JONG_NAM_FOCUS_PATH }
+			modifier = { factor = 0 NKO_ai_not_kim_jong_nam_path = yes }
+		}
 	}
 
 	focus = {
@@ -7511,7 +7924,11 @@ focus_tree = {
 			remove_ideas = NKO_broken_juche_0
 		}
 
-		ai_will_do = { base = 1 }
+		ai_will_do = {
+			base = 1
+			modifier = { factor = 10 has_global_flag = NKO_KIM_JONG_NAM_FOCUS_PATH }
+			modifier = { factor = 0 NKO_ai_not_kim_jong_nam_path = yes }
+		}
 	}
 
 	focus = {
@@ -7578,7 +7995,11 @@ focus_tree = {
 			add_ideas = NKO_choson_dream
 		}
 
-		ai_will_do = { base = 1 }
+		ai_will_do = {
+			base = 1
+			modifier = { factor = 25 NKO_ai_historical_path = yes }
+			modifier = { factor = 0 NKO_ai_not_historical_path = yes }
+		}
 	}
 
 	focus = {
@@ -7649,7 +8070,11 @@ focus_tree = {
 			update_focus_tree_obsolete_branches = yes
 		}
 
-		ai_will_do = { base = 1 }
+		ai_will_do = {
+			base = 1
+			modifier = { factor = 40 has_global_flag = NKO_KIM_JONG_NAM_FOCUS_PATH }
+			modifier = { factor = 0 NKO_ai_not_kim_jong_nam_path = yes }
+		}
 	}
 
 	focus = {
@@ -7690,7 +8115,11 @@ focus_tree = {
 			log = "[GetDateText]: [This.GetName]: focus NKO_elections executed"
 		}
 
-		ai_will_do = { base = 1 }
+		ai_will_do = {
+			base = 1
+			modifier = { factor = 25 has_global_flag = NKO_KIM_JONG_NAM_FOCUS_PATH }
+			modifier = { factor = 0 NKO_ai_not_kim_jong_nam_path = yes }
+		}
 	}
 
 	focus = {
@@ -7727,7 +8156,11 @@ focus_tree = {
 			}
 		}
 
-		ai_will_do = { base = 1 }
+		ai_will_do = {
+			base = 1
+			modifier = { factor = 25 has_global_flag = NKO_KIM_JONG_NAM_FOCUS_PATH }
+			modifier = { factor = 0 NKO_ai_not_kim_jong_nam_path = yes }
+		}
 	}
 
 	focus = {
@@ -7765,7 +8198,11 @@ focus_tree = {
 					add_ideas = NKO_democratic_land
 		}
 
-		ai_will_do = { base = 1 }
+		ai_will_do = {
+			base = 1
+			modifier = { factor = 40 has_global_flag = NKO_KIM_JONG_NAM_FOCUS_PATH }
+			modifier = { factor = 0 NKO_ai_not_kim_jong_nam_path = yes }
+		}
 	}
 
 	focus = {
@@ -7812,7 +8249,11 @@ focus_tree = {
 			change_the_military_opinion = yes
 		}
 
-		ai_will_do = { base = 1 }
+		ai_will_do = {
+			base = 1
+			modifier = { factor = 25 NKO_ai_byungjin_path = yes }
+			modifier = { factor = 0 NKO_ai_not_byungjin_path = yes }
+		}
 	}
 
 	focus = {
@@ -7837,7 +8278,11 @@ focus_tree = {
 			}
 		}
 
-		ai_will_do = { base = 1 }
+		ai_will_do = {
+			base = 1
+			modifier = { factor = 25 NKO_ai_byungjin_path = yes }
+			modifier = { factor = 0 NKO_ai_not_byungjin_path = yes }
+		}
 	}
 
 	focus = {
@@ -7859,7 +8304,11 @@ focus_tree = {
 			increase_economic_growth = yes
 		}
 
-		ai_will_do = { base = 1 }
+		ai_will_do = {
+			base = 1
+			modifier = { factor = 25 NKO_ai_byungjin_path = yes }
+			modifier = { factor = 0 NKO_ai_not_byungjin_path = yes }
+		}
 	}
 
 	focus = {
@@ -7884,7 +8333,11 @@ focus_tree = {
 			change_the_donju_opinion = yes
 		}
 
-		ai_will_do = { base = 1 }
+		ai_will_do = {
+			base = 1
+			modifier = { factor = 25 NKO_ai_byungjin_path = yes }
+			modifier = { factor = 0 NKO_ai_not_byungjin_path = yes }
+		}
 	}
 
 	focus = {
@@ -7916,9 +8369,7 @@ focus_tree = {
 				limit = { has_idea = NKO_china_economic_assistant }
 				set_temp_variable = { treasury_change = -3.75 }
 			}
-			else = {
-				set_temp_variable = { treasury_change = -7.5 }
-			}
+			else = { set_temp_variable = { treasury_change = -7.5 } }
 			modify_treasury_effect = yes
 		}
 
@@ -7932,6 +8383,8 @@ focus_tree = {
 				factor = 0
 				can_staff_an_industrial_complex = no
 			}
+			modifier = { factor = 25 NKO_ai_byungjin_path = yes }
+			modifier = { factor = 0 NKO_ai_not_byungjin_path = yes }
 		}
 	}
 
@@ -7964,9 +8417,7 @@ focus_tree = {
 				limit = { has_idea = NKO_china_economic_assistant }
 				set_temp_variable = { treasury_change = -6 }
 			}
-			else = {
-				set_temp_variable = { treasury_change = -12 }
-			}
+			else = { set_temp_variable = { treasury_change = -12 } }
 			modify_treasury_effect = yes
 		}
 
@@ -7980,6 +8431,8 @@ focus_tree = {
 				factor = 0
 				can_staff_an_offices = no
 			}
+			modifier = { factor = 25 NKO_ai_byungjin_path = yes }
+			modifier = { factor = 0 NKO_ai_not_byungjin_path = yes }
 		}
 	}
 
@@ -8005,12 +8458,19 @@ focus_tree = {
 			set_temp_variable = { temp_outlook_increase = 0.05 }
 			change_relative_party_popularity = yes
 			newline = yes
-			set_temp_variable = { treasury_change = gdp_total }
-			multiply_temp_variable = { treasury_change = 0.05 }
+			set_temp_variable = { treasury_change = { value = gdp_total multiply = 0.05 } }
 			modify_treasury_effect = yes
 		}
 
-		ai_will_do = { base = 1 }
+		ai_will_do = {
+			base = 1
+			modifier = {
+				factor = 0
+				has_active_mission = bankruptcy_incoming_collapse
+			}
+			modifier = { factor = 25 NKO_ai_byungjin_path = yes }
+			modifier = { factor = 0 NKO_ai_not_byungjin_path = yes }
+		}
 	}
 
 	focus = {
@@ -8033,7 +8493,11 @@ focus_tree = {
 			increase_economic_growth = yes
 		}
 
-		ai_will_do = { base = 1 }
+		ai_will_do = {
+			base = 1
+			modifier = { factor = 25 NKO_ai_byungjin_path = yes }
+			modifier = { factor = 0 NKO_ai_not_byungjin_path = yes }
+		}
 	}
 
 	focus = {
@@ -8082,7 +8546,11 @@ focus_tree = {
 			update_focus_tree_obsolete_branches = yes
 		}
 
-		ai_will_do = { base = 1 }
+		ai_will_do = {
+			base = 1
+			modifier = { factor = 25 has_global_flag = NKO_KIM_JONG_NAM_FOCUS_PATH }
+			modifier = { factor = 0 NKO_ai_not_kim_jong_nam_path = yes }
+		}
 	}
 
 	focus = {
@@ -8133,7 +8601,11 @@ focus_tree = {
 			update_focus_tree_obsolete_branches = yes
 		}
 
-		ai_will_do = { base = 1 }
+		ai_will_do = {
+			base = 1
+			modifier = { factor = 25 NKO_ai_historical_path = yes }
+			modifier = { factor = 0 NKO_ai_not_historical_path = yes }
+		}
 	}
 
 	focus = {
@@ -8182,12 +8654,19 @@ focus_tree = {
 			change_communist_cadres_opinion = yes
 			update_focus_tree_obsolete_branches = yes
 			newline = yes
-			set_temp_variable = { treasury_change = gdp_total }
-			multiply_temp_variable = { treasury_change = 0.08 }
+			set_temp_variable = { treasury_change = { value = gdp_total multiply = 0.08 } }
 			modify_treasury_effect = yes
 		}
 
-		ai_will_do = { base = 1 }
+		ai_will_do = {
+			base = 1
+			modifier = {
+				factor = 0
+				has_active_mission = bankruptcy_incoming_collapse
+			}
+			modifier = { factor = 25 NKO_ai_historical_path = yes }
+			modifier = { factor = 0 NKO_ai_not_historical_path = yes }
+		}
 	}
 
 	focus = {
@@ -8241,7 +8720,11 @@ focus_tree = {
 			update_focus_tree_obsolete_branches = yes
 		}
 
-		ai_will_do = { base = 1 }
+		ai_will_do = {
+			base = 1
+			modifier = { factor = 25 has_global_flag = NKO_KIM_JONG_NAM_FOCUS_PATH }
+			modifier = { factor = 0 NKO_ai_not_kim_jong_nam_path = yes }
+		}
 	}
 
 	focus = {
@@ -8264,22 +8747,25 @@ focus_tree = {
 				limit = { has_idea = Free_Market_Economy }
 				remove_ideas = Free_Market_Economy
 			}
-			else = {
-				increase_Free_Market_Economy = yes
-			}
+			else = { increase_Free_Market_Economy = yes }
 			if = {
-				limit = {
-					has_idea = NKO_the_private_markets
-				}
+				limit = { has_idea = NKO_the_private_markets }
 				remove_ideas = NKO_the_private_markets
 			}
 			newline = yes
-			set_temp_variable = { treasury_change = gdp_total }
-			multiply_temp_variable = { treasury_change = 0.08 }
+			set_temp_variable = { treasury_change = { value = gdp_total multiply = 0.08 } }
 			modify_treasury_effect = yes
 		}
 
-		ai_will_do = { base = 1 }
+		ai_will_do = {
+			base = 1
+			modifier = {
+				factor = 0
+				has_active_mission = bankruptcy_incoming_collapse
+			}
+			modifier = { factor = 25 NKO_ai_byungjin_path = yes }
+			modifier = { factor = 0 NKO_ai_not_byungjin_path = yes }
+		}
 	}
 
 	focus = {
@@ -8321,7 +8807,11 @@ focus_tree = {
 			add_ideas = NKO_sister_idea
 		}
 
-		ai_will_do = { base = 1 }
+		ai_will_do = {
+			base = 1
+			modifier = { factor = 5 has_global_flag = NKO_MILITARY_JUNTA_FOCUS_PATH }
+			modifier = { factor = 0 NKO_ai_not_military_junta_path = yes }
+		}
 	}
 
 	focus = {
@@ -8353,7 +8843,13 @@ focus_tree = {
 			change_the_donju_opinion = yes
 		}
 
-		ai_will_do = { base = 1 }
+		ai_will_do = {
+			base = 1
+			modifier = {
+				factor = 0
+				NKO_is_pursuing_peaceful_reunification = yes
+			}
+		}
 	}
 
 	focus = {
@@ -8395,7 +8891,6 @@ focus_tree = {
 					level = 1
 				}
 			}
-			newline = yes
 		}
 
 		ai_will_do = {
@@ -8658,7 +9153,13 @@ focus_tree = {
 			}
 		}
 
-		ai_will_do = { base = 1 }
+		ai_will_do = {
+			base = 1
+			modifier = {
+				factor = 2
+				ai_is_threatened = yes
+			}
+		}
 	}
 
 	focus = {
@@ -8714,7 +9215,13 @@ focus_tree = {
 			change_domestic_influence_percentage = yes
 		}
 
-		ai_will_do = { base = 1 }
+		ai_will_do = {
+			base = 1
+			modifier = {
+				factor = 2
+				ai_is_threatened = yes
+			}
+		}
 	}
 
 	focus = {
@@ -8779,6 +9286,10 @@ focus_tree = {
 				factor = 0
 				has_active_mission = bankruptcy_incoming_collapse
 			}
+			modifier = {
+				factor = 2
+				ai_is_threatened = yes
+			}
 		}
 	}
 
@@ -8823,12 +9334,7 @@ focus_tree = {
 				add_war_support = 0.02
 				support_for_reunification_2_less = yes
 			}
-			JAP = {
-				unlock_decision_tooltip = {
-					decision = JAP_north_korean_threats_to_south_korea
-					show_effect_tooltip = yes
-				}
-			}
+			JAP = { unlock_decision_tooltip = JAP_north_korean_threats_to_south_korea }
 		}
 
 		ai_will_do = { base = 1 }
@@ -8899,12 +9405,7 @@ focus_tree = {
 				add_war_support = 0.02
 				support_for_reunification_2_less = yes
 			}
-			JAP = {
-				unlock_decision_tooltip = {
-					decision = JAP_north_korean_increased_nuclear_testing
-					show_effect_tooltip = yes
-				}
-			}
+			JAP = { unlock_decision_tooltip = JAP_north_korean_increased_nuclear_testing }
 		}
 
 		ai_will_do = { base = 1 }
@@ -8987,15 +9488,16 @@ focus_tree = {
 				add_war_support = 0.05
 				support_for_reunification_5_less = yes
 			}
-			JAP = {
-				unlock_decision_tooltip = {
-					decision = JAP_north_korean_remilitarized_dmz
-					show_effect_tooltip = yes
-				}
-			}
+			JAP = { unlock_decision_tooltip = JAP_north_korean_remilitarized_dmz }
 		}
 
-		ai_will_do = { base = 1 }
+		ai_will_do = {
+			base = 1
+			modifier = {
+				factor = 2
+				ai_is_threatened = yes
+			}
+		}
 	}
 
 	focus = {
@@ -9136,7 +9638,13 @@ focus_tree = {
 			modify_treasury_effect = yes
 		}
 
-		ai_will_do = { base = 1 }
+		ai_will_do = {
+			base = 1
+			modifier = {
+				factor = 0
+				has_active_mission = bankruptcy_incoming_collapse
+			}
+		}
 	}
 
 	focus = {
@@ -9155,7 +9663,10 @@ focus_tree = {
 		search_filters = { FOCUS_FILTER_KOREAN_PENINSULA }
 
 		available = {
-			has_government = communism
+			OR = {
+				has_government = communism
+				nationalist_military_junta_are_in_power = yes
+			}
 			has_war = no
 			country_exists = KOR
 			KOR = {
@@ -9175,12 +9686,31 @@ focus_tree = {
 
 		completion_reward = {
 			log = "[GetDateText]: [This.GetName]: Focus NKO_foment_insurrection executed"
-			USA = {
-				country_event = korea_north.1
-			}
+			USA = { country_event = korea_north.1 }
 			custom_effect_tooltip = NKO_rebellion_korea_tt
 			hidden_effect = {
-				NKO_civil_war_south = yes
+				KOR = {
+					start_civil_war = {
+						ideology = communism
+						size = 0.2
+						capital = 604
+						states = { 604 }
+						set_popularities = {
+							democratic = 0
+							neutrality = 0
+							fascism = 0
+							communism = 99
+							nationalist = 1
+						}
+						set_temp_variable = { rul_party_temp = 4 }
+						set_temp_variable = { disable_elections = 1 }
+						change_ruling_party_effect = yes
+						set_temp_variable = { party_index = 4 }
+						set_temp_variable = { party_popularity_multiplier = 1.5 }
+						scale_party_popularity = yes
+						country_event = korea.39
+					}
+				}
 			}
 			custom_effect_tooltip = TT_IF_THEY_ACCEPT
 		}
@@ -9189,16 +9719,14 @@ focus_tree = {
 			base = 10
 			modifier = {
 				factor = 0
-				is_historical_focus_on = yes
-			}
-			modifier = {
-				factor = 0
 				date < 2010.1.1
 			}
 			modifier = {
 				factor = 0
 				KOR = { is_guaranteed_by = USA }
 			}
+			modifier = { factor = 25 has_global_flag = NKO_MILITARY_JUNTA_FOCUS_PATH }
+			modifier = { factor = 0 NKO_ai_not_military_junta_path = yes }
 		}
 	}
 
@@ -9218,7 +9746,10 @@ focus_tree = {
 		search_filters = { FOCUS_FILTER_KOREAN_PENINSULA }
 
 		available = {
-			has_government = communism
+			OR = {
+				has_government = communism
+				nationalist_military_junta_are_in_power = yes
+			}
 			has_war = no
 			OR = {
 				AND = {
@@ -9255,7 +9786,11 @@ focus_tree = {
 			set_country_flag = KOR_proposed_south_reunification
 		}
 
-		ai_will_do = { base = 1 }
+		ai_will_do = {
+			base = 1
+			modifier = { factor = 25 has_global_flag = NKO_MILITARY_JUNTA_FOCUS_PATH }
+			modifier = { factor = 0 NKO_ai_not_military_junta_path = yes }
+		}
 	}
 
 	focus = {
@@ -9277,7 +9812,7 @@ focus_tree = {
 			log = "[GetDateText]: [This.GetName]: focus NKO_happiest_people_in_world executed"
 		}
 
-	ai_will_do = { base = 1 }
+		ai_will_do = { base = 1 }
 	}
 
 	shared_focus = KOR_joint_peace

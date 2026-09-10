@@ -93,7 +93,6 @@ PER_artesh_modifier = {
 	truck_attrition_factor = PER_truck_attrition_factor
 	justify_war_goal_time = PER_justify_war_goal_time
 	military_factories_productivity = PER_military_factories_productivity
-	max_commander_army_size = PER_max_commander_army_size
 	air_volunteer_cap = PER_air_volunteer_cap
 	equipment_cost_multiplier_modifier = PER_equipment_cost_multiplier_modifier
 	army_morale_factor = PER_army_morale_factor
@@ -167,9 +166,6 @@ PER_political_modifier = {
 
 PER_us_sanctions = {
 	icon = GFX_idea_inflation4
-	enable = {
-		country_exists = USA
-	}
 	trade_opinion_factor = PER_sanction_trade_opinion_factor
 	oil_export_multiplier_modifier = PER_sanction_oil_export_multiplier_modifier
 	trade_laws_cost_factor = PER_sanction_trade_laws_cost_factor

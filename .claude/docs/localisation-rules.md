@@ -18,7 +18,7 @@
 - Keys use **no trailing version number**: `key: "value"`, not `key:0 "value"`.
 - Key naming mirrors the script ID exactly (e.g., focus `SER_free_market_capitalism` → `SER_free_market_capitalism: "..."`, `SER_free_market_capitalism_desc: "..."`).
 - Focus/decision/event keys: `ID`, `ID_desc` (tooltip body). Events also need `ID.t` (title), `ID.d` (description), and `ID.a`, `ID.b`, … (option names).
-- Every new script object (focus, decision, event, idea, MIO, subideology) needs matching loc keys before it goes in.
+- Every new script object (focus, decision, event, idea, MIO, subideology) needs matching loc keys before it goes in. The one exception is an **AI-only decision** — one no human player can ever see — which takes no keys at all, and is flagged if it has any (`.claude/docs/decision-reference.md`).
 - Undefined `[variable]` substitutions: every `[Foo.GetBar]` or `[my_var]` must correspond to a real scope getter or set variable. A missing or misspelled getter renders as an empty string or literal `[variable_name]` in-game.
 
 ## Writing Style
@@ -29,8 +29,29 @@
 - **No ellipsis abuse.** Do not use `...` in descriptions or tooltips.
 - **No em dashes** (`—`) in player-facing strings. Use a period when the clause stands alone ("Their economy answers to us. Their borders remain intact."), a comma for a participial phrase ("...transfers weekly, appearing as a new expense..."), or a colon to introduce a list or requirement ("Requires war contribution: one battle won or three months at war."). Em dashes read as soft connectors and almost always replace one of those three.
 - Capitalize proper nouns, party names, ideology group names, and in-game concepts (e.g., Political Power, Stability).
-- No all-caps for emphasis; use in-game formatting codes if needed (e.g., `£icon`, `§Y...§!`).
+- No all-caps for emphasis; use in-game formatting codes if needed (e.g., `£icon`, `§Y...§!`). Which color code to reach for is fixed — see [Color Codes](#color-codes).
 - **No padding filler.** Every sentence should carry real information — founding facts, political orientation, mechanical implication, alignment. Sentences that restate the title or fill space with "the party has remained influential over the years" add nothing. Applies to subideology descs, focus descs, idea descs, event flavour, and option text alike.
+
+## Color Codes
+
+A color code is `§X`, closed by `§!`. The mod uses **three** of them, chosen by what the text means, never by taste:
+
+| Code | Use for                                                                      |
+| ---- | ---------------------------------------------------------------------------- |
+| `§Y` | a key term, proper noun, programme name, or a `[TAG.GetNameWithFlag]` getter |
+| `§G` | a positive outcome: a gain, a bonus, a granted capability                    |
+| `§R` | a negative outcome: a cost, a malus, or a mechanical warning                 |
+
+Rules:
+
+- **Focus titles take no color at all.** The node's own frame already conveys state, so a colored title only competes with it. Color belongs in the description and the tooltip.
+- `§H` renders the identical RGB to `§Y` (`255 189 0` in `interface/core.gfx`). Write `§Y`.
+- The `§0`–`§9` gradient codes exist for graph series. Never use them in prose.
+- Do not build a per-country palette (a color per political party, per branch, per coup path). It reads as noise once a player moves between trees.
+- Colour only the term that carries the meaning, not the whole sentence.
+- One exception: text that **names a color the player can see elsewhere** picks the code matching that rendered color. `GCC_map_mode_tooltip_delayed` labels its map-mode legend `§CTeal§!` because the map really is teal.
+
+Enforced for focus name and `_desc` keys by `validate_focus_tree.py` (`focus-title-color-code`, `focus-desc-color-palette`).
 
 ## Subideology Localisation Format
 
@@ -98,22 +119,22 @@ Hits in both `common/national_focus/` and `common/ideas/` for the same KEY = ren
 
 ## Common Mistakes to Avoid
 
-| Wrong                                                                   | Correct                                                                     |
-| ----------------------------------------------------------------------- | --------------------------------------------------------------------------- |
-| `key:0 "value"`                                                         | `key: "value"`                                                              |
-| `...` trailing sentences                                                | End with a full stop                                                        |
-| `Pro-Western` mid-sentence as a standalone noun                         | `pro-Western` (adjective)                                                   |
-| Repeating the same sentence across multiple ideology descs              | Unique body per entry                                                       |
-| Empty or placeholder strings like `"TODO"`                              | Always provide a complete string                                            |
-| `"text "quoted word" more text"`                                        | `"text \"quoted word\" more text"`                                          |
-| Mixed indented/non-indented keys in same file                           | All keys at same indentation level                                          |
-| Backtick `` ` `` as apostrophe: ``"we`ll"``                             | `"we'll"` — use the real apostrophe                                         |
-| Cyrillic lookalike characters (e.g., `С`, `а`, `е`) in English text     | Latin equivalents — run a non-ASCII check                                   |
-| Non-English text in `*_l_english.yml` (French, Russian, Spanish titles) | Full English translation                                                    |
-| Duplicate keys in the same `.yml` file                                  | Remove the earlier duplicate; keep only one definition per key              |
-| Wrong color-code prefix, e.g. `§RY` (stray extra character)             | `§R` then text immediately — no stray character between code and content    |
-| Copy-pasted country-specific flavour text left unreplaced               | Update every reference to the original country's name, demonym, and culture |
-| Lowercase scope keywords: `[From.GetName]`, `[Root.GetName]`            | Always uppercase: `[FROM.GetName]`, `[ROOT.GetName]`, `[THIS.GetName]`      |
+Each entry is wrong form → correct form:
+
+- `key:0 "value"` → `key: "value"`
+- `...` trailing sentences → end with a full stop
+- `Pro-Western` mid-sentence as a standalone noun → `pro-Western` (adjective)
+- Repeating the same sentence across multiple ideology descs → unique body per entry
+- Empty or placeholder strings like `"TODO"` → always provide a complete string
+- `"text "quoted word" more text"` → `"text \"quoted word\" more text"`
+- Mixed indented/non-indented keys in same file → all keys at same indentation level
+- Backtick `` ` `` as apostrophe (``"we`ll"``) → `"we'll"` — use the real apostrophe
+- Cyrillic lookalike characters (e.g., `С`, `а`, `е`) in English text → Latin equivalents; run a non-ASCII check
+- Non-English text in `*_l_english.yml` (French, Russian, Spanish titles) → full English translation
+- Duplicate keys in the same `.yml` file → remove the earlier duplicate; keep only one definition per key
+- Wrong color-code prefix, e.g. `§RY` (stray extra character) → `§R` then text immediately, no stray character between code and content
+- Copy-pasted country-specific flavour text left unreplaced → update every reference to the original country's name, demonym, and culture
+- Lowercase scope keywords `[From.GetName]`, `[Root.GetName]` → always uppercase: `[FROM.GetName]`, `[ROOT.GetName]`, `[THIS.GetName]`
 
 ## Recurring Typos
 

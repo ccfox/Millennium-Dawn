@@ -10,15 +10,6 @@ country_event = {
 	picture = GFX_negotiations
 	is_triggered_only = yes
 
-	immediate = {
-		hidden_effect = {
-			save_event_target_as = fta_applicant
-			FROM = {
-				save_event_target_as = fta_inviter
-			}
-		}
-	}
-
 	option = { #Agree
 		name = md4.1.a
 		log = "[GetDateText]: [This.GetName]: md4.1.a executed"
@@ -48,7 +39,7 @@ country_event = {
 	option = { #Refuse
 		name = md4.1.b
 		log = "[GetDateText]: [This.GetName]: md4.1.b executed"
-		ai_chance = { factor = 0 }
+		ai_chance = { base = 0 }
 		FROM = {
 			country_event = { id = md4.3 hours = 6 }
 			add_opinion_modifier = {
@@ -70,7 +61,6 @@ country_event = {
 
 	option = {
 		name = md4.2.a
-		log = "[GetDateText]: [This.GetName]: md4.2.a executed"
 	}
 
 }
@@ -85,7 +75,6 @@ country_event = {
 
 	option = {
 		name = md4.3.a
-		log = "[GetDateText]: [This.GetName]: md4.3.a executed"
 	}
 
 }
@@ -124,13 +113,13 @@ country_event = {
 		army_experience = 25
 		add_command_power = 15
 		add_tech_bonus = {
-			name = EGY_spec_weap
+			name = md4.4.t
 			uses = 1
 			bonus = 0.25
 			category = Cat_SPECIAL_FORCES
 		}
 		add_doctrine_cost_reduction = {
-			name = EGY_exer
+			name = md4.4.t
 			category = Cat_land_doctrine
 			uses = 1
 			cost_reduction = 0.25
@@ -145,7 +134,7 @@ country_event = {
 	option = { #Refuse
 		name = md4.4.b
 		log = "[GetDateText]: [This.GetName]: md4.4.b executed"
-		ai_chance = { factor = 0 }
+		ai_chance = { base = 0 }
 		FROM = {
 			country_event = { id = md4.6 hours = 6 }
 			add_opinion_modifier = {
@@ -172,13 +161,13 @@ country_event = {
 		army_experience = 25
 		add_command_power = 15
 		add_tech_bonus = {
-			name = EGY_spec_weap
+			name = md4.5.t
 			uses = 1
 			bonus = 0.25
 			category = Cat_SPECIAL_FORCES
 		}
 		add_doctrine_cost_reduction = {
-			name = EGY_exer
+			name = md4.5.t
 			category = Cat_land_doctrine
 			uses = 1
 			cost_reduction = 0.25
@@ -197,7 +186,6 @@ country_event = {
 
 	option = {
 		name = md4.6.a
-		log = "[GetDateText]: [This.GetName]: md4.6.a executed"
 	}
 
 }
@@ -321,7 +309,7 @@ country_event = {
 	option = { #Reject
 		name = generic.5.f
 		log = "[GetDateText]: [This.GetName]: generic.5.f executed"
-		ai_chance = { factor = 0 }
+		ai_chance = { base = 0 }
 		FROM = {
 			country_event = { id = generic.7 hours = 6 }
 		}
@@ -339,7 +327,6 @@ country_event = {
 
 	option = {
 		name = generic.6.a
-		log = "[GetDateText]: [This.GetName]: generic.6.a executed"
 		trigger = {
 			FROM = {
 				has_government = democratic
@@ -350,7 +337,6 @@ country_event = {
 
 	option = {
 		name = generic.6.b
-		log = "[GetDateText]: [This.GetName]: generic.6.b executed"
 		trigger = {
 			FROM = {
 				has_government = fascism
@@ -361,7 +347,6 @@ country_event = {
 
 	option = {
 		name = generic.6.c
-		log = "[GetDateText]: [This.GetName]: generic.6.c executed"
 		trigger = {
 			FROM = {
 				has_government = communism
@@ -372,7 +357,6 @@ country_event = {
 
 	option = {
 		name = generic.6.e
-		log = "[GetDateText]: [This.GetName]: generic.6.e executed"
 		trigger = {
 			NOT = {
 				has_government = FROM
@@ -392,7 +376,6 @@ country_event = {
 
 	option = {
 		name = generic.7.a
-		log = "[GetDateText]: [This.GetName]: generic.7.a executed"
 		trigger = {
 			FROM = {
 				has_government = democratic
@@ -403,7 +386,6 @@ country_event = {
 
 	option = {
 		name = generic.7.b
-		log = "[GetDateText]: [This.GetName]: generic.7.b executed"
 		trigger = {
 			FROM = {
 				has_government = fascism
@@ -414,7 +396,6 @@ country_event = {
 
 	option = {
 		name = generic.7.c
-		log = "[GetDateText]: [This.GetName]: generic.7.c executed"
 		trigger = {
 			FROM = {
 				has_government = communism
@@ -425,7 +406,6 @@ country_event = {
 
 	option = {
 		name = generic.7.e
-		log = "[GetDateText]: [This.GetName]: generic.7.e executed"
 		trigger = {
 			NOT = {
 				has_government = FROM
@@ -450,7 +430,7 @@ country_event = {
 		name = md4.14.a
 		log = "[GetDateText]: [This.GetName]: md4.14.a executed"
 		ai_chance = {
-			factor = 60
+			base = 60
 			modifier = {
 				factor = 1.5
 				strength_ratio = {
@@ -485,7 +465,7 @@ country_event = {
 		name = md4.14.b
 		log = "[GetDateText]: [This.GetName]: md4.14.b executed"
 		ai_chance = {
-			factor = 40
+			base = 40
 			modifier = {
 				factor = 0.25
 				strength_ratio = {
@@ -566,7 +546,7 @@ country_event = {
 	option = {
 		name = md4.17.a
 		log = "[GetDateText]: [This.GetName]: md4.17.a executed"
-		ai_chance = { factor = 100 }
+		ai_chance = { base = 100 }
 		if = {
 			limit = {
 				is_in_faction = yes
@@ -640,7 +620,7 @@ country_event = {
 	option = {
 		name = md4.18.a
 		log = "[GetDateText]: [This.GetName]: md4.18.a executed"
-		ai_chance = { factor = 100 }
+		ai_chance = { base = 100 }
 		add_opinion_modifier = {
 			target = ROOT
 			modifier = insult
@@ -660,7 +640,7 @@ country_event = {
 	option = {
 		name = md4.19.a
 		log = "[GetDateText]: [This.GetName]: md4.19.a executed"
-		ai_chance = { factor = 100 }
+		ai_chance = { base = 100 }
 		FROM = {
 			every_state = {
 				limit = { has_state_flag = SET_STATE_FOR_TRANSFER }
@@ -688,7 +668,7 @@ country_event = {
 	option = {
 		name = md4.20.a
 		log = "[GetDateText]: [This.GetName]: md4.20.a executed"
-		ai_chance = { factor = 100 }
+		ai_chance = { base = 100 }
 		FROM = {
 			every_state = {
 				limit = { has_state_flag = SET_STATE_FOR_TRANSFER }
@@ -749,7 +729,7 @@ country_event = {
 	option = { #Refuse
 		name = md4.21.b
 		log = "[GetDateText]: [This.GetName]: md4.21.b executed"
-		ai_chance = { factor = 0 }
+		ai_chance = { base = 0 }
 		FROM = {
 			country_event = { id = md4.23 hours = 6 }
 			add_opinion_modifier = {
@@ -771,7 +751,6 @@ country_event = {
 
 	option = {
 		name = md4.22.a
-		log = "[GetDateText]: [This.GetName]: md4.22.a executed"
 	}
 
 }
@@ -786,7 +765,6 @@ country_event = {
 
 	option = {
 		name = md4.23.a
-		log = "[GetDateText]: [This.GetName]: md4.23.a executed"
 	}
 
 }

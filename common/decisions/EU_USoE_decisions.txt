@@ -48,9 +48,7 @@ EU_USoE_category = {
 				limit = {
 					has_government = democratic
 					NOT = {
-						FROM = {
-							has_government = democratic
-						}
+						FROM = { has_government = PREV }
 					}
 				}
 				set_temp_variable = { wargoal_on = FROM }
@@ -96,17 +94,22 @@ EU_USoE_category = {
 
 		complete_effect = {
 			log = "[GetDateText]: [Root.GetName]: Decision EU_USoE_create_eurosphere_decision"
-			every_country = {
-				limit = {
-					capital_scope = {
-						OR = {
-							is_on_continent = europe
-							is_on_continent = africa
-							is_on_continent = middle_east
+			every_collection_element = {
+				input = {
+					input = game:all_countries
+					operators = {
+						limit = {
+							capital_scope = {
+								OR = {
+									is_on_continent = europe
+									is_on_continent = africa
+									is_on_continent = middle_east
+								}
+							}
+							is_neighbor_of = PREV
+							influence_higher_50 = yes
 						}
 					}
-					is_neighbor_of = PREV
-					influence_higher_50 = yes
 				}
 				custom_effect_tooltip = tooltip_create_eurosphere
 				set_temp_variable = { percent_change = 2 }
@@ -552,8 +555,7 @@ EU_environmental_imperialism_category = {
 		allowed = { always = yes }
 
 		available = {
-			set_temp_variable = { a = num_owned_states }
-			subtract_from_temp_variable = { a = 1 }
+			set_temp_variable = { a = { value = num_owned_states subtract = 1 } }
 			renewable_energy_infra > a
 		}
 
@@ -680,20 +682,24 @@ EU_environmental_imperialism_category = {
 				create_faction_from_template = faction_template_fep
 				set_global_flag = fossil_energy_pact
 				set_country_flag = fossil_energy_pact
+				add_to_array = { global.fossil_energy_pact_members = THIS }
 			}
 			else_if = {
 				limit = {
 					has_global_flag = fossil_energy_pact
 					NOT = { is_in_faction = yes }
+					NOT = { is_in_array = { global.fossil_energy_pact_members = THIS } }
 				}
-				random_country = {
+				random_scope_in_array = {
+					array = global.fossil_energy_pact_members
 					limit = {
 						has_country_flag = fossil_energy_pact
 						is_faction_leader = yes
 					}
-					THIS = { add_to_faction = ROOT }
+					add_to_faction = ROOT
 				}
 				set_country_flag = fossil_energy_pact
+				add_to_array = { global.fossil_energy_pact_members = THIS }
 			}
 		}
 
@@ -708,7 +714,10 @@ EU_environmental_imperialism_category = {
 			}
 			modifier = {
 				add = 1
-				any_country = {
+				any_of_scopes = {
+					array = global.fossil_energy_pact_members
+					exists = yes
+					NOT = { tag = ROOT }
 					has_country_flag = fossil_energy_pact
 					is_faction_leader = yes
 					strength_ratio = { tag = FROM ratio > 0.5 }
@@ -720,7 +729,9 @@ EU_environmental_imperialism_category = {
 			}
 			modifier = {
 				add = 1
-				any_country = {
+				any_of_scopes = {
+					array = global.fossil_energy_pact_members
+					exists = yes
 					has_country_flag = fossil_energy_pact
 					is_faction_leader = yes
 					strength_ratio = { tag = FROM ratio > 0.7 }

@@ -2775,6 +2775,7 @@ PER_resitance_axis = {
 						set_country_flag = OMA_QIM
 						copy_tag = OMA
 						set_cosmetic_tag = OMA_AUTH
+						set_variable = { dynamic_flag_variant = 2 }
 						set_popularities = {
 							communism = 100
 						}
@@ -2787,7 +2788,7 @@ PER_resitance_axis = {
 						start_politics_input = yes
 						set_variable = { party_pop_array^9 = 1 } #Vilayat_e_Faqih -> Principalists
 						### Ruling Party
-						add_to_array = { ruling_party = 9 }
+						set_variable = { ruling_party = 9 }
 						startup_politics = yes
 					}
 					1082 = {
@@ -3806,9 +3807,7 @@ PER_domestic_politics = {
 
 		remove_effect = {
 			log = "[GetDateText]: [Root.GetName]: Decision PER_utilize_party_support"
-			remove_dynamic_modifier = {
-				modifier = PER_pan_iranist_attack
-			}
+			if = { limit = { has_dynamic_modifier = { modifier = PER_pan_iranist_attack } } remove_dynamic_modifier = { modifier = PER_pan_iranist_attack } }
 		}
 
 		ai_will_do = {
@@ -3852,9 +3851,7 @@ PER_domestic_politics = {
 				}
 			}
 			979 = {
-				remove_dynamic_modifier = {
-					modifier = PER_kurd_separatism
-				}
+				if = { limit = { has_dynamic_modifier = { modifier = PER_kurd_separatism } } remove_dynamic_modifier = { modifier = PER_kurd_separatism } }
 				create_unit = {
 					division = "name = \"1st. Lêşkerî Azadî\" division_template = \"Lêşkerî Rojhelat\" start_experience_factor = 1.0 start_equipment_factor = 0.8"
 					owner = IKR
@@ -3877,9 +3874,7 @@ PER_domestic_politics = {
 				}
 			}
 			408 = {
-				remove_dynamic_modifier = {
-					modifier = PER_kurd_separatism
-				}
+				if = { limit = { has_dynamic_modifier = { modifier = PER_kurd_separatism } } remove_dynamic_modifier = { modifier = PER_kurd_separatism } }
 				create_unit = {
 					division = "name = \"5th. Şoreşgeranî Welat\" division_template = \"Lêşkerî Rojhelat\" start_experience_factor = 1.0 start_equipment_factor = 0.8"
 					owner = IKR
@@ -3902,9 +3897,7 @@ PER_domestic_politics = {
 				}
 			}
 			1139 = {
-				remove_dynamic_modifier = {
-					modifier = PER_kurd_separatism
-				}
+				if = { limit = { has_dynamic_modifier = { modifier = PER_kurd_separatism } } remove_dynamic_modifier = { modifier = PER_kurd_separatism } }
 				create_unit = {
 					division = "name = \"9th. Lêşkerî Dersim\" division_template = \"Lêşkerî Rojhelat\" start_experience_factor = 1.0 start_equipment_factor = 0.8"
 					owner = IKR
@@ -4269,13 +4262,13 @@ PER_Iranian_prime_ministers_elections = {
 		complete_effect = {
 			log = "[GetDateText]: [Root.GetName]: Decision PER_appoint_hashem_sabbaghian"
 			clr_country_flag = PER_minister_selection
-			hidden_effect = {
-				add_ideas = PER_sabbaghian_idea
-			}
 			# Clear current Prime Minister
 			PER_minister_clear = yes
 			# Prime Minister Flag
 			set_country_flag = PER_hashem_sabbaghian_minister
+			hidden_effect = {
+				add_ideas = PER_sabbaghian_idea
+			}
 			# Update GUI
 			add_to_variable = { iranian_president_change = 1 }
 			custom_effect_tooltip = PER_sabbaghian_gets_appointed
@@ -4308,13 +4301,13 @@ PER_Iranian_prime_ministers_elections = {
 		complete_effect = {
 			log = "[GetDateText]: [Root.GetName]: Decision PER_appoint_mohammad_tavasoli"
 			clr_country_flag = PER_minister_selection
-			hidden_effect = {
-				add_ideas = PER_tavasoli_idea
-			}
 			# Clear current Prime Minister
 			PER_minister_clear = yes
 			# Prime Minister Flag
 			set_country_flag = PER_mohammad_tavasoli_minister
+			hidden_effect = {
+				add_ideas = PER_tavasoli_idea
+			}
 			# Update GUI
 			add_to_variable = { iranian_president_change = 1 }
 			custom_effect_tooltip = PER_tavasoli_gets_appointed
@@ -4347,13 +4340,13 @@ PER_Iranian_prime_ministers_elections = {
 		complete_effect = {
 			log = "[GetDateText]: [Root.GetName]: Decision PER_appoint_mostafa_moein"
 			clr_country_flag = PER_minister_selection
-			hidden_effect = {
-				add_ideas = PER_moein_idea
-			}
 			# Clear current Prime Minister
 			PER_minister_clear = yes
 			# Prime Minister Flag
 			set_country_flag = PER_mostafa_moein_minister
+			hidden_effect = {
+				add_ideas = PER_moein_idea
+			}
 			# Update GUI
 			add_to_variable = { iranian_president_change = 1 }
 			custom_effect_tooltip = PER_moein_gets_appointed
@@ -4385,13 +4378,13 @@ PER_Iranian_prime_ministers_elections = {
 		complete_effect = {
 			log = "[GetDateText]: [Root.GetName]: Decision PER_appoint_mostafa_tajzade"
 			clr_country_flag = PER_minister_selection
-			hidden_effect = {
-				add_ideas = PER_tajzade_idea
-			}
 			# Clear current Prime Minister
 			PER_minister_clear = yes
 			# Prime Minister Flag
 			set_country_flag = PER_mostafa_tajzade_minister
+			hidden_effect = {
+				add_ideas = PER_tajzade_idea
+			}
 			# Update GUI
 			add_to_variable = { iranian_president_change = 1 }
 			custom_effect_tooltip = PER_tajzade_gets_appointed
@@ -4425,13 +4418,13 @@ PER_Iranian_prime_ministers_elections = {
 		complete_effect = {
 			log = "[GetDateText]: [Root.GetName]: Decision PER_appoint_hedayatollah_matin_daftari"
 			clr_country_flag = PER_minister_selection
-			hidden_effect = {
-				add_ideas = PER_matin_idea
-			}
 			# Clear current Prime Minister
 			PER_minister_clear = yes
 			# Prime Minister Flag
 			set_country_flag = PER_hedayatollah_matin_minister
+			hidden_effect = {
+				add_ideas = PER_matin_idea
+			}
 			# Update GUI
 			add_to_variable = { iranian_president_change = 1 }
 			custom_effect_tooltip = PER_daftari_gets_appointed
@@ -4464,13 +4457,13 @@ PER_Iranian_prime_ministers_elections = {
 		complete_effect = {
 			log = "[GetDateText]: [Root.GetName]: Decision PER_appoint_seyed_hasan_amin"
 			clr_country_flag = PER_minister_selection
-			hidden_effect = {
-				add_ideas = PER_amin_idea
-			}
 			# Clear current Prime Minister
 			PER_minister_clear = yes
 			# Prime Minister Flag
 			set_country_flag = PER_seyed_hassan_minister
+			hidden_effect = {
+				add_ideas = PER_amin_idea
+			}
 			# Update GUI
 			add_to_variable = { iranian_president_change = 1 }
 			custom_effect_tooltip = PER_seyed_gets_appointed
@@ -4503,13 +4496,13 @@ PER_Iranian_prime_ministers_elections = {
 		complete_effect = {
 			log = "[GetDateText]: [Root.GetName]: Decision PER_appoint_ali_khavari"
 			clr_country_flag = PER_minister_selection
-			hidden_effect = {
-				add_ideas = PER_khavari_idea
-			}
 			# Clear current Prime Minister
 			PER_minister_clear = yes
 			# Prime Minister Flag
 			set_country_flag = PER_ali_khavari_minister
+			hidden_effect = {
+				add_ideas = PER_khavari_idea
+			}
 			# Update GUI
 			add_to_variable = { iranian_president_change = 1 }
 			custom_effect_tooltip = PER_khavari_gets_appointed
@@ -4542,13 +4535,13 @@ PER_Iranian_prime_ministers_elections = {
 		complete_effect = {
 			log = "[GetDateText]: [Root.GetName]: Decision PER_appoint_hashem_aghajari"
 			clr_country_flag = PER_minister_selection
-			hidden_effect = {
-				add_ideas = PER_aghajari_idea
-			}
 			# Clear current Prime Minister
 			PER_minister_clear = yes
 			# Prime Minister Flag
 			set_country_flag = PER_hashem_aghajari_minister
+			hidden_effect = {
+				add_ideas = PER_aghajari_idea
+			}
 			# Update GUI
 			add_to_variable = { iranian_president_change = 1 }
 			custom_effect_tooltip = PER_aghajari_gets_appointed
@@ -4581,13 +4574,13 @@ PER_Iranian_prime_ministers_elections = {
 		complete_effect = {
 			log = "[GetDateText]: [Root.GetName]: Decision PER_appoint_mohsen_makhmalbaf"
 			clr_country_flag = PER_minister_selection
-			hidden_effect = {
-				add_ideas = PER_makhmalbaf_idea
-			}
 			# Clear current Prime Minister
 			PER_minister_clear = yes
 			# Prime Minister Flag
 			set_country_flag = PER_mohsen_makhmalbaf_minister
+			hidden_effect = {
+				add_ideas = PER_makhmalbaf_idea
+			}
 			# Update GUI
 			add_to_variable = { iranian_president_change = 1 }
 			custom_effect_tooltip = PER_makhmalbaf_gets_appointed
@@ -4621,13 +4614,13 @@ PER_Iranian_prime_ministers_elections = {
 		complete_effect = {
 			log = "[GetDateText]: [Root.GetName]: Decision PER_appoint_abdolali_bazargan"
 			clr_country_flag = PER_minister_selection
-			hidden_effect = {
-				add_ideas = PER_bazargan_idea
-			}
 			# Clear current Prime Minister
 			PER_minister_clear = yes
 			# Prime Minister Flag
 			set_country_flag = PER_abdolali_bazargan_minister
+			hidden_effect = {
+				add_ideas = PER_bazargan_idea
+			}
 			# Update GUI
 			add_to_variable = { iranian_president_change = 1 }
 			custom_effect_tooltip = PER_bazargan_gets_appointed
@@ -4660,13 +4653,13 @@ PER_Iranian_prime_ministers_elections = {
 		complete_effect = {
 			log = "[GetDateText]: [Root.GetName]: Decision PER_appoint_amir_etemadi"
 			clr_country_flag = PER_minister_selection
-			hidden_effect = {
-				add_ideas = PER_etemadi_idea
-			}
 			# Clear current Prime Minister
 			PER_minister_clear = yes
 			# Prime Minister Flag
 			set_country_flag = PER_amir_etemadi_minister
+			hidden_effect = {
+				add_ideas = PER_etemadi_idea
+			}
 			# Update GUI
 			add_to_variable = { iranian_president_change = 1 }
 			custom_effect_tooltip = PER_etemadi_gets_appointed
@@ -4699,13 +4692,13 @@ PER_Iranian_prime_ministers_elections = {
 		complete_effect = {
 			log = "[GetDateText]: [Root.GetName]: Decision PER_appoint_hassan_shariatmadari"
 			clr_country_flag = PER_minister_selection
-			hidden_effect = {
-				add_ideas = PER_shariatmadari_idea
-			}
 			# Clear current Prime Minister
 			PER_minister_clear = yes
 			# Prime Minister Flag
 			set_country_flag = PER_hassan_shariatmadari_minister
+			hidden_effect = {
+				add_ideas = PER_shariatmadari_idea
+			}
 			# Update GUI
 			add_to_variable = { iranian_president_change = 1 }
 			custom_effect_tooltip = PER_shariatmadari_gets_appointed
@@ -4738,13 +4731,13 @@ PER_Iranian_prime_ministers_elections = {
 		complete_effect = {
 			log = "[GetDateText]: [Root.GetName]: Decision PER_appoint_roozbeh_farahinpour"
 			clr_country_flag = PER_minister_selection
-			hidden_effect = {
-				add_ideas = PER_farahanipour_idea
-			}
 			# Clear current Prime Minister
 			PER_minister_clear = yes
 			# Prime Minister Flag
 			set_country_flag = PER_roozbeh_farahinpour_minister
+			hidden_effect = {
+				add_ideas = PER_farahanipour_idea
+			}
 			# Update GUI
 			add_to_variable = { iranian_president_change = 1 }
 			custom_effect_tooltip = PER_farahanipour_gets_appointed
@@ -4778,13 +4771,13 @@ PER_Iranian_prime_ministers_elections = {
 		complete_effect = {
 			log = "[GetDateText]: [Root.GetName]: Decision PER_appoint_abulqasem_porhashmi"
 			clr_country_flag = PER_minister_selection
-			hidden_effect = {
-				add_ideas = PER_porhashmi_idea
-			}
 			# Clear current Prime Minister
 			PER_minister_clear = yes
 			# Prime Minister Flag
 			set_country_flag = PER_abulqasem_porhashmi_minister
+			hidden_effect = {
+				add_ideas = PER_porhashmi_idea
+			}
 			# Update GUI
 			add_to_variable = { iranian_president_change = 1 }
 			custom_effect_tooltip = PER_porhashmi_gets_appointed
@@ -4817,13 +4810,13 @@ PER_Iranian_prime_ministers_elections = {
 		complete_effect = {
 			log = "[GetDateText]: [Root.GetName]: Decision PER_appoint_alireza_kiani"
 			clr_country_flag = PER_minister_selection
-			hidden_effect = {
-				add_ideas = PER_kiani_idea
-			}
 			# Clear current Prime Minister
 			PER_minister_clear = yes
 			# Prime Minister Flag
 			set_country_flag = PER_alireza_kiani_minister
+			hidden_effect = {
+				add_ideas = PER_kiani_idea
+			}
 			# Update GUI
 			add_to_variable = { iranian_president_change = 1 }
 			custom_effect_tooltip = PER_kiani_gets_appointed
@@ -4856,13 +4849,13 @@ PER_Iranian_prime_ministers_elections = {
 		complete_effect = {
 			log = "[GetDateText]: [Root.GetName]: Decision PER_appoint_hamed_sheibanyard"
 			clr_country_flag = PER_minister_selection
-			hidden_effect = {
-				add_ideas = PER_rahmani_idea
-			}
 			# Clear current Prime Minister
 			PER_minister_clear = yes
 			# Prime Minister Flag
 			set_country_flag = PER_ezatollah_sahabi_minister
+			hidden_effect = {
+				add_ideas = PER_rahmani_idea
+			}
 			# Update GUI
 			add_to_variable = { iranian_president_change = 1 }
 			custom_effect_tooltip = PER_sheibanyard_gets_appointed
@@ -4895,13 +4888,13 @@ PER_Iranian_prime_ministers_elections = {
 		complete_effect = {
 			log = "[GetDateText]: [Root.GetName]: Decision PER_appoint_reza_pirzadeh"
 			clr_country_flag = PER_minister_selection
-			hidden_effect = {
-				add_ideas = PER_zahedi_idea
-			}
 			# Clear current Prime Minister
 			PER_minister_clear = yes
 			# Prime Minister Flag
 			set_country_flag = PER_reza_pirzadeh_minister
+			hidden_effect = {
+				add_ideas = PER_zahedi_idea
+			}
 			# Update GUI
 			add_to_variable = { iranian_president_change = 1 }
 			custom_effect_tooltip = PER_pirzadeh_gets_appointed
@@ -4926,6 +4919,7 @@ PER_Iranian_prime_ministers_elections = {
 		cost = 125
 		visible = {
 			has_country_flag = PER_minister_selection
+			has_completed_focus = PER_reshuffle_the_deck
 			NOT = {
 				has_country_flag = PER_foad_pashei_minister
 			}
@@ -4935,13 +4929,13 @@ PER_Iranian_prime_ministers_elections = {
 		complete_effect = {
 			log = "[GetDateText]: [Root.GetName]: Decision PER_appoint_jamshid_amouzegar"
 			clr_country_flag = PER_minister_selection
-			hidden_effect = {
-				add_ideas = PER_jamshid_amouzegar_idea
-			}
 			# Clear current Prime Minister
 			PER_minister_clear = yes
 			# Prime Minister Flag
 			set_country_flag = PER_foad_pashei_minister
+			hidden_effect = {
+				add_ideas = PER_jamshid_amouzegar_idea
+			}
 			# Update GUI
 			add_to_variable = { iranian_president_change = 1 }
 			custom_effect_tooltip = PER_amouzegar_gets_appointed
@@ -6078,12 +6072,7 @@ PER_new_majlis = {
 	}
 	PER_accept_constitutionalists_proposal = {
 		visible = {
-			has_country_flag = PER_debate_ongoing
-			emerging_hardline_shiite_are_in_power = no
-			emerging_moderate_shiite_are_in_power = no
-			NOT = {
-				has_country_flag = PER_doing_proposal
-			}
+			PER_majlis_non_ir_proposal_visible = yes
 			OR = {
 				check_variable = { PER_majlis_seats^0 > 1 }
 				check_variable = { PER_majlis_seats^2 > 1 }
@@ -6095,8 +6084,7 @@ PER_new_majlis = {
 
 		complete_effect = {
 			log = "[GetDateText]: [Root.GetName]: Decision PER_accept_constitutionalists_proposal"
-			set_country_flag = PER_doing_proposal
-			clr_country_flag = PER_debate_ongoing
+			PER_majlis_begin_proposal = yes
 			country_event = PER_majlis.10
 		}
 
@@ -6106,12 +6094,7 @@ PER_new_majlis = {
 	}
 	PER_accept_west_conservatives_proposal = {
 		visible = {
-			has_country_flag = PER_debate_ongoing
-			emerging_hardline_shiite_are_in_power = no
-			emerging_moderate_shiite_are_in_power = no
-			NOT = {
-				has_country_flag = PER_doing_proposal
-			}
+			PER_majlis_non_ir_proposal_visible = yes
 			OR = {
 				check_variable = { PER_majlis_seats^1 > 1 }
 				check_variable = { PER_majlis_seats^14 > 1 }
@@ -6123,8 +6106,7 @@ PER_new_majlis = {
 
 		complete_effect = {
 			log = "[GetDateText]: [Root.GetName]: Decision PER_accept_west_conservatives_proposal"
-			set_country_flag = PER_doing_proposal
-			clr_country_flag = PER_debate_ongoing
+			PER_majlis_begin_proposal = yes
 			country_event = PER_majlis.11
 		}
 
@@ -6134,12 +6116,7 @@ PER_new_majlis = {
 	}
 	PER_accept_socialist_proposal = {
 		visible = {
-			has_country_flag = PER_debate_ongoing
-			emerging_hardline_shiite_are_in_power = no
-			emerging_moderate_shiite_are_in_power = no
-			NOT = {
-				has_country_flag = PER_doing_proposal
-			}
+			PER_majlis_non_ir_proposal_visible = yes
 			OR = {
 				check_variable = { PER_majlis_seats^3 > 1 }
 				check_variable = { PER_majlis_seats^19 > 1 }
@@ -6151,8 +6128,7 @@ PER_new_majlis = {
 
 		complete_effect = {
 			log = "[GetDateText]: [Root.GetName]: Decision PER_accept_socialist_proposal"
-			set_country_flag = PER_doing_proposal
-			clr_country_flag = PER_debate_ongoing
+			PER_majlis_begin_proposal = yes
 			country_event = PER_majlis.12
 		}
 
@@ -6162,12 +6138,7 @@ PER_new_majlis = {
 	}
 	PER_accept_radical_leftist_proposal = {
 		visible = {
-			has_country_flag = PER_debate_ongoing
-			emerging_hardline_shiite_are_in_power = no
-			emerging_moderate_shiite_are_in_power = no
-			NOT = {
-				has_country_flag = PER_doing_proposal
-			}
+			PER_majlis_non_ir_proposal_visible = yes
 			OR = {
 				check_variable = { PER_majlis_seats^4 > 1 }
 				check_variable = { PER_majlis_seats^5 > 1 }
@@ -6179,8 +6150,7 @@ PER_new_majlis = {
 
 		complete_effect = {
 			log = "[GetDateText]: [Root.GetName]: Decision PER_accept_radical_leftist_proposal"
-			set_country_flag = PER_doing_proposal
-			clr_country_flag = PER_debate_ongoing
+			PER_majlis_begin_proposal = yes
 			country_event = PER_majlis.14
 		}
 
@@ -6190,12 +6160,7 @@ PER_new_majlis = {
 	}
 	PER_accept_neo_islamist_proposal = {
 		visible = {
-			has_country_flag = PER_debate_ongoing
-			emerging_hardline_shiite_are_in_power = no
-			emerging_moderate_shiite_are_in_power = no
-			NOT = {
-				has_country_flag = PER_doing_proposal
-			}
+			PER_majlis_non_ir_proposal_visible = yes
 			OR = {
 				check_variable = { PER_majlis_seats^6 > 1 }
 				check_variable = { PER_majlis_seats^7 > 1 }
@@ -6207,8 +6172,7 @@ PER_new_majlis = {
 
 		complete_effect = {
 			log = "[GetDateText]: [Root.GetName]: Decision PER_accept_neo_islamist_proposal"
-			set_country_flag = PER_doing_proposal
-			clr_country_flag = PER_debate_ongoing
+			PER_majlis_begin_proposal = yes
 			country_event = PER_majlis.15
 		}
 
@@ -6218,12 +6182,7 @@ PER_new_majlis = {
 	}
 	PER_accept_moderate_islamist_proposal = {
 		visible = {
-			has_country_flag = PER_debate_ongoing
-			emerging_hardline_shiite_are_in_power = no
-			emerging_moderate_shiite_are_in_power = no
-			NOT = {
-				has_country_flag = PER_doing_proposal
-			}
+			PER_majlis_non_ir_proposal_visible = yes
 			OR = {
 				check_variable = { PER_majlis_seats^18 > 1 }
 				check_variable = { PER_majlis_seats^12 > 1 }
@@ -6235,8 +6194,7 @@ PER_new_majlis = {
 
 		complete_effect = {
 			log = "[GetDateText]: [Root.GetName]: Decision PER_accept_moderate_islamist_proposal"
-			set_country_flag = PER_doing_proposal
-			clr_country_flag = PER_debate_ongoing
+			PER_majlis_begin_proposal = yes
 			country_event = PER_majlis.16
 		}
 
@@ -6246,12 +6204,7 @@ PER_new_majlis = {
 	}
 	PER_accept_libertarian_proposal = {
 		visible = {
-			has_country_flag = PER_debate_ongoing
-			emerging_hardline_shiite_are_in_power = no
-			emerging_moderate_shiite_are_in_power = no
-			NOT = {
-				has_country_flag = PER_doing_proposal
-			}
+			PER_majlis_non_ir_proposal_visible = yes
 			OR = {
 				check_variable = { PER_majlis_seats^13 > 1 }
 				check_variable = { PER_majlis_seats^16 > 1 }
@@ -6263,8 +6216,7 @@ PER_new_majlis = {
 
 		complete_effect = {
 			log = "[GetDateText]: [Root.GetName]: Decision PER_accept_libertarian_proposal"
-			set_country_flag = PER_doing_proposal
-			clr_country_flag = PER_debate_ongoing
+			PER_majlis_begin_proposal = yes
 			country_event = PER_majlis.17
 		}
 
@@ -6274,12 +6226,7 @@ PER_new_majlis = {
 	}
 	PER_accept_monarchist_proposal = {
 		visible = {
-			has_country_flag = PER_debate_ongoing
-			emerging_hardline_shiite_are_in_power = no
-			emerging_moderate_shiite_are_in_power = no
-			NOT = {
-				has_country_flag = PER_doing_proposal
-			}
+			PER_majlis_non_ir_proposal_visible = yes
 			OR = {
 				check_variable = { PER_majlis_seats^20 > 1 }
 				check_variable = { PER_majlis_seats^23 > 1 }
@@ -6291,8 +6238,7 @@ PER_new_majlis = {
 
 		complete_effect = {
 			log = "[GetDateText]: [Root.GetName]: Decision PER_accept_monarchist_proposal"
-			set_country_flag = PER_doing_proposal
-			clr_country_flag = PER_debate_ongoing
+			PER_majlis_begin_proposal = yes
 			country_event = PER_majlis.20
 		}
 
@@ -6302,12 +6248,7 @@ PER_new_majlis = {
 	}
 	PER_accept_green_proposal = {
 		visible = {
-			has_country_flag = PER_debate_ongoing
-			emerging_hardline_shiite_are_in_power = no
-			emerging_moderate_shiite_are_in_power = no
-			NOT = {
-				has_country_flag = PER_doing_proposal
-			}
+			PER_majlis_non_ir_proposal_visible = yes
 			check_variable = { PER_majlis_seats^17 > 1 }
 		}
 		icon = political_actions
@@ -6316,8 +6257,7 @@ PER_new_majlis = {
 
 		complete_effect = {
 			log = "[GetDateText]: [Root.GetName]: Decision PER_accept_green_proposal"
-			set_country_flag = PER_doing_proposal
-			clr_country_flag = PER_debate_ongoing
+			PER_majlis_begin_proposal = yes
 			country_event = PER_majlis.18
 		}
 
@@ -6327,12 +6267,7 @@ PER_new_majlis = {
 	}
 	PER_accept_corporate_proposal = {
 		visible = {
-			has_country_flag = PER_debate_ongoing
-			emerging_hardline_shiite_are_in_power = no
-			emerging_moderate_shiite_are_in_power = no
-			NOT = {
-				has_country_flag = PER_doing_proposal
-			}
+			PER_majlis_non_ir_proposal_visible = yes
 			check_variable = { PER_majlis_seats^15 > 1 }
 		}
 		icon = political_actions
@@ -6341,8 +6276,7 @@ PER_new_majlis = {
 
 		complete_effect = {
 			log = "[GetDateText]: [Root.GetName]: Decision PER_accept_corporate_proposal"
-			set_country_flag = PER_doing_proposal
-			clr_country_flag = PER_debate_ongoing
+			PER_majlis_begin_proposal = yes
 			country_event = PER_majlis.19
 		}
 
@@ -6352,12 +6286,7 @@ PER_new_majlis = {
 	}
 	PER_accept_ultra_nationalist_proposal = {
 		visible = {
-			has_country_flag = PER_debate_ongoing
-			emerging_hardline_shiite_are_in_power = no
-			emerging_moderate_shiite_are_in_power = no
-			NOT = {
-				has_country_flag = PER_doing_proposal
-			}
+			PER_majlis_non_ir_proposal_visible = yes
 			check_variable = { PER_majlis_seats^21 > 15 }
 		}
 		icon = political_actions
@@ -6366,8 +6295,7 @@ PER_new_majlis = {
 
 		complete_effect = {
 			log = "[GetDateText]: [Root.GetName]: Decision PER_accept_ultra_nationalist_proposal"
-			set_country_flag = PER_doing_proposal
-			clr_country_flag = PER_debate_ongoing
+			PER_majlis_begin_proposal = yes
 			country_event = PER_majlis.21
 		}
 
@@ -6377,12 +6305,7 @@ PER_new_majlis = {
 	}
 	PER_accept_artesh_proposal = {
 		visible = {
-			has_country_flag = PER_debate_ongoing
-			emerging_hardline_shiite_are_in_power = no
-			emerging_moderate_shiite_are_in_power = no
-			NOT = {
-				has_country_flag = PER_doing_proposal
-			}
+			PER_majlis_non_ir_proposal_visible = yes
 			check_variable = { PER_majlis_seats^22 > 1 }
 		}
 		icon = political_actions
@@ -6391,8 +6314,7 @@ PER_new_majlis = {
 
 		complete_effect = {
 			log = "[GetDateText]: [Root.GetName]: Decision PER_accept_artesh_proposal"
-			set_country_flag = PER_doing_proposal
-			clr_country_flag = PER_debate_ongoing
+			PER_majlis_begin_proposal = yes
 			country_event = PER_majlis.22
 		}
 
@@ -6403,14 +6325,7 @@ PER_new_majlis = {
 	# I.R.
 	PER_accept_reformists_proposal = {
 		visible = {
-			has_country_flag = PER_debate_ongoing
-			NOT = {
-				has_country_flag = PER_doing_proposal
-			}
-			OR = {
-				emerging_hardline_shiite_are_in_power = yes
-				emerging_moderate_shiite_are_in_power = yes
-			}
+			PER_majlis_ir_proposal_visible = yes
 			check_variable = { PER_majlis_seats^8 > 1 }
 		}
 		icon = political_actions
@@ -6419,8 +6334,7 @@ PER_new_majlis = {
 
 		complete_effect = {
 			log = "[GetDateText]: [Root.GetName]: Decision PER_accept_reformists_proposal"
-			set_country_flag = PER_doing_proposal
-			clr_country_flag = PER_debate_ongoing
+			PER_majlis_begin_proposal = yes
 			country_event = PER_majlis.23
 		}
 
@@ -6430,14 +6344,7 @@ PER_new_majlis = {
 	}
 	PER_accept_principalists_proposal = {
 		visible = {
-			has_country_flag = PER_debate_ongoing
-			NOT = {
-				has_country_flag = PER_doing_proposal
-			}
-			OR = {
-				emerging_hardline_shiite_are_in_power = yes
-				emerging_moderate_shiite_are_in_power = yes
-			}
+			PER_majlis_ir_proposal_visible = yes
 			check_variable = { PER_majlis_seats^9 > 1 }
 		}
 		icon = political_actions
@@ -6446,8 +6353,7 @@ PER_new_majlis = {
 
 		complete_effect = {
 			log = "[GetDateText]: [Root.GetName]: Decision PER_accept_principalists_proposal"
-			set_country_flag = PER_doing_proposal
-			clr_country_flag = PER_debate_ongoing
+			PER_majlis_begin_proposal = yes
 			country_event = PER_majlis.24
 		}
 
@@ -7781,27 +7687,39 @@ PER_new_majlis = {
 			add_stability = -0.05
 			newline = yes
 			979 = {
-				damage_building = {
-					type = infrastructure
-					damage = 5.0
+				if = {
+					limit = { infrastructure > 0 }
+					damage_building = {
+						type = infrastructure
+						damage = 5.0
+					}
 				}
 			}
 			1139 = {
-				damage_building = {
-					type = infrastructure
-					damage = 5.0
+				if = {
+					limit = { infrastructure > 0 }
+					damage_building = {
+						type = infrastructure
+						damage = 5.0
+					}
 				}
 			}
 			1138 = {
-				damage_building = {
-					type = infrastructure
-					damage = 5.0
+				if = {
+					limit = { infrastructure > 0 }
+					damage_building = {
+						type = infrastructure
+						damage = 5.0
+					}
 				}
 			}
 			1039 = {
-				damage_building = {
-					type = infrastructure
-					damage = 5.0
+				if = {
+					limit = { infrastructure > 0 }
+					damage_building = {
+						type = infrastructure
+						damage = 5.0
+					}
 				}
 			}
 			clr_country_flag = PER_doing_proposal
@@ -11043,6 +10961,27 @@ PER_lor_resistance = {
 			custom_effect_tooltip = PER_lor_units_TT
 			hidden_effect = {
 				PER = {
+					if = {
+						limit = { NOT = { has_template = "Tip-e Piade Nezam" } }
+						division_template = {
+							name = "Tip-e Piade Nezam"
+							division_names_group = PER_INF_01
+							regiments = {
+								L_Inf_Bat = { x = 0 y = 0 }
+								L_Inf_Bat = { x = 0 y = 1 }
+								L_Inf_Bat = { x = 0 y = 2 }
+								L_Inf_Bat = { x = 1 y = 0 }
+								Arty_Bat = { x = 1 y = 1 }
+								SP_Arty_Bat = { x = 1 y = 2 }
+							}
+							regimental_support = {
+								armor_Comp = { x = 0 y = 0 }
+							}
+							support = {
+								L_Engi_Comp = { x = 0 y = 0 }
+							}
+						}
+					}
 					set_province_controller = 3908
 					set_province_controller = 1922
 					set_province_controller = 15483
@@ -11983,7 +11922,7 @@ PER_resistance_movement = {
 							}
 							country_event = iranian_events.200
 							1039 = {
-								clr_state_flag = PER_locals_swayed
+								PER_unsway_state = yes
 							}
 							set_country_flag = { flag = PER_khoy_fell_recently value = 1 days = 180 }
 						}
@@ -12004,7 +11943,7 @@ PER_resistance_movement = {
 							}
 							country_event = iranian_events.200
 							1039 = {
-								clr_state_flag = PER_locals_swayed
+								PER_unsway_state = yes
 							}
 							set_country_flag = { flag = PER_khoy_fell_recently value = 1 days = 180 }
 						}
@@ -12022,7 +11961,7 @@ PER_resistance_movement = {
 							}
 							country_event = iranian_events.200
 							1039 = {
-								clr_state_flag = PER_locals_swayed
+								PER_unsway_state = yes
 							}
 							set_country_flag = { flag = PER_khoy_fell_recently value = 1 days = 180 }
 						}
@@ -12082,7 +12021,7 @@ PER_resistance_movement = {
 							}
 							country_event = iranian_events.200
 							979 = {
-								clr_state_flag = PER_locals_swayed
+								PER_unsway_state = yes
 							}
 							set_country_flag = { flag = PER_west_azerbaijan_fell_recently value = 1 days = 180 }
 						}
@@ -12103,7 +12042,7 @@ PER_resistance_movement = {
 							}
 							country_event = iranian_events.200
 							979 = {
-								clr_state_flag = PER_locals_swayed
+								PER_unsway_state = yes
 							}
 							set_country_flag = { flag = PER_west_azerbaijan_fell_recently value = 1 days = 180 }
 						}
@@ -12121,7 +12060,7 @@ PER_resistance_movement = {
 							}
 							country_event = iranian_events.200
 							979 = {
-								clr_state_flag = PER_locals_swayed
+								PER_unsway_state = yes
 							}
 							set_country_flag = { flag = PER_west_azerbaijan_fell_recently value = 1 days = 180 }
 						}
@@ -12181,7 +12120,7 @@ PER_resistance_movement = {
 							}
 							country_event = iranian_events.200
 							407 = {
-								clr_state_flag = PER_locals_swayed
+								PER_unsway_state = yes
 							}
 							set_country_flag = { flag = PER_azerbaijan_fell_recently value = 1 days = 180 }
 						}
@@ -12202,7 +12141,7 @@ PER_resistance_movement = {
 							}
 							country_event = iranian_events.200
 							407 = {
-								clr_state_flag = PER_locals_swayed
+								PER_unsway_state = yes
 							}
 							set_country_flag = { flag = PER_azerbaijan_fell_recently value = 1 days = 180 }
 						}
@@ -12220,7 +12159,7 @@ PER_resistance_movement = {
 							}
 							country_event = iranian_events.200
 							407 = {
-								clr_state_flag = PER_locals_swayed
+								PER_unsway_state = yes
 							}
 							set_country_flag = { flag = PER_azerbaijan_fell_recently value = 1 days = 180 }
 						}
@@ -12280,7 +12219,7 @@ PER_resistance_movement = {
 							}
 							country_event = iranian_events.200
 							408 = {
-								clr_state_flag = PER_locals_swayed
+								PER_unsway_state = yes
 							}
 							set_country_flag = { flag = PER_kordestan_fell_recently value = 1 days = 180 }
 						}
@@ -12301,7 +12240,7 @@ PER_resistance_movement = {
 							}
 							country_event = iranian_events.200
 							408 = {
-								clr_state_flag = PER_locals_swayed
+								PER_unsway_state = yes
 							}
 							set_country_flag = { flag = PER_kordestan_fell_recently value = 1 days = 180 }
 						}
@@ -12319,7 +12258,7 @@ PER_resistance_movement = {
 							}
 							country_event = iranian_events.200
 							408 = {
-								clr_state_flag = PER_locals_swayed
+								PER_unsway_state = yes
 							}
 							set_country_flag = { flag = PER_kordestan_fell_recently value = 1 days = 180 }
 						}
@@ -12379,7 +12318,7 @@ PER_resistance_movement = {
 							}
 							country_event = iranian_events.200
 							1139 = {
-								clr_state_flag = PER_locals_swayed
+								PER_unsway_state = yes
 							}
 							set_country_flag = { flag = PER_kermanshah_fell_recently value = 1 days = 180 }
 						}
@@ -12400,7 +12339,7 @@ PER_resistance_movement = {
 							}
 							country_event = iranian_events.200
 							1139 = {
-								clr_state_flag = PER_locals_swayed
+								PER_unsway_state = yes
 							}
 							set_country_flag = { flag = PER_kermanshah_fell_recently value = 1 days = 180 }
 						}
@@ -12418,7 +12357,7 @@ PER_resistance_movement = {
 							}
 							country_event = iranian_events.200
 							1139 = {
-								clr_state_flag = PER_locals_swayed
+								PER_unsway_state = yes
 							}
 							set_country_flag = { flag = PER_kermanshah_fell_recently value = 1 days = 180 }
 						}
@@ -12478,7 +12417,7 @@ PER_resistance_movement = {
 							}
 							country_event = iranian_events.200
 							1138 = {
-								clr_state_flag = PER_locals_swayed
+								PER_unsway_state = yes
 							}
 							set_country_flag = { flag = PER_ilam_fell_recently value = 1 days = 180 }
 						}
@@ -12499,7 +12438,7 @@ PER_resistance_movement = {
 							}
 							country_event = iranian_events.200
 							1138 = {
-								clr_state_flag = PER_locals_swayed
+								PER_unsway_state = yes
 							}
 							set_country_flag = { flag = PER_ilam_fell_recently value = 1 days = 180 }
 						}
@@ -12517,7 +12456,7 @@ PER_resistance_movement = {
 							}
 							country_event = iranian_events.200
 							1138 = {
-								clr_state_flag = PER_locals_swayed
+								PER_unsway_state = yes
 							}
 							set_country_flag = { flag = PER_ilam_fell_recently value = 1 days = 180 }
 						}
@@ -12577,7 +12516,7 @@ PER_resistance_movement = {
 							}
 							country_event = iranian_events.200
 							399 = {
-								clr_state_flag = PER_locals_swayed
+								PER_unsway_state = yes
 							}
 							set_country_flag = { flag = PER_khuzestan_fell_recently value = 1 days = 180 }
 						}
@@ -12598,7 +12537,7 @@ PER_resistance_movement = {
 							}
 							country_event = iranian_events.200
 							399 = {
-								clr_state_flag = PER_locals_swayed
+								PER_unsway_state = yes
 							}
 							set_country_flag = { flag = PER_khuzestan_fell_recently value = 1 days = 180 }
 						}
@@ -12616,7 +12555,7 @@ PER_resistance_movement = {
 							}
 							country_event = iranian_events.200
 							399 = {
-								clr_state_flag = PER_locals_swayed
+								PER_unsway_state = yes
 							}
 							set_country_flag = { flag = PER_khuzestan_fell_recently value = 1 days = 180 }
 						}
@@ -12676,7 +12615,7 @@ PER_resistance_movement = {
 							}
 							country_event = iranian_events.200
 							1148 = {
-								clr_state_flag = PER_locals_swayed
+								PER_unsway_state = yes
 							}
 							set_country_flag = { flag = PER_hamadan_fell_recently value = 1 days = 180 }
 						}
@@ -12697,7 +12636,7 @@ PER_resistance_movement = {
 							}
 							country_event = iranian_events.200
 							1148 = {
-								clr_state_flag = PER_locals_swayed
+								PER_unsway_state = yes
 							}
 							set_country_flag = { flag = PER_hamadan_fell_recently value = 1 days = 180 }
 						}
@@ -12715,7 +12654,7 @@ PER_resistance_movement = {
 							}
 							country_event = iranian_events.200
 							1148 = {
-								clr_state_flag = PER_locals_swayed
+								PER_unsway_state = yes
 							}
 							set_country_flag = { flag = PER_hamadan_fell_recently value = 1 days = 180 }
 						}
@@ -12775,7 +12714,7 @@ PER_resistance_movement = {
 							}
 							country_event = iranian_events.200
 							406 = {
-								clr_state_flag = PER_locals_swayed
+								PER_unsway_state = yes
 							}
 							set_country_flag = { flag = PER_lorestan_fell_recently value = 1 days = 180 }
 						}
@@ -12796,7 +12735,7 @@ PER_resistance_movement = {
 							}
 							country_event = iranian_events.200
 							406 = {
-								clr_state_flag = PER_locals_swayed
+								PER_unsway_state = yes
 							}
 							set_country_flag = { flag = PER_lorestan_fell_recently value = 1 days = 180 }
 						}
@@ -12814,7 +12753,7 @@ PER_resistance_movement = {
 							}
 							country_event = iranian_events.200
 							406 = {
-								clr_state_flag = PER_locals_swayed
+								PER_unsway_state = yes
 							}
 							set_country_flag = { flag = PER_lorestan_fell_recently value = 1 days = 180 }
 						}
@@ -12874,7 +12813,7 @@ PER_resistance_movement = {
 							}
 							country_event = iranian_events.200
 							404 = {
-								clr_state_flag = PER_locals_swayed
+								PER_unsway_state = yes
 							}
 							set_country_flag = { flag = PER_markazi_fell_recently value = 1 days = 180 }
 						}
@@ -12895,7 +12834,7 @@ PER_resistance_movement = {
 							}
 							country_event = iranian_events.200
 							404 = {
-								clr_state_flag = PER_locals_swayed
+								PER_unsway_state = yes
 							}
 							set_country_flag = { flag = PER_markazi_fell_recently value = 1 days = 180 }
 						}
@@ -12913,7 +12852,7 @@ PER_resistance_movement = {
 							}
 							country_event = iranian_events.200
 							404 = {
-								clr_state_flag = PER_locals_swayed
+								PER_unsway_state = yes
 							}
 							set_country_flag = { flag = PER_markazi_fell_recently value = 1 days = 180 }
 						}
@@ -12973,7 +12912,7 @@ PER_resistance_movement = {
 							}
 							country_event = iranian_events.200
 							1144 = {
-								clr_state_flag = PER_locals_swayed
+								PER_unsway_state = yes
 							}
 							set_country_flag = { flag = PER_qom_fell_recently value = 1 days = 180 }
 						}
@@ -12994,7 +12933,7 @@ PER_resistance_movement = {
 							}
 							country_event = iranian_events.200
 							1144 = {
-								clr_state_flag = PER_locals_swayed
+								PER_unsway_state = yes
 							}
 							set_country_flag = { flag = PER_qom_fell_recently value = 1 days = 180 }
 						}
@@ -13012,7 +12951,7 @@ PER_resistance_movement = {
 							}
 							country_event = iranian_events.200
 							1144 = {
-								clr_state_flag = PER_locals_swayed
+								PER_unsway_state = yes
 							}
 							set_country_flag = { flag = PER_qom_fell_recently value = 1 days = 180 }
 						}
@@ -13072,7 +13011,7 @@ PER_resistance_movement = {
 							}
 							country_event = iranian_events.200
 							405 = {
-								clr_state_flag = PER_locals_swayed
+								PER_unsway_state = yes
 							}
 							set_country_flag = { flag = PER_tehran_fell_recently value = 1 days = 180 }
 						}
@@ -13093,7 +13032,7 @@ PER_resistance_movement = {
 							}
 							country_event = iranian_events.200
 							405 = {
-								clr_state_flag = PER_locals_swayed
+								PER_unsway_state = yes
 							}
 							set_country_flag = { flag = PER_tehran_fell_recently value = 1 days = 180 }
 						}
@@ -13111,7 +13050,7 @@ PER_resistance_movement = {
 							}
 							country_event = iranian_events.200
 							405 = {
-								clr_state_flag = PER_locals_swayed
+								PER_unsway_state = yes
 							}
 							set_country_flag = { flag = PER_tehran_fell_recently value = 1 days = 180 }
 						}
@@ -13171,7 +13110,7 @@ PER_resistance_movement = {
 							}
 							country_event = iranian_events.200
 							1149 = {
-								clr_state_flag = PER_locals_swayed
+								PER_unsway_state = yes
 							}
 							set_country_flag = { flag = PER_semnan_fell_recently value = 1 days = 180 }
 						}
@@ -13192,7 +13131,7 @@ PER_resistance_movement = {
 							}
 							country_event = iranian_events.200
 							1149 = {
-								clr_state_flag = PER_locals_swayed
+								PER_unsway_state = yes
 							}
 							set_country_flag = { flag = PER_semnan_fell_recently value = 1 days = 180 }
 						}
@@ -13210,7 +13149,7 @@ PER_resistance_movement = {
 							}
 							country_event = iranian_events.200
 							1149 = {
-								clr_state_flag = PER_locals_swayed
+								PER_unsway_state = yes
 							}
 							set_country_flag = { flag = PER_semnan_fell_recently value = 1 days = 180 }
 						}
@@ -13270,7 +13209,7 @@ PER_resistance_movement = {
 							}
 							country_event = iranian_events.200
 							976 = {
-								clr_state_flag = PER_locals_swayed
+								PER_unsway_state = yes
 							}
 							set_country_flag = { flag = PER_esfahan_fell_recently value = 1 days = 180 }
 						}
@@ -13291,7 +13230,7 @@ PER_resistance_movement = {
 							}
 							country_event = iranian_events.200
 							976 = {
-								clr_state_flag = PER_locals_swayed
+								PER_unsway_state = yes
 							}
 							set_country_flag = { flag = PER_esfahan_fell_recently value = 1 days = 180 }
 						}
@@ -13309,7 +13248,7 @@ PER_resistance_movement = {
 							}
 							country_event = iranian_events.200
 							976 = {
-								clr_state_flag = PER_locals_swayed
+								PER_unsway_state = yes
 							}
 							set_country_flag = { flag = PER_esfahan_fell_recently value = 1 days = 180 }
 						}
@@ -13369,7 +13308,7 @@ PER_resistance_movement = {
 							}
 							country_event = iranian_events.200
 							400 = {
-								clr_state_flag = PER_locals_swayed
+								PER_unsway_state = yes
 							}
 							set_country_flag = { flag = PER_fars_fell_recently value = 1 days = 180 }
 						}
@@ -13390,7 +13329,7 @@ PER_resistance_movement = {
 							}
 							country_event = iranian_events.200
 							400 = {
-								clr_state_flag = PER_locals_swayed
+								PER_unsway_state = yes
 							}
 							set_country_flag = { flag = PER_fars_fell_recently value = 1 days = 180 }
 						}
@@ -13408,7 +13347,7 @@ PER_resistance_movement = {
 							}
 							country_event = iranian_events.200
 							400 = {
-								clr_state_flag = PER_locals_swayed
+								PER_unsway_state = yes
 							}
 							set_country_flag = { flag = PER_fars_fell_recently value = 1 days = 180 }
 						}
@@ -13468,7 +13407,7 @@ PER_resistance_movement = {
 							}
 							country_event = iranian_events.200
 							1146 = {
-								clr_state_flag = PER_locals_swayed
+								PER_unsway_state = yes
 							}
 							set_country_flag = { flag = PER_bushehr_fell_recently value = 1 days = 180 }
 						}
@@ -13489,7 +13428,7 @@ PER_resistance_movement = {
 							}
 							country_event = iranian_events.200
 							1146 = {
-								clr_state_flag = PER_locals_swayed
+								PER_unsway_state = yes
 							}
 							set_country_flag = { flag = PER_bushehr_fell_recently value = 1 days = 180 }
 						}
@@ -13507,7 +13446,7 @@ PER_resistance_movement = {
 							}
 							country_event = iranian_events.200
 							1146 = {
-								clr_state_flag = PER_locals_swayed
+								PER_unsway_state = yes
 							}
 							set_country_flag = { flag = PER_bushehr_fell_recently value = 1 days = 180 }
 						}
@@ -13567,7 +13506,7 @@ PER_resistance_movement = {
 							}
 							country_event = iranian_events.200
 							1147 = {
-								clr_state_flag = PER_locals_swayed
+								PER_unsway_state = yes
 							}
 							set_country_flag = { flag = PER_yazd_fell_recently value = 1 days = 180 }
 						}
@@ -13588,7 +13527,7 @@ PER_resistance_movement = {
 							}
 							country_event = iranian_events.200
 							1147 = {
-								clr_state_flag = PER_locals_swayed
+								PER_unsway_state = yes
 							}
 							set_country_flag = { flag = PER_yazd_fell_recently value = 1 days = 180 }
 						}
@@ -13606,7 +13545,7 @@ PER_resistance_movement = {
 							}
 							country_event = iranian_events.200
 							1147 = {
-								clr_state_flag = PER_locals_swayed
+								PER_unsway_state = yes
 							}
 							set_country_flag = { flag = PER_yazd_fell_recently value = 1 days = 180 }
 						}
@@ -13666,7 +13605,7 @@ PER_resistance_movement = {
 							}
 							country_event = iranian_events.200
 							1073 = {
-								clr_state_flag = PER_locals_swayed
+								PER_unsway_state = yes
 							}
 							set_country_flag = { flag = PER_gilan_fell_recently value = 1 days = 180 }
 						}
@@ -13687,7 +13626,7 @@ PER_resistance_movement = {
 							}
 							country_event = iranian_events.200
 							1073 = {
-								clr_state_flag = PER_locals_swayed
+								PER_unsway_state = yes
 							}
 							set_country_flag = { flag = PER_gilan_fell_recently value = 1 days = 180 }
 						}
@@ -13705,7 +13644,7 @@ PER_resistance_movement = {
 							}
 							country_event = iranian_events.200
 							1073 = {
-								clr_state_flag = PER_locals_swayed
+								PER_unsway_state = yes
 							}
 							set_country_flag = { flag = PER_gilan_fell_recently value = 1 days = 180 }
 						}
@@ -13765,7 +13704,7 @@ PER_resistance_movement = {
 							}
 							country_event = iranian_events.200
 							403 = {
-								clr_state_flag = PER_locals_swayed
+								PER_unsway_state = yes
 							}
 							set_country_flag = { flag = PER_mazandaran_fell_recently value = 1 days = 180 }
 						}
@@ -13786,7 +13725,7 @@ PER_resistance_movement = {
 							}
 							country_event = iranian_events.200
 							403 = {
-								clr_state_flag = PER_locals_swayed
+								PER_unsway_state = yes
 							}
 							set_country_flag = { flag = PER_mazandaran_fell_recently value = 1 days = 180 }
 						}
@@ -13804,7 +13743,7 @@ PER_resistance_movement = {
 							}
 							country_event = iranian_events.200
 							403 = {
-								clr_state_flag = PER_locals_swayed
+								PER_unsway_state = yes
 							}
 							set_country_flag = { flag = PER_mazandaran_fell_recently value = 1 days = 180 }
 						}
@@ -13864,7 +13803,7 @@ PER_resistance_movement = {
 							}
 							country_event = iranian_events.200
 							1145 = {
-								clr_state_flag = PER_locals_swayed
+								PER_unsway_state = yes
 							}
 							set_country_flag = { flag = PER_golestan_fell_recently value = 1 days = 180 }
 						}
@@ -13885,7 +13824,7 @@ PER_resistance_movement = {
 							}
 							country_event = iranian_events.200
 							1145 = {
-								clr_state_flag = PER_locals_swayed
+								PER_unsway_state = yes
 							}
 							set_country_flag = { flag = PER_golestan_fell_recently value = 1 days = 180 }
 						}
@@ -13903,7 +13842,7 @@ PER_resistance_movement = {
 							}
 							country_event = iranian_events.200
 							1145 = {
-								clr_state_flag = PER_locals_swayed
+								PER_unsway_state = yes
 							}
 							set_country_flag = { flag = PER_golestan_fell_recently value = 1 days = 180 }
 						}
@@ -13963,7 +13902,7 @@ PER_resistance_movement = {
 							}
 							country_event = iranian_events.200
 							1150 = {
-								clr_state_flag = PER_locals_swayed
+								PER_unsway_state = yes
 							}
 							set_country_flag = { flag = PER_north_khorasan_fell_recently value = 1 days = 180 }
 						}
@@ -13984,7 +13923,7 @@ PER_resistance_movement = {
 							}
 							country_event = iranian_events.200
 							1150 = {
-								clr_state_flag = PER_locals_swayed
+								PER_unsway_state = yes
 							}
 							set_country_flag = { flag = PER_north_khorasan_fell_recently value = 1 days = 180 }
 						}
@@ -14002,7 +13941,7 @@ PER_resistance_movement = {
 							}
 							country_event = iranian_events.200
 							1150 = {
-								clr_state_flag = PER_locals_swayed
+								PER_unsway_state = yes
 							}
 							set_country_flag = { flag = PER_north_khorasan_fell_recently value = 1 days = 180 }
 						}
@@ -14062,7 +14001,7 @@ PER_resistance_movement = {
 							}
 							country_event = iranian_events.200
 							402 = {
-								clr_state_flag = PER_locals_swayed
+								PER_unsway_state = yes
 							}
 							set_country_flag = { flag = PER_razavi_khorasan_fell_recently value = 1 days = 180 }
 						}
@@ -14083,7 +14022,7 @@ PER_resistance_movement = {
 							}
 							country_event = iranian_events.200
 							402 = {
-								clr_state_flag = PER_locals_swayed
+								PER_unsway_state = yes
 							}
 							set_country_flag = { flag = PER_razavi_khorasan_fell_recently value = 1 days = 180 }
 						}
@@ -14101,7 +14040,7 @@ PER_resistance_movement = {
 							}
 							country_event = iranian_events.200
 							402 = {
-								clr_state_flag = PER_locals_swayed
+								PER_unsway_state = yes
 							}
 							set_country_flag = { flag = PER_razavi_khorasan_fell_recently value = 1 days = 180 }
 						}
@@ -14161,7 +14100,7 @@ PER_resistance_movement = {
 							}
 							country_event = iranian_events.200
 							1151 = {
-								clr_state_flag = PER_locals_swayed
+								PER_unsway_state = yes
 							}
 							set_country_flag = { flag = PER_south_khorasan_fell_recently value = 1 days = 180 }
 						}
@@ -14182,7 +14121,7 @@ PER_resistance_movement = {
 							}
 							country_event = iranian_events.200
 							1151 = {
-								clr_state_flag = PER_locals_swayed
+								PER_unsway_state = yes
 							}
 							set_country_flag = { flag = PER_south_khorasan_fell_recently value = 1 days = 180 }
 						}
@@ -14200,7 +14139,7 @@ PER_resistance_movement = {
 							}
 							country_event = iranian_events.200
 							1151 = {
-								clr_state_flag = PER_locals_swayed
+								PER_unsway_state = yes
 							}
 							set_country_flag = { flag = PER_south_khorasan_fell_recently value = 1 days = 180 }
 						}
@@ -14260,7 +14199,7 @@ PER_resistance_movement = {
 							}
 							country_event = iranian_events.200
 							977 = {
-								clr_state_flag = PER_locals_swayed
+								PER_unsway_state = yes
 							}
 							set_country_flag = { flag = PER_kerman_fell_recently value = 1 days = 180 }
 						}
@@ -14281,7 +14220,7 @@ PER_resistance_movement = {
 							}
 							country_event = iranian_events.200
 							977 = {
-								clr_state_flag = PER_locals_swayed
+								PER_unsway_state = yes
 							}
 							set_country_flag = { flag = PER_kerman_fell_recently value = 1 days = 180 }
 						}
@@ -14299,7 +14238,7 @@ PER_resistance_movement = {
 							}
 							country_event = iranian_events.200
 							977 = {
-								clr_state_flag = PER_locals_swayed
+								PER_unsway_state = yes
 							}
 							set_country_flag = { flag = PER_kerman_fell_recently value = 1 days = 180 }
 						}
@@ -14359,7 +14298,7 @@ PER_resistance_movement = {
 							}
 							country_event = iranian_events.200
 							401 = {
-								clr_state_flag = PER_locals_swayed
+								PER_unsway_state = yes
 							}
 							set_country_flag = { flag = PER_balochistan_fell_recently value = 1 days = 180 }
 						}
@@ -14380,7 +14319,7 @@ PER_resistance_movement = {
 							}
 							country_event = iranian_events.200
 							401 = {
-								clr_state_flag = PER_locals_swayed
+								PER_unsway_state = yes
 							}
 							set_country_flag = { flag = PER_balochistan_fell_recently value = 1 days = 180 }
 						}
@@ -14398,7 +14337,7 @@ PER_resistance_movement = {
 							}
 							country_event = iranian_events.200
 							401 = {
-								clr_state_flag = PER_locals_swayed
+								PER_unsway_state = yes
 							}
 							set_country_flag = { flag = PER_balochistan_fell_recently value = 1 days = 180 }
 						}
@@ -14458,7 +14397,7 @@ PER_resistance_movement = {
 							}
 							country_event = iranian_events.200
 							978 = {
-								clr_state_flag = PER_locals_swayed
+								PER_unsway_state = yes
 							}
 							set_country_flag = { flag = PER_hormuz_fell_recently value = 1 days = 180 }
 						}
@@ -14479,7 +14418,7 @@ PER_resistance_movement = {
 							}
 							country_event = iranian_events.200
 							978 = {
-								clr_state_flag = PER_locals_swayed
+								PER_unsway_state = yes
 							}
 							set_country_flag = { flag = PER_hormuz_fell_recently value = 1 days = 180 }
 						}
@@ -14497,7 +14436,7 @@ PER_resistance_movement = {
 							}
 							country_event = iranian_events.200
 							978 = {
-								clr_state_flag = PER_locals_swayed
+								PER_unsway_state = yes
 							}
 							set_country_flag = { flag = PER_hormuz_fell_recently value = 1 days = 180 }
 						}
@@ -14551,6 +14490,7 @@ PER_clergy_balance_of_power_category = {
 
 		ai_will_do = {
 			base = 10
+			modifier = { factor = 0 PER_ai_not_historical_path = yes }
 		}
 	}
 
@@ -14591,6 +14531,7 @@ PER_clergy_balance_of_power_category = {
 
 		ai_will_do = {
 			base = 10
+			modifier = { factor = 0 PER_ai_not_historical_path = yes }
 		}
 	}
 
@@ -14629,6 +14570,7 @@ PER_clergy_balance_of_power_category = {
 
 		ai_will_do = {
 			base = 10
+			modifier = { factor = 0 PER_ai_not_historical_path = yes }
 		}
 	}
 
@@ -14667,6 +14609,7 @@ PER_clergy_balance_of_power_category = {
 
 		ai_will_do = {
 			base = 10
+			modifier = { factor = 0 PER_ai_not_historical_path = yes }
 		}
 	}
 
@@ -14702,7 +14645,38 @@ PER_clergy_balance_of_power_category = {
 
 		ai_will_do = {
 			base = 0
+			modifier = { add = 20 PER_ai_not_historical_path = yes }
 		}
+	}
+
+	PER_ai_undermine_the_clergy = {
+
+		icon = generic_decision
+
+		cost = 50
+
+		days_re_enable = 60
+
+		visible = {
+			is_ai = yes
+			PER_ai_not_historical_path = yes
+			NOT = { has_country_flag = PER_turn_off_IR_stuff }
+		}
+
+		available = {
+			has_civil_war = no
+			has_power_balance = { id = PER_clergy_balance_of_power_category }
+		}
+
+		complete_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision PER_ai_undermine_the_clergy"
+			add_power_balance_value = {
+				id = PER_clergy_balance_of_power_category
+				value = -0.10
+			}
+		}
+
+		ai_will_do = { base = 100 }
 	}
 }
 
@@ -15189,25 +15163,25 @@ PER_us_war = {
 						id = PER_clergy_balance_of_power_category
 					}
 					clr_country_flag = generic_election_killswitch
-					clr_country_flag = party1_banned
-					clr_country_flag = party2_banned
-					clr_country_flag = party3_banned
-					clr_country_flag = party4_banned
-					clr_country_flag = party5_banned
-					set_country_flag = party9_banned
-					set_country_flag = party10_banned
-					clr_country_flag = party13_banned
-					clr_country_flag = party14_banned
-					clr_country_flag = party15_banned
-					clr_country_flag = party16_banned
-					clr_country_flag = party17_banned
-					clr_country_flag = party18_banned
-					clr_country_flag = party19_banned
-					clr_country_flag = party20_banned
-					clr_country_flag = party21_banned
-					clr_country_flag = party22_banned
-					clr_country_flag = party23_banned
-					clr_country_flag = party24_banned
+					set_variable = { party_banned_array^0 = 0 }
+					set_variable = { party_banned_array^1 = 0 }
+					set_variable = { party_banned_array^2 = 0 }
+					set_variable = { party_banned_array^3 = 0 }
+					set_variable = { party_banned_array^4 = 0 }
+					set_variable = { party_banned_array^8 = 1 }
+					set_variable = { party_banned_array^9 = 1 }
+					set_variable = { party_banned_array^12 = 0 }
+					set_variable = { party_banned_array^13 = 0 }
+					set_variable = { party_banned_array^14 = 0 }
+					set_variable = { party_banned_array^15 = 0 }
+					set_variable = { party_banned_array^16 = 0 }
+					set_variable = { party_banned_array^17 = 0 }
+					set_variable = { party_banned_array^18 = 0 }
+					set_variable = { party_banned_array^19 = 0 }
+					set_variable = { party_banned_array^20 = 0 }
+					set_variable = { party_banned_array^21 = 0 }
+					set_variable = { party_banned_array^22 = 0 }
+					set_variable = { party_banned_array^23 = 0 }
 					remove_ideas = PER_ahmadinejad_idea
 					remove_ideas = PER_ghalibaf_idea
 					remove_ideas = PER_hemmati_idea

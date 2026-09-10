@@ -16,6 +16,18 @@ country_event = {
 			add_ideas = ITA_specialize_ariete_spirit_1
 		}
 		custom_effect_tooltip = ITA_specialize_ariete_spirit_loc_1
+
+		ai_chance = {
+			base = 10
+			modifier = {
+				factor = 4
+				has_active_mission = bankruptcy_incoming_collapse
+			}
+			modifier = {
+				factor = 0.5
+				ai_is_threatened = yes
+			}
+		}
 	}
 
 	option = {
@@ -25,6 +37,18 @@ country_event = {
 			add_ideas = ITA_specialize_ariete_spirit_2
 		}
 		custom_effect_tooltip = ITA_specialize_ariete_spirit_loc_2
+
+		ai_chance = {
+			base = 10
+			modifier = {
+				factor = 0
+				has_active_mission = bankruptcy_incoming_collapse
+			}
+			modifier = {
+				factor = 4
+				ai_is_threatened = yes
+			}
+		}
 	}
 }
 
@@ -43,6 +67,18 @@ country_event = {
 			add_ideas = ITA_specialize_freccia_spirit_1
 		}
 		custom_effect_tooltip = ITA_specialize_freccia_spirit_loc_1
+
+		ai_chance = {
+			base = 10
+			modifier = {
+				factor = 4
+				has_active_mission = bankruptcy_incoming_collapse
+			}
+			modifier = {
+				factor = 0.5
+				ai_is_threatened = yes
+			}
+		}
 	}
 
 	option = {
@@ -52,6 +88,18 @@ country_event = {
 			add_ideas = ITA_specialize_freccia_spirit_2
 		}
 		custom_effect_tooltip = ITA_specialize_freccia_spirit_loc_2
+
+		ai_chance = {
+			base = 10
+			modifier = {
+				factor = 0
+				has_active_mission = bankruptcy_incoming_collapse
+			}
+			modifier = {
+				factor = 4
+				ai_is_threatened = yes
+			}
+		}
 	}
 }
 
@@ -70,6 +118,18 @@ country_event = {
 			add_ideas = ITA_specialize_dardo_spirit_1
 		}
 		custom_effect_tooltip = ITA_specialize_dardo_spirit_loc_1
+
+		ai_chance = {
+			base = 10
+			modifier = {
+				factor = 4
+				has_active_mission = bankruptcy_incoming_collapse
+			}
+			modifier = {
+				factor = 0.5
+				ai_is_threatened = yes
+			}
+		}
 	}
 
 	option = {
@@ -79,6 +139,18 @@ country_event = {
 			add_ideas = ITA_specialize_dardo_spirit_2
 		}
 		custom_effect_tooltip = ITA_specialize_dardo_spirit_loc_2
+
+		ai_chance = {
+			base = 10
+			modifier = {
+				factor = 0
+				has_active_mission = bankruptcy_incoming_collapse
+			}
+			modifier = {
+				factor = 4
+				ai_is_threatened = yes
+			}
+		}
 	}
 }
 
@@ -97,6 +169,18 @@ country_event = {
 			add_ideas = ITA_specialize_centauro_spirit_1
 		}
 		custom_effect_tooltip = ITA_specialize_centauro_spirit_loc_1
+
+		ai_chance = {
+			base = 10
+			modifier = {
+				factor = 4
+				has_active_mission = bankruptcy_incoming_collapse
+			}
+			modifier = {
+				factor = 0.5
+				ai_is_threatened = yes
+			}
+		}
 	}
 
 	option = {
@@ -106,6 +190,18 @@ country_event = {
 			add_ideas = ITA_specialize_centauro_spirit_2
 		}
 		custom_effect_tooltip = ITA_specialize_centauro_spirit_loc_2
+
+		ai_chance = {
+			base = 10
+			modifier = {
+				factor = 0
+				has_active_mission = bankruptcy_incoming_collapse
+			}
+			modifier = {
+				factor = 4
+				ai_is_threatened = yes
+			}
+		}
 	}
 }
 
@@ -124,6 +220,18 @@ country_event = {
 			add_ideas = ITA_specialize_lince_spirit_1
 		}
 		custom_effect_tooltip = ITA_specialize_lince_spirit_loc_1
+
+		ai_chance = {
+			base = 10
+			modifier = {
+				factor = 4
+				has_active_mission = bankruptcy_incoming_collapse
+			}
+			modifier = {
+				factor = 0.5
+				ai_is_threatened = yes
+			}
+		}
 	}
 
 	option = {
@@ -133,6 +241,18 @@ country_event = {
 			add_ideas = ITA_specialize_lince_spirit_2
 		}
 		custom_effect_tooltip = ITA_specialize_lince_spirit_loc_2
+
+		ai_chance = {
+			base = 10
+			modifier = {
+				factor = 0
+				has_active_mission = bankruptcy_incoming_collapse
+			}
+			modifier = {
+				factor = 4
+				ai_is_threatened = yes
+			}
+		}
 	}
 }
 
@@ -151,6 +271,18 @@ country_event = {
 			add_ideas = ITA_specialize_arx_spirit_1
 		}
 		custom_effect_tooltip = ITA_specialize_arx_spirit_loc_1
+
+		ai_chance = {
+			base = 10
+			modifier = {
+				factor = 4
+				has_active_mission = bankruptcy_incoming_collapse
+			}
+			modifier = {
+				factor = 0.5
+				ai_is_threatened = yes
+			}
+		}
 	}
 
 	option = {
@@ -160,6 +292,18 @@ country_event = {
 			add_ideas = ITA_specialize_arx_spirit_2
 		}
 		custom_effect_tooltip = ITA_specialize_arx_spirit_loc_2
+
+		ai_chance = {
+			base = 10
+			modifier = {
+				factor = 0
+				has_active_mission = bankruptcy_incoming_collapse
+			}
+			modifier = {
+				factor = 4
+				ai_is_threatened = yes
+			}
+		}
 	}
 }
 
@@ -178,6 +322,18 @@ country_event = {
 			add_ideas = ITA_specialize_siaccon_spirit_1
 		}
 		custom_effect_tooltip = ITA_specialize_siaccon_spirit_loc_1
+
+		ai_chance = {
+			base = 10
+			modifier = {
+				factor = 4
+				has_active_mission = bankruptcy_incoming_collapse
+			}
+			modifier = {
+				factor = 0.5
+				ai_is_threatened = yes
+			}
+		}
 	}
 
 	option = {
@@ -187,6 +343,18 @@ country_event = {
 			add_ideas = ITA_specialize_siaccon_spirit_2
 		}
 		custom_effect_tooltip = ITA_specialize_siaccon_spirit_loc_2
+
+		ai_chance = {
+			base = 10
+			modifier = {
+				factor = 0
+				has_active_mission = bankruptcy_incoming_collapse
+			}
+			modifier = {
+				factor = 4
+				ai_is_threatened = yes
+			}
+		}
 	}
 }
 
@@ -205,6 +373,18 @@ country_event = {
 			add_ideas = ITA_specialize_spike_spirit_1
 		}
 		custom_effect_tooltip = ITA_specialize_spike_spirit_loc_1
+
+		ai_chance = {
+			base = 10
+			modifier = {
+				factor = 4
+				has_active_mission = bankruptcy_incoming_collapse
+			}
+			modifier = {
+				factor = 0.5
+				ai_is_threatened = yes
+			}
+		}
 	}
 
 	option = {
@@ -214,6 +394,18 @@ country_event = {
 			add_ideas = ITA_specialize_spike_spirit_2
 		}
 		custom_effect_tooltip = ITA_specialize_spike_spirit_loc_2
+
+		ai_chance = {
+			base = 10
+			modifier = {
+				factor = 0
+				has_active_mission = bankruptcy_incoming_collapse
+			}
+			modifier = {
+				factor = 4
+				ai_is_threatened = yes
+			}
+		}
 	}
 }
 
@@ -232,6 +424,18 @@ country_event = {
 			add_ideas = ITA_specialize_stinger_spirit_1
 		}
 		custom_effect_tooltip = ITA_specialize_stinger_spirit_loc_1
+
+		ai_chance = {
+			base = 10
+			modifier = {
+				factor = 4
+				has_active_mission = bankruptcy_incoming_collapse
+			}
+			modifier = {
+				factor = 0.5
+				ai_is_threatened = yes
+			}
+		}
 	}
 
 	option = {
@@ -241,6 +445,18 @@ country_event = {
 			add_ideas = ITA_specialize_stinger_spirit_2
 		}
 		custom_effect_tooltip = ITA_specialize_stinger_spirit_loc_2
+
+		ai_chance = {
+			base = 10
+			modifier = {
+				factor = 0
+				has_active_mission = bankruptcy_incoming_collapse
+			}
+			modifier = {
+				factor = 4
+				ai_is_threatened = yes
+			}
+		}
 	}
 }
 
@@ -259,6 +475,18 @@ country_event = {
 			add_ideas = ITA_specialize_obice_fh_spirit_1
 		}
 		custom_effect_tooltip = ITA_specialize_obice_fh_spirit_loc_1
+
+		ai_chance = {
+			base = 10
+			modifier = {
+				factor = 4
+				has_active_mission = bankruptcy_incoming_collapse
+			}
+			modifier = {
+				factor = 0.5
+				ai_is_threatened = yes
+			}
+		}
 	}
 
 	option = {
@@ -268,6 +496,18 @@ country_event = {
 			add_ideas = ITA_specialize_obice_fh_spirit_2
 		}
 		custom_effect_tooltip = ITA_specialize_obice_fh_spirit_loc_2
+
+		ai_chance = {
+			base = 10
+			modifier = {
+				factor = 0
+				has_active_mission = bankruptcy_incoming_collapse
+			}
+			modifier = {
+				factor = 4
+				ai_is_threatened = yes
+			}
+		}
 	}
 }
 
@@ -286,6 +526,18 @@ country_event = {
 			add_ideas = ITA_specialize_semovente_spirit_1
 		}
 		custom_effect_tooltip = ITA_specialize_semovente_spirit_loc_1
+
+		ai_chance = {
+			base = 10
+			modifier = {
+				factor = 4
+				has_active_mission = bankruptcy_incoming_collapse
+			}
+			modifier = {
+				factor = 0.5
+				ai_is_threatened = yes
+			}
+		}
 	}
 
 	option = {
@@ -295,6 +547,18 @@ country_event = {
 			add_ideas = ITA_specialize_semovente_spirit_2
 		}
 		custom_effect_tooltip = ITA_specialize_semovente_spirit_loc_2
+
+		ai_chance = {
+			base = 10
+			modifier = {
+				factor = 0
+				has_active_mission = bankruptcy_incoming_collapse
+			}
+			modifier = {
+				factor = 4
+				ai_is_threatened = yes
+			}
+		}
 	}
 }
 
@@ -313,6 +577,18 @@ country_event = {
 			add_ideas = ITA_specialized_as_fighter_spirit_1
 		}
 		custom_effect_tooltip = ITA_specialized_as_fighter_spirit_loc_1
+
+		ai_chance = {
+			base = 10
+			modifier = {
+				factor = 4
+				has_active_mission = bankruptcy_incoming_collapse
+			}
+			modifier = {
+				factor = 0.5
+				ai_is_threatened = yes
+			}
+		}
 	}
 
 	option = {
@@ -322,6 +598,18 @@ country_event = {
 			add_ideas = ITA_specialized_as_fighter_spirit_2
 		}
 		custom_effect_tooltip = ITA_specialized_as_fighter_spirit_loc_2
+
+		ai_chance = {
+			base = 10
+			modifier = {
+				factor = 0
+				has_active_mission = bankruptcy_incoming_collapse
+			}
+			modifier = {
+				factor = 4
+				ai_is_threatened = yes
+			}
+		}
 	}
 }
 
@@ -340,6 +628,18 @@ country_event = {
 			add_ideas = ITA_light_fighters_spirit_1
 		}
 		custom_effect_tooltip = ITA_light_fighters_spirit_loc_1
+
+		ai_chance = {
+			base = 10
+			modifier = {
+				factor = 4
+				has_active_mission = bankruptcy_incoming_collapse
+			}
+			modifier = {
+				factor = 0.5
+				ai_is_threatened = yes
+			}
+		}
 	}
 
 	option = {
@@ -349,6 +649,18 @@ country_event = {
 			add_ideas = ITA_light_fighters_spirit_2
 		}
 		custom_effect_tooltip = ITA_light_fighters_spirit_loc_2
+
+		ai_chance = {
+			base = 10
+			modifier = {
+				factor = 0
+				has_active_mission = bankruptcy_incoming_collapse
+			}
+			modifier = {
+				factor = 4
+				ai_is_threatened = yes
+			}
+		}
 	}
 }
 
@@ -367,6 +679,18 @@ country_event = {
 			add_ideas = ITA_specialized_cas_spirit_1
 		}
 		custom_effect_tooltip = ITA_specialized_cas_spirit_loc_1
+
+		ai_chance = {
+			base = 10
+			modifier = {
+				factor = 4
+				has_active_mission = bankruptcy_incoming_collapse
+			}
+			modifier = {
+				factor = 0.5
+				ai_is_threatened = yes
+			}
+		}
 	}
 
 	option = {
@@ -376,6 +700,18 @@ country_event = {
 			add_ideas = ITA_specialized_cas_spirit_2
 		}
 		custom_effect_tooltip = ITA_specialized_cas_spirit_loc_2
+
+		ai_chance = {
+			base = 10
+			modifier = {
+				factor = 0
+				has_active_mission = bankruptcy_incoming_collapse
+			}
+			modifier = {
+				factor = 4
+				ai_is_threatened = yes
+			}
+		}
 	}
 }
 
@@ -394,6 +730,18 @@ country_event = {
 			add_ideas = ITA_multirole_attack_plane_spirit_1
 		}
 		custom_effect_tooltip = ITA_multirole_attack_plane_spirit_loc_1
+
+		ai_chance = {
+			base = 10
+			modifier = {
+				factor = 4
+				has_active_mission = bankruptcy_incoming_collapse
+			}
+			modifier = {
+				factor = 0.5
+				ai_is_threatened = yes
+			}
+		}
 	}
 
 	option = {
@@ -403,6 +751,18 @@ country_event = {
 			add_ideas = ITA_multirole_attack_plane_spirit_2
 		}
 		custom_effect_tooltip = ITA_multirole_attack_plane_spirit_loc_2
+
+		ai_chance = {
+			base = 10
+			modifier = {
+				factor = 0
+				has_active_mission = bankruptcy_incoming_collapse
+			}
+			modifier = {
+				factor = 4
+				ai_is_threatened = yes
+			}
+		}
 	}
 }
 
@@ -421,6 +781,18 @@ country_event = {
 			add_ideas = ITA_ground_attack_drones_spirit_1
 		}
 		custom_effect_tooltip = ITA_ground_attack_drones_spirit_loc_1
+
+		ai_chance = {
+			base = 10
+			modifier = {
+				factor = 4
+				has_active_mission = bankruptcy_incoming_collapse
+			}
+			modifier = {
+				factor = 0.5
+				ai_is_threatened = yes
+			}
+		}
 	}
 
 	option = {
@@ -430,6 +802,18 @@ country_event = {
 			add_ideas = ITA_ground_attack_drones_spirit_2
 		}
 		custom_effect_tooltip = ITA_ground_attack_drones_spirit_loc_2
+
+		ai_chance = {
+			base = 10
+			modifier = {
+				factor = 0
+				has_active_mission = bankruptcy_incoming_collapse
+			}
+			modifier = {
+				factor = 4
+				ai_is_threatened = yes
+			}
+		}
 	}
 }
 
@@ -448,6 +832,18 @@ country_event = {
 			add_ideas = ITA_naval_bomber_spirit_1
 		}
 		custom_effect_tooltip = ITA_naval_bomber_spirit_loc_1
+
+		ai_chance = {
+			base = 10
+			modifier = {
+				factor = 4
+				has_active_mission = bankruptcy_incoming_collapse
+			}
+			modifier = {
+				factor = 0.5
+				ai_is_threatened = yes
+			}
+		}
 	}
 
 	option = {
@@ -457,6 +853,18 @@ country_event = {
 			add_ideas = ITA_naval_bomber_spirit_2
 		}
 		custom_effect_tooltip = ITA_naval_bomber_spirit_loc_2
+
+		ai_chance = {
+			base = 10
+			modifier = {
+				factor = 0
+				has_active_mission = bankruptcy_incoming_collapse
+			}
+			modifier = {
+				factor = 4
+				ai_is_threatened = yes
+			}
+		}
 	}
 }
 
@@ -475,6 +883,18 @@ country_event = {
 			add_ideas = ITA_naval_multirole_spirit_1
 		}
 		custom_effect_tooltip = ITA_naval_multirole_spirit_loc_1
+
+		ai_chance = {
+			base = 10
+			modifier = {
+				factor = 4
+				has_active_mission = bankruptcy_incoming_collapse
+			}
+			modifier = {
+				factor = 0.5
+				ai_is_threatened = yes
+			}
+		}
 	}
 
 	option = {
@@ -484,6 +904,18 @@ country_event = {
 			add_ideas = ITA_naval_multirole_spirit_2
 		}
 		custom_effect_tooltip = ITA_naval_multirole_spirit_loc_2
+
+		ai_chance = {
+			base = 10
+			modifier = {
+				factor = 0
+				has_active_mission = bankruptcy_incoming_collapse
+			}
+			modifier = {
+				factor = 4
+				ai_is_threatened = yes
+			}
+		}
 	}
 }
 
@@ -502,6 +934,18 @@ country_event = {
 			add_ideas = ITA_naval_light_multirole_spirit_1
 		}
 		custom_effect_tooltip = ITA_naval_light_multirole_spirit_loc_1
+
+		ai_chance = {
+			base = 10
+			modifier = {
+				factor = 4
+				has_active_mission = bankruptcy_incoming_collapse
+			}
+			modifier = {
+				factor = 0.5
+				ai_is_threatened = yes
+			}
+		}
 	}
 
 	option = {
@@ -511,6 +955,18 @@ country_event = {
 			add_ideas = ITA_naval_light_multirole_spirit_2
 		}
 		custom_effect_tooltip = ITA_naval_light_multirole_spirit_loc_2
+
+		ai_chance = {
+			base = 10
+			modifier = {
+				factor = 0
+				has_active_mission = bankruptcy_incoming_collapse
+			}
+			modifier = {
+				factor = 4
+				ai_is_threatened = yes
+			}
+		}
 	}
 }
 
@@ -529,6 +985,18 @@ country_event = {
 			add_ideas = ITA_strategic_bomber_spirit_1
 		}
 		custom_effect_tooltip = ITA_strategic_bomber_spirit_loc_1
+
+		ai_chance = {
+			base = 10
+			modifier = {
+				factor = 4
+				has_active_mission = bankruptcy_incoming_collapse
+			}
+			modifier = {
+				factor = 0.5
+				ai_is_threatened = yes
+			}
+		}
 	}
 
 	option = {
@@ -538,6 +1006,18 @@ country_event = {
 			add_ideas = ITA_strategic_bomber_spirit_2
 		}
 		custom_effect_tooltip = ITA_strategic_bomber_spirit_loc_2
+
+		ai_chance = {
+			base = 10
+			modifier = {
+				factor = 0
+				has_active_mission = bankruptcy_incoming_collapse
+			}
+			modifier = {
+				factor = 4
+				ai_is_threatened = yes
+			}
+		}
 	}
 }
 
@@ -556,6 +1036,18 @@ country_event = {
 			add_ideas = ITA_specialize_mangusta_spirit_1
 		}
 		custom_effect_tooltip = ITA_specialize_mangusta_spirit_loc_1
+
+		ai_chance = {
+			base = 10
+			modifier = {
+				factor = 4
+				has_active_mission = bankruptcy_incoming_collapse
+			}
+			modifier = {
+				factor = 0.5
+				ai_is_threatened = yes
+			}
+		}
 	}
 
 	option = {
@@ -565,6 +1057,18 @@ country_event = {
 			add_ideas = ITA_specialize_mangusta_spirit_2
 		}
 		custom_effect_tooltip = ITA_specialize_mangusta_spirit_loc_2
+
+		ai_chance = {
+			base = 10
+			modifier = {
+				factor = 0
+				has_active_mission = bankruptcy_incoming_collapse
+			}
+			modifier = {
+				factor = 4
+				ai_is_threatened = yes
+			}
+		}
 	}
 
 	option = {
@@ -574,6 +1078,18 @@ country_event = {
 			add_ideas = ITA_specialize_mangusta_spirit_3
 		}
 		custom_effect_tooltip = ITA_specialize_mangusta_spirit_loc_3
+
+		ai_chance = {
+			base = 10
+			modifier = {
+				factor = 0
+				has_active_mission = bankruptcy_incoming_collapse
+			}
+			modifier = {
+				factor = 4
+				ai_is_threatened = yes
+			}
+		}
 	}
 }
 
@@ -592,6 +1108,18 @@ country_event = {
 			add_ideas = ITA_specialize_otomatic_spirit_1
 		}
 		custom_effect_tooltip = ITA_specialize_otomatic_spirit_loc_1
+
+		ai_chance = {
+			base = 10
+			modifier = {
+				factor = 4
+				has_active_mission = bankruptcy_incoming_collapse
+			}
+			modifier = {
+				factor = 0.5
+				ai_is_threatened = yes
+			}
+		}
 	}
 
 	option = {
@@ -601,6 +1129,18 @@ country_event = {
 			add_ideas = ITA_specialize_otomatic_spirit_2
 		}
 		custom_effect_tooltip = ITA_specialize_otomatic_spirit_loc_2
+
+		ai_chance = {
+			base = 10
+			modifier = {
+				factor = 0
+				has_active_mission = bankruptcy_incoming_collapse
+			}
+			modifier = {
+				factor = 4
+				ai_is_threatened = yes
+			}
+		}
 	}
 }
 
@@ -669,7 +1209,7 @@ country_event = {
 			add_core_of = ITA
 		}
 		ai_chance = {
-			factor = 1
+			base = 1
 		}
 	}
 	option = { #Refuse
@@ -685,7 +1225,7 @@ country_event = {
 		}
 		ITA = { country_event = italy_md.5 }
 		ai_chance = {
-			factor = 0
+			base = 0
 		}
 	}
 }
@@ -726,6 +1266,31 @@ country_event = {
 		add_opinion_modifier = {
 			target = FROM
 			modifier = refused_to_be_annexed
+		}
+
+		ai_chance = {
+			base = 10
+			modifier = {
+				factor = 0
+				FROM = { strength_ratio = { tag = ROOT ratio > 1 } }
+			}
+		}
+	}
+
+	option = {
+		name = italy_md.5.o2
+		log = "[GetDateText]: [This.GetName]: italy_md.5.o2 executed"
+		add_opinion_modifier = {
+			target = FROM
+			modifier = refused_to_be_annexed
+		}
+
+		ai_chance = {
+			base = 5
+			modifier = {
+				factor = 20
+				FROM = { strength_ratio = { tag = ROOT ratio > 1 } }
+			}
 		}
 	}
 }
@@ -857,7 +1422,7 @@ country_event = {
 			}
 		}
 		ai_chance = {
-			factor = 10
+			base = 10
 		}
 	}
 	option = {
@@ -975,7 +1540,7 @@ country_event = {
 			}
 		}
 		ai_chance = {
-			factor = 0
+			base = 0
 			modifier = {
 				add = 20
 				strength_ratio = {
@@ -1007,6 +1572,31 @@ country_event = {
 		create_wargoal = {
 			type = puppet_wargoal_focus
 			target = FROM
+		}
+
+		ai_chance = {
+			base = 10
+			modifier = {
+				factor = 0
+				FROM = { strength_ratio = { tag = ROOT ratio > 1 } }
+			}
+		}
+	}
+
+	option = {
+		name = italy_md.7.o2
+		log = "[GetDateText]: [This.GetName]: italy_md.7.o2 executed"
+		add_opinion_modifier = {
+			target = FROM
+			modifier = ITA_refused_oil_investments_africa
+		}
+
+		ai_chance = {
+			base = 5
+			modifier = {
+				factor = 20
+				FROM = { strength_ratio = { tag = ROOT ratio > 1 } }
+			}
 		}
 	}
 }
@@ -1064,7 +1654,7 @@ country_event = {
 	}
 	option = {
 		name = italy_md.9.o2
-		log = "[GetDateText]: [This.GetName]: italy_md.9.o1 executed"
+		log = "[GetDateText]: [This.GetName]: italy_md.9.o2 executed"
 		add_resource = { #Egyptian Coast on the Red Sea
 			type = oil
 			amount = 8
@@ -1106,6 +1696,34 @@ country_event = {
 				modifier = ITA_refused_oil_investments_africa
 			}
 		}
+
+		ai_chance = {
+			base = 10
+			modifier = {
+				factor = 0
+				EGY = { strength_ratio = { tag = ROOT ratio > 1 } }
+			}
+		}
+	}
+
+	option = {
+		name = italy_md.10.o2
+		log = "[GetDateText]: [This.GetName]: italy_md.10.o2 executed"
+		if = {
+			limit = { country_exists = EGY }
+			add_opinion_modifier = {
+				target = EGY
+				modifier = ITA_refused_oil_investments_africa
+			}
+		}
+
+		ai_chance = {
+			base = 5
+			modifier = {
+				factor = 20
+				EGY = { strength_ratio = { tag = ROOT ratio > 1 } }
+			}
+		}
 	}
 }
 country_event = { #Space Income-Event
@@ -1139,14 +1757,14 @@ country_event = {
 		log = "[GetDateText]: [This.GetName]: italy_md.12.o1 executed"
 		set_country_flag = accepted_italy_as_sco_candidate
 		ITA = { country_event = diplomatic_response.1 }
-		ai_chance = { factor = 90 }
+		ai_chance = { base = 90 }
 	}
 
 	option = {	#Decline
 		name = italy_md.12.o2
 		log = "[GetDateText]: [This.GetName]: italy_md.12.o2 executed"
 		ITA = { country_event = diplomatic_response.2 }
-		ai_chance = { factor = 10 }
+		ai_chance = { base = 10 }
 	}
 }
 #Reduce Expenses
@@ -1221,13 +1839,19 @@ country_event = {
 		if = {
 			limit = { has_idea = ITA_building_abuse_1 }
 				960 = {
-					damage_building = {
-						type = industrial_complex
-						damage = 1
+					if = {
+						limit = { industrial_complex > 0 }
+						damage_building = {
+							type = industrial_complex
+							damage = 1
+						}
 					}
-					damage_building = {
-						type = infrastructure
-						damage = 1
+					if = {
+						limit = { infrastructure > 0 }
+						damage_building = {
+							type = infrastructure
+							damage = 1
+						}
 					}
 				}
 				add_political_power = -200
@@ -1236,13 +1860,19 @@ country_event = {
 		else_if = {
 			limit = { has_completed_focus = ITA_stop_building_abuse }
 				960 = {
-					damage_building = {
-						type = industrial_complex
-						damage = 0.5
+					if = {
+						limit = { industrial_complex > 0 }
+						damage_building = {
+							type = industrial_complex
+							damage = 0.5
+						}
 					}
-					damage_building = {
-						type = infrastructure
-						damage = 0.2
+					if = {
+						limit = { infrastructure > 0 }
+						damage_building = {
+							type = infrastructure
+							damage = 0.2
+						}
 					}
 				}
 		}
@@ -1263,13 +1893,19 @@ country_event = {
 		if = {
 			limit = { has_idea = ITA_building_abuse_1 }
 				960 = {
-					damage_building = {
-						type = industrial_complex
-						damage = 1
+					if = {
+						limit = { industrial_complex > 0 }
+						damage_building = {
+							type = industrial_complex
+							damage = 1
+						}
 					}
-					damage_building = {
-						type = infrastructure
-						damage = 1
+					if = {
+						limit = { infrastructure > 0 }
+						damage_building = {
+							type = infrastructure
+							damage = 1
+						}
 					}
 				}
 				add_political_power = -200
@@ -1278,13 +1914,19 @@ country_event = {
 		else_if = {
 			limit = { has_completed_focus = ITA_stop_building_abuse }
 				960 = {
-					damage_building = {
-						type = industrial_complex
-						damage = 0.5
+					if = {
+						limit = { industrial_complex > 0 }
+						damage_building = {
+							type = industrial_complex
+							damage = 0.5
+						}
 					}
-					damage_building = {
-						type = infrastructure
-						damage = 0.2
+					if = {
+						limit = { infrastructure > 0 }
+						damage_building = {
+							type = infrastructure
+							damage = 0.2
+						}
 					}
 				}
 		}
@@ -1348,7 +1990,7 @@ country_event = {
 			}
 		}
 		ai_chance = {
-			factor = 2
+			base = 2
 		}
 	}
 	option = { #refuse
@@ -1358,7 +2000,7 @@ country_event = {
 			country_event = diplomatic_response.2
 		}
 		ai_chance = {
-			factor = 0
+			base = 0
 		}
 	}
 }
@@ -1567,18 +2209,18 @@ country_event = {
 			}
 		}
 		ai_chance = {
-			factor = 2
+			base = 2
 		}
 	}
 
 	option = {
 		name = italy_md.18.o2
-		log = "[GetDateText]: [This.GetName]: italy_md.18.o1 executed"
+		log = "[GetDateText]: [This.GetName]: italy_md.18.o2 executed"
 		ITA = {
 			country_event = diplomatic_response.2
 		}
 		ai_chance = {
-			factor = 0
+			base = 0
 		}
 	}
 }
@@ -1703,7 +2345,6 @@ country_event = {
 	}
 	option = {
 		name = italy_md.22.o2
-		log = "[GetDateText]: [This.GetName]: italy_md.22.o2 executed"
 	}
 }
 #Tutorial for Italian Mechanics
@@ -1732,7 +2373,6 @@ country_event = {
 	}
 	option = {
 		name = italy_md.23.o4
-		log = "[GetDateText]: [This.GetName]: italy_md.23.o4 executed"
 	}
 }
 #Salerno-to-Reggio Calabria Motorway
@@ -1781,7 +2421,6 @@ country_event = {
 	}
 	option = {
 		name = italy_md.25.o2
-		log = "[GetDateText]: [This.GetName]: italy_md.25.o2 executed"
 	}
 }
 #event to change internal factions
@@ -1820,7 +2459,7 @@ country_event = {
 			clr_country_flag = ITA_replace_labour_unions
 		}
 		ai_chance = {
-			factor = 4
+			base = 4
 		}
 	}
 	option = {
@@ -1850,7 +2489,7 @@ country_event = {
 			clr_country_flag = ITA_replace_labour_unions
 		}
 		ai_chance = {
-			factor = 8
+			base = 8
 		}
 	}
 	option = {
@@ -1880,7 +2519,7 @@ country_event = {
 			clr_country_flag = ITA_replace_labour_unions
 		}
 		ai_chance = {
-			factor = 2
+			base = 2
 		}
 	}
 	option = {
@@ -1910,7 +2549,7 @@ country_event = {
 			clr_country_flag = ITA_replace_labour_unions
 		}
 		ai_chance = {
-			factor = 1
+			base = 1
 		}
 	}
 }
@@ -2058,7 +2697,7 @@ country_event = {
 			}
 		}
 		ai_chance = {
-			factor = 100
+			base = 100
 		}
 	}
 }
@@ -2108,7 +2747,7 @@ country_event = {
 		}
 		custom_effect_tooltip = ITA_continue_war_on_mafia_tt
 		ai_chance = {
-			factor = 100
+			base = 100
 		}
 	}
 }
@@ -2128,7 +2767,6 @@ country_event = {
 	}
 	option = {
 		name = italy_md.30.o2
-		log = "[GetDateText]: [This.GetName]: italy_md.30.o2 executed"
 	}
 }
 #Tutorial for weekly stability
@@ -2147,7 +2785,6 @@ country_event = {
 	}
 	option = {
 		name = italy_md.31.o2
-		log = "[GetDateText]: [This.GetName]: italy_md.31.o2 executed"
 	}
 }
 #Victory over Mafia
@@ -2174,11 +2811,11 @@ country_event = {
 		clr_country_flag = protect_from_pizzo_campania_flag
 		clr_country_flag = protect_from_pizzo_calabria_flag
 		clr_country_flag = protect_from_pizzo_puglia_flag
-		remove_dynamic_modifier = { modifier = ITA_mafia_modifier }
+		if = { limit = { has_dynamic_modifier = { modifier = ITA_mafia_modifier } } remove_dynamic_modifier = { modifier = ITA_mafia_modifier } }
 		news_event = italy_news.8
 		custom_effect_tooltip = ITA_end_war_on_mafia_tt
 		82 = {
-			remove_dynamic_modifier = { modifier = camorra_infiltrations_modifier }
+			if = { limit = { has_dynamic_modifier = { modifier = camorra_infiltrations_modifier } } remove_dynamic_modifier = { modifier = camorra_infiltrations_modifier } }
 			clear_variable = camorra_infiltrations_var
 			if = {
 				limit = { has_dynamic_modifier = { modifier = mafia_foreign_investment } }
@@ -2186,7 +2823,7 @@ country_event = {
 			}
 		}
 		956 = {
-			remove_dynamic_modifier = { modifier = ndrangheta_infiltrations_modifier }
+			if = { limit = { has_dynamic_modifier = { modifier = ndrangheta_infiltrations_modifier } } remove_dynamic_modifier = { modifier = ndrangheta_infiltrations_modifier } }
 			clear_variable = ndrangheta_infiltrations_var
 			if = {
 				limit = { has_dynamic_modifier = { modifier = mafia_foreign_investment } }
@@ -2194,7 +2831,7 @@ country_event = {
 			}
 		}
 		957 = {
-			remove_dynamic_modifier = { modifier = sacra_corona_unita_infiltrations_modifier }
+			if = { limit = { has_dynamic_modifier = { modifier = sacra_corona_unita_infiltrations_modifier } } remove_dynamic_modifier = { modifier = sacra_corona_unita_infiltrations_modifier } }
 			clear_variable = sacra_corona_unita_infiltrations_var
 			if = {
 				limit = { has_dynamic_modifier = { modifier = mafia_foreign_investment } }
@@ -2202,7 +2839,7 @@ country_event = {
 			}
 		}
 		83 = {
-			remove_dynamic_modifier = { modifier = cosa_nostra_infiltrations_modifier }
+			if = { limit = { has_dynamic_modifier = { modifier = cosa_nostra_infiltrations_modifier } } remove_dynamic_modifier = { modifier = cosa_nostra_infiltrations_modifier } }
 			clear_variable = cosa_nostra_infiltrations_var
 			if = {
 				limit = { has_dynamic_modifier = { modifier = mafia_foreign_investment } }
@@ -2280,7 +2917,7 @@ country_event = {
 			country_event = italy_md.1
 		}
 		ai_chance = {
-			factor = 10
+			base = 10
 			modifier = {
 				factor = 0
 				has_opinion = {
@@ -2372,7 +3009,6 @@ country_event = {
 
 	option = {
 		name = italy_md.35.o1
-		log = "[GetDateText]: [This.GetName]: italy_md.35.o1 executed"
 	}
 }
 #foreign investments request denied
@@ -2386,7 +3022,6 @@ country_event = {
 
 	option = {
 		name = italy_md.36.o1
-		log = "[GetDateText]: [This.GetName]: italy_md.36.o1 executed"
 	}
 }
 #tag switch to SCL (padania)
@@ -2402,10 +3037,14 @@ country_event = {
 		name = italy_md.37.o1
 		log = "[GetDateText]: [This.GetName]: italy_md.37.o1 executed"
 		SCL = { change_tag_from = ITA }
+
+		# Playing on as Padania throws away the rest of the Italian tree.
+		ai_chance = { base = 0 }
 	}
 	option = {
 		name = italy_md.37.o2
-		log = "[GetDateText]: [This.GetName]: italy_md.37.o2 executed"
+
+		ai_chance = { base = 100 }
 	}
 }
 #government crisis
@@ -2426,7 +3065,7 @@ country_event = {
 			set_elections_60_months = yes
 		}
 		ai_chance = {
-			factor = 10
+			base = 10
 		}
 	}
 	option = {
@@ -2448,7 +3087,7 @@ country_event = {
 			set_country_flag = delayed_government_crisis_1
 		}
 		ai_chance = {
-			factor = 1
+			base = 1
 			modifier = {
 				factor = 0.1
 				has_country_flag = delayed_government_crisis_1
@@ -2515,7 +3154,7 @@ country_event = {
 		set_country_flag = coalition_forming
 		activate_mission = coalition_countdown
 		ai_chance = {
-			factor = 100
+			base = 100
 		}
 	}
 }
@@ -2535,7 +3174,6 @@ country_event = {
 	}
 	option = {
 		name = italy_md.39.o2
-		log = "[GetDateText]: [This.GetName]: italy_md.39.o2 executed"
 	}
 }
 #Salvini rises
@@ -2824,18 +3462,18 @@ country_event = {
 			}
 		}
 		ai_chance = {
-			factor = 2
+			base = 2
 		}
 	}
 
 	option = {
 		name = italy_md.44.o2
-		log = "[GetDateText]: [This.GetName]: italy_md.44.o1 executed"
+		log = "[GetDateText]: [This.GetName]: italy_md.44.o2 executed"
 		ITA = {
 			country_event = diplomatic_response.2
 		}
 		ai_chance = {
-			factor = 0
+			base = 0
 		}
 	}
 }
@@ -2877,7 +3515,6 @@ country_event = {
 
 	option = {
 		name = italy_md.47.o1
-		log = "[GetDateText]: [This.GetName]: italy_md.47.o1 executed"
 	}
 }
 #romanization decision complete notification
@@ -2890,7 +3527,6 @@ country_event = {
 
 	option = {
 		name = italy_md.48.o1
-		log = "[GetDateText]: [This.GetName]: italy_md.48.o1 executed"
 	}
 }
 #Italy threatens neighbour for territory
@@ -2913,7 +3549,7 @@ country_event = {
 		}
 
 		ai_chance = {
-			factor = 10
+			base = 10
 			modifier = {
 				factor = 0
 				strength_ratio = {
@@ -2936,7 +3572,7 @@ country_event = {
 			}
 		}
 		ai_chance = {
-			factor = 0
+			base = 0
 			modifier = {
 				add = 10
 				strength_ratio = {
@@ -2971,7 +3607,7 @@ country_event = {
 		set_temp_variable = { treasury_change = 50 }
 		modify_treasury_effect = yes
 		ai_chance = {
-			factor = 10
+			base = 10
 			modifier = {
 				factor = 0
 				has_opinion = {
@@ -2994,7 +3630,7 @@ country_event = {
 			}
 		}
 		ai_chance = {
-			factor = 0
+			base = 0
 			modifier = {
 				add = 10
 				has_opinion = {
@@ -3028,7 +3664,7 @@ country_event = {
 		}
 
 		ai_chance = {
-			factor = 10
+			base = 10
 			modifier = {
 				factor = 0
 				strength_ratio = {
@@ -3048,7 +3684,7 @@ country_event = {
 		}
 
 		ai_chance = {
-			factor = 5
+			base = 5
 		}
 	}
 }
@@ -3075,7 +3711,7 @@ country_event = {
 		}
 
 		ai_chance = {
-			factor = 10
+			base = 10
 			modifier = {
 				factor = 0
 				strength_ratio = {
@@ -3095,7 +3731,7 @@ country_event = {
 		}
 
 		ai_chance = {
-			factor = 5
+			base = 5
 		}
 	}
 }
@@ -3130,7 +3766,7 @@ country_event = {
 		}
 
 		ai_chance = {
-			factor = 10
+			base = 10
 			modifier = {
 				factor = 0
 				strength_ratio = {
@@ -3150,7 +3786,7 @@ country_event = {
 		}
 
 		ai_chance = {
-			factor = 5
+			base = 5
 		}
 	}
 }
@@ -3223,7 +3859,7 @@ country_event = {
 		}
 
 		ai_chance = {
-			factor = 10
+			base = 10
 			modifier = {
 				factor = 0
 				strength_ratio = {
@@ -3243,7 +3879,7 @@ country_event = {
 		}
 
 		ai_chance = {
-			factor = 5
+			base = 5
 		}
 	}
 }
@@ -3278,7 +3914,7 @@ country_event = {
 		}
 
 		ai_chance = {
-			factor = 10
+			base = 10
 			modifier = {
 				factor = 0
 				strength_ratio = {
@@ -3298,7 +3934,7 @@ country_event = {
 		}
 
 		ai_chance = {
-			factor = 5
+			base = 5
 		}
 	}
 }
@@ -3333,7 +3969,7 @@ country_event = {
 		}
 
 		ai_chance = {
-			factor = 10
+			base = 10
 			modifier = {
 				factor = 0
 				strength_ratio = {
@@ -3353,7 +3989,7 @@ country_event = {
 		}
 
 		ai_chance = {
-			factor = 5
+			base = 5
 		}
 	}
 }
@@ -3388,7 +4024,7 @@ country_event = {
 		}
 
 		ai_chance = {
-			factor = 10
+			base = 10
 			modifier = {
 				factor = 0
 				strength_ratio = {
@@ -3408,7 +4044,7 @@ country_event = {
 		}
 
 		ai_chance = {
-			factor = 5
+			base = 5
 		}
 	}
 }
@@ -3435,7 +4071,7 @@ country_event = {
 		add_to_variable = { ITA_additional_expenses_var = 0.05 }
 
 		ai_chance = {
-			factor = 5
+			base = 5
 		}
 	}
 	option = {
@@ -3443,10 +4079,9 @@ country_event = {
 			has_idea = ITA_gmos_encouraged
 		}
 		name = italy_md.59.o2
-		log = "[GetDateText]: [This.GetName]: italy_md.59.o2 executed"
 
 		ai_chance = {
-			factor = 5
+			base = 5
 		}
 	}
 }
@@ -3467,7 +4102,7 @@ country_event = {
 		change_relative_party_popularity = yes
 
 		ai_chance = {
-			factor = 5
+			base = 5
 		}
 	}
 	option = {
@@ -3476,7 +4111,7 @@ country_event = {
 		add_political_power = -150
 
 		ai_chance = {
-			factor = 5
+			base = 5
 		}
 	}
 }
@@ -3493,14 +4128,17 @@ country_event = {
 		name = italy_md.61.o1
 		log = "[GetDateText]: [This.GetName]: italy_md.61.o1 executed"
 		1060 = {
-			damage_building = {
-				type = infrastructure
-				damage = 1
+			if = {
+				limit = { infrastructure > 0 }
+				damage_building = {
+					type = infrastructure
+					damage = 1
+				}
 			}
 		}
 
 		ai_chance = {
-			factor = 5
+			base = 5
 		}
 	}
 }
@@ -3525,7 +4163,7 @@ country_event = {
 		}
 
 		ai_chance = {
-			factor = 5
+			base = 5
 		}
 	}
 
@@ -3534,10 +4172,9 @@ country_event = {
 			has_country_flag = ITA_private_water
 		}
 		name = italy_md.62.o2
-		log = "[GetDateText]: [This.GetName]: italy_md.62.o2 executed"
 
 		ai_chance = {
-			factor = 5
+			base = 5
 		}
 	}
 }
@@ -3591,7 +4228,7 @@ country_event = {
 			}
 		}
 		ai_chance = {
-			factor = 2
+			base = 2
 		}
 	}
 	option = { #refuse
@@ -3601,7 +4238,7 @@ country_event = {
 			country_event = diplomatic_response.2
 		}
 		ai_chance = {
-			factor = 0
+			base = 0
 		}
 	}
 }
@@ -3653,7 +4290,7 @@ country_event = {
 			}
 		}
 		ai_chance = {
-			factor = 2
+			base = 2
 		}
 	}
 	option = { #refuse
@@ -3663,7 +4300,7 @@ country_event = {
 			country_event = diplomatic_response.2
 		}
 		ai_chance = {
-			factor = 0
+			base = 0
 		}
 	}
 }
@@ -3696,7 +4333,7 @@ country_event = {
 			limit = { tag = TAI }
 			ITA = {
 				add_tech_bonus = {
-					name = ITA_tech_deal
+					name = italy_md.65.t
 					bonus = 1
 					uses = 1
 					category = CAT_computing_tech
@@ -3707,7 +4344,7 @@ country_event = {
 			limit = { tag = ISR }
 			ITA = {
 				add_tech_bonus = {
-					name = CAT_genes
+					name = italy_md.65.t
 					bonus = 1
 					uses = 1
 					category = CAT_genes
@@ -3722,7 +4359,7 @@ country_event = {
 			add_to_variable = { ITA_research_speed_factor_var = 0.05 tooltip = research_speed_factor_tt }
 		}
 		ai_chance = {
-			factor = 2
+			base = 2
 		}
 	}
 	option = { #refuse
@@ -3732,7 +4369,7 @@ country_event = {
 			country_event = diplomatic_response.2
 		}
 		ai_chance = {
-			factor = 0
+			base = 0
 		}
 	}
 }
@@ -3789,7 +4426,7 @@ country_event = {
 		set_country_flag = coalition_forming
 		activate_mission = coalition_countdown
 		ai_chance = {
-			factor = 1
+			base = 1
 		}
 	}
 
@@ -3812,7 +4449,7 @@ country_event = {
 		set_country_flag = coalition_forming
 		activate_mission = coalition_countdown
 		ai_chance = {
-			factor = 1
+			base = 1
 		}
 	}
 
@@ -3835,7 +4472,7 @@ country_event = {
 		set_country_flag = coalition_forming
 		activate_mission = coalition_countdown
 		ai_chance = {
-			factor = 0
+			base = 0
 		}
 	}
 }
@@ -3917,11 +4554,9 @@ country_event = {
 					ruling_party = nationalist
 				}
 			}
-			for_each_loop = {
-				array = ruling_party
-				value = v
-				index = i
-				set_variable = { ruling_party^i = ROOT.ruling_party^i }
+			if = {
+				limit = { ROOT = { has_variable = ruling_party } }
+				set_variable = { ruling_party = ROOT.ruling_party }
 			}
 			for_each_loop = {
 				array = gov_coalition_array
@@ -4015,11 +4650,9 @@ country_event = {
 						ruling_party = nationalist
 					}
 				}
-				for_each_loop = {
-					array = ruling_party
-					value = v
-					index = i
-					set_variable = { ruling_party^i = SCL.ruling_party^i }
+				if = {
+					limit = { SCL = { has_variable = ruling_party } }
+					set_variable = { ruling_party = SCL.ruling_party }
 				}
 				for_each_loop = {
 					array = gov_coalition_array
@@ -4052,7 +4685,7 @@ country_event = {
 					target = SCL
 					transfer_troops = yes
 				}
-				set_leader_ITA = yes
+				set_leader = yes
 				custom_effect_tooltip = { localization_key = modifies_dynamic_modifier_tt MODIFIER = ITA_multipurpose_modifier }
 				add_to_variable = { ITA_stability_factor_var = 0.6 tooltip = stability_factor_tt }
 				add_to_variable = { ITA_stability_weekly_var = 0.003 tooltip = stability_weekly_tt }
@@ -4060,7 +4693,7 @@ country_event = {
 		}
 
 		ai_chance = {
-			factor = 10
+			base = 10
 		}
 	}
 }
@@ -4091,7 +4724,7 @@ country_event = {
 	id = italy_md.70
 	title = italy_md.70.t
 	desc = italy_md.70.d
-	picture = GFX_report_event_Protest_ITA_1 # TODO: Add a new picture for this event
+	picture = GFX_COM_robert_denard
 	is_triggered_only = yes
 	trigger = {
 		original_tag = ITA
@@ -4138,14 +4771,12 @@ country_event = {
 			}
 			modifier = {
 				add = 100
-				has_game_rule = {
-					rule = COM_ai_behavior
-					option = COM_WARRIOR_KING
-				}
+				has_global_flag = COM_WARRIOR_KING_FOCUS_PATH
 			}
 			modifier = {
 				factor = 0
 				is_historical_focus_on = yes
+				NOT = { has_global_flag = COM_WARRIOR_KING_FOCUS_PATH }
 			}
 		}
 	}
@@ -4207,7 +4838,6 @@ country_event = {
 
 	option = {
 		name = mafia.2.a
-		log = "[GetDateText]: [This.GetName]: mafia.2.a executed"
 	}
 }
 #success in attacking hideout
@@ -4267,7 +4897,7 @@ country_event = {
 		add_command_power = -25
 		mafia_event_effect_camorra = yes
 		ai_chance = {
-			factor = 10
+			base = 10
 			modifier = {
 				factor = 0
 				command_power < 50
@@ -4303,7 +4933,7 @@ country_event = {
 		mafia_utilize_extraordinary_funds_effect = yes
 		mafia_event_effect_camorra = yes
 		ai_chance = {
-			factor = 10
+			base = 10
 			modifier = {
 				factor = 0
 				command_power < 50
@@ -4329,7 +4959,7 @@ country_event = {
 		add_command_power = -25
 		mafia_event_effect_ndrangheta = yes
 		ai_chance = {
-			factor = 10
+			base = 10
 			modifier = {
 				factor = 0
 				command_power < 50
@@ -4365,7 +4995,7 @@ country_event = {
 		mafia_utilize_extraordinary_funds_effect = yes
 		mafia_event_effect_ndrangheta = yes
 		ai_chance = {
-			factor = 10
+			base = 10
 			modifier = {
 				factor = 0
 				check_variable = { ndrangheta_strength < 0.05 }
@@ -4394,7 +5024,7 @@ country_event = {
 			}
 			mafia_event_effect_sacra_corona_unita = yes
 		ai_chance = {
-			factor = 10
+			base = 10
 			modifier = {
 				factor = 0
 				command_power < 50
@@ -4434,7 +5064,7 @@ country_event = {
 		}
 		mafia_event_effect_sacra_corona_unita = yes
 		ai_chance = {
-			factor = 10
+			base = 10
 			modifier = {
 				factor = 0
 				check_variable = { sacra_corona_unita_strength < 0.05 }
@@ -4459,7 +5089,7 @@ country_event = {
 		add_command_power = -25
 		mafia_event_effect_cosa_nostra = yes
 		ai_chance = {
-			factor = 10
+			base = 10
 			modifier = {
 				factor = 0
 				command_power < 50
@@ -4495,7 +5125,7 @@ country_event = {
 		mafia_utilize_extraordinary_funds_effect = yes
 		mafia_event_effect_cosa_nostra = yes
 		ai_chance = {
-			factor = 10
+			base = 10
 			modifier = {
 				factor = 0
 				check_variable = { cosa_nostra_strength < 0.05 }
@@ -4520,7 +5150,7 @@ country_event = {
 		add_command_power = -25
 		mafia_event_effect_camorra = yes
 		ai_chance = {
-			factor = 10
+			base = 10
 			modifier = {
 				factor = 0
 				command_power < 50
@@ -4556,7 +5186,7 @@ country_event = {
 		mafia_utilize_extraordinary_funds_effect = yes
 		mafia_event_effect_camorra = yes
 		ai_chance = {
-			factor = 10
+			base = 10
 			modifier = {
 				factor = 0
 				check_variable = { camorra_strength < 0.05 }
@@ -4581,7 +5211,7 @@ country_event = {
 		add_command_power = -25
 		mafia_event_effect_ndrangheta = yes
 		ai_chance = {
-			factor = 10
+			base = 10
 			modifier = {
 				factor = 0
 				check_variable = { ndrangheta_strength < 0.05 }
@@ -4616,7 +5246,7 @@ country_event = {
 		mafia_utilize_extraordinary_funds_effect = yes
 		mafia_event_effect_ndrangheta = yes
 		ai_chance = {
-			factor = 10
+			base = 10
 			modifier = {
 				factor = 0
 				check_variable = { ndrangheta_strength < 0.05 }
@@ -4641,7 +5271,7 @@ country_event = {
 		add_command_power = -25
 		mafia_event_effect_sacra_corona_unita = yes
 		ai_chance = {
-			factor = 10
+			base = 10
 			modifier = {
 				factor = 0
 				check_variable = { sacra_corona_unita_strength < 0.05 }
@@ -4676,7 +5306,7 @@ country_event = {
 		mafia_utilize_extraordinary_funds_effect = yes
 		mafia_event_effect_sacra_corona_unita = yes
 		ai_chance = {
-			factor = 10
+			base = 10
 			modifier = {
 				factor = 0
 				check_variable = { sacra_corona_unita_strength < 0.05 }
@@ -4701,7 +5331,7 @@ country_event = {
 		add_command_power = -25
 		mafia_event_effect_sacra_corona_unita = yes
 		ai_chance = {
-			factor = 10
+			base = 10
 			modifier = {
 				factor = 0
 				command_power < 50
@@ -4737,7 +5367,7 @@ country_event = {
 		mafia_utilize_extraordinary_funds_effect = yes
 		mafia_event_effect_sacra_corona_unita = yes
 		ai_chance = {
-			factor = 10
+			base = 10
 			modifier = {
 				factor = 0
 				command_power < 50
@@ -4763,7 +5393,7 @@ country_event = {
 		add_command_power = -25
 		mafia_event_effect_sacra_corona_unita = yes
 		ai_chance = {
-			factor = 10
+			base = 10
 			modifier = {
 				factor = 0
 				command_power < 50
@@ -4820,7 +5450,7 @@ country_event = {
 		mafia_utilize_extraordinary_funds_effect = yes
 		mafia_event_effect_sacra_corona_unita = yes
 		ai_chance = {
-			factor = 10
+			base = 10
 			modifier = {
 				factor = 0
 				check_variable = { sacra_corona_unita_strength < 0.05 }
@@ -4876,11 +5506,11 @@ country_event = {
 		trigger = {
 			command_power > 25
 		}
-		log = "[GetDateText]: [This.GetName]: mafia.13.o1 executed"
+		log = "[GetDateText]: [This.GetName]: mafia.17.o1 executed"
 		add_command_power = -25
 		mafia_event_effect_ndrangheta = yes
 		ai_chance = {
-			factor = 10
+			base = 10
 			modifier = {
 				factor = 0
 				command_power < 50
@@ -4917,7 +5547,7 @@ country_event = {
 		mafia_utilize_extraordinary_funds_effect = yes
 		mafia_event_effect_ndrangheta = yes
 		ai_chance = {
-			factor = 10
+			base = 10
 			modifier = {
 				factor = 0
 				command_power < 50
@@ -4943,7 +5573,7 @@ country_event = {
 		add_command_power = -25
 		mafia_event_effect_ndrangheta = yes
 		ai_chance = {
-			factor = 10
+			base = 10
 			modifier = {
 				factor = 0
 				command_power < 50
@@ -4999,7 +5629,7 @@ country_event = {
 		mafia_utilize_extraordinary_funds_effect = yes
 		mafia_event_effect_ndrangheta = yes
 		ai_chance = {
-			factor = 10
+			base = 10
 			modifier = {
 				factor = 0
 				command_power < 50
@@ -5060,7 +5690,7 @@ country_event = {
 		add_command_power = -25
 		mafia_event_effect_camorra = yes
 		ai_chance = {
-			factor = 10
+			base = 10
 			modifier = {
 				factor = 0
 				command_power < 50
@@ -5097,7 +5727,7 @@ country_event = {
 		mafia_utilize_extraordinary_funds_effect = yes
 		mafia_event_effect_camorra = yes
 		ai_chance = {
-			factor = 10
+			base = 10
 			modifier = {
 				factor = 0
 				command_power < 50
@@ -5123,7 +5753,7 @@ country_event = {
 		add_command_power = -25
 		mafia_event_effect_camorra = yes
 		ai_chance = {
-			factor = 10
+			base = 10
 			modifier = {
 				factor = 0
 				command_power < 50
@@ -5179,7 +5809,7 @@ country_event = {
 		mafia_utilize_extraordinary_funds_effect = yes
 		mafia_event_effect_camorra = yes
 		ai_chance = {
-			factor = 10
+			base = 10
 			modifier = {
 				factor = 0
 				command_power < 50
@@ -5236,11 +5866,11 @@ country_event = {
 		trigger = {
 			command_power > 25
 		}
-		log = "[GetDateText]: [This.GetName]: mafia.21.o1 executed"
+		log = "[GetDateText]: [This.GetName]: mafia.25.o1 executed"
 		add_command_power = -25
 		mafia_event_effect_cosa_nostra = yes
 		ai_chance = {
-			factor = 10
+			base = 10
 			modifier = {
 				factor = 0
 				command_power < 50
@@ -5277,7 +5907,7 @@ country_event = {
 		mafia_utilize_extraordinary_funds_effect = yes
 		mafia_event_effect_cosa_nostra = yes
 		ai_chance = {
-			factor = 10
+			base = 10
 			modifier = {
 				factor = 0
 				command_power < 50
@@ -5303,7 +5933,7 @@ country_event = {
 		add_command_power = -25
 		mafia_event_effect_cosa_nostra = yes
 		ai_chance = {
-			factor = 10
+			base = 10
 			modifier = {
 				factor = 0
 				command_power < 50
@@ -5360,7 +5990,7 @@ country_event = {
 		mafia_utilize_extraordinary_funds_effect = yes
 		mafia_event_effect_cosa_nostra = yes
 		ai_chance = {
-			factor = 10
+			base = 10
 			modifier = {
 				factor = 0
 				command_power < 50
@@ -5424,7 +6054,7 @@ country_event = {
 		}
 		country_event = mafia.31
 		ai_chance = {
-			factor = 1
+			base = 1
 			modifier = {
 				factor = cosa_nostra_strength
 				always = yes
@@ -5443,7 +6073,7 @@ country_event = {
 		}
 		country_event = mafia.31
 		ai_chance = {
-			factor = 1
+			base = 1
 			modifier = {
 				factor = camorra_strength
 				always = yes
@@ -5462,7 +6092,7 @@ country_event = {
 		}
 		country_event = mafia.31
 		ai_chance = {
-			factor = 1
+			base = 1
 			modifier = {
 				factor = ndrangheta_strength
 				always = yes
@@ -5475,7 +6105,7 @@ country_event = {
 		log = "[GetDateText]: [This.GetName]: mafia.29.o4 executed"
 		country_event = mafia.30
 		ai_chance = {
-			factor = 1
+			base = 1
 			modifier = {
 				factor = sacra_corona_unita_strength
 				always = yes
@@ -5503,7 +6133,7 @@ country_event = {
 		}
 		country_event = mafia.31
 		ai_chance = {
-			factor = 1
+			base = 1
 			modifier = {
 				factor = sacra_corona_unita_strength
 				always = yes
@@ -5516,7 +6146,7 @@ country_event = {
 		log = "[GetDateText]: [This.GetName]: mafia.30.o2 executed"
 		country_event = mafia.29
 		ai_chance = {
-			factor = 1
+			base = 1
 			modifier = {
 				factor = mafia_strength
 				always = yes
@@ -5641,7 +6271,7 @@ country_event = {
 		}
 		mafia_event_effect_cosa_nostra = yes
 		ai_chance = {
-			factor = 10
+			base = 10
 			modifier = {
 				factor = 0
 				command_power < 50
@@ -5693,7 +6323,7 @@ country_event = {
 		}
 		mafia_event_effect_camorra = yes
 		ai_chance = {
-			factor = 10
+			base = 10
 			modifier = {
 				factor = 0
 				command_power < 50
@@ -5745,7 +6375,7 @@ country_event = {
 		}
 		mafia_event_effect_ndrangheta = yes
 		ai_chance = {
-			factor = 10
+			base = 10
 			modifier = {
 				factor = 0
 				command_power < 50
@@ -5781,7 +6411,7 @@ country_event = {
 			}
 		}
 		name = mafia.36.o2
-		log = "[GetDateText]: [This.GetName]: mafia.35.o2 executed"
+		log = "[GetDateText]: [This.GetName]: mafia.36.o2 executed"
 		if = {
 			limit = {
 				command_power > 24.999
@@ -5797,7 +6427,7 @@ country_event = {
 		}
 		mafia_event_effect_sacra_corona_unita = yes
 		ai_chance = {
-			factor = 10
+			base = 10
 			modifier = {
 				factor = 0
 				check_variable = { sacra_corona_unita_strength < 0.05 }

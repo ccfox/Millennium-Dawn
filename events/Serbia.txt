@@ -621,6 +621,7 @@ country_event = {
 
 	#picture = GFX_Arkan_Assassination
 	trigger = {
+		NOT = { has_country_flag = SER_montenegro_independence_dead }
 		OR = {
 			134 = { is_owned_and_controlled_by = SER }
 			MNT = { is_subject_of = SER }
@@ -687,6 +688,7 @@ country_event = { #Montenegrans become militarized
 
 	#picture = GFX_Arkan_Assassination
 	trigger = {
+		NOT = { has_country_flag = SER_montenegro_independence_dead }
 		OR = {
 			134 = { is_owned_and_controlled_by = SER }
 			MNT = { is_subject_of = SER }
@@ -3852,7 +3854,7 @@ country_event = {
 	id = Montenegro.29
 	title = Montenegro.29.t
 	desc = Montenegro.29.d
-	picture = GFX_nato_summit_2
+	picture = GFX_MON_nato
 	is_triggered_only = yes
 
 	trigger = {
